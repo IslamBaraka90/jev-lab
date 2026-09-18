@@ -57,9 +57,9 @@ export async function runDemo(demo, { dataset, items, ask, onItem, signal } = {}
     if (signal?.aborted) break;
     const state = demo.buildState(item, context);
     const response = await ask({ state, questions: demo.questions, item });
-    const result = { item, state, ...response, evaluation: demo.evaluate(response.answers, item, context) };
+    const result = { item, state, ...response, evaluation: response.answers ? demo.evaluate(response.answers, item, context) : null };
     results.push(result);
-    onItem?.(result);
+    await onItem?.(result);
   }
 
   return { dataset: data, context, results };

@@ -399,3 +399,22 @@
   display: grid;
   gap: var(--s8);
 }
+
+.findings {
+  display: grid;
+  gap: var(--s8);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.findings li {
+  display: flex;
+  gap: var(--s8);
+  padding: var(--s12) var(--s16);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface2);
+  color: var(--muted);
+  max-width: 88ch;
+}

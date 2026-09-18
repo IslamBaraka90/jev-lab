@@ -136,6 +136,7 @@ function report(results, { labels = [] } = {}) {
 
   return {
     note: `Graded against ${problems.length} problems planted in ${labels.length} lines. The model never sees them.`,
+    findings: cluster(falseAlarms),
     kpis: [
       { label: 'Lines reviewed', value: results.length },
       { label: 'Problems caught', value: `${caught.size} of ${problems.length}`, tone: caught.size === problems.length ? 'good' : 'warn' },
@@ -156,6 +157,26 @@ function report(results, { labels = [] } = {}) {
   };
 }
 // #endregion
+
+/**
+ * The biggest group of false alarms that share an account and a verdict. One repeated disagreement says
+ * something different from scattered mistakes, and it is usually worth reading before blaming the model.
+ */
+function cluster(falseAlarms) {
+  if (falseAlarms.length < 5) return [];
+  const groups = new Map();
+  for (const result of falseAlarms) {
+    const key = `${result.item.accountName}|${result.evaluation.issue}`;
+    groups.set(key, [...(groups.get(key) ?? []), result]);
+  }
+  const [key, group] = [...groups].sort((a, b) => b[1].length - a[1].length)[0];
+  if (group.length < falseAlarms.length * 0.3) return [];
+  const [accountName, issue] = key.split('|');
+  const share = Math.round((group.length / falseAlarms.length) * 100);
+  return [
+    `${group.length} of the ${falseAlarms.length} false alarms are the same objection: ${readable(issue)} on ${accountName}, ${share}% of them. One repeated disagreement is worth reading before it is counted as a mistake.`,
+  ];
+}
 
 function countIssues(results) {
   return ISSUES.map((issue) => ({
@@ -201,7 +222,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'ledger',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.accountName}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

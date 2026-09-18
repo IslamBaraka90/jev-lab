@@ -209,6 +209,16 @@ export function ReportPanel({ report, onSelect }) {
         {report.note && <p className="meta">{report.note}</p>}
       </div>
       <KpiRow kpis={report.kpis} />
+      {report.findings?.length > 0 && (
+        <ul className="findings">
+          {report.findings.map((finding) => (
+            <li key={finding}>
+              <Icon name="info" size={16} />
+              <span>{finding}</span>
+            </li>
+          ))}
+        </ul>
+      )}
       {report.distribution?.length > 0 && <DistributionBar items={report.distribution} onSelect={(entry) => onSelect?.(entry.itemId)} />}
       {report.matrix && <ConfusionMatrix matrix={report.matrix} onSelect={onSelect} />}
       {report.curve && <CoverageCurve curve={report.curve} />}
