@@ -46,6 +46,32 @@ const PATHS = {
     </>
   ),
   bolt: <path d="M13 3 5 13.5h6L10.5 21 19 10.5h-6z" />,
+  database: (
+    <>
+      <ellipse cx="12" cy="6" rx="7.5" ry="3" />
+      <path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" />
+    </>
+  ),
+  seed: (
+    <>
+      <path d="M12 21c-4.5 0-7.5-3-7.5-7.5S8 4 16.5 3c1 8.5-2 18-4.5 18z" />
+      <path d="M12 21c0-5 1.5-9 4.5-12" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="6" />
+      <path d="M15.5 15.5 20 20" />
+    </>
+  ),
+  code: <path d="M9 7.5 4.5 12 9 16.5M15 7.5 19.5 12 15 16.5" />,
+  present: (
+    <>
+      <rect x="3.5" y="4.5" width="17" height="11" rx="2" />
+      <path d="M12 15.5V20M8.5 20h7" />
+    </>
+  ),
+  grid: <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" />,
 };
 
 export function Icon({ name, size = 20, title }) {

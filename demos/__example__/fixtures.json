@@ -1,0 +1,528 @@
+{
+  "demo": "__example__",
+  "model": "stub",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/make-example-fixtures.js — deterministic stand-in answers for tests, not model output",
+  "answers": {
+    "L-0001": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.513,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.112,
+          "REVERSED_SIGN": 0.112,
+          "MISSING_COUNTER_ENTRY": 0.112,
+          "NONE": 0.663
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.929
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.57,
+        "confidence": 0.351,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.5,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0002": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.511,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.113,
+          "REVERSED_SIGN": 0.113,
+          "MISSING_COUNTER_ENTRY": 0.113,
+          "NONE": 0.661
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.855
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.59,
+        "confidence": 0.31,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.5,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0003": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.646,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.068,
+          "REVERSED_SIGN": 0.068,
+          "MISSING_COUNTER_ENTRY": 0.068,
+          "NONE": 0.796
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.872
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.41,
+        "confidence": 0.589,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.5,
+          "1": 0.083,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0004": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.649,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.067,
+          "REVERSED_SIGN": 0.067,
+          "MISSING_COUNTER_ENTRY": 0.067,
+          "NONE": 0.799
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.73,
+        "confidence": 0.445,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.5,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0005": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.709,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.047,
+          "REVERSED_SIGN": 0.047,
+          "MISSING_COUNTER_ENTRY": 0.047,
+          "NONE": 0.859
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.907
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.11,
+        "confidence": 0.438,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.5,
+          "1": 0.083,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0006": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.617,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.078,
+          "REVERSED_SIGN": 0.078,
+          "MISSING_COUNTER_ENTRY": 0.078,
+          "NONE": 0.767
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.927
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.12,
+        "confidence": 0.413,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.5,
+          "1": 0.083,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0007": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.523,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.109,
+          "REVERSED_SIGN": 0.109,
+          "MISSING_COUNTER_ENTRY": 0.109,
+          "NONE": 0.673
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.915
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.22,
+        "confidence": 0.415,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.5,
+          "1": 0.083,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0008": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.642,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.069,
+          "REVERSED_SIGN": 0.069,
+          "MISSING_COUNTER_ENTRY": 0.069,
+          "NONE": 0.792
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.932
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.55,
+        "confidence": 0.444,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.5,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0009": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.695,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.052,
+          "REVERSED_SIGN": 0.052,
+          "MISSING_COUNTER_ENTRY": 0.052,
+          "NONE": 0.845
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.897
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.59,
+        "confidence": 0.556,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.5,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0010": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.535,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.105,
+          "REVERSED_SIGN": 0.105,
+          "MISSING_COUNTER_ENTRY": 0.105,
+          "NONE": 0.685
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.963
+      },
+      "severity": {
+        "type": "score",
+        "score": 0.51,
+        "confidence": 0.308,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.5,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.083,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0011": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "DUPLICATE_POSTING",
+        "confidence": 0.525,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.675,
+          "REVERSED_SIGN": 0.108,
+          "MISSING_COUNTER_ENTRY": 0.108,
+          "NONE": 0.108
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.807
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.42,
+        "confidence": 0.545,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.083,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.5,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0012": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "DUPLICATE_POSTING",
+        "confidence": 0.405,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.555,
+          "REVERSED_SIGN": 0.148,
+          "MISSING_COUNTER_ENTRY": 0.148,
+          "NONE": 0.148
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "severity": {
+        "type": "score",
+        "score": 3.85,
+        "confidence": 0.402,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.083,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.5,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    },
+    "L-0013": {
+      "issue_type": {
+        "type": "choice",
+        "choice": "REVERSED_SIGN",
+        "confidence": 0.409,
+        "probabilities": {
+          "DUPLICATE_POSTING": 0.147,
+          "REVERSED_SIGN": 0.559,
+          "MISSING_COUNTER_ENTRY": 0.147,
+          "NONE": 0.147
+        }
+      },
+      "document_balances": {
+        "type": "noul",
+        "noul": 0.137
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.24,
+        "confidence": 0.55,
+        "legend": {
+          "0": "No problem",
+          "1": "Cosmetic",
+          "2": "Minor",
+          "3": "Notable",
+          "4": "Material",
+          "5": "Serious",
+          "6": "Critical"
+        },
+        "probabilities": {
+          "0": 0.083,
+          "1": 0.083,
+          "2": 0.083,
+          "3": 0.083,
+          "4": 0.5,
+          "5": 0.083,
+          "6": 0.083
+        }
+      }
+    }
+  }
+}

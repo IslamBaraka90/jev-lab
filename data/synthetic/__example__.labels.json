@@ -1,0 +1,17 @@
+[
+  {
+    "lineId": "L-0011",
+    "issue": "DUPLICATE_POSTING",
+    "note": "Repeats L-0003 from DOC-002"
+  },
+  {
+    "lineId": "L-0012",
+    "issue": "DUPLICATE_POSTING",
+    "note": "Repeats L-0004 from DOC-002"
+  },
+  {
+    "lineId": "L-0013",
+    "issue": "REVERSED_SIGN",
+    "note": "Expense posted as a credit"
+  }
+]

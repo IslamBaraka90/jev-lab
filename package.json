@@ -15,7 +15,10 @@
     "pilot:indicators": "node scripts/backtest.js --indicators",
     "suite": "node scripts/backtest.js --suite",
     "suite:indicators": "node scripts/backtest.js --suite --indicators",
-    "test": "node --test"
+    "test": "node --test",
+    "generate": "node scripts/generate/index.js",
+    "fetch:market": "node scripts/fetch-market.js",
+    "record": "node scripts/record-demo.js"
   },
   "engines": {
     "node": ">=22.12"
