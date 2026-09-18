@@ -32,3 +32,17 @@ test('helpers read a question set', () => {
   assert.deepEqual(rubricOf(questions.strength), ['None', 'Some']);
   assert.deepEqual(questionTypes(questions), ['choice', 'noul', 'score']);
 });
+
+test('a score answer survives the round trip without its repeated rubric', async () => {
+  const { compactAnswers, expandAnswers } = await import('../demos/lib/answers.js');
+  const questions = { strength: score('How strong?', ['None', 'Some', 'Lots']), sure: noul('Sure?') };
+  const answer = {
+    strength: { type: 'score', score: 1.4, confidence: 0.5, legend: { 0: 'None', 1: 'Some', 2: 'Lots' }, probabilities: { 0: 0.2, 1: 0.6, 2: 0.2 } },
+    sure: { type: 'noul', noul: 0.8 },
+  };
+
+  const compact = compactAnswers(answer, questions);
+  assert.equal(compact.strength.legend, undefined, 'the rubric is not stored per item');
+  assert.equal(JSON.stringify(compact).length < JSON.stringify(answer).length, true);
+  assert.deepEqual(expandAnswers(compact, questions), answer);
+});

@@ -1,4 +1,32 @@
 {
+  "demos/ledger-integrity/demo.js#demo:state": {
+    "path": "demos/ledger-integrity/demo.js",
+    "startLine": 38,
+    "endLine": 72,
+    "code": "/** Everything the model sees for one journal line. No labels, no hints, nothing from after the month. */\nfunction buildState(item, context) {\n  const document = context.items.filter((line) => line.documentId === item.documentId);\n  const totals = document.reduce((sums, line) => ({ debit: round(sums.debit + line.debit), credit: round(sums.credit + line.credit) }), { debit: 0, credit: 0 });\n\n  return {\n    task: 'Review one journal line of a monthly general ledger and decide whether it was posted correctly.',\n    entity: context.entity,\n    period: context.period,\n    currency: context.currency,\n    line: {\n      id: item.id,\n      date: item.date,\n      account: `${item.account} ${item.accountName}`,\n      account_type: item.accountType,\n      normal_balance: item.normalBalance,\n      debit: item.debit,\n      credit: item.credit,\n      memo: item.memo,\n      counterparty: item.counterparty,\n      reference: item.reference,\n      posted_by: item.postedBy,\n      posted_at: item.postedAt,\n    },\n    document: {\n      id: item.documentId,\n      lines: document.map((line) => ({ id: line.id, account: `${line.account} ${line.accountName}`, debit: line.debit, credit: line.credit, memo: line.memo })),\n      total_debit: totals.debit,\n      total_credit: totals.credit,\n    },\n    account_this_month: accountHabits(item, context.items),\n    same_amount_same_counterparty: lookalikes(item, context.items),\n    chart_of_accounts: context.accounts.map((account) => `${account.code} ${account.name} (${account.type}, normally ${account.normalBalance})`),\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/ledger-integrity/demo.js#demo:questions": {
+    "path": "demos/ledger-integrity/demo.js",
+    "startLine": 76,
+    "endLine": 97,
+    "code": "const questions = {\n  issue_type: choice('Which posting problem, if any, does this journal line have?', {\n    DUPLICATE_POSTING: 'The same transaction has already been posted in another document.',\n    REVERSED_SIGN: 'The amount is on the wrong side for this account.',\n    MISSING_COUNTER_ENTRY: 'The document has no matching entry on the other side.',\n    PERIOD_CUTOFF: 'The line is dated outside the period it was posted in.',\n    MISCLASSIFIED_ACCOUNT: 'The posting belongs in a different account.',\n    NONE: 'The line looks correct.',\n  }),\n  document_balances: noul('Do the lines of this document balance, with total debits equal to total credits?'),\n  memo_matches_posting: noul('Does the memo describe what was actually posted, in this account and on this side?'),\n  severity: score('If something is wrong with this line, how serious is it for the month-end accounts?', [\n    'Nothing wrong',\n    'Cosmetic',\n    'Minor',\n    'Notable',\n    'Material',\n    'Serious',\n    'Critical',\n  ]),\n  needs_human_review: noul('Should a person open this line before the books are closed?'),\n};",
+    "language": "javascript"
+  },
+  "demos/ledger-integrity/demo.js#demo:evaluate": {
+    "path": "demos/ledger-integrity/demo.js",
+    "startLine": 101,
+    "endLine": 118,
+    "code": "/** The flag the page shows and the numbers the report counts, from the five answers. */\nfunction evaluate(answers, item) {\n  const issue = answers.issue_type.choice;\n  const flagged = issue !== 'NONE';\n  const review = answers.needs_human_review.noul;\n\n  return {\n    flagged,\n    issue,\n    confidence: answers.issue_type.confidence,\n    severity: answers.severity.score,\n    balances: answers.document_balances.noul >= 0.5,\n    memoMatches: answers.memo_matches_posting.noul >= 0.5,\n    review,\n    forReview: review >= REVIEW_THRESHOLD,\n    label: flagged ? `${item.id}: ${readable(issue)}` : `${item.id}: clean`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/ledger-integrity/demo.js#demo:report": {
+    "path": "demos/ledger-integrity/demo.js",
+    "startLine": 126,
+    "endLine": 157,
+    "code": "/** Grades the run against the planted problems: caught, missed, false alarms, and the review workload. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label]));\n  const problems = [...new Set(labels.map((label) => label.problemId))];\n  const found = (result) => planted.get(result.item.id)?.issue === result.evaluation.issue;\n\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = new Set(flagged.filter(found).map((result) => planted.get(result.item.id).problemId));\n  const falseAlarms = flagged.filter((result) => !planted.has(result.item.id));\n  const missed = labels.filter((label) => !caught.has(label.problemId) && results.some((result) => result.item.id === label.lineId));\n\n  return {\n    note: `Graded against ${problems.length} problems planted in ${labels.length} lines. The model never sees them.`,\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Problems caught', value: `${caught.size} of ${problems.length}`, tone: caught.size === problems.length ? 'good' : 'warn' },\n      { label: 'Lines flagged', value: flagged.length, context: `${falseAlarms.length} with nothing planted` },\n      { label: 'Sent to a person', value: results.filter((result) => result.evaluation.forReview).length, context: `at ${Math.round(REVIEW_THRESHOLD * 100)}% and above` },\n    ],\n    distribution: countIssues(results),\n    matrix: confusion(results, planted),\n    curve: coverage(results, planted, problems.length),\n    checks: [\n      { id: 'missed', label: 'Planted problems the model did not name', detail: 'Graded on the issue type, not just on flagging the line.', count: new Set(missed.map((label) => label.problemId)).size, of: problems.length, items: missed.map((label) => label.lineId) },\n      { id: 'false-alarms', label: 'Clean lines flagged as problems', detail: 'Each one costs a person time at month end.', count: falseAlarms.length, of: results.length - labels.length, items: falseAlarms.map((result) => result.item.id) },\n    ],\n    topItems: [...flagged]\n      .sort((a, b) => b.evaluation.severity - a.evaluation.severity)\n      .slice(0, 10)\n      .map((result) => ({ id: result.item.id, label: `${result.evaluation.label}${planted.has(result.item.id) ? ' · planted' : ''}`, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/__example__/demo.js#demo:state": {
     "path": "demos/__example__/demo.js",
     "startLine": 7,
@@ -25,6 +53,13 @@
     "startLine": 82,
     "endLine": 102,
     "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/ledger-integrity.js#demo:data": {
+    "path": "scripts/generate/ledger-integrity.js",
+    "startLine": 80,
+    "endLine": 108,
+    "code": "/** One posting: a document of two or three lines that balances, in the period, entered by a clerk. */\nfunction document(state, { date, memo, lines }) {\n  const { random } = state;\n  const id = `DOC-${String(++state.documents).padStart(4, '0')}`;\n  const postedAt = random.timeOnDay(nextWorkday(date));\n  const postedBy = random.pick(state.clerks);\n\n  for (const [index, line] of lines.entries()) {\n    state.lines.push({\n      key: `${id}-${index + 1}`,\n      id: `${id}-${index + 1}`,\n      documentId: id,\n      date,\n      account: line.code,\n      accountName: account(line.code).name,\n      accountType: account(line.code).type,\n      normalBalance: account(line.code).normalBalance,\n      debit: round(line.debit ?? 0),\n      credit: round(line.credit ?? 0),\n      currency: CURRENCY,\n      memo: line.memo ?? memo,\n      counterparty: line.counterparty ?? null,\n      reference: `${id}/${index + 1}`,\n      postedBy,\n      postedAt,\n    });\n  }\n  return id;\n}",
     "language": "javascript"
   },
   "scripts/generate/example.js": {

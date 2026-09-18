@@ -4,6 +4,7 @@
 
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { expandAnswers } from '../../demos/lib/answers.js';
 import { loadDataset, repoRoot } from './dataset.js';
 
 export const fixturesFile = (slug) => path.join(repoRoot, 'demos', slug, 'fixtures.json');
@@ -11,6 +12,12 @@ export const fixturesFile = (slug) => path.join(repoRoot, 'demos', slug, 'fixtur
 /** The context a demo's `buildState` and `report` receive: the dataset's own context plus its items. */
 export function demoContext(dataset) {
   return { ...(dataset.context ?? {}), items: dataset.items };
+}
+
+/** Recorded answers with their rubrics restored, for the runtime and the tests. */
+export function fixtureAnswers(fixtures, questions, itemId) {
+  const answers = fixtures.answers?.[itemId];
+  return answers ? expandAnswers(answers, questions) : null;
 }
 
 /** Recorded answers for a demo, or an empty set when it has none yet. */

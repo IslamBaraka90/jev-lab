@@ -1,0 +1,93 @@
+[
+  {
+    "key": "DOC-0193-1",
+    "problemId": "dup-1",
+    "issue": "DUPLICATE_POSTING",
+    "note": "Repeats DOC-0092, same supplier and amount",
+    "lineId": "L-0228"
+  },
+  {
+    "key": "DOC-0193-2",
+    "problemId": "dup-1",
+    "issue": "DUPLICATE_POSTING",
+    "note": "Repeats DOC-0092, same supplier and amount",
+    "lineId": "L-0229"
+  },
+  {
+    "key": "DOC-0194-1",
+    "problemId": "dup-2",
+    "issue": "DUPLICATE_POSTING",
+    "note": "Repeats DOC-0080, same supplier and amount",
+    "lineId": "L-0106"
+  },
+  {
+    "key": "DOC-0194-2",
+    "problemId": "dup-2",
+    "issue": "DUPLICATE_POSTING",
+    "note": "Repeats DOC-0080, same supplier and amount",
+    "lineId": "L-0107"
+  },
+  {
+    "key": "DOC-0032-1",
+    "problemId": "sign-1",
+    "issue": "REVERSED_SIGN",
+    "note": "Expense posted as a credit; the document no longer balances",
+    "lineId": "L-0142"
+  },
+  {
+    "key": "DOC-0059-1",
+    "problemId": "sign-2",
+    "issue": "REVERSED_SIGN",
+    "note": "Expense posted as a credit; the document no longer balances",
+    "lineId": "L-0101"
+  },
+  {
+    "key": "DOC-0173-2",
+    "problemId": "orphan-1",
+    "issue": "MISSING_COUNTER_ENTRY",
+    "note": "The bank side of this receipt was never posted",
+    "lineId": "L-0328"
+  },
+  {
+    "key": "DOC-0156-2",
+    "problemId": "orphan-2",
+    "issue": "MISSING_COUNTER_ENTRY",
+    "note": "The bank side of this receipt was never posted",
+    "lineId": "L-0334"
+  },
+  {
+    "key": "DOC-0016-1",
+    "problemId": "cutoff-1",
+    "issue": "PERIOD_CUTOFF",
+    "note": "Dated 2026-04-27, outside the May period it was posted in",
+    "lineId": "L-0366"
+  },
+  {
+    "key": "DOC-0015-1",
+    "problemId": "cutoff-2",
+    "issue": "PERIOD_CUTOFF",
+    "note": "Dated 2026-06-03, outside the May period it was posted in",
+    "lineId": "L-0457"
+  },
+  {
+    "key": "DOC-0061-1",
+    "problemId": "class-1",
+    "issue": "MISCLASSIFIED_ACCOUNT",
+    "note": "Equipment bought outright, posted to office supplies",
+    "lineId": "L-0240"
+  },
+  {
+    "key": "DOC-0184-1",
+    "problemId": "class-2",
+    "issue": "MISCLASSIFIED_ACCOUNT",
+    "note": "Owner draw posted as salary expense",
+    "lineId": "L-0460"
+  },
+  {
+    "key": "DOC-0028-1",
+    "problemId": "class-3",
+    "issue": "MISCLASSIFIED_ACCOUNT",
+    "note": "Rent posted as travel",
+    "lineId": "L-0018"
+  }
+]

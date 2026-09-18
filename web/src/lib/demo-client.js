@@ -39,7 +39,7 @@ export async function replayItem(demo, item, { pause = 0 } = {}) {
     throw new Error(`No recorded answer for ${demo.id} item ${item.id}. Record it with: npm run record ${demo.id}`);
   }
   if (pause) await sleep(pause);
-  return { answers, model: file.model ?? null, recordedAt: file.recordedAt ?? null, recorded: true };
+  return { answers: expandAnswers(answers, demo.questions), model: file.model ?? null, recordedAt: file.recordedAt ?? null, recorded: true };
 }
 
 /** Runs one item against the real API through the local server. Only ever called after a confirmation. */

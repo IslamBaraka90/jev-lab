@@ -12,6 +12,7 @@ import { assertDataset, demoDataFile, labelsFile, repoRoot } from '../../src/ser
 /** Every synthetic dataset in the project. A demo PRP adds its generator here. */
 export const GENERATORS = {
   __example__: () => import('./example.js'),
+  'ledger-integrity': () => import('./ledger-integrity.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

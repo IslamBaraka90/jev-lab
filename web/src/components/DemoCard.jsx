@@ -11,6 +11,7 @@ export function DemoCard({ card }) {
         <span className="demo-card-domain">{card.domainTitle}</span>
         <strong className="demo-card-title">{card.title}</strong>
         <span className="demo-card-value">{card.value}</span>
+        {card.status === 'pending-recording' && <span className="badge warn demo-card-status">Answers not recorded yet</span>}
       </Link>
       <ul className="demo-card-facts">
         <li>

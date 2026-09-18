@@ -98,6 +98,107 @@ export function TopItems({ items = [], title = 'Worth opening', onSelect }) {
   );
 }
 
+
+/** Predicted against actual, for demos that know the right answer. The diagonal is the good news. */
+export function ConfusionMatrix({ matrix, onSelect }) {
+  if (!matrix?.rows?.length) return null;
+  const max = Math.max(...matrix.rows.flatMap((row) => row.cells.map((cell) => cell.count)), 1);
+
+  return (
+    <div className="stack" style={{ gap: 8 }}>
+      <h4>{matrix.title}</h4>
+      <div className="table-scroll">
+        <table className="data-table compact confusion">
+          <thead>
+            <tr>
+              <th scope="col">Planted ↓ · Called →</th>
+              {matrix.columns.map((column) => (
+                <th key={column} scope="col" className="num">
+                  {column}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {matrix.rows.map((row) => (
+              <tr key={row.label}>
+                <th scope="row">{row.label}</th>
+                {row.cells.map((cell, index) => (
+                  <td
+                    key={index}
+                    className={`num${cell.diagonal ? ' diagonal' : ''}${cell.count ? '' : ' empty'}`}
+                    style={cell.count ? { backgroundColor: `color-mix(in srgb, var(--${cell.diagonal ? 'positiveBg' : 'warningBg'}) ${Math.round((cell.count / max) * 100)}%, transparent)` } : undefined}
+                  >
+                    {cell.count || '·'}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+/** Where to set a threshold: how much a person reads against how much that catches. */
+export function CoverageCurve({ curve }) {
+  if (!curve?.points?.length) return null;
+  const width = 520;
+  const height = 180;
+  const maxReviewed = Math.max(...curve.points.map((point) => point.reviewed), 1);
+  const x = (point) => 40 + (point.reviewed / maxReviewed) * (width - 60);
+  const y = (point) => height - 30 - (point.caught / Math.max(curve.of, 1)) * (height - 50);
+  const path = curve.points.map((point, index) => `${index ? 'L' : 'M'}${x(point).toFixed(1)},${y(point).toFixed(1)}`).join('');
+
+  return (
+    <div className="stack" style={{ gap: 8 }}>
+      <h4>{curve.title}</h4>
+      <svg className="coverage-curve" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${curve.yLabel} against ${curve.xLabel}. ${curve.points.map((point) => `at ${Math.round(point.threshold * 100)} percent, ${point.reviewed} lines opened and ${point.caught} of ${curve.of} problems caught`).join('; ')}`}>
+        <line className="axis-line" x1={40} y1={height - 30} x2={width - 16} y2={height - 30} />
+        <line className="axis-line" x1={40} y1={16} x2={40} y2={height - 30} />
+        <path className="curve-line" d={path} />
+        {curve.points.map((point) => (
+          <circle key={point.threshold} className="curve-dot" cx={x(point)} cy={y(point)} r={3.5}>
+            <title>{`${Math.round(point.threshold * 100)}%: ${point.reviewed} lines, ${point.caught} of ${curve.of} problems`}</title>
+          </circle>
+        ))}
+        <text className="axis-text" x={40} y={height - 10}>
+          {curve.xLabel}
+        </text>
+        <text className="axis-text" x={40} y={12}>
+          {curve.yLabel} (of {curve.of})
+        </text>
+      </svg>
+      <details>
+        <summary>Table</summary>
+        <div className="table-scroll details-content">
+          <table className="data-table compact">
+            <thead>
+              <tr>
+                <th scope="col">Threshold</th>
+                <th scope="col" className="num">Lines opened</th>
+                <th scope="col" className="num">Problems caught</th>
+              </tr>
+            </thead>
+            <tbody>
+              {curve.points.map((point) => (
+                <tr key={point.threshold}>
+                  <th scope="row">{Math.round(point.threshold * 100)}%</th>
+                  <td className="num">{point.reviewed}</td>
+                  <td className="num">
+                    {point.caught} of {curve.of}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+  );
+}
+
 /** The whole report: whatever the demo filled in, in a fixed order. */
 export function ReportPanel({ report, onSelect }) {
   if (!report) return null;
@@ -109,6 +210,8 @@ export function ReportPanel({ report, onSelect }) {
       </div>
       <KpiRow kpis={report.kpis} />
       {report.distribution?.length > 0 && <DistributionBar items={report.distribution} onSelect={(entry) => onSelect?.(entry.itemId)} />}
+      {report.matrix && <ConfusionMatrix matrix={report.matrix} onSelect={onSelect} />}
+      {report.curve && <CoverageCurve curve={report.curve} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>

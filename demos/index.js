@@ -2,6 +2,7 @@
 // demo exists exactly once: adding one means adding its folder and one line here.
 
 import example from './__example__/demo.js';
+import ledgerIntegrity from './ledger-integrity/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -19,7 +20,7 @@ export const DOMAINS = [
 export const DOMAIN_BY_ID = Object.fromEntries(DOMAINS.map((domain) => [domain.id, domain]));
 
 /** Demos shown in the catalog, in the order the series walks them. Each PRP adds its own. */
-export const DEMOS = [];
+export const DEMOS = [ledgerIntegrity];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
 export const ALL_DEMOS = [...DEMOS, example];
@@ -39,5 +40,6 @@ export function demoCard(demo) {
     dataClass: demo.dataClass,
     readMinutes: demo.readMinutes ?? 3,
     questionCount: Object.keys(demo.questions).length,
+    status: demo.status ?? 'ready',
   };
 }

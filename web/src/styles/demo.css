@@ -349,3 +349,53 @@
     max-height: 320px;
   }
 }
+
+/* Report extras: the confusion matrix and the review-threshold curve. */
+
+.confusion td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.confusion td.empty {
+  color: var(--control);
+}
+
+.confusion td.diagonal {
+  font-weight: 700;
+}
+
+.coverage-curve {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+}
+
+.coverage-curve .axis-line {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.coverage-curve .curve-line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2;
+}
+
+.coverage-curve .curve-dot {
+  fill: var(--primary);
+}
+
+.coverage-curve .axis-text {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.demo-card-status {
+  justify-self: start;
+}
+
+.pending-recording {
+  display: grid;
+  gap: var(--s8);
+}

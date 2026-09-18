@@ -44,6 +44,7 @@ export function DemoRuntime({ demo }) {
   const result = item ? state.resultsById[item.id] : null;
   const questionCount = Object.keys(demo.questions).length;
   const estimate = estimateRun(items.length, questionCount);
+  const pending = demo.status === 'pending-recording' && !live;
 
   const select = useCallback(
     (id) => {
@@ -142,6 +143,14 @@ export function DemoRuntime({ demo }) {
     <div className={`demo-runtime${present ? ' presenting' : ''}`}>
       {!present && <DataBanner demo={demo} live={live} />}
 
+      {pending && (
+        <p className="callout warning pending-recording">
+          <strong>No recorded answers yet.</strong> The dataset, the questions and the report are built; the answers are
+          recorded once with <code>npm run record {demo.id}</code> and committed. Until then this page shows the data, the
+          state that would be sent, and the code behind it.
+        </p>
+      )}
+
       <div className="demo-layout">
         {!present && (
           <aside className="panel item-rail" aria-label="Items">
@@ -193,11 +202,11 @@ export function DemoRuntime({ demo }) {
           </section>
 
           <section className="panel playback" aria-label="Run controls">
-            <button type="button" className="button primary" onClick={() => play(item)} disabled={!item}>
+            <button type="button" className="button primary" onClick={() => play(item)} disabled={!item || pending}>
               <Icon name="play" />
               Run this item
             </button>
-            <button type="button" className="button secondary" onClick={playAll}>
+            <button type="button" className="button secondary" onClick={playAll} disabled={pending}>
               <Icon name={playing.current ? 'pause' : 'latest'} />
               {playing.current ? 'Stop' : 'Play all'}
             </button>

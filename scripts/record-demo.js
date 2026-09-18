@@ -9,6 +9,7 @@ import path from 'node:path';
 import { config } from '../src/config.js';
 import { findDemo } from '../demos/index.js';
 import { loadDataset, repoRoot } from '../src/services/dataset.js';
+import { compactAnswers } from '../demos/lib/answers.js';
 import { askModel, fixturesFile, loadFixtures, runDemo } from '../src/services/demo-runner.js';
 
 const [slug, ...flags] = process.argv.slice(2);
@@ -65,7 +66,7 @@ await runDemo(demo, {
   items: todo,
   ask: (request) => askModel(typesafe, request),
   onItem: (result) => {
-    answers[result.item.id] = result.answers;
+    answers[result.item.id] = compactAnswers(result.answers, demo.questions);
     inputTokens += result.usage?.input_tokens ?? 0;
     outputTokens += result.usage?.output_tokens ?? 0;
     model = result.model ?? model;

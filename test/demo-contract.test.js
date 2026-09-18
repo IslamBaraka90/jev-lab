@@ -46,14 +46,18 @@ test('questions are typed, described and explained', () => {
   }
 });
 
-test('each demo has a dataset, and every item has a recorded answer', async () => {
+test('each demo has a dataset, and a recorded demo has an answer for every item', async () => {
   for (const demo of ALL_DEMOS) {
     const dataset = await loadDataset(demo.id);
     assert.equal(dataset.id, demo.id);
 
     const fixtures = await loadFixtures(demo.id);
     const missing = dataset.items.filter((item) => !fixtures.answers?.[item.id]).map((item) => item.id);
-    assert.deepEqual(missing, [], `${demo.id} has no recorded answer for ${missing.slice(0, 3).join(', ')}`);
+    if (demo.status === 'pending-recording') {
+      assert.ok(missing.length > 0, `${demo.id} is fully recorded; drop its pending-recording status`);
+    } else {
+      assert.deepEqual(missing, [], `${demo.id} has no recorded answer for ${missing.slice(0, 3).join(', ')}`);
+    }
 
     for (const [itemId, answers] of Object.entries(fixtures.answers)) {
       assert.ok(dataset.items.some((item) => item.id === itemId), `${demo.id} has an answer for unknown item ${itemId}`);
@@ -85,7 +89,7 @@ test('a state never carries the ground truth, and never changes the item', async
 });
 
 test('recorded answers run through evaluate and report', async () => {
-  for (const demo of ALL_DEMOS) {
+  for (const demo of ALL_DEMOS.filter((entry) => entry.status !== 'pending-recording')) {
     const dataset = await loadDataset(demo.id);
     const fixtures = await loadFixtures(demo.id);
     const labels = await loadLabels(demo.id).catch(() => []);
