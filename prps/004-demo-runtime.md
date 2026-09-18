@@ -22,6 +22,8 @@ export default {
   view: 'ledger',                       // which item view to render
   data: () => import('./data.json'),    // lazy, never imported by the catalog
   fixtures: () => import('./fixtures.json'),
+  labels: () => import('../../data/synthetic/<slug>.labels.json'), // optional, report only
+
   itemLabel: (item) => `${item.id} · ${item.account}`,
   buildState: (item, context) => ({ /* exactly what the model receives */ }),
   questions: { /* the typed questions, built with the SDK helpers */ },
@@ -78,8 +80,8 @@ Every demo that routes items exposes one threshold slider bound to a confidence 
 | `web/src/pages/DemoPage.jsx` | new |
 | `web/src/demo/DemoRuntime.jsx` | new: state machine, selection, replay |
 | `web/src/demo/views/{TableView,LedgerView,QueueView,CandlesView,GraphView,CurveView}.jsx` | new |
-| `web/src/demo/panels/{StatePanel,AnswersPanel,EvaluationStrip,ReportPanel}.jsx` | new |
-| `web/src/demo/widgets/{KpiRow,DistributionBar,CheckList,ConfusionMatrix,CoverageCurve,TopItems}.jsx` | new |
+| `web/src/demo/panels.jsx` | new: StatePanel, AnswersPanel, EvaluationStrip |
+| `web/src/demo/widgets.jsx` | new: KpiRow, DistributionBar, CheckList, TopItems, ReportPanel. ConfusionMatrix and CoverageCurve arrive with the first demo that needs them (103) |
 | `web/src/hooks/useDemoRun.js` | new: load data and fixtures, run items, cache results |
 | `src/services/demo-runner.js` | new: the same run loop for `record-demo.js` and real mode |
 | `test/demo-runtime.test.js` | new: contract validation for every registered demo |

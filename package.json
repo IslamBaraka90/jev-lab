@@ -18,7 +18,10 @@
     "test": "node --test",
     "generate": "node scripts/generate/index.js",
     "fetch:market": "node scripts/fetch-market.js",
-    "record": "node scripts/record-demo.js"
+    "record": "node scripts/record-demo.js",
+    "prebuild": "node scripts/build-code-index.js",
+    "build:code-index": "node scripts/build-code-index.js",
+    "check": "node scripts/check-budgets.js && node --test"
   },
   "engines": {
     "node": ">=22.12"

@@ -1,6 +1,28 @@
-# jev_test
+# Jev Lab
 
-An Express app and dashboard for testing TypeSafe's Jev model through the official JavaScript SDK, [`@typesafe-ai/sdk`](https://docs.typesafe.ai/sdk/javascript). It backtests Jev's trade decisions on historical daily candles, replays every decision on a chart, and reports what the trades earned. It also keeps the support ticket example from the [quickstart](https://docs.typesafe.ai/introduction/quickstart).
+A demo site and a backtest lab for TypeSafe's Jev model, built on the official JavaScript SDK,
+[`@typesafe-ai/sdk`](https://docs.typesafe.ai/sdk/javascript).
+
+- **Demos** put typed questions to Jev over real financial work: ledgers, orders, fraud, wallets, portfolios, trades,
+  filings and strategies. Each one shows the state that was sent, the answers that came back, and a report that grades
+  them. Specifications live in [`prps/`](prps/README.md).
+- **The lab** backtests Jev's trade decisions on historical daily candles, replays every decision on a chart, and reports
+  what the trades earned. It also keeps the support ticket example from the
+  [quickstart](https://docs.typesafe.ai/introduction/quickstart).
+
+## Two modes
+
+The deployed site is **recorded**: every answer was captured once with `npm run record`, committed to this repository, and
+replayed from there. It needs no API key, no server and no network, and each demo page names the model version and the day
+its answers were captured.
+
+**Live** mode is local and opt-in. Run the Express server with `TYPESAFE_API_KEY` set and each demo gains a "Run live"
+switch; it stays off until you turn it on and confirm a dialog that says how many requests a full run would send. Nothing
+calls the API before that.
+
+Data comes in two kinds, and every page says which it is: **cached real** market data in `data/market`, fetched once from
+Yahoo Finance with a manifest recording what and when, and **synthetic** data generated here from a fixed seed, with the
+planted problems kept in `data/synthetic/*.labels.json`, outside the demo folders, so they can never reach a state.
 
 ## Setup
 
@@ -12,7 +34,15 @@ npm run build
 npm start
 ```
 
-Then open http://localhost:3000. Put your API key from the [TypeSafe console](https://console.typesafe.ai/settings/keys) in `.env` first; `.env.example` lists every setting, and variables already set in your shell take precedence over `.env`.
+Then open http://localhost:3000. The demos work as they are. To run anything live, put your API key from the
+[TypeSafe console](https://console.typesafe.ai/settings/keys) in `.env` first; `.env.example` lists every setting, and
+variables already set in your shell take precedence over `.env`.
+
+### Deploying
+
+`npm run build` writes a static site to `web/dist` with no server dependency. On Vercel, use build command `npm run build`
+and output directory `web/dist`; [`vercel.json`](vercel.json) carries the rewrites and cache headers. The Express server is
+for local use only, and the lab needs it.
 
 ## Dashboard
 
@@ -42,6 +72,10 @@ For development, run `npm run dev` and `npm run dev:web`, then open http://local
 | `npm run suite:indicators` | The full suite with technical indicators. |
 | `npm run quickstart` | Sends the quickstart request once and prints the answers. Evaluate your own text with `npm run quickstart -- "text"`. |
 | `npm test` | Runs the tests offline, with TypeSafe stubbed and no market data calls. |
+| `npm run check` | Checks the built site against its size budgets, then runs the tests. |
+| `npm run generate` | Rebuilds every synthetic dataset from its seed. Running it twice changes nothing. |
+| `npm run fetch:market` | Refetches the cached market data in `data/market`. Run by hand, rarely. |
+| `npm run record <slug>` | Records a demo's answers from the live API into `demos/<slug>/fixtures.json`. The only paid step. |
 
 ## Backtests
 

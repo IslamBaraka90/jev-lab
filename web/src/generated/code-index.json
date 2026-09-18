@@ -1,0 +1,37 @@
+{
+  "demos/__example__/demo.js#demo:state": {
+    "path": "demos/__example__/demo.js",
+    "startLine": 7,
+    "endLine": 39,
+    "code": "/** Everything the model sees for one journal line: the line, its document, and the account's context. */\nfunction buildState(item, context) {\n  const document = context.items.filter((line) => line.documentId === item.documentId);\n  const totals = document.reduce(\n    (sums, line) => ({ debit: round(sums.debit + line.debit), credit: round(sums.credit + line.credit) }),\n    { debit: 0, credit: 0 },\n  );\n\n  return {\n    task: 'Review one journal line for posting problems.',\n    entity: context.entity,\n    period: context.period,\n    line: {\n      id: item.id,\n      date: item.date,\n      account: `${item.account} ${item.accountName}`,\n      accountType: item.accountType,\n      normalBalance: item.normalBalance,\n      debit: item.debit,\n      credit: item.credit,\n      currency: item.currency,\n      memo: item.memo,\n      counterparty: item.counterparty,\n      reference: item.reference,\n    },\n    document: {\n      id: item.documentId,\n      lines: document.map((line) => ({ id: line.id, account: `${line.account} ${line.accountName}`, debit: line.debit, credit: line.credit, memo: line.memo })),\n      totals,\n    },\n    accounts: context.accounts.map((account) => `${account.code} ${account.name} (${account.type}, normally ${account.normalBalance})`),\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/__example__/demo.js#demo:questions": {
+    "path": "demos/__example__/demo.js",
+    "startLine": 45,
+    "endLine": 62,
+    "code": "const questions = {\n  issue_type: choice('Which posting problem, if any, does this journal line have?', {\n    DUPLICATE_POSTING: 'The same transaction has already been posted.',\n    REVERSED_SIGN: 'The amount is on the wrong side for this account.',\n    MISSING_COUNTER_ENTRY: 'The document has no matching entry on the other side.',\n    NONE: 'The line looks correct.',\n  }),\n  document_balances: noul('Do the lines of this document balance, with debits equal to credits?'),\n  severity: score('How serious is any problem with this line?', [\n    'No problem',\n    'Cosmetic',\n    'Minor',\n    'Notable',\n    'Material',\n    'Serious',\n    'Critical',\n  ]),\n};",
+    "language": "javascript"
+  },
+  "demos/__example__/demo.js#demo:evaluate": {
+    "path": "demos/__example__/demo.js",
+    "startLine": 66,
+    "endLine": 78,
+    "code": "/** Turns the answers into the flag the page shows and the report counts. */\nfunction evaluate(answers, item) {\n  const issue = answers.issue_type.choice;\n  const flagged = issue !== 'NONE';\n  return {\n    flagged,\n    issue,\n    confidence: answers.issue_type.confidence,\n    severity: answers.severity.score,\n    balances: answers.document_balances.noul >= 0.5,\n    label: flagged ? `${item.id}: ${issue.toLowerCase().replaceAll('_', ' ')}` : `${item.id}: clean`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/__example__/demo.js#demo:report": {
+    "path": "demos/__example__/demo.js",
+    "startLine": 82,
+    "endLine": 102,
+    "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/example.js": {
+    "path": "scripts/generate/example.js",
+    "startLine": null,
+    "endLine": null,
+    "code": null,
+    "language": "javascript"
+  }
+}

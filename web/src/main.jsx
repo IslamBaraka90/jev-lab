@@ -7,6 +7,8 @@ import './styles/layout.css';
 import './styles/components.css';
 import './styles/charts.css';
 import './styles/pages.css';
+import './styles/site.css';
+import './styles/demo.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

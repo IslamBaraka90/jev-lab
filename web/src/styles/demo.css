@@ -1,0 +1,351 @@
+/* The demo runtime: the item rail, the stage, the panels under it, and the code walkthrough. */
+
+.demo-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s16);
+  justify-content: space-between;
+  align-items: start;
+}
+
+.demo-heading-actions {
+  margin-left: auto;
+  align-self: center;
+}
+
+.data-banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: var(--s8) var(--s12);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: var(--meta);
+  margin-bottom: var(--s16);
+  min-height: 38px;
+}
+
+.data-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: var(--meta);
+}
+
+.data-chip.cached {
+  border-color: var(--control);
+}
+
+.demo-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: var(--s24);
+  align-items: start;
+}
+
+.demo-runtime.presenting .demo-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.item-rail {
+  position: sticky;
+  top: 84px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: var(--s12);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.rail-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 var(--s8) var(--s8);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--s8);
+}
+
+.item-rail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.rail-item {
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  padding: var(--s8);
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+}
+
+.rail-item:hover {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.rail-item.answered .rail-label {
+  color: var(--text);
+}
+
+.rail-item.current {
+  background: var(--surface2);
+  color: var(--text);
+  box-shadow: inset 2px 0 0 var(--primary);
+}
+
+.rail-result {
+  font-size: var(--meta);
+}
+
+.demo-main {
+  min-width: 0;
+  gap: var(--s16);
+}
+
+.demo-main .playback {
+  position: static;
+  box-shadow: none;
+  flex-wrap: wrap;
+}
+
+.item-table th {
+  width: 220px;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.data-table tr.selected {
+  background: var(--surface2);
+  box-shadow: inset 2px 0 0 var(--primary);
+}
+
+.queue-view .queue-text p {
+  max-width: 72ch;
+}
+
+.state-panel .state-json {
+  max-height: 340px;
+}
+
+.evaluation-strip {
+  display: grid;
+  gap: var(--s8);
+}
+
+.evaluation-label {
+  font-size: var(--h3);
+  letter-spacing: -0.02em;
+}
+
+.evaluation-strip dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s12) var(--s24);
+  margin: 0;
+}
+
+.evaluation-strip dt {
+  font-size: var(--meta);
+  color: var(--muted);
+}
+
+.evaluation-strip dd {
+  margin: 0;
+  font-weight: 650;
+}
+
+.distribution {
+  display: grid;
+  gap: var(--s8);
+}
+
+.distribution-bar {
+  display: flex;
+  gap: 2px;
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.distribution-bar .segment {
+  background: var(--control);
+  min-width: 3px;
+}
+
+.distribution-bar .segment.good {
+  background: var(--positive);
+}
+
+.distribution-bar .segment.warn {
+  background: var(--warning);
+}
+
+.distribution-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s8) var(--s16);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.distribution-legend .link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+}
+
+.top-items {
+  display: grid;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-items .link-button {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s16);
+  width: 100%;
+  padding: var(--s8);
+  border-radius: 8px;
+}
+
+.top-items .link-button:hover {
+  background: var(--surface2);
+}
+
+/* How it works */
+
+.how-steps {
+  display: grid;
+  gap: var(--s24);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.how-step-head {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  margin-bottom: var(--s8);
+}
+
+.how-step-head .chip {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: var(--surface2);
+  color: var(--text);
+  font-size: var(--meta);
+}
+
+.code-block {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.code-block figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s8) var(--s12);
+  padding: var(--s8) var(--s12);
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  font-size: var(--meta);
+}
+
+.code-path {
+  color: var(--text);
+}
+
+.code-actions {
+  margin-left: auto;
+  display: flex;
+  gap: var(--s4);
+}
+
+.code-block .code {
+  margin: 0;
+  padding: var(--s16);
+  overflow-x: auto;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.code-block .code-caption,
+.code-block .code-missing {
+  padding: var(--s8) var(--s12);
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.tok-comment {
+  color: var(--control);
+}
+
+.tok-string {
+  color: var(--positive);
+}
+
+.tok-keyword {
+  color: var(--link);
+}
+
+.tok-number {
+  color: var(--warning);
+}
+
+.demo-foot {
+  margin-top: var(--s24);
+}
+
+.demo-pager {
+  margin-top: var(--s24);
+}
+
+/* Presenter mode: bigger type, no chrome, for recording. */
+
+.demo-runtime.presenting {
+  font-size: 18px;
+}
+
+.demo-runtime.presenting .stage h2 {
+  font-size: var(--h2);
+}
+
+@media (max-width: 1100px) {
+  .demo-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .item-rail {
+    position: static;
+    max-height: 320px;
+  }
+}

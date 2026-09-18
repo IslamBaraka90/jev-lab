@@ -123,6 +123,9 @@ export default {
   // downloads a dataset. On the server and in tests, `loadDataset`/`loadFixtures` read the files.
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
+  // The planted problems, used only by the report. They live outside this folder so a state builder
+  // cannot reach them by accident.
+  labels: () => import('../../data/synthetic/__example__.labels.json'),
   buildState,
   questions,
   evaluate,

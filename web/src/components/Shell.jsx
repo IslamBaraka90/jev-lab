@@ -19,19 +19,19 @@ export function Shell({ section, title, children }) {
   const navigation = (
     <nav aria-label="Main">
       <p className="nav-group-title">Lab</p>
-      <Link to="/" className="nav-link" aria-current={section === 'runs' ? 'page' : undefined}>
+      <Link to="/lab" className="nav-link" aria-current={section === 'runs' ? 'page' : undefined}>
         <Icon name="runs" />
         Backtests
         <span className="nav-count">{runs.length}</span>
       </Link>
-      <Link to="/compare" className="nav-link" aria-current={section === 'compare' ? 'page' : undefined}>
+      <Link to="/lab/compare" className="nav-link" aria-current={section === 'compare' ? 'page' : undefined}>
         <Icon name="compare" />
         Compare runs
       </Link>
       {activeRun && (
         <>
           <p className="nav-group-title">Running now</p>
-          <Link to={`/runs/${activeRun.id}/theater`} className="nav-link" aria-current={pathname.startsWith(`/runs/${activeRun.id}`) ? 'page' : undefined}>
+          <Link to={`/lab/runs/${activeRun.id}/theater`} className="nav-link" aria-current={pathname.startsWith(`/lab/runs/${activeRun.id}`) ? 'page' : undefined}>
             <span className="pulse" aria-hidden="true" />
             <span className="nav-live-title">{runTitle(activeRun)}</span>
             <span className="nav-count">
@@ -50,7 +50,7 @@ export function Shell({ section, title, children }) {
         Skip to content
       </a>
       <aside className="sidebar">
-        <Link to="/" className="sidebar-brand">
+        <Link to="/lab" className="sidebar-brand">
           <Logo size={44} />
           <span className="stack" style={{ gap: 2 }}>
             <strong>Jev Backtest Lab</strong>
@@ -72,13 +72,13 @@ export function Shell({ section, title, children }) {
             <span className="meta">Jev Backtest Lab</span>
             <strong>{title}</strong>
           </div>
-          {activeRun && !pathname.startsWith(`/runs/${activeRun.id}`) && (
-            <Link to={`/runs/${activeRun.id}/theater`} className="button secondary live-chip">
+          {activeRun && !pathname.startsWith(`/lab/runs/${activeRun.id}`) && (
+            <Link to={`/lab/runs/${activeRun.id}/theater`} className="button secondary live-chip">
               <span className="pulse" aria-hidden="true" />
               Watch live run
             </Link>
           )}
-          <Link to="/#new-backtest" className="button primary" onClick={() => setTimeout(() => document.getElementById('new-backtest')?.scrollIntoView(), 0)}>
+          <Link to="/lab#new-backtest" className="button primary" onClick={() => setTimeout(() => document.getElementById('new-backtest')?.scrollIntoView(), 0)}>
             <Icon name="plus" />
             New backtest
           </Link>

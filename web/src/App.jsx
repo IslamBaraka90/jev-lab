@@ -1,35 +1,83 @@
-import { Shell } from './components/Shell.jsx';
+import { lazy, Suspense, useEffect } from 'react';
+import { SiteShell } from './components/SiteShell.jsx';
 import { EmptyState } from './components/ui.jsx';
-import { RunsProvider } from './hooks/useRuns.jsx';
-import { Link, useLocation } from './lib/router.jsx';
-import { ComparePage } from './pages/ComparePage.jsx';
-import { RunPage } from './pages/RunPage.jsx';
-import { RunsPage } from './pages/RunsPage.jsx';
+import { Link, navigate, useLocation } from './lib/router.jsx';
+import { HomePage } from './pages/HomePage.jsx';
+
+// Everything but the home page loads on demand, so opening the catalog does not download the demo
+// runtime, and neither of them downloads the lab.
+const CatalogPage = lazy(() => import('./pages/CatalogPage.jsx').then((module) => ({ default: module.CatalogPage })));
+const DemoPage = lazy(() => import('./pages/DemoPage.jsx').then((module) => ({ default: module.DemoPage })));
+const DomainPage = lazy(() => import('./pages/DomainPage.jsx').then((module) => ({ default: module.DomainPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage.jsx').then((module) => ({ default: module.AboutPage })));
+const LabArea = lazy(() => import('./areas/LabArea.jsx'));
+
+const Loading = () => (
+  <p className="meta" aria-live="polite">
+    Loading…
+  </p>
+);
 
 export function App() {
   const { pathname } = useLocation();
   const route = matchRoute(pathname);
 
+  useEffect(() => {
+    if (route.redirect) navigate(route.redirect + window.location.search, { replace: true });
+  }, [route.redirect]);
+
+  if (route.redirect) return null;
+
+  if (route.area === 'lab') {
+    return (
+      <Suspense fallback={<Loading />}>
+        <LabArea route={route} />
+      </Suspense>
+    );
+  }
+
   return (
-    <RunsProvider>
-      <Shell section={route.section} title={route.title}>
-        {route.page === 'runs' && <RunsPage />}
-        {route.page === 'run' && <RunPage key={route.id} id={route.id} view={route.view} />}
-        {route.page === 'compare' && <ComparePage />}
+    <SiteShell section={route.section} title={route.title}>
+      <Suspense fallback={<Loading />}>
+        {route.page === 'home' && <HomePage />}
+        {route.page === 'catalog' && <CatalogPage />}
+        {route.page === 'demo' && <DemoPage key={route.id} id={route.id} />}
+        {route.page === 'domain' && <DomainPage key={route.id} id={route.id} />}
+        {route.page === 'about' && <AboutPage />}
         {route.page === 'missing' && (
-          <EmptyState title="This page does not exist" action={<Link to="/" className="button primary">Go to backtests</Link>}>
-            The address may be mistyped, or the run may have been deleted from results/.
+          <EmptyState title="This page does not exist" action={<Link to="/demos" className="button primary">Go to the demos</Link>}>
+            The address may be mistyped, or the demo may not have been built yet.
           </EmptyState>
         )}
-      </Shell>
-    </RunsProvider>
+      </Suspense>
+    </SiteShell>
   );
 }
 
-function matchRoute(pathname) {
-  if (pathname === '/') return { page: 'runs', section: 'runs', title: 'Backtests' };
-  if (pathname === '/compare') return { page: 'compare', section: 'compare', title: 'Compare runs' };
-  const match = pathname.match(/^\/runs\/([^/]+)(?:\/(theater|report|decisions))?\/?$/);
-  if (match) return { page: 'run', section: 'runs', title: 'Backtest', id: decodeURIComponent(match[1]), view: match[2] ?? null };
+// #region site:routes
+/** Every address the site answers, plus the two the lab used to live at. */
+export function matchRoute(pathname) {
+  const clean = pathname.length > 1 ? pathname.replace(/\/$/, '') : pathname;
+
+  if (clean === '/') return { page: 'home', section: 'home', title: null };
+  if (clean === '/demos') return { page: 'catalog', section: 'demos', title: 'Demos' };
+  if (clean === '/about') return { page: 'about', section: 'about', title: 'About' };
+
+  const demo = clean.match(/^\/demos\/([^/]+)$/);
+  if (demo) return { page: 'demo', section: 'demos', title: 'Demo', id: decodeURIComponent(demo[1]) };
+
+  const domain = clean.match(/^\/domains\/([^/]+)$/);
+  if (domain) return { page: 'domain', section: 'demos', title: 'Domain', id: decodeURIComponent(domain[1]) };
+
+  if (clean === '/lab') return { area: 'lab', page: 'runs', section: 'runs', title: 'Backtests' };
+  if (clean === '/lab/compare') return { area: 'lab', page: 'compare', section: 'compare', title: 'Compare runs' };
+
+  const run = clean.match(/^\/lab\/runs\/([^/]+)(?:\/(theater|report|decisions))?$/);
+  if (run) return { area: 'lab', page: 'run', section: 'runs', title: 'Backtest', id: decodeURIComponent(run[1]), view: run[2] ?? null };
+
+  if (clean === '/compare') return { redirect: '/lab/compare' };
+  if (clean.startsWith('/runs/')) return { redirect: `/lab${clean}` };
+
   return { page: 'missing', section: null, title: 'Not found' };
 }
+// #endregion

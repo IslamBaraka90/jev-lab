@@ -28,7 +28,7 @@ export function RunPage({ id, view }) {
 
   if (!run) {
     return connection === 'failed' ? (
-      <EmptyState title="Backtest not found" action={<Link to="/" className="button primary">Back to backtests</Link>}>
+      <EmptyState title="Backtest not found" action={<Link to="/lab" className="button primary">Back to backtests</Link>}>
         There is no run called {id} in results/.
       </EmptyState>
     ) : (
@@ -47,7 +47,7 @@ export function RunPage({ id, view }) {
       <RunHeader run={run} connection={connection} />
       <nav className="view-tabs" aria-label="Backtest views">
         {VIEWS.map((item) => (
-          <Link key={item.id} to={`/runs/${run.id}/${item.id}`} className="view-tab" aria-current={current === item.id ? 'page' : undefined}>
+          <Link key={item.id} to={`/lab/runs/${run.id}/${item.id}`} className="view-tab" aria-current={current === item.id ? 'page' : undefined}>
             <Icon name={item.icon} />
             {item.label}
           </Link>
@@ -86,7 +86,7 @@ function RunHeader({ run, connection }) {
   return (
     <div className="page-heading run-heading">
       <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link to="/">Backtests</Link>
+        <Link to="/lab">Backtests</Link>
         <Icon name="chevron" size={16} />
         <span aria-current="page">{runTitle(run)}</span>
       </nav>

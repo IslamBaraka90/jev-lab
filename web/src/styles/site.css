@@ -1,0 +1,315 @@
+/* The demo site: the frame around the catalog, the home page and the demo pages. The lab keeps its
+   own sidebar layout in layout.css. */
+
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: var(--s24);
+  padding: var(--s12) var(--s24);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.site-brand span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.site-bar nav {
+  display: flex;
+  gap: var(--s4);
+  margin-left: auto;
+}
+
+.site-nav-link {
+  padding: var(--s8) var(--s12);
+  border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav-link:hover {
+  color: var(--text);
+  background: var(--surface2);
+}
+
+.site-nav-link[aria-current='page'] {
+  color: var(--text);
+  background: var(--surface2);
+  box-shadow: inset 0 -2px 0 var(--primary);
+}
+
+.mode-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s4);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: var(--meta);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.mode-chip.live {
+  color: var(--warning);
+  border-color: var(--warning);
+}
+
+.site-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: var(--s32) var(--s24) var(--s48);
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s8) var(--s16);
+  justify-content: space-between;
+  padding: var(--s16) var(--s24);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: var(--meta);
+}
+
+/* Home */
+
+.home-hero h1 {
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+.home-hero .reading {
+  max-width: 68ch;
+  color: var(--muted);
+}
+
+.home-hero,
+.home > section {
+  display: grid;
+  gap: var(--s16);
+}
+
+.ways-in {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--s16);
+}
+
+.way-card {
+  display: grid;
+  gap: var(--s8);
+  padding: var(--s20);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color var(--standard), transform var(--standard);
+}
+
+.way-card:hover {
+  border-color: var(--control);
+  transform: translateY(-2px);
+}
+
+.counts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--s16);
+}
+
+.counts div {
+  display: grid;
+  gap: 2px;
+}
+
+.counts strong {
+  font-size: var(--h2);
+  letter-spacing: -0.03em;
+}
+
+.domain-list {
+  display: grid;
+  gap: var(--s8);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.domain-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s16);
+  padding: var(--s12) var(--s16);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.domain-row a {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* Catalog */
+
+.filters {
+  display: grid;
+  gap: var(--s12);
+}
+
+.need-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s8);
+}
+
+.need-chips .chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: var(--meta);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.need-chips .chip.selected {
+  color: var(--text);
+  border-color: var(--primary);
+  background: var(--surface2);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--s12);
+}
+
+.search-field {
+  position: relative;
+  flex: 1 1 260px;
+}
+
+.search-field svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+}
+
+.search-field input {
+  padding-left: 34px;
+  width: 100%;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--s16);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.demo-card {
+  display: grid;
+  gap: var(--s12);
+  padding: var(--s20);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  transition: border-color var(--standard), transform var(--standard);
+}
+
+.demo-card:hover {
+  border-color: var(--control);
+  transform: translateY(-2px);
+}
+
+.demo-card-link {
+  display: grid;
+  gap: var(--s4);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.demo-card-domain {
+  font-size: var(--meta);
+  color: var(--link);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.demo-card-title {
+  font-size: var(--h3);
+  letter-spacing: -0.02em;
+}
+
+.demo-card-value {
+  color: var(--muted);
+}
+
+.demo-card-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s12);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--meta);
+}
+
+.demo-card-facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 767px) {
+  .site-bar {
+    flex-wrap: wrap;
+    gap: var(--s12);
+    padding: var(--s12) var(--s16);
+  }
+
+  .site-bar nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .site-main {
+    padding: var(--s24) var(--s16) var(--s32);
+  }
+}

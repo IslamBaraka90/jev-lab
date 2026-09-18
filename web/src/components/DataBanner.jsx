@@ -3,13 +3,13 @@ import { Icon } from './Icon.jsx';
 import { answerSource } from '../lib/demo-client.js';
 import { formatDate } from '../lib/format.js';
 import { REPO_URL } from '../lib/links.js';
-import { isLive } from '../lib/mode.js';
+import { liveAvailable } from '../lib/mode.js';
 
 /**
- * Says where this page's answers came from. On the deployed site that is always a recording, with the
- * model version and the day it was captured; with a key and the local server it says live instead.
+ * Says where this page's answers came from: a recording made once and committed, with the model
+ * version and the day it was captured. Live runs are opt-in per demo, so this line stays true.
  */
-export function DataBanner({ demo }) {
+export function DataBanner({ demo, live }) {
   const [source, setSource] = useState(null);
 
   useEffect(() => {
@@ -23,11 +23,11 @@ export function DataBanner({ demo }) {
   if (!source) return <p className="data-banner" aria-busy="true" />;
 
   return (
-    <p className="data-banner">
-      <Icon name={isLive ? 'bolt' : 'check'} size={16} />
-      {source.live ? (
+    <p className={`data-banner${live ? ' live' : ''}`}>
+      <Icon name={live ? 'bolt' : 'check'} size={16} />
+      {live ? (
         <span>
-          <strong>Live mode.</strong> Runs on this page call the TypeSafe API with your key, and each one costs a request.
+          <strong>Live.</strong> Runs on this page call the TypeSafe API with your key, and each item costs one request.
         </span>
       ) : (
         <span>
@@ -37,7 +37,7 @@ export function DataBanner({ demo }) {
           <a href={REPO_URL} target="_blank" rel="noreferrer">
             Run it yourself
           </a>
-          .
+          {liveAvailable ? ', or switch this demo to live below.' : '.'}
         </span>
       )}
     </p>

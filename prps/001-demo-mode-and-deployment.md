@@ -16,7 +16,9 @@ The site goes on Vercel so anyone can click through 50 demos. It must work with 
 | Data | Committed datasets | The same datasets, plus anything you fetch yourself |
 | Writes | None | Records new fixtures and results |
 
-Demo mode is the default everywhere. Real mode only turns on when a key exists **and** the app is served by the Express server.
+Demo mode is the default everywhere. Live mode needs three things at once: a key on the server, the page served by Express,
+and a person switching a demo to live and confirming the dialog that says how many requests a full run would send. A page that
+spends money on load would be a trap, however local it is, so nothing calls the API until that switch is on.
 
 ## How demo mode works
 
@@ -24,7 +26,9 @@ Demo mode is the default everywhere. Real mode only turns on when a key exists *
 2. The web app imports a client with one shape (`runItem(demo, item)`), with two implementations behind it:
    - `replayClient` reads the fixture, waits a short, configurable beat so the phase animation still plays, and returns the answer.
    - `liveClient` posts to `/api/demos/:id/run` on the local server.
-3. `web/src/lib/mode.js` picks one at load: `liveClient` when `window.__JEV_LIVE__` is true (the Express server injects it), otherwise `replayClient`.
+3. `web/src/lib/mode.js` exposes `liveAvailable` (the Express server injects `window.__JEV_LIVE__` when it has a key). The
+   runtime passes `live` per run, and it is false until someone switches a demo over and confirms; switching clears any
+   results on screen so recorded and live answers never mix.
 4. The replay client never imports the SDK, so demo bundles carry no client code and no key handling.
 
 ## Recording fixtures
@@ -64,7 +68,7 @@ Fixtures are reviewed like code. A re-record that changes an answer shows up as 
 | Path | Change |
 |---|---|
 | `web/src/lib/demo-client.js` | new: `replayClient`, `liveClient`, `runItem` |
-| `web/src/lib/mode.js` | new: mode detection, exported `isLive` |
+| `web/src/lib/mode.js` | new: `liveAvailable`, the mode copy, and the run estimate for the confirmation |
 | `web/src/components/DataBanner.jsx` | new: the recorded-answers banner |
 | `scripts/record-demo.js` | new |
 | `src/routes/demos.js` | new: `POST /api/demos/:id/run` for real mode |
@@ -78,7 +82,9 @@ Fixtures are reviewed like code. A re-record that changes an answer shows up as 
 - [ ] `npm run build`, then serve `web/dist` with the network blocked: every demo plays through with answers, charts and reports.
 - [ ] No request leaves the page in demo mode; the network panel shows only same-origin static files.
 - [ ] `node scripts/record-demo.js ledger-integrity` writes a fixture file, and re-running without `--force` changes nothing.
-- [ ] With a key set and the Express server running, the same demo page runs live and matches the recorded shape.
+- [ ] With a key set and the Express server running, a demo still replays recordings until "Run live" is switched on and
+      confirmed; after that it matches the recorded shape.
+- [ ] Serving `web/dist` statically and playing a demo makes no request to `/api/*`.
 - [ ] `git status` is clean after a build; datasets and fixtures are tracked.
 - [ ] The banner names the model version and capture date from the fixture file, not a hard-coded string.
 

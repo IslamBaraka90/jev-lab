@@ -41,7 +41,7 @@ export function RunsPage() {
                 {activeRun.symbols.map((symbol) => symbol.symbol).join(', ')} · started {formatDateTime(activeRun.startedAt)}
               </span>
             </div>
-            <Link to={`/runs/${activeRun.id}/theater`} className="button primary">
+            <Link to={`/lab/runs/${activeRun.id}/theater`} className="button primary">
               <Icon name="theater" />
               Watch live
             </Link>
@@ -56,7 +56,7 @@ export function RunsPage() {
         <section className="stack" aria-labelledby="runs-title">
           <div className="section-title">
             <h2 id="runs-title">Runs</h2>
-            <Link to="/compare" className="button ghost">
+            <Link to="/lab/compare" className="button ghost">
               <Icon name="compare" />
               Compare runs
             </Link>
@@ -64,7 +64,8 @@ export function RunsPage() {
           {loading && <p className="meta">Loading runs…</p>}
           {error && (
             <ErrorCallout title="The runs could not be loaded">
-              {error} Check that the server is running, then reload the page.
+              {error} The lab reads runs from the local server: clone the repository, run <code>npm start</code>, and open
+              /lab there. The demos need no server.
             </ErrorCallout>
           )}
           {!loading && !error && runs.length === 0 && (
@@ -102,7 +103,7 @@ function RunList({ runs }) {
           <li key={run.id} className={`run-card${live ? ' live' : ''}`}>
             <div className="run-card-head">
               <div className="stack" style={{ gap: 2 }}>
-                <Link to={`/runs/${run.id}/${live ? 'theater' : 'report'}`} className="run-link">
+                <Link to={`/lab/runs/${run.id}/${live ? 'theater' : 'report'}`} className="run-link">
                   {runTitle(run)}
                 </Link>
                 <span className="meta">
@@ -150,15 +151,15 @@ function RunList({ runs }) {
             )}
 
             <div className="run-card-actions">
-              <Link to={`/runs/${run.id}/theater`} className="button ghost">
+              <Link to={`/lab/runs/${run.id}/theater`} className="button ghost">
                 <Icon name="theater" />
                 {live ? 'Watch live' : 'Replay'}
               </Link>
-              <Link to={`/runs/${run.id}/report`} className="button ghost">
+              <Link to={`/lab/runs/${run.id}/report`} className="button ghost">
                 <Icon name="report" />
                 Report
               </Link>
-              <Link to={`/runs/${run.id}/decisions`} className="button ghost">
+              <Link to={`/lab/runs/${run.id}/decisions`} className="button ghost">
                 <Icon name="decisions" />
                 Decisions
               </Link>
@@ -203,7 +204,7 @@ function NewBacktest({ presets, settings, activeRunId, onStarted }) {
       const { id } = await api.start({ preset, symbols, cutoffs: cutoffCount, indicators, blind });
       setConfirming(false);
       onStarted();
-      navigate(`/runs/${id}/theater`);
+      navigate(`/lab/runs/${id}/theater`);
     } catch (err) {
       setError(err.message);
     } finally {

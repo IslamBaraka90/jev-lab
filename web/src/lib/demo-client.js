@@ -1,8 +1,6 @@
-// How a demo gets its answers. In demo mode they come from the fixture file recorded with
-// `npm run record`; in live mode the local server calls the API. Both return the same shape, so the
-// runtime, the report and the page never know which one they are looking at.
-
-import { isLive } from './mode.js';
+// How a demo gets its answers. By default they come from the fixture file recorded with
+// `npm run record`; a demo switched to live asks the local server to call the API instead. Both
+// return the same shape, so the runtime, the report and the page never know which one they have.
 
 const datasets = new Map();
 const fixtures = new Map();
@@ -24,12 +22,16 @@ export function loadFixtures(demo) {
 
 /** What the page says about where the answers came from. */
 export async function answerSource(demo) {
-  if (isLive) return { live: true, model: null, recordedAt: null, source: 'Live requests to the TypeSafe API' };
   const file = await loadFixtures(demo);
-  return { live: false, model: file.model ?? null, recordedAt: file.recordedAt ?? null, source: file.source ?? 'Recorded answers' };
+  return {
+    model: file.model ?? null,
+    recordedAt: file.recordedAt ?? null,
+    source: file.source ?? 'Recorded answers',
+    items: Object.keys(file.answers ?? {}).length,
+  };
 }
 
-/** Replays one recorded answer. `pause` keeps the reading step visible when a run is playing. */
+/** Replays one recorded answer. `pause` keeps the reading step visible while a run plays. */
 export async function replayItem(demo, item, { pause = 0 } = {}) {
   const file = await loadFixtures(demo);
   const answers = file.answers?.[item.id];
@@ -40,7 +42,7 @@ export async function replayItem(demo, item, { pause = 0 } = {}) {
   return { answers, model: file.model ?? null, recordedAt: file.recordedAt ?? null, recorded: true };
 }
 
-/** Runs one item against the real API through the local server. */
+/** Runs one item against the real API through the local server. Only ever called after a confirmation. */
 export async function runItemLive(demo, item) {
   const response = await fetch(`/api/demos/${encodeURIComponent(demo.id)}/run`, {
     method: 'POST',
@@ -52,7 +54,7 @@ export async function runItemLive(demo, item) {
   return { ...body, recorded: false };
 }
 
-/** One call for the runtime: recorded or live, whichever this page is. */
-export function runItem(demo, item, options) {
-  return isLive ? runItemLive(demo, item) : replayItem(demo, item, options);
+/** One call for the runtime. `live` is false unless the page has been switched over and confirmed. */
+export function runItem(demo, item, { live = false, pause = 0 } = {}) {
+  return live ? runItemLive(demo, item) : replayItem(demo, item, { pause });
 }
