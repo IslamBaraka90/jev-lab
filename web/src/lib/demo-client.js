@@ -2,6 +2,8 @@
 // `npm run record`; a demo switched to live asks the local server to call the API instead. Both
 // return the same shape, so the runtime, the report and the page never know which one they have.
 
+import { expandAnswers } from '../../../demos/lib/answers.js';
+
 const datasets = new Map();
 const fixtures = new Map();
 
