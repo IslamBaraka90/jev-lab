@@ -1,0 +1,12 @@
+node_modules/
+web/dist/
+.env
+.env.*
+!.env.example
+
+# Local run output and capture artifacts, not part of the site
+results/
+screenshots/
+
+# Everything the deployed site needs is tracked on purpose: demos/**/data.json,
+# demos/**/fixtures.json, data/market/** and data/synthetic/** are committed.

@@ -1,0 +1,395 @@
+/* Chart marks: hairline recessive axes, muted candles, 2 px lines, >= 8 px markers with surface rings. */
+
+.candle-chart,
+.line-chart,
+.column-chart {
+  position: relative;
+  width: 100%;
+  touch-action: pan-y;
+}
+
+.candle-chart svg,
+.line-chart svg,
+.column-chart svg {
+  display: block;
+  overflow: visible;
+}
+
+.axis text,
+.category-note {
+  fill: var(--muted);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.axis .grid {
+  stroke: var(--chart-grid);
+  stroke-width: 1;
+}
+
+.axis .zero {
+  stroke: var(--chart-axis);
+  stroke-width: 1;
+}
+
+.crosshair {
+  stroke: var(--control);
+  stroke-width: 1;
+}
+
+.hit-area {
+  fill: transparent;
+  cursor: crosshair;
+}
+
+.future-zone {
+  fill: var(--future-zone);
+}
+
+.candle line {
+  stroke: var(--candle-up);
+  stroke-width: 1;
+}
+
+.candle.up rect {
+  fill: var(--surface);
+  stroke: var(--candle-up);
+  stroke-width: 1;
+}
+
+.candle.down line {
+  stroke: var(--candle-down);
+}
+
+.candle.down rect {
+  fill: var(--candle-down);
+  stroke: var(--candle-down);
+  stroke-width: 1;
+}
+
+.candle.future,
+.volume .future {
+  animation: bar-in var(--standard) ease-out;
+}
+
+@keyframes bar-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.volume rect {
+  fill: var(--context);
+  opacity: 0.45;
+}
+
+.volume rect.future {
+  opacity: 0.3;
+}
+
+.decision-marker line {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.decision-marker rect {
+  fill: var(--primary);
+}
+
+.decision-marker text {
+  fill: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.level {
+  stroke-width: 1.5;
+}
+
+.level.stop {
+  stroke: var(--danger);
+}
+
+.level.target {
+  stroke: var(--positive);
+}
+
+.price-tag text {
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.price-tag.stop rect {
+  fill: var(--dangerBg);
+}
+
+.price-tag.stop text {
+  fill: var(--danger);
+}
+
+.price-tag.target rect {
+  fill: var(--positiveBg);
+}
+
+.price-tag.target text {
+  fill: var(--positive);
+}
+
+.trade-path {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  opacity: 0.7;
+}
+
+.entry-dot {
+  fill: var(--accent);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.exit-dot {
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.exit-dot.gain {
+  fill: var(--positive);
+}
+
+.exit-dot.loss {
+  fill: var(--danger);
+}
+
+.exit-label rect {
+  stroke-width: 1;
+}
+
+.exit-label.gain rect {
+  fill: var(--positiveBg);
+  stroke: var(--positive);
+}
+
+.exit-label.loss rect {
+  fill: var(--dangerBg);
+  stroke: var(--danger);
+}
+
+.exit-label text {
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.exit-label.gain text {
+  fill: var(--positive);
+}
+
+.exit-label.loss text {
+  fill: var(--danger);
+}
+
+.exit-label,
+.exit-dot {
+  animation: pop-in var(--standard) ease-out;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.series-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke: var(--context);
+}
+
+.series-line.accent {
+  stroke: var(--accent);
+}
+
+.series-line.compare-b {
+  stroke: var(--muted);
+}
+
+.series-dot {
+  fill: var(--context);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.series-dot.accent {
+  fill: var(--accent);
+}
+
+.series-dot.compare-b {
+  fill: var(--muted);
+}
+
+.current-marker {
+  stroke: var(--control);
+  stroke-width: 1;
+}
+
+.column path.gain {
+  fill: var(--positive);
+}
+
+.column path.loss {
+  fill: var(--danger);
+}
+
+.column.hovered path {
+  filter: brightness(1.15);
+}
+
+.value-label {
+  fill: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.category-label {
+  fill: var(--text);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.sparkline path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.sparkline .zero {
+  stroke: var(--chart-axis);
+  stroke-width: 1;
+}
+
+.sparkline circle {
+  fill: var(--accent);
+}
+
+.sparkline-empty {
+  display: inline-block;
+  width: 112px;
+}
+
+.mix-bar {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+  min-width: 120px;
+  height: 8px;
+}
+
+.mix-bar .segment {
+  min-width: 2px;
+  min-height: 0;
+  padding: 0;
+  border-radius: 0;
+  background: var(--flat);
+}
+
+.mix-bar .segment:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.mix-bar .segment:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.mix-bar .segment:only-child {
+  border-radius: 4px;
+}
+
+.mix-bar .segment.long {
+  background: var(--long);
+}
+
+.mix-bar .segment.short {
+  background: var(--short);
+}
+
+.mix-bar .segment.empty {
+  background: var(--surface2);
+}
+
+.timeline {
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.timeline-symbol {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.timeline-track {
+  display: grid;
+  gap: 3px;
+  align-items: center;
+}
+
+.timeline-dot {
+  justify-self: center;
+  width: 12px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--flat);
+  transition: transform var(--micro);
+}
+
+.timeline-dot.long {
+  background: var(--long);
+}
+
+.timeline-dot.short {
+  background: var(--short);
+}
+
+.timeline-dot.failed {
+  background: var(--danger);
+}
+
+.timeline-dot.pending {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--border);
+}
+
+.timeline-dot.won {
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--positive);
+}
+
+.timeline-dot.lost {
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--danger);
+}
+
+button.timeline-dot:hover {
+  transform: scale(1.35);
+}
+
+.timeline-dot.current {
+  transform: scale(1.5);
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}

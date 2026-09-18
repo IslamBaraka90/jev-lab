@@ -1,0 +1,35 @@
+{
+  "name": "jev-test",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Express app for testing TypeSafe's Jev model",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "dev:web": "vite --config web/vite.config.js",
+    "build": "vite build --config web/vite.config.js",
+    "quickstart": "node scripts/quickstart.js",
+    "pilot": "node scripts/backtest.js",
+    "pilot:indicators": "node scripts/backtest.js --indicators",
+    "suite": "node scripts/backtest.js --suite",
+    "suite:indicators": "node scripts/backtest.js --suite --indicators",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0",
+    "express": "^5.2.1",
+    "fintech-algorithms": "^0.13.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "yahoo-finance2": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
+  }
+}

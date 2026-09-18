@@ -1,0 +1,274 @@
+/* Analytics dashboard shell (WEB-APF-01): persistent side navigation, sticky top bar, content frame. */
+
+.sidebar {
+  width: 280px;
+  position: fixed;
+  inset: 0 auto 0 0;
+  background: var(--brand-navy);
+  color: var(--brand-offwhite);
+  border-right: 1px solid var(--nav-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 30;
+}
+
+.sidebar-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--nav-border);
+  text-decoration: none;
+  color: var(--brand-offwhite);
+  min-height: 104px;
+}
+
+.sidebar-brand strong {
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+
+.sidebar-brand .meta {
+  color: var(--nav-meta);
+}
+
+.side-content {
+  padding: 24px 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.nav-group-title {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--nav-group);
+  text-transform: uppercase;
+  margin: 24px 12px 8px;
+}
+
+.nav-group-title:first-child {
+  margin-top: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 8px 12px;
+  color: var(--nav-text);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.4;
+  transition: background var(--micro), color var(--micro);
+}
+
+.nav-link svg {
+  color: #b4c0d9;
+  flex-shrink: 0;
+}
+
+.nav-link .nav-count {
+  margin-left: auto;
+  font-size: 14px;
+  border: 1px solid #3a4862;
+  border-radius: 4px;
+  padding: 0 4px;
+  color: #bbc8e2;
+  font-variant-numeric: tabular-nums;
+}
+
+.nav-link:hover {
+  background: var(--nav-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link[aria-current='page'] {
+  color: #fff;
+  background: var(--nav-current);
+  box-shadow: inset 3px 0 var(--brand-magenta);
+}
+
+.nav-live-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--nav-border);
+  font-size: 14px;
+  color: var(--nav-meta);
+}
+
+.sidebar-footer code {
+  color: var(--brand-offwhite);
+}
+
+.workspace {
+  margin-left: 280px;
+  min-width: 0;
+}
+
+.topbar {
+  height: 80px;
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.top-context {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-right: auto;
+  min-width: 0;
+}
+
+.top-context strong {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 32px;
+  min-height: calc(100vh - 80px);
+}
+
+#content:focus {
+  outline: none;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.page-heading h1 {
+  max-width: 24ch;
+}
+
+.page-heading > p {
+  font-size: var(--reading);
+  color: var(--muted);
+}
+
+.page-heading .heading-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-title h2,
+.section-heading {
+  font-size: var(--h3);
+}
+
+.nav-dialog {
+  background: var(--brand-navy);
+  width: min(440px, calc(100vw - 24px));
+}
+
+@media (min-width: 1800px) {
+  #content {
+    padding: 48px;
+  }
+
+  .topbar {
+    padding-inline: 48px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .sidebar {
+    display: none;
+  }
+
+  .workspace {
+    margin-left: 0;
+  }
+
+  .mobile-nav {
+    display: inline-flex;
+  }
+
+  .topbar {
+    padding: 16px 24px;
+  }
+
+  #content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    height: 72px;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+
+  .top-context,
+  .topbar .live-chip {
+    display: none;
+  }
+
+  #content {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .page-heading .heading-row {
+    flex-direction: column;
+  }
+
+  .grid.two,
+  .grid.three {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

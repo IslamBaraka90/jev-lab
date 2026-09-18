@@ -1,0 +1,69 @@
+// Functional icons on a 24 px grid. Filled glyphs set their own fill; the rest are 2 px strokes.
+const PATHS = {
+  play: <path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none" />,
+  pause: <path d="M7.5 5h3.5v14H7.5zM13 5h3.5v14H13z" fill="currentColor" stroke="none" />,
+  previous: <path d="M17.5 6 9.5 12l8 6zM6.5 6v12" />,
+  next: <path d="M6.5 6l8 6-8 6zM17.5 6v12" />,
+  latest: <path d="M4.5 6.5 11 12l-6.5 5.5zM12.5 6.5 19 12l-6.5 5.5z" />,
+  restart: <path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4.5v4h4" />,
+  stop: <rect x="6.5" y="6.5" width="11" height="11" rx="2" />,
+  close: <path d="M6 6l12 12M18 6 6 18" />,
+  plus: <path d="M12 5v14M5 12h14" />,
+  runs: <path d="M9 6.5h11M9 12h11M9 17.5h11M4.5 6.5h.01M4.5 12h.01M4.5 17.5h.01" />,
+  compare: <path d="M4 5h6.5v14H4zM13.5 5H20v14h-6.5z" />,
+  theater: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M10.2 8.6v6.8l5.4-3.4z" fill="currentColor" stroke="none" />
+    </>
+  ),
+  report: <path d="M5 19.5V11M10 19.5V5M15 19.5V13M20 19.5V8.5M3 19.5h18" />,
+  decisions: <path d="M4 5h16v14H4zM4 10h16M4 14.5h16M9.5 5v14" />,
+  table: <path d="M4 5h16v14H4zM4 10h16M4 14.5h16M9.5 5v14" />,
+  chart: <path d="M4 17l5.5-5.5 4 4L20 9" />,
+  up: <path d="M12 19V5M6 11l6-6 6 6" />,
+  down: <path d="M12 5v14M6 13l6 6 6-6" />,
+  check: <path d="M5 12.5l4.5 4.5L19 7.5" />,
+  alert: <path d="M12 4 3 19.5h18L12 4zM12 10v4.5M12 17h.01" />,
+  info: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 11v5.5M12 7.8h.01" />
+    </>
+  ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
+    </>
+  ),
+  chevron: <path d="M9.5 6l6 6-6 6" />,
+  menu: <path d="M4 7h16M4 12h16M4 17h16" />,
+  copy: (
+    <>
+      <rect x="9" y="9" width="11" height="11" rx="2" />
+      <path d="M5.5 15V5.5a1 1 0 0 1 1-1H15" />
+    </>
+  ),
+  bolt: <path d="M13 3 5 13.5h6L10.5 21 19 10.5h-6z" />,
+};
+
+export function Icon({ name, size = 20, title }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={title ? undefined : true}
+      role={title ? 'img' : undefined}
+    >
+      {title && <title>{title}</title>}
+      {PATHS[name]}
+    </svg>
+  );
+}

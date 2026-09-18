@@ -1,0 +1,84 @@
+/* The Fintech Builder, Open Core 03: brand colors, the dark (navy) semantic theme, type, spacing,
+   standard density and motion, copied from the design system's token registry. */
+:root {
+  color-scheme: dark;
+
+  --brand-navy: #0b1330;
+  --brand-magenta: #ff0050;
+  --brand-offwhite: #faf7f3;
+  --brand-paper: #e9ebf0;
+  --brand-accessible-magenta: #c90040;
+
+  --bg: #0b1330;
+  --surface: #121e3b;
+  --surface2: #1b2947;
+  --text: #faf7f3;
+  --muted: #bec7dc;
+  --border: #354461;
+  --control: #8293b5;
+  --primary: #c90040;
+  --onPrimary: #ffffff;
+  --link: #ff91b4;
+  --positive: #86dfc6;
+  --positiveBg: #173d3a;
+  --warning: #ffd388;
+  --warningBg: #3a3020;
+  --danger: #ffa6be;
+  --dangerBg: #412333;
+  --focus: #94baff;
+
+  --body: 16px;
+  --reading: 18px;
+  --meta: 14px;
+  --h3: 24px;
+  --h2: 32px;
+  --h1: 48px;
+  --target: 44px;
+
+  --s4: 4px;
+  --s8: 8px;
+  --s12: 12px;
+  --s16: 16px;
+  --s24: 24px;
+  --s32: 32px;
+  --s48: 48px;
+  --s64: 64px;
+  --s80: 80px;
+
+  --gap: 24px;
+  --pad: 24px;
+
+  --micro: 120ms;
+  --standard: 180ms;
+  --panel: 240ms;
+  --page: 320ms;
+
+  --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  /* Sidebar, from the design system's navigation shell. */
+  --nav-border: #293551;
+  --nav-text: #c5cee1;
+  --nav-meta: #bdc6dc;
+  --nav-group: #aab8d1;
+  --nav-hover: #1b2846;
+  --nav-current: #283454;
+
+  /* Chart roles. LONG and SHORT pass the dataviz six checks on --surface (CVD ΔE 26.8, contrast >= 3:1);
+     NO TRADE and context series use the de-emphasis gray; the magenta accent carries Jev's story. */
+  --chart-grid: #22304f;
+  --chart-axis: #354461;
+  --long: #3987e5;
+  --short: #d95926;
+  --flat: #6f7d99;
+  --accent: #ff0050;
+  --context: #6f7d99;
+  --candle-up: #a9b5cf;
+  --candle-down: #5e6d8c;
+  --future-zone: rgba(148, 186, 255, 0.06);
+}
+
+.compact {
+  --gap: 12px;
+  --pad: 16px;
+}
