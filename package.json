@@ -21,7 +21,8 @@
     "record": "node scripts/record-demo.js",
     "prebuild": "node scripts/build-code-index.js",
     "build:code-index": "node scripts/build-code-index.js",
-    "check": "node scripts/check-budgets.js && node --test"
+    "check": "node scripts/check-budgets.js && node --test",
+    "serve:static": "node scripts/serve-static.js"
   },
   "engines": {
     "node": ">=22.12"
