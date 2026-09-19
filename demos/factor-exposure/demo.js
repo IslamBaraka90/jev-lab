@@ -107,7 +107,6 @@ function findings(graded, byItem) {
 
 export default {
   id: 'factor-exposure', title: 'Factor and sector exposure', domain: 'portfolio',
-  status: 'pending-recording',
   value: 'Say what a portfolio is actually betting on, including the bets nobody meant to make.',
   tags: ['portfolio', 'factor', 'sector', 'real prices'], dataClass: 'mixed', readMinutes: 4, view: 'table',
   itemLabel: (item) => `${item.id} · ${item.holdings.length} holdings · ${item.ownerBelief}`,

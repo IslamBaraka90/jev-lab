@@ -176,36 +176,36 @@
   },
   {
     "portfolioId": "FE-26",
-    "dominantFactor": "FX",
-    "unintendedFactor": "MOMENTUM",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "FX",
     "beliefMatchesHoldings": false,
     "singleFactorPortfolio": false
   },
   {
     "portfolioId": "FE-27",
-    "dominantFactor": "FX",
-    "unintendedFactor": "NONE",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "ENERGY",
     "beliefMatchesHoldings": true,
-    "singleFactorPortfolio": true
+    "singleFactorPortfolio": false
   },
   {
     "portfolioId": "FE-28",
-    "dominantFactor": "FX",
-    "unintendedFactor": "MOMENTUM",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "FX",
     "beliefMatchesHoldings": false,
     "singleFactorPortfolio": false
   },
   {
     "portfolioId": "FE-29",
-    "dominantFactor": "FX",
-    "unintendedFactor": "NONE",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "ENERGY",
     "beliefMatchesHoldings": true,
-    "singleFactorPortfolio": true
+    "singleFactorPortfolio": false
   },
   {
     "portfolioId": "FE-30",
-    "dominantFactor": "FX",
-    "unintendedFactor": "MOMENTUM",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "FX",
     "beliefMatchesHoldings": false,
     "singleFactorPortfolio": false
   }

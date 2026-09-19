@@ -974,8 +974,8 @@
   },
   "scripts/generate/factor-exposure.js#demo:data": {
     "path": "scripts/generate/factor-exposure.js",
-    "startLine": 117,
-    "endLine": 129,
+    "startLine": 123,
+    "endLine": 135,
     "code": "function holding(symbol, weightPercent) {\n  const identity = profile(symbol);\n  return {\n    symbol,\n    sector: identity.sector ?? 'Other',\n    currency: identity.currency,\n    weightPercent,\n    revenueFromUsPercent: REVENUE_US[symbol],\n    twelveMonthReturnPercent: returnOver(symbol),\n    volatilityPercent: volatility(symbol),\n    correlations: Object.fromEntries(FACTORS.map((factor) => [factor, representativeCorrelation(symbol, factor)])),\n  };\n}",
     "language": "javascript"
   },

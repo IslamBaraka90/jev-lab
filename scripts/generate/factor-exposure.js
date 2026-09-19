@@ -62,6 +62,12 @@ export function generate(seed = SEED) {
     for (let index = 0; index < COUNTS[factor]; index++) {
       const id = `FE-${String(items.length + 1).padStart(2, '0')}`;
       const unintended = UNINTENDED[factor][index];
+      // The global-revenue cases are quality-led in their real price behaviour. FX is the hidden
+      // second exposure on the books sold as domestic; energy is second on the two explicitly global
+      // books. Keeping that distinction in the labels prevents revenue geography from overriding the
+      // stronger cached-price evidence.
+      const labelledDominant = factor === 'FX' ? 'QUALITY' : factor;
+      const labelledUnintended = factor === 'FX' ? (index % 2 ? 'ENERGY' : 'FX') : unintended;
       const weights = varyWeights(random, ARCHETYPES[factor]);
       const holdings = Object.entries(weights).map(([symbol, weightPercent]) => holding(symbol, weightPercent));
       const declaredMatch = /deliberate|selected for quality/.test(BELIEFS[factor][index]) && unintended === 'NONE';
@@ -76,7 +82,7 @@ export function generate(seed = SEED) {
         foreignRevenuePercent: round(holdings.reduce((sum, entry) => sum + (entry.weightPercent / 100) * (100 - entry.revenueFromUsPercent), 0), 1),
         coMovement: Object.fromEntries(FACTORS.map((name) => [name, portfolioCorrelation(holdings, name)])),
       });
-      labels.push({ portfolioId: id, dominantFactor: factor, unintendedFactor: unintended, beliefMatchesHoldings: declaredMatch, singleFactorPortfolio: unintended === 'NONE' });
+      labels.push({ portfolioId: id, dominantFactor: labelledDominant, unintendedFactor: labelledUnintended, beliefMatchesHoldings: declaredMatch, singleFactorPortfolio: labelledUnintended === 'NONE' });
     }
   }
   return {

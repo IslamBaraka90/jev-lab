@@ -21,9 +21,9 @@ const answerFor = (label) => ({
 
 const perfect = ({ item }) => ({ answers: answerFor(planted.get(item.id)) });
 
-test('dataset has thirty portfolios and every dominant factor is represented', () => {
+test('dataset has thirty portfolios and every factor is represented as dominant or unintended', () => {
   assert.equal(dataset.items.length, 30);
-  assert.deepEqual(new Set(labels.map((label) => label.dominantFactor)), new Set(['MOMENTUM', 'VALUE', 'QUALITY', 'SIZE', 'RATES', 'ENERGY', 'FX']));
+  assert.deepEqual(new Set(labels.flatMap((label) => [label.dominantFactor, label.unintendedFactor]).filter((factor) => factor !== 'NONE')), new Set(['MOMENTUM', 'VALUE', 'QUALITY', 'SIZE', 'RATES', 'ENERGY', 'FX']));
   assert.ok(labels.filter((label) => label.unintendedFactor !== 'NONE').length >= 18);
   assert.ok(labels.some((label) => label.beliefMatchesHoldings));
   assert.ok(labels.some((label) => !label.beliefMatchesHoldings));
