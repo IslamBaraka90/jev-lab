@@ -109,8 +109,8 @@ function report(results, context = {}) {
   const byItem = new Map(labels.map((label) => [label.alertId, label]));
   const graded = results.filter((result) => byItem.has(result.item.id));
   const real = graded.filter((result) => byItem.get(result.item.id).truePositive);
-  const kept = graded.filter((result) => result.evaluation.kept);
-  const keptReal = real.filter((result) => result.evaluation.kept);
+  const kept = graded.filter((result) => result.evaluation.escalated);
+  const keptReal = real.filter((result) => result.evaluation.escalated);
 
   return {
     note: `${context.note ?? ''} ${context.wording ?? ''}`.trim(),
@@ -130,14 +130,15 @@ function kpis({ graded, real, kept, keptReal, byItem }) {
   const explained = graded.filter((result) => byItem.get(result.item.id).kind === 'explained in the file');
   const closedExplained = explained.filter((result) => !result.evaluation.kept);
   const escalated = graded.filter((result) => result.evaluation.escalated);
-  const askingSomething = kept.filter((result) => result.evaluation.missing !== 'NONE');
+  const watched = graded.filter((result) => result.evaluation.disposition === 'MONITOR');
+  const askingSomething = escalated.filter((result) => result.evaluation.missing !== 'NONE');
 
   return [
     { label: 'Queue after triage', value: `${kept.length} of ${graded.length}`, context: `a ${share(graded.length - kept.length, graded.length)} cut, keeping ${keptReal.length} of the ${real.length} alerts worth working`, tone: keptReal.length === real.length ? 'good' : 'warn' },
-    { label: 'Worth working, kept', value: `${keptReal.length} of ${real.length}`, context: `${named.length} of them named for the right pattern` },
+    { label: 'Worth working, escalated', value: `${keptReal.length} of ${real.length}`, context: `${named.length} of them named for the right pattern` },
     { label: 'Explained spikes closed', value: `${closedExplained.length} of ${explained.length}`, context: 'house sales, bonuses, seasonal trade, money collected for a wedding', tone: closedExplained.length === explained.length ? 'good' : 'warn' },
-    { label: 'Escalated', value: escalated.length, context: `${escalated.filter((result) => byItem.get(result.item.id).truePositive).length} of them are the planted ones` },
-    { label: 'Asks for something specific', value: share(askingSomething.length, kept.length), context: `${askingSomething.length} of the ${kept.length} kept alerts name what would settle them` },
+    { label: 'Left under watch', value: watched.length, context: `neither worked now nor closed · ${watched.filter((result) => byItem.get(result.item.id).truePositive).length} of the ones worth working sit here`, tone: watched.filter((result) => byItem.get(result.item.id).truePositive).length ? 'warn' : 'good' },
+    { label: 'Escalations that ask for something', value: share(askingSomething.length, escalated.length), context: `${askingSomething.length} of the ${escalated.length} escalations name what would settle them` },
   ];
 }
 
@@ -146,9 +147,9 @@ function checks(graded, byItem, labels) {
     const group = labels.filter((label) => label.typology === typology);
     const missed = group.filter((label) => {
       const result = graded.find((entry) => entry.item.id === label.alertId);
-      return !result || !result.evaluation.kept;
+      return !result || !result.evaluation.escalated;
     });
-    return { id: typology.toLowerCase(), label: `${sentence(typology)} closed`, detail: questions.typology.criteria[typology], count: missed.length, of: group.length, items: missed.map((label) => label.alertId) };
+    return { id: typology.toLowerCase(), label: `${sentence(typology)} not escalated`, detail: questions.typology.criteria[typology], count: missed.length, of: group.length, items: missed.map((label) => label.alertId) };
   });
 
   const explained = labels.filter((label) => label.kind === 'explained in the file');
@@ -194,8 +195,8 @@ function coverage(graded, byItem, real) {
 
 function findings(graded, byItem, real) {
   const lines = [];
-  const lost = real.filter((result) => !result.evaluation.kept);
-  if (lost.length) lines.push(`${lost.length} of the ${real.length} alerts worth working ${lost.length === 1 ? 'was' : 'were'} closed: ${lost.map((result) => `${result.item.id} (${readable(byItem.get(result.item.id).typology)})`).join(', ')}.`);
+  const lost = real.filter((result) => !result.evaluation.escalated);
+  if (lost.length) lines.push(`${lost.length} of the ${real.length} alerts worth working ${lost.length === 1 ? 'was' : 'were'} not escalated: ${lost.map((result) => `${result.item.id} (${readable(byItem.get(result.item.id).typology)})`).join(', ')}.`);
 
   const keptExplained = graded.filter((result) => byItem.get(result.item.id).kind === 'explained in the file' && result.evaluation.kept);
   if (keptExplained.length >= 3) {
@@ -203,12 +204,12 @@ function findings(graded, byItem, real) {
     lines.push(`${keptExplained.length} spikes with an explanation already in the file stayed in the queue: ${looks.join(', ')}. Each one costs an analyst the time it takes to read the file and write the same sentence the file already contains.`);
   }
 
-  const asked = graded.filter((result) => result.evaluation.kept && result.evaluation.missing !== 'NONE');
+  const asked = graded.filter((result) => result.evaluation.escalated && result.evaluation.missing !== 'NONE');
   if (asked.length) {
     const counts = new Map();
     for (const result of asked) counts.set(result.evaluation.missing, (counts.get(result.evaluation.missing) ?? 0) + 1);
     const top = [...counts].sort((a, b) => b[1] - a[1])[0];
-    lines.push(`The kept alerts ask for one thing more than any other: ${readable(top[0])}, on ${top[1]} of ${asked.length}. That is a request an analyst can send without reading the file first.`);
+    lines.push(`The escalations ask for one thing more than any other: ${readable(top[0])}, on ${top[1]} of ${asked.length}. That is a request an analyst can send without reading the file first.`);
   }
   return lines;
 }
@@ -234,7 +235,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.customerType.toLowerCase()} · ${money(item.triggeringTotal)}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
