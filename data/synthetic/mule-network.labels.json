@@ -1,0 +1,722 @@
+[
+  {
+    "accountId": "ACC-0001",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0002",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0003",
+    "role": "COLLECTOR",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0004",
+    "role": "MULE",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0005",
+    "role": "MULE",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0006",
+    "role": "MULE",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0007",
+    "role": "MULE",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0008",
+    "role": "MULE",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0009",
+    "role": "MULE",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0010",
+    "role": "ORIGINATOR",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0011",
+    "role": "ORIGINATOR",
+    "networkId": "N1",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0012",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0013",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0014",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0015",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0016",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0017",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0018",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0019",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0020",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0021",
+    "role": "COLLECTOR",
+    "networkId": "N2",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0022",
+    "role": "MULE",
+    "networkId": "N2",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0023",
+    "role": "MULE",
+    "networkId": "N2",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0024",
+    "role": "MULE",
+    "networkId": "N2",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0025",
+    "role": "MULE",
+    "networkId": "N2",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0026",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0027",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0028",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0029",
+    "role": "ORIGINATOR",
+    "networkId": "N2",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0030",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0031",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0032",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0033",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0034",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0035",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0036",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0037",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0038",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0039",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0040",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0041",
+    "role": "COLLECTOR",
+    "networkId": "N3",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0042",
+    "role": "MULE",
+    "networkId": "N3",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0043",
+    "role": "MULE",
+    "networkId": "N3",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0044",
+    "role": "MULE",
+    "networkId": "N3",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0045",
+    "role": "MULE",
+    "networkId": "N3",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0046",
+    "role": "ORIGINATOR",
+    "networkId": "N3",
+    "kind": "network"
+  },
+  {
+    "accountId": "ACC-0047",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0048",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0049",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0050",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0051",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0052",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0053",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0054",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0055",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0056",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0057",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0058",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0059",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0060",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0061",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0062",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0063",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0064",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0065",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0066",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0067",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0068",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0069",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0070",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0071",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0072",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "payroll"
+  },
+  {
+    "accountId": "ACC-0073",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0074",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0075",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0076",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0077",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0078",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0079",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0080",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0081",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0082",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0083",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0084",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0085",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0086",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0087",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0088",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0089",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0090",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0091",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0092",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0093",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0094",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0095",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0096",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0097",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0098",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0099",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0100",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0101",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0102",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0103",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0104",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0105",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0106",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0107",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0108",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0109",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0110",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "touched a network"
+  },
+  {
+    "accountId": "ACC-0111",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0112",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0113",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0114",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0115",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0116",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0117",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0118",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0119",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  },
+  {
+    "accountId": "ACC-0120",
+    "role": "UNRELATED",
+    "networkId": null,
+    "kind": "ordinary"
+  }
+]

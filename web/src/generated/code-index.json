@@ -223,6 +223,34 @@
     "code": "/** Both sides, always together: the bad merchants that got through, and the good ones turned away. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.applicationId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const bad = graded.filter((result) => byItem.get(result.item.id).outcome !== 'GOOD');\n  const good = graded.filter((result) => byItem.get(result.item.id).outcome === 'GOOD');\n  const stopped = bad.filter((result) => !result.evaluation.boarded);\n  const goodDeclined = good.filter((result) => !result.evaluation.boarded);\n\n  return {\n    note: `A hundred and forty applications. ${bad.length} of these merchants were a problem — ${labels.filter((label) => label.outcome === 'CHARGEBACK_HEAVY').length} went on to heavy chargebacks, ${labels.filter((label) => label.outcome === 'PROHIBITED').length} were never acceptable, ${labels.filter((label) => label.outcome === 'FRAUD').length} sent documents that do not hold up. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, good),\n    kpis: kpis({ good, goodDeclined, graded, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/mule-network/demo.js#demo:state": {
+    "path": "demos/mule-network/demo.js",
+    "startLine": 21,
+    "endLine": 47,
+    "code": "/** One account's own view: who paid it, who it paid, how long the money stayed, and what it shares. */\nfunction buildState(item, context) {\n  return {\n    task: 'Decide what part this account plays in the money moving through it, and what the bank should do about it.',\n    bank: { name: context.bank, currency: context.currency, period: context.period, what_is_normal: context.baseline },\n    account: {\n      opened_months_ago: item.openedMonthsAgo,\n      type: item.accountType,\n      identity_checks: item.kycLevel,\n      declared_income: item.declaredIncome,\n      shares_a_device_with: item.devicesSharedWith,\n      shares_an_address_with: item.addressSharedWith,\n    },\n    flow: {\n      payments_in: item.transfersIn,\n      payments_out: item.transfersOut,\n      total_in: item.totalIn,\n      total_out: item.totalOut,\n      people_who_paid_it: item.sendersCount,\n      people_it_paid: item.recipientsCount,\n      share_of_money_kept_percent: item.keptPercent,\n      median_minutes_between_money_in_and_money_out: item.medianMinutesInToOut,\n    },\n    payments_in: item.incomingTransfers,\n    payments_out: item.outgoingTransfers,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/mule-network/demo.js#demo:questions": {
+    "path": "demos/mule-network/demo.js",
+    "startLine": 51,
+    "endLine": 75,
+    "code": "const questions = {\n  role: choice('What part does this account play?', {\n    COLLECTOR: 'Money from several accounts ends up here, and leaves in one piece.',\n    MULE: 'The account takes money in and passes it on, keeping little or nothing.',\n    ORIGINATOR: 'The money starts here and is pushed out to accounts that move it on.',\n    UNRELATED: 'An ordinary account. Whatever it looks like, it is doing its own business.',\n  }),\n  pass_through: noul('Does money leave this account almost as fast as it arrives?', {\n    yes: 'Credits are followed by debits within minutes or hours, and little stays behind.',\n    no: 'Money sits in the account the way money usually sits in an account.',\n  }),\n  network_confidence: score('How sure are you that this account is part of an arrangement rather than acting alone?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain',\n  ]),\n  action: choice('What should the bank do with this account today?', {\n    NO_ACTION: 'Nothing. Leave it alone.',\n    MONITOR: 'Watch it, and look again if the pattern repeats.',\n    RESTRICT_OUTBOUND: 'Let money in, stop it leaving, and ask the customer.',\n    FREEZE: 'Stop the account moving money at all while it is investigated.',\n  }),\n  income_consistent: noul('Is the money going through this account consistent with the income it declared?', {\n    yes: 'The turnover fits what this customer said they earn or turn over.',\n    no: 'The account moves far more than the declared income explains.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/mule-network/demo.js#demo:evaluate": {
+    "path": "demos/mule-network/demo.js",
+    "startLine": 79,
+    "endLine": 96,
+    "code": "/** One account's verdict, and the money the bank would be holding if it acted on it. */\nfunction evaluate(answers, item) {\n  const action = answers.action.choice;\n  const held = action === 'FREEZE' ? item.totalIn - item.totalOut + item.totalOut : action === 'RESTRICT_OUTBOUND' ? item.totalOut : 0;\n\n  return {\n    role: answers.role.choice,\n    action,\n    confidence: answers.role.confidence,\n    networkConfidence: answers.network_confidence.score,\n    passThrough: answers.pass_through.noul >= 0.5,\n    incomeConsistent: answers.income_consistent.noul >= 0.5,\n    flagged: answers.role.choice !== 'UNRELATED',\n    restricted: action === 'FREEZE' || action === 'RESTRICT_OUTBOUND',\n    moneyHeld: Math.round(held),\n    label: `${item.id} · ${readable(answers.role.choice)} · ${readable(action)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/mule-network/demo.js#demo:report": {
+    "path": "demos/mule-network/demo.js",
+    "startLine": 100,
+    "endLine": 119,
+    "code": "/** Accounts are answered one at a time; networks are what the bank actually has to find. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.accountId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const inNetwork = graded.filter((result) => byItem.get(result.item.id).networkId);\n  const found = inNetwork.filter((result) => result.evaluation.role === byItem.get(result.item.id).role);\n  const ordinary = graded.filter((result) => !byItem.get(result.item.id).networkId);\n\n  return {\n    note: `A hundred and twenty accounts, ${inNetwork.length} of them in three arrangements, and a small employer whose payroll fans out like one. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, ordinary),\n    kpis: kpis({ graded, inNetwork, found, ordinary, byItem, currency: context.currency }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, inNetwork),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/order-risk/demo.js#demo:state": {
     "path": "demos/order-risk/demo.js",
     "startLine": 23,
@@ -361,6 +389,13 @@
     "startLine": 109,
     "endLine": 136,
     "code": "/** One application, as the underwriting queue holds it. Nothing here says how it turned out. */\nfunction application(random, { category, monthsRegistered, directors, volume, ticket, website, refundPolicy, deliveryDays, bankCountry = 'GB', nameMismatch = false, documents, previousProcessor = 'None declared', declaredChargebacks = 0, directorHistory = 'Nothing adverse found' }) {\n  const trading = `${merchantName(random).split(' ')[0]} ${random.pick(['Supply', 'Goods', 'Trading', 'Retail', 'Group', 'Direct'])}`;\n  return {\n    key: `${trading}-${random.int(100_000, 999_999)}`,\n    id: null,\n    submittedAt: random.day('2026-08-01', '2026-08-31'),\n    legalName: nameMismatch ? `${merchantName(random).split(' ')[0]} Holdings Ltd` : `${trading} Ltd`,\n    tradingName: trading,\n    nameMismatch,\n    category,\n    monthsRegistered,\n    directors,\n    directorHistory,\n    expectedMonthlyVolume: volume,\n    averageTicket: ticket,\n    deliveryPromiseDays: deliveryDays,\n    tradingCountry: 'GB',\n    bankCountry,\n    previousProcessor,\n    declaredChargebackRatePercent: declaredChargebacks,\n    documentsClear: documents.filter((document) => document.note === 'Clear').length,\n    documentsExpected: documents.length,\n    websiteExcerpt: website,\n    refundPolicy,\n    documents,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/mule-network.js#demo:data": {
+    "path": "scripts/generate/mule-network.js",
+    "startLine": 65,
+    "endLine": 78,
+    "code": "/** One account as the bank holds it, before any transfer is attached to it. */\nfunction makeAccount(random, index) {\n  const business = random.bool(0.18);\n  return {\n    id: `ACC-${String(index + 1).padStart(4, '0')}`,\n    holder: business ? `${companyName(random)} Ltd` : personName(random),\n    accountType: business ? 'Business' : 'Personal',\n    openedMonthsAgo: random.weighted([[random.int(1, 6), 30], [random.int(7, 24), 40], [random.int(25, 140), 30]]),\n    kycLevel: random.weighted([['full', 72], ['simplified', 22], ['pending refresh', 6]]),\n    declaredIncome: business ? amount(random, { min: 40_000, max: 400_000 }) : amount(random, { min: 12_000, max: 68_000 }),\n    devicesSharedWith: [],\n    addressSharedWith: [],\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/order-risk.js#demo:data": {

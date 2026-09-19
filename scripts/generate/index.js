@@ -22,6 +22,7 @@ export const GENERATORS = {
   'merchant-onboarding': () => import('./merchant-onboarding.js'),
   'card-fraud-triage': () => import('./card-fraud-triage.js'),
   'aml-alert-triage': () => import('./aml-alert-triage.js'),
+  'mule-network': () => import('./mule-network.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
