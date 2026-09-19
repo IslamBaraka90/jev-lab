@@ -84,7 +84,7 @@ function report(results, context = {}) {
 export default {
   id: 'setup-timing', title: 'Setup timing', domain: 'strategy',
   value: 'Test when two daily setups work by weekday, month phase and direction without leaking a forward bar.',
-  tags: ['strategy', 'timing', 'calendar', 'outcomes'], dataClass: 'cached-real', readMinutes: 6, view: 'timingGrid', status: 'pending-recording',
+  tags: ['strategy', 'timing', 'calendar', 'outcomes'], dataClass: 'cached-real', readMinutes: 6, view: 'timingGrid',
   itemLabel: (item) => `${item.symbol} · ${title(item.setup)} · ${item.direction.toLowerCase()} · ${item.setupDate}`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), buildState, questions, evaluate, report,
   explain: { data: 'src/strategies/pullback.js', state: 'demos/setup-timing/demo.js#demo:state', questions: 'demos/setup-timing/demo.js#demo:questions', evaluate: 'demos/setup-timing/demo.js#demo:evaluate' },
