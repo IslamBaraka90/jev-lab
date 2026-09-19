@@ -251,6 +251,34 @@
     "code": "/** Grades the call, not the prose: the action, the band and the reason code each stand on their own. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.disputeId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const right = (result, field, answer) => byItem.get(result.item.id)[field] === result.evaluation[answer];\n  const actions = graded.filter((result) => right(result, 'correctAction', 'action'));\n  const whole = graded.filter((result) => right(result, 'correctAction', 'action') && right(result, 'refundBand', 'band') && right(result, 'reasonCode', 'reason'));\n\n  return {\n    note: `Two hundred and twenty disputes, graded against the merchant's own policy. ${context.note ?? ''}`,\n    findings: findings(graded, byItem),\n    kpis: kpis(graded, actions, whole, byItem),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results),\n  };\n}",
     "language": "javascript"
   },
+  "demos/execution-quality/demo.js#demo:state": {
+    "path": "demos/execution-quality/demo.js",
+    "startLine": 22,
+    "endLine": 46,
+    "code": "/** The signal, the fill, and the ten bars either side. No cost: that is what is being asked for. */\nfunction buildState(item, context) {\n  return {\n    task: 'Grade this fill against the price the signal asked for, say what caused the difference, and what would fix it.',\n    desk: { sessions: context.sessions, how_slippage_is_counted: context.howSlippageIsCounted, note: context.note },\n    order: {\n      symbol: item.symbol,\n      side: item.side,\n      signal_date: item.signalDate,\n      intended_price: item.intendedPrice,\n      order_type: item.orderType,\n      session: item.session,\n      size_usd: item.sizeUsd,\n      shares: item.shares,\n      this_order_as_share_of_average_daily_volume_percent: item.shareOfAverageVolumePercent,\n    },\n    fill: {\n      date: item.fillDate,\n      price: item.fillPrice,\n      bars_between_signal_and_fill: item.barsBetweenSignalAndFill,\n    },\n    daily_bars: item.chart.bars,\n    how_to_read_the_bars: 'One line per day: date, open, high, low, close, volume. The signal bar is the eleventh.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/execution-quality/demo.js#demo:questions": {
+    "path": "demos/execution-quality/demo.js",
+    "startLine": 50,
+    "endLine": 76,
+    "code": "const questions = {\n  fill_quality: score('How good was this fill against what the signal asked for?', [\n    'Unacceptable', 'Very poor', 'Poor', 'Fair', 'Good', 'Very good', 'Perfect',\n  ]),\n  cause: choice('What put the fill where it was?', {\n    GAP: 'The market reopened past the level and the order filled where it could.',\n    CHASE: 'The order went in several bars after the signal, into a price that had already moved.',\n    SIZE: 'The order was large enough in this instrument to move the price it was paying.',\n    SPREAD: 'The session itself: the open or the close, where the spread is widest.',\n    CLEAN: 'Nothing. The fill is where a fill should be.',\n  }),\n  avoidable: noul('Could this have been avoided by the desk?', {\n    yes: 'A different order, size or time would have got a better price.',\n    no: 'The market moved and no order would have done better.',\n  }),\n  fix: choice('What would fix it next time?', {\n    EARLIER_ORDER: 'Send the order when the signal happens, not several bars later.',\n    LIMIT_ORDER: 'Name a price instead of taking whatever is there.',\n    SMALLER_SIZE: 'Trade less at once, or spread it over the day.',\n    AVOID_SESSION: 'Do not trade this in the first or last half hour.',\n    NONE: 'Nothing. This is what execution looks like when it goes right.',\n  }),\n  worth_chasing: noul('Given the setup, was entering late still worth it?', {\n    yes: 'The trade was worth having even at the worse price.',\n    no: 'By the time it filled, the edge had gone into the slippage.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/execution-quality/demo.js#demo:evaluate": {
+    "path": "demos/execution-quality/demo.js",
+    "startLine": 80,
+    "endLine": 95,
+    "code": "/** One fill's grade, and what it cost in basis points of the price the signal asked for. */\nfunction evaluate(answers, item) {\n  const paid = ((item.fillPrice - item.intendedPrice) / item.intendedPrice) * 10_000 * (item.side === 'BUY' ? 1 : -1);\n\n  return {\n    quality: answers.fill_quality.score,\n    cause: answers.cause.choice,\n    avoidable: answers.avoidable.noul >= 0.5,\n    fix: answers.fix.choice,\n    worthChasing: answers.worth_chasing.noul >= 0.5,\n    confidence: answers.cause.confidence,\n    costBps: Math.round(paid),\n    costUsd: Math.round((paid / 10_000) * item.sizeUsd),\n    label: `${item.id} · ${item.side.toLowerCase()} ${item.symbol} · ${Math.round(paid)} bps · ${readable(answers.cause.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/execution-quality/demo.js#demo:report": {
+    "path": "demos/execution-quality/demo.js",
+    "startLine": 99,
+    "endLine": 118,
+    "code": "/** Slippage by cause, and whether the grade tracks what the fill actually cost. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.fillId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const costly = graded.filter((result) => byItem.get(result.item.id).cause !== 'CLEAN');\n  const clean = graded.filter((result) => byItem.get(result.item.id).cause === 'CLEAN');\n  const causeRight = graded.filter((result) => result.evaluation.cause === byItem.get(result.item.id).cause);\n\n  return {\n    note: `Two hundred and sixty fills against real bars. ${costly.length} of them cost something for one of four reasons, and ${clean.length} are where a fill should be. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, clean),\n    kpis: kpis({ graded, costly, clean, causeRight, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, costly),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/expense-posting/demo.js#demo:state": {
     "path": "demos/expense-posting/demo.js",
     "startLine": 10,
@@ -816,6 +844,13 @@
     "startLine": 108,
     "endLine": 135,
     "code": "/** One dispute: the customer's words, the order, what the courier recorded, and their history. */\nfunction dispute(random, { claim, message, orderTotal, shipping, daysSinceOrder, daysSinceDelivery, trackingStatus, deliveryProof = false, daysSinceLastScan = 0, photoAttached = false, wantsToKeep = false, cosmetic = false, priorDisputes = 0, priorNotReceived = 0, cancelledOnRecord = null, duplicateChargeId = null }) {\n  const openedAt = random.day('2026-08-01', '2026-08-31');\n  return {\n    key: `${openedAt}-${random.int(100_000, 999_999)}`,\n    id: null,\n    openedAt,\n    claim,\n    orderTotal,\n    shippingPaid: shipping,\n    daysSinceOrder,\n    daysSinceDelivery,\n    trackingStatus,\n    deliveryProof,\n    photoAttached,\n    priorDisputes,\n    priorNotReceived,\n    customerSince: `${random.int(2019, 2026)}`,\n    message,\n    daysSinceLastScan,\n    wantsToKeep,\n    cosmetic,\n    cancelledOnRecord,\n    duplicateChargeId,\n    customer: personName(random),\n    orderId: `ORD-${random.int(20_000, 99_999)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/execution-quality.js#demo:data": {
+    "path": "scripts/generate/execution-quality.js",
+    "startLine": 67,
+    "endLine": 97,
+    "code": "/** One fill: what the signal asked for, what was paid, and the bars either side of it. */\nfunction oneFill(random, cause) {\n  const symbol = random.pick(SYMBOLS);\n  const bars = candles(symbol).bars;\n  const index = random.int(260, bars.length - AROUND - 2);\n  const signal = bars[index];\n  const side = random.bool(0.6) ? 'BUY' : 'SELL';\n  const intended = round(signal.close, 2);\n  const shaped = shape(random, { cause, bars, index, side, intended });\n  const sizeUsd = shaped.sizeUsd ?? random.int(20, 400) * 1_000;\n  const shares = Math.round(sizeUsd / intended);\n\n  return {\n    key: `${symbol}-${signal.date}-${random.int(1_000, 9_999)}`,\n    id: null,\n    symbol,\n    side,\n    signalDate: signal.date,\n    intendedPrice: intended,\n    fillPrice: shaped.fillPrice,\n    fillDate: bars[index + shaped.barsLate].date,\n    barsBetweenSignalAndFill: shaped.barsLate,\n    orderType: shaped.orderType,\n    session: shaped.session,\n    sizeUsd,\n    shares,\n    shareOfAverageVolumePercent: round((shares / Math.max(averageVolume(symbol), 1)) * 100, 3),\n    costBps: Math.round(((shaped.fillPrice - intended) / intended) * 10_000 * (side === 'BUY' ? 1 : -1)),\n    chart: { markIndex: AROUND, bars: bars.slice(index - AROUND, index + AROUND).map((bar) => `${bar.date} ${bar.open} ${bar.high} ${bar.low} ${bar.close} ${bar.volume ?? 0}`) },\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/expense-posting.js#demo:data": {
