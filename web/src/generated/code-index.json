@@ -307,6 +307,34 @@
     "code": "/** Accuracy against the intended account, and what automation costs at each confidence threshold. */\nfunction report(results, { labels = [], accounts = [] } = {}) {\n  const intended = new Map(labels.map((label) => [label.expenseId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const correct = (result) => intended.get(result.item.id).account === result.evaluation.account;\n  const auto = graded.filter((result) => result.evaluation.autoPost);\n\n  return {\n    note: `Graded against the account each expense was meant for. At ${Math.round(AUTO_THRESHOLD * 100)}% confidence, ${auto.length} of ${graded.length} post without a person.`,\n    findings: confusions(graded, intended, accounts),\n    kpis: headline(graded, auto, correct),\n    distribution: chosenAccounts(graded, accounts),\n    matrix: confusion(graded, intended, accounts),\n    curve: coverage(graded, intended),\n    checks: KINDS.map((kind) => difficulty(kind, graded, intended, correct)),\n    topItems: leastClear(graded),\n  };\n}",
     "language": "javascript"
   },
+  "demos/factor-exposure/demo.js#demo:state": {
+    "path": "demos/factor-exposure/demo.js",
+    "startLine": 11,
+    "endLine": 31,
+    "code": "function buildState(item, context) {\n  return {\n    task: 'Name what this portfolio is actually betting on, including any material bet the owner did not intend.',\n    owner: { stated_belief: item.ownerBelief, home_currency: item.homeCurrency },\n    market_evidence: { prices_as_of: context.pricesAsOf, method: context.coMovementMethod, factor_definitions: context.factorDefinitions, representatives: context.representatives, note: context.note },\n    portfolio: {\n      cash_percent: item.cashPercent,\n      sector_weights_percent: item.sectorWeights,\n      currency_weights_percent: item.currencyWeights,\n      revenue_earned_outside_us_percent: item.foreignRevenuePercent,\n      co_movement_by_plain_language_factor: item.coMovement,\n      holdings: item.holdings.map((holding) => ({\n        symbol: holding.symbol, sector: holding.sector, currency: holding.currency,\n        weight_percent: holding.weightPercent, revenue_from_us_percent: holding.revenueFromUsPercent,\n        twelve_month_return_percent: holding.twelveMonthReturnPercent, volatility_percent: holding.volatilityPercent,\n        correlations_to_representative_baskets: holding.correlations,\n      })),\n    },\n    interpretation_note: context.factorNote,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/factor-exposure/demo.js#demo:questions": {
+    "path": "demos/factor-exposure/demo.js",
+    "startLine": 35,
+    "endLine": 41,
+    "code": "const questions = {\n  dominant_factor: choice('What is the dominant exposure?', Object.fromEntries(FACTORS.map((factor) => [factor, title(factor)]))),\n  unintended_exposure: choice('After excluding the dominant factor, what is the strongest distinct exposure the owner did not describe? Never repeat dominant_factor; choose NONE when no distinct second exposure is material.', { ...Object.fromEntries(FACTORS.map((factor) => [factor, title(factor)])), NONE: 'No material unintended exposure distinct from the dominant factor.' }),\n  exposure_strength: score('How strong is the dominant exposure?', ['None', 'Very weak', 'Weak', 'Moderate', 'Strong', 'Very strong', 'Dominant']),\n  belief_matches_holdings: noul('Does the owner’s stated belief match the holdings?', { yes: 'The stated belief is a fair description of the actual exposures.', no: 'The holdings carry a materially different bet.' }),\n  single_factor_portfolio: noul('Is this effectively a single-factor portfolio?', { yes: 'One factor explains the portfolio without a second material exposure.', no: 'A second material factor must be named.' }),\n};",
+    "language": "javascript"
+  },
+  "demos/factor-exposure/demo.js#demo:evaluate": {
+    "path": "demos/factor-exposure/demo.js",
+    "startLine": 45,
+    "endLine": 58,
+    "code": "function evaluate(answers, item) {\n  const matches = answers.belief_matches_holdings.noul >= 0.5;\n  const single = answers.single_factor_portfolio.noul >= 0.5;\n  return {\n    dominant: answers.dominant_factor.choice,\n    unintended: answers.unintended_exposure.choice,\n    strength: answers.exposure_strength.score,\n    matches,\n    single,\n    confidence: answers.dominant_factor.confidence,\n    beliefGap: (matches ? 0 : 3) + (answers.unintended_exposure.choice === 'NONE' ? 0 : 2) + answers.exposure_strength.score / 6,\n    label: `${item.id} · ${title(answers.dominant_factor.choice)} · unintended ${title(answers.unintended_exposure.choice)} · ${answers.exposure_strength.score.toFixed(1)}/6`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/factor-exposure/demo.js#demo:report": {
+    "path": "demos/factor-exposure/demo.js",
+    "startLine": 62,
+    "endLine": 87,
+    "code": "function report(results, context = {}) {\n  const byItem = new Map((context.labels ?? []).map((label) => [label.portfolioId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const dominantCorrect = graded.filter((result) => result.evaluation.dominant === byItem.get(result.item.id).dominantFactor);\n  const unintendedCorrect = graded.filter((result) => result.evaluation.unintended === byItem.get(result.item.id).unintendedFactor);\n  const beliefCorrect = graded.filter((result) => result.evaluation.matches === byItem.get(result.item.id).beliefMatchesHoldings);\n  const singleCorrect = graded.filter((result) => result.evaluation.single === byItem.get(result.item.id).singleFactorPortfolio);\n  return {\n    note: `Thirty invented portfolios over cached-real instruments. Factor names are plain-language teaching buckets, not a licensed decomposition. ${context.note ?? ''}`,\n    findings: findings(graded, byItem),\n    kpis: [\n      { label: 'Dominant factor accuracy', value: `${dominantCorrect.length} of ${graded.length}`, context: percent(dominantCorrect.length, graded.length), tone: dominantCorrect.length === graded.length ? 'good' : 'warn' },\n      { label: 'Unintended factor accuracy', value: `${unintendedCorrect.length} of ${graded.length}`, context: 'graded separately from the dominant exposure', tone: unintendedCorrect.length === graded.length ? 'good' : 'warn' },\n      { label: 'Belief matches holdings accuracy', value: `${beliefCorrect.length} of ${graded.length}`, context: 'owner story compared with the actual book', tone: beliefCorrect.length === graded.length ? 'good' : 'warn' },\n      { label: 'Single-factor calls', value: `${singleCorrect.length} of ${graded.length}`, context: 'whether a second material factor remains' },\n    ],\n    distribution: Array.from({ length: 7 }, (_, strength) => ({ label: `${strength}/6 · ${questions.exposure_strength.criteria[strength]}`, count: graded.filter((result) => Math.round(result.evaluation.strength) === strength).length })).filter((entry) => entry.count),\n    matrix: factorMatrix(graded, byItem),\n    checks: [\n      check('dominant', 'Dominant exposure missed', graded, byItem, (result, label) => result.evaluation.dominant !== label.dominantFactor),\n      check('unintended', 'Unintended exposure missed', graded, byItem, (result, label) => result.evaluation.unintended !== label.unintendedFactor),\n      check('belief', 'Belief-versus-holdings call wrong', graded, byItem, (result, label) => result.evaluation.matches !== label.beliefMatchesHoldings),\n    ],\n    topItems: [...graded].sort((left, right) => right.evaluation.beliefGap - left.evaluation.beliefGap || right.evaluation.strength - left.evaluation.strength).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: `gap ${result.evaluation.beliefGap.toFixed(1)}` })),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/goal-screening/demo.js#demo:state": {
     "path": "demos/goal-screening/demo.js",
     "startLine": 20,
@@ -942,6 +970,13 @@
     "startLine": 142,
     "endLine": 161,
     "code": "/** One expense: a vendor, a date, an amount, a memo of varying usefulness, and how it was paid. */\nfunction expense(random, { vendor, memo, value, refund = false }) {\n  const date = random.day(PERIOD.from, PERIOD.to);\n  const method = random.weighted([['card', 72], ['direct debit', 16], ['bank transfer', 12]]);\n\n  return {\n    key: `${vendor}-${date}-${value}-${random.int(1000, 9999)}`,\n    id: null,\n    date,\n    vendor,\n    description: memo,\n    amount: refund ? round(-value) : round(value),\n    currency: 'AED',\n    paymentMethod: method,\n    card: method === 'card' ? `**** ${random.int(1000, 9999)}` : null,\n    reference: `TX-${random.int(100_000, 999_999)}`,\n    isRefund: refund,\n    priorPostings: [],\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/factor-exposure.js#demo:data": {
+    "path": "scripts/generate/factor-exposure.js",
+    "startLine": 117,
+    "endLine": 129,
+    "code": "function holding(symbol, weightPercent) {\n  const identity = profile(symbol);\n  return {\n    symbol,\n    sector: identity.sector ?? 'Other',\n    currency: identity.currency,\n    weightPercent,\n    revenueFromUsPercent: REVENUE_US[symbol],\n    twelveMonthReturnPercent: returnOver(symbol),\n    volatilityPercent: volatility(symbol),\n    correlations: Object.fromEntries(FACTORS.map((factor) => [factor, representativeCorrelation(symbol, factor)])),\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/goal-screening.js#demo:data": {

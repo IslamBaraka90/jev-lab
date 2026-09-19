@@ -1,0 +1,212 @@
+[
+  {
+    "portfolioId": "FE-01",
+    "dominantFactor": "MOMENTUM",
+    "unintendedFactor": "SIZE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-02",
+    "dominantFactor": "MOMENTUM",
+    "unintendedFactor": "SIZE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-03",
+    "dominantFactor": "MOMENTUM",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-04",
+    "dominantFactor": "MOMENTUM",
+    "unintendedFactor": "SIZE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-05",
+    "dominantFactor": "MOMENTUM",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-06",
+    "dominantFactor": "VALUE",
+    "unintendedFactor": "ENERGY",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-07",
+    "dominantFactor": "VALUE",
+    "unintendedFactor": "RATES",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-08",
+    "dominantFactor": "VALUE",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-09",
+    "dominantFactor": "VALUE",
+    "unintendedFactor": "ENERGY",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-10",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-11",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "SIZE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-12",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-13",
+    "dominantFactor": "QUALITY",
+    "unintendedFactor": "SIZE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-14",
+    "dominantFactor": "SIZE",
+    "unintendedFactor": "MOMENTUM",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-15",
+    "dominantFactor": "SIZE",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-16",
+    "dominantFactor": "SIZE",
+    "unintendedFactor": "MOMENTUM",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-17",
+    "dominantFactor": "SIZE",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-18",
+    "dominantFactor": "RATES",
+    "unintendedFactor": "VALUE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-19",
+    "dominantFactor": "RATES",
+    "unintendedFactor": "VALUE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-20",
+    "dominantFactor": "RATES",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-21",
+    "dominantFactor": "RATES",
+    "unintendedFactor": "VALUE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-22",
+    "dominantFactor": "ENERGY",
+    "unintendedFactor": "VALUE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-23",
+    "dominantFactor": "ENERGY",
+    "unintendedFactor": "VALUE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-24",
+    "dominantFactor": "ENERGY",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-25",
+    "dominantFactor": "ENERGY",
+    "unintendedFactor": "VALUE",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-26",
+    "dominantFactor": "FX",
+    "unintendedFactor": "MOMENTUM",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-27",
+    "dominantFactor": "FX",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-28",
+    "dominantFactor": "FX",
+    "unintendedFactor": "MOMENTUM",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  },
+  {
+    "portfolioId": "FE-29",
+    "dominantFactor": "FX",
+    "unintendedFactor": "NONE",
+    "beliefMatchesHoldings": true,
+    "singleFactorPortfolio": true
+  },
+  {
+    "portfolioId": "FE-30",
+    "dominantFactor": "FX",
+    "unintendedFactor": "MOMENTUM",
+    "beliefMatchesHoldings": false,
+    "singleFactorPortfolio": false
+  }
+]
