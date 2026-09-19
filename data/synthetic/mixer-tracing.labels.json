@@ -1,0 +1,632 @@
+[
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-046"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-008"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-033"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-045"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-054"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-041"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-016"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-030"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-012"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-063"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-074"
+  },
+  {
+    "tainted": true,
+    "hops": "ONE",
+    "breaker": false,
+    "kind": "one hop from a mixer",
+    "traceId": "TRC-001"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-037"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-058"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-072"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-025"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-068"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-089"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-083"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-090"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-028"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-017"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-055"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-061"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-013"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "two or three hops away",
+    "traceId": "TRC-024"
+  },
+  {
+    "tainted": false,
+    "hops": "FOUR_PLUS",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-032"
+  },
+  {
+    "tainted": false,
+    "hops": "TWO",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-044"
+  },
+  {
+    "tainted": false,
+    "hops": "THREE",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-021"
+  },
+  {
+    "tainted": false,
+    "hops": "TWO",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-004"
+  },
+  {
+    "tainted": false,
+    "hops": "TWO",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-060"
+  },
+  {
+    "tainted": false,
+    "hops": "FOUR_PLUS",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-007"
+  },
+  {
+    "tainted": false,
+    "hops": "THREE",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-042"
+  },
+  {
+    "tainted": false,
+    "hops": "FOUR_PLUS",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-080"
+  },
+  {
+    "tainted": false,
+    "hops": "TWO",
+    "breaker": true,
+    "kind": "an exchange broke the chain",
+    "traceId": "TRC-069"
+  },
+  {
+    "tainted": true,
+    "hops": "FOUR_PLUS",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-049"
+  },
+  {
+    "tainted": true,
+    "hops": "FOUR_PLUS",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-002"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-020"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-086"
+  },
+  {
+    "tainted": true,
+    "hops": "TWO",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-010"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-034"
+  },
+  {
+    "tainted": true,
+    "hops": "THREE",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-075"
+  },
+  {
+    "tainted": true,
+    "hops": "FOUR_PLUS",
+    "breaker": false,
+    "kind": "the amounts do not add up",
+    "traceId": "TRC-081"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-066"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-005"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-048"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-088"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-047"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-011"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-009"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-019"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-018"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-078"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-038"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-029"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-027"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-052"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-084"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-057"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-079"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-014"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-067"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-050"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-051"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-031"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-077"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-053"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-070"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-023"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-026"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-043"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-073"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-064"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-059"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-065"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-071"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-082"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-036"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-062"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-022"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-056"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-035"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-076"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-040"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-015"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-006"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-003"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-087"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-085"
+  },
+  {
+    "tainted": false,
+    "hops": "NONE_FOUND",
+    "breaker": false,
+    "kind": "nothing found",
+    "traceId": "TRC-039"
+  }
+]

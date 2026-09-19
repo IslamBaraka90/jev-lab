@@ -335,6 +335,34 @@
     "code": "/** Both sides, always together: the bad merchants that got through, and the good ones turned away. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.applicationId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const bad = graded.filter((result) => byItem.get(result.item.id).outcome !== 'GOOD');\n  const good = graded.filter((result) => byItem.get(result.item.id).outcome === 'GOOD');\n  const stopped = bad.filter((result) => !result.evaluation.boarded);\n  const goodDeclined = good.filter((result) => !result.evaluation.boarded);\n\n  return {\n    note: `A hundred and forty applications. ${bad.length} of these merchants were a problem — ${labels.filter((label) => label.outcome === 'CHARGEBACK_HEAVY').length} went on to heavy chargebacks, ${labels.filter((label) => label.outcome === 'PROHIBITED').length} were never acceptable, ${labels.filter((label) => label.outcome === 'FRAUD').length} sent documents that do not hold up. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, good),\n    kpis: kpis({ good, goodDeclined, graded, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/mixer-tracing/demo.js#demo:state": {
+    "path": "demos/mixer-tracing/demo.js",
+    "startLine": 21,
+    "endLine": 39,
+    "code": "/** The paths behind one wallet, hop by hop, and the rules the desk reads them with. */\nfunction buildState(item, context) {\n  return {\n    task: 'Follow this wallet’s funding back and say how close it is to money the desk cannot accept.',\n    desk: { name: context.desk, currency: context.currency, rules: context.rules, labelled_entities: context.entities, note: context.note },\n    subject: { address: item.subject, chain: item.chain, funding_total: item.fundingTotal, paths_followed: item.pathsFollowed },\n    funding_paths: item.paths.map((path) => ({\n      share_of_funding_percent: path.sharePercent,\n      amount_into_the_subject: path.amount,\n      hops_back: path.hops.map((hop, index) => ({\n        hop: index + 1,\n        wallet: hop.wallet,\n        entity: hop.entity,\n        amount_at_this_hop: hop.amount,\n        date: hop.at,\n      })),\n    })),\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/mixer-tracing/demo.js#demo:questions": {
+    "path": "demos/mixer-tracing/demo.js",
+    "startLine": 43,
+    "endLine": 67,
+    "code": "const questions = {\n  tainted_funds: noul('Is this wallet holding money the desk would not accept?', {\n    yes: 'A path leads back to a mixer or a listed address, and nothing in the rules breaks it.',\n    no: 'Either no path reaches one, or the desk’s own rules break the chain before it gets here.',\n  }),\n  hops_to_source: choice('How far back is the nearest source the desk cares about?', {\n    ONE: 'The money came straight from it.',\n    TWO: 'One wallet in between.',\n    THREE: 'Two wallets in between.',\n    FOUR_PLUS: 'Four hops or more.',\n    NONE_FOUND: 'No such source appears on any path followed.',\n  }),\n  chain_broken_by_exchange: noul('Does an exchange that checks identity sit between the subject and the source?', {\n    yes: 'The money went into an exchange and came out again, which the desk treats as a break.',\n    no: 'Nothing on the path breaks it. A bridge is not a break.',\n  }),\n  exposure: score('How exposed is this wallet to money the desk cannot accept?', [\n    'None', 'Negligible', 'Low', 'Moderate', 'High', 'Very high', 'Direct',\n  ]),\n  action: choice('What does the desk do with this trace?', {\n    CLEAR: 'Nothing to do. The funds can be taken.',\n    REPORT_INTERNALLY: 'Write it up and keep it on file, but do not stop anything.',\n    FREEZE_PENDING_REVIEW: 'Hold the funds while somebody looks properly.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/mixer-tracing/demo.js#demo:evaluate": {
+    "path": "demos/mixer-tracing/demo.js",
+    "startLine": 71,
+    "endLine": 86,
+    "code": "/** One trace's verdict: tainted or not, how far back, and whether a rule broke the chain. */\nfunction evaluate(answers, item) {\n  const action = answers.action.choice;\n\n  return {\n    tainted: answers.tainted_funds.noul >= 0.5,\n    hops: answers.hops_to_source.choice,\n    brokenByExchange: answers.chain_broken_by_exchange.noul >= 0.5,\n    exposure: answers.exposure.score,\n    action,\n    held: action === 'FREEZE_PENDING_REVIEW',\n    confidence: answers.hops_to_source.confidence,\n    funding: item.fundingTotal,\n    label: `${item.id} · ${answers.tainted_funds.noul >= 0.5 ? 'tainted' : 'clean'} · ${readable(answers.hops_to_source.choice)} · ${readable(action)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/mixer-tracing/demo.js#demo:report": {
+    "path": "demos/mixer-tracing/demo.js",
+    "startLine": 90,
+    "endLine": 108,
+    "code": "/** Four separate things are graded here, because a trace can be right about one and wrong about another. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.traceId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const tainted = graded.filter((result) => byItem.get(result.item.id).tainted);\n  const clean = graded.filter((result) => !byItem.get(result.item.id).tainted);\n\n  return {\n    note: `Ninety traces on a fictional graph. ${tainted.length} lead back to something the desk cannot accept, and nine have an exchange in the way that its own rules say breaks the chain. ${context.note ?? ''}`,\n    findings: findings(graded, byItem),\n    kpis: kpis({ graded, tainted, clean, byItem, currency: context.currency }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, tainted),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/mule-network/demo.js#demo:state": {
     "path": "demos/mule-network/demo.js",
     "startLine": 21,
@@ -585,6 +613,13 @@
     "startLine": 109,
     "endLine": 136,
     "code": "/** One application, as the underwriting queue holds it. Nothing here says how it turned out. */\nfunction application(random, { category, monthsRegistered, directors, volume, ticket, website, refundPolicy, deliveryDays, bankCountry = 'GB', nameMismatch = false, documents, previousProcessor = 'None declared', declaredChargebacks = 0, directorHistory = 'Nothing adverse found' }) {\n  const trading = `${merchantName(random).split(' ')[0]} ${random.pick(['Supply', 'Goods', 'Trading', 'Retail', 'Group', 'Direct'])}`;\n  return {\n    key: `${trading}-${random.int(100_000, 999_999)}`,\n    id: null,\n    submittedAt: random.day('2026-08-01', '2026-08-31'),\n    legalName: nameMismatch ? `${merchantName(random).split(' ')[0]} Holdings Ltd` : `${trading} Ltd`,\n    tradingName: trading,\n    nameMismatch,\n    category,\n    monthsRegistered,\n    directors,\n    directorHistory,\n    expectedMonthlyVolume: volume,\n    averageTicket: ticket,\n    deliveryPromiseDays: deliveryDays,\n    tradingCountry: 'GB',\n    bankCountry,\n    previousProcessor,\n    declaredChargebackRatePercent: declaredChargebacks,\n    documentsClear: documents.filter((document) => document.note === 'Clear').length,\n    documentsExpected: documents.length,\n    websiteExcerpt: website,\n    refundPolicy,\n    documents,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/mixer-tracing.js#demo:data": {
+    "path": "scripts/generate/mixer-tracing.js",
+    "startLine": 81,
+    "endLine": 106,
+    "code": "/** One trace: the subject, the funding paths behind it, and what each path passed through. */\nfunction trace(random, { hops, source = null, breaker = false, leak = false }) {\n  const subject = walletAddress(random);\n  const funded = amount(random, { min: 4_000, max: 800_000, roundTo: 'natural' });\n  const main = pathBack(random, { hops, source, breaker, leak, received: funded });\n  const others = Array.from({ length: random.int(1, 2) }, () => pathBack(random, { hops: random.int(1, 3), source: null, received: round(funded * random.float(0.05, 0.3)) }));\n  const paths = [main, ...others].filter(Boolean);\n  const totalIn = round(paths.reduce((sum, path) => sum + path.amount, 0));\n\n  return {\n    key: subject,\n    id: null,\n    subject,\n    chain: random.pick(['Ethereum', 'Arbitrum', 'Base']),\n    fundingTotal: totalIn,\n    pathsFollowed: paths.length,\n    longestPathHops: Math.max(...paths.map((path) => path.hops.length)),\n    entitiesSeen: [...new Set(paths.flatMap((path) => path.hops.map((hop) => hop.entity).filter(Boolean)))],\n    paths: paths.map((path) => ({\n      sharePercent: Math.round((path.amount / totalIn) * 100),\n      amount: path.amount,\n      hops: path.hops,\n    })),\n    graph: graphOf(subject, paths),\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/mule-network.js#demo:data": {
