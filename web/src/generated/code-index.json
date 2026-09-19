@@ -811,6 +811,34 @@
     "code": "/** What survived the review, and whether the things that should not have survived did. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.tradeId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const problems = graded.filter((result) => byItem.get(result.item.id).issue !== 'NONE');\n  const clean = graded.filter((result) => byItem.get(result.item.id).issue === 'NONE');\n  const caught = problems.filter((result) => result.evaluation.verdict !== 'APPROVE');\n\n  return {\n    note: `Two hundred proposed trades across six accounts, ${problems.length} of them carrying something the rebalancer could not see. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, clean),\n    kpis: kpis({ graded, problems, clean, caught, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, problems),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/rumour-grading/demo.js#demo:state": {
+    "path": "demos/rumour-grading/demo.js",
+    "startLine": 20,
+    "endLine": 44,
+    "code": "/** The claim, who made it, how often they have been right, and how it spread. No outcome. */\nfunction buildState(item, context) {\n  return {\n    task: 'Grade this claim before anybody knows whether it is true: how good is the source, is anyone else independently saying it, does the spread look organised, and what would you do about it.',\n    claim: item.claim,\n    about: { company: item.company, ticker: item.ticker, sector: item.sector },\n    source: {\n      kind: item.sourceDescription,\n      handle: item.sourceHandle,\n      claims_made_before: item.claimsMadeBefore,\n      of_those_later_confirmed: item.laterConfirmed,\n      of_those_later_denied: item.laterDenied,\n    },\n    posted_at: item.postedAt,\n    how_it_spread: {\n      other_accounts_repeating_it: item.accountsRepeatingIt,\n      minutes_those_took: item.minutesForThoseRepeats,\n      percent_of_wording_they_share: item.wordingSharedPercent,\n      independent_sources_saying_it: item.independentSourcesSayingIt,\n    },\n    document_cited: item.citedDocument,\n    what_the_company_has_confirmed_lately: item.companyRecentNews,\n    how_to_read_the_spread: context.howToRead,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/rumour-grading/demo.js#demo:questions": {
+    "path": "demos/rumour-grading/demo.js",
+    "startLine": 48,
+    "endLine": 70,
+    "code": "const questions = {\n  source_reliability: score('How much weight does this source carry?', [\n    'Untrustworthy', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Authoritative',\n  ]),\n  corroborated: noul('Is anyone else independently saying this?', {\n    yes: 'Somebody who did not get it from this post is saying the same thing.',\n    no: 'Every version of this traces back to the one claim.',\n  }),\n  coordinated_push: noul('Does the spread look organised?', {\n    yes: 'Too many accounts, too close together, using too much of the same wording to be a crowd.',\n    no: 'However far it travelled, it travelled in people’s own words.',\n  }),\n  checkable: noul('Does it cite something that could be checked?', {\n    yes: 'It points at a document somebody could go and read.',\n    no: 'There is nothing here to verify against.',\n  }),\n  disposition: choice('What would you do with this?', {\n    IGNORE: 'Nothing. It is not worth the attention.',\n    WATCH: 'Note it and see whether it comes back with more behind it.',\n    VERIFY: 'Send somebody to check the thing it points at.',\n    ACT_WORTHY: 'There is enough here to act on before it is confirmed.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/rumour-grading/demo.js#demo:evaluate": {
+    "path": "demos/rumour-grading/demo.js",
+    "startLine": 74,
+    "endLine": 86,
+    "code": "/** One grading of one claim, made before the outcome exists. */\nfunction evaluate(answers, item) {\n  return {\n    reliability: answers.source_reliability.score,\n    corroborated: answers.corroborated.noul >= 0.5,\n    coordinated: answers.coordinated_push.noul >= 0.5,\n    coordinationStrength: answers.coordinated_push.noul,\n    checkable: answers.checkable.noul >= 0.5,\n    disposition: answers.disposition.choice,\n    confidence: answers.disposition.confidence,\n    label: `${item.id} · ${item.ticker} · ${readable(answers.disposition.choice)} · source ${answers.source_reliability.score.toFixed(1)} of 6`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/rumour-grading/demo.js#demo:report": {
+    "path": "demos/rumour-grading/demo.js",
+    "startLine": 90,
+    "endLine": 107,
+    "code": "/** Both errors, kept apart: the truths that were ignored and the falsehoods that were acted on. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.claimId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const of = (field, value) => graded.filter((result) => byItem.get(result.item.id)[field] === value);\n\n  return {\n    note: `Two hundred and forty claims. ${of('outcome', 'CONFIRMED').length} were later confirmed, ${of('outcome', 'DENIED').length} later denied, and ${of('outcome', 'UNRESOLVED').length} never resolved. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, of),\n    kpis: kpis(graded, byItem, of),\n    distribution: distribution(graded),\n    matrix: dispositionMatrix(graded, byItem),\n    curve: calibration(graded, byItem),\n    checks: checks(graded, byItem, of),\n    topItems: topItems(graded, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/sanctions-name-match/demo.js#demo:state": {
     "path": "demos/sanctions-name-match/demo.js",
     "startLine": 12,
@@ -1292,6 +1320,13 @@
     "startLine": 76,
     "endLine": 100,
     "code": "/** One proposed trade, with the position around it and what the instrument can absorb. */\nfunction trade(random, { account, symbol, side, valueUsd, currentPercent, targetPercent, recentTrades = [], sameNameOtherAccount = null, mandateNote = null }) {\n  const price = last(symbol).price;\n  const shares = Math.round(valueUsd / price);\n  const volume = Math.max(averageVolume(symbol), 1);\n  return {\n    key: `${account.id}-${symbol}-${random.int(100_000, 999_999)}`,\n    id: null,\n    accountId: account.id,\n    accountTaxable: account.taxable,\n    symbol,\n    side,\n    shares,\n    valueUsd: round(valueUsd),\n    price,\n    currentWeightPercent: round(currentPercent, 2),\n    targetWeightPercent: round(targetPercent, 2),\n    weightAfterPercent: round(currentPercent + (side === 'BUY' ? 1 : -1) * (valueUsd / account.valueUsd) * 100, 2),\n    shareOfAverageVolumePercent: round((shares / volume) * 100, 2),\n    averageDailyVolume: volume,\n    recentTradesInThisName: recentTrades,\n    sameNameOtherAccountToday: sameNameOtherAccount,\n    mandateNote,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/rumour-grading.js#demo:data": {
+    "path": "scripts/generate/rumour-grading.js",
+    "startLine": 130,
+    "endLine": 155,
+    "code": "/** One claim: who said it, how often they are right, how it travelled, and what it cites. */\nfunction claim(random, plan) {\n  const source = sourceFor(random, plan);\n  const spread = spreadFor(random, plan.spread);\n\n  return {\n    id: plan.id,\n    company: plan.company.name,\n    ticker: plan.company.ticker,\n    sector: plan.company.sector,\n    claim: `${plan.company.name} ${random.pick(CLAIMS)}.`,\n    sourceType: source.type.id,\n    sourceDescription: source.type.name,\n    sourceHandle: source.handle,\n    claimsMadeBefore: source.total,\n    laterConfirmed: source.confirmed,\n    laterDenied: source.denied,\n    postedAt: `2026-0${random.int(1, 9)}-${String(random.int(10, 28))} ${String(random.int(6, 22)).padStart(2, '0')}:${String(random.int(0, 59)).padStart(2, '0')}`,\n    accountsRepeatingIt: spread.accounts,\n    minutesForThoseRepeats: spread.minutes,\n    wordingSharedPercent: spread.similarity,\n    independentSourcesSayingIt: spread.independent,\n    citedDocument: plan.cites ? random.pick(DOCUMENTS) : null,\n    companyRecentNews: plan.company.recentNews,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/sanctions-name-match.js#demo:data": {
