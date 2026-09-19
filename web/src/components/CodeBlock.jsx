@@ -1,20 +1,10 @@
 import { Icon } from './Icon.jsx';
 import { repoFile } from '../lib/links.js';
+import { highlight } from '../lib/highlight.js';
 
 // A snippet of the project's own source, with its path and line range. Highlighting is deliberately
 // small: comments, strings, numbers and keywords, and nothing else. A syntax library would cost more
 // than the whole demo runtime.
-
-const KEYWORDS = /\b(const|let|var|function|return|if|else|for|of|in|while|new|import|from|export|default|await|async|class|extends|try|catch|finally|throw|typeof|null|undefined|true|false)\b/g;
-
-function highlight(code) {
-  const escaped = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  return escaped
-    .replace(/(\/\/[^\n]*)/g, '<span class="tok-comment">$1</span>')
-    .replace(/('[^'\n]*'|`[^`]*`|"[^"\n]*")/g, '<span class="tok-string">$1</span>')
-    .replace(/\b(\d+(?:\.\d+)?)\b/g, '<span class="tok-number">$1</span>')
-    .replace(KEYWORDS, '<span class="tok-keyword">$1</span>');
-}
 
 export function CodeBlock({ entry, caption }) {
   if (!entry) return null;
