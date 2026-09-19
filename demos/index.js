@@ -17,6 +17,7 @@ import walletRisk from './wallet-risk/demo.js';
 import mixerTracing from './mixer-tracing/demo.js';
 import sybilClusters from './sybil-clusters/demo.js';
 import portfolioHealth from './portfolio-health/demo.js';
+import rebalanceReview from './rebalance-review/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -34,7 +35,7 @@ export const DOMAINS = [
 export const DOMAIN_BY_ID = Object.fromEntries(DOMAINS.map((domain) => [domain.id, domain]));
 
 /** Demos shown in the catalog, in the order the series walks them. Each PRP adds its own. */
-export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, closeBlockers, orderRisk, disputeRouting, merchantOnboarding, cardFraudTriage, amlAlertTriage, muleNetwork, walletRisk, mixerTracing, sybilClusters, portfolioHealth];
+export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, closeBlockers, orderRisk, disputeRouting, merchantOnboarding, cardFraudTriage, amlAlertTriage, muleNetwork, walletRisk, mixerTracing, sybilClusters, portfolioHealth, rebalanceReview];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
 export const ALL_DEMOS = [...DEMOS, example];
