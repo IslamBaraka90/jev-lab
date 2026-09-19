@@ -49,7 +49,7 @@ function evaluate(answers, item) {
   const honeypot = answers.honeypot_suspected.noul >= 0.5;
   const predictedOutcome = honeypot ? 'HONEYPOT'
     : flag === 'SELL_TAX' ? 'TAX_TRAP'
-      : risk >= 4 && ['MINT_AUTHORITY', 'UNLOCKED_LIQUIDITY', 'HOLDER_CONCENTRATION'].includes(flag) ? 'RUGGED'
+      : ['MINT_AUTHORITY', 'UNLOCKED_LIQUIDITY', 'HOLDER_CONCENTRATION'].includes(flag) ? 'RUGGED'
         : 'FINE';
   return {
     risk,
@@ -82,7 +82,7 @@ function report(results, context = {}) {
     kpis: [
       { label: 'Outcome correct', value: share(correct.length, graded.length), context: `${correct.length} of ${graded.length}`, tone: correct.length === graded.length ? 'good' : 'warn' },
       { label: 'Honeypots caught', value: `${honeypotsCaught.length} of ${honeypots.length}`, context: 'reported separately because this miss is expensive', tone: honeypotsCaught.length === honeypots.length ? 'good' : 'warn' },
-      { label: 'Harmful tokens avoided', value: `${harmful.filter((result) => !result.evaluation.tradeable).length} of ${harmful.length}`, context: 'rugged, honeypot and tax-trap cohorts together' },
+      { label: 'Harmful tokens constrained', value: `${harmful.filter((result) => !result.evaluation.tradeable || result.evaluation.positionLimit !== 'NORMAL').length} of ${harmful.length}`, context: 'avoided or explicitly size-limited; rugged, honeypot and tax-trap cohorts together' },
       { label: 'Fine tokens excluded', value: `${fineExcluded.length} of ${fine.length}`, context: `${decoys.filter((result) => fineExcluded.includes(result)).length} of the 18 planted decoys`, tone: fineExcluded.length ? 'warn' : 'good' },
     ],
     distribution: FLAGS.map((flag) => ({ label: title(flag), count: results.filter((result) => result.evaluation.flag === flag).length })).filter((entry) => entry.count),
@@ -135,7 +135,6 @@ export default {
   value: 'Read contract, liquidity, holder and trading facts and say whether a fictional token is a trap.',
   tags: ['crypto', 'tokens', 'rug risk', 'honeypots'],
   dataClass: 'synthetic',
-  status: 'pending-recording',
   readMinutes: 4,
   view: 'table',
   itemLabel: (item) => `${item.id} · ${item.symbol} · ${item.trading.ageDays} days · ${item.holders.count.toLocaleString('en-US')} holders`,

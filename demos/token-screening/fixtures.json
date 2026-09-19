@@ -1,7 +1,7528 @@
 {
   "demo": "token-screening",
-  "model": null,
-  "recordedAt": null,
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
   "source": "scripts/record-demo.js",
-  "answers": {}
+  "answers": {
+    "TOK-0001": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.94,
+        "confidence": 0.38,
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.42,
+          "2": 0.21,
+          "3": 0.16,
+          "4": 0.11,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.44,
+        "probabilities": {
+          "NONE": 0.54,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.4,
+          "UNLOCKED_LIQUIDITY": 0.06
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.36,
+        "probabilities": {
+          "NONE": 0.04,
+          "NORMAL": 0.58,
+          "SMALL": 0.38
+        }
+      }
+    },
+    "TOK-0002": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.58,
+        "confidence": 0.69,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.29,
+          "5": 0.59,
+          "6": 0.05
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 1,
+          "HOLDER_CONCENTRATION": 0,
+          "NONE": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "SMALL": 0.05,
+          "NORMAL": 0.02,
+          "NONE": 0.93
+        }
+      }
+    },
+    "TOK-0003": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.5,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.05,
+          "4": 0.31,
+          "5": 0.56,
+          "6": 0.04
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "SELL_TAX": 1,
+          "FAILED_SELLS": 0,
+          "NONE": 0,
+          "HOLDER_CONCENTRATION": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "SMALL": 0.07,
+          "NORMAL": 0.03,
+          "NONE": 0.9
+        }
+      }
+    },
+    "TOK-0004": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.96,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0.16,
+          "1": 0.75,
+          "2": 0.08,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.81,
+        "probabilities": {
+          "NONE": 0.85,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.01,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.88,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.07,
+          "NORMAL": 0.92
+        }
+      }
+    },
+    "TOK-0005": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.93,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.71,
+          "2": 0.08,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.2,
+          "UNLOCKED_LIQUIDITY": 0.02,
+          "SELL_TAX": 0,
+          "NONE": 0.78
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.89,
+        "probabilities": {
+          "NORMAL": 0.93,
+          "SMALL": 0.06,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0006": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.22,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.09,
+          "4": 0.34,
+          "5": 0.44,
+          "6": 0.04
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 0.99,
+        "probabilities": {
+          "FAILED_SELLS": 1,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "SELL_TAX": 0,
+          "NONE": 0,
+          "UNLOCKED_LIQUIDITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.41
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.33,
+        "probabilities": {
+          "SMALL": 0.36,
+          "NONE": 0.56,
+          "NORMAL": 0.08
+        }
+      }
+    },
+    "TOK-0007": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.42,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.06,
+          "4": 0.29,
+          "5": 0.54,
+          "6": 0.05
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "SELL_TAX": 1,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "NONE": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.61,
+        "probabilities": {
+          "NORMAL": 0.07,
+          "SMALL": 0.19,
+          "NONE": 0.74
+        }
+      }
+    },
+    "TOK-0008": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.08,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.7,
+          "2": 0.13,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.28,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.4,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.4,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.2,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.8,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.12,
+          "NORMAL": 0.87
+        }
+      }
+    },
+    "TOK-0009": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.67,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.72,
+        "probabilities": {
+          "NONE": 0.77,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.2,
+          "UNLOCKED_LIQUIDITY": 0.03,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.03,
+          "NORMAL": 0.96
+        }
+      }
+    },
+    "TOK-0010": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.76,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.29,
+          "1": 0.67,
+          "2": 0.04,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.12,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.05,
+          "SELL_TAX": 0,
+          "NONE": 0.83
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "NORMAL": 0.96,
+          "SMALL": 0.03,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0011": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.69,
+          "2": 0.1,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.58,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.05,
+          "UNLOCKED_LIQUIDITY": 0.29,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.66
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "NORMAL": 0.86,
+          "NONE": 0.01,
+          "SMALL": 0.13
+        }
+      }
+    },
+    "TOK-0012": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.14,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.67,
+          "2": 0.16,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.45,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.15,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.3,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.55
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.84,
+        "probabilities": {
+          "NORMAL": 0.89,
+          "SMALL": 0.1,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0013": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.83,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.6,
+          "2": 0.06,
+          "3": 0.02,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0.21,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.79
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "NORMAL": 0.96,
+          "SMALL": 0.03,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0014": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.72,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.22,
+          "5": 0.67,
+          "6": 0.06
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 1,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "NONE": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 1
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "NONE": 0.91,
+          "NORMAL": 0.02,
+          "SMALL": 0.07
+        }
+      }
+    },
+    "TOK-0015": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 3.12,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.16,
+          "2": 0.14,
+          "3": 0.21,
+          "4": 0.29,
+          "5": 0.17,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.97,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.02,
+          "HOLDER_CONCENTRATION": 0.97,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.01
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.44,
+        "probabilities": {
+          "NONE": 0.19,
+          "SMALL": 0.63,
+          "NORMAL": 0.18
+        }
+      }
+    },
+    "TOK-0016": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.82,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.7,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.73,
+        "probabilities": {
+          "NONE": 0.78,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.08,
+          "UNLOCKED_LIQUIDITY": 0.14
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.95,
+          "SMALL": 0.04
+        }
+      }
+    },
+    "TOK-0017": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.91,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.72,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.6,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.2,
+          "NONE": 0.68,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.94,
+          "SMALL": 0.05
+        }
+      }
+    },
+    "TOK-0018": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.88,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.72,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.76,
+          "HOLDER_CONCENTRATION": 0.19,
+          "UNLOCKED_LIQUIDITY": 0.05,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.91,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.05,
+          "NORMAL": 0.94
+        }
+      }
+    },
+    "TOK-0019": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.18,
+        "confidence": 0.28,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.32,
+          "2": 0.28,
+          "3": 0.23,
+          "4": 0.12,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.45,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0.01,
+          "HOLDER_CONCENTRATION": 0.54,
+          "UNLOCKED_LIQUIDITY": 0.05,
+          "NONE": 0.4
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.42,
+        "probabilities": {
+          "NORMAL": 0.34,
+          "SMALL": 0.61,
+          "NONE": 0.05
+        }
+      }
+    },
+    "TOK-0020": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.91,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.73,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.16,
+          "NONE": 0.72,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.91,
+        "probabilities": {
+          "SMALL": 0.05,
+          "NONE": 0.01,
+          "NORMAL": 0.94
+        }
+      }
+    },
+    "TOK-0021": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.85,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.22,
+          "1": 0.72,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.07,
+          "NONE": 0.79
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.93,
+        "probabilities": {
+          "SMALL": 0.04,
+          "NORMAL": 0.95,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0022": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.1,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.67,
+          "2": 0.13,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.52,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "NONE": 0.6,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.26
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.81,
+        "probabilities": {
+          "SMALL": 0.12,
+          "NONE": 0.01,
+          "NORMAL": 0.87
+        }
+      }
+    },
+    "TOK-0023": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.94,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.71,
+          "2": 0.08,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.53,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.35,
+          "NONE": 0.61
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.87,
+        "probabilities": {
+          "SMALL": 0.08,
+          "NORMAL": 0.91,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0024": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.24,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.64,
+          "2": 0.19,
+          "3": 0.06,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.34,
+        "probabilities": {
+          "NONE": 0.41,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.45,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.7,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.19,
+          "NORMAL": 0.8
+        }
+      }
+    },
+    "TOK-0025": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.88,
+        "confidence": 0.14,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.21,
+          "2": 0.15,
+          "3": 0.2,
+          "4": 0.22999999999999998,
+          "5": 0.15,
+          "6": 0.02
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.01,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0.99
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.19,
+        "probabilities": {
+          "NONE": 0.28,
+          "SMALL": 0.46,
+          "NORMAL": 0.26
+        }
+      }
+    },
+    "TOK-0026": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.14,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.67,
+          "2": 0.17,
+          "3": 0.04,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.49,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.18,
+          "NONE": 0.58,
+          "UNLOCKED_LIQUIDITY": 0.24,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.75,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.83,
+          "SMALL": 0.16
+        }
+      }
+    },
+    "TOK-0027": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.68,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "NONE": 0.95,
+          "UNLOCKED_LIQUIDITY": 0.02,
+          "HOLDER_CONCENTRATION": 0.03,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.85,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.09,
+          "NORMAL": 0.9
+        }
+      }
+    },
+    "TOK-0028": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.59,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.04,
+          "4": 0.26,
+          "5": 0.6,
+          "6": 0.07
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0,
+          "NONE": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 1
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "NONE": 0.91,
+          "SMALL": 0.06,
+          "NORMAL": 0.03
+        }
+      }
+    },
+    "TOK-0029": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.13,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.66,
+          "2": 0.14,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.38,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.37,
+          "NONE": 0.49,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.72,
+        "probabilities": {
+          "SMALL": 0.17,
+          "NORMAL": 0.81,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0030": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.04,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.67,
+          "2": 0.11,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.43,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.02,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.53,
+          "NONE": 0.45,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.8,
+        "probabilities": {
+          "NORMAL": 0.86,
+          "SMALL": 0.13,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0031": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.93,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.73,
+          "2": 0.08,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "NONE": 0.84,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.03,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.06,
+          "NORMAL": 0.93
+        }
+      }
+    },
+    "TOK-0032": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.7,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.6,
+          "2": 0.03,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.02,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.79,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.19
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.96,
+        "probabilities": {
+          "SMALL": 0.02,
+          "NONE": 0.01,
+          "NORMAL": 0.97
+        }
+      }
+    },
+    "TOK-0033": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.7,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.49,
+          "2": 0.21,
+          "3": 0.14,
+          "4": 0.07,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.44,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.41,
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "NONE": 0.55,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.44,
+        "probabilities": {
+          "NORMAL": 0.63,
+          "NONE": 0.03,
+          "SMALL": 0.34
+        }
+      }
+    },
+    "TOK-0034": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.76,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.67,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.89,
+          "HOLDER_CONCENTRATION": 0.02
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "NORMAL": 0.94,
+          "NONE": 0.01,
+          "SMALL": 0.05
+        }
+      }
+    },
+    "TOK-0035": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.2,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.09,
+          "4": 0.43,
+          "5": 0.39,
+          "6": 0.03
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "SELL_TAX": 1,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.75,
+        "probabilities": {
+          "NONE": 0.84,
+          "NORMAL": 0.04,
+          "SMALL": 0.12
+        }
+      }
+    },
+    "TOK-0036": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.97,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.7,
+          "2": 0.1,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.56,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.23,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.64
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.89,
+        "probabilities": {
+          "SMALL": 0.07,
+          "NORMAL": 0.92,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0037": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.76,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.29,
+          "1": 0.68,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.85,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "HOLDER_CONCENTRATION": 0.03,
+          "FAILED_SELLS": 0,
+          "NONE": 0.88,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0,
+          "NORMAL": 0.97,
+          "SMALL": 0.03
+        }
+      }
+    },
+    "TOK-0038": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.71,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.33,
+          "1": 0.64,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "NONE": 0.94,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.02,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.96,
+        "probabilities": {
+          "SMALL": 0.02,
+          "NONE": 0.01,
+          "NORMAL": 0.97
+        }
+      }
+    },
+    "TOK-0039": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.98,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.71,
+          "2": 0.1,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.86,
+          "UNLOCKED_LIQUIDITY": 0.07,
+          "HOLDER_CONCENTRATION": 0.07
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.74,
+        "probabilities": {
+          "NORMAL": 0.83,
+          "SMALL": 0.16,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0040": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.92,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.14,
+          "5": 0.71,
+          "6": 0.13
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 1,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "FAILED_SELLS": 1,
+          "NONE": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.23
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "NONE": 0.96,
+          "NORMAL": 0.01,
+          "SMALL": 0.03
+        }
+      }
+    },
+    "TOK-0041": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.39,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.07,
+          "4": 0.36,
+          "5": 0.49,
+          "6": 0.04
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "SELL_TAX": 1,
+          "HOLDER_CONCENTRATION": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "NONE": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.78,
+        "probabilities": {
+          "NORMAL": 0.03,
+          "SMALL": 0.12,
+          "NONE": 0.85
+        }
+      }
+    },
+    "TOK-0042": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.22,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.1,
+          "4": 0.38,
+          "5": 0.43,
+          "6": 0.03
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 0.98,
+        "probabilities": {
+          "FAILED_SELLS": 0.98,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.02,
+          "NONE": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.45
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.46,
+        "probabilities": {
+          "NONE": 0.64,
+          "SMALL": 0.32,
+          "NORMAL": 0.04
+        }
+      }
+    },
+    "TOK-0043": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.6,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0.44,
+          "1": 0.53,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.16,
+          "HOLDER_CONCENTRATION": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.84,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.03,
+          "NORMAL": 0.96
+        }
+      }
+    },
+    "TOK-0044": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.82,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.69,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "HOLDER_CONCENTRATION": 0.01,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.86
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.91,
+        "probabilities": {
+          "SMALL": 0.05,
+          "NORMAL": 0.94,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0045": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.84,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.18,
+          "2": 0.18,
+          "3": 0.27,
+          "4": 0.25,
+          "5": 0.09,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.42,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.52,
+          "UNLOCKED_LIQUIDITY": 0.03,
+          "MINT_AUTHORITY": 0.44,
+          "NONE": 0.01,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.31,
+        "probabilities": {
+          "SMALL": 0.53,
+          "NONE": 0.12,
+          "NORMAL": 0.35
+        }
+      }
+    },
+    "TOK-0046": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.03,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.7,
+          "2": 0.13,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.61,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.68,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.23
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.13,
+          "NORMAL": 0.86
+        }
+      }
+    },
+    "TOK-0047": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.8,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.67,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.91,
+          "HOLDER_CONCENTRATION": 0.03,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.06,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.95,
+          "SMALL": 0.04
+        }
+      }
+    },
+    "TOK-0048": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.65,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.38,
+          "1": 0.61,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.01,
+          "NONE": 0.9
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.97,
+        "probabilities": {
+          "SMALL": 0.02,
+          "NORMAL": 0.98,
+          "NONE": 0
+        }
+      }
+    },
+    "TOK-0049": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.03,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.7,
+          "2": 0.12,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.46,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.55,
+          "HOLDER_CONCENTRATION": 0.27,
+          "UNLOCKED_LIQUIDITY": 0.17,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.71,
+        "probabilities": {
+          "NORMAL": 0.81,
+          "NONE": 0.01,
+          "SMALL": 0.18
+        }
+      }
+    },
+    "TOK-0050": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.86,
+        "confidence": 0.42,
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.46,
+          "2": 0.21,
+          "3": 0.14,
+          "4": 0.1,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.42,
+        "probabilities": {
+          "NONE": 0.52,
+          "UNLOCKED_LIQUIDITY": 0.07,
+          "HOLDER_CONCENTRATION": 0.41,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.42,
+        "probabilities": {
+          "SMALL": 0.34,
+          "NORMAL": 0.61,
+          "NONE": 0.05
+        }
+      }
+    },
+    "TOK-0051": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.99,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.74,
+          "2": 0.1,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.02,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.86
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "NORMAL": 0.86,
+          "SMALL": 0.13,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0052": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.72,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.2,
+          "5": 0.65,
+          "6": 0.09
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 1,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 1,
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "SELL_TAX": 0,
+          "NONE": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.27
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.87,
+          "SMALL": 0.11,
+          "NORMAL": 0.02
+        }
+      }
+    },
+    "TOK-0053": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.17,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.66,
+          "2": 0.16,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.48,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.32,
+          "UNLOCKED_LIQUIDITY": 0.11,
+          "NONE": 0.57,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.8,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.87,
+          "SMALL": 0.12
+        }
+      }
+    },
+    "TOK-0054": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.98,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.65,
+          "2": 0.1,
+          "3": 0.03,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.52,
+        "probabilities": {
+          "NONE": 0.38,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.6,
+          "HOLDER_CONCENTRATION": 0.02,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.83,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.89,
+          "SMALL": 0.1
+        }
+      }
+    },
+    "TOK-0055": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.13,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.71,
+          "2": 0.15,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.81,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.1,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.05,
+          "NONE": 0.85,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.65,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.22,
+          "NORMAL": 0.77
+        }
+      }
+    },
+    "TOK-0056": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.1,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.69,
+          "2": 0.12,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.44,
+        "probabilities": {
+          "NONE": 0.54,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.08,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.38
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.77,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.85,
+          "SMALL": 0.14
+        }
+      }
+    },
+    "TOK-0057": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.18,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.66,
+          "2": 0.17,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.45,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.54,
+          "HOLDER_CONCENTRATION": 0.34
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.67,
+        "probabilities": {
+          "SMALL": 0.21,
+          "NONE": 0.01,
+          "NORMAL": 0.78
+        }
+      }
+    },
+    "TOK-0058": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 3.07,
+        "confidence": 0.23,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.18,
+          "2": 0.13,
+          "3": 0.21,
+          "4": 0.27,
+          "5": 0.17,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.01,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.96,
+          "UNLOCKED_LIQUIDITY": 0.03
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.43,
+        "probabilities": {
+          "NONE": 0.22,
+          "NORMAL": 0.16,
+          "SMALL": 0.62
+        }
+      }
+    },
+    "TOK-0059": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.05,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.68,
+          "2": 0.12,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.4,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.5,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.47,
+          "HOLDER_CONCENTRATION": 0.03
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.84,
+        "probabilities": {
+          "NORMAL": 0.89,
+          "NONE": 0.01,
+          "SMALL": 0.1
+        }
+      }
+    },
+    "TOK-0060": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.86,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.7,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "NONE": 0.72,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.15
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0,
+          "SMALL": 0.04,
+          "NORMAL": 0.96
+        }
+      }
+    },
+    "TOK-0061": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.82,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.69,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.03,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.83,
+          "HOLDER_CONCENTRATION": 0.14
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "SMALL": 0.04,
+          "NORMAL": 0.95,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0062": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.87,
+        "confidence": 0.2,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.18,
+          "2": 0.19,
+          "3": 0.24,
+          "4": 0.25,
+          "5": 0.11,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "MINT_AUTHORITY",
+        "confidence": 0.48,
+        "probabilities": {
+          "MINT_AUTHORITY": 0.57,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.37,
+          "NONE": 0.01,
+          "UNLOCKED_LIQUIDITY": 0.05,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.36,
+        "probabilities": {
+          "SMALL": 0.57,
+          "NONE": 0.12,
+          "NORMAL": 0.31
+        }
+      }
+    },
+    "TOK-0063": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.13,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.67,
+          "2": 0.15,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.42,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.28,
+          "NONE": 0.53,
+          "UNLOCKED_LIQUIDITY": 0.19,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.8,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.87,
+          "SMALL": 0.12
+        }
+      }
+    },
+    "TOK-0064": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.85,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.75,
+          "2": 0.04,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.64,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.17,
+          "NONE": 0.7,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NORMAL": 0.97,
+          "SMALL": 0.03,
+          "NONE": 0
+        }
+      }
+    },
+    "TOK-0065": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.2,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.66,
+          "2": 0.17,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.42,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.53,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "HOLDER_CONCENTRATION": 0.35
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.76,
+        "probabilities": {
+          "NORMAL": 0.84,
+          "SMALL": 0.15,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0066": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.9,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.73,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.62,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.68,
+          "HOLDER_CONCENTRATION": 0.04,
+          "UNLOCKED_LIQUIDITY": 0.27,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.89,
+        "probabilities": {
+          "NORMAL": 0.92,
+          "NONE": 0.01,
+          "SMALL": 0.07
+        }
+      }
+    },
+    "TOK-0067": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.51,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.54,
+          "2": 0.2,
+          "3": 0.12,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.39,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "HOLDER_CONCENTRATION": 0.46,
+          "NONE": 0.5
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.52,
+        "probabilities": {
+          "SMALL": 0.3,
+          "NORMAL": 0.68,
+          "NONE": 0.02
+        }
+      }
+    },
+    "TOK-0068": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.12,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.7,
+          "2": 0.16,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.59,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.2,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "NONE": 0.66
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.75,
+        "probabilities": {
+          "NORMAL": 0.83,
+          "SMALL": 0.16,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0069": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.77,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.21,
+          "2": 0.18,
+          "3": 0.24,
+          "4": 0.26,
+          "5": 0.08,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "MINT_AUTHORITY",
+        "confidence": 0.45,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "MINT_AUTHORITY": 0.54,
+          "NONE": 0.01,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.41,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.28,
+        "probabilities": {
+          "NONE": 0.1,
+          "SMALL": 0.52,
+          "NORMAL": 0.38
+        }
+      }
+    },
+    "TOK-0070": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.79,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.68,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.78,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.07,
+          "NONE": 0.82,
+          "UNLOCKED_LIQUIDITY": 0.11,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.96,
+          "SMALL": 0.03
+        }
+      }
+    },
+    "TOK-0071": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.96,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.7,
+          "2": 0.1,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.21,
+          "NONE": 0.77,
+          "HOLDER_CONCENTRATION": 0.02,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.06,
+          "NORMAL": 0.9299999999999999
+        }
+      }
+    },
+    "TOK-0072": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.27,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.64,
+          "2": 0.23,
+          "3": 0.05,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.02,
+          "HOLDER_CONCENTRATION": 0.26,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.72
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.61,
+        "probabilities": {
+          "NORMAL": 0.74,
+          "NONE": 0.02,
+          "SMALL": 0.24
+        }
+      }
+    },
+    "TOK-0073": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.86,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.69,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.86,
+          "HOLDER_CONCENTRATION": 0.02,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.85,
+        "probabilities": {
+          "NORMAL": 0.9,
+          "NONE": 0.01,
+          "SMALL": 0.09
+        }
+      }
+    },
+    "TOK-0074": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.26,
+          "1": 0.68,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.72,
+          "HOLDER_CONCENTRATION": 0.1,
+          "UNLOCKED_LIQUIDITY": 0.18,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.03,
+          "NORMAL": 0.96
+        }
+      }
+    },
+    "TOK-0075": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.67,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "HOLDER_CONCENTRATION": 0.11,
+          "NONE": 0.76
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "SMALL": 0.05,
+          "NORMAL": 0.94,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0076": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.26,
+          "1": 0.67,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.63,
+        "probabilities": {
+          "NONE": 0.7,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.1,
+          "UNLOCKED_LIQUIDITY": 0.2,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.91,
+        "probabilities": {
+          "NORMAL": 0.94,
+          "SMALL": 0.05,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0077": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.66,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.26,
+          "2": 0.18,
+          "3": 0.22,
+          "4": 0.2,
+          "5": 0.1,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "NONE": 0.01,
+          "UNLOCKED_LIQUIDITY": 0.99,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.24,
+        "probabilities": {
+          "SMALL": 0.49,
+          "NORMAL": 0.31,
+          "NONE": 0.2
+        }
+      }
+    },
+    "TOK-0078": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.86,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.68,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.15,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "NONE": 0.76
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "SMALL": 0.06,
+          "NONE": 0.01,
+          "NORMAL": 0.9299999999999999
+        }
+      }
+    },
+    "TOK-0079": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.77,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.29,
+          "1": 0.67,
+          "2": 0.04,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.85,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "NONE": 0.88,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.08
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "SMALL": 0.03,
+          "NONE": 0.01,
+          "NORMAL": 0.96
+        }
+      }
+    },
+    "TOK-0080": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.71,
+          "2": 0.04,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.03,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.07,
+          "NONE": 0.9
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "SMALL": 0.05,
+          "NONE": 0.01,
+          "NORMAL": 0.94
+        }
+      }
+    },
+    "TOK-0081": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.87,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.7,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "NONE": 0.76,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.16,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.08,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.06,
+          "NORMAL": 0.93
+        }
+      }
+    },
+    "TOK-0082": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 3.66,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0,
+          "1": 0.06,
+          "2": 0.09,
+          "3": 0.18,
+          "4": 0.47,
+          "5": 0.19,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "NONE": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 1,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.46,
+        "probabilities": {
+          "NONE": 0.64,
+          "SMALL": 0.3,
+          "NORMAL": 0.06
+        }
+      }
+    },
+    "TOK-0083": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.92,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.24,
+          "2": 0.11,
+          "3": 0.15,
+          "4": 0.22999999999999998,
+          "5": 0.18,
+          "6": 0.03
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0.99,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.01
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.11,
+        "probabilities": {
+          "NORMAL": 0.29,
+          "SMALL": 0.4,
+          "NONE": 0.31
+        }
+      }
+    },
+    "TOK-0084": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.11,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.68,
+          "2": 0.14,
+          "3": 0.03,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.47,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.56,
+          "HOLDER_CONCENTRATION": 0.33,
+          "UNLOCKED_LIQUIDITY": 0.11,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.86,
+        "probabilities": {
+          "NORMAL": 0.9,
+          "NONE": 0.01,
+          "SMALL": 0.09
+        }
+      }
+    },
+    "TOK-0085": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.65,
+          "2": 0.11,
+          "3": 0.03,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.02,
+          "UNLOCKED_LIQUIDITY": 0.27,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.71
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "NORMAL": 0.95,
+          "SMALL": 0.04,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0086": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.19,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.64,
+          "2": 0.16,
+          "3": 0.06,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.34,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.36,
+          "UNLOCKED_LIQUIDITY": 0.19,
+          "NONE": 0.45
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.77,
+        "probabilities": {
+          "NORMAL": 0.85,
+          "SMALL": 0.14,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0087": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.12,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.67,
+          "2": 0.14,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.38,
+        "probabilities": {
+          "NONE": 0.48,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.4,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.81,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.12,
+          "NORMAL": 0.87
+        }
+      }
+    },
+    "TOK-0088": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.82,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.45999999999999996,
+          "2": 0.16999999999999998,
+          "3": 0.15,
+          "4": 0.1,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.44,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.37,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.54,
+          "UNLOCKED_LIQUIDITY": 0.09
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.31,
+        "probabilities": {
+          "SMALL": 0.42,
+          "NONE": 0.04,
+          "NORMAL": 0.54
+        }
+      }
+    },
+    "TOK-0089": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.86,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.68,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.91,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.02,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.05,
+          "NONE": 0.93
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.83,
+        "probabilities": {
+          "NORMAL": 0.88,
+          "SMALL": 0.11,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0090": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.7,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.62,
+          "2": 0.03,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.17,
+          "HOLDER_CONCENTRATION": 0.04,
+          "NONE": 0.79
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "SMALL": 0.03,
+          "NORMAL": 0.96,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0091": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.85,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.6900000000000001,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "NONE": 0.78,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.1,
+          "UNLOCKED_LIQUIDITY": 0.12
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.95,
+          "SMALL": 0.04
+        }
+      }
+    },
+    "TOK-0092": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.98,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.74,
+          "2": 0.1,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.57,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.2,
+          "UNLOCKED_LIQUIDITY": 0.15,
+          "NONE": 0.65,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.89,
+        "probabilities": {
+          "NORMAL": 0.92,
+          "NONE": 0.01,
+          "SMALL": 0.07
+        }
+      }
+    },
+    "TOK-0093": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.07,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.65,
+          "2": 0.12,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.72,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "NONE": 0.77,
+          "UNLOCKED_LIQUIDITY": 0.23,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.89,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.92,
+          "SMALL": 0.07
+        }
+      }
+    },
+    "TOK-0094": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.15,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.65,
+          "2": 0.16,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.39,
+        "probabilities": {
+          "NONE": 0.49,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.1,
+          "HOLDER_CONCENTRATION": 0.41
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.82,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.88,
+          "SMALL": 0.11
+        }
+      }
+    },
+    "TOK-0095": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.88,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.71,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.77,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.06,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.81,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "SMALL": 0.06,
+          "NONE": 0.01,
+          "NORMAL": 0.9299999999999999
+        }
+      }
+    },
+    "TOK-0096": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.83,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.69,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.61,
+        "probabilities": {
+          "NONE": 0.67,
+          "UNLOCKED_LIQUIDITY": 0.19,
+          "HOLDER_CONCENTRATION": 0.14,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.04,
+          "NORMAL": 0.95
+        }
+      }
+    },
+    "TOK-0097": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.05,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.71,
+          "2": 0.13,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.59,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.24,
+          "UNLOCKED_LIQUIDITY": 0.1,
+          "NONE": 0.66,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.76,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.84,
+          "SMALL": 0.15
+        }
+      }
+    },
+    "TOK-0098": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.84,
+        "confidence": 0.11,
+        "probabilities": {
+          "0": 0.05,
+          "1": 0.23,
+          "2": 0.14,
+          "3": 0.19,
+          "4": 0.22,
+          "5": 0.15,
+          "6": 0.02
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.97,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.02,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.97,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.01
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.28,
+        "probabilities": {
+          "NORMAL": 0.22,
+          "SMALL": 0.52,
+          "NONE": 0.26
+        }
+      }
+    },
+    "TOK-0099": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.25,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.64,
+          "2": 0.2,
+          "3": 0.06,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "SELL_TAX": 0,
+          "NONE": 0.62,
+          "HOLDER_CONCENTRATION": 0.24
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.75,
+        "probabilities": {
+          "SMALL": 0.15,
+          "NONE": 0.01,
+          "NORMAL": 0.84
+        }
+      }
+    },
+    "TOK-0100": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.87,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.22,
+          "1": 0.7,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "NONE": 0.79,
+          "HOLDER_CONCENTRATION": 0.04,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.17
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.89,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.07,
+          "NORMAL": 0.92
+        }
+      }
+    },
+    "TOK-0101": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.16,
+        "confidence": 0.48,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.12,
+          "4": 0.38,
+          "5": 0.41000000000000003,
+          "6": 0.03
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 0.99,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "FAILED_SELLS": 1
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.47,
+        "probabilities": {
+          "NORMAL": 0.04,
+          "NONE": 0.64,
+          "SMALL": 0.32
+        }
+      }
+    },
+    "TOK-0102": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.04,
+        "confidence": 0.35,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.4,
+          "2": 0.24,
+          "3": 0.18,
+          "4": 0.11,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.39,
+        "probabilities": {
+          "NONE": 0.5,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.36,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.22,
+        "probabilities": {
+          "NONE": 0.07,
+          "SMALL": 0.48,
+          "NORMAL": 0.45
+        }
+      }
+    },
+    "TOK-0103": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.18,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.66,
+          "2": 0.15,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.39,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.5,
+          "HOLDER_CONCENTRATION": 0.32,
+          "UNLOCKED_LIQUIDITY": 0.18,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.77,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.85,
+          "SMALL": 0.14
+        }
+      }
+    },
+    "TOK-0104": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.7,
+          "2": 0.11,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.61,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.29,
+          "UNLOCKED_LIQUIDITY": 0.03,
+          "NONE": 0.68
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.85,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.09,
+          "NORMAL": 0.9
+        }
+      }
+    },
+    "TOK-0105": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.02,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.71,
+          "2": 0.12,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.51,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.14,
+          "UNLOCKED_LIQUIDITY": 0.26,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.6
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "SMALL": 0.13,
+          "NORMAL": 0.86,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0106": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.08,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.72,
+          "2": 0.14,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.6,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.13,
+          "UNLOCKED_LIQUIDITY": 0.19,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.68,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.84,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.1,
+          "NORMAL": 0.89
+        }
+      }
+    },
+    "TOK-0107": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.89,
+        "confidence": 0.42,
+        "probabilities": {
+          "0": 0.05,
+          "1": 0.43,
+          "2": 0.24,
+          "3": 0.18,
+          "4": 0.08,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.36,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.19,
+          "HOLDER_CONCENTRATION": 0.33,
+          "FAILED_SELLS": 0,
+          "NONE": 0.48,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.32,
+        "probabilities": {
+          "SMALL": 0.41,
+          "NORMAL": 0.55,
+          "NONE": 0.04
+        }
+      }
+    },
+    "TOK-0108": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.17,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.12,
+          "4": 0.38,
+          "5": 0.41,
+          "6": 0.03
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.01,
+          "UNLOCKED_LIQUIDITY": 0,
+          "FAILED_SELLS": 0.98,
+          "HOLDER_CONCENTRATION": 0.01,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.48,
+        "probabilities": {
+          "NONE": 0.65,
+          "SMALL": 0.3,
+          "NORMAL": 0.05
+        }
+      }
+    },
+    "TOK-0109": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.25,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.63,
+          "2": 0.2,
+          "3": 0.06,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.41,
+        "probabilities": {
+          "NONE": 0.42,
+          "HOLDER_CONCENTRATION": 0.52,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.06,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.56,
+        "probabilities": {
+          "NONE": 0.02,
+          "SMALL": 0.28,
+          "NORMAL": 0.7
+        }
+      }
+    },
+    "TOK-0110": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.72,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.67,
+          "2": 0.02,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.07,
+          "SELL_TAX": 0,
+          "NONE": 0.78,
+          "UNLOCKED_LIQUIDITY": 0.15
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "SMALL": 0.03,
+          "NONE": 0.01,
+          "NORMAL": 0.96
+        }
+      }
+    },
+    "TOK-0111": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.71,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.05,
+          "UNLOCKED_LIQUIDITY": 0.11,
+          "NONE": 0.84
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "NONE": 0,
+          "SMALL": 0.05,
+          "NORMAL": 0.95
+        }
+      }
+    },
+    "TOK-0112": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.73,
+          "2": 0.1,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.49,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.23,
+          "NONE": 0.58,
+          "UNLOCKED_LIQUIDITY": 0.19,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.85,
+        "probabilities": {
+          "SMALL": 0.09,
+          "NONE": 0.01,
+          "NORMAL": 0.9
+        }
+      }
+    },
+    "TOK-0113": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 3.66,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0,
+          "1": 0.03,
+          "2": 0.08,
+          "3": 0.24,
+          "4": 0.48,
+          "5": 0.16,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 1,
+          "NONE": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.44,
+        "probabilities": {
+          "NORMAL": 0.03,
+          "NONE": 0.63,
+          "SMALL": 0.34
+        }
+      }
+    },
+    "TOK-0114": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.97,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.73,
+          "2": 0.09,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.48,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.58,
+          "UNLOCKED_LIQUIDITY": 0.3,
+          "HOLDER_CONCENTRATION": 0.12
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "NORMAL": 0.94,
+          "SMALL": 0.06,
+          "NONE": 0
+        }
+      }
+    },
+    "TOK-0115": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.06,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.12,
+          "4": 0.51,
+          "5": 0.3,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 1,
+          "NONE": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "SMALL": 0.28,
+          "NONE": 0.69,
+          "NORMAL": 0.03
+        }
+      }
+    },
+    "TOK-0116": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.92,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.72,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.41,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.46,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.51,
+          "HOLDER_CONCENTRATION": 0.03
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "SMALL": 0.05,
+          "NORMAL": 0.94,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0117": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.68,
+          "2": 0.11,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.49,
+        "probabilities": {
+          "NONE": 0.58,
+          "HOLDER_CONCENTRATION": 0.03,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.39,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.71,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.18,
+          "NORMAL": 0.81
+        }
+      }
+    },
+    "TOK-0118": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.61,
+          "2": 0.06,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.02,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.23,
+          "SELL_TAX": 0,
+          "NONE": 0.75
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.85,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.09,
+          "NORMAL": 0.9
+        }
+      }
+    },
+    "TOK-0119": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.76,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.29,
+          "1": 0.68,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.02,
+          "UNLOCKED_LIQUIDITY": 0.08,
+          "NONE": 0.9,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NORMAL": 0.96,
+          "NONE": 0.01,
+          "SMALL": 0.03
+        }
+      }
+    },
+    "TOK-0120": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.75,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.67,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.73,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.07,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.78,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.15,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.93,
+        "probabilities": {
+          "SMALL": 0.04,
+          "NONE": 0.01,
+          "NORMAL": 0.95
+        }
+      }
+    },
+    "TOK-0121": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.83,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.7,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.03,
+          "NONE": 0.84
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "SMALL": 0.05,
+          "NORMAL": 0.94,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0122": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.59,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.18,
+          "2": 0.25,
+          "3": 0.35000000000000003,
+          "4": 0.18,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "MINT_AUTHORITY",
+        "confidence": 0.45,
+        "probabilities": {
+          "MINT_AUTHORITY": 0.54,
+          "NONE": 0.01,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.05,
+          "HOLDER_CONCENTRATION": 0.39,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.39,
+        "probabilities": {
+          "NORMAL": 0.33,
+          "NONE": 0.08,
+          "SMALL": 0.59
+        }
+      }
+    },
+    "TOK-0123": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.7,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "NONE": 0.71,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.02,
+          "UNLOCKED_LIQUIDITY": 0.27
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0,
+          "SMALL": 0.03,
+          "NORMAL": 0.97
+        }
+      }
+    },
+    "TOK-0124": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.73,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.66,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.85,
+        "probabilities": {
+          "NONE": 0.89,
+          "HOLDER_CONCENTRATION": 0.03,
+          "UNLOCKED_LIQUIDITY": 0.08,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0,
+          "SMALL": 0.03,
+          "NORMAL": 0.97
+        }
+      }
+    },
+    "TOK-0125": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.85,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.69,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.81,
+        "probabilities": {
+          "NONE": 0.84,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.12,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.04,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.87,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.08,
+          "NORMAL": 0.91
+        }
+      }
+    },
+    "TOK-0126": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.7,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.35,
+          "1": 0.62,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.82,
+          "HOLDER_CONCENTRATION": 0.05,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.96,
+          "SMALL": 0.03
+        }
+      }
+    },
+    "TOK-0127": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.43,
+        "confidence": 0.69,
+        "probabilities": {
+          "0": 0.05,
+          "1": 0.57,
+          "2": 0.28,
+          "3": 0.09,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.32,
+        "probabilities": {
+          "NONE": 0.42,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.44,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.48,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.33,
+          "NORMAL": 0.66
+        }
+      }
+    },
+    "TOK-0128": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 5.5,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.03,
+          "5": 0.4,
+          "6": 0.56
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 1,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "NONE": 0.98,
+          "NORMAL": 0.01,
+          "SMALL": 0.01
+        }
+      }
+    },
+    "TOK-0129": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.97,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.7,
+          "2": 0.1,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.55,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.27,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.11,
+          "SELL_TAX": 0,
+          "NONE": 0.62
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.88,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.07,
+          "NORMAL": 0.92
+        }
+      }
+    },
+    "TOK-0130": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.83,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.68,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.68,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.19,
+          "UNLOCKED_LIQUIDITY": 0.08,
+          "NONE": 0.73
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.93,
+        "probabilities": {
+          "NORMAL": 0.95,
+          "SMALL": 0.04,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0131": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.89,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.73,
+          "2": 0.06,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.08,
+          "NONE": 0.88,
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.05,
+          "NORMAL": 0.94
+        }
+      }
+    },
+    "TOK-0132": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.11,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.72,
+          "2": 0.16,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.62,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "NONE": 0.68,
+          "HOLDER_CONCENTRATION": 0.23
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.72,
+        "probabilities": {
+          "SMALL": 0.18,
+          "NORMAL": 0.81,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0133": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.07,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.71,
+          "2": 0.14,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.7,
+        "probabilities": {
+          "UNLOCKED_LIQUIDITY": 0.17,
+          "NONE": 0.76,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.07,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.73,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.17,
+          "NORMAL": 0.82
+        }
+      }
+    },
+    "TOK-0134": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.91,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.7,
+          "2": 0.08,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.7,
+        "probabilities": {
+          "NONE": 0.75,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.04,
+          "UNLOCKED_LIQUIDITY": 0.21,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.77,
+        "probabilities": {
+          "NONE": 0.02,
+          "SMALL": 0.14,
+          "NORMAL": 0.84
+        }
+      }
+    },
+    "TOK-0135": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.6,
+          "2": 0.06,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0.14,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.86,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.96,
+        "probabilities": {
+          "NORMAL": 0.97,
+          "NONE": 0.01,
+          "SMALL": 0.02
+        }
+      }
+    },
+    "TOK-0136": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.71,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.62,
+          "2": 0.03,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.89,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.05,
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "NONE": 0.91
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.96,
+        "probabilities": {
+          "NORMAL": 0.97,
+          "SMALL": 0.02,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0137": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 3.95,
+        "confidence": 0.67,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.16,
+          "4": 0.53,
+          "5": 0.24,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 1,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0,
+          "NONE": 0,
+          "HOLDER_CONCENTRATION": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.56,
+        "probabilities": {
+          "SMALL": 0.27,
+          "NORMAL": 0.02,
+          "NONE": 0.71
+        }
+      }
+    },
+    "TOK-0138": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.82,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.71,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.01,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.9
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.93,
+        "probabilities": {
+          "NORMAL": 0.95,
+          "NONE": 0.01,
+          "SMALL": 0.04
+        }
+      }
+    },
+    "TOK-0139": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.62,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.27,
+          "2": 0.17,
+          "3": 0.2,
+          "4": 0.22,
+          "5": 0.09,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.98,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.99,
+          "NONE": 0.01,
+          "UNLOCKED_LIQUIDITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.34,
+        "probabilities": {
+          "NONE": 0.18,
+          "NORMAL": 0.26,
+          "SMALL": 0.56
+        }
+      }
+    },
+    "TOK-0140": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.73,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.65,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.77,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.1,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.81
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.96,
+        "probabilities": {
+          "NORMAL": 0.98,
+          "NONE": 0,
+          "SMALL": 0.02
+        }
+      }
+    },
+    "TOK-0141": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.71,
+          "2": 0.05,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.17,
+          "NONE": 0.79,
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.94,
+        "probabilities": {
+          "SMALL": 0.04,
+          "NONE": 0,
+          "NORMAL": 0.96
+        }
+      }
+    },
+    "TOK-0142": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.93,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.6900000000000001,
+          "2": 0.08,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.53,
+        "probabilities": {
+          "NONE": 0.61,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.31,
+          "UNLOCKED_LIQUIDITY": 0.08,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "NORMAL": 0.93,
+          "SMALL": 0.06,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0143": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.91,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.73,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "NONE": 0.8,
+          "UNLOCKED_LIQUIDITY": 0.13,
+          "HOLDER_CONCENTRATION": 0.07,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.92,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.05,
+          "NORMAL": 0.94
+        }
+      }
+    },
+    "TOK-0144": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.74,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.67,
+          "2": 0.03,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.8,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.16,
+          "HOLDER_CONCENTRATION": 0.04,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NORMAL": 0.97,
+          "NONE": 0,
+          "SMALL": 0.03
+        }
+      }
+    },
+    "TOK-0145": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.22,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.64,
+          "2": 0.17,
+          "3": 0.06,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.38,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.49,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.47,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.04
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.71,
+        "probabilities": {
+          "SMALL": 0.18,
+          "NONE": 0.01,
+          "NORMAL": 0.81
+        }
+      }
+    },
+    "TOK-0146": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.95,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.7,
+          "2": 0.1,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.22,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.01,
+          "NONE": 0.77
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "SMALL": 0.13,
+          "NORMAL": 0.86,
+          "NONE": 0.01
+        }
+      }
+    },
+    "TOK-0147": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.62,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.28,
+          "2": 0.16,
+          "3": 0.2,
+          "4": 0.19,
+          "5": 0.11,
+          "6": 0.02
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "NONE": 0.01,
+          "HOLDER_CONCENTRATION": 0,
+          "UNLOCKED_LIQUIDITY": 0.99
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.23,
+        "probabilities": {
+          "NONE": 0.21,
+          "SMALL": 0.48,
+          "NORMAL": 0.31
+        }
+      }
+    },
+    "TOK-0148": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.82,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.7,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.68,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.22,
+          "UNLOCKED_LIQUIDITY": 0.05,
+          "NONE": 0.73,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0,
+          "SMALL": 0.03,
+          "NORMAL": 0.97
+        }
+      }
+    },
+    "TOK-0149": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.63,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.54,
+          "2": 0.19,
+          "3": 0.13,
+          "4": 0.06,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.42,
+        "probabilities": {
+          "NONE": 0.52,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.39,
+          "UNLOCKED_LIQUIDITY": 0.09
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.4,
+        "probabilities": {
+          "NONE": 0.03,
+          "SMALL": 0.37,
+          "NORMAL": 0.6
+        }
+      }
+    },
+    "TOK-0150": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.08,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.69,
+          "2": 0.14,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.07,
+          "NONE": 0.84,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0.09
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "NORMAL": 0.86,
+          "NONE": 0.01,
+          "SMALL": 0.13
+        }
+      }
+    },
+    "TOK-0151": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.89,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.67,
+          "2": 0.08,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "HOLDER_CONCENTRATION": 0.01,
+          "UNLOCKED_LIQUIDITY": 0.23,
+          "FAILED_SELLS": 0,
+          "SELL_TAX": 0,
+          "MINT_AUTHORITY": 0,
+          "NONE": 0.76
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.9,
+        "probabilities": {
+          "NORMAL": 0.9299999999999999,
+          "NONE": 0.01,
+          "SMALL": 0.06
+        }
+      }
+    },
+    "TOK-0152": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 3.43,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0,
+          "1": 0.05,
+          "2": 0.1,
+          "3": 0.31,
+          "4": 0.43,
+          "5": 0.1,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "SELL_TAX",
+        "confidence": 1,
+        "probabilities": {
+          "SELL_TAX": 1,
+          "HOLDER_CONCENTRATION": 0,
+          "NONE": 0,
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "UNLOCKED_LIQUIDITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.36,
+        "probabilities": {
+          "NORMAL": 0.08,
+          "NONE": 0.35,
+          "SMALL": 0.57
+        }
+      }
+    },
+    "TOK-0153": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.8,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.26,
+          "1": 0.69,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.03,
+          "FAILED_SELLS": 0,
+          "NONE": 0.74,
+          "SELL_TAX": 0,
+          "UNLOCKED_LIQUIDITY": 0.23
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.93,
+        "probabilities": {
+          "SMALL": 0.04,
+          "NONE": 0.01,
+          "NORMAL": 0.95
+        }
+      }
+    },
+    "TOK-0154": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 4.77,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.2,
+          "5": 0.69,
+          "6": 0.07
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "FAILED_SELLS",
+        "confidence": 1,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 1,
+          "UNLOCKED_LIQUIDITY": 0,
+          "NONE": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "NORMAL": 0.02,
+          "SMALL": 0.06,
+          "NONE": 0.92
+        }
+      }
+    },
+    "TOK-0155": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.05,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.72,
+          "2": 0.13,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "NONE": 0.87,
+          "UNLOCKED_LIQUIDITY": 0.11,
+          "HOLDER_CONCENTRATION": 0.02,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "SELL_TAX": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.13,
+          "NORMAL": 0.86
+        }
+      }
+    },
+    "TOK-0156": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.69,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.24,
+          "2": 0.18,
+          "3": 0.24,
+          "4": 0.21,
+          "5": 0.09,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "UNLOCKED_LIQUIDITY",
+        "confidence": 0.98,
+        "probabilities": {
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.01,
+          "MINT_AUTHORITY": 0,
+          "UNLOCKED_LIQUIDITY": 0.98,
+          "FAILED_SELLS": 0,
+          "NONE": 0.01
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.27,
+        "probabilities": {
+          "NORMAL": 0.32,
+          "NONE": 0.17,
+          "SMALL": 0.51
+        }
+      }
+    },
+    "TOK-0157": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 2.97,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.16,
+          "2": 0.16,
+          "3": 0.25,
+          "4": 0.29000000000000004,
+          "5": 0.11,
+          "6": 0.01
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "HOLDER_CONCENTRATION",
+        "confidence": 0.47,
+        "probabilities": {
+          "MINT_AUTHORITY": 0.38,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.56,
+          "UNLOCKED_LIQUIDITY": 0.04,
+          "NONE": 0.01
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "SMALL",
+        "confidence": 0.33,
+        "probabilities": {
+          "NORMAL": 0.33,
+          "SMALL": 0.55,
+          "NONE": 0.12
+        }
+      }
+    },
+    "TOK-0158": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 1.01,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.16,
+          "1": 0.71,
+          "2": 0.11,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.5,
+        "probabilities": {
+          "NONE": 0.58,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "MINT_AUTHORITY": 0,
+          "HOLDER_CONCENTRATION": 0.33,
+          "UNLOCKED_LIQUIDITY": 0.09
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.86,
+        "probabilities": {
+          "NONE": 0.01,
+          "NORMAL": 0.91,
+          "SMALL": 0.08
+        }
+      }
+    },
+    "TOK-0159": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.96,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.68,
+          "2": 0.09,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.64,
+        "probabilities": {
+          "MINT_AUTHORITY": 0,
+          "FAILED_SELLS": 0,
+          "NONE": 0.7,
+          "UNLOCKED_LIQUIDITY": 0.17,
+          "SELL_TAX": 0,
+          "HOLDER_CONCENTRATION": 0.13
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.77,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.14,
+          "NORMAL": 0.85
+        }
+      }
+    },
+    "TOK-0160": {
+      "rug_likelihood": {
+        "type": "score",
+        "score": 0.75,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.64,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "red_flag": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "NONE": 0.8,
+          "SELL_TAX": 0,
+          "FAILED_SELLS": 0,
+          "HOLDER_CONCENTRATION": 0.11,
+          "UNLOCKED_LIQUIDITY": 0.09,
+          "MINT_AUTHORITY": 0
+        }
+      },
+      "tradeable": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "honeypot_suspected": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "position_limit": {
+        "type": "choice",
+        "choice": "NORMAL",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.01,
+          "SMALL": 0.03,
+          "NORMAL": 0.96
+        }
+      }
+    }
+  }
 }
