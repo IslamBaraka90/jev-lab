@@ -1,7 +1,2048 @@
 {
   "demo": "income-planning",
-  "model": null,
-  "recordedAt": null,
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
   "source": "scripts/record-demo.js",
-  "answers": {}
+  "answers": {
+    "IP-01": {
+      "coverage": {
+        "type": "score",
+        "score": 1.1,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.85,
+          "2": 0.12,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 1,
+        "probabilities": {
+          "TIMING": 0,
+          "CASH_DRAG": 0,
+          "NONE": 0,
+          "SHORTFALL": 1
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "JAN",
+        "confidence": 0.99,
+        "probabilities": {
+          "JUL": 0,
+          "SEP": 0,
+          "MAY": 0,
+          "NONE": 0,
+          "JAN": 1,
+          "MAR": 0,
+          "FEB": 0,
+          "APR": 0,
+          "AUG": 0,
+          "NOV": 0,
+          "JUN": 0,
+          "DEC": 0,
+          "OCT": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.75
+      }
+    },
+    "IP-02": {
+      "coverage": {
+        "type": "score",
+        "score": 1.09,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.05,
+          "1": 0.81,
+          "2": 0.14,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 0.99,
+        "probabilities": {
+          "SHORTFALL": 1,
+          "TIMING": 0,
+          "NONE": 0,
+          "CASH_DRAG": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "MAR",
+        "confidence": 0.97,
+        "probabilities": {
+          "NONE": 0.02,
+          "MAR": 0.98,
+          "FEB": 0,
+          "APR": 0,
+          "DEC": 0,
+          "JUN": 0,
+          "AUG": 0,
+          "JAN": 0,
+          "SEP": 0,
+          "MAY": 0,
+          "OCT": 0,
+          "NOV": 0,
+          "JUL": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.73
+      }
+    },
+    "IP-03": {
+      "coverage": {
+        "type": "score",
+        "score": 1.12,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.8,
+          "2": 0.16,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 0.99,
+        "probabilities": {
+          "SHORTFALL": 0.99,
+          "NONE": 0,
+          "CASH_DRAG": 0,
+          "TIMING": 0.01
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "MAY",
+        "confidence": 0.97,
+        "probabilities": {
+          "MAY": 0.97,
+          "MAR": 0,
+          "NONE": 0.03,
+          "AUG": 0,
+          "JUN": 0,
+          "JUL": 0,
+          "FEB": 0,
+          "SEP": 0,
+          "NOV": 0,
+          "JAN": 0,
+          "APR": 0,
+          "OCT": 0,
+          "DEC": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "IP-04": {
+      "coverage": {
+        "type": "score",
+        "score": 1.15,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.78,
+          "2": 0.18,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 0.99,
+        "probabilities": {
+          "CASH_DRAG": 0,
+          "TIMING": 0.01,
+          "NONE": 0,
+          "SHORTFALL": 0.99
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "JUL",
+        "confidence": 0.97,
+        "probabilities": {
+          "NOV": 0,
+          "JUL": 0.98,
+          "SEP": 0,
+          "DEC": 0,
+          "NONE": 0.02,
+          "FEB": 0,
+          "AUG": 0,
+          "MAR": 0,
+          "JAN": 0,
+          "MAY": 0,
+          "APR": 0,
+          "JUN": 0,
+          "OCT": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.72
+      }
+    },
+    "IP-05": {
+      "coverage": {
+        "type": "score",
+        "score": 1.19,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.76,
+          "2": 0.21,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 0.99,
+        "probabilities": {
+          "CASH_DRAG": 0,
+          "TIMING": 0.01,
+          "NONE": 0,
+          "SHORTFALL": 0.99
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "SEP",
+        "confidence": 0.95,
+        "probabilities": {
+          "JUN": 0,
+          "NONE": 0.04,
+          "DEC": 0,
+          "SEP": 0.96,
+          "NOV": 0,
+          "AUG": 0,
+          "OCT": 0,
+          "MAR": 0,
+          "APR": 0,
+          "JUL": 0,
+          "JAN": 0,
+          "MAY": 0,
+          "FEB": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.73
+      }
+    },
+    "IP-06": {
+      "coverage": {
+        "type": "score",
+        "score": 1.08,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.86,
+          "2": 0.11,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 1,
+        "probabilities": {
+          "TIMING": 0,
+          "NONE": 0,
+          "SHORTFALL": 1,
+          "CASH_DRAG": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "JAN",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.02,
+          "OCT": 0,
+          "AUG": 0,
+          "APR": 0,
+          "DEC": 0,
+          "JUN": 0,
+          "MAR": 0,
+          "JAN": 0.97,
+          "SEP": 0,
+          "MAY": 0,
+          "FEB": 0,
+          "NOV": 0.01,
+          "JUL": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.84
+      }
+    },
+    "IP-07": {
+      "coverage": {
+        "type": "score",
+        "score": 1.08,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.86,
+          "2": 0.11,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 0.99,
+        "probabilities": {
+          "TIMING": 0,
+          "CASH_DRAG": 0,
+          "NONE": 0,
+          "SHORTFALL": 1
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "MAR",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.01,
+          "JUN": 0,
+          "NOV": 0,
+          "JUL": 0,
+          "APR": 0,
+          "FEB": 0,
+          "JAN": 0,
+          "SEP": 0,
+          "DEC": 0,
+          "AUG": 0,
+          "MAY": 0,
+          "MAR": 0.99,
+          "OCT": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.75
+      }
+    },
+    "IP-08": {
+      "coverage": {
+        "type": "score",
+        "score": 1.12,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.81,
+          "2": 0.15,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "CASH_DRAG": 0,
+          "TIMING": 0.01,
+          "SHORTFALL": 0.99
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "MAY",
+        "confidence": 0.99,
+        "probabilities": {
+          "JUL": 0,
+          "MAR": 0,
+          "OCT": 0,
+          "SEP": 0,
+          "JAN": 0,
+          "JUN": 0,
+          "FEB": 0,
+          "DEC": 0,
+          "MAY": 0.99,
+          "AUG": 0,
+          "APR": 0,
+          "NOV": 0,
+          "NONE": 0.01
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.84
+      }
+    },
+    "IP-09": {
+      "coverage": {
+        "type": "score",
+        "score": 1.11,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.83,
+          "2": 0.14,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "SHORTFALL",
+        "confidence": 1,
+        "probabilities": {
+          "TIMING": 0,
+          "NONE": 0,
+          "SHORTFALL": 1,
+          "CASH_DRAG": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "JUL",
+        "confidence": 0.97,
+        "probabilities": {
+          "NOV": 0,
+          "SEP": 0,
+          "MAY": 0,
+          "OCT": 0,
+          "JAN": 0,
+          "JUN": 0,
+          "APR": 0,
+          "DEC": 0,
+          "JUL": 0.98,
+          "NONE": 0.02,
+          "MAR": 0,
+          "AUG": 0,
+          "FEB": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.8
+      }
+    },
+    "IP-10": {
+      "coverage": {
+        "type": "score",
+        "score": 2.21,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.33999999999999997,
+          "2": 0.16,
+          "3": 0.38,
+          "4": 0.08,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "TIMING",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "CASH_DRAG": 0,
+          "TIMING": 0.99,
+          "SHORTFALL": 0.01
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "FEB",
+        "confidence": 0.99,
+        "probabilities": {
+          "JAN": 0,
+          "SEP": 0,
+          "OCT": 0,
+          "MAR": 0,
+          "NOV": 0,
+          "JUN": 0,
+          "FEB": 0.99,
+          "DEC": 0,
+          "APR": 0,
+          "AUG": 0,
+          "JUL": 0,
+          "MAY": 0,
+          "NONE": 0.01
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.87
+      }
+    },
+    "IP-11": {
+      "coverage": {
+        "type": "score",
+        "score": 2.49,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.19,
+          "2": 0.18,
+          "3": 0.5,
+          "4": 0.09,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "TIMING",
+        "confidence": 0.97,
+        "probabilities": {
+          "TIMING": 0.98,
+          "NONE": 0,
+          "CASH_DRAG": 0,
+          "SHORTFALL": 0.02
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "APR",
+        "confidence": 0.97,
+        "probabilities": {
+          "SEP": 0,
+          "OCT": 0,
+          "APR": 0.98,
+          "DEC": 0,
+          "MAR": 0,
+          "AUG": 0,
+          "JAN": 0,
+          "FEB": 0,
+          "JUL": 0,
+          "NOV": 0,
+          "MAY": 0,
+          "NONE": 0.02,
+          "JUN": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.85
+      }
+    },
+    "IP-12": {
+      "coverage": {
+        "type": "score",
+        "score": 2.69,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.12,
+          "2": 0.2,
+          "3": 0.54,
+          "4": 0.09,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "TIMING",
+        "confidence": 0.97,
+        "probabilities": {
+          "TIMING": 0.98,
+          "NONE": 0,
+          "CASH_DRAG": 0,
+          "SHORTFALL": 0.02
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "JUN",
+        "confidence": 0.96,
+        "probabilities": {
+          "SEP": 0,
+          "OCT": 0,
+          "DEC": 0,
+          "APR": 0,
+          "MAR": 0,
+          "AUG": 0,
+          "JAN": 0,
+          "FEB": 0,
+          "JUL": 0,
+          "NOV": 0,
+          "MAY": 0,
+          "NONE": 0.03,
+          "JUN": 0.97
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.74
+      }
+    },
+    "IP-13": {
+      "coverage": {
+        "type": "score",
+        "score": 2.39,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.23,
+          "2": 0.15,
+          "3": 0.53,
+          "4": 0.05,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "TIMING",
+        "confidence": 0.97,
+        "probabilities": {
+          "NONE": 0,
+          "CASH_DRAG": 0,
+          "TIMING": 0.98,
+          "SHORTFALL": 0.02
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "AUG",
+        "confidence": 0.98,
+        "probabilities": {
+          "MAR": 0,
+          "JUL": 0,
+          "APR": 0,
+          "OCT": 0,
+          "NOV": 0,
+          "JAN": 0,
+          "NONE": 0.01,
+          "DEC": 0,
+          "FEB": 0,
+          "SEP": 0,
+          "MAY": 0,
+          "JUN": 0,
+          "AUG": 0.99
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "IP-14": {
+      "coverage": {
+        "type": "score",
+        "score": 2.37,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.17,
+          "2": 0.32,
+          "3": 0.41,
+          "4": 0.05,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "TIMING",
+        "confidence": 0.93,
+        "probabilities": {
+          "CASH_DRAG": 0,
+          "SHORTFALL": 0.05,
+          "NONE": 0,
+          "TIMING": 0.95
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "OCT",
+        "confidence": 0.86,
+        "probabilities": {
+          "DEC": 0,
+          "NONE": 0.09,
+          "FEB": 0,
+          "OCT": 0.88,
+          "SEP": 0,
+          "APR": 0,
+          "MAY": 0,
+          "NOV": 0.03,
+          "JAN": 0,
+          "MAR": 0,
+          "JUL": 0,
+          "AUG": 0,
+          "JUN": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.66
+      }
+    },
+    "IP-15": {
+      "coverage": {
+        "type": "score",
+        "score": 2.23,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.28,
+          "2": 0.25,
+          "3": 0.37,
+          "4": 0.06,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "TIMING",
+        "confidence": 0.98,
+        "probabilities": {
+          "TIMING": 0.98,
+          "NONE": 0,
+          "SHORTFALL": 0.02,
+          "CASH_DRAG": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "FEB",
+        "confidence": 0.96,
+        "probabilities": {
+          "NOV": 0,
+          "SEP": 0,
+          "MAY": 0,
+          "JUN": 0,
+          "JAN": 0,
+          "OCT": 0,
+          "APR": 0,
+          "DEC": 0,
+          "JUL": 0,
+          "NONE": 0.04,
+          "MAR": 0,
+          "AUG": 0,
+          "FEB": 0.96
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.84
+      }
+    },
+    "IP-16": {
+      "coverage": {
+        "type": "score",
+        "score": 5.69,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.02,
+          "5": 0.13,
+          "6": 0.82
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "CASH_DRAG",
+        "confidence": 0.88,
+        "probabilities": {
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.91,
+          "TIMING": 0,
+          "NONE": 0.09
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "SEP": 0,
+          "FEB": 0,
+          "AUG": 0,
+          "JAN": 0.04,
+          "NONE": 0.96,
+          "DEC": 0,
+          "MAY": 0,
+          "NOV": 0,
+          "MAR": 0,
+          "OCT": 0,
+          "JUL": 0,
+          "JUN": 0,
+          "APR": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "IP-17": {
+      "coverage": {
+        "type": "score",
+        "score": 5.81,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.01,
+          "5": 0.07,
+          "6": 0.91
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "CASH_DRAG",
+        "confidence": 0.97,
+        "probabilities": {
+          "NONE": 0.02,
+          "TIMING": 0,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.98
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "AUG": 0,
+          "MAR": 0,
+          "JUN": 0,
+          "JUL": 0,
+          "SEP": 0,
+          "DEC": 0,
+          "NONE": 0.97,
+          "JAN": 0.03,
+          "NOV": 0,
+          "MAY": 0,
+          "OCT": 0,
+          "FEB": 0,
+          "APR": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "IP-18": {
+      "coverage": {
+        "type": "score",
+        "score": 5.79,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0,
+          "4": 0.01,
+          "5": 0.08,
+          "6": 0.89
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "CASH_DRAG",
+        "confidence": 0.95,
+        "probabilities": {
+          "CASH_DRAG": 0.96,
+          "SHORTFALL": 0,
+          "NONE": 0.04,
+          "TIMING": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "JUN": 0,
+          "OCT": 0,
+          "AUG": 0,
+          "JAN": 0.03,
+          "MAR": 0,
+          "MAY": 0,
+          "APR": 0,
+          "SEP": 0,
+          "JUL": 0,
+          "NONE": 0.97,
+          "FEB": 0,
+          "NOV": 0,
+          "DEC": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "IP-19": {
+      "coverage": {
+        "type": "score",
+        "score": 5.75,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.02,
+          "5": 0.09,
+          "6": 0.86
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "CASH_DRAG",
+        "confidence": 0.95,
+        "probabilities": {
+          "TIMING": 0,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.97,
+          "NONE": 0.03
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "NONE": 0.95,
+          "NOV": 0,
+          "JAN": 0.05,
+          "JUL": 0,
+          "AUG": 0,
+          "SEP": 0,
+          "APR": 0,
+          "JUN": 0,
+          "MAR": 0,
+          "OCT": 0,
+          "DEC": 0,
+          "MAY": 0,
+          "FEB": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-20": {
+      "coverage": {
+        "type": "score",
+        "score": 5.73,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.02,
+          "5": 0.11,
+          "6": 0.84
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "CASH_DRAG",
+        "confidence": 0.94,
+        "probabilities": {
+          "TIMING": 0,
+          "NONE": 0.04,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.96
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "MAR": 0,
+          "JUL": 0,
+          "DEC": 0,
+          "NOV": 0,
+          "FEB": 0,
+          "AUG": 0,
+          "JAN": 0.04,
+          "NONE": 0.96,
+          "MAY": 0,
+          "OCT": 0,
+          "JUN": 0,
+          "SEP": 0,
+          "APR": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-21": {
+      "coverage": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.08,
+          "4": 0.32,
+          "5": 0.4,
+          "6": 0.18
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TIMING": 0.01,
+          "CASH_DRAG": 0.02,
+          "SHORTFALL": 0,
+          "NONE": 0.97
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.85,
+        "probabilities": {
+          "OCT": 0,
+          "JUL": 0,
+          "FEB": 0.05,
+          "MAR": 0,
+          "JAN": 0.08,
+          "JUN": 0,
+          "AUG": 0,
+          "DEC": 0,
+          "SEP": 0,
+          "APR": 0,
+          "NONE": 0.87,
+          "MAY": 0,
+          "NOV": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "IP-22": {
+      "coverage": {
+        "type": "score",
+        "score": 5.15,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.13,
+          "5": 0.4,
+          "6": 0.42
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.89,
+        "probabilities": {
+          "SHORTFALL": 0,
+          "TIMING": 0.01,
+          "CASH_DRAG": 0.07,
+          "NONE": 0.92
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "APR": 0,
+          "DEC": 0,
+          "NOV": 0,
+          "MAR": 0,
+          "JUN": 0,
+          "NONE": 0.86,
+          "JAN": 0.1,
+          "JUL": 0,
+          "SEP": 0,
+          "AUG": 0,
+          "OCT": 0,
+          "FEB": 0.04,
+          "MAY": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-23": {
+      "coverage": {
+        "type": "score",
+        "score": 5.15,
+        "confidence": 0.61,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.13,
+          "5": 0.42,
+          "6": 0.41
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "SHORTFALL": 0,
+          "TIMING": 0.01,
+          "CASH_DRAG": 0.01,
+          "NONE": 0.98
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "APR": 0,
+          "DEC": 0,
+          "NOV": 0,
+          "JUN": 0,
+          "MAR": 0,
+          "NONE": 0.89,
+          "OCT": 0,
+          "JUL": 0,
+          "SEP": 0,
+          "AUG": 0,
+          "JAN": 0.07,
+          "FEB": 0.04,
+          "MAY": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "IP-24": {
+      "coverage": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.18,
+          "5": 0.4,
+          "6": 0.35
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TIMING": 0.02,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.02,
+          "NONE": 0.96
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.89,
+        "probabilities": {
+          "AUG": 0,
+          "NOV": 0,
+          "JAN": 0.07,
+          "MAR": 0,
+          "NONE": 0.91,
+          "SEP": 0,
+          "JUN": 0,
+          "APR": 0,
+          "JUL": 0,
+          "OCT": 0,
+          "DEC": 0,
+          "MAY": 0,
+          "FEB": 0.02
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "IP-25": {
+      "coverage": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.08,
+          "4": 0.33,
+          "5": 0.4,
+          "6": 0.17
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.97,
+          "CASH_DRAG": 0.01,
+          "TIMING": 0.02,
+          "SHORTFALL": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "JUN": 0,
+          "NOV": 0,
+          "APR": 0,
+          "MAR": 0,
+          "MAY": 0.01,
+          "DEC": 0,
+          "JAN": 0.09,
+          "OCT": 0,
+          "JUL": 0,
+          "AUG": 0,
+          "NONE": 0.9,
+          "FEB": 0,
+          "SEP": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "IP-26": {
+      "coverage": {
+        "type": "score",
+        "score": 5.17,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.13,
+          "5": 0.4,
+          "6": 0.43
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "CASH_DRAG": 0.02,
+          "TIMING": 0.01,
+          "NONE": 0.97,
+          "SHORTFALL": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "NOV": 0,
+          "JUL": 0,
+          "SEP": 0,
+          "DEC": 0,
+          "NONE": 0.89,
+          "FEB": 0.04,
+          "AUG": 0,
+          "MAR": 0,
+          "JAN": 0.07,
+          "MAY": 0,
+          "JUN": 0,
+          "APR": 0,
+          "OCT": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "IP-27": {
+      "coverage": {
+        "type": "score",
+        "score": 5,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.17,
+          "5": 0.41000000000000003,
+          "6": 0.36
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "CASH_DRAG": 0.02,
+          "TIMING": 0.02,
+          "SHORTFALL": 0,
+          "NONE": 0.96
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.81,
+        "probabilities": {
+          "NOV": 0,
+          "JAN": 0.11,
+          "AUG": 0,
+          "MAR": 0,
+          "SEP": 0,
+          "NONE": 0.84,
+          "FEB": 0.05,
+          "OCT": 0,
+          "JUL": 0,
+          "DEC": 0,
+          "MAY": 0,
+          "JUN": 0,
+          "APR": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-28": {
+      "coverage": {
+        "type": "score",
+        "score": 5.07,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.16,
+          "5": 0.39,
+          "6": 0.39
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.97,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.01,
+          "TIMING": 0.02
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "FEB": 0.03,
+          "NONE": 0.88,
+          "MAR": 0,
+          "DEC": 0,
+          "JAN": 0.09,
+          "JUL": 0,
+          "AUG": 0,
+          "JUN": 0,
+          "SEP": 0,
+          "NOV": 0,
+          "OCT": 0,
+          "APR": 0,
+          "MAY": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-29": {
+      "coverage": {
+        "type": "score",
+        "score": 4.95,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.22,
+          "5": 0.39,
+          "6": 0.33
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TIMING": 0.02,
+          "NONE": 0.97,
+          "CASH_DRAG": 0.01,
+          "SHORTFALL": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.85,
+        "probabilities": {
+          "JUN": 0,
+          "NONE": 0.87,
+          "MAR": 0,
+          "SEP": 0,
+          "AUG": 0,
+          "DEC": 0,
+          "FEB": 0.04,
+          "MAY": 0,
+          "JAN": 0.09,
+          "APR": 0,
+          "JUL": 0,
+          "NOV": 0,
+          "OCT": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-30": {
+      "coverage": {
+        "type": "score",
+        "score": 5.15,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.13,
+          "5": 0.34,
+          "6": 0.47
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.96,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.03,
+          "TIMING": 0.01
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "JAN": 0.05,
+          "JUN": 0,
+          "NOV": 0,
+          "DEC": 0,
+          "JUL": 0,
+          "SEP": 0,
+          "MAY": 0,
+          "APR": 0,
+          "FEB": 0.02,
+          "NONE": 0.93,
+          "AUG": 0,
+          "MAR": 0,
+          "OCT": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-31": {
+      "coverage": {
+        "type": "score",
+        "score": 5.08,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.15,
+          "5": 0.4,
+          "6": 0.4
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.03,
+          "TIMING": 0.01,
+          "NONE": 0.96
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.89,
+        "probabilities": {
+          "NOV": 0,
+          "SEP": 0,
+          "OCT": 0,
+          "MAR": 0,
+          "JAN": 0.07,
+          "JUN": 0,
+          "FEB": 0.03,
+          "JUL": 0,
+          "MAY": 0,
+          "AUG": 0,
+          "DEC": 0,
+          "APR": 0,
+          "NONE": 0.9
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "IP-32": {
+      "coverage": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.09,
+          "4": 0.31,
+          "5": 0.38,
+          "6": 0.19
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "SHORTFALL": 0,
+          "TIMING": 0.02,
+          "CASH_DRAG": 0.02,
+          "NONE": 0.96
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "FEB": 0.07,
+          "DEC": 0,
+          "MAR": 0,
+          "AUG": 0,
+          "SEP": 0,
+          "OCT": 0,
+          "NOV": 0,
+          "JAN": 0.1,
+          "JUL": 0,
+          "APR": 0,
+          "MAY": 0,
+          "NONE": 0.83,
+          "JUN": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-33": {
+      "coverage": {
+        "type": "score",
+        "score": 5.25,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.1,
+          "5": 0.35,
+          "6": 0.5
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.97,
+          "CASH_DRAG": 0.02,
+          "TIMING": 0.01,
+          "SHORTFALL": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.89,
+        "probabilities": {
+          "NONE": 0.91,
+          "JUN": 0,
+          "APR": 0,
+          "JUL": 0,
+          "NOV": 0,
+          "FEB": 0.02,
+          "JAN": 0.07,
+          "SEP": 0,
+          "DEC": 0,
+          "AUG": 0,
+          "MAY": 0,
+          "MAR": 0,
+          "OCT": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "IP-34": {
+      "coverage": {
+        "type": "score",
+        "score": 4.94,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.21,
+          "5": 0.37,
+          "6": 0.35
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "TIMING": 0.02,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.01,
+          "NONE": 0.97
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "JUN": 0,
+          "NOV": 0,
+          "JAN": 0.09,
+          "JUL": 0,
+          "NONE": 0.87,
+          "SEP": 0,
+          "MAR": 0,
+          "AUG": 0,
+          "APR": 0,
+          "OCT": 0,
+          "DEC": 0,
+          "MAY": 0,
+          "FEB": 0.04
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-35": {
+      "coverage": {
+        "type": "score",
+        "score": 5.18,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.13,
+          "5": 0.36,
+          "6": 0.46
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "NONE": 0.92,
+          "TIMING": 0.01,
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.07
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "DEC": 0,
+          "MAY": 0,
+          "JUN": 0,
+          "JAN": 0.08,
+          "FEB": 0.02,
+          "NOV": 0,
+          "NONE": 0.9,
+          "AUG": 0,
+          "SEP": 0,
+          "APR": 0,
+          "JUL": 0,
+          "OCT": 0,
+          "MAR": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "IP-36": {
+      "coverage": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.17,
+          "5": 0.4,
+          "6": 0.35
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.97,
+          "CASH_DRAG": 0.02,
+          "TIMING": 0.01,
+          "SHORTFALL": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "MAR": 0,
+          "JUL": 0,
+          "APR": 0,
+          "OCT": 0,
+          "NOV": 0,
+          "JAN": 0.1,
+          "DEC": 0,
+          "NONE": 0.86,
+          "SEP": 0,
+          "FEB": 0.04,
+          "MAY": 0,
+          "JUN": 0,
+          "AUG": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "IP-37": {
+      "coverage": {
+        "type": "score",
+        "score": 5.28,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.12,
+          "5": 0.32,
+          "6": 0.52
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.97,
+          "CASH_DRAG": 0.02,
+          "SHORTFALL": 0,
+          "TIMING": 0.01
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "SEP": 0,
+          "NONE": 0.88,
+          "APR": 0,
+          "JUN": 0,
+          "OCT": 0,
+          "JUL": 0,
+          "JAN": 0.08,
+          "MAR": 0,
+          "MAY": 0,
+          "AUG": 0,
+          "DEC": 0,
+          "NOV": 0,
+          "FEB": 0.04
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-38": {
+      "coverage": {
+        "type": "score",
+        "score": 5.08,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.15,
+          "5": 0.39,
+          "6": 0.4
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TIMING": 0.01,
+          "SHORTFALL": 0,
+          "NONE": 0.96,
+          "CASH_DRAG": 0.03
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "NOV": 0,
+          "MAY": 0,
+          "NONE": 0.89,
+          "JUN": 0,
+          "JUL": 0,
+          "AUG": 0,
+          "JAN": 0.07,
+          "OCT": 0,
+          "SEP": 0,
+          "DEC": 0,
+          "APR": 0,
+          "FEB": 0.04,
+          "MAR": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "IP-39": {
+      "coverage": {
+        "type": "score",
+        "score": 4.91,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.2,
+          "5": 0.39,
+          "6": 0.33
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "CASH_DRAG": 0.03,
+          "TIMING": 0.02,
+          "NONE": 0.95,
+          "SHORTFALL": 0
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "JUN": 0,
+          "NONE": 0.9,
+          "DEC": 0,
+          "SEP": 0,
+          "NOV": 0,
+          "AUG": 0,
+          "JAN": 0.07,
+          "MAR": 0,
+          "OCT": 0,
+          "JUL": 0,
+          "APR": 0,
+          "MAY": 0,
+          "FEB": 0.03
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "IP-40": {
+      "coverage": {
+        "type": "score",
+        "score": 5.04,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.17,
+          "5": 0.42,
+          "6": 0.36
+        }
+      },
+      "problem": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "SHORTFALL": 0,
+          "CASH_DRAG": 0.02,
+          "TIMING": 0.01,
+          "NONE": 0.97
+        }
+      },
+      "worst_month": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "SEP": 0,
+          "FEB": 0.04,
+          "AUG": 0,
+          "JAN": 0.11,
+          "NONE": 0.85,
+          "DEC": 0,
+          "MAY": 0,
+          "MAR": 0,
+          "NOV": 0,
+          "OCT": 0,
+          "JUL": 0,
+          "JUN": 0,
+          "APR": 0
+        }
+      },
+      "sell_needed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    }
+  }
 }

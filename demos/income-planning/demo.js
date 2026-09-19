@@ -110,7 +110,7 @@ function findings(graded, byItem) {
 }
 
 export default {
-  id: 'income-planning', title: 'Income and cash planning', domain: 'portfolio', status: 'pending-recording',
+  id: 'income-planning', title: 'Income and cash planning', domain: 'portfolio',
   value: 'Check whether the income a portfolio produces actually lands when the money is needed.',
   tags: ['portfolio', 'income', 'cash', 'calendar'], dataClass: 'synthetic', readMinutes: 4, view: 'calendar',
   itemLabel: (item) => `${item.id} · ${money(item.annualIncome)} income · ${money(item.annualCommitments)} commitments`,
