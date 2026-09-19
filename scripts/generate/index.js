@@ -20,6 +20,7 @@ export const GENERATORS = {
   'order-risk': () => import('./order-risk.js'),
   'dispute-routing': () => import('./dispute-routing.js'),
   'merchant-onboarding': () => import('./merchant-onboarding.js'),
+  'card-fraud-triage': () => import('./card-fraud-triage.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

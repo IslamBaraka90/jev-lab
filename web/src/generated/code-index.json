@@ -27,6 +27,34 @@
     "code": "/** Grades matching and break reasons, then turns the quality bar into automation and workload. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const labelByItem = new Map(labels.map((label) => [label.statementLineId, label]));\n  const problems = groupProblems(labels);\n  const correct = results.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const cleared = results.filter((result) => result.evaluation.autoCleared);\n  const gradedClears = cleared.filter((result) => labelByItem.has(result.item.id));\n  const preciseClears = gradedClears.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const remaining = context.items.filter((item) => !cleared.some((result) => result.item.id === item.id));\n  const reconciliation = reconcile(context, cleared, remaining);\n\n  return {\n    note: `Graded against ${problems.size} planted reconciliation problems. Labels never enter the model state.`,\n    findings: clusterDisagreements(results, labelByItem),\n    kpis: kpis(results, cleared, gradedClears, preciseClears, remaining, context.currency),\n    distribution: distribution(results),\n    matrix: confusion(results, labelByItem),\n    curve: coverage(results, labelByItem, labels),\n    checks: checks(results, labels, problems, labelByItem, reconciliation),\n    topItems: topItems(results, labelByItem, context.currency),\n    reconciliation,\n    resolvedProblems: resolvedProblemCount(correct, problems),\n  };\n}",
     "language": "javascript"
   },
+  "demos/card-fraud-triage/demo.js#demo:state": {
+    "path": "demos/card-fraud-triage/demo.js",
+    "startLine": 23,
+    "endLine": 51,
+    "code": "/** The alert, the rule that fired it and what that rule is worth, then the card's own recent life. */\nfunction buildState(item, context) {\n  return {\n    task: 'Read this alert and say how likely it is to be fraud, what kind, and what to do with it.',\n    issuer: { name: context.issuer, currency: context.currency, period: context.period },\n    alert: {\n      fired_at: item.firedAt,\n      rule: item.rule,\n      this_rule_is_right_about: `${item.rulePrecisionPercent}% of the alerts it raises`,\n    },\n    transaction: {\n      amount: item.amount,\n      merchant: item.merchant,\n      merchant_category: item.merchantCategory,\n      merchant_country: item.merchantCountry,\n      card: item.card,\n      device_never_seen_on_this_card: item.newDevice,\n      earlier_authorisations_at_this_merchant: item.authorisationsAtThisMerchantBefore,\n      declines_on_this_card_in_the_last_day: item.declinesInLastDay,\n    },\n    cardholder: {\n      with_the_bank_for_years: item.customerTenureYears,\n      countries_they_normally_use_the_card_in: item.usualCountries,\n      average_monthly_spend: item.averageMonthlySpend,\n      typical_transaction: item.typicalTransaction,\n    },\n    last_ten_authorisations: item.recentTransactions,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/card-fraud-triage/demo.js#demo:questions": {
+    "path": "demos/card-fraud-triage/demo.js",
+    "startLine": 55,
+    "endLine": 81,
+    "code": "const questions = {\n  fraud_likelihood: score('How likely is it that this authorisation was not made by the cardholder?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain',\n  ]),\n  fraud_type: choice('If this is fraud, what kind is it?', {\n    CARD_TESTING: 'Tiny amounts checking whether the number is live, usually after declines.',\n    STOLEN_CARD: 'Someone else has the card and is spending it on resaleable goods.',\n    ACCOUNT_TAKEOVER: 'The account, not just the card, is in someone else’s hands.',\n    FRIENDLY_FRAUD: 'The cardholder made the purchase and will say they did not.',\n    MERCHANT_COLLUSION: 'The merchant is part of it, not a victim of it.',\n    NONE: 'Not fraud. The cardholder made this.',\n  }),\n  action: choice('What should happen to this alert?', {\n    BLOCK: 'Stop the card now.',\n    STEP_UP: 'Let it stand but make the next authorisation prove itself.',\n    WATCH: 'Leave the card alone and look again if anything else fires.',\n    CLOSE_ALERT: 'Close it. There is nothing here.',\n  }),\n  explains_itself: noul('Does the cardholder’s own recent history explain this transaction?', {\n    yes: 'The last ten authorisations make this one unremarkable.',\n    no: 'Nothing in the recent history leads to this transaction.',\n  }),\n  contact_customer: noul('Is this worth a message to the cardholder?', {\n    yes: 'A quick confirmation would settle it and the amount justifies the interruption.',\n    no: 'Either it is plainly fine, or it needs stopping rather than asking.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/card-fraud-triage/demo.js#demo:evaluate": {
+    "path": "demos/card-fraud-triage/demo.js",
+    "startLine": 85,
+    "endLine": 101,
+    "code": "/** One read of one alert: how bad, what kind, and what to do about it. */\nfunction evaluate(answers, item) {\n  const action = answers.action.choice;\n\n  return {\n    likelihood: answers.fraud_likelihood.score,\n    type: answers.fraud_type.choice,\n    action,\n    explained: answers.explains_itself.noul >= 0.5,\n    contact: answers.contact_customer.noul >= 0.5,\n    acted: action === 'BLOCK' || action === 'STEP_UP',\n    closed: action === 'CLOSE_ALERT',\n    confidence: answers.fraud_type.confidence,\n    ruleRank: item.ruleRank,\n    label: `${item.id} · ${readable(action)} · ${money(item.amount)} at ${item.merchant}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/card-fraud-triage/demo.js#demo:report": {
+    "path": "demos/card-fraud-triage/demo.js",
+    "startLine": 105,
+    "endLine": 125,
+    "code": "/** The only comparison that matters: what the analyst's hour contains, before and after re-ordering. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.alertId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const fraud = labels.filter((label) => label.fraud);\n  const ranked = [...graded].sort((left, right) => right.evaluation.likelihood - left.evaluation.likelihood\n    || right.evaluation.confidence - left.evaluation.confidence\n    || left.item.ruleRank - right.item.ruleRank);\n\n  return {\n    note: `Four hundred alerts, ${fraud.length} of them fraud, ${labels.filter((label) => label.kind === 'loud false alarm').length} of them loud alerts the cardholder's own history explains. ${context.analystHour ?? ''}`,\n    findings: findings(ranked, graded, byItem, fraud),\n    kpis: kpis(ranked, graded, byItem, fraud),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(ranked, byItem, fraud),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(ranked, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/close-blockers/demo.js#demo:state": {
     "path": "demos/close-blockers/demo.js",
     "startLine": 24,
@@ -256,6 +284,13 @@
     "startLine": 116,
     "endLine": 124,
     "code": "/** The deterministic short-list: same direction first, then relative amount gap, date gap, and id. */\nfunction rankCandidates(statement, ledgerEntries) {\n  const score = (entry) => {\n    const directionPenalty = entry.direction === statement.direction ? 0 : 10;\n    const amountGap = Math.abs(entry.amount - statement.amount) / Math.max(entry.amount, statement.amount, 1);\n    return directionPenalty + amountGap * 2 + daysApart(entry.date, statement.date) * 0.08;\n  };\n  return [...ledgerEntries].sort((left, right) => score(left) - score(right) || left.id.localeCompare(right.id));\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/card-fraud-triage.js#demo:data": {
+    "path": "scripts/generate/card-fraud-triage.js",
+    "startLine": 88,
+    "endLine": 116,
+    "code": "/** One alert: the rule that fired, the transaction, and what this card has been doing lately. */\nfunction alert(random, { ruleId, amountValue, category, country, hour, history, tenureYears, usualCountries, monthlyAverage, newDevice = false, sameMerchantCount = 1, declinesBefore = 0, loud = false }) {\n  const rule = RULE_BY_ID[ruleId];\n  const floor = loud ? Math.round(rule.score[0] + (rule.score[1] - rule.score[0]) * 0.8) : rule.score[0];\n  return {\n    key: `${ruleId}-${random.int(100_000, 999_999)}`,\n    id: null,\n    firedAt: `2026-08-14T${String(hour).padStart(2, '0')}:${String(random.int(0, 59)).padStart(2, '0')}:00Z`,\n    rule: rule.name,\n    ruleId,\n    rulePrecisionPercent: rule.precision,\n    ruleScore: random.int(floor, rule.score[1]),\n    ruleRank: null,\n    amount: amountValue,\n    merchant: merchantName(random),\n    merchantCategory: category,\n    merchantCountry: country,\n    card: cardMask(random),\n    cardholder: personName(random),\n    customerTenureYears: tenureYears,\n    usualCountries,\n    averageMonthlySpend: monthlyAverage,\n    typicalTransaction: round(monthlyAverage / random.int(12, 30)),\n    newDevice,\n    authorisationsAtThisMerchantBefore: sameMerchantCount - 1,\n    declinesInLastDay: declinesBefore,\n    recentTransactions: history,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/close-blockers.js#demo:data": {
