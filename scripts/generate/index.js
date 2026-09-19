@@ -32,6 +32,7 @@ export const GENERATORS = {
   'wallet-risk': () => import('./wallet-risk.js'),
   'wallet-profiling': () => import('./wallet-profiling.js'),
   'mixer-tracing': () => import('./mixer-tracing.js'),
+  'token-screening': () => import('./token-screening.js'),
   'sybil-clusters': () => import('./sybil-clusters.js'),
   'portfolio-health': () => import('./portfolio-health.js'),
   'rebalance-review': () => import('./rebalance-review.js'),

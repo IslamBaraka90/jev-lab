@@ -22,6 +22,7 @@ import muleNetwork from './mule-network/demo.js';
 import walletRisk from './wallet-risk/demo.js';
 import walletProfiling from './wallet-profiling/demo.js';
 import mixerTracing from './mixer-tracing/demo.js';
+import tokenScreening from './token-screening/demo.js';
 import sybilClusters from './sybil-clusters/demo.js';
 import portfolioHealth from './portfolio-health/demo.js';
 import rebalanceReview from './rebalance-review/demo.js';
@@ -64,6 +65,7 @@ export const DEMOS = [
   walletRisk,
   walletProfiling,
   mixerTracing,
+  tokenScreening,
   sybilClusters,
   portfolioHealth,
   rebalanceReview,

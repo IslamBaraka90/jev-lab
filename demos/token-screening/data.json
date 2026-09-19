@@ -1,0 +1,6259 @@
+{
+  "id": "token-screening",
+  "class": "synthetic",
+  "generatedAt": "2026-09-19",
+  "seed": 1134,
+  "source": "scripts/generate/token-screening.js",
+  "context": {
+    "asOf": "2026-09-19",
+    "norms": {
+      "newUnder30Days": "New tokens often have fewer than 2,000 holders and concentrated allocations. Verified vesting contracts are not creator holdings.",
+      "taxes": "A sell tax above 20% is a trap; ordinary fees are usually below 5%.",
+      "liquidity": "An unlocked pool is a risk signal only with control or removal evidence. A long-unmoved old pool is not itself a rug.",
+      "sells": "A few failed sells alongside hundreds of successful sells are network noise. Repeated failed sells when buys work and almost no sell succeeds are the reliable honeypot signal."
+    },
+    "caveat": "All token names, tickers, contracts, pools and histories are invented. This is a screening exercise, not investment advice."
+  },
+  "items": [
+    {
+      "id": "TOK-0001",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMOc0ed06a15353b3c74abdd1fe0ef25d",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2,
+        "sellTaxPercent": 4.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1042990,
+        "shareLocked": 0.981,
+        "lockExpiry": "2029-04-27",
+        "largestRemovalPercent": 1.9
+      },
+      "holders": {
+        "count": 3478,
+        "top10Share": 0.718,
+        "creatorShare": 0.04,
+        "vestingContractShare": 0.603,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.06
+      },
+      "trading": {
+        "ageDays": 35,
+        "buys": 1846,
+        "successfulSells": 868,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.127,
+        "volume24hUsd": 753735,
+        "volume7dUsd": 7491526,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0002",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMO3c6732d363d10b628366abcb8e1d87",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 5.8,
+        "sellTaxPercent": 48.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7644004,
+        "shareLocked": 0.75,
+        "lockExpiry": "2028-01-14",
+        "largestRemovalPercent": 0.79
+      },
+      "holders": {
+        "count": 57289,
+        "top10Share": 0.291,
+        "creatorShare": 0.096,
+        "vestingContractShare": 0.056,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.065
+      },
+      "trading": {
+        "ageDays": 137,
+        "buys": 1171,
+        "successfulSells": 368,
+        "failedSellAttempts": 1,
+        "buySellRatio": 3.182,
+        "volume24hUsd": 1065756,
+        "volume7dUsd": 14214000,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0003",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOebd4716dbe10c4f88303f76528cb96",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 7.4,
+        "sellTaxPercent": 48.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1780117,
+        "shareLocked": 0.779,
+        "lockExpiry": "2029-02-26",
+        "largestRemovalPercent": 2.41
+      },
+      "holders": {
+        "count": 50434,
+        "top10Share": 0.461,
+        "creatorShare": 0.065,
+        "vestingContractShare": 0.063,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.004
+      },
+      "trading": {
+        "ageDays": 148,
+        "buys": 1032,
+        "successfulSells": 731,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.412,
+        "volume24hUsd": 2327320,
+        "volume7dUsd": 8994852,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0004",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMO77ec87f4ff989f2635d354bd13ae55",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.3,
+        "sellTaxPercent": 0.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2291526,
+        "shareLocked": 0.723,
+        "lockExpiry": "2028-07-17",
+        "largestRemovalPercent": 1.05
+      },
+      "holders": {
+        "count": 31819,
+        "top10Share": 0.19,
+        "creatorShare": 0.035,
+        "vestingContractShare": 0.071,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.011
+      },
+      "trading": {
+        "ageDays": 235,
+        "buys": 3407,
+        "successfulSells": 774,
+        "failedSellAttempts": 1,
+        "buySellRatio": 4.402,
+        "volume24hUsd": 1958273,
+        "volume7dUsd": 3483169,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0005",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOa0c36965d734585c6a16bb64b591ea",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.4,
+        "sellTaxPercent": 1.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1915310,
+        "shareLocked": 0.997,
+        "lockExpiry": "2029-08-04",
+        "largestRemovalPercent": 0.7
+      },
+      "holders": {
+        "count": 14152,
+        "top10Share": 0.168,
+        "creatorShare": 0.113,
+        "vestingContractShare": 0.016,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.009
+      },
+      "trading": {
+        "ageDays": 281,
+        "buys": 699,
+        "successfulSells": 1459,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.479,
+        "volume24hUsd": 390141,
+        "volume7dUsd": 13007637,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0006",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO7b37ed666f35cc06821454a090f9ea",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.8,
+        "sellTaxPercent": 5.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4289224,
+        "shareLocked": 0.935,
+        "lockExpiry": "2028-12-07",
+        "largestRemovalPercent": 2.71
+      },
+      "holders": {
+        "count": 13866,
+        "top10Share": 0.286,
+        "creatorShare": 0.097,
+        "vestingContractShare": 0.007,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.04
+      },
+      "trading": {
+        "ageDays": 18,
+        "buys": 365,
+        "successfulSells": 3,
+        "failedSellAttempts": 6,
+        "buySellRatio": 121.667,
+        "volume24hUsd": 771151,
+        "volume7dUsd": 6006835,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0007",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO99cd0a90d3f13b109ddeedb279119a",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 7.3,
+        "sellTaxPercent": 49.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7695113,
+        "shareLocked": 0.899,
+        "lockExpiry": "2028-04-04",
+        "largestRemovalPercent": 1.86
+      },
+      "holders": {
+        "count": 30812,
+        "top10Share": 0.146,
+        "creatorShare": 0.045,
+        "vestingContractShare": 0.006,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.028
+      },
+      "trading": {
+        "ageDays": 131,
+        "buys": 1706,
+        "successfulSells": 1012,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.686,
+        "volume24hUsd": 436392,
+        "volume7dUsd": 7259178,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0008",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO90a08ca1ba7c5b872a0ba4ad3120d1",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.1,
+        "sellTaxPercent": 0.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3996090,
+        "shareLocked": 0.808,
+        "lockExpiry": "2029-08-04",
+        "largestRemovalPercent": 0.78
+      },
+      "holders": {
+        "count": 14754,
+        "top10Share": 0.369,
+        "creatorShare": 0.103,
+        "vestingContractShare": 0.035,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.068
+      },
+      "trading": {
+        "ageDays": 487,
+        "buys": 1998,
+        "successfulSells": 2590,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.771,
+        "volume24hUsd": 898320,
+        "volume7dUsd": 3390112,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0009",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOd2cd9c2138de2961e10f8631ff3388",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.2,
+        "sellTaxPercent": 3.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6288534,
+        "shareLocked": 0.881,
+        "lockExpiry": "2029-05-17",
+        "largestRemovalPercent": 1.1
+      },
+      "holders": {
+        "count": 14370,
+        "top10Share": 0.211,
+        "creatorShare": 0.106,
+        "vestingContractShare": 0.019,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.092
+      },
+      "trading": {
+        "ageDays": 553,
+        "buys": 3326,
+        "successfulSells": 1835,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.813,
+        "volume24hUsd": 1010240,
+        "volume7dUsd": 13372915,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0010",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMOff1510d808428d36dcd70ba71511f0",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.7,
+        "sellTaxPercent": 4.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4247830,
+        "shareLocked": 0.968,
+        "lockExpiry": "2029-04-17",
+        "largestRemovalPercent": 1.46
+      },
+      "holders": {
+        "count": 2664,
+        "top10Share": 0.258,
+        "creatorShare": 0.047,
+        "vestingContractShare": 0.01,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.026
+      },
+      "trading": {
+        "ageDays": 843,
+        "buys": 2541,
+        "successfulSells": 1356,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.874,
+        "volume24hUsd": 1557097,
+        "volume7dUsd": 14339208,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0011",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO6981a67b462f9b5a2133b870a9de47",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.6,
+        "sellTaxPercent": 1.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4581152,
+        "shareLocked": 0.749,
+        "lockExpiry": "2029-11-20",
+        "largestRemovalPercent": 0.76
+      },
+      "holders": {
+        "count": 51413,
+        "top10Share": 0.301,
+        "creatorShare": 0.058,
+        "vestingContractShare": 0.074,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.052
+      },
+      "trading": {
+        "ageDays": 714,
+        "buys": 150,
+        "successfulSells": 548,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.274,
+        "volume24hUsd": 2307163,
+        "volume7dUsd": 8463815,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0012",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOb2335f38f5897db34005379dca5b33",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.1,
+        "sellTaxPercent": 4.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2796098,
+        "shareLocked": 0.724,
+        "lockExpiry": "2029-10-24",
+        "largestRemovalPercent": 2.2
+      },
+      "holders": {
+        "count": 10537,
+        "top10Share": 0.458,
+        "creatorShare": 0.063,
+        "vestingContractShare": 0.058,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.04
+      },
+      "trading": {
+        "ageDays": 354,
+        "buys": 1848,
+        "successfulSells": 2579,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.717,
+        "volume24hUsd": 673069,
+        "volume7dUsd": 8768886,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0013",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO9d9cd080c019d0fc1e8abc6726306b",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.2,
+        "sellTaxPercent": 0.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5416686,
+        "shareLocked": 0,
+        "lockExpiry": "2028-05-10",
+        "largestRemovalPercent": 0.4
+      },
+      "holders": {
+        "count": 41689,
+        "top10Share": 0.124,
+        "creatorShare": 0.013,
+        "vestingContractShare": 0.06,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.034
+      },
+      "trading": {
+        "ageDays": 1167,
+        "buys": 1155,
+        "successfulSells": 1168,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.989,
+        "volume24hUsd": 1780987,
+        "volume7dUsd": 7624234,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0014",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMOa60a42744912961c26dc5a264a8186",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.4,
+        "sellTaxPercent": 6.5,
+        "blacklistFunction": true
+      },
+      "liquidity": {
+        "poolUsd": 860990,
+        "shareLocked": 0.93,
+        "lockExpiry": "2028-10-24",
+        "largestRemovalPercent": 0.66
+      },
+      "holders": {
+        "count": 3314,
+        "top10Share": 0.232,
+        "creatorShare": 0.025,
+        "vestingContractShare": 0.011,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.071
+      },
+      "trading": {
+        "ageDays": 9,
+        "buys": 412,
+        "successfulSells": 2,
+        "failedSellAttempts": 9,
+        "buySellRatio": 206,
+        "volume24hUsd": 676395,
+        "volume7dUsd": 2877597,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0015",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMObb112e427fdce6756a58d2334a4bb9",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.9,
+        "sellTaxPercent": 4.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4072289,
+        "shareLocked": 0.898,
+        "lockExpiry": "2027-05-07",
+        "largestRemovalPercent": 2.51
+      },
+      "holders": {
+        "count": 51453,
+        "top10Share": 0.784,
+        "creatorShare": 0.598,
+        "vestingContractShare": 0,
+        "vestingContractVerified": false,
+        "burnAddressShare": 0.087
+      },
+      "trading": {
+        "ageDays": 72,
+        "buys": 2664,
+        "successfulSells": 971,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.744,
+        "volume24hUsd": 542814,
+        "volume7dUsd": 14706640,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0016",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMOb01760b5dd4eb3247213eb02a88d61",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.3,
+        "sellTaxPercent": 1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1091450,
+        "shareLocked": 0.955,
+        "lockExpiry": "2029-12-26",
+        "largestRemovalPercent": 1.63
+      },
+      "holders": {
+        "count": 43563,
+        "top10Share": 0.315,
+        "creatorShare": 0.015,
+        "vestingContractShare": 0.032,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.054
+      },
+      "trading": {
+        "ageDays": 742,
+        "buys": 1892,
+        "successfulSells": 1422,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.331,
+        "volume24hUsd": 1052406,
+        "volume7dUsd": 11639161,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0017",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMOcd4b6c1105a8ba7f1943abe083e150",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.5,
+        "sellTaxPercent": 4.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4145996,
+        "shareLocked": 0.757,
+        "lockExpiry": "2029-03-21",
+        "largestRemovalPercent": 1.45
+      },
+      "holders": {
+        "count": 37624,
+        "top10Share": 0.38,
+        "creatorShare": 0.046,
+        "vestingContractShare": 0.009,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.074
+      },
+      "trading": {
+        "ageDays": 63,
+        "buys": 1904,
+        "successfulSells": 2214,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.86,
+        "volume24hUsd": 682813,
+        "volume7dUsd": 12196969,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0018",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMOa53e2e8125bc486f66fe397c020e93",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.9,
+        "sellTaxPercent": 4.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 351818,
+        "shareLocked": 0.983,
+        "lockExpiry": "2028-12-19",
+        "largestRemovalPercent": 0.32
+      },
+      "holders": {
+        "count": 59711,
+        "top10Share": 0.329,
+        "creatorShare": 0.082,
+        "vestingContractShare": 0.075,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.048
+      },
+      "trading": {
+        "ageDays": 88,
+        "buys": 3498,
+        "successfulSells": 1076,
+        "failedSellAttempts": 0,
+        "buySellRatio": 3.251,
+        "volume24hUsd": 1464806,
+        "volume7dUsd": 5430389,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0019",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMOf403823c152a93ed49b7b8e908d0bb",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.5,
+        "sellTaxPercent": 4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3355835,
+        "shareLocked": 0.92,
+        "lockExpiry": "2027-05-25",
+        "largestRemovalPercent": 1.54
+      },
+      "holders": {
+        "count": 2476,
+        "top10Share": 0.628,
+        "creatorShare": 0.016,
+        "vestingContractShare": 0.522,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.015
+      },
+      "trading": {
+        "ageDays": 17,
+        "buys": 3504,
+        "successfulSells": 184,
+        "failedSellAttempts": 1,
+        "buySellRatio": 19.043,
+        "volume24hUsd": 1665886,
+        "volume7dUsd": 6288781,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0020",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOfefe53e548b7e3219a3808c6420da2",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.6,
+        "sellTaxPercent": 2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2138718,
+        "shareLocked": 0.776,
+        "lockExpiry": "2028-02-03",
+        "largestRemovalPercent": 0.99
+      },
+      "holders": {
+        "count": 33339,
+        "top10Share": 0.366,
+        "creatorShare": 0.046,
+        "vestingContractShare": 0.024,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.09
+      },
+      "trading": {
+        "ageDays": 69,
+        "buys": 1829,
+        "successfulSells": 1646,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.111,
+        "volume24hUsd": 2369134,
+        "volume7dUsd": 14491157,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0021",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO262027f987834b1c3f490d815bff93",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.6,
+        "sellTaxPercent": 0.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7802792,
+        "shareLocked": 0.91,
+        "lockExpiry": "2029-06-27",
+        "largestRemovalPercent": 2.71
+      },
+      "holders": {
+        "count": 32304,
+        "top10Share": 0.134,
+        "creatorShare": 0.1,
+        "vestingContractShare": 0.004,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.085
+      },
+      "trading": {
+        "ageDays": 593,
+        "buys": 472,
+        "successfulSells": 560,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.843,
+        "volume24hUsd": 833493,
+        "volume7dUsd": 13747034,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0022",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMOdabcd49110c038b4f9895cd877e6f9",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.9,
+        "sellTaxPercent": 2.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2342867,
+        "shareLocked": 0.846,
+        "lockExpiry": "2027-04-07",
+        "largestRemovalPercent": 0.26
+      },
+      "holders": {
+        "count": 29707,
+        "top10Share": 0.414,
+        "creatorShare": 0.059,
+        "vestingContractShare": 0.066,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.084
+      },
+      "trading": {
+        "ageDays": 484,
+        "buys": 1938,
+        "successfulSells": 3543,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.547,
+        "volume24hUsd": 571267,
+        "volume7dUsd": 11748230,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0023",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO86bee556e195e79bf91c1dbdae208b",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.6,
+        "sellTaxPercent": 2.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1754632,
+        "shareLocked": 0.75,
+        "lockExpiry": "2029-07-12",
+        "largestRemovalPercent": 0.14
+      },
+      "holders": {
+        "count": 63994,
+        "top10Share": 0.403,
+        "creatorShare": 0.051,
+        "vestingContractShare": 0.018,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.096
+      },
+      "trading": {
+        "ageDays": 736,
+        "buys": 3129,
+        "successfulSells": 3474,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.901,
+        "volume24hUsd": 2365021,
+        "volume7dUsd": 5514108,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0024",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO3a4cd905cbc811e700cfea14b9d476",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.2,
+        "sellTaxPercent": 0.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6023655,
+        "shareLocked": 0.882,
+        "lockExpiry": "2027-11-02",
+        "largestRemovalPercent": 2.85
+      },
+      "holders": {
+        "count": 6227,
+        "top10Share": 0.456,
+        "creatorShare": 0.089,
+        "vestingContractShare": 0.034,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.014
+      },
+      "trading": {
+        "ageDays": 841,
+        "buys": 966,
+        "successfulSells": 3613,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.267,
+        "volume24hUsd": 1446395,
+        "volume7dUsd": 5063412,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0025",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMOca293e18aa89b0009aab04402d8037",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.7,
+        "sellTaxPercent": 4.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2065209,
+        "shareLocked": 0.158,
+        "lockExpiry": "2026-09-01",
+        "largestRemovalPercent": 76.7
+      },
+      "holders": {
+        "count": 78462,
+        "top10Share": 0.342,
+        "creatorShare": 0.116,
+        "vestingContractShare": 0.074,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.072
+      },
+      "trading": {
+        "ageDays": 34,
+        "buys": 2463,
+        "successfulSells": 2768,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.89,
+        "volume24hUsd": 2274430,
+        "volume7dUsd": 1689251,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0026",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMOacd0934b46490d4644ab9288975d9a",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.4,
+        "sellTaxPercent": 2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7390988,
+        "shareLocked": 0.865,
+        "lockExpiry": "2029-02-21",
+        "largestRemovalPercent": 2.86
+      },
+      "holders": {
+        "count": 38140,
+        "top10Share": 0.395,
+        "creatorShare": 0.015,
+        "vestingContractShare": 0.033,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.045
+      },
+      "trading": {
+        "ageDays": 469,
+        "buys": 796,
+        "successfulSells": 1137,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.7,
+        "volume24hUsd": 2044445,
+        "volume7dUsd": 1238025,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0027",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMO728a9b3d58af9b3d2b5e99e8669661",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.3,
+        "sellTaxPercent": 3.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3659784,
+        "shareLocked": 0.932,
+        "lockExpiry": "2029-05-13",
+        "largestRemovalPercent": 0.9
+      },
+      "holders": {
+        "count": 26782,
+        "top10Share": 0.181,
+        "creatorShare": 0.076,
+        "vestingContractShare": 0.07,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.049
+      },
+      "trading": {
+        "ageDays": 715,
+        "buys": 1069,
+        "successfulSells": 1815,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.589,
+        "volume24hUsd": 139561,
+        "volume7dUsd": 14279815,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0028",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOb2557ba0a3a6b15e16ded551520cc0",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 7,
+        "sellTaxPercent": 51.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5295116,
+        "shareLocked": 0.795,
+        "lockExpiry": "2029-01-02",
+        "largestRemovalPercent": 1.41
+      },
+      "holders": {
+        "count": 30747,
+        "top10Share": 0.155,
+        "creatorShare": 0.028,
+        "vestingContractShare": 0.014,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.041
+      },
+      "trading": {
+        "ageDays": 16,
+        "buys": 1880,
+        "successfulSells": 1186,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.585,
+        "volume24hUsd": 830697,
+        "volume7dUsd": 8119878,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0029",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMOfdcf4b660047bd99edf5ca8fa72c28",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.1,
+        "sellTaxPercent": 2.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 787361,
+        "shareLocked": 0.991,
+        "lockExpiry": "2028-10-19",
+        "largestRemovalPercent": 2.93
+      },
+      "holders": {
+        "count": 50785,
+        "top10Share": 0.447,
+        "creatorShare": 0.099,
+        "vestingContractShare": 0.066,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.052
+      },
+      "trading": {
+        "ageDays": 540,
+        "buys": 2577,
+        "successfulSells": 1354,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.903,
+        "volume24hUsd": 1143512,
+        "volume7dUsd": 11929668,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0030",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO475e3df34a391056df604157758a7a",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.6,
+        "sellTaxPercent": 0.5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5613359,
+        "shareLocked": 0.824,
+        "lockExpiry": "2028-05-02",
+        "largestRemovalPercent": 0.14
+      },
+      "holders": {
+        "count": 6421,
+        "top10Share": 0.435,
+        "creatorShare": 0.078,
+        "vestingContractShare": 0.012,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.084
+      },
+      "trading": {
+        "ageDays": 192,
+        "buys": 3877,
+        "successfulSells": 1844,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.102,
+        "volume24hUsd": 1663585,
+        "volume7dUsd": 9797324,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0031",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO346cdd3ec54acc751edfb57f009148",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.5,
+        "sellTaxPercent": 3.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2450801,
+        "shareLocked": 0.957,
+        "lockExpiry": "2028-02-16",
+        "largestRemovalPercent": 2.95
+      },
+      "holders": {
+        "count": 37871,
+        "top10Share": 0.228,
+        "creatorShare": 0.037,
+        "vestingContractShare": 0.014,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.089
+      },
+      "trading": {
+        "ageDays": 134,
+        "buys": 3129,
+        "successfulSells": 1707,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.833,
+        "volume24hUsd": 1594441,
+        "volume7dUsd": 5922093,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0032",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMObb241321938ce0100c8006b10ec5b4",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.5,
+        "sellTaxPercent": 0.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3903169,
+        "shareLocked": 0.844,
+        "lockExpiry": "2027-08-03",
+        "largestRemovalPercent": 2.4
+      },
+      "holders": {
+        "count": 41236,
+        "top10Share": 0.147,
+        "creatorShare": 0.047,
+        "vestingContractShare": 0.024,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.01
+      },
+      "trading": {
+        "ageDays": 354,
+        "buys": 440,
+        "successfulSells": 2450,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.18,
+        "volume24hUsd": 1889006,
+        "volume7dUsd": 15089317,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0033",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO6441ff17276001dd8beda75bbb9710",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.6,
+        "sellTaxPercent": 3.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7659584,
+        "shareLocked": 0.967,
+        "lockExpiry": "2029-04-26",
+        "largestRemovalPercent": 2.46
+      },
+      "holders": {
+        "count": 1649,
+        "top10Share": 0.699,
+        "creatorShare": 0.023,
+        "vestingContractShare": 0.612,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.022
+      },
+      "trading": {
+        "ageDays": 55,
+        "buys": 2399,
+        "successfulSells": 1022,
+        "failedSellAttempts": 1,
+        "buySellRatio": 2.347,
+        "volume24hUsd": 1408665,
+        "volume7dUsd": 11347384,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0034",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMOe4dd0ed484384473d2dde1f17f3336",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3,
+        "sellTaxPercent": 2.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5629233,
+        "shareLocked": 0.77,
+        "lockExpiry": "2028-05-17",
+        "largestRemovalPercent": 0.6
+      },
+      "holders": {
+        "count": 16523,
+        "top10Share": 0.12,
+        "creatorShare": 0.032,
+        "vestingContractShare": 0.002,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.009
+      },
+      "trading": {
+        "ageDays": 42,
+        "buys": 292,
+        "successfulSells": 267,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.094,
+        "volume24hUsd": 57511,
+        "volume7dUsd": 12811131,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0035",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO101b2cca7ff27c6c2fbab3236cb62f",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.5,
+        "sellTaxPercent": 31.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7073307,
+        "shareLocked": 0.963,
+        "lockExpiry": "2027-03-16",
+        "largestRemovalPercent": 2.5
+      },
+      "holders": {
+        "count": 27427,
+        "top10Share": 0.451,
+        "creatorShare": 0.059,
+        "vestingContractShare": 0.06,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.039
+      },
+      "trading": {
+        "ageDays": 84,
+        "buys": 1271,
+        "successfulSells": 1289,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.986,
+        "volume24hUsd": 1228734,
+        "volume7dUsd": 4231339,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0036",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOf98278d6a9328e233582f3a2a4c5d2",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.7,
+        "sellTaxPercent": 2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 749846,
+        "shareLocked": 0.781,
+        "lockExpiry": "2027-07-03",
+        "largestRemovalPercent": 0.94
+      },
+      "holders": {
+        "count": 48955,
+        "top10Share": 0.381,
+        "creatorShare": 0.108,
+        "vestingContractShare": 0.03,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.059
+      },
+      "trading": {
+        "ageDays": 718,
+        "buys": 2262,
+        "successfulSells": 809,
+        "failedSellAttempts": 1,
+        "buySellRatio": 2.796,
+        "volume24hUsd": 559946,
+        "volume7dUsd": 15328678,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0037",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO4ccfdbb1c1d09d829e8965dbc951d7",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.3,
+        "sellTaxPercent": 1.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3763264,
+        "shareLocked": 0.83,
+        "lockExpiry": "2028-05-01",
+        "largestRemovalPercent": 1.74
+      },
+      "holders": {
+        "count": 35258,
+        "top10Share": 0.169,
+        "creatorShare": 0.098,
+        "vestingContractShare": 0.073,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.065
+      },
+      "trading": {
+        "ageDays": 280,
+        "buys": 2781,
+        "successfulSells": 1051,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.646,
+        "volume24hUsd": 1000753,
+        "volume7dUsd": 14780252,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0038",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO02acc26d1c67149ac431e3875dd64a",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.9,
+        "sellTaxPercent": 4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 738770,
+        "shareLocked": 0.751,
+        "lockExpiry": "2028-11-06",
+        "largestRemovalPercent": 0.9
+      },
+      "holders": {
+        "count": 29404,
+        "top10Share": 0.198,
+        "creatorShare": 0.026,
+        "vestingContractShare": 0.017,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.041
+      },
+      "trading": {
+        "ageDays": 388,
+        "buys": 585,
+        "successfulSells": 1694,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.345,
+        "volume24hUsd": 1762222,
+        "volume7dUsd": 6284132,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0039",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO9cfa96cdd78e60ccb051a037c20498",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.3,
+        "sellTaxPercent": 2.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5708583,
+        "shareLocked": 0.722,
+        "lockExpiry": "2028-12-07",
+        "largestRemovalPercent": 0.13
+      },
+      "holders": {
+        "count": 67407,
+        "top10Share": 0.267,
+        "creatorShare": 0.039,
+        "vestingContractShare": 0.001,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.056
+      },
+      "trading": {
+        "ageDays": 406,
+        "buys": 281,
+        "successfulSells": 2797,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.1,
+        "volume24hUsd": 1091951,
+        "volume7dUsd": 2238066,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0040",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOb9c201e20de418c70a38400cacaf11",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.2,
+        "sellTaxPercent": 6.6,
+        "blacklistFunction": true
+      },
+      "liquidity": {
+        "poolUsd": 6050596,
+        "shareLocked": 0.851,
+        "lockExpiry": "2028-10-03",
+        "largestRemovalPercent": 0.4
+      },
+      "holders": {
+        "count": 49102,
+        "top10Share": 0.595,
+        "creatorShare": 0.08,
+        "vestingContractShare": 0.004,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.058
+      },
+      "trading": {
+        "ageDays": 45,
+        "buys": 367,
+        "successfulSells": 1,
+        "failedSellAttempts": 9,
+        "buySellRatio": 367,
+        "volume24hUsd": 2134035,
+        "volume7dUsd": 505815,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0041",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO529feb27a4ea0c8cb28b3cfd07c4d9",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.4,
+        "sellTaxPercent": 39.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1161210,
+        "shareLocked": 0.784,
+        "lockExpiry": "2029-05-24",
+        "largestRemovalPercent": 0.15
+      },
+      "holders": {
+        "count": 71448,
+        "top10Share": 0.254,
+        "creatorShare": 0.069,
+        "vestingContractShare": 0.059,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.038
+      },
+      "trading": {
+        "ageDays": 137,
+        "buys": 775,
+        "successfulSells": 1318,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.588,
+        "volume24hUsd": 284187,
+        "volume7dUsd": 14119554,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0042",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO5d5a7cd69b4572043862496c153cb9",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.3,
+        "sellTaxPercent": 4.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 885384,
+        "shareLocked": 0.811,
+        "lockExpiry": "2029-11-09",
+        "largestRemovalPercent": 0.07
+      },
+      "holders": {
+        "count": 70763,
+        "top10Share": 0.537,
+        "creatorShare": 0.031,
+        "vestingContractShare": 0.036,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.087
+      },
+      "trading": {
+        "ageDays": 4,
+        "buys": 473,
+        "successfulSells": 3,
+        "failedSellAttempts": 5,
+        "buySellRatio": 157.667,
+        "volume24hUsd": 1326216,
+        "volume7dUsd": 1786838,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0043",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO16de53d5430d08ca8e93802e69e768",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.2,
+        "sellTaxPercent": 1.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 9121915,
+        "shareLocked": 0,
+        "lockExpiry": "2027-11-08",
+        "largestRemovalPercent": 0.01
+      },
+      "holders": {
+        "count": 35124,
+        "top10Share": 0.095,
+        "creatorShare": 0.002,
+        "vestingContractShare": 0.021,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.022
+      },
+      "trading": {
+        "ageDays": 1371,
+        "buys": 2015,
+        "successfulSells": 2051,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.982,
+        "volume24hUsd": 844455,
+        "volume7dUsd": 2912462,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0044",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO37d612b44a8bbc5bd914b5af68ab93",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.9,
+        "sellTaxPercent": 0.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3454115,
+        "shareLocked": 0.936,
+        "lockExpiry": "2028-11-15",
+        "largestRemovalPercent": 0.08
+      },
+      "holders": {
+        "count": 70159,
+        "top10Share": 0.159,
+        "creatorShare": 0.03,
+        "vestingContractShare": 0.065,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.074
+      },
+      "trading": {
+        "ageDays": 282,
+        "buys": 1162,
+        "successfulSells": 3332,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.349,
+        "volume24hUsd": 495952,
+        "volume7dUsd": 4085109,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0045",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO78375afa94fc8b4e4f4a8495ad1861",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": true,
+        "ownershipRenounced": false,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.7,
+        "sellTaxPercent": 5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5874765,
+        "shareLocked": 0.765,
+        "lockExpiry": "2028-04-13",
+        "largestRemovalPercent": 2.3
+      },
+      "holders": {
+        "count": 50241,
+        "top10Share": 0.608,
+        "creatorShare": 0.456,
+        "vestingContractShare": 0.049,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.082
+      },
+      "trading": {
+        "ageDays": 86,
+        "buys": 1475,
+        "successfulSells": 2674,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.552,
+        "volume24hUsd": 1331939,
+        "volume7dUsd": 853095,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0046",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO7294869642c8eaf8a9e262550ed04d",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.2,
+        "sellTaxPercent": 5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2376462,
+        "shareLocked": 0.928,
+        "lockExpiry": "2029-11-09",
+        "largestRemovalPercent": 1.83
+      },
+      "holders": {
+        "count": 62110,
+        "top10Share": 0.332,
+        "creatorShare": 0.091,
+        "vestingContractShare": 0.012,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.013
+      },
+      "trading": {
+        "ageDays": 787,
+        "buys": 2883,
+        "successfulSells": 1803,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.599,
+        "volume24hUsd": 413822,
+        "volume7dUsd": 4539393,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0047",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMOfbc2f1c1e14f42813c2aae63f26b84",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.1,
+        "sellTaxPercent": 2.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2331021,
+        "shareLocked": 0.969,
+        "lockExpiry": "2029-01-23",
+        "largestRemovalPercent": 0.28
+      },
+      "holders": {
+        "count": 47017,
+        "top10Share": 0.215,
+        "creatorShare": 0.012,
+        "vestingContractShare": 0.031,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.048
+      },
+      "trading": {
+        "ageDays": 480,
+        "buys": 2281,
+        "successfulSells": 3783,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.603,
+        "volume24hUsd": 2058200,
+        "volume7dUsd": 7861466,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0048",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO15864acfd2b531aada9da6f8ba9dee",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.1,
+        "sellTaxPercent": 0,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4549491,
+        "shareLocked": 0.985,
+        "lockExpiry": "2029-11-05",
+        "largestRemovalPercent": 2.69
+      },
+      "holders": {
+        "count": 2969,
+        "top10Share": 0.138,
+        "creatorShare": 0.013,
+        "vestingContractShare": 0.051,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.067
+      },
+      "trading": {
+        "ageDays": 826,
+        "buys": 3393,
+        "successfulSells": 2100,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.616,
+        "volume24hUsd": 807713,
+        "volume7dUsd": 5181211,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0049",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMOed7c29195e3454945298c0139f6b28",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.1,
+        "sellTaxPercent": 4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1424080,
+        "shareLocked": 0.96,
+        "lockExpiry": "2028-06-12",
+        "largestRemovalPercent": 1.96
+      },
+      "holders": {
+        "count": 74776,
+        "top10Share": 0.368,
+        "creatorShare": 0.06,
+        "vestingContractShare": 0.027,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.049
+      },
+      "trading": {
+        "ageDays": 772,
+        "buys": 357,
+        "successfulSells": 2664,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.134,
+        "volume24hUsd": 1774794,
+        "volume7dUsd": 14049390,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0050",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMO3ddf1b6620ce94309eb092d36d1fed",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.9,
+        "sellTaxPercent": 2.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1942551,
+        "shareLocked": 0.79,
+        "lockExpiry": "2028-06-05",
+        "largestRemovalPercent": 0.28
+      },
+      "holders": {
+        "count": 2657,
+        "top10Share": 0.747,
+        "creatorShare": 0.035,
+        "vestingContractShare": 0.579,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.038
+      },
+      "trading": {
+        "ageDays": 60,
+        "buys": 3188,
+        "successfulSells": 1648,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.934,
+        "volume24hUsd": 993371,
+        "volume7dUsd": 14221659,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0051",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO254cf51ea85a602038d90e8136d3e6",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.1,
+        "sellTaxPercent": 3.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 880366,
+        "shareLocked": 0.928,
+        "lockExpiry": "2029-01-20",
+        "largestRemovalPercent": 2.22
+      },
+      "holders": {
+        "count": 2514,
+        "top10Share": 0.23,
+        "creatorShare": 0.019,
+        "vestingContractShare": 0.067,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.091
+      },
+      "trading": {
+        "ageDays": 786,
+        "buys": 532,
+        "successfulSells": 1406,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.378,
+        "volume24hUsd": 2343119,
+        "volume7dUsd": 9469250,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0052",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO6249c0cdf96becd06c83946949b4a5",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.8,
+        "sellTaxPercent": 1.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1852750,
+        "shareLocked": 0.763,
+        "lockExpiry": "2029-05-27",
+        "largestRemovalPercent": 0.82
+      },
+      "holders": {
+        "count": 42174,
+        "top10Share": 0.448,
+        "creatorShare": 0.057,
+        "vestingContractShare": 0.067,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.079
+      },
+      "trading": {
+        "ageDays": 35,
+        "buys": 501,
+        "successfulSells": 2,
+        "failedSellAttempts": 9,
+        "buySellRatio": 250.5,
+        "volume24hUsd": 1521063,
+        "volume7dUsd": 14770853,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0053",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO71a87c703c4f02fd8124c091efa860",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.2,
+        "sellTaxPercent": 0.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7394736,
+        "shareLocked": 0.769,
+        "lockExpiry": "2029-04-04",
+        "largestRemovalPercent": 1.4
+      },
+      "holders": {
+        "count": 69621,
+        "top10Share": 0.406,
+        "creatorShare": 0.057,
+        "vestingContractShare": 0.078,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.081
+      },
+      "trading": {
+        "ageDays": 572,
+        "buys": 491,
+        "successfulSells": 129,
+        "failedSellAttempts": 0,
+        "buySellRatio": 3.806,
+        "volume24hUsd": 1708156,
+        "volume7dUsd": 11608633,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0054",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO0033dcd37298a2495fa2d1bc36472d",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.6,
+        "sellTaxPercent": 0.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3230005,
+        "shareLocked": 0,
+        "lockExpiry": "2029-09-01",
+        "largestRemovalPercent": 0.34
+      },
+      "holders": {
+        "count": 45807,
+        "top10Share": 0.246,
+        "creatorShare": 0.008,
+        "vestingContractShare": 0.068,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.072
+      },
+      "trading": {
+        "ageDays": 1073,
+        "buys": 2538,
+        "successfulSells": 2170,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.17,
+        "volume24hUsd": 2494959,
+        "volume7dUsd": 3991616,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0055",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO5bc9f9dfc40313e73c56d8dcc4abbb",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1,
+        "sellTaxPercent": 3.5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2248420,
+        "shareLocked": 0.989,
+        "lockExpiry": "2027-05-26",
+        "largestRemovalPercent": 1.8
+      },
+      "holders": {
+        "count": 26204,
+        "top10Share": 0.301,
+        "creatorShare": 0.013,
+        "vestingContractShare": 0.058,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.066
+      },
+      "trading": {
+        "ageDays": 21,
+        "buys": 2561,
+        "successfulSells": 719,
+        "failedSellAttempts": 0,
+        "buySellRatio": 3.562,
+        "volume24hUsd": 1403241,
+        "volume7dUsd": 7219285,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0056",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO713f7ff72ef1ab440ac7fb3244188a",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.6,
+        "sellTaxPercent": 2.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 427199,
+        "shareLocked": 0.961,
+        "lockExpiry": "2029-04-17",
+        "largestRemovalPercent": 1.83
+      },
+      "holders": {
+        "count": 17503,
+        "top10Share": 0.441,
+        "creatorShare": 0.031,
+        "vestingContractShare": 0.008,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.053
+      },
+      "trading": {
+        "ageDays": 806,
+        "buys": 3348,
+        "successfulSells": 646,
+        "failedSellAttempts": 0,
+        "buySellRatio": 5.183,
+        "volume24hUsd": 2007893,
+        "volume7dUsd": 13288690,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0057",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO86bb27020cacb0eb309edd585eec3f",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.4,
+        "sellTaxPercent": 0.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5266779,
+        "shareLocked": 0.943,
+        "lockExpiry": "2027-07-16",
+        "largestRemovalPercent": 2.22
+      },
+      "holders": {
+        "count": 65166,
+        "top10Share": 0.412,
+        "creatorShare": 0.068,
+        "vestingContractShare": 0.039,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.076
+      },
+      "trading": {
+        "ageDays": 739,
+        "buys": 262,
+        "successfulSells": 2641,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.099,
+        "volume24hUsd": 1554347,
+        "volume7dUsd": 14459471,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0058",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMOfe182eb8c715cd392a800f136ee3d8",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.7,
+        "sellTaxPercent": 1.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 598715,
+        "shareLocked": 0.769,
+        "lockExpiry": "2027-03-04",
+        "largestRemovalPercent": 2.33
+      },
+      "holders": {
+        "count": 39895,
+        "top10Share": 0.877,
+        "creatorShare": 0.543,
+        "vestingContractShare": 0,
+        "vestingContractVerified": false,
+        "burnAddressShare": 0.065
+      },
+      "trading": {
+        "ageDays": 5,
+        "buys": 1639,
+        "successfulSells": 2947,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.556,
+        "volume24hUsd": 2447114,
+        "volume7dUsd": 12065885,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0059",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMOc0df67575134c0f2fc4854d00dbcfe",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.1,
+        "sellTaxPercent": 2.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4835323,
+        "shareLocked": 0.778,
+        "lockExpiry": "2028-05-08",
+        "largestRemovalPercent": 0.78
+      },
+      "holders": {
+        "count": 34798,
+        "top10Share": 0.268,
+        "creatorShare": 0.04,
+        "vestingContractShare": 0.07,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.088
+      },
+      "trading": {
+        "ageDays": 246,
+        "buys": 907,
+        "successfulSells": 3136,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.289,
+        "volume24hUsd": 1450331,
+        "volume7dUsd": 13088170,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0060",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO66e14472afdef8729cba3158a71235",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.1,
+        "sellTaxPercent": 2.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1658737,
+        "shareLocked": 0.866,
+        "lockExpiry": "2028-03-01",
+        "largestRemovalPercent": 2.41
+      },
+      "holders": {
+        "count": 23910,
+        "top10Share": 0.367,
+        "creatorShare": 0.033,
+        "vestingContractShare": 0.076,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.078
+      },
+      "trading": {
+        "ageDays": 540,
+        "buys": 668,
+        "successfulSells": 1117,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.598,
+        "volume24hUsd": 383771,
+        "volume7dUsd": 12829798,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0061",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO6ee67dbeaa685eeed490776b02bf24",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.7,
+        "sellTaxPercent": 3.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2425246,
+        "shareLocked": 0.954,
+        "lockExpiry": "2027-11-24",
+        "largestRemovalPercent": 0.16
+      },
+      "holders": {
+        "count": 43553,
+        "top10Share": 0.365,
+        "creatorShare": 0.011,
+        "vestingContractShare": 0.018,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.066
+      },
+      "trading": {
+        "ageDays": 363,
+        "buys": 1310,
+        "successfulSells": 544,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.408,
+        "volume24hUsd": 544157,
+        "volume7dUsd": 15985984,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0062",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO42ad812091a453c83375fc58aa0560",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": true,
+        "ownershipRenounced": false,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.6,
+        "sellTaxPercent": 1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 634071,
+        "shareLocked": 0.938,
+        "lockExpiry": "2027-02-28",
+        "largestRemovalPercent": 2.19
+      },
+      "holders": {
+        "count": 15794,
+        "top10Share": 0.803,
+        "creatorShare": 0.3,
+        "vestingContractShare": 0.074,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.041
+      },
+      "trading": {
+        "ageDays": 20,
+        "buys": 916,
+        "successfulSells": 792,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.157,
+        "volume24hUsd": 2267890,
+        "volume7dUsd": 9962087,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0063",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO466b0ab8ebfb92a986dbd456ffbb9a",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.1,
+        "sellTaxPercent": 3.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5100900,
+        "shareLocked": 0.836,
+        "lockExpiry": "2029-08-18",
+        "largestRemovalPercent": 2.86
+      },
+      "holders": {
+        "count": 70292,
+        "top10Share": 0.46,
+        "creatorShare": 0.052,
+        "vestingContractShare": 0.071,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.075
+      },
+      "trading": {
+        "ageDays": 580,
+        "buys": 1003,
+        "successfulSells": 2981,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.336,
+        "volume24hUsd": 1847371,
+        "volume7dUsd": 12846088,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0064",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMOf570f92be75a2777883bb7456f0e1e",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.3,
+        "sellTaxPercent": 2.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7257688,
+        "shareLocked": 0.861,
+        "lockExpiry": "2028-01-28",
+        "largestRemovalPercent": 1.83
+      },
+      "holders": {
+        "count": 47699,
+        "top10Share": 0.236,
+        "creatorShare": 0.111,
+        "vestingContractShare": 0.022,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.001
+      },
+      "trading": {
+        "ageDays": 813,
+        "buys": 2247,
+        "successfulSells": 1055,
+        "failedSellAttempts": 1,
+        "buySellRatio": 2.13,
+        "volume24hUsd": 2060209,
+        "volume7dUsd": 15613366,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0065",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMO6ec19b9da5e4a604068180cd0fcaf7",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.5,
+        "sellTaxPercent": 4.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 249162,
+        "shareLocked": 0.755,
+        "lockExpiry": "2029-11-22",
+        "largestRemovalPercent": 2.39
+      },
+      "holders": {
+        "count": 26062,
+        "top10Share": 0.455,
+        "creatorShare": 0.103,
+        "vestingContractShare": 0.046,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.088
+      },
+      "trading": {
+        "ageDays": 681,
+        "buys": 2179,
+        "successfulSells": 658,
+        "failedSellAttempts": 0,
+        "buySellRatio": 3.312,
+        "volume24hUsd": 2003811,
+        "volume7dUsd": 4577748,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0066",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO419751996f3180b57855a347aaed4c",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2,
+        "sellTaxPercent": 0.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 911326,
+        "shareLocked": 0.723,
+        "lockExpiry": "2029-06-02",
+        "largestRemovalPercent": 2.69
+      },
+      "holders": {
+        "count": 64416,
+        "top10Share": 0.142,
+        "creatorShare": 0.093,
+        "vestingContractShare": 0.045,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.087
+      },
+      "trading": {
+        "ageDays": 711,
+        "buys": 752,
+        "successfulSells": 3107,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.242,
+        "volume24hUsd": 1129708,
+        "volume7dUsd": 2779493,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0067",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMOf4205418dc1303765065c2cabdc679",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.9,
+        "sellTaxPercent": 0.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3003141,
+        "shareLocked": 0.954,
+        "lockExpiry": "2027-08-05",
+        "largestRemovalPercent": 0.43
+      },
+      "holders": {
+        "count": 4887,
+        "top10Share": 0.538,
+        "creatorShare": 0.035,
+        "vestingContractShare": 0.382,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.068
+      },
+      "trading": {
+        "ageDays": 49,
+        "buys": 3119,
+        "successfulSells": 925,
+        "failedSellAttempts": 0,
+        "buySellRatio": 3.372,
+        "volume24hUsd": 365522,
+        "volume7dUsd": 7008052,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0068",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO677627ac57adbda0b1b0bf881df108",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.7,
+        "sellTaxPercent": 4.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2682919,
+        "shareLocked": 0.811,
+        "lockExpiry": "2028-09-02",
+        "largestRemovalPercent": 2.78
+      },
+      "holders": {
+        "count": 3079,
+        "top10Share": 0.398,
+        "creatorShare": 0.017,
+        "vestingContractShare": 0.007,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.087
+      },
+      "trading": {
+        "ageDays": 27,
+        "buys": 2243,
+        "successfulSells": 1290,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.739,
+        "volume24hUsd": 217960,
+        "volume7dUsd": 9452095,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0069",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO3969a2eb49cdb5d400a4c5dd97af43",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": true,
+        "ownershipRenounced": false,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.1,
+        "sellTaxPercent": 0.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 533802,
+        "shareLocked": 0.909,
+        "lockExpiry": "2027-08-01",
+        "largestRemovalPercent": 2.7
+      },
+      "holders": {
+        "count": 79777,
+        "top10Share": 0.612,
+        "creatorShare": 0.368,
+        "vestingContractShare": 0.005,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.086
+      },
+      "trading": {
+        "ageDays": 41,
+        "buys": 3622,
+        "successfulSells": 3272,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.107,
+        "volume24hUsd": 1065085,
+        "volume7dUsd": 10791712,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0070",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMOaf4a4939275a0ff78a3e6b000b90a8",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.1,
+        "sellTaxPercent": 2.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6335592,
+        "shareLocked": 0.931,
+        "lockExpiry": "2028-08-26",
+        "largestRemovalPercent": 1.91
+      },
+      "holders": {
+        "count": 18709,
+        "top10Share": 0.306,
+        "creatorShare": 0.012,
+        "vestingContractShare": 0.03,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.068
+      },
+      "trading": {
+        "ageDays": 318,
+        "buys": 1939,
+        "successfulSells": 2724,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.712,
+        "volume24hUsd": 440741,
+        "volume7dUsd": 6985827,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0071",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMObb18d76ef52f92b9d085981ea37159",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.1,
+        "sellTaxPercent": 4.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 11723268,
+        "shareLocked": 0,
+        "lockExpiry": "2028-05-04",
+        "largestRemovalPercent": 0.11
+      },
+      "holders": {
+        "count": 11682,
+        "top10Share": 0.209,
+        "creatorShare": 0.005,
+        "vestingContractShare": 0.031,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.089
+      },
+      "trading": {
+        "ageDays": 521,
+        "buys": 3200,
+        "successfulSells": 769,
+        "failedSellAttempts": 1,
+        "buySellRatio": 4.161,
+        "volume24hUsd": 706403,
+        "volume7dUsd": 12299980,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0072",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOca4823f8e41f05d68740095c1611b0",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.1,
+        "sellTaxPercent": 3.5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6997355,
+        "shareLocked": 0.863,
+        "lockExpiry": "2029-09-11",
+        "largestRemovalPercent": 0.3
+      },
+      "holders": {
+        "count": 45700,
+        "top10Share": 0.353,
+        "creatorShare": 0.067,
+        "vestingContractShare": 0.055,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.024
+      },
+      "trading": {
+        "ageDays": 339,
+        "buys": 1591,
+        "successfulSells": 213,
+        "failedSellAttempts": 0,
+        "buySellRatio": 7.469,
+        "volume24hUsd": 311062,
+        "volume7dUsd": 10570460,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0073",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMOe3e678fe90bcb4df51f22e13bf5f76",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.9,
+        "sellTaxPercent": 3.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3927281,
+        "shareLocked": 0.893,
+        "lockExpiry": "2029-05-20",
+        "largestRemovalPercent": 0.96
+      },
+      "holders": {
+        "count": 33246,
+        "top10Share": 0.184,
+        "creatorShare": 0.02,
+        "vestingContractShare": 0.026,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.091
+      },
+      "trading": {
+        "ageDays": 294,
+        "buys": 1652,
+        "successfulSells": 1717,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.962,
+        "volume24hUsd": 2086722,
+        "volume7dUsd": 11132966,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0074",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO3b0161be36df8924ca327bee175a07",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1,
+        "sellTaxPercent": 2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4310101,
+        "shareLocked": 0.884,
+        "lockExpiry": "2027-09-26",
+        "largestRemovalPercent": 2.47
+      },
+      "holders": {
+        "count": 52940,
+        "top10Share": 0.336,
+        "creatorShare": 0.031,
+        "vestingContractShare": 0.031,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.073
+      },
+      "trading": {
+        "ageDays": 542,
+        "buys": 1902,
+        "successfulSells": 3599,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.528,
+        "volume24hUsd": 250215,
+        "volume7dUsd": 1244423,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0075",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO673549775ffa79466f4409b67f9b0f",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.9,
+        "sellTaxPercent": 2.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5939604,
+        "shareLocked": 0.849,
+        "lockExpiry": "2028-09-01",
+        "largestRemovalPercent": 1.77
+      },
+      "holders": {
+        "count": 63537,
+        "top10Share": 0.231,
+        "creatorShare": 0.117,
+        "vestingContractShare": 0.046,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.013
+      },
+      "trading": {
+        "ageDays": 205,
+        "buys": 1676,
+        "successfulSells": 1470,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.14,
+        "volume24hUsd": 1286787,
+        "volume7dUsd": 8031970,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0076",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOf193d86163abdb99927be91d0e6fbd",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.9,
+        "sellTaxPercent": 1.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7619591,
+        "shareLocked": 0.761,
+        "lockExpiry": "2027-07-26",
+        "largestRemovalPercent": 1.36
+      },
+      "holders": {
+        "count": 2777,
+        "top10Share": 0.317,
+        "creatorShare": 0.031,
+        "vestingContractShare": 0.025,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.028
+      },
+      "trading": {
+        "ageDays": 803,
+        "buys": 2226,
+        "successfulSells": 3142,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.708,
+        "volume24hUsd": 1040823,
+        "volume7dUsd": 14402937,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0077",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMO17e6397d0cf227d4bdd7f2d61bda30",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.8,
+        "sellTaxPercent": 2.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6070799,
+        "shareLocked": 0.079,
+        "lockExpiry": "2026-09-01",
+        "largestRemovalPercent": 66.55
+      },
+      "holders": {
+        "count": 22245,
+        "top10Share": 0.255,
+        "creatorShare": 0.016,
+        "vestingContractShare": 0.078,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.053
+      },
+      "trading": {
+        "ageDays": 14,
+        "buys": 496,
+        "successfulSells": 1763,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.281,
+        "volume24hUsd": 477247,
+        "volume7dUsd": 12947318,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0078",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMO9e18494987490db5550fc747b2d7fb",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.7,
+        "sellTaxPercent": 1.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1362991,
+        "shareLocked": 0.895,
+        "lockExpiry": "2028-02-10",
+        "largestRemovalPercent": 1.61
+      },
+      "holders": {
+        "count": 14205,
+        "top10Share": 0.336,
+        "creatorShare": 0.049,
+        "vestingContractShare": 0.021,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.001
+      },
+      "trading": {
+        "ageDays": 635,
+        "buys": 1135,
+        "successfulSells": 1133,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.002,
+        "volume24hUsd": 1122236,
+        "volume7dUsd": 2323466,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0079",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMOa2355cefb8b47ac15e8112769bdb80",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.8,
+        "sellTaxPercent": 4.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2666291,
+        "shareLocked": 0.733,
+        "lockExpiry": "2028-07-18",
+        "largestRemovalPercent": 0.1
+      },
+      "holders": {
+        "count": 79929,
+        "top10Share": 0.242,
+        "creatorShare": 0.097,
+        "vestingContractShare": 0.024,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.088
+      },
+      "trading": {
+        "ageDays": 643,
+        "buys": 3016,
+        "successfulSells": 1084,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.782,
+        "volume24hUsd": 330451,
+        "volume7dUsd": 2984928,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0080",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO76044947a017744b56c4fda0eb5c62",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.7,
+        "sellTaxPercent": 2.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2964375,
+        "shareLocked": 0.844,
+        "lockExpiry": "2028-05-15",
+        "largestRemovalPercent": 0.39
+      },
+      "holders": {
+        "count": 22634,
+        "top10Share": 0.29,
+        "creatorShare": 0.025,
+        "vestingContractShare": 0.057,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.006
+      },
+      "trading": {
+        "ageDays": 431,
+        "buys": 2271,
+        "successfulSells": 434,
+        "failedSellAttempts": 0,
+        "buySellRatio": 5.233,
+        "volume24hUsd": 636577,
+        "volume7dUsd": 12654717,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0081",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO9f983cae5ad9ffd04662d3c3855460",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.6,
+        "sellTaxPercent": 0.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5572639,
+        "shareLocked": 0.83,
+        "lockExpiry": "2029-02-22",
+        "largestRemovalPercent": 2.27
+      },
+      "holders": {
+        "count": 66343,
+        "top10Share": 0.155,
+        "creatorShare": 0.096,
+        "vestingContractShare": 0.001,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.056
+      },
+      "trading": {
+        "ageDays": 747,
+        "buys": 397,
+        "successfulSells": 2094,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.19,
+        "volume24hUsd": 532452,
+        "volume7dUsd": 8935868,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0082",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMO27bb321538e319c168d54bbf9566e9",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.6,
+        "sellTaxPercent": 27.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6996792,
+        "shareLocked": 0.803,
+        "lockExpiry": "2028-07-04",
+        "largestRemovalPercent": 0.63
+      },
+      "holders": {
+        "count": 42461,
+        "top10Share": 0.151,
+        "creatorShare": 0.109,
+        "vestingContractShare": 0.071,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.022
+      },
+      "trading": {
+        "ageDays": 61,
+        "buys": 1396,
+        "successfulSells": 1011,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.381,
+        "volume24hUsd": 1193779,
+        "volume7dUsd": 9190979,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0083",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMOe2d263767ce936d0d0c7fd03ec4fb9",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.3,
+        "sellTaxPercent": 4.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6364938,
+        "shareLocked": 0.103,
+        "lockExpiry": "2026-09-01",
+        "largestRemovalPercent": 81.19
+      },
+      "holders": {
+        "count": 73184,
+        "top10Share": 0.213,
+        "creatorShare": 0.057,
+        "vestingContractShare": 0.027,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.059
+      },
+      "trading": {
+        "ageDays": 83,
+        "buys": 280,
+        "successfulSells": 3457,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.081,
+        "volume24hUsd": 257372,
+        "volume7dUsd": 6537910,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0084",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO05caadcbcbd4b08f439538cea50fd0",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.1,
+        "sellTaxPercent": 3.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5876799,
+        "shareLocked": 0.787,
+        "lockExpiry": "2029-02-17",
+        "largestRemovalPercent": 1.88
+      },
+      "holders": {
+        "count": 28366,
+        "top10Share": 0.417,
+        "creatorShare": 0.071,
+        "vestingContractShare": 0.037,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.056
+      },
+      "trading": {
+        "ageDays": 744,
+        "buys": 3627,
+        "successfulSells": 1747,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.076,
+        "volume24hUsd": 1660918,
+        "volume7dUsd": 7588086,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0085",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOd99cb5c5d25a48a5e94a3332bcf08d",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.8,
+        "sellTaxPercent": 4.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 8131733,
+        "shareLocked": 0,
+        "lockExpiry": "2027-06-24",
+        "largestRemovalPercent": 0.16
+      },
+      "holders": {
+        "count": 18978,
+        "top10Share": 0.218,
+        "creatorShare": 0.01,
+        "vestingContractShare": 0.012,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.011
+      },
+      "trading": {
+        "ageDays": 754,
+        "buys": 3578,
+        "successfulSells": 2400,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.491,
+        "volume24hUsd": 2402209,
+        "volume7dUsd": 15571890,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0086",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO3411acf546ffa2b948853a0ee39958",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.2,
+        "sellTaxPercent": 3.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3506460,
+        "shareLocked": 0.755,
+        "lockExpiry": "2028-03-08",
+        "largestRemovalPercent": 2.65
+      },
+      "holders": {
+        "count": 54168,
+        "top10Share": 0.445,
+        "creatorShare": 0.046,
+        "vestingContractShare": 0.029,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.097
+      },
+      "trading": {
+        "ageDays": 629,
+        "buys": 1472,
+        "successfulSells": 3228,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.456,
+        "volume24hUsd": 2425927,
+        "volume7dUsd": 8887079,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0087",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO7020603a677d82edc8daf075cb157a",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.4,
+        "sellTaxPercent": 4.5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1666796,
+        "shareLocked": 0.854,
+        "lockExpiry": "2027-12-26",
+        "largestRemovalPercent": 2.06
+      },
+      "holders": {
+        "count": 77922,
+        "top10Share": 0.467,
+        "creatorShare": 0.023,
+        "vestingContractShare": 0.037,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.04
+      },
+      "trading": {
+        "ageDays": 365,
+        "buys": 3199,
+        "successfulSells": 2095,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.527,
+        "volume24hUsd": 872437,
+        "volume7dUsd": 6413461,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0088",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO5df09e8136b0714307b1af5afe6171",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.5,
+        "sellTaxPercent": 2.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4135127,
+        "shareLocked": 0.95,
+        "lockExpiry": "2028-09-07",
+        "largestRemovalPercent": 2.26
+      },
+      "holders": {
+        "count": 4514,
+        "top10Share": 0.639,
+        "creatorShare": 0.04,
+        "vestingContractShare": 0.556,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.074
+      },
+      "trading": {
+        "ageDays": 11,
+        "buys": 2053,
+        "successfulSells": 747,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.748,
+        "volume24hUsd": 1121825,
+        "volume7dUsd": 1717641,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0089",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMOb31966a7a840813b9bade9792a2961",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.7,
+        "sellTaxPercent": 1.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 999627,
+        "shareLocked": 0.805,
+        "lockExpiry": "2029-08-16",
+        "largestRemovalPercent": 0.8
+      },
+      "holders": {
+        "count": 32098,
+        "top10Share": 0.246,
+        "creatorShare": 0.054,
+        "vestingContractShare": 0.077,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.087
+      },
+      "trading": {
+        "ageDays": 404,
+        "buys": 2736,
+        "successfulSells": 3421,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.8,
+        "volume24hUsd": 857527,
+        "volume7dUsd": 11755776,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0090",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO64f62421d1d317221fd7b3031f02eb",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.5,
+        "sellTaxPercent": 1.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2502989,
+        "shareLocked": 0.853,
+        "lockExpiry": "2029-12-22",
+        "largestRemovalPercent": 2.27
+      },
+      "holders": {
+        "count": 65721,
+        "top10Share": 0.171,
+        "creatorShare": 0.07,
+        "vestingContractShare": 0.004,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.035
+      },
+      "trading": {
+        "ageDays": 718,
+        "buys": 921,
+        "successfulSells": 3011,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.306,
+        "volume24hUsd": 2430289,
+        "volume7dUsd": 10008738,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0091",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMOa296dc96606f0ffac834de91c1c51f",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.9,
+        "sellTaxPercent": 4.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7952610,
+        "shareLocked": 0.975,
+        "lockExpiry": "2027-01-18",
+        "largestRemovalPercent": 1.25
+      },
+      "holders": {
+        "count": 78925,
+        "top10Share": 0.122,
+        "creatorShare": 0.115,
+        "vestingContractShare": 0.06,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.004
+      },
+      "trading": {
+        "ageDays": 658,
+        "buys": 2136,
+        "successfulSells": 2799,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.763,
+        "volume24hUsd": 781665,
+        "volume7dUsd": 5858967,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0092",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMOf91ff1dd1d6b51aac98e1d03e8ae80",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.2,
+        "sellTaxPercent": 3.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1994643,
+        "shareLocked": 0.885,
+        "lockExpiry": "2027-01-10",
+        "largestRemovalPercent": 2.3
+      },
+      "holders": {
+        "count": 26572,
+        "top10Share": 0.354,
+        "creatorShare": 0.088,
+        "vestingContractShare": 0.015,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.077
+      },
+      "trading": {
+        "ageDays": 531,
+        "buys": 1058,
+        "successfulSells": 1041,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.016,
+        "volume24hUsd": 979642,
+        "volume7dUsd": 9410271,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0093",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO6267b2c3f3ce0b42097f678d1643d5",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.4,
+        "sellTaxPercent": 2.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 8010632,
+        "shareLocked": 0,
+        "lockExpiry": "2027-07-13",
+        "largestRemovalPercent": 0.03
+      },
+      "holders": {
+        "count": 27665,
+        "top10Share": 0.088,
+        "creatorShare": 0.021,
+        "vestingContractShare": 0.041,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.042
+      },
+      "trading": {
+        "ageDays": 997,
+        "buys": 3996,
+        "successfulSells": 314,
+        "failedSellAttempts": 1,
+        "buySellRatio": 12.726,
+        "volume24hUsd": 2152577,
+        "volume7dUsd": 9274993,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0094",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOdfbf34262be5092e454493cdf24ecd",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.6,
+        "sellTaxPercent": 4.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6548889,
+        "shareLocked": 0.725,
+        "lockExpiry": "2028-06-08",
+        "largestRemovalPercent": 0.31
+      },
+      "holders": {
+        "count": 77933,
+        "top10Share": 0.451,
+        "creatorShare": 0.069,
+        "vestingContractShare": 0.068,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.022
+      },
+      "trading": {
+        "ageDays": 658,
+        "buys": 2267,
+        "successfulSells": 1121,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.022,
+        "volume24hUsd": 444265,
+        "volume7dUsd": 10533368,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0095",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMOc02623dbf925cddb13929a46206651",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.4,
+        "sellTaxPercent": 2.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4137749,
+        "shareLocked": 0.836,
+        "lockExpiry": "2028-09-24",
+        "largestRemovalPercent": 1.66
+      },
+      "holders": {
+        "count": 56085,
+        "top10Share": 0.22,
+        "creatorShare": 0.087,
+        "vestingContractShare": 0.04,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.067
+      },
+      "trading": {
+        "ageDays": 862,
+        "buys": 1123,
+        "successfulSells": 3462,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.324,
+        "volume24hUsd": 2477078,
+        "volume7dUsd": 4805631,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0096",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO3d0058bdc55dfb92e2a2db018206ee",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.5,
+        "sellTaxPercent": 0.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5885067,
+        "shareLocked": 0.903,
+        "lockExpiry": "2027-06-24",
+        "largestRemovalPercent": 2.26
+      },
+      "holders": {
+        "count": 8784,
+        "top10Share": 0.292,
+        "creatorShare": 0.083,
+        "vestingContractShare": 0.001,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.084
+      },
+      "trading": {
+        "ageDays": 108,
+        "buys": 273,
+        "successfulSells": 2088,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.131,
+        "volume24hUsd": 1532602,
+        "volume7dUsd": 2098752,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0097",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO7333981a61a51294424691c98200fa",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.3,
+        "sellTaxPercent": 2.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7765635,
+        "shareLocked": 0.863,
+        "lockExpiry": "2029-02-19",
+        "largestRemovalPercent": 1.79
+      },
+      "holders": {
+        "count": 28491,
+        "top10Share": 0.333,
+        "creatorShare": 0.085,
+        "vestingContractShare": 0.011,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.023
+      },
+      "trading": {
+        "ageDays": 796,
+        "buys": 613,
+        "successfulSells": 2312,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.265,
+        "volume24hUsd": 1768907,
+        "volume7dUsd": 1260757,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0098",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMO202c90622bc036f036affaac7707ca",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0,
+        "sellTaxPercent": 1.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3071638,
+        "shareLocked": 0.793,
+        "lockExpiry": "2027-12-04",
+        "largestRemovalPercent": 2.27
+      },
+      "holders": {
+        "count": 74629,
+        "top10Share": 0.913,
+        "creatorShare": 0.508,
+        "vestingContractShare": 0,
+        "vestingContractVerified": false,
+        "burnAddressShare": 0.042
+      },
+      "trading": {
+        "ageDays": 61,
+        "buys": 292,
+        "successfulSells": 2159,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.135,
+        "volume24hUsd": 1737617,
+        "volume7dUsd": 7970766,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0099",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO00bc4b9083e651e2d29cc1e78179c3",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.9,
+        "sellTaxPercent": 2.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1653266,
+        "shareLocked": 0.765,
+        "lockExpiry": "2029-10-06",
+        "largestRemovalPercent": 1.24
+      },
+      "holders": {
+        "count": 34434,
+        "top10Share": 0.47,
+        "creatorShare": 0.011,
+        "vestingContractShare": 0.024,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.003
+      },
+      "trading": {
+        "ageDays": 579,
+        "buys": 3559,
+        "successfulSells": 3138,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.134,
+        "volume24hUsd": 976938,
+        "volume7dUsd": 4193385,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0100",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO5e99bec14770e6900fcdbe5f68db46",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.6,
+        "sellTaxPercent": 3.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2247717,
+        "shareLocked": 0.919,
+        "lockExpiry": "2027-03-22",
+        "largestRemovalPercent": 2.44
+      },
+      "holders": {
+        "count": 27968,
+        "top10Share": 0.283,
+        "creatorShare": 0.014,
+        "vestingContractShare": 0.007,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.04
+      },
+      "trading": {
+        "ageDays": 315,
+        "buys": 638,
+        "successfulSells": 3599,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.177,
+        "volume24hUsd": 2035683,
+        "volume7dUsd": 7330888,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0101",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO5d99babeeebcf423695184ae65c8b9",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.7,
+        "sellTaxPercent": 7.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 285100,
+        "shareLocked": 0.723,
+        "lockExpiry": "2029-05-10",
+        "largestRemovalPercent": 2.58
+      },
+      "holders": {
+        "count": 17033,
+        "top10Share": 0.384,
+        "creatorShare": 0.063,
+        "vestingContractShare": 0.037,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.089
+      },
+      "trading": {
+        "ageDays": 45,
+        "buys": 622,
+        "successfulSells": 3,
+        "failedSellAttempts": 7,
+        "buySellRatio": 207.333,
+        "volume24hUsd": 219908,
+        "volume7dUsd": 10413220,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0102",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO1492ea404fd4376118ac389da57b45",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.5,
+        "sellTaxPercent": 4.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7944400,
+        "shareLocked": 0.787,
+        "lockExpiry": "2027-09-23",
+        "largestRemovalPercent": 0.54
+      },
+      "holders": {
+        "count": 3019,
+        "top10Share": 0.77,
+        "creatorShare": 0.04,
+        "vestingContractShare": 0.598,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.059
+      },
+      "trading": {
+        "ageDays": 8,
+        "buys": 3093,
+        "successfulSells": 2606,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.187,
+        "volume24hUsd": 121613,
+        "volume7dUsd": 10314757,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0103",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO242ebe7243cff3a6a0c1abb4520af7",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.6,
+        "sellTaxPercent": 4.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6232493,
+        "shareLocked": 0.747,
+        "lockExpiry": "2027-08-25",
+        "largestRemovalPercent": 0.54
+      },
+      "holders": {
+        "count": 47853,
+        "top10Share": 0.48,
+        "creatorShare": 0.047,
+        "vestingContractShare": 0.066,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.046
+      },
+      "trading": {
+        "ageDays": 134,
+        "buys": 1745,
+        "successfulSells": 3798,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.459,
+        "volume24hUsd": 2419435,
+        "volume7dUsd": 14662739,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0104",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO154a000cea52696b37682a85ba605a",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.7,
+        "sellTaxPercent": 4.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1559468,
+        "shareLocked": 0.864,
+        "lockExpiry": "2027-04-10",
+        "largestRemovalPercent": 0.8
+      },
+      "holders": {
+        "count": 68296,
+        "top10Share": 0.42,
+        "creatorShare": 0.053,
+        "vestingContractShare": 0.051,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.005
+      },
+      "trading": {
+        "ageDays": 384,
+        "buys": 948,
+        "successfulSells": 3103,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.306,
+        "volume24hUsd": 2022953,
+        "volume7dUsd": 2665886,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0105",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO955b51368a7a8f784c1c2e911c899a",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.1,
+        "sellTaxPercent": 0.5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6950361,
+        "shareLocked": 0.976,
+        "lockExpiry": "2028-03-03",
+        "largestRemovalPercent": 2.88
+      },
+      "holders": {
+        "count": 41038,
+        "top10Share": 0.366,
+        "creatorShare": 0.018,
+        "vestingContractShare": 0.061,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.028
+      },
+      "trading": {
+        "ageDays": 532,
+        "buys": 3890,
+        "successfulSells": 3073,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.266,
+        "volume24hUsd": 690600,
+        "volume7dUsd": 5936463,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0106",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO6e9d438aab1bad09ba6553d07b52b1",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.6,
+        "sellTaxPercent": 3.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6700189,
+        "shareLocked": 0.846,
+        "lockExpiry": "2027-10-22",
+        "largestRemovalPercent": 2.35
+      },
+      "holders": {
+        "count": 32506,
+        "top10Share": 0.382,
+        "creatorShare": 0.025,
+        "vestingContractShare": 0.066,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.052
+      },
+      "trading": {
+        "ageDays": 134,
+        "buys": 3930,
+        "successfulSells": 1181,
+        "failedSellAttempts": 0,
+        "buySellRatio": 3.328,
+        "volume24hUsd": 1159968,
+        "volume7dUsd": 4287080,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0107",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO3d6aba1f1f421f39cfc735494e6bc9",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.7,
+        "sellTaxPercent": 0.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6282637,
+        "shareLocked": 0.729,
+        "lockExpiry": "2027-05-26",
+        "largestRemovalPercent": 1.13
+      },
+      "holders": {
+        "count": 2339,
+        "top10Share": 0.703,
+        "creatorShare": 0.037,
+        "vestingContractShare": 0.514,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.081
+      },
+      "trading": {
+        "ageDays": 31,
+        "buys": 2005,
+        "successfulSells": 1305,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.536,
+        "volume24hUsd": 324380,
+        "volume7dUsd": 11168198,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0108",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMOafd317a9ef8f3728a1505766b4307d",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 4.7,
+        "sellTaxPercent": 5.4,
+        "blacklistFunction": true
+      },
+      "liquidity": {
+        "poolUsd": 4207401,
+        "shareLocked": 0.892,
+        "lockExpiry": "2028-10-05",
+        "largestRemovalPercent": 0.54
+      },
+      "holders": {
+        "count": 77504,
+        "top10Share": 0.433,
+        "creatorShare": 0.049,
+        "vestingContractShare": 0.079,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.003
+      },
+      "trading": {
+        "ageDays": 6,
+        "buys": 499,
+        "successfulSells": 3,
+        "failedSellAttempts": 5,
+        "buySellRatio": 166.333,
+        "volume24hUsd": 1366192,
+        "volume7dUsd": 4621688,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0109",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMObcb5681ebe7ca60c54d726de030f61",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.7,
+        "sellTaxPercent": 4.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7626305,
+        "shareLocked": 0.785,
+        "lockExpiry": "2029-09-15",
+        "largestRemovalPercent": 0.44
+      },
+      "holders": {
+        "count": 25698,
+        "top10Share": 0.475,
+        "creatorShare": 0.078,
+        "vestingContractShare": 0.034,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.084
+      },
+      "trading": {
+        "ageDays": 656,
+        "buys": 655,
+        "successfulSells": 2492,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.263,
+        "volume24hUsd": 464612,
+        "volume7dUsd": 8557540,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0110",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMOf5c4eb3fa33921879374937a18104c",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.5,
+        "sellTaxPercent": 0.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1257053,
+        "shareLocked": 0.939,
+        "lockExpiry": "2028-05-13",
+        "largestRemovalPercent": 1.55
+      },
+      "holders": {
+        "count": 4602,
+        "top10Share": 0.281,
+        "creatorShare": 0.011,
+        "vestingContractShare": 0.002,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.006
+      },
+      "trading": {
+        "ageDays": 828,
+        "buys": 3830,
+        "successfulSells": 3384,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.132,
+        "volume24hUsd": 130348,
+        "volume7dUsd": 15693087,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0111",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOd6570a530c01e6dd4f7262f4f4c1ed",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.2,
+        "sellTaxPercent": 4.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5366933,
+        "shareLocked": 0.844,
+        "lockExpiry": "2027-08-26",
+        "largestRemovalPercent": 0.18
+      },
+      "holders": {
+        "count": 43713,
+        "top10Share": 0.24,
+        "creatorShare": 0.053,
+        "vestingContractShare": 0.021,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.008
+      },
+      "trading": {
+        "ageDays": 641,
+        "buys": 2860,
+        "successfulSells": 2009,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.424,
+        "volume24hUsd": 914127,
+        "volume7dUsd": 12814539,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0112",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO36a23ca1f24249215fc6f13df81b7b",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.5,
+        "sellTaxPercent": 0.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1689600,
+        "shareLocked": 0.803,
+        "lockExpiry": "2028-03-02",
+        "largestRemovalPercent": 0.59
+      },
+      "holders": {
+        "count": 36192,
+        "top10Share": 0.342,
+        "creatorShare": 0.104,
+        "vestingContractShare": 0.019,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.023
+      },
+      "trading": {
+        "ageDays": 456,
+        "buys": 2899,
+        "successfulSells": 2961,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.979,
+        "volume24hUsd": 243164,
+        "volume7dUsd": 597165,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0113",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMObc4d327c5c117b782e49ae2d92446b",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 6.8,
+        "sellTaxPercent": 25.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4355463,
+        "shareLocked": 0.972,
+        "lockExpiry": "2029-04-24",
+        "largestRemovalPercent": 2.23
+      },
+      "holders": {
+        "count": 52167,
+        "top10Share": 0.378,
+        "creatorShare": 0.072,
+        "vestingContractShare": 0.073,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.037
+      },
+      "trading": {
+        "ageDays": 152,
+        "buys": 495,
+        "successfulSells": 873,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.567,
+        "volume24hUsd": 1205367,
+        "volume7dUsd": 6895168,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0114",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMOd6e7e8360e220acef2050a4ee39260",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.6,
+        "sellTaxPercent": 1.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7040733,
+        "shareLocked": 0.745,
+        "lockExpiry": "2027-12-21",
+        "largestRemovalPercent": 2.36
+      },
+      "holders": {
+        "count": 49125,
+        "top10Share": 0.334,
+        "creatorShare": 0.067,
+        "vestingContractShare": 0.049,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.065
+      },
+      "trading": {
+        "ageDays": 85,
+        "buys": 1196,
+        "successfulSells": 1026,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.166,
+        "volume24hUsd": 775133,
+        "volume7dUsd": 6266929,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0115",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMOdba6878a79eb9654d619250efd2a32",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 5.9,
+        "sellTaxPercent": 33.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3051539,
+        "shareLocked": 0.819,
+        "lockExpiry": "2028-03-21",
+        "largestRemovalPercent": 2.83
+      },
+      "holders": {
+        "count": 49663,
+        "top10Share": 0.385,
+        "creatorShare": 0.059,
+        "vestingContractShare": 0.059,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.075
+      },
+      "trading": {
+        "ageDays": 46,
+        "buys": 1165,
+        "successfulSells": 992,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.174,
+        "volume24hUsd": 705273,
+        "volume7dUsd": 11770025,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0116",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMO3f0e40f243cb6e25e6787c5bb2ddfd",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.5,
+        "sellTaxPercent": 0.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1808670,
+        "shareLocked": 0.792,
+        "lockExpiry": "2029-04-04",
+        "largestRemovalPercent": 0.36
+      },
+      "holders": {
+        "count": 74039,
+        "top10Share": 0.229,
+        "creatorShare": 0.054,
+        "vestingContractShare": 0.032,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.019
+      },
+      "trading": {
+        "ageDays": 677,
+        "buys": 3988,
+        "successfulSells": 2387,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.671,
+        "volume24hUsd": 1909274,
+        "volume7dUsd": 5408838,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0117",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMOccb03becb3c6b7d1a1a656d92b0aae",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.9,
+        "sellTaxPercent": 1.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 938058,
+        "shareLocked": 0.87,
+        "lockExpiry": "2028-12-05",
+        "largestRemovalPercent": 0.77
+      },
+      "holders": {
+        "count": 75295,
+        "top10Share": 0.256,
+        "creatorShare": 0.043,
+        "vestingContractShare": 0.068,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.011
+      },
+      "trading": {
+        "ageDays": 838,
+        "buys": 167,
+        "successfulSells": 520,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.321,
+        "volume24hUsd": 699781,
+        "volume7dUsd": 8810630,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0118",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO7e0ce886132fdd647f94814f9d0b18",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.6,
+        "sellTaxPercent": 2.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2191295,
+        "shareLocked": 0,
+        "lockExpiry": "2027-09-01",
+        "largestRemovalPercent": 0.09
+      },
+      "holders": {
+        "count": 1735,
+        "top10Share": 0.153,
+        "creatorShare": 0.008,
+        "vestingContractShare": 0.008,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.016
+      },
+      "trading": {
+        "ageDays": 1198,
+        "buys": 3111,
+        "successfulSells": 3330,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.934,
+        "volume24hUsd": 1921804,
+        "volume7dUsd": 1767221,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0119",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOe0b56f0438368a0f85c5ed31ce6365",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1,
+        "sellTaxPercent": 1.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3334068,
+        "shareLocked": 0.919,
+        "lockExpiry": "2028-01-01",
+        "largestRemovalPercent": 0.56
+      },
+      "holders": {
+        "count": 67501,
+        "top10Share": 0.136,
+        "creatorShare": 0.014,
+        "vestingContractShare": 0.004,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.058
+      },
+      "trading": {
+        "ageDays": 836,
+        "buys": 1814,
+        "successfulSells": 1448,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.253,
+        "volume24hUsd": 2457865,
+        "volume7dUsd": 2197263,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0120",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO7c79acedf090e58d63a8350363e9de",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.7,
+        "sellTaxPercent": 1.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5120383,
+        "shareLocked": 0.948,
+        "lockExpiry": "2027-01-28",
+        "largestRemovalPercent": 1.91
+      },
+      "holders": {
+        "count": 27284,
+        "top10Share": 0.234,
+        "creatorShare": 0.076,
+        "vestingContractShare": 0.025,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.036
+      },
+      "trading": {
+        "ageDays": 470,
+        "buys": 1434,
+        "successfulSells": 3060,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.469,
+        "volume24hUsd": 2477262,
+        "volume7dUsd": 533851,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0121",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO1e9f27225113ff7802b776aa4f8d14",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.7,
+        "sellTaxPercent": 2.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3467933,
+        "shareLocked": 0.835,
+        "lockExpiry": "2029-12-14",
+        "largestRemovalPercent": 0.47
+      },
+      "holders": {
+        "count": 17719,
+        "top10Share": 0.241,
+        "creatorShare": 0.06,
+        "vestingContractShare": 0.032,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.059
+      },
+      "trading": {
+        "ageDays": 30,
+        "buys": 2687,
+        "successfulSells": 2616,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.027,
+        "volume24hUsd": 989137,
+        "volume7dUsd": 7517722,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0122",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO3a619c41d959814fe388c984959f15",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": true,
+        "ownershipRenounced": false,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.5,
+        "sellTaxPercent": 3.5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4690752,
+        "shareLocked": 0.908,
+        "lockExpiry": "2028-03-14",
+        "largestRemovalPercent": 2.82
+      },
+      "holders": {
+        "count": 75509,
+        "top10Share": 0.584,
+        "creatorShare": 0.245,
+        "vestingContractShare": 0.039,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.019
+      },
+      "trading": {
+        "ageDays": 73,
+        "buys": 2069,
+        "successfulSells": 1599,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.294,
+        "volume24hUsd": 682921,
+        "volume7dUsd": 11056410,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0123",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO1a08e46cd8d95d4b82bf0a8553c074",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.6,
+        "sellTaxPercent": 0.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4695202,
+        "shareLocked": 0.783,
+        "lockExpiry": "2027-06-24",
+        "largestRemovalPercent": 1.9
+      },
+      "holders": {
+        "count": 40548,
+        "top10Share": 0.297,
+        "creatorShare": 0.041,
+        "vestingContractShare": 0.048,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.091
+      },
+      "trading": {
+        "ageDays": 706,
+        "buys": 1821,
+        "successfulSells": 1519,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.199,
+        "volume24hUsd": 1830256,
+        "volume7dUsd": 3940013,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0124",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO43f0c04877c499e6c2edeffc8ad16f",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.9,
+        "sellTaxPercent": 0.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2928403,
+        "shareLocked": 0.994,
+        "lockExpiry": "2028-05-20",
+        "largestRemovalPercent": 1.23
+      },
+      "holders": {
+        "count": 24023,
+        "top10Share": 0.201,
+        "creatorShare": 0.054,
+        "vestingContractShare": 0.061,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.053
+      },
+      "trading": {
+        "ageDays": 248,
+        "buys": 932,
+        "successfulSells": 1978,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.471,
+        "volume24hUsd": 884498,
+        "volume7dUsd": 6733947,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0125",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO211dd55847e767072bdfbd1cba19ff",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.8,
+        "sellTaxPercent": 2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7261034,
+        "shareLocked": 0.986,
+        "lockExpiry": "2028-09-21",
+        "largestRemovalPercent": 1.56
+      },
+      "holders": {
+        "count": 56826,
+        "top10Share": 0.123,
+        "creatorShare": 0.079,
+        "vestingContractShare": 0.031,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.085
+      },
+      "trading": {
+        "ageDays": 443,
+        "buys": 1694,
+        "successfulSells": 1421,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.192,
+        "volume24hUsd": 513251,
+        "volume7dUsd": 10633517,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0126",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO669aa72f7bcd78175228120653510a",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.3,
+        "sellTaxPercent": 1.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4422118,
+        "shareLocked": 0.91,
+        "lockExpiry": "2027-08-16",
+        "largestRemovalPercent": 0.58
+      },
+      "holders": {
+        "count": 62706,
+        "top10Share": 0.268,
+        "creatorShare": 0.061,
+        "vestingContractShare": 0.066,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.01
+      },
+      "trading": {
+        "ageDays": 764,
+        "buys": 1292,
+        "successfulSells": 1936,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.667,
+        "volume24hUsd": 70985,
+        "volume7dUsd": 15129281,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0127",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO6067c90efaea7bb9fb00f487a9d1dc",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.7,
+        "sellTaxPercent": 2.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2188984,
+        "shareLocked": 0.813,
+        "lockExpiry": "2028-02-26",
+        "largestRemovalPercent": 1.91
+      },
+      "holders": {
+        "count": 2887,
+        "top10Share": 0.432,
+        "creatorShare": 0.105,
+        "vestingContractShare": 0.024,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.038
+      },
+      "trading": {
+        "ageDays": 271,
+        "buys": 2426,
+        "successfulSells": 551,
+        "failedSellAttempts": 0,
+        "buySellRatio": 4.403,
+        "volume24hUsd": 1066509,
+        "volume7dUsd": 13569424,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0128",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMOc7c603fe1bc38c6fa59f03f10b1dc1",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.9,
+        "sellTaxPercent": 2.5,
+        "blacklistFunction": true
+      },
+      "liquidity": {
+        "poolUsd": 3591369,
+        "shareLocked": 0.753,
+        "lockExpiry": "2027-12-15",
+        "largestRemovalPercent": 2.04
+      },
+      "holders": {
+        "count": 69113,
+        "top10Share": 0.567,
+        "creatorShare": 0.043,
+        "vestingContractShare": 0.009,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.01
+      },
+      "trading": {
+        "ageDays": 29,
+        "buys": 455,
+        "successfulSells": 0,
+        "failedSellAttempts": 10,
+        "buySellRatio": 455,
+        "volume24hUsd": 1697856,
+        "volume7dUsd": 5546366,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0129",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMOd730f49dcf5e05bb08ec1130572c3d",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.6,
+        "sellTaxPercent": 4.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2732963,
+        "shareLocked": 0.8,
+        "lockExpiry": "2029-05-07",
+        "largestRemovalPercent": 1.78
+      },
+      "holders": {
+        "count": 59193,
+        "top10Share": 0.361,
+        "creatorShare": 0.064,
+        "vestingContractShare": 0.015,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.052
+      },
+      "trading": {
+        "ageDays": 714,
+        "buys": 616,
+        "successfulSells": 3005,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.205,
+        "volume24hUsd": 630898,
+        "volume7dUsd": 1341998,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0130",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO8dc0844b951d0bb7eb1d0d80b5fc23",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.2,
+        "sellTaxPercent": 2.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2131270,
+        "shareLocked": 0.98,
+        "lockExpiry": "2029-08-18",
+        "largestRemovalPercent": 0.61
+      },
+      "holders": {
+        "count": 25719,
+        "top10Share": 0.388,
+        "creatorShare": 0.074,
+        "vestingContractShare": 0.059,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.015
+      },
+      "trading": {
+        "ageDays": 655,
+        "buys": 2296,
+        "successfulSells": 1346,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.706,
+        "volume24hUsd": 2271757,
+        "volume7dUsd": 13883592,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0131",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMOe528acbe82c1d155db35216c82eb1a",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.2,
+        "sellTaxPercent": 3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2711421,
+        "shareLocked": 0.905,
+        "lockExpiry": "2029-10-24",
+        "largestRemovalPercent": 0.19
+      },
+      "holders": {
+        "count": 18386,
+        "top10Share": 0.26,
+        "creatorShare": 0.098,
+        "vestingContractShare": 0.041,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.053
+      },
+      "trading": {
+        "ageDays": 337,
+        "buys": 3663,
+        "successfulSells": 2668,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.373,
+        "volume24hUsd": 200245,
+        "volume7dUsd": 2490246,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0132",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOf0d2b3b02a0bea224f31be675831ab",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.9,
+        "sellTaxPercent": 4.8,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2548784,
+        "shareLocked": 0.795,
+        "lockExpiry": "2027-06-28",
+        "largestRemovalPercent": 1.03
+      },
+      "holders": {
+        "count": 2319,
+        "top10Share": 0.371,
+        "creatorShare": 0.078,
+        "vestingContractShare": 0.066,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.041
+      },
+      "trading": {
+        "ageDays": 415,
+        "buys": 1656,
+        "successfulSells": 1880,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.881,
+        "volume24hUsd": 1490563,
+        "volume7dUsd": 2715153,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0133",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMOa603ae27ee360401bac0749bf320d3",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.4,
+        "sellTaxPercent": 3.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2764018,
+        "shareLocked": 0.829,
+        "lockExpiry": "2029-02-20",
+        "largestRemovalPercent": 2.57
+      },
+      "holders": {
+        "count": 75276,
+        "top10Share": 0.187,
+        "creatorShare": 0.1,
+        "vestingContractShare": 0.007,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.001
+      },
+      "trading": {
+        "ageDays": 517,
+        "buys": 2658,
+        "successfulSells": 510,
+        "failedSellAttempts": 0,
+        "buySellRatio": 5.212,
+        "volume24hUsd": 2212075,
+        "volume7dUsd": 4847875,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0134",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO47df4e6dfb2f496d4713b0e913c84f",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.7,
+        "sellTaxPercent": 1.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7806026,
+        "shareLocked": 0.869,
+        "lockExpiry": "2028-12-20",
+        "largestRemovalPercent": 2.64
+      },
+      "holders": {
+        "count": 18113,
+        "top10Share": 0.15,
+        "creatorShare": 0.095,
+        "vestingContractShare": 0.042,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.041
+      },
+      "trading": {
+        "ageDays": 706,
+        "buys": 1313,
+        "successfulSells": 3697,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.355,
+        "volume24hUsd": 1501779,
+        "volume7dUsd": 12952945,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0135",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMO4ea62477096045bd2bb6ee60a2beb2",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.9,
+        "sellTaxPercent": 3.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4167549,
+        "shareLocked": 0,
+        "lockExpiry": "2028-12-21",
+        "largestRemovalPercent": 0.2
+      },
+      "holders": {
+        "count": 44411,
+        "top10Share": 0.126,
+        "creatorShare": 0.007,
+        "vestingContractShare": 0.066,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.003
+      },
+      "trading": {
+        "ageDays": 995,
+        "buys": 1212,
+        "successfulSells": 1949,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.622,
+        "volume24hUsd": 646519,
+        "volume7dUsd": 14426082,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0136",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO07db732044016cbb175fa14785c77f",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.1,
+        "sellTaxPercent": 2.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4225788,
+        "shareLocked": 0.944,
+        "lockExpiry": "2029-02-20",
+        "largestRemovalPercent": 0.75
+      },
+      "holders": {
+        "count": 58036,
+        "top10Share": 0.163,
+        "creatorShare": 0.088,
+        "vestingContractShare": 0.075,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.005
+      },
+      "trading": {
+        "ageDays": 391,
+        "buys": 2409,
+        "successfulSells": 3640,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.662,
+        "volume24hUsd": 1787808,
+        "volume7dUsd": 12746897,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0137",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOac37a2589d03f6dce2f7a4c98a310f",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.4,
+        "sellTaxPercent": 28.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6552692,
+        "shareLocked": 0.777,
+        "lockExpiry": "2028-11-05",
+        "largestRemovalPercent": 0.47
+      },
+      "holders": {
+        "count": 70510,
+        "top10Share": 0.373,
+        "creatorShare": 0.117,
+        "vestingContractShare": 0.043,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.018
+      },
+      "trading": {
+        "ageDays": 168,
+        "buys": 1153,
+        "successfulSells": 723,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.595,
+        "volume24hUsd": 1392501,
+        "volume7dUsd": 6107920,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0138",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO7e50889634e79cb9db82f1058d1559",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.7,
+        "sellTaxPercent": 4.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4048694,
+        "shareLocked": 0.994,
+        "lockExpiry": "2028-04-05",
+        "largestRemovalPercent": 1.31
+      },
+      "holders": {
+        "count": 47707,
+        "top10Share": 0.198,
+        "creatorShare": 0.017,
+        "vestingContractShare": 0.051,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.009
+      },
+      "trading": {
+        "ageDays": 430,
+        "buys": 2395,
+        "successfulSells": 412,
+        "failedSellAttempts": 1,
+        "buySellRatio": 5.813,
+        "volume24hUsd": 1295642,
+        "volume7dUsd": 1683206,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0139",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMO4b06302e1d03bafb644392a6ff369f",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.4,
+        "sellTaxPercent": 2.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7312111,
+        "shareLocked": 0.986,
+        "lockExpiry": "2027-01-20",
+        "largestRemovalPercent": 0.04
+      },
+      "holders": {
+        "count": 53594,
+        "top10Share": 0.828,
+        "creatorShare": 0.53,
+        "vestingContractShare": 0,
+        "vestingContractVerified": false,
+        "burnAddressShare": 0.038
+      },
+      "trading": {
+        "ageDays": 84,
+        "buys": 2135,
+        "successfulSells": 2596,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.822,
+        "volume24hUsd": 2380528,
+        "volume7dUsd": 1632338,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0140",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO588b1c8cede1aa457c8eca585d9f92",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.6,
+        "sellTaxPercent": 2.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2371407,
+        "shareLocked": 0.866,
+        "lockExpiry": "2029-08-28",
+        "largestRemovalPercent": 1.12
+      },
+      "holders": {
+        "count": 51066,
+        "top10Share": 0.256,
+        "creatorShare": 0.069,
+        "vestingContractShare": 0.019,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.069
+      },
+      "trading": {
+        "ageDays": 575,
+        "buys": 1460,
+        "successfulSells": 2266,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.644,
+        "volume24hUsd": 1527706,
+        "volume7dUsd": 5658735,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0141",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO697d96078ab5ffaa7e5c99acbb285c",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.3,
+        "sellTaxPercent": 4.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1015635,
+        "shareLocked": 0.88,
+        "lockExpiry": "2028-09-03",
+        "largestRemovalPercent": 0.37
+      },
+      "holders": {
+        "count": 16708,
+        "top10Share": 0.127,
+        "creatorShare": 0.119,
+        "vestingContractShare": 0.019,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.078
+      },
+      "trading": {
+        "ageDays": 251,
+        "buys": 2774,
+        "successfulSells": 2323,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.194,
+        "volume24hUsd": 1326484,
+        "volume7dUsd": 7355014,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0142",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO66ee1119e2a59685f70d278ca35532",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.9,
+        "sellTaxPercent": 0.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6193510,
+        "shareLocked": 0.744,
+        "lockExpiry": "2027-03-23",
+        "largestRemovalPercent": 0.04
+      },
+      "holders": {
+        "count": 62390,
+        "top10Share": 0.386,
+        "creatorShare": 0.111,
+        "vestingContractShare": 0.013,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.072
+      },
+      "trading": {
+        "ageDays": 477,
+        "buys": 1446,
+        "successfulSells": 1135,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.274,
+        "volume24hUsd": 1505803,
+        "volume7dUsd": 3723370,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0143",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMOb8d03faeda9c21c06a4299c4eca86f",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.2,
+        "sellTaxPercent": 4.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 2652568,
+        "shareLocked": 0.921,
+        "lockExpiry": "2027-03-25",
+        "largestRemovalPercent": 0.68
+      },
+      "holders": {
+        "count": 48043,
+        "top10Share": 0.137,
+        "creatorShare": 0.111,
+        "vestingContractShare": 0.065,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.084
+      },
+      "trading": {
+        "ageDays": 45,
+        "buys": 3938,
+        "successfulSells": 2659,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.481,
+        "volume24hUsd": 709383,
+        "volume7dUsd": 10899177,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0144",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMOfa59ed37d63a4c22f8ab8bc3106432",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.8,
+        "sellTaxPercent": 2.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 545447,
+        "shareLocked": 0.785,
+        "lockExpiry": "2028-09-20",
+        "largestRemovalPercent": 1.82
+      },
+      "holders": {
+        "count": 31094,
+        "top10Share": 0.166,
+        "creatorShare": 0.088,
+        "vestingContractShare": 0.037,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.061
+      },
+      "trading": {
+        "ageDays": 328,
+        "buys": 2615,
+        "successfulSells": 1293,
+        "failedSellAttempts": 0,
+        "buySellRatio": 2.022,
+        "volume24hUsd": 1065744,
+        "volume7dUsd": 14881270,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0145",
+      "name": "Verda Demo Token",
+      "symbol": "DVERD",
+      "contractAddress": "0xDEMO066e09e882052cdc2e0d32bdee9a80",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.3,
+        "sellTaxPercent": 0.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7249048,
+        "shareLocked": 0.738,
+        "lockExpiry": "2027-05-14",
+        "largestRemovalPercent": 0.1
+      },
+      "holders": {
+        "count": 10439,
+        "top10Share": 0.432,
+        "creatorShare": 0.07,
+        "vestingContractShare": 0.048,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.05
+      },
+      "trading": {
+        "ageDays": 250,
+        "buys": 3918,
+        "successfulSells": 765,
+        "failedSellAttempts": 0,
+        "buySellRatio": 5.122,
+        "volume24hUsd": 1758529,
+        "volume7dUsd": 10348660,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0146",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMOfc96be2afb73ffbd1ef2075eaeff71",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.4,
+        "sellTaxPercent": 1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4212833,
+        "shareLocked": 0.805,
+        "lockExpiry": "2029-06-28",
+        "largestRemovalPercent": 2.79
+      },
+      "holders": {
+        "count": 57671,
+        "top10Share": 0.197,
+        "creatorShare": 0.025,
+        "vestingContractShare": 0.056,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.086
+      },
+      "trading": {
+        "ageDays": 576,
+        "buys": 594,
+        "successfulSells": 168,
+        "failedSellAttempts": 0,
+        "buySellRatio": 3.536,
+        "volume24hUsd": 182220,
+        "volume7dUsd": 13189099,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0147",
+      "name": "Zephyr Demo Token",
+      "symbol": "DZEPH",
+      "contractAddress": "0xDEMOb719797e4d75f5143109f51941bd3e",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.2,
+        "sellTaxPercent": 1.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1754017,
+        "shareLocked": 0.175,
+        "lockExpiry": "2026-09-01",
+        "largestRemovalPercent": 54.66
+      },
+      "holders": {
+        "count": 67114,
+        "top10Share": 0.294,
+        "creatorShare": 0.029,
+        "vestingContractShare": 0.025,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.004
+      },
+      "trading": {
+        "ageDays": 46,
+        "buys": 2170,
+        "successfulSells": 2807,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.773,
+        "volume24hUsd": 120888,
+        "volume7dUsd": 4648590,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0148",
+      "name": "Terra Demo Token",
+      "symbol": "DTERR",
+      "contractAddress": "0xDEMOd176377d6c58c433f39bc295037d36",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.9,
+        "sellTaxPercent": 2.7,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7829966,
+        "shareLocked": 0.98,
+        "lockExpiry": "2029-09-26",
+        "largestRemovalPercent": 1.56
+      },
+      "holders": {
+        "count": 75772,
+        "top10Share": 0.295,
+        "creatorShare": 0.105,
+        "vestingContractShare": 0.006,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.088
+      },
+      "trading": {
+        "ageDays": 416,
+        "buys": 2349,
+        "successfulSells": 3702,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.635,
+        "volume24hUsd": 1679202,
+        "volume7dUsd": 2307073,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0149",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMOa8f4e700f19c69fe504dce48a07f14",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.5,
+        "sellTaxPercent": 2.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1834766,
+        "shareLocked": 0.936,
+        "lockExpiry": "2029-08-21",
+        "largestRemovalPercent": 2.72
+      },
+      "holders": {
+        "count": 2788,
+        "top10Share": 0.622,
+        "creatorShare": 0.049,
+        "vestingContractShare": 0.524,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.021
+      },
+      "trading": {
+        "ageDays": 17,
+        "buys": 1815,
+        "successfulSells": 3206,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.566,
+        "volume24hUsd": 914181,
+        "volume7dUsd": 15405181,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0150",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMOebf3a381623dd91ba8d7ca2d2f395a",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1,
+        "sellTaxPercent": 5,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6645466,
+        "shareLocked": 0.756,
+        "lockExpiry": "2029-12-25",
+        "largestRemovalPercent": 1.1
+      },
+      "holders": {
+        "count": 73821,
+        "top10Share": 0.13,
+        "creatorShare": 0.119,
+        "vestingContractShare": 0.056,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.041
+      },
+      "trading": {
+        "ageDays": 37,
+        "buys": 1451,
+        "successfulSells": 861,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.685,
+        "volume24hUsd": 2459733,
+        "volume7dUsd": 14961396,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0151",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMOe056eecbe3cda01cf6408cee4241cc",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 3.8,
+        "sellTaxPercent": 4.1,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 13979500,
+        "shareLocked": 0,
+        "lockExpiry": "2029-08-05",
+        "largestRemovalPercent": 0.39
+      },
+      "holders": {
+        "count": 5727,
+        "top10Share": 0.193,
+        "creatorShare": 0.019,
+        "vestingContractShare": 0.026,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.077
+      },
+      "trading": {
+        "ageDays": 619,
+        "buys": 3761,
+        "successfulSells": 2404,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.564,
+        "volume24hUsd": 1245197,
+        "volume7dUsd": 2070361,
+        "volumeTrend": "steady"
+      }
+    },
+    {
+      "id": "TOK-0152",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO864ffe233558a10222db99e69bc127",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 5.7,
+        "sellTaxPercent": 23,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7470738,
+        "shareLocked": 0.905,
+        "lockExpiry": "2029-12-18",
+        "largestRemovalPercent": 1.35
+      },
+      "holders": {
+        "count": 50225,
+        "top10Share": 0.349,
+        "creatorShare": 0.052,
+        "vestingContractShare": 0.073,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.025
+      },
+      "trading": {
+        "ageDays": 139,
+        "buys": 1145,
+        "successfulSells": 965,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.187,
+        "volume24hUsd": 1217551,
+        "volume7dUsd": 7268612,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0153",
+      "name": "Quartz Demo Token",
+      "symbol": "DQUAR",
+      "contractAddress": "0xDEMO1aa44ba4022b56923725d202a3ed8d",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 0.7,
+        "sellTaxPercent": 1.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 7806725,
+        "shareLocked": 0.771,
+        "lockExpiry": "2028-12-12",
+        "largestRemovalPercent": 2.83
+      },
+      "holders": {
+        "count": 77120,
+        "top10Share": 0.228,
+        "creatorShare": 0.044,
+        "vestingContractShare": 0.039,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.076
+      },
+      "trading": {
+        "ageDays": 727,
+        "buys": 421,
+        "successfulSells": 936,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.45,
+        "volume24hUsd": 710619,
+        "volume7dUsd": 11285746,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0154",
+      "name": "Orbit Demo Token",
+      "symbol": "DORBI",
+      "contractAddress": "0xDEMO454ca02fa68ca9693403d6b73d29c2",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.4,
+        "sellTaxPercent": 2.5,
+        "blacklistFunction": true
+      },
+      "liquidity": {
+        "poolUsd": 5712772,
+        "shareLocked": 0.753,
+        "lockExpiry": "2028-09-20",
+        "largestRemovalPercent": 1.72
+      },
+      "holders": {
+        "count": 30148,
+        "top10Share": 0.555,
+        "creatorShare": 0.046,
+        "vestingContractShare": 0.045,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.092
+      },
+      "trading": {
+        "ageDays": 21,
+        "buys": 457,
+        "successfulSells": 3,
+        "failedSellAttempts": 11,
+        "buySellRatio": 152.333,
+        "volume24hUsd": 115770,
+        "volume7dUsd": 9501928,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0155",
+      "name": "Nimbus Demo Token",
+      "symbol": "DNIMB",
+      "contractAddress": "0xDEMO24f95f91fc9c1cf20a466e1870cc34",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.6,
+        "sellTaxPercent": 2.3,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 1109552,
+        "shareLocked": 0.819,
+        "lockExpiry": "2028-02-07",
+        "largestRemovalPercent": 1.13
+      },
+      "holders": {
+        "count": 78190,
+        "top10Share": 0.22,
+        "creatorShare": 0.056,
+        "vestingContractShare": 0.067,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.048
+      },
+      "trading": {
+        "ageDays": 148,
+        "buys": 2393,
+        "successfulSells": 3268,
+        "failedSellAttempts": 1,
+        "buySellRatio": 0.732,
+        "volume24hUsd": 897789,
+        "volume7dUsd": 12257444,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0156",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMO52b8c43a6496bc9415b682e47ac99e",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 4,
+        "sellTaxPercent": 2.2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6169343,
+        "shareLocked": 0.033,
+        "lockExpiry": "2026-09-01",
+        "largestRemovalPercent": 56.27
+      },
+      "holders": {
+        "count": 9020,
+        "top10Share": 0.355,
+        "creatorShare": 0.066,
+        "vestingContractShare": 0.056,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.045
+      },
+      "trading": {
+        "ageDays": 51,
+        "buys": 570,
+        "successfulSells": 520,
+        "failedSellAttempts": 1,
+        "buySellRatio": 1.096,
+        "volume24hUsd": 1709931,
+        "volume7dUsd": 10188413,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0157",
+      "name": "Vexel Demo Token",
+      "symbol": "DVEXE",
+      "contractAddress": "0xDEMOf3e7feb1c67f3b4ef61965e6be6758",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": true,
+        "ownershipRenounced": false,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.9,
+        "sellTaxPercent": 1.9,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 4375452,
+        "shareLocked": 0.916,
+        "lockExpiry": "2029-04-21",
+        "largestRemovalPercent": 2.03
+      },
+      "holders": {
+        "count": 58091,
+        "top10Share": 0.551,
+        "creatorShare": 0.469,
+        "vestingContractShare": 0.03,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.091
+      },
+      "trading": {
+        "ageDays": 40,
+        "buys": 3314,
+        "successfulSells": 2901,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.142,
+        "volume24hUsd": 1428626,
+        "volume7dUsd": 12486242,
+        "volumeTrend": "bursty"
+      }
+    },
+    {
+      "id": "TOK-0158",
+      "name": "Sable Demo Token",
+      "symbol": "DSABL",
+      "contractAddress": "0xDEMO93c824081838bc88de6de52cd81286",
+      "chain": "Base test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.3,
+        "sellTaxPercent": 2.6,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 5589243,
+        "shareLocked": 0.826,
+        "lockExpiry": "2029-11-26",
+        "largestRemovalPercent": 0.51
+      },
+      "holders": {
+        "count": 54540,
+        "top10Share": 0.416,
+        "creatorShare": 0.065,
+        "vestingContractShare": 0.054,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.081
+      },
+      "trading": {
+        "ageDays": 105,
+        "buys": 1227,
+        "successfulSells": 1566,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.784,
+        "volume24hUsd": 1178412,
+        "volume7dUsd": 3884957,
+        "volumeTrend": "rising"
+      }
+    },
+    {
+      "id": "TOK-0159",
+      "name": "Kobalt Demo Token",
+      "symbol": "DKOBA",
+      "contractAddress": "0xDEMO7754b237cb1e8440e57ac225b0cf89",
+      "chain": "Ethereum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 2.8,
+        "sellTaxPercent": 2,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 3428692,
+        "shareLocked": 0.995,
+        "lockExpiry": "2028-05-14",
+        "largestRemovalPercent": 0.97
+      },
+      "holders": {
+        "count": 52744,
+        "top10Share": 0.359,
+        "creatorShare": 0.026,
+        "vestingContractShare": 0.077,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.007
+      },
+      "trading": {
+        "ageDays": 678,
+        "buys": 475,
+        "successfulSells": 264,
+        "failedSellAttempts": 0,
+        "buySellRatio": 1.799,
+        "volume24hUsd": 532472,
+        "volume7dUsd": 14561039,
+        "volumeTrend": "falling"
+      }
+    },
+    {
+      "id": "TOK-0160",
+      "name": "Lumen Demo Token",
+      "symbol": "DLUME",
+      "contractAddress": "0xDEMO151b3d030cbee91fce8e5c98e9de41",
+      "chain": "Arbitrum test fixture",
+      "contract": {
+        "mintAuthorityPresent": false,
+        "ownershipRenounced": true,
+        "proxyUpgradeable": false,
+        "buyTaxPercent": 1.1,
+        "sellTaxPercent": 4.4,
+        "blacklistFunction": false
+      },
+      "liquidity": {
+        "poolUsd": 6150212,
+        "shareLocked": 0.832,
+        "lockExpiry": "2029-11-13",
+        "largestRemovalPercent": 0.93
+      },
+      "holders": {
+        "count": 57936,
+        "top10Share": 0.347,
+        "creatorShare": 0.045,
+        "vestingContractShare": 0.03,
+        "vestingContractVerified": true,
+        "burnAddressShare": 0.037
+      },
+      "trading": {
+        "ageDays": 884,
+        "buys": 1807,
+        "successfulSells": 2565,
+        "failedSellAttempts": 0,
+        "buySellRatio": 0.704,
+        "volume24hUsd": 1832660,
+        "volume7dUsd": 6138517,
+        "volumeTrend": "steady"
+      }
+    }
+  ]
+}
