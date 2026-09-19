@@ -79,7 +79,7 @@ function report(results, context = {}) {
 export default {
   id: 'dividend-safety', title: 'Dividend safety', domain: 'screening',
   value: 'Judge whether a payout survives a bad year and show yield beside safety without leaking price to the model.',
-  tags: ['screening', 'dividends', 'cash flow', 'yield'], dataClass: 'cached-real', readMinutes: 5, view: 'statements', status: 'pending-recording',
+  tags: ['screening', 'dividends', 'cash flow', 'yield'], dataClass: 'cached-real', readMinutes: 5, view: 'statements',
   itemLabel: (item) => `${item.symbol} · ${item.sector ?? 'no issuer sector'} · ${item.cacheCoverage.annualYears} annual years`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), buildState, questions, evaluate, report,
   explain: { data: 'src/services/ratios.js#demo:dividend-data', state: 'demos/dividend-safety/demo.js#demo:state', questions: 'demos/dividend-safety/demo.js#demo:questions', evaluate: 'demos/dividend-safety/demo.js#demo:evaluate' },
