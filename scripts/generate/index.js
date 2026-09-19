@@ -37,6 +37,7 @@ export const GENERATORS = {
   'accounting-flags': () => import('./accounting-flags.js'),
   'news-impact': () => import('./news-impact.js'),
   'filings-read': () => import('./filings-read.js'),
+  'rumour-grading': () => import('./rumour-grading.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

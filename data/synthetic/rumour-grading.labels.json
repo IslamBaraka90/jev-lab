@@ -1,0 +1,1682 @@
+[
+  {
+    "claimId": "RM-0001",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0002",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0003",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0004",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0005",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0006",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0007",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0008",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0009",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0010",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0011",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0012",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0013",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0014",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0015",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0016",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0017",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0018",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0019",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0020",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0021",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0022",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0023",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0024",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0025",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0026",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0027",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0028",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0029",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0030",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0031",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0032",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0033",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0034",
+    "outcome": "CONFIRMED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0035",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0036",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0037",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0038",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0039",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0040",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0041",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0042",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0043",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0044",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0045",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0046",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0047",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0048",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0049",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0050",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0051",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0052",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0053",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0054",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0055",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0056",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0057",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0058",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0059",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0060",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0061",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0062",
+    "outcome": "CONFIRMED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0063",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0064",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0065",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0066",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0067",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0068",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0069",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0070",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0071",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0072",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0073",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0074",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0075",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0076",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0077",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0078",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0079",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0080",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0081",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0082",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0083",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0084",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0085",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0086",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0087",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0088",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0089",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0090",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0091",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0092",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0093",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0094",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0095",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0096",
+    "outcome": "UNRESOLVED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0097",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0098",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0099",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0100",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0101",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0102",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0103",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0104",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0105",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0106",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0107",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0108",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0109",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0110",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0111",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0112",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0113",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0114",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0115",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0116",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0117",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0118",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0119",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0120",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0121",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0122",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0123",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0124",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0125",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0126",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0127",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0128",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0129",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0130",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0131",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0132",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0133",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0134",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0135",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0136",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0137",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0138",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0139",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0140",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0141",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0142",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0143",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0144",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0145",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0146",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0147",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0148",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0149",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0150",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0151",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0152",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0153",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0154",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0155",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0156",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0157",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0158",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0159",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0160",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0161",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0162",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0163",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0164",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0165",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0166",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0167",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0168",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0169",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0170",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0171",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0172",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0173",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0174",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0175",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0176",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0177",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0178",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0179",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0180",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0181",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0182",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0183",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0184",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0185",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0186",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0187",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0188",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0189",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0190",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0191",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0192",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0193",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0194",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0195",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0196",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0197",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0198",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0199",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0200",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0201",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0202",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0203",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0204",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0205",
+    "outcome": "DENIED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0206",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0207",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0208",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0209",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0210",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0211",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0212",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0213",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0214",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0215",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0216",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0217",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0218",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0219",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0220",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0221",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0222",
+    "outcome": "UNRESOLVED",
+    "coordinated": true,
+    "spread": "COORDINATED",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0223",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "VIRAL",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0224",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0225",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": true
+  },
+  {
+    "claimId": "RM-0226",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0227",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0228",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0229",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0230",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0231",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0232",
+    "outcome": "DENIED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0233",
+    "outcome": "CONFIRMED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0234",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0235",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0236",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0237",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0238",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0239",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  },
+  {
+    "claimId": "RM-0240",
+    "outcome": "UNRESOLVED",
+    "coordinated": false,
+    "spread": "QUIET",
+    "checkable": false
+  }
+]
