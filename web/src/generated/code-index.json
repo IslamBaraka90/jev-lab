@@ -1,4 +1,32 @@
 {
+  "demos/bank-reconciliation/demo.js#demo:state": {
+    "path": "demos/bank-reconciliation/demo.js",
+    "startLine": 21,
+    "endLine": 40,
+    "code": "/** The statement line and ranked candidates are all the model sees; labels stay in a separate file. */\nfunction buildState(item, context) {\n  return {\n    task: 'Reconcile this open bank statement line to one ledger entry, or decide that none matches.',\n    period: context.period,\n    bank_account: {\n      bank: context.bank.name,\n      account_reference: context.bank.accountReference,\n      currency: context.currency,\n      opening_balance: context.openingBalance,\n      closing_balance: context.closingBalance,\n      bank_reference_format: context.referenceFormat,\n    },\n    statement_line: item.statement,\n    candidate_ledger_entries: item.candidates.map((entry, index) => ({\n      option: `CANDIDATE_${index + 1}`,\n      ...entry,\n    })),\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/bank-reconciliation/demo.js#demo:questions": {
+    "path": "demos/bank-reconciliation/demo.js",
+    "startLine": 44,
+    "endLine": 75,
+    "code": "const questions = {\n  best_match: choice('Which candidate ledger entry best matches the statement line?', {\n    CANDIDATE_1: 'The first candidate in the ranked ledger list.',\n    CANDIDATE_2: 'The second candidate in the ranked ledger list.',\n    CANDIDATE_3: 'The third candidate in the ranked ledger list.',\n    CANDIDATE_4: 'The fourth candidate in the ranked ledger list.',\n    CANDIDATE_5: 'The fifth candidate in the ranked ledger list.',\n    NONE: 'No candidate is the same underlying transaction.',\n  }),\n  match_quality: score('How strong is the match between the statement line and the chosen candidate?', [\n    'No match',\n    'Weak',\n    'Possible',\n    'Likely',\n    'Strong',\n    'Near certain',\n    'Exact',\n  ]),\n  break_reason: choice('What explains why this statement line did not pre-clear automatically?', {\n    TIMING: 'The same transaction was posted on a meaningfully different date.',\n    BANK_FEE: 'The bank charged a fee that has not been booked.',\n    FX_DIFFERENCE: 'The transaction-currency amount agrees but the account-currency amount changed.',\n    PARTIAL_PAYMENT: 'The bank movement settles only part of the booked amount.',\n    DUPLICATE: 'The books contain more than one posting for the same bank movement.',\n    MISSING_IN_BOOKS: 'The bank movement has no corresponding ledger entry.',\n    MATCHED: 'One candidate is the transaction despite a messy reference or date.',\n  }),\n  auto_clear: noul('Should this line be cleared automatically without a person opening it?', {\n    yes: 'The match is strong, singular, and safe to clear.',\n    no: 'A person should resolve the difference or ambiguity.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/bank-reconciliation/demo.js#demo:evaluate": {
+    "path": "demos/bank-reconciliation/demo.js",
+    "startLine": 79,
+    "endLine": 97,
+    "code": "/** Converts four typed answers into the operating decision shown beside this statement line. */\nfunction evaluate(answers, item) {\n  const entry = selectedEntry(item, answers.best_match.choice);\n  const reason = answers.break_reason.choice;\n  const quality = answers.match_quality.score;\n  const clearProbability = answers.auto_clear.noul;\n  const autoCleared = Boolean(entry) && reason === 'MATCHED' && quality >= QUALITY_THRESHOLD && clearProbability >= CLEAR_PROBABILITY;\n\n  return {\n    flagged: reason !== 'MATCHED',\n    bestMatch: entry?.id ?? 'NONE',\n    breakReason: reason,\n    matchQuality: quality,\n    clearProbability,\n    autoCleared,\n    forReview: !autoCleared,\n    label: autoCleared ? `${item.id}: auto-clear to ${entry.id}` : `${item.id}: ${readable(reason)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/bank-reconciliation/demo.js#demo:report": {
+    "path": "demos/bank-reconciliation/demo.js",
+    "startLine": 101,
+    "endLine": 125,
+    "code": "/** Grades matching and break reasons, then turns the quality bar into automation and workload. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const labelByItem = new Map(labels.map((label) => [label.statementLineId, label]));\n  const problems = groupProblems(labels);\n  const correct = results.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const cleared = results.filter((result) => result.evaluation.autoCleared);\n  const gradedClears = cleared.filter((result) => labelByItem.has(result.item.id));\n  const preciseClears = gradedClears.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const remaining = context.items.filter((item) => !cleared.some((result) => result.item.id === item.id));\n  const reconciliation = reconcile(context, cleared, remaining);\n\n  return {\n    note: `Graded against ${problems.size} planted reconciliation problems. Labels never enter the model state.`,\n    findings: clusterDisagreements(results, labelByItem),\n    kpis: kpis(results, cleared, gradedClears, preciseClears, remaining, context.currency),\n    distribution: distribution(results),\n    matrix: confusion(results, labelByItem),\n    curve: coverage(results, labelByItem, labels),\n    checks: checks(results, labels, problems, labelByItem, reconciliation),\n    topItems: topItems(results, labelByItem, context.currency),\n    reconciliation,\n    resolvedProblems: resolvedProblemCount(correct, problems),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/expense-posting/demo.js#demo:state": {
     "path": "demos/expense-posting/demo.js",
     "startLine": 10,
@@ -81,6 +109,13 @@
     "startLine": 82,
     "endLine": 102,
     "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/bank-reconciliation.js#demo:data": {
+    "path": "scripts/generate/bank-reconciliation.js",
+    "startLine": 116,
+    "endLine": 124,
+    "code": "/** The deterministic short-list: same direction first, then relative amount gap, date gap, and id. */\nfunction rankCandidates(statement, ledgerEntries) {\n  const score = (entry) => {\n    const directionPenalty = entry.direction === statement.direction ? 0 : 10;\n    const amountGap = Math.abs(entry.amount - statement.amount) / Math.max(entry.amount, statement.amount, 1);\n    return directionPenalty + amountGap * 2 + daysApart(entry.date, statement.date) * 0.08;\n  };\n  return [...ledgerEntries].sort((left, right) => score(left) - score(right) || left.id.localeCompare(right.id));\n}",
     "language": "javascript"
   },
   "scripts/generate/expense-posting.js#demo:data": {

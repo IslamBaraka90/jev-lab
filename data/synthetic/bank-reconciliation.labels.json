@@ -1,0 +1,422 @@
+[
+  {
+    "statementLineId": "S-0065",
+    "itemId": "S-0065",
+    "matchesEntryId": "B-0026",
+    "breakReason": "TIMING",
+    "problemId": "timing-01"
+  },
+  {
+    "statementLineId": "S-0080",
+    "itemId": "S-0080",
+    "matchesEntryId": "B-0125",
+    "breakReason": "TIMING",
+    "problemId": "timing-02"
+  },
+  {
+    "statementLineId": "S-0154",
+    "itemId": "S-0154",
+    "matchesEntryId": "B-0104",
+    "breakReason": "TIMING",
+    "problemId": "timing-03"
+  },
+  {
+    "statementLineId": "S-0110",
+    "itemId": "S-0110",
+    "matchesEntryId": "B-0149",
+    "breakReason": "TIMING",
+    "problemId": "timing-04"
+  },
+  {
+    "statementLineId": "S-0155",
+    "itemId": "S-0155",
+    "matchesEntryId": "B-0202",
+    "breakReason": "TIMING",
+    "problemId": "timing-05"
+  },
+  {
+    "statementLineId": "S-0122",
+    "itemId": "S-0122",
+    "matchesEntryId": "B-0063",
+    "breakReason": "TIMING",
+    "problemId": "timing-06"
+  },
+  {
+    "statementLineId": "S-0123",
+    "itemId": "S-0123",
+    "matchesEntryId": "B-0166",
+    "breakReason": "TIMING",
+    "problemId": "timing-07"
+  },
+  {
+    "statementLineId": "S-0165",
+    "itemId": "S-0165",
+    "matchesEntryId": "B-0212",
+    "breakReason": "TIMING",
+    "problemId": "timing-08"
+  },
+  {
+    "statementLineId": "S-0092",
+    "itemId": "S-0092",
+    "matchesEntryId": "B-0040",
+    "breakReason": "TIMING",
+    "problemId": "timing-09"
+  },
+  {
+    "statementLineId": "S-0058",
+    "itemId": "S-0058",
+    "matchesEntryId": "B-0105",
+    "breakReason": "TIMING",
+    "problemId": "timing-10"
+  },
+  {
+    "statementLineId": "S-0059",
+    "itemId": "S-0059",
+    "matchesEntryId": "B-0014",
+    "breakReason": "TIMING",
+    "problemId": "timing-11"
+  },
+  {
+    "statementLineId": "S-0190",
+    "itemId": "S-0190",
+    "matchesEntryId": "B-0224",
+    "breakReason": "TIMING",
+    "problemId": "timing-12"
+  },
+  {
+    "statementLineId": "S-0191",
+    "itemId": "S-0191",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-01"
+  },
+  {
+    "statementLineId": "S-0226",
+    "itemId": "S-0226",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-02"
+  },
+  {
+    "statementLineId": "S-0198",
+    "itemId": "S-0198",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-03"
+  },
+  {
+    "statementLineId": "S-0011",
+    "itemId": "S-0011",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-04"
+  },
+  {
+    "statementLineId": "S-0166",
+    "itemId": "S-0166",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-05"
+  },
+  {
+    "statementLineId": "S-0137",
+    "itemId": "S-0137",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-06"
+  },
+  {
+    "statementLineId": "S-0053",
+    "itemId": "S-0053",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-07"
+  },
+  {
+    "statementLineId": "S-0101",
+    "itemId": "S-0101",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-08"
+  },
+  {
+    "statementLineId": "S-0102",
+    "itemId": "S-0102",
+    "matchesEntryId": null,
+    "breakReason": "BANK_FEE",
+    "problemId": "fee-09"
+  },
+  {
+    "statementLineId": "S-0124",
+    "itemId": "S-0124",
+    "matchesEntryId": "B-0115",
+    "breakReason": "FX_DIFFERENCE",
+    "problemId": "fx-01"
+  },
+  {
+    "statementLineId": "S-0093",
+    "itemId": "S-0093",
+    "matchesEntryId": "B-0089",
+    "breakReason": "FX_DIFFERENCE",
+    "problemId": "fx-02"
+  },
+  {
+    "statementLineId": "S-0211",
+    "itemId": "S-0211",
+    "matchesEntryId": "B-0203",
+    "breakReason": "FX_DIFFERENCE",
+    "problemId": "fx-03"
+  },
+  {
+    "statementLineId": "S-0040",
+    "itemId": "S-0040",
+    "matchesEntryId": "B-0041",
+    "breakReason": "FX_DIFFERENCE",
+    "problemId": "fx-04"
+  },
+  {
+    "statementLineId": "S-0066",
+    "itemId": "S-0066",
+    "matchesEntryId": "B-0064",
+    "breakReason": "FX_DIFFERENCE",
+    "problemId": "fx-05"
+  },
+  {
+    "statementLineId": "S-0084",
+    "itemId": "S-0084",
+    "matchesEntryId": "B-0080",
+    "breakReason": "FX_DIFFERENCE",
+    "problemId": "fx-06"
+  },
+  {
+    "statementLineId": "S-0067",
+    "itemId": "S-0067",
+    "matchesEntryId": "B-0065",
+    "breakReason": "FX_DIFFERENCE",
+    "problemId": "fx-07"
+  },
+  {
+    "statementLineId": "S-0212",
+    "itemId": "S-0212",
+    "matchesEntryId": "B-0204",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-01"
+  },
+  {
+    "statementLineId": "S-0218",
+    "itemId": "S-0218",
+    "matchesEntryId": "B-0213",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-02"
+  },
+  {
+    "statementLineId": "S-0024",
+    "itemId": "S-0024",
+    "matchesEntryId": "B-0027",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-03"
+  },
+  {
+    "statementLineId": "S-0138",
+    "itemId": "S-0138",
+    "matchesEntryId": "B-0129",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-04"
+  },
+  {
+    "statementLineId": "S-0103",
+    "itemId": "S-0103",
+    "matchesEntryId": "B-0097",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-05"
+  },
+  {
+    "statementLineId": "S-0139",
+    "itemId": "S-0139",
+    "matchesEntryId": "B-0130",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-06"
+  },
+  {
+    "statementLineId": "S-0032",
+    "itemId": "S-0032",
+    "matchesEntryId": "B-0035",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-07"
+  },
+  {
+    "statementLineId": "S-0140",
+    "itemId": "S-0140",
+    "matchesEntryId": "B-0131",
+    "breakReason": "PARTIAL_PAYMENT",
+    "problemId": "partial-08"
+  },
+  {
+    "statementLineId": "S-0104",
+    "itemId": "S-0104",
+    "matchesEntryId": "B-0098",
+    "breakReason": "DUPLICATE",
+    "problemId": "duplicate-01"
+  },
+  {
+    "statementLineId": "S-0149",
+    "itemId": "S-0149",
+    "matchesEntryId": "B-0143",
+    "breakReason": "DUPLICATE",
+    "problemId": "duplicate-02"
+  },
+  {
+    "statementLineId": "S-0111",
+    "itemId": "S-0111",
+    "matchesEntryId": "B-0107",
+    "breakReason": "DUPLICATE",
+    "problemId": "duplicate-03"
+  },
+  {
+    "statementLineId": "S-0060",
+    "itemId": "S-0060",
+    "matchesEntryId": "B-0058",
+    "breakReason": "DUPLICATE",
+    "problemId": "duplicate-04"
+  },
+  {
+    "statementLineId": "S-0068",
+    "itemId": "S-0068",
+    "matchesEntryId": "B-0067",
+    "breakReason": "DUPLICATE",
+    "problemId": "duplicate-05"
+  },
+  {
+    "statementLineId": "S-0199",
+    "itemId": "S-0199",
+    "matchesEntryId": "B-0193",
+    "breakReason": "DUPLICATE",
+    "problemId": "duplicate-06"
+  },
+  {
+    "statementLineId": "S-0041",
+    "itemId": "S-0041",
+    "matchesEntryId": null,
+    "breakReason": "MISSING_IN_BOOKS",
+    "problemId": "missing-01"
+  },
+  {
+    "statementLineId": "S-0192",
+    "itemId": "S-0192",
+    "matchesEntryId": null,
+    "breakReason": "MISSING_IN_BOOKS",
+    "problemId": "missing-02"
+  },
+  {
+    "statementLineId": "S-0232",
+    "itemId": "S-0232",
+    "matchesEntryId": null,
+    "breakReason": "MISSING_IN_BOOKS",
+    "problemId": "missing-03"
+  },
+  {
+    "statementLineId": "S-0061",
+    "itemId": "S-0061",
+    "matchesEntryId": null,
+    "breakReason": "MISSING_IN_BOOKS",
+    "problemId": "missing-04"
+  },
+  {
+    "statementLineId": "S-0094",
+    "itemId": "S-0094",
+    "matchesEntryId": null,
+    "breakReason": "MISSING_IN_BOOKS",
+    "problemId": "missing-05"
+  },
+  {
+    "statementLineId": "S-0131",
+    "itemId": "S-0131",
+    "matchesEntryId": "B-0144",
+    "breakReason": "MATCHED",
+    "problemId": "matched-01"
+  },
+  {
+    "statementLineId": "S-0042",
+    "itemId": "S-0042",
+    "matchesEntryId": "B-0059",
+    "breakReason": "MATCHED",
+    "problemId": "matched-02"
+  },
+  {
+    "statementLineId": "S-0085",
+    "itemId": "S-0085",
+    "matchesEntryId": "B-0099",
+    "breakReason": "MATCHED",
+    "problemId": "matched-03"
+  },
+  {
+    "statementLineId": "S-0081",
+    "itemId": "S-0081",
+    "matchesEntryId": "B-0090",
+    "breakReason": "MATCHED",
+    "problemId": "matched-04"
+  },
+  {
+    "statementLineId": "S-0125",
+    "itemId": "S-0125",
+    "matchesEntryId": "B-0145",
+    "breakReason": "MATCHED",
+    "problemId": "matched-05"
+  },
+  {
+    "statementLineId": "S-0112",
+    "itemId": "S-0112",
+    "matchesEntryId": "B-0091",
+    "breakReason": "MATCHED",
+    "problemId": "matched-06"
+  },
+  {
+    "statementLineId": "S-0200",
+    "itemId": "S-0200",
+    "matchesEntryId": "B-0175",
+    "breakReason": "MATCHED",
+    "problemId": "matched-07"
+  },
+  {
+    "statementLineId": "S-0062",
+    "itemId": "S-0062",
+    "matchesEntryId": "B-0042",
+    "breakReason": "MATCHED",
+    "problemId": "matched-08"
+  },
+  {
+    "statementLineId": "S-0082",
+    "itemId": "S-0082",
+    "matchesEntryId": "B-0092",
+    "breakReason": "MATCHED",
+    "problemId": "matched-09"
+  },
+  {
+    "statementLineId": "S-0069",
+    "itemId": "S-0069",
+    "matchesEntryId": "B-0081",
+    "breakReason": "MATCHED",
+    "problemId": "matched-10"
+  },
+  {
+    "statementLineId": "S-0177",
+    "itemId": "S-0177",
+    "matchesEntryId": "B-0151",
+    "breakReason": "MATCHED",
+    "problemId": "matched-11"
+  },
+  {
+    "statementLineId": "S-0033",
+    "itemId": "S-0033",
+    "matchesEntryId": "B-0015",
+    "breakReason": "MATCHED",
+    "problemId": "matched-12"
+  },
+  {
+    "statementLineId": "S-0043",
+    "itemId": "S-0043",
+    "matchesEntryId": "B-0028",
+    "breakReason": "MATCHED",
+    "problemId": "matched-13"
+  }
+]

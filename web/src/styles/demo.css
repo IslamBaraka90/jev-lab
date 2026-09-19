@@ -427,3 +427,13 @@
   stroke-width: 2;
   stroke-dasharray: 5 4;
 }
+
+/* Bank reconciliation: long candidate and question snippets must stay inside the walkthrough grid. */
+
+.how-steps {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.how-steps > li {
+  min-width: 0;
+}

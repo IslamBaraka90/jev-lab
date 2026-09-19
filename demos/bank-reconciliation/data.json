@@ -1,0 +1,4331 @@
+{
+  "id": "bank-reconciliation",
+  "class": "synthetic",
+  "generatedAt": "2026-09-19",
+  "seed": 1102,
+  "source": "scripts/generate/bank-reconciliation.js",
+  "context": {
+    "entity": "Kestrel Trading Ltd",
+    "period": {
+      "from": "2026-05-01",
+      "to": "2026-05-31"
+    },
+    "currency": "USD",
+    "bank": {
+      "name": "Summit Bank",
+      "accountReference": "DEMO 8197 1775 6013"
+    },
+    "referenceFormat": "DEMO2605-NNNN / free-text remittance reference",
+    "openingBalance": 485250,
+    "closingBalance": 256894.94,
+    "bookClosingBalance": 261948.83,
+    "statementLineCount": 240,
+    "ledgerEntryCount": 232,
+    "preClearedCount": 180,
+    "preClearedNet": -188584.54
+  },
+  "items": [
+    {
+      "id": "S-0011",
+      "statement": {
+        "id": "S-0011",
+        "currency": "USD",
+        "date": "2026-05-01",
+        "direction": "OUTFLOW",
+        "amount": 35.9,
+        "description": "Wire handling charge",
+        "counterparty": null,
+        "reference": "DEMO2605-0196-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0014",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 2487.61,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0191-PAY",
+          "documentId": "JRN-TIM-11"
+        },
+        {
+          "id": "B-0015",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 3266.53,
+          "description": "Settlement for Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "BOOK/239-MESSY",
+          "documentId": "JRN-MESSY-12"
+        },
+        {
+          "id": "B-0026",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 974.93,
+          "description": "Posted on payment advice · Meridian Labs",
+          "counterparty": "Meridian Labs",
+          "reference": "DEMO2605-0181-PAY",
+          "documentId": "JRN-TIM-01"
+        },
+        {
+          "id": "B-0027",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 5700,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0211-PART",
+          "documentId": "JRN-PART-03"
+        },
+        {
+          "id": "B-0035",
+          "currency": "USD",
+          "date": "2026-05-05",
+          "direction": "OUTFLOW",
+          "amount": 12695.62,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0215-PART",
+          "documentId": "JRN-PART-07"
+        }
+      ]
+    },
+    {
+      "id": "S-0024",
+      "statement": {
+        "id": "S-0024",
+        "currency": "USD",
+        "date": "2026-05-04",
+        "direction": "OUTFLOW",
+        "amount": 5038.8,
+        "description": "Part payment · Harbour Foods",
+        "counterparty": "Harbour Foods",
+        "reference": "DEMO2605-0211-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0027",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 5700,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0211-PART",
+          "documentId": "JRN-PART-03"
+        },
+        {
+          "id": "B-0080",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 5180.28,
+          "description": "EUR invoice at booking rate · Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "DEMO2605-0207-FX",
+          "documentId": "JRN-FX-06",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 4746.89
+        },
+        {
+          "id": "B-0041",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 6555.79,
+          "description": "EUR invoice at booking rate · Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "DEMO2605-0205-FX",
+          "documentId": "JRN-FX-04",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6077.49
+        },
+        {
+          "id": "B-0090",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 5112.71,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/231-MESSY",
+          "documentId": "JRN-MESSY-04"
+        },
+        {
+          "id": "B-0015",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 3266.53,
+          "description": "Settlement for Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "BOOK/239-MESSY",
+          "documentId": "JRN-MESSY-12"
+        }
+      ]
+    },
+    {
+      "id": "S-0032",
+      "statement": {
+        "id": "S-0032",
+        "currency": "USD",
+        "date": "2026-05-05",
+        "direction": "OUTFLOW",
+        "amount": 11654.58,
+        "description": "Part payment · Tinbridge Foods",
+        "counterparty": "Tinbridge Foods",
+        "reference": "DEMO2605-0215-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0035",
+          "currency": "USD",
+          "date": "2026-05-05",
+          "direction": "OUTFLOW",
+          "amount": 12695.62,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0215-PART",
+          "documentId": "JRN-PART-07"
+        },
+        {
+          "id": "B-0041",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 6555.79,
+          "description": "EUR invoice at booking rate · Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "DEMO2605-0205-FX",
+          "documentId": "JRN-FX-04",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6077.49
+        },
+        {
+          "id": "B-0027",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 5700,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0211-PART",
+          "documentId": "JRN-PART-03"
+        },
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        }
+      ]
+    },
+    {
+      "id": "S-0033",
+      "statement": {
+        "id": "S-0033",
+        "currency": "USD",
+        "date": "2026-05-05",
+        "direction": "OUTFLOW",
+        "amount": 3266.53,
+        "description": "Online transfer 0239 · Pinefield",
+        "counterparty": "Pinefield Foods",
+        "reference": "DEMO26050239MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0015",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 3266.53,
+          "description": "Settlement for Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "BOOK/239-MESSY",
+          "documentId": "JRN-MESSY-12"
+        },
+        {
+          "id": "B-0067",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-A"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        },
+        {
+          "id": "B-0091",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 3340.36,
+          "description": "Settlement for Quarry Systems",
+          "counterparty": "Quarry Systems",
+          "reference": "BOOK/233-MESSY",
+          "documentId": "JRN-MESSY-06"
+        },
+        {
+          "id": "B-0014",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 2487.61,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0191-PAY",
+          "documentId": "JRN-TIM-11"
+        }
+      ]
+    },
+    {
+      "id": "S-0040",
+      "statement": {
+        "id": "S-0040",
+        "currency": "USD",
+        "date": "2026-05-06",
+        "direction": "OUTFLOW",
+        "amount": 6434.85,
+        "description": "EUR settlement · Pinefield Foods",
+        "counterparty": "Pinefield Foods",
+        "reference": "DEMO2605-0205-FX",
+        "transactionCurrency": "EUR",
+        "transactionAmount": 6077.49
+      },
+      "candidates": [
+        {
+          "id": "B-0041",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 6555.79,
+          "description": "EUR invoice at booking rate · Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "DEMO2605-0205-FX",
+          "documentId": "JRN-FX-04",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6077.49
+        },
+        {
+          "id": "B-0027",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 5700,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0211-PART",
+          "documentId": "JRN-PART-03"
+        },
+        {
+          "id": "B-0080",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 5180.28,
+          "description": "EUR invoice at booking rate · Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "DEMO2605-0207-FX",
+          "documentId": "JRN-FX-06",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 4746.89
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        },
+        {
+          "id": "B-0115",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "OUTFLOW",
+          "amount": 6832.23,
+          "description": "EUR invoice at booking rate · Ironbark Trading",
+          "counterparty": "Ironbark Trading",
+          "reference": "DEMO2605-0202-FX",
+          "documentId": "JRN-FX-01",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6298.15
+        }
+      ]
+    },
+    {
+      "id": "S-0041",
+      "statement": {
+        "id": "S-0041",
+        "currency": "USD",
+        "date": "2026-05-06",
+        "direction": "INFLOW",
+        "amount": 6739.3,
+        "description": "Incoming transfer · Beacon Labs",
+        "counterparty": "Beacon Labs",
+        "reference": "DEMO2605-0223-MISS"
+      },
+      "candidates": [
+        {
+          "id": "B-0028",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "INFLOW",
+          "amount": 6643.64,
+          "description": "Settlement for Kestrel Supplies",
+          "counterparty": "Kestrel Supplies",
+          "reference": "BOOK/240-MESSY",
+          "documentId": "JRN-MESSY-13"
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        },
+        {
+          "id": "B-0064",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 5529.49,
+          "description": "EUR invoice at booking rate · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0206-FX",
+          "documentId": "JRN-FX-05",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5116.58
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        },
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        }
+      ]
+    },
+    {
+      "id": "S-0042",
+      "statement": {
+        "id": "S-0042",
+        "currency": "USD",
+        "date": "2026-05-06",
+        "direction": "INFLOW",
+        "amount": 936.82,
+        "description": "Online transfer 0229 · Lantern",
+        "counterparty": "Lantern Print",
+        "reference": "DEMO26050229MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0059",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "INFLOW",
+          "amount": 936.82,
+          "description": "Settlement for Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "BOOK/229-MESSY",
+          "documentId": "JRN-MESSY-02"
+        },
+        {
+          "id": "B-0063",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 732.39,
+          "description": "Posted on receipt advice · Tinbridge Labs",
+          "counterparty": "Tinbridge Labs",
+          "reference": "DEMO2605-0186-PAY",
+          "documentId": "JRN-TIM-06"
+        },
+        {
+          "id": "B-0099",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 1456.71,
+          "description": "Settlement for Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "BOOK/230-MESSY",
+          "documentId": "JRN-MESSY-03"
+        },
+        {
+          "id": "B-0145",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "INFLOW",
+          "amount": 717.25,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/232-MESSY",
+          "documentId": "JRN-MESSY-05"
+        },
+        {
+          "id": "B-0065",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 3989.63,
+          "description": "EUR invoice at booking rate · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0208-FX",
+          "documentId": "JRN-FX-07",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3666.6
+        }
+      ]
+    },
+    {
+      "id": "S-0043",
+      "statement": {
+        "id": "S-0043",
+        "currency": "USD",
+        "date": "2026-05-06",
+        "direction": "INFLOW",
+        "amount": 6643.64,
+        "description": "Online transfer 0240 · Kestrel",
+        "counterparty": "Kestrel Supplies",
+        "reference": "DEMO26050240MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0028",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "INFLOW",
+          "amount": 6643.64,
+          "description": "Settlement for Kestrel Supplies",
+          "counterparty": "Kestrel Supplies",
+          "reference": "BOOK/240-MESSY",
+          "documentId": "JRN-MESSY-13"
+        },
+        {
+          "id": "B-0064",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 5529.49,
+          "description": "EUR invoice at booking rate · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0206-FX",
+          "documentId": "JRN-FX-05",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5116.58
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        },
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0053",
+      "statement": {
+        "id": "S-0053",
+        "currency": "USD",
+        "date": "2026-05-07",
+        "direction": "OUTFLOW",
+        "amount": 6.01,
+        "description": "Monthly account service fee",
+        "counterparty": null,
+        "reference": "DEMO2605-0199-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0058",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-A"
+        },
+        {
+          "id": "B-0040",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1611.88,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0189-PAY",
+          "documentId": "JRN-TIM-09"
+        },
+        {
+          "id": "B-0042",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1667.86,
+          "description": "Settlement for Marlow Works",
+          "counterparty": "Marlow Works",
+          "reference": "BOOK/235-MESSY",
+          "documentId": "JRN-MESSY-08"
+        },
+        {
+          "id": "B-0041",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 6555.79,
+          "description": "EUR invoice at booking rate · Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "DEMO2605-0205-FX",
+          "documentId": "JRN-FX-04",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6077.49
+        },
+        {
+          "id": "B-0066",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0058",
+      "statement": {
+        "id": "S-0058",
+        "currency": "USD",
+        "date": "2026-05-08",
+        "direction": "OUTFLOW",
+        "amount": 7128.11,
+        "description": "Transfer to Quarry Supplies",
+        "counterparty": "Quarry Supplies",
+        "reference": "DEMO2605-0190-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0041",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 6555.79,
+          "description": "EUR invoice at booking rate · Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "DEMO2605-0205-FX",
+          "documentId": "JRN-FX-04",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6077.49
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        },
+        {
+          "id": "B-0115",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "OUTFLOW",
+          "amount": 6832.23,
+          "description": "EUR invoice at booking rate · Ironbark Trading",
+          "counterparty": "Ironbark Trading",
+          "reference": "DEMO2605-0202-FX",
+          "documentId": "JRN-FX-01",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6298.15
+        },
+        {
+          "id": "B-0027",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 5700,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0211-PART",
+          "documentId": "JRN-PART-03"
+        },
+        {
+          "id": "B-0080",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 5180.28,
+          "description": "EUR invoice at booking rate · Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "DEMO2605-0207-FX",
+          "documentId": "JRN-FX-06",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 4746.89
+        }
+      ]
+    },
+    {
+      "id": "S-0059",
+      "statement": {
+        "id": "S-0059",
+        "currency": "USD",
+        "date": "2026-05-08",
+        "direction": "OUTFLOW",
+        "amount": 2487.61,
+        "description": "Transfer to Ironbark Labs",
+        "counterparty": "Ironbark Labs",
+        "reference": "DEMO2605-0191-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0081",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 2246.61,
+          "description": "Settlement for Bluewater Travel",
+          "counterparty": "Bluewater Travel",
+          "reference": "BOOK/237-MESSY",
+          "documentId": "JRN-MESSY-10"
+        },
+        {
+          "id": "B-0014",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 2487.61,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0191-PAY",
+          "documentId": "JRN-TIM-11"
+        },
+        {
+          "id": "B-0067",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-A"
+        },
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0060",
+      "statement": {
+        "id": "S-0060",
+        "currency": "USD",
+        "date": "2026-05-08",
+        "direction": "OUTFLOW",
+        "amount": 1163.31,
+        "description": "Payment to Meridian Logistics",
+        "counterparty": "Meridian Logistics",
+        "reference": "DEMO2605-0220-DUP"
+      },
+      "candidates": [
+        {
+          "id": "B-0058",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-A"
+        },
+        {
+          "id": "B-0066",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-B"
+        },
+        {
+          "id": "B-0026",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 974.93,
+          "description": "Posted on payment advice · Meridian Labs",
+          "counterparty": "Meridian Labs",
+          "reference": "DEMO2605-0181-PAY",
+          "documentId": "JRN-TIM-01"
+        },
+        {
+          "id": "B-0040",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1611.88,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0189-PAY",
+          "documentId": "JRN-TIM-09"
+        },
+        {
+          "id": "B-0042",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1667.86,
+          "description": "Settlement for Marlow Works",
+          "counterparty": "Marlow Works",
+          "reference": "BOOK/235-MESSY",
+          "documentId": "JRN-MESSY-08"
+        }
+      ]
+    },
+    {
+      "id": "S-0061",
+      "statement": {
+        "id": "S-0061",
+        "currency": "USD",
+        "date": "2026-05-08",
+        "direction": "INFLOW",
+        "amount": 2198.69,
+        "description": "Incoming transfer · Ironbark Trading",
+        "counterparty": "Ironbark Trading",
+        "reference": "DEMO2605-0226-MISS"
+      },
+      "candidates": [
+        {
+          "id": "B-0065",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 3989.63,
+          "description": "EUR invoice at booking rate · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0208-FX",
+          "documentId": "JRN-FX-07",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3666.6
+        },
+        {
+          "id": "B-0099",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 1456.71,
+          "description": "Settlement for Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "BOOK/230-MESSY",
+          "documentId": "JRN-MESSY-03"
+        },
+        {
+          "id": "B-0059",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "INFLOW",
+          "amount": 936.82,
+          "description": "Settlement for Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "BOOK/229-MESSY",
+          "documentId": "JRN-MESSY-02"
+        },
+        {
+          "id": "B-0064",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 5529.49,
+          "description": "EUR invoice at booking rate · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0206-FX",
+          "documentId": "JRN-FX-05",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5116.58
+        },
+        {
+          "id": "B-0063",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 732.39,
+          "description": "Posted on receipt advice · Tinbridge Labs",
+          "counterparty": "Tinbridge Labs",
+          "reference": "DEMO2605-0186-PAY",
+          "documentId": "JRN-TIM-06"
+        }
+      ]
+    },
+    {
+      "id": "S-0062",
+      "statement": {
+        "id": "S-0062",
+        "currency": "USD",
+        "date": "2026-05-08",
+        "direction": "OUTFLOW",
+        "amount": 1667.86,
+        "description": "Online transfer 0235 · Marlow",
+        "counterparty": "Marlow Works",
+        "reference": "DEMO26050235MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0042",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1667.86,
+          "description": "Settlement for Marlow Works",
+          "counterparty": "Marlow Works",
+          "reference": "BOOK/235-MESSY",
+          "documentId": "JRN-MESSY-08"
+        },
+        {
+          "id": "B-0040",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1611.88,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0189-PAY",
+          "documentId": "JRN-TIM-09"
+        },
+        {
+          "id": "B-0058",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-A"
+        },
+        {
+          "id": "B-0066",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-B"
+        },
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        }
+      ]
+    },
+    {
+      "id": "S-0065",
+      "statement": {
+        "id": "S-0065",
+        "currency": "USD",
+        "date": "2026-05-09",
+        "direction": "OUTFLOW",
+        "amount": 974.93,
+        "description": "Transfer to Meridian Labs",
+        "counterparty": "Meridian Labs",
+        "reference": "DEMO2605-0181-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0066",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-B"
+        },
+        {
+          "id": "B-0026",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 974.93,
+          "description": "Posted on payment advice · Meridian Labs",
+          "counterparty": "Meridian Labs",
+          "reference": "DEMO2605-0181-PAY",
+          "documentId": "JRN-TIM-01"
+        },
+        {
+          "id": "B-0058",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-A"
+        },
+        {
+          "id": "B-0104",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 796.18,
+          "description": "Posted on payment advice · Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "DEMO2605-0183-PAY",
+          "documentId": "JRN-TIM-03"
+        },
+        {
+          "id": "B-0040",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1611.88,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0189-PAY",
+          "documentId": "JRN-TIM-09"
+        }
+      ]
+    },
+    {
+      "id": "S-0066",
+      "statement": {
+        "id": "S-0066",
+        "currency": "USD",
+        "date": "2026-05-09",
+        "direction": "INFLOW",
+        "amount": 5593.96,
+        "description": "EUR settlement · Quarry Logistics",
+        "counterparty": "Quarry Logistics",
+        "reference": "DEMO2605-0206-FX",
+        "transactionCurrency": "EUR",
+        "transactionAmount": 5116.58
+      },
+      "candidates": [
+        {
+          "id": "B-0064",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 5529.49,
+          "description": "EUR invoice at booking rate · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0206-FX",
+          "documentId": "JRN-FX-05",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5116.58
+        },
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        },
+        {
+          "id": "B-0065",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 3989.63,
+          "description": "EUR invoice at booking rate · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0208-FX",
+          "documentId": "JRN-FX-07",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3666.6
+        },
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0067",
+      "statement": {
+        "id": "S-0067",
+        "currency": "USD",
+        "date": "2026-05-09",
+        "direction": "INFLOW",
+        "amount": 4032.53,
+        "description": "EUR settlement · Cedar Travel",
+        "counterparty": "Cedar Travel",
+        "reference": "DEMO2605-0208-FX",
+        "transactionCurrency": "EUR",
+        "transactionAmount": 3666.6
+      },
+      "candidates": [
+        {
+          "id": "B-0065",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 3989.63,
+          "description": "EUR invoice at booking rate · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0208-FX",
+          "documentId": "JRN-FX-07",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3666.6
+        },
+        {
+          "id": "B-0064",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 5529.49,
+          "description": "EUR invoice at booking rate · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0206-FX",
+          "documentId": "JRN-FX-05",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5116.58
+        },
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        },
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0068",
+      "statement": {
+        "id": "S-0068",
+        "currency": "USD",
+        "date": "2026-05-09",
+        "direction": "OUTFLOW",
+        "amount": 3268.43,
+        "description": "Payment to Northwind Travel",
+        "counterparty": "Northwind Travel",
+        "reference": "DEMO2605-0221-DUP"
+      },
+      "candidates": [
+        {
+          "id": "B-0067",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-A"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        },
+        {
+          "id": "B-0091",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 3340.36,
+          "description": "Settlement for Quarry Systems",
+          "counterparty": "Quarry Systems",
+          "reference": "BOOK/233-MESSY",
+          "documentId": "JRN-MESSY-06"
+        },
+        {
+          "id": "B-0015",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 3266.53,
+          "description": "Settlement for Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "BOOK/239-MESSY",
+          "documentId": "JRN-MESSY-12"
+        },
+        {
+          "id": "B-0081",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 2246.61,
+          "description": "Settlement for Bluewater Travel",
+          "counterparty": "Bluewater Travel",
+          "reference": "BOOK/237-MESSY",
+          "documentId": "JRN-MESSY-10"
+        }
+      ]
+    },
+    {
+      "id": "S-0069",
+      "statement": {
+        "id": "S-0069",
+        "currency": "USD",
+        "date": "2026-05-09",
+        "direction": "OUTFLOW",
+        "amount": 2246.61,
+        "description": "Online transfer 0237 · Bluewater",
+        "counterparty": "Bluewater Travel",
+        "reference": "DEMO26050237MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0081",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 2246.61,
+          "description": "Settlement for Bluewater Travel",
+          "counterparty": "Bluewater Travel",
+          "reference": "BOOK/237-MESSY",
+          "documentId": "JRN-MESSY-10"
+        },
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        },
+        {
+          "id": "B-0067",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-A"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        },
+        {
+          "id": "B-0014",
+          "currency": "USD",
+          "date": "2026-05-02",
+          "direction": "OUTFLOW",
+          "amount": 2487.61,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0191-PAY",
+          "documentId": "JRN-TIM-11"
+        }
+      ]
+    },
+    {
+      "id": "S-0080",
+      "statement": {
+        "id": "S-0080",
+        "currency": "USD",
+        "date": "2026-05-10",
+        "direction": "OUTFLOW",
+        "amount": 457.83,
+        "description": "Transfer to Marlow Media",
+        "counterparty": "Marlow Media",
+        "reference": "DEMO2605-0182-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0125",
+          "currency": "USD",
+          "date": "2026-05-16",
+          "direction": "OUTFLOW",
+          "amount": 457.83,
+          "description": "Posted on payment advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0182-PAY",
+          "documentId": "JRN-TIM-02"
+        },
+        {
+          "id": "B-0104",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 796.18,
+          "description": "Posted on payment advice · Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "DEMO2605-0183-PAY",
+          "documentId": "JRN-TIM-03"
+        },
+        {
+          "id": "B-0066",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-B"
+        },
+        {
+          "id": "B-0058",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-A"
+        },
+        {
+          "id": "B-0026",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 974.93,
+          "description": "Posted on payment advice · Meridian Labs",
+          "counterparty": "Meridian Labs",
+          "reference": "DEMO2605-0181-PAY",
+          "documentId": "JRN-TIM-01"
+        }
+      ]
+    },
+    {
+      "id": "S-0081",
+      "statement": {
+        "id": "S-0081",
+        "currency": "USD",
+        "date": "2026-05-10",
+        "direction": "OUTFLOW",
+        "amount": 5112.71,
+        "description": "Online transfer 0231 · Orchard",
+        "counterparty": "Orchard Travel",
+        "reference": "DEMO26050231MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0080",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 5180.28,
+          "description": "EUR invoice at booking rate · Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "DEMO2605-0207-FX",
+          "documentId": "JRN-FX-06",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 4746.89
+        },
+        {
+          "id": "B-0090",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 5112.71,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/231-MESSY",
+          "documentId": "JRN-MESSY-04"
+        },
+        {
+          "id": "B-0027",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 5700,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0211-PART",
+          "documentId": "JRN-PART-03"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        },
+        {
+          "id": "B-0041",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 6555.79,
+          "description": "EUR invoice at booking rate · Pinefield Foods",
+          "counterparty": "Pinefield Foods",
+          "reference": "DEMO2605-0205-FX",
+          "documentId": "JRN-FX-04",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6077.49
+        }
+      ]
+    },
+    {
+      "id": "S-0082",
+      "statement": {
+        "id": "S-0082",
+        "currency": "USD",
+        "date": "2026-05-10",
+        "direction": "OUTFLOW",
+        "amount": 2117.59,
+        "description": "Online transfer 0236 · Orchard",
+        "counterparty": "Orchard Travel",
+        "reference": "DEMO26050236MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        },
+        {
+          "id": "B-0081",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 2246.61,
+          "description": "Settlement for Bluewater Travel",
+          "counterparty": "Bluewater Travel",
+          "reference": "BOOK/237-MESSY",
+          "documentId": "JRN-MESSY-10"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        },
+        {
+          "id": "B-0042",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1667.86,
+          "description": "Settlement for Marlow Works",
+          "counterparty": "Marlow Works",
+          "reference": "BOOK/235-MESSY",
+          "documentId": "JRN-MESSY-08"
+        },
+        {
+          "id": "B-0067",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0084",
+      "statement": {
+        "id": "S-0084",
+        "currency": "USD",
+        "date": "2026-05-11",
+        "direction": "OUTFLOW",
+        "amount": 5091.51,
+        "description": "EUR settlement · Orchard Travel",
+        "counterparty": "Orchard Travel",
+        "reference": "DEMO2605-0207-FX",
+        "transactionCurrency": "EUR",
+        "transactionAmount": 4746.89
+      },
+      "candidates": [
+        {
+          "id": "B-0080",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 5180.28,
+          "description": "EUR invoice at booking rate · Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "DEMO2605-0207-FX",
+          "documentId": "JRN-FX-06",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 4746.89
+        },
+        {
+          "id": "B-0090",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 5112.71,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/231-MESSY",
+          "documentId": "JRN-MESSY-04"
+        },
+        {
+          "id": "B-0091",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 3340.36,
+          "description": "Settlement for Quarry Systems",
+          "counterparty": "Quarry Systems",
+          "reference": "BOOK/233-MESSY",
+          "documentId": "JRN-MESSY-06"
+        },
+        {
+          "id": "B-0027",
+          "currency": "USD",
+          "date": "2026-05-04",
+          "direction": "OUTFLOW",
+          "amount": 5700,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0211-PART",
+          "documentId": "JRN-PART-03"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0085",
+      "statement": {
+        "id": "S-0085",
+        "currency": "USD",
+        "date": "2026-05-11",
+        "direction": "INFLOW",
+        "amount": 1456.71,
+        "description": "Online transfer 0230 · Harbour",
+        "counterparty": "Harbour Labs",
+        "reference": "DEMO26050230MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0099",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 1456.71,
+          "description": "Settlement for Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "BOOK/230-MESSY",
+          "documentId": "JRN-MESSY-03"
+        },
+        {
+          "id": "B-0149",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "INFLOW",
+          "amount": 1600,
+          "description": "Posted on receipt advice · Lantern Works",
+          "counterparty": "Lantern Works",
+          "reference": "DEMO2605-0184-PAY",
+          "documentId": "JRN-TIM-04"
+        },
+        {
+          "id": "B-0059",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "INFLOW",
+          "amount": 936.82,
+          "description": "Settlement for Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "BOOK/229-MESSY",
+          "documentId": "JRN-MESSY-02"
+        },
+        {
+          "id": "B-0063",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 732.39,
+          "description": "Posted on receipt advice · Tinbridge Labs",
+          "counterparty": "Tinbridge Labs",
+          "reference": "DEMO2605-0186-PAY",
+          "documentId": "JRN-TIM-06"
+        },
+        {
+          "id": "B-0065",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 3989.63,
+          "description": "EUR invoice at booking rate · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0208-FX",
+          "documentId": "JRN-FX-07",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3666.6
+        }
+      ]
+    },
+    {
+      "id": "S-0092",
+      "statement": {
+        "id": "S-0092",
+        "currency": "USD",
+        "date": "2026-05-12",
+        "direction": "OUTFLOW",
+        "amount": 1611.88,
+        "description": "Transfer to Ironbark Labs",
+        "counterparty": "Ironbark Labs",
+        "reference": "DEMO2605-0189-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        },
+        {
+          "id": "B-0040",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1611.88,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0189-PAY",
+          "documentId": "JRN-TIM-09"
+        },
+        {
+          "id": "B-0042",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1667.86,
+          "description": "Settlement for Marlow Works",
+          "counterparty": "Marlow Works",
+          "reference": "BOOK/235-MESSY",
+          "documentId": "JRN-MESSY-08"
+        },
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0081",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 2246.61,
+          "description": "Settlement for Bluewater Travel",
+          "counterparty": "Bluewater Travel",
+          "reference": "BOOK/237-MESSY",
+          "documentId": "JRN-MESSY-10"
+        }
+      ]
+    },
+    {
+      "id": "S-0093",
+      "statement": {
+        "id": "S-0093",
+        "currency": "USD",
+        "date": "2026-05-12",
+        "direction": "INFLOW",
+        "amount": 6080.84,
+        "description": "EUR settlement · Marlow Media",
+        "counterparty": "Marlow Media",
+        "reference": "DEMO2605-0203-FX",
+        "transactionCurrency": "EUR",
+        "transactionAmount": 5692.6
+      },
+      "candidates": [
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        },
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        },
+        {
+          "id": "B-0116",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-B"
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0094",
+      "statement": {
+        "id": "S-0094",
+        "currency": "USD",
+        "date": "2026-05-12",
+        "direction": "OUTFLOW",
+        "amount": 8376.75,
+        "description": "Authorised transfer · Bluewater Print",
+        "counterparty": "Bluewater Print",
+        "reference": "DEMO2605-0227-MISS"
+      },
+      "candidates": [
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        },
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        },
+        {
+          "id": "B-0115",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "OUTFLOW",
+          "amount": 6832.23,
+          "description": "EUR invoice at booking rate · Ironbark Trading",
+          "counterparty": "Ironbark Trading",
+          "reference": "DEMO2605-0202-FX",
+          "documentId": "JRN-FX-01",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6298.15
+        },
+        {
+          "id": "B-0090",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 5112.71,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/231-MESSY",
+          "documentId": "JRN-MESSY-04"
+        },
+        {
+          "id": "B-0080",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 5180.28,
+          "description": "EUR invoice at booking rate · Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "DEMO2605-0207-FX",
+          "documentId": "JRN-FX-06",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 4746.89
+        }
+      ]
+    },
+    {
+      "id": "S-0101",
+      "statement": {
+        "id": "S-0101",
+        "currency": "USD",
+        "date": "2026-05-13",
+        "direction": "OUTFLOW",
+        "amount": 36.94,
+        "description": "International transfer fee",
+        "counterparty": null,
+        "reference": "DEMO2605-0200-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0104",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 796.18,
+          "description": "Posted on payment advice · Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "DEMO2605-0183-PAY",
+          "documentId": "JRN-TIM-03"
+        },
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        },
+        {
+          "id": "B-0091",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 3340.36,
+          "description": "Settlement for Quarry Systems",
+          "counterparty": "Quarry Systems",
+          "reference": "BOOK/233-MESSY",
+          "documentId": "JRN-MESSY-06"
+        },
+        {
+          "id": "B-0090",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 5112.71,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/231-MESSY",
+          "documentId": "JRN-MESSY-04"
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        }
+      ]
+    },
+    {
+      "id": "S-0102",
+      "statement": {
+        "id": "S-0102",
+        "currency": "USD",
+        "date": "2026-05-13",
+        "direction": "OUTFLOW",
+        "amount": 30.87,
+        "description": "International transfer fee",
+        "counterparty": null,
+        "reference": "DEMO2605-0201-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0104",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 796.18,
+          "description": "Posted on payment advice · Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "DEMO2605-0183-PAY",
+          "documentId": "JRN-TIM-03"
+        },
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        },
+        {
+          "id": "B-0091",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 3340.36,
+          "description": "Settlement for Quarry Systems",
+          "counterparty": "Quarry Systems",
+          "reference": "BOOK/233-MESSY",
+          "documentId": "JRN-MESSY-06"
+        },
+        {
+          "id": "B-0090",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 5112.71,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/231-MESSY",
+          "documentId": "JRN-MESSY-04"
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        }
+      ]
+    },
+    {
+      "id": "S-0103",
+      "statement": {
+        "id": "S-0103",
+        "currency": "USD",
+        "date": "2026-05-13",
+        "direction": "INFLOW",
+        "amount": 9370,
+        "description": "Part payment · Saltmarsh Labs",
+        "counterparty": "Saltmarsh Labs",
+        "reference": "DEMO2605-0213-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0097",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 9760.42,
+          "description": "Open invoice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0213-PART",
+          "documentId": "JRN-PART-05"
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        },
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        },
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        }
+      ]
+    },
+    {
+      "id": "S-0104",
+      "statement": {
+        "id": "S-0104",
+        "currency": "USD",
+        "date": "2026-05-13",
+        "direction": "INFLOW",
+        "amount": 6754.15,
+        "description": "Receipt from Quarry Supplies",
+        "counterparty": "Quarry Supplies",
+        "reference": "DEMO2605-0217-DUP"
+      },
+      "candidates": [
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        },
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        },
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        },
+        {
+          "id": "B-0116",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0110",
+      "statement": {
+        "id": "S-0110",
+        "currency": "USD",
+        "date": "2026-05-14",
+        "direction": "INFLOW",
+        "amount": 1600,
+        "description": "Receipt from Lantern Works",
+        "counterparty": "Lantern Works",
+        "reference": "DEMO2605-0184-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0099",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 1456.71,
+          "description": "Settlement for Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "BOOK/230-MESSY",
+          "documentId": "JRN-MESSY-03"
+        },
+        {
+          "id": "B-0149",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "INFLOW",
+          "amount": 1600,
+          "description": "Posted on receipt advice · Lantern Works",
+          "counterparty": "Lantern Works",
+          "reference": "DEMO2605-0184-PAY",
+          "documentId": "JRN-TIM-04"
+        },
+        {
+          "id": "B-0059",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "INFLOW",
+          "amount": 936.82,
+          "description": "Settlement for Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "BOOK/229-MESSY",
+          "documentId": "JRN-MESSY-02"
+        },
+        {
+          "id": "B-0145",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "INFLOW",
+          "amount": 717.25,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/232-MESSY",
+          "documentId": "JRN-MESSY-05"
+        },
+        {
+          "id": "B-0063",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 732.39,
+          "description": "Posted on receipt advice · Tinbridge Labs",
+          "counterparty": "Tinbridge Labs",
+          "reference": "DEMO2605-0186-PAY",
+          "documentId": "JRN-TIM-06"
+        }
+      ]
+    },
+    {
+      "id": "S-0111",
+      "statement": {
+        "id": "S-0111",
+        "currency": "USD",
+        "date": "2026-05-14",
+        "direction": "INFLOW",
+        "amount": 6232.01,
+        "description": "Receipt from Lantern Print",
+        "counterparty": "Lantern Print",
+        "reference": "DEMO2605-0219-DUP"
+      },
+      "candidates": [
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        },
+        {
+          "id": "B-0116",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-B"
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        },
+        {
+          "id": "B-0089",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "INFLOW",
+          "amount": 6148.58,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0203-FX",
+          "documentId": "JRN-FX-02",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 5692.6
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0112",
+      "statement": {
+        "id": "S-0112",
+        "currency": "USD",
+        "date": "2026-05-14",
+        "direction": "OUTFLOW",
+        "amount": 3340.36,
+        "description": "Online transfer 0233 · Quarry",
+        "counterparty": "Quarry Systems",
+        "reference": "DEMO26050233MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0091",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 3340.36,
+          "description": "Settlement for Quarry Systems",
+          "counterparty": "Quarry Systems",
+          "reference": "BOOK/233-MESSY",
+          "documentId": "JRN-MESSY-06"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        },
+        {
+          "id": "B-0067",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-A"
+        },
+        {
+          "id": "B-0166",
+          "currency": "USD",
+          "date": "2026-05-21",
+          "direction": "OUTFLOW",
+          "amount": 3084.3,
+          "description": "Posted on payment advice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0187-PAY",
+          "documentId": "JRN-TIM-07"
+        },
+        {
+          "id": "B-0090",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 5112.71,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/231-MESSY",
+          "documentId": "JRN-MESSY-04"
+        }
+      ]
+    },
+    {
+      "id": "S-0122",
+      "statement": {
+        "id": "S-0122",
+        "currency": "USD",
+        "date": "2026-05-15",
+        "direction": "INFLOW",
+        "amount": 732.39,
+        "description": "Receipt from Tinbridge Labs",
+        "counterparty": "Tinbridge Labs",
+        "reference": "DEMO2605-0186-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0145",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "INFLOW",
+          "amount": 717.25,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/232-MESSY",
+          "documentId": "JRN-MESSY-05"
+        },
+        {
+          "id": "B-0063",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 732.39,
+          "description": "Posted on receipt advice · Tinbridge Labs",
+          "counterparty": "Tinbridge Labs",
+          "reference": "DEMO2605-0186-PAY",
+          "documentId": "JRN-TIM-06"
+        },
+        {
+          "id": "B-0059",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "INFLOW",
+          "amount": 936.82,
+          "description": "Settlement for Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "BOOK/229-MESSY",
+          "documentId": "JRN-MESSY-02"
+        },
+        {
+          "id": "B-0099",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 1456.71,
+          "description": "Settlement for Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "BOOK/230-MESSY",
+          "documentId": "JRN-MESSY-03"
+        },
+        {
+          "id": "B-0149",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "INFLOW",
+          "amount": 1600,
+          "description": "Posted on receipt advice · Lantern Works",
+          "counterparty": "Lantern Works",
+          "reference": "DEMO2605-0184-PAY",
+          "documentId": "JRN-TIM-04"
+        }
+      ]
+    },
+    {
+      "id": "S-0123",
+      "statement": {
+        "id": "S-0123",
+        "currency": "USD",
+        "date": "2026-05-15",
+        "direction": "OUTFLOW",
+        "amount": 3084.3,
+        "description": "Transfer to Saltmarsh Labs",
+        "counterparty": "Saltmarsh Labs",
+        "reference": "DEMO2605-0187-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0091",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 3340.36,
+          "description": "Settlement for Quarry Systems",
+          "counterparty": "Quarry Systems",
+          "reference": "BOOK/233-MESSY",
+          "documentId": "JRN-MESSY-06"
+        },
+        {
+          "id": "B-0166",
+          "currency": "USD",
+          "date": "2026-05-21",
+          "direction": "OUTFLOW",
+          "amount": 3084.3,
+          "description": "Posted on payment advice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0187-PAY",
+          "documentId": "JRN-TIM-07"
+        },
+        {
+          "id": "B-0076",
+          "currency": "USD",
+          "date": "2026-05-10",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-B"
+        },
+        {
+          "id": "B-0067",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 3268.43,
+          "description": "Posted transaction · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0221-DUP",
+          "documentId": "JRN-DUP-05-A"
+        },
+        {
+          "id": "B-0081",
+          "currency": "USD",
+          "date": "2026-05-11",
+          "direction": "OUTFLOW",
+          "amount": 2246.61,
+          "description": "Settlement for Bluewater Travel",
+          "counterparty": "Bluewater Travel",
+          "reference": "BOOK/237-MESSY",
+          "documentId": "JRN-MESSY-10"
+        }
+      ]
+    },
+    {
+      "id": "S-0124",
+      "statement": {
+        "id": "S-0124",
+        "currency": "USD",
+        "date": "2026-05-15",
+        "direction": "OUTFLOW",
+        "amount": 6684.23,
+        "description": "EUR settlement · Ironbark Trading",
+        "counterparty": "Ironbark Trading",
+        "reference": "DEMO2605-0202-FX",
+        "transactionCurrency": "EUR",
+        "transactionAmount": 6298.15
+      },
+      "candidates": [
+        {
+          "id": "B-0115",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "OUTFLOW",
+          "amount": 6832.23,
+          "description": "EUR invoice at booking rate · Ironbark Trading",
+          "counterparty": "Ironbark Trading",
+          "reference": "DEMO2605-0202-FX",
+          "documentId": "JRN-FX-01",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6298.15
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        },
+        {
+          "id": "B-0143",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-A"
+        },
+        {
+          "id": "B-0150",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-B"
+        },
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        }
+      ]
+    },
+    {
+      "id": "S-0125",
+      "statement": {
+        "id": "S-0125",
+        "currency": "USD",
+        "date": "2026-05-15",
+        "direction": "INFLOW",
+        "amount": 717.25,
+        "description": "Online transfer 0232 · Orchard",
+        "counterparty": "Orchard Travel",
+        "reference": "DEMO26050232MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0145",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "INFLOW",
+          "amount": 717.25,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/232-MESSY",
+          "documentId": "JRN-MESSY-05"
+        },
+        {
+          "id": "B-0063",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 732.39,
+          "description": "Posted on receipt advice · Tinbridge Labs",
+          "counterparty": "Tinbridge Labs",
+          "reference": "DEMO2605-0186-PAY",
+          "documentId": "JRN-TIM-06"
+        },
+        {
+          "id": "B-0059",
+          "currency": "USD",
+          "date": "2026-05-08",
+          "direction": "INFLOW",
+          "amount": 936.82,
+          "description": "Settlement for Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "BOOK/229-MESSY",
+          "documentId": "JRN-MESSY-02"
+        },
+        {
+          "id": "B-0099",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 1456.71,
+          "description": "Settlement for Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "BOOK/230-MESSY",
+          "documentId": "JRN-MESSY-03"
+        },
+        {
+          "id": "B-0149",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "INFLOW",
+          "amount": 1600,
+          "description": "Posted on receipt advice · Lantern Works",
+          "counterparty": "Lantern Works",
+          "reference": "DEMO2605-0184-PAY",
+          "documentId": "JRN-TIM-04"
+        }
+      ]
+    },
+    {
+      "id": "S-0131",
+      "statement": {
+        "id": "S-0131",
+        "currency": "USD",
+        "date": "2026-05-16",
+        "direction": "OUTFLOW",
+        "amount": 1484.75,
+        "description": "Online transfer 0228 · Meridian",
+        "counterparty": "Meridian Travel",
+        "reference": "DEMO26050228MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0092",
+          "currency": "USD",
+          "date": "2026-05-12",
+          "direction": "OUTFLOW",
+          "amount": 2117.59,
+          "description": "Settlement for Orchard Travel",
+          "counterparty": "Orchard Travel",
+          "reference": "BOOK/236-MESSY",
+          "documentId": "JRN-MESSY-09"
+        },
+        {
+          "id": "B-0040",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1611.88,
+          "description": "Posted on payment advice · Ironbark Labs",
+          "counterparty": "Ironbark Labs",
+          "reference": "DEMO2605-0189-PAY",
+          "documentId": "JRN-TIM-09"
+        },
+        {
+          "id": "B-0066",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "OUTFLOW",
+          "amount": 1163.31,
+          "description": "Posted transaction · Meridian Logistics",
+          "counterparty": "Meridian Logistics",
+          "reference": "DEMO2605-0220-DUP",
+          "documentId": "JRN-DUP-04-B"
+        },
+        {
+          "id": "B-0042",
+          "currency": "USD",
+          "date": "2026-05-06",
+          "direction": "OUTFLOW",
+          "amount": 1667.86,
+          "description": "Settlement for Marlow Works",
+          "counterparty": "Marlow Works",
+          "reference": "BOOK/235-MESSY",
+          "documentId": "JRN-MESSY-08"
+        }
+      ]
+    },
+    {
+      "id": "S-0137",
+      "statement": {
+        "id": "S-0137",
+        "currency": "USD",
+        "date": "2026-05-17",
+        "direction": "OUTFLOW",
+        "amount": 6,
+        "description": "Wire handling charge",
+        "counterparty": null,
+        "reference": "DEMO2605-0198-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        },
+        {
+          "id": "B-0125",
+          "currency": "USD",
+          "date": "2026-05-16",
+          "direction": "OUTFLOW",
+          "amount": 457.83,
+          "description": "Posted on payment advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0182-PAY",
+          "documentId": "JRN-TIM-02"
+        },
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0143",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-A"
+        },
+        {
+          "id": "B-0151",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 778.36,
+          "description": "Settlement for Bluewater Print",
+          "counterparty": "Bluewater Print",
+          "reference": "BOOK/238-MESSY",
+          "documentId": "JRN-MESSY-11"
+        }
+      ]
+    },
+    {
+      "id": "S-0138",
+      "statement": {
+        "id": "S-0138",
+        "currency": "USD",
+        "date": "2026-05-17",
+        "direction": "INFLOW",
+        "amount": 6386.76,
+        "description": "Part payment · Quarry Logistics",
+        "counterparty": "Quarry Logistics",
+        "reference": "DEMO2605-0212-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0116",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-B"
+        },
+        {
+          "id": "B-0129",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "INFLOW",
+          "amount": 7136.05,
+          "description": "Open invoice · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0212-PART",
+          "documentId": "JRN-PART-04"
+        },
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        },
+        {
+          "id": "B-0098",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0139",
+      "statement": {
+        "id": "S-0139",
+        "currency": "USD",
+        "date": "2026-05-17",
+        "direction": "OUTFLOW",
+        "amount": 7876.85,
+        "description": "Part payment · Tinbridge Foods",
+        "counterparty": "Tinbridge Foods",
+        "reference": "DEMO2605-0214-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        },
+        {
+          "id": "B-0115",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "OUTFLOW",
+          "amount": 6832.23,
+          "description": "EUR invoice at booking rate · Ironbark Trading",
+          "counterparty": "Ironbark Trading",
+          "reference": "DEMO2605-0202-FX",
+          "documentId": "JRN-FX-01",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6298.15
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        },
+        {
+          "id": "B-0143",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-A"
+        },
+        {
+          "id": "B-0150",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0140",
+      "statement": {
+        "id": "S-0140",
+        "currency": "USD",
+        "date": "2026-05-17",
+        "direction": "INFLOW",
+        "amount": 12706.01,
+        "description": "Part payment · Bluewater Works",
+        "counterparty": "Bluewater Works",
+        "reference": "DEMO2605-0216-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0131",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "INFLOW",
+          "amount": 13751.09,
+          "description": "Open invoice · Bluewater Works",
+          "counterparty": "Bluewater Works",
+          "reference": "DEMO2605-0216-PART",
+          "documentId": "JRN-PART-08"
+        },
+        {
+          "id": "B-0097",
+          "currency": "USD",
+          "date": "2026-05-13",
+          "direction": "INFLOW",
+          "amount": 9760.42,
+          "description": "Open invoice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0213-PART",
+          "documentId": "JRN-PART-05"
+        },
+        {
+          "id": "B-0129",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "INFLOW",
+          "amount": 7136.05,
+          "description": "Open invoice · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0212-PART",
+          "documentId": "JRN-PART-04"
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        },
+        {
+          "id": "B-0116",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0149",
+      "statement": {
+        "id": "S-0149",
+        "currency": "USD",
+        "date": "2026-05-18",
+        "direction": "OUTFLOW",
+        "amount": 6310.64,
+        "description": "Payment to Tinbridge Foods",
+        "counterparty": "Tinbridge Foods",
+        "reference": "DEMO2605-0218-DUP"
+      },
+      "candidates": [
+        {
+          "id": "B-0143",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-A"
+        },
+        {
+          "id": "B-0150",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-B"
+        },
+        {
+          "id": "B-0115",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "OUTFLOW",
+          "amount": 6832.23,
+          "description": "EUR invoice at booking rate · Ironbark Trading",
+          "counterparty": "Ironbark Trading",
+          "reference": "DEMO2605-0202-FX",
+          "documentId": "JRN-FX-01",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 6298.15
+        },
+        {
+          "id": "B-0105",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 7128.11,
+          "description": "Posted on payment advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0190-PAY",
+          "documentId": "JRN-TIM-10"
+        },
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        }
+      ]
+    },
+    {
+      "id": "S-0154",
+      "statement": {
+        "id": "S-0154",
+        "currency": "USD",
+        "date": "2026-05-19",
+        "direction": "OUTFLOW",
+        "amount": 796.18,
+        "description": "Transfer to Harbour Labs",
+        "counterparty": "Harbour Labs",
+        "reference": "DEMO2605-0183-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0151",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 778.36,
+          "description": "Settlement for Bluewater Print",
+          "counterparty": "Bluewater Print",
+          "reference": "BOOK/238-MESSY",
+          "documentId": "JRN-MESSY-11"
+        },
+        {
+          "id": "B-0104",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 796.18,
+          "description": "Posted on payment advice · Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "DEMO2605-0183-PAY",
+          "documentId": "JRN-TIM-03"
+        },
+        {
+          "id": "B-0224",
+          "currency": "USD",
+          "date": "2026-05-28",
+          "direction": "OUTFLOW",
+          "amount": 901.53,
+          "description": "Posted on payment advice · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0192-PAY",
+          "documentId": "JRN-TIM-12"
+        },
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0125",
+          "currency": "USD",
+          "date": "2026-05-16",
+          "direction": "OUTFLOW",
+          "amount": 457.83,
+          "description": "Posted on payment advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0182-PAY",
+          "documentId": "JRN-TIM-02"
+        }
+      ]
+    },
+    {
+      "id": "S-0155",
+      "statement": {
+        "id": "S-0155",
+        "currency": "USD",
+        "date": "2026-05-19",
+        "direction": "INFLOW",
+        "amount": 4833.8,
+        "description": "Receipt from Marlow Media",
+        "counterparty": "Marlow Media",
+        "reference": "DEMO2605-0185-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0202",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "INFLOW",
+          "amount": 4833.8,
+          "description": "Posted on receipt advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0185-PAY",
+          "documentId": "JRN-TIM-05"
+        },
+        {
+          "id": "B-0116",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-B"
+        },
+        {
+          "id": "B-0129",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "INFLOW",
+          "amount": 7136.05,
+          "description": "Open invoice · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0212-PART",
+          "documentId": "JRN-PART-04"
+        },
+        {
+          "id": "B-0175",
+          "currency": "USD",
+          "date": "2026-05-22",
+          "direction": "INFLOW",
+          "amount": 6882.17,
+          "description": "Settlement for Meridian Labs",
+          "counterparty": "Meridian Labs",
+          "reference": "BOOK/234-MESSY",
+          "documentId": "JRN-MESSY-07"
+        },
+        {
+          "id": "B-0107",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0165",
+      "statement": {
+        "id": "S-0165",
+        "currency": "USD",
+        "date": "2026-05-20",
+        "direction": "INFLOW",
+        "amount": 3776.55,
+        "description": "Receipt from Quarry Supplies",
+        "counterparty": "Quarry Supplies",
+        "reference": "DEMO2605-0188-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0212",
+          "currency": "USD",
+          "date": "2026-05-26",
+          "direction": "INFLOW",
+          "amount": 3776.55,
+          "description": "Posted on receipt advice · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0188-PAY",
+          "documentId": "JRN-TIM-08"
+        },
+        {
+          "id": "B-0202",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "INFLOW",
+          "amount": 4833.8,
+          "description": "Posted on receipt advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0185-PAY",
+          "documentId": "JRN-TIM-05"
+        },
+        {
+          "id": "B-0065",
+          "currency": "USD",
+          "date": "2026-05-09",
+          "direction": "INFLOW",
+          "amount": 3989.63,
+          "description": "EUR invoice at booking rate · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0208-FX",
+          "documentId": "JRN-FX-07",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3666.6
+        },
+        {
+          "id": "B-0175",
+          "currency": "USD",
+          "date": "2026-05-22",
+          "direction": "INFLOW",
+          "amount": 6882.17,
+          "description": "Settlement for Meridian Labs",
+          "counterparty": "Meridian Labs",
+          "reference": "BOOK/234-MESSY",
+          "documentId": "JRN-MESSY-07"
+        },
+        {
+          "id": "B-0129",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "INFLOW",
+          "amount": 7136.05,
+          "description": "Open invoice · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0212-PART",
+          "documentId": "JRN-PART-04"
+        }
+      ]
+    },
+    {
+      "id": "S-0166",
+      "statement": {
+        "id": "S-0166",
+        "currency": "USD",
+        "date": "2026-05-20",
+        "direction": "OUTFLOW",
+        "amount": 41.8,
+        "description": "International transfer fee",
+        "counterparty": null,
+        "reference": "DEMO2605-0197-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0151",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 778.36,
+          "description": "Settlement for Bluewater Print",
+          "counterparty": "Bluewater Print",
+          "reference": "BOOK/238-MESSY",
+          "documentId": "JRN-MESSY-11"
+        },
+        {
+          "id": "B-0166",
+          "currency": "USD",
+          "date": "2026-05-21",
+          "direction": "OUTFLOW",
+          "amount": 3084.3,
+          "description": "Posted on payment advice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0187-PAY",
+          "documentId": "JRN-TIM-07"
+        },
+        {
+          "id": "B-0150",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-B"
+        },
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0125",
+          "currency": "USD",
+          "date": "2026-05-16",
+          "direction": "OUTFLOW",
+          "amount": 457.83,
+          "description": "Posted on payment advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0182-PAY",
+          "documentId": "JRN-TIM-02"
+        }
+      ]
+    },
+    {
+      "id": "S-0177",
+      "statement": {
+        "id": "S-0177",
+        "currency": "USD",
+        "date": "2026-05-22",
+        "direction": "OUTFLOW",
+        "amount": 778.36,
+        "description": "Online transfer 0238 · Bluewater",
+        "counterparty": "Bluewater Print",
+        "reference": "DEMO26050238MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0151",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 778.36,
+          "description": "Settlement for Bluewater Print",
+          "counterparty": "Bluewater Print",
+          "reference": "BOOK/238-MESSY",
+          "documentId": "JRN-MESSY-11"
+        },
+        {
+          "id": "B-0104",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 796.18,
+          "description": "Posted on payment advice · Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "DEMO2605-0183-PAY",
+          "documentId": "JRN-TIM-03"
+        },
+        {
+          "id": "B-0224",
+          "currency": "USD",
+          "date": "2026-05-28",
+          "direction": "OUTFLOW",
+          "amount": 901.53,
+          "description": "Posted on payment advice · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0192-PAY",
+          "documentId": "JRN-TIM-12"
+        },
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0125",
+          "currency": "USD",
+          "date": "2026-05-16",
+          "direction": "OUTFLOW",
+          "amount": 457.83,
+          "description": "Posted on payment advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0182-PAY",
+          "documentId": "JRN-TIM-02"
+        }
+      ]
+    },
+    {
+      "id": "S-0190",
+      "statement": {
+        "id": "S-0190",
+        "currency": "USD",
+        "date": "2026-05-23",
+        "direction": "OUTFLOW",
+        "amount": 901.53,
+        "description": "Transfer to Cedar Travel",
+        "counterparty": "Cedar Travel",
+        "reference": "DEMO2605-0192-PAY"
+      },
+      "candidates": [
+        {
+          "id": "B-0224",
+          "currency": "USD",
+          "date": "2026-05-28",
+          "direction": "OUTFLOW",
+          "amount": 901.53,
+          "description": "Posted on payment advice · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0192-PAY",
+          "documentId": "JRN-TIM-12"
+        },
+        {
+          "id": "B-0151",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 778.36,
+          "description": "Settlement for Bluewater Print",
+          "counterparty": "Bluewater Print",
+          "reference": "BOOK/238-MESSY",
+          "documentId": "JRN-MESSY-11"
+        },
+        {
+          "id": "B-0104",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "OUTFLOW",
+          "amount": 796.18,
+          "description": "Posted on payment advice · Harbour Labs",
+          "counterparty": "Harbour Labs",
+          "reference": "DEMO2605-0183-PAY",
+          "documentId": "JRN-TIM-03"
+        },
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0125",
+          "currency": "USD",
+          "date": "2026-05-16",
+          "direction": "OUTFLOW",
+          "amount": 457.83,
+          "description": "Posted on payment advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0182-PAY",
+          "documentId": "JRN-TIM-02"
+        }
+      ]
+    },
+    {
+      "id": "S-0191",
+      "statement": {
+        "id": "S-0191",
+        "currency": "USD",
+        "date": "2026-05-23",
+        "direction": "OUTFLOW",
+        "amount": 50,
+        "description": "Wire handling charge",
+        "counterparty": null,
+        "reference": "DEMO2605-0193-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0193",
+          "currency": "USD",
+          "date": "2026-05-24",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-A"
+        },
+        {
+          "id": "B-0166",
+          "currency": "USD",
+          "date": "2026-05-21",
+          "direction": "OUTFLOW",
+          "amount": 3084.3,
+          "description": "Posted on payment advice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0187-PAY",
+          "documentId": "JRN-TIM-07"
+        },
+        {
+          "id": "B-0203",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 3636.07,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0204-FX",
+          "documentId": "JRN-FX-03",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3311.24
+        },
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0192",
+      "statement": {
+        "id": "S-0192",
+        "currency": "USD",
+        "date": "2026-05-23",
+        "direction": "OUTFLOW",
+        "amount": 9402.09,
+        "description": "Authorised transfer · Bluewater Travel",
+        "counterparty": "Bluewater Travel",
+        "reference": "DEMO2605-0224-MISS"
+      },
+      "candidates": [
+        {
+          "id": "B-0213",
+          "currency": "USD",
+          "date": "2026-05-26",
+          "direction": "OUTFLOW",
+          "amount": 10828.47,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0210-PART",
+          "documentId": "JRN-PART-02"
+        },
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        },
+        {
+          "id": "B-0193",
+          "currency": "USD",
+          "date": "2026-05-24",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-A"
+        },
+        {
+          "id": "B-0150",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-B"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0198",
+      "statement": {
+        "id": "S-0198",
+        "currency": "USD",
+        "date": "2026-05-24",
+        "direction": "OUTFLOW",
+        "amount": 10.75,
+        "description": "Monthly account service fee",
+        "counterparty": null,
+        "reference": "DEMO2605-0195-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0193",
+          "currency": "USD",
+          "date": "2026-05-24",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-A"
+        },
+        {
+          "id": "B-0203",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 3636.07,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0204-FX",
+          "documentId": "JRN-FX-03",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3311.24
+        },
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        },
+        {
+          "id": "B-0213",
+          "currency": "USD",
+          "date": "2026-05-26",
+          "direction": "OUTFLOW",
+          "amount": 10828.47,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0210-PART",
+          "documentId": "JRN-PART-02"
+        }
+      ]
+    },
+    {
+      "id": "S-0199",
+      "statement": {
+        "id": "S-0199",
+        "currency": "USD",
+        "date": "2026-05-24",
+        "direction": "OUTFLOW",
+        "amount": 5222.05,
+        "description": "Payment to Tinbridge Foods",
+        "counterparty": "Tinbridge Foods",
+        "reference": "DEMO2605-0222-DUP"
+      },
+      "candidates": [
+        {
+          "id": "B-0193",
+          "currency": "USD",
+          "date": "2026-05-24",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-A"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        },
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        },
+        {
+          "id": "B-0203",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 3636.07,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0204-FX",
+          "documentId": "JRN-FX-03",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3311.24
+        },
+        {
+          "id": "B-0150",
+          "currency": "USD",
+          "date": "2026-05-19",
+          "direction": "OUTFLOW",
+          "amount": 6310.64,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0218-DUP",
+          "documentId": "JRN-DUP-02-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0200",
+      "statement": {
+        "id": "S-0200",
+        "currency": "USD",
+        "date": "2026-05-24",
+        "direction": "INFLOW",
+        "amount": 6882.17,
+        "description": "Online transfer 0234 · Meridian",
+        "counterparty": "Meridian Labs",
+        "reference": "DEMO26050234MESSY"
+      },
+      "candidates": [
+        {
+          "id": "B-0175",
+          "currency": "USD",
+          "date": "2026-05-22",
+          "direction": "INFLOW",
+          "amount": 6882.17,
+          "description": "Settlement for Meridian Labs",
+          "counterparty": "Meridian Labs",
+          "reference": "BOOK/234-MESSY",
+          "documentId": "JRN-MESSY-07"
+        },
+        {
+          "id": "B-0129",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "INFLOW",
+          "amount": 7136.05,
+          "description": "Open invoice · Quarry Logistics",
+          "counterparty": "Quarry Logistics",
+          "reference": "DEMO2605-0212-PART",
+          "documentId": "JRN-PART-04"
+        },
+        {
+          "id": "B-0202",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "INFLOW",
+          "amount": 4833.8,
+          "description": "Posted on receipt advice · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0185-PAY",
+          "documentId": "JRN-TIM-05"
+        },
+        {
+          "id": "B-0106",
+          "currency": "USD",
+          "date": "2026-05-14",
+          "direction": "INFLOW",
+          "amount": 6754.15,
+          "description": "Posted transaction · Quarry Supplies",
+          "counterparty": "Quarry Supplies",
+          "reference": "DEMO2605-0217-DUP",
+          "documentId": "JRN-DUP-01-B"
+        },
+        {
+          "id": "B-0116",
+          "currency": "USD",
+          "date": "2026-05-15",
+          "direction": "INFLOW",
+          "amount": 6232.01,
+          "description": "Posted transaction · Lantern Print",
+          "counterparty": "Lantern Print",
+          "reference": "DEMO2605-0219-DUP",
+          "documentId": "JRN-DUP-03-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0211",
+      "statement": {
+        "id": "S-0211",
+        "currency": "USD",
+        "date": "2026-05-25",
+        "direction": "OUTFLOW",
+        "amount": 3668.85,
+        "description": "EUR settlement · Marlow Media",
+        "counterparty": "Marlow Media",
+        "reference": "DEMO2605-0204-FX",
+        "transactionCurrency": "EUR",
+        "transactionAmount": 3311.24
+      },
+      "candidates": [
+        {
+          "id": "B-0203",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 3636.07,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0204-FX",
+          "documentId": "JRN-FX-03",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3311.24
+        },
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        },
+        {
+          "id": "B-0166",
+          "currency": "USD",
+          "date": "2026-05-21",
+          "direction": "OUTFLOW",
+          "amount": 3084.3,
+          "description": "Posted on payment advice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0187-PAY",
+          "documentId": "JRN-TIM-07"
+        },
+        {
+          "id": "B-0193",
+          "currency": "USD",
+          "date": "2026-05-24",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0212",
+      "statement": {
+        "id": "S-0212",
+        "currency": "USD",
+        "date": "2026-05-25",
+        "direction": "OUTFLOW",
+        "amount": 4479.19,
+        "description": "Part payment · Northwind Travel",
+        "counterparty": "Northwind Travel",
+        "reference": "DEMO2605-0209-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        },
+        {
+          "id": "B-0193",
+          "currency": "USD",
+          "date": "2026-05-24",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-A"
+        },
+        {
+          "id": "B-0203",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 3636.07,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0204-FX",
+          "documentId": "JRN-FX-03",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3311.24
+        },
+        {
+          "id": "B-0166",
+          "currency": "USD",
+          "date": "2026-05-21",
+          "direction": "OUTFLOW",
+          "amount": 3084.3,
+          "description": "Posted on payment advice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0187-PAY",
+          "documentId": "JRN-TIM-07"
+        }
+      ]
+    },
+    {
+      "id": "S-0218",
+      "statement": {
+        "id": "S-0218",
+        "currency": "USD",
+        "date": "2026-05-26",
+        "direction": "OUTFLOW",
+        "amount": 9539.88,
+        "description": "Part payment · Harbour Foods",
+        "counterparty": "Harbour Foods",
+        "reference": "DEMO2605-0210-PART"
+      },
+      "candidates": [
+        {
+          "id": "B-0213",
+          "currency": "USD",
+          "date": "2026-05-26",
+          "direction": "OUTFLOW",
+          "amount": 10828.47,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0210-PART",
+          "documentId": "JRN-PART-02"
+        },
+        {
+          "id": "B-0130",
+          "currency": "USD",
+          "date": "2026-05-17",
+          "direction": "OUTFLOW",
+          "amount": 8900.4,
+          "description": "Open invoice · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0214-PART",
+          "documentId": "JRN-PART-06"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        },
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        },
+        {
+          "id": "B-0193",
+          "currency": "USD",
+          "date": "2026-05-24",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-A"
+        }
+      ]
+    },
+    {
+      "id": "S-0226",
+      "statement": {
+        "id": "S-0226",
+        "currency": "USD",
+        "date": "2026-05-27",
+        "direction": "OUTFLOW",
+        "amount": 33.6,
+        "description": "Monthly account service fee",
+        "counterparty": null,
+        "reference": "DEMO2605-0194-FEE"
+      },
+      "candidates": [
+        {
+          "id": "B-0224",
+          "currency": "USD",
+          "date": "2026-05-28",
+          "direction": "OUTFLOW",
+          "amount": 901.53,
+          "description": "Posted on payment advice · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0192-PAY",
+          "documentId": "JRN-TIM-12"
+        },
+        {
+          "id": "B-0213",
+          "currency": "USD",
+          "date": "2026-05-26",
+          "direction": "OUTFLOW",
+          "amount": 10828.47,
+          "description": "Open invoice · Harbour Foods",
+          "counterparty": "Harbour Foods",
+          "reference": "DEMO2605-0210-PART",
+          "documentId": "JRN-PART-02"
+        },
+        {
+          "id": "B-0203",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 3636.07,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0204-FX",
+          "documentId": "JRN-FX-03",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3311.24
+        },
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        },
+        {
+          "id": "B-0205",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 5222.05,
+          "description": "Posted transaction · Tinbridge Foods",
+          "counterparty": "Tinbridge Foods",
+          "reference": "DEMO2605-0222-DUP",
+          "documentId": "JRN-DUP-06-B"
+        }
+      ]
+    },
+    {
+      "id": "S-0232",
+      "statement": {
+        "id": "S-0232",
+        "currency": "USD",
+        "date": "2026-05-28",
+        "direction": "OUTFLOW",
+        "amount": 1523.08,
+        "description": "Authorised transfer · Meridian Labs",
+        "counterparty": "Meridian Labs",
+        "reference": "DEMO2605-0225-MISS"
+      },
+      "candidates": [
+        {
+          "id": "B-0224",
+          "currency": "USD",
+          "date": "2026-05-28",
+          "direction": "OUTFLOW",
+          "amount": 901.53,
+          "description": "Posted on payment advice · Cedar Travel",
+          "counterparty": "Cedar Travel",
+          "reference": "DEMO2605-0192-PAY",
+          "documentId": "JRN-TIM-12"
+        },
+        {
+          "id": "B-0144",
+          "currency": "USD",
+          "date": "2026-05-18",
+          "direction": "OUTFLOW",
+          "amount": 1484.75,
+          "description": "Settlement for Meridian Travel",
+          "counterparty": "Meridian Travel",
+          "reference": "BOOK/228-MESSY",
+          "documentId": "JRN-MESSY-01"
+        },
+        {
+          "id": "B-0203",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 3636.07,
+          "description": "EUR invoice at booking rate · Marlow Media",
+          "counterparty": "Marlow Media",
+          "reference": "DEMO2605-0204-FX",
+          "documentId": "JRN-FX-03",
+          "transactionCurrency": "EUR",
+          "transactionAmount": 3311.24
+        },
+        {
+          "id": "B-0166",
+          "currency": "USD",
+          "date": "2026-05-21",
+          "direction": "OUTFLOW",
+          "amount": 3084.3,
+          "description": "Posted on payment advice · Saltmarsh Labs",
+          "counterparty": "Saltmarsh Labs",
+          "reference": "DEMO2605-0187-PAY",
+          "documentId": "JRN-TIM-07"
+        },
+        {
+          "id": "B-0204",
+          "currency": "USD",
+          "date": "2026-05-25",
+          "direction": "OUTFLOW",
+          "amount": 4868.68,
+          "description": "Open invoice · Northwind Travel",
+          "counterparty": "Northwind Travel",
+          "reference": "DEMO2605-0209-PART",
+          "documentId": "JRN-PART-01"
+        }
+      ]
+    }
+  ]
+}
