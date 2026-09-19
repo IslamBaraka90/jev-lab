@@ -1,0 +1,1880 @@
+{
+  "demo": "sharia-screen",
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "NVDA-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 0.99,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 0,
+          "THREE_TO_FIVE": 0.01
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.66,
+        "probabilities": {
+          "FAIL": 0.06,
+          "PASS": 0.77,
+          "NEEDS_REVIEW": 0.17
+        }
+      }
+    },
+    "NVDA-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.9,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 0,
+          "THREE_TO_FIVE": 0.05,
+          "UNDER_3": 0.93,
+          "OVER_5": 0.02
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.65,
+        "probabilities": {
+          "PASS": 0.77,
+          "FAIL": 0.11,
+          "NEEDS_REVIEW": 0.12
+        }
+      }
+    },
+    "NVDA-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.89,
+        "probabilities": {
+          "THREE_TO_FIVE": 0.06,
+          "OVER_5": 0.02,
+          "UNDER_3": 0.92,
+          "NOT_IN_THE_DATA": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.45,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.09,
+          "FAIL": 0.28,
+          "PASS": 0.63
+        }
+      }
+    },
+    "MSFT-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 0.99,
+          "NOT_IN_THE_DATA": 0,
+          "OVER_5": 0,
+          "THREE_TO_FIVE": 0.01
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.4,
+        "probabilities": {
+          "PASS": 0.6,
+          "FAIL": 0.12,
+          "NEEDS_REVIEW": 0.28
+        }
+      }
+    },
+    "MSFT-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.98,
+        "probabilities": {
+          "OVER_5": 0,
+          "THREE_TO_FIVE": 0.01,
+          "UNDER_3": 0.99,
+          "NOT_IN_THE_DATA": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.48,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.27,
+          "FAIL": 0.08,
+          "PASS": 0.65
+        }
+      }
+    },
+    "MSFT-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.98,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 0,
+          "UNDER_3": 0.99,
+          "THREE_TO_FIVE": 0.01,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.38,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.23,
+          "PASS": 0.59,
+          "FAIL": 0.18
+        }
+      }
+    },
+    "AAPL-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.41,
+        "probabilities": {
+          "FAIL": 0.06,
+          "NEEDS_REVIEW": 0.61,
+          "PASS": 0.33
+        }
+      }
+    },
+    "AAPL-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.51,
+        "probabilities": {
+          "FAIL": 0.03,
+          "PASS": 0.29,
+          "NEEDS_REVIEW": 0.68
+        }
+      }
+    },
+    "AAPL-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 1,
+          "OVER_5": 0,
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.5,
+        "probabilities": {
+          "FAIL": 0.16,
+          "PASS": 0.18,
+          "NEEDS_REVIEW": 0.66
+        }
+      }
+    },
+    "JPM-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.23
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "OVER_5",
+        "confidence": 0.98,
+        "probabilities": {
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0.99,
+          "NOT_IN_THE_DATA": 0.01
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.96,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.01,
+          "PASS": 0.01,
+          "FAIL": 0.98
+        }
+      }
+    },
+    "JPM-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "OVER_5",
+        "confidence": 0.98,
+        "probabilities": {
+          "UNDER_3": 0,
+          "NOT_IN_THE_DATA": 0.01,
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0.99
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.67,
+        "probabilities": {
+          "FAIL": 0.78,
+          "PASS": 0.14,
+          "NEEDS_REVIEW": 0.08
+        }
+      }
+    },
+    "JPM-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.21
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.56
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "OVER_5",
+        "confidence": 0.97,
+        "probabilities": {
+          "OVER_5": 0.99,
+          "NOT_IN_THE_DATA": 0.01,
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.95,
+        "probabilities": {
+          "PASS": 0.01,
+          "NEEDS_REVIEW": 0.02,
+          "FAIL": 0.97
+        }
+      }
+    },
+    "BAC-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.1
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "OVER_5",
+        "confidence": 0.97,
+        "probabilities": {
+          "OVER_5": 0.98,
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 0,
+          "NOT_IN_THE_DATA": 0.02
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.96,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.01,
+          "FAIL": 0.98,
+          "PASS": 0.01
+        }
+      }
+    },
+    "BAC-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "OVER_5",
+        "confidence": 0.95,
+        "probabilities": {
+          "UNDER_3": 0.01,
+          "OVER_5": 0.96,
+          "NOT_IN_THE_DATA": 0.03,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.77,
+        "probabilities": {
+          "PASS": 0.11,
+          "FAIL": 0.84,
+          "NEEDS_REVIEW": 0.05
+        }
+      }
+    },
+    "BAC-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "OVER_5",
+        "confidence": 0.96,
+        "probabilities": {
+          "OVER_5": 0.97,
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 0.01,
+          "NOT_IN_THE_DATA": 0.02
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.96,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.01,
+          "FAIL": 0.98,
+          "PASS": 0.01
+        }
+      }
+    },
+    "XOM-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 0,
+          "NOT_IN_THE_DATA": 1,
+          "OVER_5": 0,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.82,
+        "probabilities": {
+          "PASS": 0.12,
+          "NEEDS_REVIEW": 0.88,
+          "FAIL": 0
+        }
+      }
+    },
+    "XOM-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.41
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.82,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.88,
+          "FAIL": 0,
+          "PASS": 0.12
+        }
+      }
+    },
+    "XOM-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.41
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 0.01,
+          "NOT_IN_THE_DATA": 0.99,
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.83,
+        "probabilities": {
+          "FAIL": 0.01,
+          "PASS": 0.11,
+          "NEEDS_REVIEW": 0.88
+        }
+      }
+    },
+    "CVX-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.44,
+        "probabilities": {
+          "PASS": 0.63,
+          "NEEDS_REVIEW": 0.36,
+          "FAIL": 0.01
+        }
+      }
+    },
+    "CVX-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.39,
+        "probabilities": {
+          "FAIL": 0.01,
+          "NEEDS_REVIEW": 0.4,
+          "PASS": 0.59
+        }
+      }
+    },
+    "CVX-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.83
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0,
+          "NOT_IN_THE_DATA": 1,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.4,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.38,
+          "FAIL": 0.02,
+          "PASS": 0.6
+        }
+      }
+    },
+    "KO-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 0,
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 1,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.55,
+        "probabilities": {
+          "PASS": 0.7,
+          "NEEDS_REVIEW": 0.13,
+          "FAIL": 0.17
+        }
+      }
+    },
+    "KO-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "NOT_IN_THE_DATA": 0,
+          "UNDER_3": 1,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.57,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.11,
+          "FAIL": 0.71,
+          "PASS": 0.18
+        }
+      }
+    },
+    "KO-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.83
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 0.99,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 0,
+          "THREE_TO_FIVE": 0.01
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.83,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.05,
+          "PASS": 0.06,
+          "FAIL": 0.89
+        }
+      }
+    },
+    "PEP-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 0.01,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 0.99
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.32,
+        "probabilities": {
+          "FAIL": 0.15,
+          "NEEDS_REVIEW": 0.55,
+          "PASS": 0.3
+        }
+      }
+    },
+    "PEP-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.28
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.27,
+        "probabilities": {
+          "PASS": 0.14,
+          "NEEDS_REVIEW": 0.34,
+          "FAIL": 0.52
+        }
+      }
+    },
+    "PEP-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1,
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.54,
+        "probabilities": {
+          "PASS": 0.03,
+          "FAIL": 0.69,
+          "NEEDS_REVIEW": 0.28
+        }
+      }
+    },
+    "PG-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.57,
+        "probabilities": {
+          "UNDER_3": 0.68,
+          "NOT_IN_THE_DATA": 0,
+          "OVER_5": 0,
+          "THREE_TO_FIVE": 0.32
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.47,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.16,
+          "PASS": 0.65,
+          "FAIL": 0.19
+        }
+      }
+    },
+    "PG-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "THREE_TO_FIVE",
+        "confidence": 0.76,
+        "probabilities": {
+          "UNDER_3": 0.17,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 0,
+          "THREE_TO_FIVE": 0.83
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.23,
+        "probabilities": {
+          "PASS": 0.42,
+          "FAIL": 0.49,
+          "NEEDS_REVIEW": 0.09
+        }
+      }
+    },
+    "PG-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.32
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "THREE_TO_FIVE",
+        "confidence": 0.84,
+        "probabilities": {
+          "UNDER_3": 0.12,
+          "THREE_TO_FIVE": 0.88,
+          "NOT_IN_THE_DATA": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.57,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.08,
+          "FAIL": 0.71,
+          "PASS": 0.21
+        }
+      }
+    },
+    "JNJ-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "THREE_TO_FIVE": 0.01,
+          "NOT_IN_THE_DATA": 0,
+          "OVER_5": 0,
+          "UNDER_3": 0.99
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.53,
+        "probabilities": {
+          "PASS": 0.69,
+          "FAIL": 0.09,
+          "NEEDS_REVIEW": 0.22
+        }
+      }
+    },
+    "JNJ-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.97,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 0,
+          "UNDER_3": 0.97,
+          "THREE_TO_FIVE": 0.02,
+          "OVER_5": 0.01
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.41,
+        "probabilities": {
+          "FAIL": 0.33,
+          "PASS": 0.6,
+          "NEEDS_REVIEW": 0.07
+        }
+      }
+    },
+    "JNJ-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.45
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.94,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 0,
+          "UNDER_3": 0.96,
+          "THREE_TO_FIVE": 0.03,
+          "OVER_5": 0.01
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "FAIL",
+        "confidence": 0.38,
+        "probabilities": {
+          "PASS": 0.32,
+          "NEEDS_REVIEW": 0.1,
+          "FAIL": 0.58
+        }
+      }
+    },
+    "WMT-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.83
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 0,
+          "UNDER_3": 1
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.4,
+        "probabilities": {
+          "PASS": 0.6,
+          "NEEDS_REVIEW": 0.3,
+          "FAIL": 0.1
+        }
+      }
+    },
+    "WMT-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNDER_3": 1,
+          "NOT_IN_THE_DATA": 0,
+          "OVER_5": 0,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.42,
+        "probabilities": {
+          "FAIL": 0.09,
+          "PASS": 0.62,
+          "NEEDS_REVIEW": 0.29
+        }
+      }
+    },
+    "WMT-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "UNDER_3",
+        "confidence": 0.98,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 0.01,
+          "THREE_TO_FIVE": 0.01,
+          "UNDER_3": 0.98,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "PASS",
+        "confidence": 0.08,
+        "probabilities": {
+          "FAIL": 0.24,
+          "PASS": 0.39,
+          "NEEDS_REVIEW": 0.37
+        }
+      }
+    },
+    "GLD-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.44
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.34
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 1,
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.87,
+        "probabilities": {
+          "FAIL": 0.02,
+          "PASS": 0.06,
+          "NEEDS_REVIEW": 0.92
+        }
+      }
+    },
+    "GLD-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.35
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "UNDER_3": 0,
+          "NOT_IN_THE_DATA": 1,
+          "OVER_5": 0,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.88,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.92,
+          "PASS": 0.06,
+          "FAIL": 0.02
+        }
+      }
+    },
+    "GLD-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.87,
+        "probabilities": {
+          "PASS": 0.07,
+          "FAIL": 0.01,
+          "NEEDS_REVIEW": 0.92
+        }
+      }
+    },
+    "SPY-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.42
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.36
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.38
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "OVER_5": 0,
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0,
+          "NOT_IN_THE_DATA": 1
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.75,
+        "probabilities": {
+          "FAIL": 0.16,
+          "NEEDS_REVIEW": 0.83,
+          "PASS": 0.01
+        }
+      }
+    },
+    "SPY-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.36
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.84,
+        "probabilities": {
+          "PASS": 0.02,
+          "NEEDS_REVIEW": 0.89,
+          "FAIL": 0.09
+        }
+      }
+    },
+    "SPY-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.32
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.31
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.36
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.35
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "UNDER_3": 0,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.59,
+        "probabilities": {
+          "FAIL": 0.26,
+          "PASS": 0.01,
+          "NEEDS_REVIEW": 0.73
+        }
+      }
+    },
+    "XLE-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.34
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.38
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.39
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.91,
+        "probabilities": {
+          "FAIL": 0.03,
+          "PASS": 0.02,
+          "NEEDS_REVIEW": 0.95
+        }
+      }
+    },
+    "XLE-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.66
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.34
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.37
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "UNDER_3": 0,
+          "NOT_IN_THE_DATA": 1,
+          "OVER_5": 0,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.91,
+        "probabilities": {
+          "PASS": 0.04,
+          "NEEDS_REVIEW": 0.94,
+          "FAIL": 0.02
+        }
+      }
+    },
+    "XLE-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.32
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.38
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.36
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.92,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.95,
+          "PASS": 0.03,
+          "FAIL": 0.02
+        }
+      }
+    },
+    "BTC-USD-market-cap": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.31
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.38
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 1,
+          "UNDER_3": 0,
+          "THREE_TO_FIVE": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.92,
+        "probabilities": {
+          "FAIL": 0.02,
+          "PASS": 0.03,
+          "NEEDS_REVIEW": 0.95
+        }
+      }
+    },
+    "BTC-USD-total-assets": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.31
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.41
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 1,
+        "probabilities": {
+          "NOT_IN_THE_DATA": 1,
+          "THREE_TO_FIVE": 0,
+          "UNDER_3": 0,
+          "OVER_5": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.86,
+        "probabilities": {
+          "FAIL": 0.04,
+          "NEEDS_REVIEW": 0.9,
+          "PASS": 0.06
+        }
+      }
+    },
+    "BTC-USD-house": {
+      "activity_compliant": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "debt_ratio_pass": {
+        "type": "noul",
+        "noul": 0.35
+      },
+      "interest_securities_pass": {
+        "type": "noul",
+        "noul": 0.29
+      },
+      "receivables_pass": {
+        "type": "noul",
+        "noul": 0.39
+      },
+      "impure_income_band": {
+        "type": "choice",
+        "choice": "NOT_IN_THE_DATA",
+        "confidence": 0.99,
+        "probabilities": {
+          "OVER_5": 0,
+          "NOT_IN_THE_DATA": 0.99,
+          "UNDER_3": 0.01,
+          "THREE_TO_FIVE": 0
+        }
+      },
+      "verdict": {
+        "type": "choice",
+        "choice": "NEEDS_REVIEW",
+        "confidence": 0.82,
+        "probabilities": {
+          "NEEDS_REVIEW": 0.88,
+          "FAIL": 0.05,
+          "PASS": 0.07
+        }
+      }
+    }
+  }
+}

@@ -43,6 +43,7 @@ export const GENERATORS = {
   'execution-quality': () => import('./execution-quality.js'),
   'journal-vs-reality': () => import('./journal-vs-reality.js'),
   'goal-screening': () => import('./goal-screening.js'),
+  'sharia-screen': () => import('./sharia-screen.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

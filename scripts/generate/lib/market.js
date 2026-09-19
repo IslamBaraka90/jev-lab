@@ -17,10 +17,15 @@ export function candles(symbol) {
   return cache.get(key);
 }
 
-/** One symbol's annual fundamentals, newest year first. */
+/** One symbol's annual fundamentals, newest year first. The cached files are not in year order — the
+ *  fetcher sorted on a value that was not a date string — so the sort happens here, once, on load. */
 export function fundamentals(symbol) {
   const key = `fundamentals:${symbol}`;
-  if (!cache.has(key)) cache.set(key, JSON.parse(readFileSync(marketFile('fundamentals', `${symbol}.json`), 'utf8')));
+  if (!cache.has(key)) {
+    const data = JSON.parse(readFileSync(marketFile('fundamentals', `${symbol}.json`), 'utf8'));
+    data.annual = [...data.annual].sort((left, right) => String(right.fiscalYearEnd).localeCompare(String(left.fiscalYearEnd)));
+    cache.set(key, data);
+  }
   return cache.get(key);
 }
 
