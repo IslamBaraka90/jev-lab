@@ -874,6 +874,34 @@
     "code": "/** Grades both costs at once: the fraud that got through, and the good orders that were turned away. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.orderId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const fraud = graded.filter((result) => byItem.get(result.item.id).fraud);\n  const good = graded.filter((result) => !byItem.get(result.item.id).fraud);\n  const stopped = fraud.filter((result) => result.evaluation.stopped);\n  const named = fraud.filter((result) => result.evaluation.pattern === byItem.get(result.item.id).pattern);\n  const falseDeclines = good.filter((result) => result.evaluation.declined);\n\n  return {\n    note: `Three hundred orders, ${labels.filter((label) => label.fraud).length} of them fraud and ${labels.filter((label) => label.kind === 'decoy').length} good orders built to look worse than the fraud. ${context.fraudRateNote ?? ''}`,\n    findings: findings(graded, byItem, good),\n    kpis: kpis({ fraud, stopped, named, falseDeclines, good, graded, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, fraud),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/overfit-review/demo.js#demo:state": {
+    "path": "demos/overfit-review/demo.js",
+    "startLine": 9,
+    "endLine": 24,
+    "code": "function buildState(item, context) {\n  return {\n    task: 'Review this backtest as a sceptical research lead. Identify the main credibility problem, decide how much to trust, and say whether a clean forward test is still worthwhile.',\n    scale_note: context.scale,\n    strategy_and_selected_parameters: item.strategy,\n    research_period: item.period,\n    equity_curve: item.equityCurve,\n    trades: { count: item.tradeCount, return_distribution: item.tradeReturnDistribution },\n    parameter_sensitivity_grid: item.parameterGrid,\n    costs_as_stated: item.costAssumptions,\n    universe_as_stated: item.universe,\n    signal_and_fill_timing_as_stated: item.signalAndExecution,\n    ...(item.validation ? { untouched_validation_as_stated: item.validation } : {}),\n    note: 'The grid, curve, population, costs and event timing are evidence. No credibility verdict is supplied.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/overfit-review/demo.js#demo:questions": {
+    "path": "demos/overfit-review/demo.js",
+    "startLine": 28,
+    "endLine": 34,
+    "code": "const questions = {\n  overfit_risk: score('How high is the risk that this reported edge is not real?', ['None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain']),\n  symptom: choice('What is the main credibility symptom?', Object.fromEntries(SYMPTOMS.map((value) => [value, sentence(value)]))),\n  trust: score('How much of this result should be trusted?', ['None', 'Very little', 'Little', 'Some', 'Fair', 'High', 'Full']),\n  worth_forward_testing: noul('Is the idea still worth a clean forward test?', { yes: 'There is enough here to test prospectively under corrected rules.', no: 'The report offers too little credible evidence to justify it.' }),\n  curve_too_smooth: noul('Is the equity curve implausibly smooth for the stated strategy?', { yes: 'Its path itself is a warning sign.', no: 'The path has plausible variation; any problem lies elsewhere.' }),\n};",
+    "language": "javascript"
+  },
+  "demos/overfit-review/demo.js#demo:evaluate": {
+    "path": "demos/overfit-review/demo.js",
+    "startLine": 38,
+    "endLine": 48,
+    "code": "function evaluate(answers, item) {\n  return {\n    risk: answers.overfit_risk.score,\n    symptom: answers.symptom.choice,\n    trust: answers.trust.score,\n    forward: answers.worth_forward_testing.noul >= 0.5,\n    tooSmooth: answers.curve_too_smooth.noul >= 0.5,\n    confidence: answers.symptom.confidence,\n    label: `${item.id} · ${sentence(answers.symptom.choice)} · trust ${answers.trust.score.toFixed(1)} of 6`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/overfit-review/demo.js#demo:report": {
+    "path": "demos/overfit-review/demo.js",
+    "startLine": 52,
+    "endLine": 85,
+    "code": "function report(results, context = {}) {\n  const byItem = new Map((context.labels ?? []).map((label) => [label.backtestId, label.kind]));\n  const graded = results.filter((result) => result.evaluation && byItem.has(result.item.id));\n  const honest = graded.filter((result) => byItem.get(result.item.id) === 'NONE');\n  const problems = graded.filter((result) => byItem.get(result.item.id) !== 'NONE');\n  const correct = graded.filter((result) => result.evaluation.symptom === byItem.get(result.item.id));\n  const falseDoubt = honest.filter((result) => result.evaluation.symptom !== 'NONE' || result.evaluation.trust < 2 || result.evaluation.risk >= 5);\n  const overTrusted = problems.filter((result) => result.evaluation.trust >= 4);\n  const gallery = [...graded].sort((left, right) => left.evaluation.trust - right.evaluation.trust || right.evaluation.risk - left.evaluation.risk || left.item.id.localeCompare(right.item.id));\n  return {\n    note: `${graded.length} synthetic reports generated with seed 1184. The answer key stays outside the demo folder; it is joined only after all recorded answers are complete. ${context.note ?? ''}`,\n    findings: [\n      `${correct.length} of ${graded.length} reports had their planted main symptom named exactly.`,\n      `${falseDoubt.length} of ${honest.length} honest, deliberately modest backtests were assigned a flaw, very-high risk, or less-than-little trust.`,\n      `${overTrusted.length} of ${problems.length} flawed reports still received fair-or-higher trust.`,\n    ],\n    kpis: [\n      { label: 'Symptom accuracy', value: pct(correct.length, graded.length), context: `${correct.length} exact calls of ${graded.length}`, tone: correct.length >= graded.length * 0.75 ? 'good' : 'warn' },\n      { label: 'Honest false-doubt rate', value: pct(falseDoubt.length, honest.length), context: `${falseDoubt.length} of ${honest.length} honest reports`, tone: falseDoubt.length <= honest.length * 0.2 ? 'good' : 'warn' },\n      { label: 'Flawed reports over-trusted', value: pct(overTrusted.length, problems.length), context: `${overTrusted.length} of ${problems.length} given trust 4–6`, tone: overTrusted.length ? 'warn' : 'good' },\n      { label: 'Average trust · honest vs flawed', value: `${average(honest.map((result) => result.evaluation.trust)).toFixed(2)} vs ${average(problems.map((result) => result.evaluation.trust)).toFixed(2)}`, context: 'same 0–6 trust rubric, joined to the planted class after answering' },\n      { label: 'Forward tests proposed', value: `${graded.filter((result) => result.evaluation.forward).length} of ${graded.length}`, context: 'a forward test is not the same as believing the backtest' },\n    ],\n    distribution: SYMPTOMS.map((symptom) => ({ label: sentence(symptom), count: graded.filter((result) => result.evaluation.symptom === symptom).length, tone: symptom === 'NONE' ? 'good' : 'warn' })).filter((entry) => entry.count),\n    matrix: symptomMatrix(graded, byItem),\n    overfitGallery: { title: 'All curves, worst trust first', rows: gallery.map((result) => ({ id: result.item.id, trust: result.evaluation.trust, risk: result.evaluation.risk, symptom: result.evaluation.symptom, planted: byItem.get(result.item.id), curve: result.item.equityCurve })) },\n    checks: [\n      { id: 'wrong-symptom', label: 'Main symptom misidentified', detail: 'Exact planted class against the single symptom named.', count: graded.length - correct.length, of: graded.length, items: graded.filter((result) => result.evaluation.symptom !== byItem.get(result.item.id)).map((result) => result.item.id) },\n      { id: 'false-doubt', label: 'Honest backtest wrongly doubted', detail: 'Honest report assigned a flaw, risk of five or more, or trust below two.', count: falseDoubt.length, of: honest.length, items: falseDoubt.map((result) => result.item.id) },\n      { id: 'over-trusted', label: 'Flawed backtest trusted', detail: 'A planted failure still received trust of four or more.', count: overTrusted.length, of: problems.length, items: overTrusted.map((result) => result.item.id) },\n    ],\n    topItems: gallery.slice(0, 14).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: `${sentence(byItem.get(result.item.id))} planted` })),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/peer-valuation/demo.js#demo:state": {
     "path": "demos/peer-valuation/demo.js",
     "startLine": 10,
@@ -1751,6 +1779,13 @@
   },
   "src/strategies/pullback.js": {
     "path": "src/strategies/pullback.js",
+    "startLine": null,
+    "endLine": null,
+    "code": null,
+    "language": "javascript"
+  },
+  "scripts/generate/overfit-review.js": {
+    "path": "scripts/generate/overfit-review.js",
     "startLine": null,
     "endLine": null,
     "code": null,

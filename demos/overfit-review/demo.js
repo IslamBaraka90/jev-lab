@@ -3,6 +3,7 @@ import { choice, noul, score } from '../lib/questions.js';
 const SYMPTOMS = ['PARAMETER_CLIFF', 'FEW_TRADES', 'LOOK_AHEAD', 'SURVIVORSHIP', 'COSTS_OMITTED', 'NONE'];
 const sentence = (value) => value.toLowerCase().replaceAll('_', ' ').replace(/^./, (letter) => letter.toUpperCase());
 const pct = (part, whole) => whole ? `${(part / whole * 100).toFixed(1)}%` : '–';
+const average = (values) => values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
 
 // #region demo:state
 function buildState(item, context) {
@@ -54,20 +55,21 @@ function report(results, context = {}) {
   const honest = graded.filter((result) => byItem.get(result.item.id) === 'NONE');
   const problems = graded.filter((result) => byItem.get(result.item.id) !== 'NONE');
   const correct = graded.filter((result) => result.evaluation.symptom === byItem.get(result.item.id));
-  const falseDoubt = honest.filter((result) => result.evaluation.trust < 4 || result.evaluation.risk >= 3);
+  const falseDoubt = honest.filter((result) => result.evaluation.symptom !== 'NONE' || result.evaluation.trust < 2 || result.evaluation.risk >= 5);
   const overTrusted = problems.filter((result) => result.evaluation.trust >= 4);
   const gallery = [...graded].sort((left, right) => left.evaluation.trust - right.evaluation.trust || right.evaluation.risk - left.evaluation.risk || left.item.id.localeCompare(right.item.id));
   return {
     note: `${graded.length} synthetic reports generated with seed 1184. The answer key stays outside the demo folder; it is joined only after all recorded answers are complete. ${context.note ?? ''}`,
     findings: [
       `${correct.length} of ${graded.length} reports had their planted main symptom named exactly.`,
-      `${falseDoubt.length} of ${honest.length} honest, deliberately modest backtests were doubted below fair trust or graded at least moderate risk.`,
+      `${falseDoubt.length} of ${honest.length} honest, deliberately modest backtests were assigned a flaw, very-high risk, or less-than-little trust.`,
       `${overTrusted.length} of ${problems.length} flawed reports still received fair-or-higher trust.`,
     ],
     kpis: [
       { label: 'Symptom accuracy', value: pct(correct.length, graded.length), context: `${correct.length} exact calls of ${graded.length}`, tone: correct.length >= graded.length * 0.75 ? 'good' : 'warn' },
       { label: 'Honest false-doubt rate', value: pct(falseDoubt.length, honest.length), context: `${falseDoubt.length} of ${honest.length} honest reports`, tone: falseDoubt.length <= honest.length * 0.2 ? 'good' : 'warn' },
       { label: 'Flawed reports over-trusted', value: pct(overTrusted.length, problems.length), context: `${overTrusted.length} of ${problems.length} given trust 4–6`, tone: overTrusted.length ? 'warn' : 'good' },
+      { label: 'Average trust · honest vs flawed', value: `${average(honest.map((result) => result.evaluation.trust)).toFixed(2)} vs ${average(problems.map((result) => result.evaluation.trust)).toFixed(2)}`, context: 'same 0–6 trust rubric, joined to the planted class after answering' },
       { label: 'Forward tests proposed', value: `${graded.filter((result) => result.evaluation.forward).length} of ${graded.length}`, context: 'a forward test is not the same as believing the backtest' },
     ],
     distribution: SYMPTOMS.map((symptom) => ({ label: sentence(symptom), count: graded.filter((result) => result.evaluation.symptom === symptom).length, tone: symptom === 'NONE' ? 'good' : 'warn' })).filter((entry) => entry.count),
@@ -75,7 +77,7 @@ function report(results, context = {}) {
     overfitGallery: { title: 'All curves, worst trust first', rows: gallery.map((result) => ({ id: result.item.id, trust: result.evaluation.trust, risk: result.evaluation.risk, symptom: result.evaluation.symptom, planted: byItem.get(result.item.id), curve: result.item.equityCurve })) },
     checks: [
       { id: 'wrong-symptom', label: 'Main symptom misidentified', detail: 'Exact planted class against the single symptom named.', count: graded.length - correct.length, of: graded.length, items: graded.filter((result) => result.evaluation.symptom !== byItem.get(result.item.id)).map((result) => result.item.id) },
-      { id: 'false-doubt', label: 'Honest backtest wrongly doubted', detail: 'Honest report below fair trust or at moderate-or-higher risk.', count: falseDoubt.length, of: honest.length, items: falseDoubt.map((result) => result.item.id) },
+      { id: 'false-doubt', label: 'Honest backtest wrongly doubted', detail: 'Honest report assigned a flaw, risk of five or more, or trust below two.', count: falseDoubt.length, of: honest.length, items: falseDoubt.map((result) => result.item.id) },
       { id: 'over-trusted', label: 'Flawed backtest trusted', detail: 'A planted failure still received trust of four or more.', count: overTrusted.length, of: problems.length, items: overTrusted.map((result) => result.item.id) },
     ],
     topItems: gallery.slice(0, 14).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: `${sentence(byItem.get(result.item.id))} planted` })),
@@ -94,7 +96,7 @@ function symptomMatrix(graded, byItem) {
 export default {
   id: 'overfit-review', title: 'Overfit review', domain: 'strategy',
   value: 'Look at a backtest report the way a sceptic would, and say how much of it to believe.',
-  tags: ['strategy', 'backtest', 'overfitting', 'research'], dataClass: 'synthetic', readMinutes: 5, view: 'curve', status: 'pending-recording',
+  tags: ['strategy', 'backtest', 'overfitting', 'research'], dataClass: 'synthetic', readMinutes: 5, view: 'curve',
   itemLabel: (item) => `${item.id} · ${item.strategy.name} · ${item.tradeCount} trades`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), labels: () => import('../../data/synthetic/overfit-review.labels.json'),
   buildState, questions, evaluate, report,
