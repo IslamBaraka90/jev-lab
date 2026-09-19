@@ -1,4 +1,32 @@
 {
+  "demos/expense-posting/demo.js#demo:state": {
+    "path": "demos/expense-posting/demo.js",
+    "startLine": 10,
+    "endLine": 39,
+    "code": "/** What the model sees for one expense: the charge, the chart of accounts, and this vendor's history. */\nfunction buildState(item, context) {\n  return {\n    task: 'Post one card or bank expense to the right account in the chart of accounts.',\n    company: {\n      name: context.entity,\n      country: context.country,\n      currency: context.currency,\n      vat_rate_percent: context.vatRatePercent,\n      receipt_required_above: context.receiptThreshold,\n      capitalise_above: context.capitalisationThreshold,\n    },\n    expense: {\n      id: item.id,\n      date: item.date,\n      vendor: item.vendor,\n      description: item.description || '(no description on the transaction)',\n      amount: item.amount,\n      currency: item.currency,\n      payment_method: item.paymentMethod,\n      card: item.card,\n      reference: item.reference,\n      is_refund: item.isRefund,\n    },\n    vendor_history: item.priorPostings.length\n      ? item.priorPostings.map((posting) => `${posting.date}: ${posting.amount} posted to ${posting.account} ${accountName(context, posting.account)}`)\n      : 'No earlier charge from this vendor.',\n    chart_of_accounts: context.accounts.map((account) => `${account.code} ${account.name}: ${account.definition}`),\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/expense-posting/demo.js#demo:questions": {
+    "path": "demos/expense-posting/demo.js",
+    "startLine": 45,
+    "endLine": 81,
+    "code": "const questions = {\n  account: choice(\n    'Which account should this expense be posted to?',\n    Object.fromEntries(\n      [\n        ['5200', 'Software subscriptions: recurring software, licences and cloud services.'],\n        ['5500', 'Travel: flights, hotels, rail and taxis for staff travelling on business.'],\n        ['5510', 'Meals and entertainment: hospitality, client meals, team dinners.'],\n        ['5100', 'Office supplies: consumables and small items for the office.'],\n        ['5700', 'Marketing: advertising, sponsorship, printed promotion, event stands.'],\n        ['5600', 'Professional fees: legal, accounting, recruitment, consultancy.'],\n        ['6000', 'Bank charges: account fees, card fees, foreign exchange charges.'],\n        ['5800', 'Utilities: electricity, water, internet and phone for the premises.'],\n        ['1500', 'Hardware: equipment kept over a year and above the capitalisation threshold.'],\n        ['5900', 'Training: courses, certifications, conference tickets, books for staff.'],\n        ['5300', 'Shipping: couriers, postage and freight.'],\n        ['5400', 'Fuel: fuel and mileage for company vehicles.'],\n      ].map(([code, definition]) => [`ACCOUNT_${code}`, definition]),\n    ),\n  ),\n  receipt_required: noul('Does this charge need a receipt on file, under the company rule given in the state?'),\n  vat_treatment: choice('How should VAT on this charge be treated?', {\n    STANDARD: 'Standard-rated: VAT was charged and can be reclaimed.',\n    ZERO_RATED: 'Zero-rated supply.',\n    EXEMPT: 'Exempt from VAT.',\n    OUT_OF_SCOPE: 'Outside the scope of VAT, such as a bank charge or a payment to an unregistered supplier.',\n  }),\n  posting_clarity: score('How clearly does this charge say where it belongs?', [\n    'Unreadable',\n    'Very unclear',\n    'Unclear',\n    'Workable',\n    'Clear',\n    'Very clear',\n    'Unambiguous',\n  ]),\n};",
+    "language": "javascript"
+  },
+  "demos/expense-posting/demo.js#demo:evaluate": {
+    "path": "demos/expense-posting/demo.js",
+    "startLine": 85,
+    "endLine": 100,
+    "code": "/** The posting the page shows, and whether it is confident enough to go through without a person. */\nfunction evaluate(answers, item, context) {\n  const code = answers.account.choice.replace('ACCOUNT_', '');\n  const confidence = answers.account.confidence;\n\n  return {\n    account: code,\n    accountName: accountName(context, code),\n    confidence,\n    autoPost: confidence >= AUTO_THRESHOLD,\n    receiptRequired: answers.receipt_required.noul >= 0.5,\n    vat: answers.vat_treatment.choice,\n    clarity: answers.posting_clarity.score,\n    label: `${item.id}: ${accountName(context, code)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/expense-posting/demo.js#demo:report": {
+    "path": "demos/expense-posting/demo.js",
+    "startLine": 112,
+    "endLine": 129,
+    "code": "/** Accuracy against the intended account, and what automation costs at each confidence threshold. */\nfunction report(results, { labels = [], accounts = [] } = {}) {\n  const intended = new Map(labels.map((label) => [label.expenseId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const correct = (result) => intended.get(result.item.id).account === result.evaluation.account;\n  const auto = graded.filter((result) => result.evaluation.autoPost);\n\n  return {\n    note: `Graded against the account each expense was meant for. At ${Math.round(AUTO_THRESHOLD * 100)}% confidence, ${auto.length} of ${graded.length} post without a person.`,\n    findings: confusions(graded, intended, accounts),\n    kpis: headline(graded, auto, correct),\n    distribution: chosenAccounts(graded, accounts),\n    matrix: confusion(graded, intended, accounts),\n    curve: coverage(graded, intended),\n    checks: KINDS.map((kind) => difficulty(kind, graded, intended, correct)),\n    topItems: leastClear(graded),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/ledger-integrity/demo.js#demo:state": {
     "path": "demos/ledger-integrity/demo.js",
     "startLine": 38,
@@ -53,6 +81,13 @@
     "startLine": 82,
     "endLine": 102,
     "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/expense-posting.js#demo:data": {
+    "path": "scripts/generate/expense-posting.js",
+    "startLine": 142,
+    "endLine": 161,
+    "code": "/** One expense: a vendor, a date, an amount, a memo of varying usefulness, and how it was paid. */\nfunction expense(random, { vendor, memo, value, refund = false }) {\n  const date = random.day(PERIOD.from, PERIOD.to);\n  const method = random.weighted([['card', 72], ['direct debit', 16], ['bank transfer', 12]]);\n\n  return {\n    key: `${vendor}-${date}-${value}-${random.int(1000, 9999)}`,\n    id: null,\n    date,\n    vendor,\n    description: memo,\n    amount: refund ? round(-value) : round(value),\n    currency: 'AED',\n    paymentMethod: method,\n    card: method === 'card' ? `**** ${random.int(1000, 9999)}` : null,\n    reference: `TX-${random.int(100_000, 999_999)}`,\n    isRefund: refund,\n    priorPostings: [],\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/ledger-integrity.js#demo:data": {

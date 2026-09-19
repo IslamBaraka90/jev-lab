@@ -1,0 +1,2047 @@
+[
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0110"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0358"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0025"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0337"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0317"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0314"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0181"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0013"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0211"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0304"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0332"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0088"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0053"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0028"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0021"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0240"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0305"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0111"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0300"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0160"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0362"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0183"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0268"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0171"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0232"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0148"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0265"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0310"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0192"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0151"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0051"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0291"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0214"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0166"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0193"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0094"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0033"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0203"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0118"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0017"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0293"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0081"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0152"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0004"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0072"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0277"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0031"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0383"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0297"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0047"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0341"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0037"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0014"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0187"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0307"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0128"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0231"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0320"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0144"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0217"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0087"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0216"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0096"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0225"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0058"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0257"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0294"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0002"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0092"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0041"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0185"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0312"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0359"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0154"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0162"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0179"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0016"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0342"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0170"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0142"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0241"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0400"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0089"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0062"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0244"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0349"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0242"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0246"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0355"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0344"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0048"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0243"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0391"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0005"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0350"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0024"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0275"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0289"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0235"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0336"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0143"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0329"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0104"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0259"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0236"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0085"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0097"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0271"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0281"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0269"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0156"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0370"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0127"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0008"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0323"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0095"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0385"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0107"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0040"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0301"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0163"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0338"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0098"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0176"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0026"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0124"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0223"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0082"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0321"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0346"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0345"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0188"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0303"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0140"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0209"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0036"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0306"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0264"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0018"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0371"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0397"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0207"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0068"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0325"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0393"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0351"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0117"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0146"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0251"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0137"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0073"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0319"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0205"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0255"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0245"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0009"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0115"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0372"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0045"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0133"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0333"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0238"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0253"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0164"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0348"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0288"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0366"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0308"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0378"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0283"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0195"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0369"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0278"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0075"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0254"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0270"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0119"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0099"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0136"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0309"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0086"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0084"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0019"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0364"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0204"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0165"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0248"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0138"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0076"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0394"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0042"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0190"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0389"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0392"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0149"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0343"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0380"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0029"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0169"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0233"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0055"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0280"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0194"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0012"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0237"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0311"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0228"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0189"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0161"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0039"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0071"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0091"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0260"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0206"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0177"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0347"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0218"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0382"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0208"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0298"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0132"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0060"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0276"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0363"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0070"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0168"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0083"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0057"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0001"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0159"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0003"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0180"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0139"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0109"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0374"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0030"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0056"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0131"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0157"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0069"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0256"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0059"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0285"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0315"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0224"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0064"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0384"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0114"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0396"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0046"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0262"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0296"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0027"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0230"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0258"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0174"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0100"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0295"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0273"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0367"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0261"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0328"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0050"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0266"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0219"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0381"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0368"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0210"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0063"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0213"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0049"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0093"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0226"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0282"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0125"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0182"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0201"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0172"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0120"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0074"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0167"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0078"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0361"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0399"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0122"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0274"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0090"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0330"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0147"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0065"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0134"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0390"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0335"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0222"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0324"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0292"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0250"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0229"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0220"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0313"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0339"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0178"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0061"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0080"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0175"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0212"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0267"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0227"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0145"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0010"
+  },
+  {
+    "account": "5900",
+    "kind": "clear",
+    "expenseId": "E-0105"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0198"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0331"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0234"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0038"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0199"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0284"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0356"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0153"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0247"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0116"
+  },
+  {
+    "account": "5400",
+    "kind": "clear",
+    "expenseId": "E-0191"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0376"
+  },
+  {
+    "account": "6000",
+    "kind": "clear",
+    "expenseId": "E-0101"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0186"
+  },
+  {
+    "account": "5600",
+    "kind": "clear",
+    "expenseId": "E-0079"
+  },
+  {
+    "account": "5510",
+    "kind": "clear",
+    "expenseId": "E-0141"
+  },
+  {
+    "account": "5500",
+    "kind": "clear",
+    "expenseId": "E-0354"
+  },
+  {
+    "account": "1500",
+    "kind": "clear",
+    "expenseId": "E-0106"
+  },
+  {
+    "account": "5100",
+    "kind": "clear",
+    "expenseId": "E-0221"
+  },
+  {
+    "account": "5700",
+    "kind": "clear",
+    "expenseId": "E-0196"
+  },
+  {
+    "account": "5200",
+    "kind": "clear",
+    "expenseId": "E-0202"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0395"
+  },
+  {
+    "account": "5300",
+    "kind": "clear",
+    "expenseId": "E-0375"
+  },
+  {
+    "account": "5800",
+    "kind": "clear",
+    "expenseId": "E-0377"
+  },
+  {
+    "account": "5500",
+    "kind": "ambiguous",
+    "note": "Kestrel Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0102"
+  },
+  {
+    "account": "5900",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0130"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0032"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Lantern Depot sells into 5300 and 5100; the memo decides",
+    "expenseId": "E-0184"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0015"
+  },
+  {
+    "account": "5510",
+    "kind": "ambiguous",
+    "note": "Bluewater Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0290"
+  },
+  {
+    "account": "5700",
+    "kind": "ambiguous",
+    "note": "Ironbark Print sells into 5700 and 5100; the memo decides",
+    "expenseId": "E-0379"
+  },
+  {
+    "account": "5510",
+    "kind": "ambiguous",
+    "note": "Kestrel Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0035"
+  },
+  {
+    "account": "5900",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0043"
+  },
+  {
+    "account": "5900",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0365"
+  },
+  {
+    "account": "5510",
+    "kind": "ambiguous",
+    "note": "Bluewater Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0054"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Lantern Depot sells into 5300 and 5100; the memo decides",
+    "expenseId": "E-0334"
+  },
+  {
+    "account": "5300",
+    "kind": "ambiguous",
+    "note": "Lantern Depot sells into 5300 and 5100; the memo decides",
+    "expenseId": "E-0121"
+  },
+  {
+    "account": "5510",
+    "kind": "ambiguous",
+    "note": "Kestrel Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0103"
+  },
+  {
+    "account": "5700",
+    "kind": "ambiguous",
+    "note": "Copperline Print sells into 5700 and 5100; the memo decides",
+    "expenseId": "E-0066"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Lantern Depot sells into 5300 and 5100; the memo decides",
+    "expenseId": "E-0007"
+  },
+  {
+    "account": "5900",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0023"
+  },
+  {
+    "account": "5500",
+    "kind": "ambiguous",
+    "note": "Bluewater Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0398"
+  },
+  {
+    "account": "5700",
+    "kind": "ambiguous",
+    "note": "Ironbark Print sells into 5700 and 5100; the memo decides",
+    "expenseId": "E-0215"
+  },
+  {
+    "account": "5900",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0386"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Meridian Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0123"
+  },
+  {
+    "account": "5500",
+    "kind": "ambiguous",
+    "note": "Bluewater Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0135"
+  },
+  {
+    "account": "5500",
+    "kind": "ambiguous",
+    "note": "Kestrel Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0006"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0067"
+  },
+  {
+    "account": "5300",
+    "kind": "ambiguous",
+    "note": "Marlow Depot sells into 5300 and 5100; the memo decides",
+    "expenseId": "E-0322"
+  },
+  {
+    "account": "5900",
+    "kind": "ambiguous",
+    "note": "Quarry Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0287"
+  },
+  {
+    "account": "5700",
+    "kind": "ambiguous",
+    "note": "Ironbark Print sells into 5700 and 5100; the memo decides",
+    "expenseId": "E-0326"
+  },
+  {
+    "account": "5510",
+    "kind": "ambiguous",
+    "note": "Bluewater Hotel sells into 5500 and 5510; the memo decides",
+    "expenseId": "E-0011"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Lantern Depot sells into 5300 and 5100; the memo decides",
+    "expenseId": "E-0279"
+  },
+  {
+    "account": "5100",
+    "kind": "ambiguous",
+    "note": "Meridian Books sells into 5900 and 5100; the memo decides",
+    "expenseId": "E-0129"
+  },
+  {
+    "account": "5500",
+    "kind": "no-memo",
+    "expenseId": "E-0318"
+  },
+  {
+    "account": "5700",
+    "kind": "no-memo",
+    "expenseId": "E-0249"
+  },
+  {
+    "account": "5100",
+    "kind": "no-memo",
+    "expenseId": "E-0352"
+  },
+  {
+    "account": "5700",
+    "kind": "no-memo",
+    "expenseId": "E-0077"
+  },
+  {
+    "account": "5300",
+    "kind": "no-memo",
+    "expenseId": "E-0034"
+  },
+  {
+    "account": "6000",
+    "kind": "no-memo",
+    "expenseId": "E-0155"
+  },
+  {
+    "account": "6000",
+    "kind": "no-memo",
+    "expenseId": "E-0340"
+  },
+  {
+    "account": "5800",
+    "kind": "no-memo",
+    "expenseId": "E-0112"
+  },
+  {
+    "account": "5510",
+    "kind": "no-memo",
+    "expenseId": "E-0052"
+  },
+  {
+    "account": "5900",
+    "kind": "no-memo",
+    "expenseId": "E-0252"
+  },
+  {
+    "account": "5600",
+    "kind": "no-memo",
+    "expenseId": "E-0173"
+  },
+  {
+    "account": "5500",
+    "kind": "no-memo",
+    "expenseId": "E-0108"
+  },
+  {
+    "account": "5200",
+    "kind": "no-memo",
+    "expenseId": "E-0353"
+  },
+  {
+    "account": "5400",
+    "kind": "no-memo",
+    "expenseId": "E-0022"
+  },
+  {
+    "account": "5700",
+    "kind": "no-memo",
+    "expenseId": "E-0200"
+  },
+  {
+    "account": "5800",
+    "kind": "no-memo",
+    "expenseId": "E-0126"
+  },
+  {
+    "account": "5100",
+    "kind": "no-memo",
+    "expenseId": "E-0327"
+  },
+  {
+    "account": "5300",
+    "kind": "no-memo",
+    "expenseId": "E-0263"
+  },
+  {
+    "account": "5900",
+    "kind": "no-memo",
+    "expenseId": "E-0286"
+  },
+  {
+    "account": "5500",
+    "kind": "no-memo",
+    "expenseId": "E-0239"
+  },
+  {
+    "account": "5700",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0044"
+  },
+  {
+    "account": "5100",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0272"
+  },
+  {
+    "account": "5200",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0299"
+  },
+  {
+    "account": "5800",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0387"
+  },
+  {
+    "account": "5700",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0020"
+  },
+  {
+    "account": "5900",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0197"
+  },
+  {
+    "account": "5600",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0360"
+  },
+  {
+    "account": "5900",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0158"
+  },
+  {
+    "account": "5510",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0357"
+  },
+  {
+    "account": "5500",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0302"
+  },
+  {
+    "account": "6000",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0113"
+  },
+  {
+    "account": "5400",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0388"
+  },
+  {
+    "account": "5800",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0150"
+  },
+  {
+    "account": "5100",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0316"
+  },
+  {
+    "account": "5900",
+    "kind": "refund",
+    "note": "A refund goes back to the account the original charge used",
+    "expenseId": "E-0373"
+  }
+]
