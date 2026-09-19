@@ -5,9 +5,9 @@
   "author": "Islam Baraka",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IslamBaraka90/jev-lab.git"
+    "url": "git+https://github.com/IslamBaraka90/jev-typesafe-real-financial-use-cases.git"
   },
-  "homepage": "https://github.com/IslamBaraka90/jev-lab#readme",
+  "homepage": "https://github.com/IslamBaraka90/jev-typesafe-real-financial-use-cases#readme",
   "private": true,
   "description": "Express app for testing TypeSafe's Jev model",
   "type": "module",
