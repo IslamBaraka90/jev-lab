@@ -1,7 +1,8208 @@
 {
   "demo": "journal-vs-reality",
-  "model": null,
-  "recordedAt": null,
-  "source": "not recorded yet - run: npm run record journal-vs-reality",
-  "answers": {}
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "JR-0001": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "ENTRY": 0,
+          "SIZE": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.02,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.13,
+          "2": 0.12,
+          "3": 0.52,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "JR-0002": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.38,
+        "probabilities": {
+          "ENTRY": 0.01,
+          "NONE": 0.47,
+          "RATIONALISATION": 0.33,
+          "EXIT": 0.16,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.94,
+        "confidence": 0.11,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.24,
+          "4": 0.09,
+          "5": 0.27,
+          "6": 0.24
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "JR-0003": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "EXIT": 1,
+          "INSTRUMENT": 0,
+          "SIZE": 0,
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "ENTRY": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.77,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.59,
+          "1": 0.22,
+          "2": 0.04,
+          "3": 0.15,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.13
+      }
+    },
+    "JR-0004": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.42
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.31,
+        "probabilities": {
+          "NONE": 0.11,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.42,
+          "RATIONALISATION": 0.36,
+          "SIZE": 0.09,
+          "ENTRY": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.12,
+        "confidence": 0.2,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.15,
+          "2": 0.11,
+          "3": 0.36,
+          "4": 0.06,
+          "5": 0.05,
+          "6": 0.03
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.66
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "JR-0005": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.42,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.28,
+          "SIZE": 0.01,
+          "ENTRY": 0,
+          "RATIONALISATION": 0.19,
+          "NONE": 0.51
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.55,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.13,
+          "4": 0.07,
+          "5": 0.26,
+          "6": 0.42
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "JR-0006": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.51,
+        "probabilities": {
+          "RATIONALISATION": 0.27,
+          "SIZE": 0.06,
+          "ENTRY": 0.04,
+          "INSTRUMENT": 0.03,
+          "NONE": 0.59,
+          "EXIT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.75,
+        "confidence": 0.01,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.18,
+          "4": 0.11,
+          "5": 0.26,
+          "6": 0.23
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.42
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "JR-0007": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "NONE": 0.76,
+          "ENTRY": 0,
+          "EXIT": 0.06,
+          "SIZE": 0,
+          "RATIONALISATION": 0.17,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.84,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.33,
+          "4": 0.11,
+          "5": 0.25,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.81
+      }
+    },
+    "JR-0008": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "SIZE": 0,
+          "NONE": 0,
+          "ENTRY": 1,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.31,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.44,
+          "1": 0.16,
+          "2": 0.08,
+          "3": 0.32,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.12
+      }
+    },
+    "JR-0009": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXIT": 0,
+          "NONE": 0,
+          "ENTRY": 0,
+          "SIZE": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.09,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.49,
+          "1": 0.2,
+          "2": 0.07,
+          "3": 0.22,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.24
+      }
+    },
+    "JR-0010": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.41
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.36,
+        "probabilities": {
+          "EXIT": 0.36,
+          "RATIONALISATION": 0.47,
+          "INSTRUMENT": 0,
+          "NONE": 0.07,
+          "SIZE": 0.06,
+          "ENTRY": 0.04
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.19,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.08,
+          "2": 0.11,
+          "3": 0.43,
+          "4": 0.06,
+          "5": 0.06,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "JR-0011": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATIONALISATION": 0,
+          "EXIT": 0,
+          "SIZE": 1,
+          "INSTRUMENT": 0,
+          "ENTRY": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.08,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.1,
+          "2": 0.12,
+          "3": 0.55,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.13
+      }
+    },
+    "JR-0012": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.29,
+        "probabilities": {
+          "SIZE": 0.01,
+          "NONE": 0.24,
+          "ENTRY": 0,
+          "RATIONALISATION": 0.39999999999999997,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.34
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.07,
+        "confidence": 0.16,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.08,
+          "2": 0.07,
+          "3": 0.32,
+          "4": 0.12,
+          "5": 0.14,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "JR-0013": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.45,
+        "probabilities": {
+          "NONE": 0.55,
+          "INSTRUMENT": 0,
+          "EXIT": 0.06,
+          "RATIONALISATION": 0.23,
+          "SIZE": 0.07,
+          "ENTRY": 0.09
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.93,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.16,
+          "4": 0.09,
+          "5": 0.23,
+          "6": 0.31
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.58
+      }
+    },
+    "JR-0014": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "ENTRY": 1,
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.3,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.44,
+          "1": 0.15,
+          "2": 0.09,
+          "3": 0.32,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "JR-0015": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.35,
+        "probabilities": {
+          "SIZE": 0.01,
+          "ENTRY": 0.01,
+          "NONE": 0.16,
+          "RATIONALISATION": 0.36,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.45
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.64,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.1,
+          "2": 0.09,
+          "3": 0.38,
+          "4": 0.09,
+          "5": 0.1,
+          "6": 0.06
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "JR-0016": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.23,
+        "probabilities": {
+          "NONE": 0.18,
+          "RATIONALISATION": 0.36,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.01,
+          "EXIT": 0.36,
+          "SIZE": 0.08
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.36,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.22,
+          "1": 0.14,
+          "2": 0.09,
+          "3": 0.35,
+          "4": 0.07,
+          "5": 0.08,
+          "6": 0.05
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "JR-0017": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0,
+          "EXIT": 0,
+          "SIZE": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.94,
+        "confidence": 0.36,
+        "probabilities": {
+          "0": 0.22,
+          "1": 0.13,
+          "2": 0.15,
+          "3": 0.5,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.45
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "JR-0018": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 1,
+          "INSTRUMENT": 0,
+          "ENTRY": 0,
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.32,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.05,
+          "2": 0.09,
+          "3": 0.67,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.44
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "JR-0019": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.57,
+        "probabilities": {
+          "ENTRY": 0,
+          "RATIONALISATION": 0.24,
+          "NONE": 0.65,
+          "SIZE": 0.09,
+          "EXIT": 0,
+          "INSTRUMENT": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.89,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.24,
+          "4": 0.13,
+          "5": 0.32,
+          "6": 0.15
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "JR-0020": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.27
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.65,
+        "probabilities": {
+          "SIZE": 0.03,
+          "INSTRUMENT": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0.21,
+          "EXIT": 0.71,
+          "NONE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.69,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.18,
+          "2": 0.09,
+          "3": 0.36,
+          "4": 0.02,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "JR-0021": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.22,
+        "probabilities": {
+          "EXIT": 0.1,
+          "INSTRUMENT": 0,
+          "SIZE": 0.06,
+          "RATIONALISATION": 0.23,
+          "ENTRY": 0.26,
+          "NONE": 0.35
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.4,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.34,
+          "4": 0.11,
+          "5": 0.2,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.33
+      }
+    },
+    "JR-0022": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 1,
+          "ENTRY": 0,
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.04,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.22,
+          "1": 0.11,
+          "2": 0.12,
+          "3": 0.53,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.11
+      }
+    },
+    "JR-0023": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.25
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.6,
+        "probabilities": {
+          "RATIONALISATION": 0.25,
+          "ENTRY": 0.02,
+          "EXIT": 0.67,
+          "INSTRUMENT": 0,
+          "NONE": 0.01,
+          "SIZE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.55,
+        "confidence": 0.1,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.19,
+          "2": 0.1,
+          "3": 0.34,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "JR-0024": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.09
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 1,
+          "NONE": 0,
+          "SIZE": 0,
+          "ENTRY": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.75,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.66,
+          "1": 0.13,
+          "2": 0.05,
+          "3": 0.14,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.32
+      }
+    },
+    "JR-0025": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "RATIONALISATION": 0.19,
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.05,
+          "ENTRY": 0,
+          "NONE": 0.75
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.81,
+        "confidence": 0.16,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.36,
+          "4": 0.09,
+          "5": 0.25,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.2
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "JR-0026": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.4,
+        "probabilities": {
+          "ENTRY": 0.04,
+          "INSTRUMENT": 0,
+          "EXIT": 0.01,
+          "SIZE": 0.05,
+          "NONE": 0.4,
+          "RATIONALISATION": 0.5
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.83,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.16,
+          "1": 0.04,
+          "2": 0.03,
+          "3": 0.17,
+          "4": 0.09,
+          "5": 0.23,
+          "6": 0.28
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "JR-0027": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.25
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.56,
+        "probabilities": {
+          "SIZE": 0.07,
+          "RATIONALISATION": 0.23,
+          "NONE": 0.06,
+          "EXIT": 0.64,
+          "ENTRY": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.63,
+        "confidence": 0.09,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.2,
+          "2": 0.12,
+          "3": 0.32,
+          "4": 0.02,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "JR-0028": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.34
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.54,
+        "probabilities": {
+          "SIZE": 0.09,
+          "RATIONALISATION": 0.26,
+          "NONE": 0.02,
+          "EXIT": 0.62,
+          "ENTRY": 0.01,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.83,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.18,
+          "2": 0.17,
+          "3": 0.39,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.23
+      }
+    },
+    "JR-0029": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "ENTRY": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "SIZE": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.37,
+        "confidence": 0.61,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.06,
+          "2": 0.13,
+          "3": 0.68,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "JR-0030": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.5,
+        "probabilities": {
+          "SIZE": 0.01,
+          "ENTRY": 0,
+          "RATIONALISATION": 0.18,
+          "EXIT": 0.21,
+          "NONE": 0.59,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.67,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.09,
+          "4": 0.07,
+          "5": 0.25,
+          "6": 0.45999999999999996
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.56
+      }
+    },
+    "JR-0031": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.02
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "ENTRY": 0,
+          "EXIT": 1,
+          "INSTRUMENT": 0,
+          "SIZE": 0,
+          "RATIONALISATION": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.36,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.85,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0.09,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "JR-0032": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "ENTRY": 0,
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "SIZE": 1,
+          "RATIONALISATION": 0,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.1,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0.22,
+          "1": 0.09,
+          "2": 0.11,
+          "3": 0.56,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.11
+      }
+    },
+    "JR-0033": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.5,
+        "probabilities": {
+          "ENTRY": 0.01,
+          "EXIT": 0.17,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.22,
+          "NONE": 0.58
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.35,
+        "confidence": 0.04,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.1,
+          "4": 0.07,
+          "5": 0.22,
+          "6": 0.43
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "JR-0034": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.28,
+        "probabilities": {
+          "NONE": 0.4,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.25,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.32
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.37,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.37,
+          "4": 0.12,
+          "5": 0.22,
+          "6": 0.1
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.31
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.34
+      }
+    },
+    "JR-0035": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.1
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.98,
+        "probabilities": {
+          "RATIONALISATION": 0.01,
+          "ENTRY": 0.98,
+          "NONE": 0,
+          "SIZE": 0,
+          "EXIT": 0.01,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.18,
+        "confidence": 0.31,
+        "probabilities": {
+          "0": 0.47,
+          "1": 0.18,
+          "2": 0.08,
+          "3": 0.27,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "JR-0036": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.88,
+        "probabilities": {
+          "ENTRY": 0,
+          "RATIONALISATION": 0.1,
+          "NONE": 0,
+          "SIZE": 0,
+          "EXIT": 0.9,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.92,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.52,
+          "1": 0.23,
+          "2": 0.09,
+          "3": 0.16,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.33
+      }
+    },
+    "JR-0037": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "ENTRY": 0,
+          "EXIT": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.88,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0.56,
+          "1": 0.2,
+          "2": 0.06,
+          "3": 0.17,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.27
+      }
+    },
+    "JR-0038": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.99,
+        "probabilities": {
+          "SIZE": 0,
+          "INSTRUMENT": 1,
+          "NONE": 0,
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "ENTRY": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.46,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.42,
+          "1": 0.14,
+          "2": 0.06,
+          "3": 0.34,
+          "4": 0.01,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.74
+      }
+    },
+    "JR-0039": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "EXIT": 0.01,
+          "INSTRUMENT": 0,
+          "ENTRY": 0.02,
+          "NONE": 0.72,
+          "RATIONALISATION": 0.24,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.78,
+        "confidence": 0.29,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.06,
+          "5": 0.23,
+          "6": 0.52
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.27
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "JR-0040": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.21,
+        "probabilities": {
+          "SIZE": 0.04,
+          "ENTRY": 0.01,
+          "EXIT": 0.34,
+          "RATIONALISATION": 0.34,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.26
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.05,
+        "confidence": 0.21,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.06,
+          "2": 0.07,
+          "3": 0.37,
+          "4": 0.1,
+          "5": 0.16,
+          "6": 0.09
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.56
+      }
+    },
+    "JR-0041": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.43,
+        "probabilities": {
+          "NONE": 0.52,
+          "ENTRY": 0.13,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.02,
+          "RATIONALISATION": 0.25,
+          "SIZE": 0.07
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.59,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.04,
+          "2": 0.03,
+          "3": 0.25,
+          "4": 0.1,
+          "5": 0.24,
+          "6": 0.19
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "JR-0042": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.67,
+        "probabilities": {
+          "ENTRY": 0.02,
+          "RATIONALISATION": 0.18,
+          "EXIT": 0.06,
+          "NONE": 0.73,
+          "SIZE": 0,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.61,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.08,
+          "4": 0.07,
+          "5": 0.26,
+          "6": 0.46
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.44
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "JR-0043": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.25,
+        "probabilities": {
+          "EXIT": 0.37,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0.01,
+          "RATIONALISATION": 0.25,
+          "ENTRY": 0.01,
+          "NONE": 0.35
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.83,
+        "confidence": 0.14,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.27,
+          "4": 0.11,
+          "5": 0.31,
+          "6": 0.16
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.33
+      }
+    },
+    "JR-0044": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.49,
+        "probabilities": {
+          "EXIT": 0,
+          "SIZE": 0.23,
+          "INSTRUMENT": 0.02,
+          "NONE": 0.57,
+          "RATIONALISATION": 0.17,
+          "ENTRY": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.66,
+        "confidence": 0.18,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.33,
+          "4": 0.13,
+          "5": 0.27,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.64
+      }
+    },
+    "JR-0045": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.38,
+        "probabilities": {
+          "NONE": 0.49,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0,
+          "RATIONALISATION": 0.23,
+          "SIZE": 0.01,
+          "EXIT": 0.26
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.06,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.15,
+          "4": 0.1,
+          "5": 0.32,
+          "6": 0.25
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.58
+      }
+    },
+    "JR-0046": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0,
+          "ENTRY": 0,
+          "SIZE": 1,
+          "EXIT": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.78,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.26,
+          "1": 0.16,
+          "2": 0.15,
+          "3": 0.43,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.06
+      }
+    },
+    "JR-0047": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "EXIT": 1,
+          "NONE": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.47,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.1,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.21
+      }
+    },
+    "JR-0048": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.63
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.51,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0.59,
+          "ENTRY": 0.08,
+          "EXIT": 0.07,
+          "NONE": 0.21,
+          "SIZE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.36,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.05,
+          "3": 0.33,
+          "4": 0.1,
+          "5": 0.19,
+          "6": 0.15
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "JR-0049": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.2,
+          "ENTRY": 0.03,
+          "EXIT": 0,
+          "NONE": 0.75,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.76,
+        "confidence": 0.28,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.05,
+          "4": 0.05,
+          "5": 0.18,
+          "6": 0.58
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "JR-0050": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.92
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.82,
+          "RATIONALISATION": 0.16,
+          "ENTRY": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.92,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.04,
+          "5": 0.11,
+          "6": 0.68
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.94
+      }
+    },
+    "JR-0051": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXIT": 0,
+          "ENTRY": 0,
+          "NONE": 0,
+          "RATIONALISATION": 0,
+          "SIZE": 1,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.77,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.14,
+          "2": 0.15,
+          "3": 0.42,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "JR-0052": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "ENTRY": 0,
+          "SIZE": 1,
+          "INSTRUMENT": 0,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.3,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.08,
+          "2": 0.13,
+          "3": 0.63,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.38
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "JR-0053": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.53,
+        "probabilities": {
+          "EXIT": 0.24,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0,
+          "RATIONALISATION": 0.15,
+          "ENTRY": 0,
+          "NONE": 0.6
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.65,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.38,
+          "4": 0.1,
+          "5": 0.24,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.21
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.67
+      }
+    },
+    "JR-0054": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.37,
+        "probabilities": {
+          "NONE": 0.47,
+          "ENTRY": 0,
+          "EXIT": 0.28,
+          "SIZE": 0.01,
+          "RATIONALISATION": 0.23,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.35,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.13,
+          "4": 0.09,
+          "5": 0.34,
+          "6": 0.31
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "JR-0055": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.97,
+        "probabilities": {
+          "EXIT": 0.01,
+          "NONE": 0,
+          "SIZE": 0,
+          "RATIONALISATION": 0,
+          "ENTRY": 0,
+          "INSTRUMENT": 0.99
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.94,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.58,
+          "1": 0.16,
+          "2": 0.06,
+          "3": 0.18,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "JR-0056": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.4,
+        "probabilities": {
+          "RATIONALISATION": 0.38,
+          "INSTRUMENT": 0,
+          "NONE": 0.06,
+          "EXIT": 0.49,
+          "SIZE": 0.06,
+          "ENTRY": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.21,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.09,
+          "2": 0.14,
+          "3": 0.46,
+          "4": 0.05,
+          "5": 0.04,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "JR-0057": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.39,
+        "probabilities": {
+          "RATIONALISATION": 0.13,
+          "NONE": 0.33,
+          "SIZE": 0,
+          "EXIT": 0.48,
+          "ENTRY": 0.05,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.84,
+        "confidence": 0.1,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.04,
+          "2": 0.05,
+          "3": 0.25,
+          "4": 0.1,
+          "5": 0.28,
+          "6": 0.19
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "JR-0058": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.38,
+        "probabilities": {
+          "ENTRY": 0.01,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.49,
+          "SIZE": 0.03,
+          "NONE": 0.15,
+          "RATIONALISATION": 0.31
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.68,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.06,
+          "2": 0.09,
+          "3": 0.54,
+          "4": 0.07,
+          "5": 0.08,
+          "6": 0.02
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.24
+      }
+    },
+    "JR-0059": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.31,
+        "probabilities": {
+          "ENTRY": 0.13,
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.25,
+          "RATIONALISATION": 0.18,
+          "NONE": 0.43
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.06,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.13,
+          "4": 0.09,
+          "5": 0.24,
+          "6": 0.33
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "JR-0060": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.51,
+        "probabilities": {
+          "NONE": 0.6,
+          "RATIONALISATION": 0.15,
+          "ENTRY": 0.01,
+          "SIZE": 0.23,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.83,
+        "confidence": 0.12,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.31,
+          "4": 0.11,
+          "5": 0.26,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.57
+      }
+    },
+    "JR-0061": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "NONE": 0,
+          "ENTRY": 0,
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.68,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.14,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.42
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.66
+      }
+    },
+    "JR-0062": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "EXIT": 0,
+          "NONE": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 0,
+          "ENTRY": 1,
+          "RATIONALISATION": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.24,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.05,
+          "2": 0.06,
+          "3": 0.66,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.12
+      }
+    },
+    "JR-0063": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.31,
+        "probabilities": {
+          "ENTRY": 0.01,
+          "NONE": 0.26,
+          "RATIONALISATION": 0.25,
+          "EXIT": 0.43,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0.04
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.73,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.09,
+          "2": 0.07,
+          "3": 0.4,
+          "4": 0.08,
+          "5": 0.12,
+          "6": 0.06
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.56
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.73
+      }
+    },
+    "JR-0064": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.61
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.43,
+        "probabilities": {
+          "SIZE": 0.05,
+          "ENTRY": 0.02,
+          "INSTRUMENT": 0,
+          "NONE": 0.23,
+          "RATIONALISATION": 0.53,
+          "EXIT": 0.17
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.37,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.06,
+          "3": 0.31,
+          "4": 0.11,
+          "5": 0.21,
+          "6": 0.13
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "JR-0065": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "ENTRY": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0,
+          "RATIONALISATION": 0,
+          "EXIT": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.65,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0.64,
+          "1": 0.19,
+          "2": 0.04,
+          "3": 0.13,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "JR-0066": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "ENTRY": 1,
+          "NONE": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.64,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.15,
+          "2": 0.1,
+          "3": 0.42,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "JR-0067": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.44,
+        "probabilities": {
+          "RATIONALISATION": 0.24,
+          "SIZE": 0.01,
+          "ENTRY": 0.08,
+          "NONE": 0.54,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.12
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.46,
+        "confidence": 0.1,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.09,
+          "4": 0.08,
+          "5": 0.25,
+          "6": 0.42
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.56
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.35
+      }
+    },
+    "JR-0068": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.36,
+        "probabilities": {
+          "EXIT": 0.18,
+          "RATIONALISATION": 0.22,
+          "SIZE": 0.01,
+          "NONE": 0.45999999999999996,
+          "ENTRY": 0.12,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.86,
+        "confidence": 0.08,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.24,
+          "4": 0.1,
+          "5": 0.26,
+          "6": 0.22
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "JR-0069": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.29,
+        "probabilities": {
+          "NONE": 0.41,
+          "EXIT": 0.14,
+          "SIZE": 0.04,
+          "RATIONALISATION": 0.21,
+          "ENTRY": 0.19,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.52,
+        "confidence": 0.09,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.3,
+          "4": 0.12,
+          "5": 0.21,
+          "6": 0.17
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.32
+      }
+    },
+    "JR-0070": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.27,
+        "probabilities": {
+          "NONE": 0.39,
+          "RATIONALISATION": 0.36,
+          "INSTRUMENT": 0.02,
+          "ENTRY": 0,
+          "EXIT": 0.18,
+          "SIZE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.01,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.05,
+          "2": 0.05,
+          "3": 0.36,
+          "4": 0.11,
+          "5": 0.15,
+          "6": 0.1
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.67
+      }
+    },
+    "JR-0071": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.71,
+        "probabilities": {
+          "EXIT": 0.77,
+          "SIZE": 0,
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0.22,
+          "ENTRY": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.02,
+        "confidence": 0.4,
+        "probabilities": {
+          "0": 0.49,
+          "1": 0.24000000000000002,
+          "2": 0.07,
+          "3": 0.2,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "JR-0072": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.42,
+        "probabilities": {
+          "SIZE": 0.05,
+          "RATIONALISATION": 0.52,
+          "ENTRY": 0.02,
+          "EXIT": 0.01,
+          "INSTRUMENT": 0,
+          "NONE": 0.4
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.5,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.28,
+          "4": 0.11,
+          "5": 0.2,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.35
+      }
+    },
+    "JR-0073": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "EXIT": 1,
+          "ENTRY": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0,
+          "RATIONALISATION": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.02,
+        "confidence": 0.4,
+        "probabilities": {
+          "0": 0.52,
+          "1": 0.18,
+          "2": 0.06,
+          "3": 0.24,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "JR-0074": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.3,
+        "probabilities": {
+          "NONE": 0.28,
+          "ENTRY": 0,
+          "RATIONALISATION": 0.43,
+          "SIZE": 0.07,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.21
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.59,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.08,
+          "2": 0.08,
+          "3": 0.4,
+          "4": 0.08,
+          "5": 0.11,
+          "6": 0.05
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "JR-0075": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "SIZE": 0.01,
+          "ENTRY": 0.01,
+          "EXIT": 0.08,
+          "RATIONALISATION": 0.28,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.61
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.49,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.39999999999999997,
+          "4": 0.12,
+          "5": 0.22,
+          "6": 0.11
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.29
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "JR-0076": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "ENTRY": 1,
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "SIZE": 0,
+          "NONE": 0,
+          "RATIONALISATION": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.34,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.04,
+          "2": 0.07,
+          "3": 0.68,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.11
+      }
+    },
+    "JR-0077": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATIONALISATION": 0.01,
+          "EXIT": 0,
+          "NONE": 0,
+          "ENTRY": 0.99,
+          "SIZE": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.63,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.13,
+          "2": 0.1,
+          "3": 0.42,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "JR-0078": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.4,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "NONE": 0.5,
+          "ENTRY": 0.08,
+          "EXIT": 0.21,
+          "SIZE": 0.01,
+          "RATIONALISATION": 0.19
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.8,
+        "confidence": 0.07,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.22,
+          "4": 0.12,
+          "5": 0.29000000000000004,
+          "6": 0.19
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "JR-0079": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "EXIT": 1,
+          "NONE": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.77,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.62,
+          "1": 0.18,
+          "2": 0.04,
+          "3": 0.16,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "JR-0080": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "SIZE": 0.08,
+          "RATIONALISATION": 0.18,
+          "INSTRUMENT": 0.02,
+          "EXIT": 0,
+          "NONE": 0.71,
+          "ENTRY": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.15,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.21,
+          "4": 0.12,
+          "5": 0.34,
+          "6": 0.21
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "JR-0081": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.35
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.55,
+        "probabilities": {
+          "EXIT": 0.62,
+          "INSTRUMENT": 0,
+          "SIZE": 0.02,
+          "RATIONALISATION": 0.33,
+          "ENTRY": 0.01,
+          "NONE": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.04,
+        "confidence": 0.33,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.16,
+          "2": 0.16,
+          "3": 0.43,
+          "4": 0.03,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.27
+      }
+    },
+    "JR-0082": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.25
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "SIZE": 1,
+          "RATIONALISATION": 0,
+          "ENTRY": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.19,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.1,
+          "2": 0.13,
+          "3": 0.57,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.15
+      }
+    },
+    "JR-0083": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.62,
+        "probabilities": {
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.08,
+          "RATIONALISATION": 0.16,
+          "EXIT": 0.07,
+          "NONE": 0.68
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.43,
+        "confidence": 0.08,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.1,
+          "4": 0.08,
+          "5": 0.26,
+          "6": 0.41
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.44
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "JR-0084": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATIONALISATION": 0,
+          "EXIT": 1,
+          "NONE": 0,
+          "ENTRY": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.82,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0.61,
+          "1": 0.16,
+          "2": 0.05,
+          "3": 0.18,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "JR-0085": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "SIZE": 0,
+          "EXIT": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.78,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0.6,
+          "1": 0.19,
+          "2": 0.05,
+          "3": 0.16,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "JR-0086": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.64,
+        "probabilities": {
+          "NONE": 0.09,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.19,
+          "SIZE": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0.71
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.79,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.06,
+          "2": 0.1,
+          "3": 0.52,
+          "4": 0.1,
+          "5": 0.09,
+          "6": 0.02
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.24
+      }
+    },
+    "JR-0087": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.56
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.44,
+        "probabilities": {
+          "NONE": 0.24,
+          "INSTRUMENT": 0,
+          "EXIT": 0.17,
+          "RATIONALISATION": 0.54,
+          "ENTRY": 0,
+          "SIZE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.13,
+        "confidence": 0.14,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.05,
+          "2": 0.06,
+          "3": 0.32,
+          "4": 0.11,
+          "5": 0.19,
+          "6": 0.1
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "JR-0088": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "ENTRY": 1,
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.54,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.39,
+          "1": 0.11,
+          "2": 0.09,
+          "3": 0.41,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "JR-0089": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.52,
+        "probabilities": {
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.59,
+          "EXIT": 0.15,
+          "RATIONALISATION": 0.17,
+          "ENTRY": 0.08
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.15,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.2,
+          "4": 0.09,
+          "5": 0.26,
+          "6": 0.3
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.76
+      }
+    },
+    "JR-0090": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.35,
+        "probabilities": {
+          "ENTRY": 0,
+          "NONE": 0.09,
+          "SIZE": 0.05,
+          "EXIT": 0.45,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.4
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.09,
+        "confidence": 0.2,
+        "probabilities": {
+          "0": 0.26,
+          "1": 0.13,
+          "2": 0.1,
+          "3": 0.38,
+          "4": 0.05,
+          "5": 0.05,
+          "6": 0.03
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "JR-0091": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.67,
+        "probabilities": {
+          "RATIONALISATION": 0.15,
+          "EXIT": 0.04,
+          "ENTRY": 0.08,
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.72
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.35,
+        "confidence": 0.04,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.13,
+          "4": 0.09,
+          "5": 0.24,
+          "6": 0.39
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.85
+      }
+    },
+    "JR-0092": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0.6,
+          "1": 0.18,
+          "2": 0.05,
+          "3": 0.17,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "JR-0093": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.5,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.1,
+          "NONE": 0.57,
+          "SIZE": 0.02,
+          "RATIONALISATION": 0.28,
+          "ENTRY": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.46,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.42,
+          "4": 0.1,
+          "5": 0.21000000000000002,
+          "6": 0.11
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "JR-0094": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.52,
+        "probabilities": {
+          "RATIONALISATION": 0.27,
+          "ENTRY": 0.01,
+          "SIZE": 0.01,
+          "NONE": 0.6,
+          "EXIT": 0.1,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.97,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.28,
+          "4": 0.1,
+          "5": 0.31,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.33
+      }
+    },
+    "JR-0095": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.71
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.67,
+        "probabilities": {
+          "RATIONALISATION": 0.2,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.04,
+          "ENTRY": 0.01,
+          "NONE": 0.73
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.45,
+        "confidence": 0.23,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.39999999999999997,
+          "4": 0.1,
+          "5": 0.19,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "JR-0096": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.21,
+        "probabilities": {
+          "ENTRY": 0.35000000000000003,
+          "INSTRUMENT": 0,
+          "EXIT": 0.06,
+          "NONE": 0.28,
+          "SIZE": 0.06,
+          "RATIONALISATION": 0.25
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.32,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.16,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.34,
+          "4": 0.11,
+          "5": 0.21,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "JR-0097": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.37,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0.23,
+          "NONE": 0.23,
+          "ENTRY": 0.01,
+          "SIZE": 0.05,
+          "RATIONALISATION": 0.48
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.46,
+        "confidence": 0.09,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.05,
+          "2": 0.06,
+          "3": 0.29,
+          "4": 0.1,
+          "5": 0.2,
+          "6": 0.17
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "JR-0098": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.45,
+        "probabilities": {
+          "SIZE": 0.27,
+          "ENTRY": 0.01,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.17,
+          "NONE": 0.54,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.65,
+        "confidence": 0.21,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.34,
+          "4": 0.13,
+          "5": 0.26,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "JR-0099": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.98,
+        "probabilities": {
+          "RATIONALISATION": 0.01,
+          "EXIT": 0,
+          "NONE": 0,
+          "ENTRY": 0.99,
+          "SIZE": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.53,
+        "confidence": 0.11,
+        "probabilities": {
+          "0": 0.38,
+          "1": 0.13,
+          "2": 0.1,
+          "3": 0.37,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.04
+      }
+    },
+    "JR-0100": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.32,
+        "probabilities": {
+          "ENTRY": 0.12,
+          "NONE": 0.42,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.29,
+          "RATIONALISATION": 0.15,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.84,
+        "confidence": 0.04,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.04,
+          "2": 0.05,
+          "3": 0.21,
+          "4": 0.1,
+          "5": 0.24,
+          "6": 0.24
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "JR-0101": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "RATIONALISATION": 0,
+          "ENTRY": 0,
+          "SIZE": 1,
+          "EXIT": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.82,
+        "confidence": 0.29,
+        "probabilities": {
+          "0": 0.26,
+          "1": 0.14,
+          "2": 0.13,
+          "3": 0.47000000000000003,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.06
+      }
+    },
+    "JR-0102": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.35,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0.46,
+          "SIZE": 0.01,
+          "ENTRY": 0.05,
+          "NONE": 0.29,
+          "RATIONALISATION": 0.19
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.36,
+        "confidence": 0.11,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.06,
+          "3": 0.31,
+          "4": 0.1,
+          "5": 0.21,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "JR-0103": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "SIZE": 0.01,
+          "ENTRY": 0.01,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.22,
+          "NONE": 0.74,
+          "EXIT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.55,
+        "confidence": 0.16,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.1,
+          "4": 0.07,
+          "5": 0.3,
+          "6": 0.41000000000000003
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.24
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "JR-0104": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.1
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "RATIONALISATION": 0,
+          "ENTRY": 1,
+          "SIZE": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.24,
+        "confidence": 0.28,
+        "probabilities": {
+          "0": 0.48,
+          "1": 0.14,
+          "2": 0.09,
+          "3": 0.29,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.11
+      }
+    },
+    "JR-0105": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.72,
+        "probabilities": {
+          "EXIT": 0,
+          "ENTRY": 0.03,
+          "NONE": 0.77,
+          "RATIONALISATION": 0.18,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.85,
+        "confidence": 0.33,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.04,
+          "5": 0.13,
+          "6": 0.66
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "JR-0106": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.36
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.35,
+        "probabilities": {
+          "EXIT": 0.45,
+          "RATIONALISATION": 0.41,
+          "SIZE": 0.09,
+          "NONE": 0.04,
+          "ENTRY": 0.01,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.19,
+        "confidence": 0.33,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.13,
+          "2": 0.15,
+          "3": 0.43,
+          "4": 0.04,
+          "5": 0.05,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "JR-0107": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.37,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0.01,
+          "SIZE": 0.03,
+          "RATIONALISATION": 0.43,
+          "ENTRY": 0.06,
+          "NONE": 0.47
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.74,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.19,
+          "4": 0.11,
+          "5": 0.24,
+          "6": 0.23
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "JR-0108": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.01,
+          "SIZE": 0.03,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.23,
+          "NONE": 0.71
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.65,
+        "confidence": 0.21,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.1,
+          "4": 0.07,
+          "5": 0.23,
+          "6": 0.49
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "JR-0109": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 1,
+          "SIZE": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.59,
+        "confidence": 0.65,
+        "probabilities": {
+          "0": 0.67,
+          "1": 0.18,
+          "2": 0.03,
+          "3": 0.12,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.16
+      }
+    },
+    "JR-0110": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.2,
+        "probabilities": {
+          "SIZE": 0.03,
+          "INSTRUMENT": 0,
+          "NONE": 0.33,
+          "EXIT": 0.1,
+          "RATIONALISATION": 0.27,
+          "ENTRY": 0.27
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.49,
+        "confidence": 0.11,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.31,
+          "4": 0.11,
+          "5": 0.21,
+          "6": 0.16
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.27
+      }
+    },
+    "JR-0111": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "EXIT": 0.08,
+          "NONE": 0.75,
+          "SIZE": 0,
+          "RATIONALISATION": 0.16,
+          "ENTRY": 0,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.53,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.48,
+          "4": 0.08,
+          "5": 0.2,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.83
+      }
+    },
+    "JR-0112": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.83
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "RATIONALISATION": 0.19,
+          "ENTRY": 0,
+          "EXIT": 0.18,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.61
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.07,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.27,
+          "4": 0.11,
+          "5": 0.33,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.23
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "JR-0113": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.41,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0.01,
+          "ENTRY": 0.08,
+          "RATIONALISATION": 0.51,
+          "NONE": 0.37,
+          "SIZE": 0.03
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.28,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.24,
+          "4": 0.1,
+          "5": 0.19,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.63
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    },
+    "JR-0114": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.71
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.33,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.43,
+          "ENTRY": 0.08,
+          "RATIONALISATION": 0.15,
+          "NONE": 0.32,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.57,
+        "confidence": 0.18,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.03,
+          "2": 0.05,
+          "3": 0.34,
+          "4": 0.12,
+          "5": 0.22,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "JR-0115": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.43,
+        "probabilities": {
+          "ENTRY": 0.01,
+          "SIZE": 0.04,
+          "INSTRUMENT": 0,
+          "EXIT": 0.01,
+          "RATIONALISATION": 0.53,
+          "NONE": 0.41
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.88,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.17,
+          "4": 0.08,
+          "5": 0.24,
+          "6": 0.27999999999999997
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.35
+      }
+    },
+    "JR-0116": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.32,
+        "probabilities": {
+          "ENTRY": 0.04,
+          "SIZE": 0,
+          "RATIONALISATION": 0.13,
+          "EXIT": 0.43,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.39
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.68,
+        "confidence": 0.06,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.27,
+          "4": 0.13,
+          "5": 0.28,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "JR-0117": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.59,
+        "probabilities": {
+          "EXIT": 0.1,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0.01,
+          "NONE": 0.66,
+          "RATIONALISATION": 0.22,
+          "ENTRY": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.58,
+        "confidence": 0.31,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.44,
+          "4": 0.1,
+          "5": 0.21,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.34
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "JR-0118": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "RATIONALISATION": 0.16,
+          "EXIT": 0.01,
+          "NONE": 0.82,
+          "ENTRY": 0,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.74,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.06,
+          "5": 0.29,
+          "6": 0.47
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.61
+      }
+    },
+    "JR-0119": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.28,
+        "probabilities": {
+          "ENTRY": 0,
+          "NONE": 0.41000000000000003,
+          "RATIONALISATION": 0.39,
+          "EXIT": 0.18,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.44,
+        "confidence": 0.12,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.29,
+          "4": 0.15,
+          "5": 0.19,
+          "6": 0.15
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "JR-0120": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.47,
+        "probabilities": {
+          "NONE": 0.1,
+          "ENTRY": 0,
+          "EXIT": 0.56,
+          "SIZE": 0,
+          "RATIONALISATION": 0.33,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.63,
+        "confidence": 0.1,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.12,
+          "2": 0.08,
+          "3": 0.3,
+          "4": 0.09,
+          "5": 0.1,
+          "6": 0.1
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.5
+      }
+    },
+    "JR-0121": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.28
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.67,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0.73,
+          "SIZE": 0.01,
+          "ENTRY": 0,
+          "RATIONALISATION": 0.24,
+          "NONE": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.09,
+        "confidence": 0.35,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.16,
+          "2": 0.18,
+          "3": 0.42,
+          "4": 0.03,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "JR-0122": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.16,
+        "probabilities": {
+          "NONE": 0.31,
+          "ENTRY": 0.29,
+          "EXIT": 0.04,
+          "INSTRUMENT": 0,
+          "SIZE": 0.09,
+          "RATIONALISATION": 0.27
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.34,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.37,
+          "4": 0.11,
+          "5": 0.21,
+          "6": 0.11
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.61
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.34
+      }
+    },
+    "JR-0123": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.25,
+        "probabilities": {
+          "EXIT": 0.37,
+          "ENTRY": 0.12,
+          "NONE": 0.33,
+          "RATIONALISATION": 0.16,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.75,
+        "confidence": 0.08,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.04,
+          "2": 0.05,
+          "3": 0.26,
+          "4": 0.11,
+          "5": 0.26,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.56
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    },
+    "JR-0124": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.38,
+        "probabilities": {
+          "NONE": 0.48,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.24,
+          "SIZE": 0.01,
+          "RATIONALISATION": 0.21,
+          "ENTRY": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.23,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.17,
+          "4": 0.09,
+          "5": 0.27,
+          "6": 0.32
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "JR-0125": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.21
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.98,
+        "probabilities": {
+          "SIZE": 0,
+          "ENTRY": 0,
+          "INSTRUMENT": 0.99,
+          "NONE": 0,
+          "RATIONALISATION": 0,
+          "EXIT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.76,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.65,
+          "1": 0.14,
+          "2": 0.04,
+          "3": 0.14,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.32
+      }
+    },
+    "JR-0126": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "SIZE": 1
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.35,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.06,
+          "2": 0.11,
+          "3": 0.66,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "JR-0127": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "EXIT": 1,
+          "SIZE": 0,
+          "INSTRUMENT": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.74,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0.63,
+          "1": 0.16,
+          "2": 0.05,
+          "3": 0.16,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "JR-0128": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.41
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.62,
+        "probabilities": {
+          "NONE": 0.1,
+          "RATIONALISATION": 0.19,
+          "ENTRY": 0,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.68
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.62,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.18,
+          "2": 0.08,
+          "3": 0.3,
+          "4": 0.03,
+          "5": 0.03,
+          "6": 0.02
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.66
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "JR-0129": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.02
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "ENTRY": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 1,
+          "RATIONALISATION": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.44,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.8,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0.11,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "JR-0130": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.3,
+        "probabilities": {
+          "NONE": 0.42,
+          "RATIONALISATION": 0.21,
+          "ENTRY": 0.22,
+          "SIZE": 0.03,
+          "EXIT": 0.12,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.63,
+        "confidence": 0.07,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.29000000000000004,
+          "4": 0.13,
+          "5": 0.22,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "JR-0131": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.43,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.22,
+          "ENTRY": 0.07,
+          "RATIONALISATION": 0.16,
+          "NONE": 0.53,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.91,
+        "confidence": 0.09,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.19,
+          "4": 0.12,
+          "5": 0.27,
+          "6": 0.24
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "JR-0132": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 1,
+          "ENTRY": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.91,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.12,
+          "2": 0.12,
+          "3": 0.51,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "JR-0133": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "NONE": 0.6,
+          "EXIT": 0.22,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.15
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.53,
+        "confidence": 0.14,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.11,
+          "4": 0.09,
+          "5": 0.3,
+          "6": 0.38
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.78
+      }
+    },
+    "JR-0134": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "SIZE": 0.02,
+          "RATIONALISATION": 0.15,
+          "ENTRY": 0.05,
+          "EXIT": 0.01,
+          "NONE": 0.76,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.66,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.12,
+          "4": 0.07,
+          "5": 0.28,
+          "6": 0.43
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.24
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "JR-0135": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "EXIT": 0,
+          "ENTRY": 0.01,
+          "NONE": 0.75,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0.01,
+          "RATIONALISATION": 0.22
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.91,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.05,
+          "5": 0.18,
+          "6": 0.61
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.55
+      }
+    },
+    "JR-0136": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.64,
+        "probabilities": {
+          "ENTRY": 0,
+          "RATIONALISATION": 0.18,
+          "NONE": 0.7,
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.11
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.95,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.3,
+          "4": 0.09,
+          "5": 0.26,
+          "6": 0.22
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.2
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "JR-0137": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXIT": 1,
+          "INSTRUMENT": 0,
+          "NONE": 0,
+          "SIZE": 0,
+          "RATIONALISATION": 0,
+          "ENTRY": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.75,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.6,
+          "1": 0.2,
+          "2": 0.06,
+          "3": 0.14,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "JR-0138": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 1,
+          "RATIONALISATION": 0,
+          "ENTRY": 0,
+          "EXIT": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.28,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.16,
+          "1": 0.07,
+          "2": 0.12,
+          "3": 0.64,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "JR-0139": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "ENTRY": 0,
+          "EXIT": 0,
+          "SIZE": 1,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.91,
+        "confidence": 0.33,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.12,
+          "2": 0.12,
+          "3": 0.5,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.42
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "JR-0140": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.2
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.96,
+        "probabilities": {
+          "RATIONALISATION": 0,
+          "ENTRY": 0,
+          "INSTRUMENT": 0.97,
+          "NONE": 0.01,
+          "EXIT": 0.02,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.2,
+        "confidence": 0.3,
+        "probabilities": {
+          "0": 0.49,
+          "1": 0.17,
+          "2": 0.07,
+          "3": 0.21,
+          "4": 0.02,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.62
+      }
+    },
+    "JR-0141": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.31,
+        "probabilities": {
+          "INSTRUMENT": 0.02,
+          "SIZE": 0.04,
+          "EXIT": 0.2,
+          "RATIONALISATION": 0.31,
+          "ENTRY": 0.01,
+          "NONE": 0.42
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.11,
+        "confidence": 0.18,
+        "probabilities": {
+          "0": 0.16,
+          "1": 0.06,
+          "2": 0.06,
+          "3": 0.35,
+          "4": 0.1,
+          "5": 0.16,
+          "6": 0.11
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.74
+      }
+    },
+    "JR-0142": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.23,
+        "probabilities": {
+          "EXIT": 0.21,
+          "ENTRY": 0.15,
+          "NONE": 0.36,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.25,
+          "SIZE": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.28,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.04,
+          "2": 0.05,
+          "3": 0.32,
+          "4": 0.13,
+          "5": 0.2,
+          "6": 0.11
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.56
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "JR-0143": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.1
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.99,
+        "probabilities": {
+          "SIZE": 0,
+          "ENTRY": 1,
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.55,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.14,
+          "2": 0.1,
+          "3": 0.4,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.06
+      }
+    },
+    "JR-0144": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.53,
+        "probabilities": {
+          "NONE": 0.61,
+          "EXIT": 0.12,
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.08,
+          "RATIONALISATION": 0.18
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.1,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.16,
+          "4": 0.08,
+          "5": 0.25,
+          "6": 0.33
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.84
+      }
+    },
+    "JR-0145": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.3,
+        "probabilities": {
+          "NONE": 0.41,
+          "RATIONALISATION": 0.18,
+          "ENTRY": 0.09,
+          "SIZE": 0.01,
+          "EXIT": 0.3,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.62,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.29,
+          "4": 0.13,
+          "5": 0.26,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.45
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "JR-0146": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.34,
+        "probabilities": {
+          "RATIONALISATION": 0.25,
+          "SIZE": 0.05,
+          "ENTRY": 0.1,
+          "NONE": 0.45,
+          "INSTRUMENT": 0,
+          "EXIT": 0.15
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.74,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.03,
+          "2": 0.02,
+          "3": 0.17,
+          "4": 0.1,
+          "5": 0.22,
+          "6": 0.28
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.61
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "JR-0147": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.61
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.14,
+        "probabilities": {
+          "NONE": 0.27999999999999997,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.2,
+          "EXIT": 0.23,
+          "SIZE": 0.05,
+          "RATIONALISATION": 0.23
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.05,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.05,
+          "2": 0.05,
+          "3": 0.35,
+          "4": 0.11,
+          "5": 0.16,
+          "6": 0.1
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "JR-0148": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.62,
+        "probabilities": {
+          "NONE": 0.68,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.1,
+          "SIZE": 0.01,
+          "RATIONALISATION": 0.19,
+          "ENTRY": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.62,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.08,
+          "4": 0.07,
+          "5": 0.23,
+          "6": 0.48
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.8
+      }
+    },
+    "JR-0149": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.68,
+        "probabilities": {
+          "NONE": 0.73,
+          "RATIONALISATION": 0.22,
+          "EXIT": 0.01,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.01,
+          "SIZE": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.69,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.11,
+          "4": 0.07,
+          "5": 0.25,
+          "6": 0.47
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.24
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "JR-0150": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.32,
+        "probabilities": {
+          "ENTRY": 0,
+          "RATIONALISATION": 0.23,
+          "SIZE": 0.01,
+          "NONE": 0.44,
+          "EXIT": 0.31,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.02,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.27,
+          "4": 0.13,
+          "5": 0.35,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.54
+      }
+    },
+    "JR-0151": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.3,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "NONE": 0.29,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.42,
+          "EXIT": 0.26,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.07,
+        "confidence": 0.23,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.06,
+          "2": 0.06,
+          "3": 0.36,
+          "4": 0.12,
+          "5": 0.16,
+          "6": 0.09
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.26
+      }
+    },
+    "JR-0152": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.31,
+        "probabilities": {
+          "SIZE": 0,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.04,
+          "EXIT": 0.43,
+          "RATIONALISATION": 0.16,
+          "NONE": 0.36
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.71,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.03,
+          "2": 0.06,
+          "3": 0.26,
+          "4": 0.1,
+          "5": 0.24,
+          "6": 0.2
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "JR-0153": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.29,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.39,
+          "ENTRY": 0.04,
+          "RATIONALISATION": 0.16,
+          "NONE": 0.39999999999999997,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.03,
+          "2": 0.05,
+          "3": 0.19,
+          "4": 0.09,
+          "5": 0.24,
+          "6": 0.29
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "JR-0154": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "RATIONALISATION": 0,
+          "EXIT": 0,
+          "INSTRUMENT": 0,
+          "ENTRY": 1,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.02,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.06,
+          "2": 0.08,
+          "3": 0.58,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "JR-0155": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.19,
+        "probabilities": {
+          "EXIT": 0.13,
+          "SIZE": 0.04,
+          "INSTRUMENT": 0,
+          "NONE": 0.32,
+          "RATIONALISATION": 0.3,
+          "ENTRY": 0.21
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.56,
+        "confidence": 0.04,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.27,
+          "4": 0.12,
+          "5": 0.22,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "JR-0156": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.18,
+        "probabilities": {
+          "EXIT": 0.16,
+          "NONE": 0.31,
+          "SIZE": 0.05,
+          "ENTRY": 0.18,
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0.3
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.44,
+        "confidence": 0.1,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.3,
+          "4": 0.11,
+          "5": 0.21,
+          "6": 0.16
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.32
+      }
+    },
+    "JR-0157": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "ENTRY": 0,
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0.01,
+          "NONE": 0,
+          "SIZE": 0.99,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.91,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.13,
+          "2": 0.14,
+          "3": 0.48,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.44
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "JR-0158": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.19
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "EXIT": 0,
+          "SIZE": 1,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.96,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.13,
+          "2": 0.11,
+          "3": 0.52,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.07
+      }
+    },
+    "JR-0159": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "INSTRUMENT": 0.01,
+          "NONE": 0.78,
+          "ENTRY": 0,
+          "EXIT": 0.05,
+          "SIZE": 0,
+          "RATIONALISATION": 0.16
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.66,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.01,
+          "2": 0.03,
+          "3": 0.38,
+          "4": 0.1,
+          "5": 0.24,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.23
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "JR-0160": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "RATIONALISATION": 0,
+          "ENTRY": 1,
+          "EXIT": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.84,
+        "confidence": 0.31,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.13,
+          "2": 0.12,
+          "3": 0.48,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "JR-0161": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXIT": 0,
+          "INSTRUMENT": 1,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "SIZE": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 0.93,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.55,
+          "1": 0.17,
+          "2": 0.07,
+          "3": 0.19,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "JR-0162": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.33,
+        "probabilities": {
+          "EXIT": 0.25,
+          "NONE": 0.16,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.45,
+          "SIZE": 0.12,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.41,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.11,
+          "2": 0.11,
+          "3": 0.4,
+          "4": 0.07,
+          "5": 0.07,
+          "6": 0.04
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "JR-0163": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.66
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.41,
+        "probabilities": {
+          "SIZE": 0.05,
+          "ENTRY": 0.07,
+          "EXIT": 0.01,
+          "RATIONALISATION": 0.51,
+          "INSTRUMENT": 0,
+          "NONE": 0.36
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.48,
+        "confidence": 0.09,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.29,
+          "4": 0.11,
+          "5": 0.23,
+          "6": 0.15
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "JR-0164": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.99,
+        "probabilities": {
+          "SIZE": 0,
+          "ENTRY": 0.99,
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0.01,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.23,
+        "confidence": 0.28,
+        "probabilities": {
+          "0": 0.46,
+          "1": 0.17,
+          "2": 0.08,
+          "3": 0.28,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "JR-0165": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.28,
+        "probabilities": {
+          "NONE": 0.41000000000000003,
+          "ENTRY": 0.23,
+          "RATIONALISATION": 0.25,
+          "SIZE": 0.03,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.07
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.56,
+        "confidence": 0.12,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.31,
+          "4": 0.11,
+          "5": 0.2,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "JR-0166": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "EXIT": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "NONE": 0,
+          "SIZE": 1,
+          "ENTRY": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.26,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.17,
+          "1": 0.08,
+          "2": 0.12,
+          "3": 0.61,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.11
+      }
+    },
+    "JR-0167": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "ENTRY": 1,
+          "RATIONALISATION": 0,
+          "SIZE": 0,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.37,
+        "confidence": 0.2,
+        "probabilities": {
+          "0": 0.43,
+          "1": 0.14,
+          "2": 0.1,
+          "3": 0.33,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "JR-0168": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 1,
+        "probabilities": {
+          "EXIT": 1,
+          "NONE": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "INSTRUMENT": 0,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.17,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.45999999999999996,
+          "1": 0.17,
+          "2": 0.1,
+          "3": 0.27,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.23
+      }
+    },
+    "JR-0169": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.41,
+        "probabilities": {
+          "ENTRY": 0.02,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.21,
+          "NONE": 0.51,
+          "SIZE": 0.25,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.59,
+        "confidence": 0.2,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.35,
+          "4": 0.12,
+          "5": 0.25,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.64
+      }
+    },
+    "JR-0170": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.44,
+        "probabilities": {
+          "SIZE": 0.06,
+          "INSTRUMENT": 0,
+          "ENTRY": 0.02,
+          "RATIONALISATION": 0.54,
+          "EXIT": 0,
+          "NONE": 0.38
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.62,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.05,
+          "3": 0.24,
+          "4": 0.1,
+          "5": 0.23,
+          "6": 0.2
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "JR-0171": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.46,
+        "probabilities": {
+          "EXIT": 0.17,
+          "SIZE": 0.01,
+          "RATIONALISATION": 0.22,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.55,
+          "ENTRY": 0.04
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.49,
+        "confidence": 0.12,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.13,
+          "4": 0.1,
+          "5": 0.31,
+          "6": 0.33999999999999997
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "JR-0172": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 1,
+          "ENTRY": 0,
+          "EXIT": 0,
+          "RATIONALISATION": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.42,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.43,
+          "1": 0.16,
+          "2": 0.08,
+          "3": 0.28,
+          "4": 0.02,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.68
+      }
+    },
+    "JR-0173": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.26,
+        "probabilities": {
+          "RATIONALISATION": 0.36,
+          "ENTRY": 0.01,
+          "SIZE": 0.04,
+          "NONE": 0.39,
+          "EXIT": 0.18,
+          "INSTRUMENT": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.31,
+        "confidence": 0.16,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.04,
+          "2": 0.04,
+          "3": 0.34,
+          "4": 0.13,
+          "5": 0.19,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.63
+      }
+    },
+    "JR-0174": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.13,
+        "probabilities": {
+          "NONE": 0.28,
+          "EXIT": 0.22,
+          "SIZE": 0.05,
+          "INSTRUMENT": 0,
+          "ENTRY": 0.21,
+          "RATIONALISATION": 0.24
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.25,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.03,
+          "2": 0.06,
+          "3": 0.35000000000000003,
+          "4": 0.11,
+          "5": 0.18,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.61
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.29
+      }
+    },
+    "JR-0175": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.47,
+        "probabilities": {
+          "RATIONALISATION": 0.17,
+          "NONE": 0.56,
+          "ENTRY": 0.01,
+          "SIZE": 0.23,
+          "INSTRUMENT": 0.02,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.66,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.32,
+          "4": 0.12,
+          "5": 0.26,
+          "6": 0.14
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "JR-0176": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "RATIONALISATION": 0,
+          "ENTRY": 0,
+          "SIZE": 1,
+          "NONE": 0,
+          "EXIT": 0,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.23,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.06,
+          "2": 0.1,
+          "3": 0.62,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "JR-0177": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.83
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.47,
+        "probabilities": {
+          "EXIT": 0.19,
+          "ENTRY": 0.03,
+          "NONE": 0.55,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.21,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.48,
+        "confidence": 0.11,
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.1,
+          "4": 0.09,
+          "5": 0.3,
+          "6": 0.38
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "JR-0178": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.55,
+        "probabilities": {
+          "RATIONALISATION": 0.62,
+          "NONE": 0.31,
+          "ENTRY": 0.01,
+          "EXIT": 0.01,
+          "INSTRUMENT": 0,
+          "SIZE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.62,
+        "confidence": 0.06,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.04,
+          "2": 0.05,
+          "3": 0.29000000000000004,
+          "4": 0.09,
+          "5": 0.21,
+          "6": 0.2
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.56
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "JR-0179": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.49,
+        "probabilities": {
+          "INSTRUMENT": 0.02,
+          "EXIT": 0,
+          "SIZE": 0.23,
+          "RATIONALISATION": 0.16,
+          "ENTRY": 0.01,
+          "NONE": 0.58
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.84,
+        "confidence": 0.14,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.3,
+          "4": 0.13,
+          "5": 0.28,
+          "6": 0.16
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "JR-0180": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "INSTRUMENT": 0.03,
+          "EXIT": 0,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.19,
+          "NONE": 0.72,
+          "SIZE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.91,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.16,
+          "4": 0.09,
+          "5": 0.25,
+          "6": 0.29000000000000004
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.56
+      }
+    },
+    "JR-0181": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.37,
+        "probabilities": {
+          "EXIT": 0.32,
+          "SIZE": 0.02,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.48,
+          "ENTRY": 0,
+          "NONE": 0.17
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.22,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.12,
+          "2": 0.11,
+          "3": 0.36,
+          "4": 0.06,
+          "5": 0.07,
+          "6": 0.04
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.67
+      }
+    },
+    "JR-0182": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 1,
+        "probabilities": {
+          "ENTRY": 1,
+          "RATIONALISATION": 0,
+          "NONE": 0,
+          "SIZE": 0,
+          "INSTRUMENT": 0,
+          "EXIT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.32,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.05,
+          "2": 0.06,
+          "3": 0.7,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.61
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "JR-0183": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.36,
+        "probabilities": {
+          "ENTRY": 0.01,
+          "NONE": 0.3,
+          "RATIONALISATION": 0.21,
+          "EXIT": 0.47,
+          "INSTRUMENT": 0.01,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.05,
+        "confidence": 0.36,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.04,
+          "2": 0.06,
+          "3": 0.47,
+          "4": 0.09,
+          "5": 0.15,
+          "6": 0.06
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "JR-0184": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.21
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.6,
+        "probabilities": {
+          "NONE": 0.01,
+          "SIZE": 0.02,
+          "ENTRY": 0.01,
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0.29,
+          "EXIT": 0.67
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.81,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.38,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    },
+    "JR-0185": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.33,
+        "probabilities": {
+          "SIZE": 0.03,
+          "RATIONALISATION": 0.35,
+          "NONE": 0.16,
+          "EXIT": 0.44,
+          "ENTRY": 0.01,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.45,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.13,
+          "2": 0.1,
+          "3": 0.39999999999999997,
+          "4": 0.07,
+          "5": 0.07,
+          "6": 0.05
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.63
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.64
+      }
+    },
+    "JR-0186": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.09
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0,
+          "INSTRUMENT": 0,
+          "RATIONALISATION": 0.01,
+          "ENTRY": 0.98,
+          "SIZE": 0,
+          "EXIT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.35,
+        "confidence": 0.21,
+        "probabilities": {
+          "0": 0.41000000000000003,
+          "1": 0.18,
+          "2": 0.09,
+          "3": 0.32,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "JR-0187": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.35
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "INSTRUMENT",
+        "confidence": 0.98,
+        "probabilities": {
+          "SIZE": 0,
+          "EXIT": 0,
+          "ENTRY": 0,
+          "INSTRUMENT": 0.99,
+          "NONE": 0.01,
+          "RATIONALISATION": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.09,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.52,
+          "1": 0.2,
+          "2": 0.06,
+          "3": 0.17,
+          "4": 0.02,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "JR-0188": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.36,
+        "probabilities": {
+          "NONE": 0.19,
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.31,
+          "SIZE": 0.01,
+          "INSTRUMENT": 0.01,
+          "EXIT": 0.47
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.06,
+        "confidence": 0.2,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.08,
+          "2": 0.08,
+          "3": 0.35,
+          "4": 0.1,
+          "5": 0.13,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.63
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "JR-0189": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 1,
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.16,
+        "confidence": 0.48,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.08,
+          "2": 0.12,
+          "3": 0.58,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "JR-0190": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "RATIONALISATION",
+        "confidence": 0.5,
+        "probabilities": {
+          "NONE": 0.32,
+          "ENTRY": 0.01,
+          "EXIT": 0.02,
+          "SIZE": 0.06,
+          "RATIONALISATION": 0.59,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.3,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.05,
+          "2": 0.06,
+          "3": 0.25,
+          "4": 0.09,
+          "5": 0.19,
+          "6": 0.18
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.59
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "JR-0191": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.5,
+        "probabilities": {
+          "SIZE": 0.22,
+          "EXIT": 0,
+          "INSTRUMENT": 0.01,
+          "ENTRY": 0.01,
+          "NONE": 0.59,
+          "RATIONALISATION": 0.17
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.78,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.08,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.33,
+          "4": 0.14,
+          "5": 0.25,
+          "6": 0.15
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "JR-0192": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "RATIONALISATION": 0.19,
+          "ENTRY": 0.09,
+          "SIZE": 0,
+          "NONE": 0.62,
+          "EXIT": 0.09,
+          "INSTRUMENT": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.21,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.03,
+          "2": 0.03,
+          "3": 0.14,
+          "4": 0.09,
+          "5": 0.24,
+          "6": 0.35
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "JR-0193": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.83
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "ENTRY": 0.03,
+          "NONE": 0.71,
+          "RATIONALISATION": 0.19,
+          "EXIT": 0,
+          "INSTRUMENT": 0.02,
+          "SIZE": 0.05
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.37,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.09,
+          "4": 0.09,
+          "5": 0.23,
+          "6": 0.42
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.68
+      }
+    },
+    "JR-0194": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.22
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "SIZE": 1,
+          "ENTRY": 0,
+          "RATIONALISATION": 0,
+          "NONE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.02,
+        "confidence": 0.38,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.11,
+          "2": 0.12,
+          "3": 0.52,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.47
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "JR-0195": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.46,
+        "probabilities": {
+          "RATIONALISATION": 0.19,
+          "ENTRY": 0.12,
+          "INSTRUMENT": 0.01,
+          "NONE": 0.55,
+          "EXIT": 0.13,
+          "SIZE": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.12,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.19,
+          "4": 0.12,
+          "5": 0.32,
+          "6": 0.23
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.45
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "JR-0196": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.57,
+        "probabilities": {
+          "EXIT": 0.06,
+          "ENTRY": 0.02,
+          "NONE": 0.63,
+          "INSTRUMENT": 0.01,
+          "RATIONALISATION": 0.26,
+          "SIZE": 0.02
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 3.49,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.39,
+          "4": 0.12,
+          "5": 0.21,
+          "6": 0.12
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "JR-0197": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.69,
+        "probabilities": {
+          "SIZE": 0.01,
+          "ENTRY": 0.07,
+          "INSTRUMENT": 0,
+          "EXIT": 0,
+          "RATIONALISATION": 0.17,
+          "NONE": 0.75
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 4.76,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.05,
+          "5": 0.18,
+          "6": 0.58
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.49
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.88
+      }
+    },
+    "JR-0198": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "ENTRY",
+        "confidence": 0.98,
+        "probabilities": {
+          "RATIONALISATION": 0.01,
+          "ENTRY": 0.98,
+          "SIZE": 0,
+          "NONE": 0,
+          "EXIT": 0.01,
+          "INSTRUMENT": 0
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.2,
+        "confidence": 0.3,
+        "probabilities": {
+          "0": 0.48,
+          "1": 0.16,
+          "2": 0.08,
+          "3": 0.28,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.55
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "JR-0199": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.37
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.49,
+        "probabilities": {
+          "ENTRY": 0,
+          "NONE": 0.09,
+          "RATIONALISATION": 0.32,
+          "EXIT": 0.58,
+          "INSTRUMENT": 0,
+          "SIZE": 0.01
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 2.44,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.13,
+          "2": 0.09,
+          "3": 0.35,
+          "4": 0.08,
+          "5": 0.08,
+          "6": 0.06
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "JR-0200": {
+      "note_matches_trade": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "drift_type": {
+        "type": "choice",
+        "choice": "EXIT",
+        "confidence": 0.71,
+        "probabilities": {
+          "ENTRY": 0.01,
+          "RATIONALISATION": 0.21,
+          "INSTRUMENT": 0,
+          "NONE": 0,
+          "SIZE": 0.01,
+          "EXIT": 0.77
+        }
+      },
+      "note_honesty": {
+        "type": "score",
+        "score": 1.15,
+        "confidence": 0.33,
+        "probabilities": {
+          "0": 0.44,
+          "1": 0.24,
+          "2": 0.09,
+          "3": 0.21,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "written_after_the_fact": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "rule_followed": {
+        "type": "noul",
+        "noul": 0.26
+      }
+    }
+  }
 }
