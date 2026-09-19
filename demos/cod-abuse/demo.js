@@ -232,7 +232,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'table',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.name} · ${item.orders.length} orders`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

@@ -41,5 +41,18 @@ saving from hiding the value of customers the policy inconveniences.
 
 ## Recorded run
 
-Pending. This section will be replaced with the measured Jev results after all 180 responses are
-cached in `fixtures.json`.
+All 180 responses were recorded on 2026-09-19 with `jev-1.13.0` and cached in `fixtures.json`. The
+run used 453,620 input tokens and 33,601 output tokens. Every customer ID has all five answers; there
+are no missing or extra records.
+
+The model named 173 of 180 planted patterns correctly (96.1%) and chose the intended access lane for
+172 of 180 customers (95.6%). It restricted 32 customers, avoiding an estimated $2,225.00 of repeat
+shipping cost while placing $38,855.17 of accepted, non-refunded historical order value behind a
+restricted lane. Eight of the ten explainable bad streaks kept normal access, and the courier-fault
+answer matched all 180 labels.
+
+The errors reveal two useful policy gaps. All seven address hoppers received the intended
+`BLOCK_COD` lane but were named `SERIAL_REFUSER`, so the action was sound while the explanation was
+wrong. All six promotion abusers were named correctly but left in `ALLOW` instead of `PREPAY_ONLY`.
+Two innocent wrong-address histories were restricted: one to `PREPAY_ONLY`, one to `BLOCK_COD`.
+Those mistakes stay in the fixture and in the report rather than being corrected after recording.
