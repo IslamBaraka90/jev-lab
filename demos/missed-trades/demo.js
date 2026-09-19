@@ -99,7 +99,7 @@ function findings(graded, byId) {
 export default {
   id: 'missed-trades', title: 'Missed trades', domain: 'trades',
   value: 'Audit every valid setup that was not taken, then count what hesitation cost without penalising justified skips.',
-  tags: ['trades', 'rules', 'misses', 'real prices'], dataClass: 'mixed', readMinutes: 5, view: 'candles', status: 'pending-recording',
+  tags: ['trades', 'rules', 'misses', 'real prices'], dataClass: 'mixed', readMinutes: 5, view: 'candles',
   itemLabel: (item) => `${item.id} · ${item.symbol} · ${item.date} · ${item.tradeLog.setupWasTaken ? 'taken' : 'not taken'}`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), labels: () => import('../../data/synthetic/missed-trades.labels.json'),
   buildState, questions, evaluate, report,
