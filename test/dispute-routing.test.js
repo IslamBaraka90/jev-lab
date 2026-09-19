@@ -92,7 +92,7 @@ test('a perfect run agrees with the policy on every call', async () => {
   assert.equal(kpi(report, 'Action agrees with policy').value, '100%');
   assert.equal(kpi(report, 'Whole call correct').value, '100%');
   assert.match(kpi(report, 'Refunded').context, /none against policy/);
-  assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0]);
+  assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0, 0], 'including the refund calls that carry no money');
   assert.deepEqual(report.findings, []);
 });
 
@@ -104,6 +104,7 @@ test('refunding everything is graded in money, not just in counts', async () => 
   const report = demo.report(results, { ...context, labels });
 
   assert.equal(report.checks.find((check) => check.id === 'friendly-fraud').count, 18);
+  assert.equal(report.checks.find((check) => check.id === 'empty-refunds').count, 0, 'a full refund on every dispute is wrong, but it is not self-contradictory');
   assert.equal(report.checks.find((check) => check.id === 'policy-expired').count, 6);
   assert.match(kpi(report, 'Refunded').context, /against policy/);
   assert.ok(report.findings.some((line) => /against the policy/.test(line)), 'the money that should not have gone out is named');

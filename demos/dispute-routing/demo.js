@@ -178,7 +178,7 @@ function kpis(graded, actions, whole, byItem) {
 
 function checks(graded, byItem, labels) {
   const kinds = [...new Set(labels.map((label) => label.kind))];
-  return kinds.map((kind) => {
+  const rows = kinds.map((kind) => {
     const group = labels.filter((label) => label.kind === kind);
     const wrong = group.filter((label) => {
       const result = graded.find((entry) => entry.item.id === label.disputeId);
@@ -186,6 +186,11 @@ function checks(graded, byItem, labels) {
     });
     return { id: kind.replaceAll(' ', '-'), label: `${sentence(kind)}: wrong action`, detail: DETAIL[kind] ?? '', count: wrong.length, of: group.length, items: wrong.slice(0, 20).map((label) => label.disputeId) };
   });
+
+  // This one needs no labels: a refund call carrying no money contradicts itself, whatever the policy says.
+  const refunds = graded.filter((result) => result.evaluation.action === 'REFUND_NOW');
+  const empty = refunds.filter((result) => result.evaluation.amount === 0);
+  return [...rows, { id: 'empty-refunds', label: 'Refund calls that refund nothing', detail: 'The action says refund and the band says none, so the backend would be sent a refund for zero. The two answers are typed separately and nothing makes them agree.', count: empty.length, of: refunds.length, items: empty.slice(0, 20).map((result) => result.item.id) }];
 }
 
 const DETAIL = {
@@ -243,7 +248,8 @@ function findings(graded, byItem) {
   }
 
   const bandOnly = graded.filter((result) => byItem.get(result.item.id).correctAction === result.evaluation.action && byItem.get(result.item.id).refundBand !== result.evaluation.band);
-  if (bandOnly.length >= 3) lines.push(`${bandOnly.length} calls take the right action with the wrong amount attached. The action is the easy half; the arguments are where the money is.`);
+  const differentMoney = bandOnly.filter((result) => refundAmount(byItem.get(result.item.id).refundBand, result.item) !== result.evaluation.amount);
+  if (bandOnly.length >= 3) lines.push(`${bandOnly.length} calls take the right action with a different band on it, and ${differentMoney.length} of those change what the customer is actually paid — the rest name the same money two ways, because a full refund and a full refund plus shipping are the same call when no shipping was charged.`);
 
   const overpaid = graded.filter((result) => result.evaluation.amount > 0 && byItem.get(result.item.id).correctAction !== 'REFUND_NOW');
   if (overpaid.length) lines.push(`${overpaid.length} refunds worth ${money(paid(overpaid))} would have gone out against the policy.`);
@@ -267,7 +273,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${readable(item.claim)} · ${money(item.orderTotal)}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
