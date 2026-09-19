@@ -21,12 +21,12 @@ export function HomePage() {
   return (
     <div className="stack home">
       <section className="home-hero">
-        <span className="eyebrow">TypeSafe Jev Â· structured answers on financial data</span>
+        <span className="eyebrow">TypeSafe Jev · structured answers on financial data</span>
         <h1>Ask a model fifteen questions about one ledger line, and check every answer.</h1>
         <p className="reading">
           Jev returns typed answers: probabilities for every option, a position on a rubric, a probability of yes. This site
-          runs those answers over real financial work â€” books, orders, fraud, wallets, portfolios, trades, filings and
-          strategies â€” and grades them against data where the right answer is known.
+          runs those answers over real financial work — books, orders, fraud, wallets, portfolios, trades, filings and
+          strategies — and grades them against data where the right answer is known.
         </p>
         <div className="row">
           <Link to="/demos" className="button primary">

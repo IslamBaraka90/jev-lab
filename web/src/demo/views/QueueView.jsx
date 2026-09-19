@@ -13,10 +13,6 @@ export function QueueView({ item, demo }) {
 
   return (
     <div className="stack queue-view" style={{ gap: 14 }}>
-      <div className="stack" style={{ gap: 4 }}>
-        <span className="eyebrow">{item.id}</span>
-        <h3>{demo?.itemLabel?.(item) ?? item.id}</h3>
-      </div>
 
       <dl className="facts">
         {facts.map(([key, value]) => (

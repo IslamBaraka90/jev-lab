@@ -3,6 +3,7 @@ import { SiteShell } from './components/SiteShell.jsx';
 import { EmptyState } from './components/ui.jsx';
 import { Link, navigate, useLocation } from './lib/router.jsx';
 import { HomePage } from './pages/HomePage.jsx';
+import { DOMAIN_BY_ID, findDemo } from '../../demos/index.js';
 
 // Everything but the home page loads on demand, so opening the catalog does not download the demo
 // runtime, and neither of them downloads the lab.
@@ -64,10 +65,10 @@ export function matchRoute(pathname) {
   if (clean === '/about') return { page: 'about', section: 'about', title: 'About' };
 
   const demo = clean.match(/^\/demos\/([^/]+)$/);
-  if (demo) return { page: 'demo', section: 'demos', title: 'Demo', id: decodeURIComponent(demo[1]) };
+  if (demo) return { page: 'demo', section: 'demos', title: findDemo(decodeURIComponent(demo[1]))?.title ?? 'Demo', id: decodeURIComponent(demo[1]) };
 
   const domain = clean.match(/^\/domains\/([^/]+)$/);
-  if (domain) return { page: 'domain', section: 'demos', title: 'Domain', id: decodeURIComponent(domain[1]) };
+  if (domain) return { page: 'domain', section: 'demos', title: DOMAIN_BY_ID[decodeURIComponent(domain[1])]?.title ?? 'Domain', id: decodeURIComponent(domain[1]) };
 
   if (clean === '/lab') return { area: 'lab', page: 'runs', section: 'runs', title: 'Backtests' };
   if (clean === '/lab/compare') return { area: 'lab', page: 'compare', section: 'compare', title: 'Compare runs' };

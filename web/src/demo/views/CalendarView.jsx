@@ -13,7 +13,6 @@ export function CalendarView({ item, demo }) {
   const textAlternative = months.map((entry) => `${entry.month}: income ${money(entry.income)}, commitments ${money(entry.commitment)}, gap ${money(entry.gap)}, projected cash ${money(entry.projectedCash)}`).join('; ');
   return (
     <div className="stack income-calendar" style={{ gap: 12 }}>
-      <div className="stack" style={{ gap: 4 }}><span className="eyebrow">{item.id}</span><h3>{demo?.itemLabel?.(item) ?? item.id}</h3></div>
       <svg className="calendar-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Twelve-month income and commitments. ${textAlternative}`}>
         {[0, 0.5, 1].map((fraction) => <g key={fraction}><line className="calendar-grid" x1={pad.left} x2={width - pad.right} y1={y(max * fraction)} y2={y(max * fraction)} /><text className="calendar-axis" x={pad.left - 7} y={y(max * fraction) + 4} textAnchor="end">{money(max * fraction)}</text></g>)}
         {months.map((entry, index) => {

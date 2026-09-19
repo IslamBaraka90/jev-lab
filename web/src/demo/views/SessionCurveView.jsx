@@ -15,7 +15,6 @@ export function SessionCurveView({ item, demo }) {
   const path = points.map((point, index) => `${index ? 'L' : 'M'}${x(index).toFixed(1)},${y(point).toFixed(1)}`).join('');
   return (
     <div className="stack trading-session" style={{ gap: 14 }}>
-      <div className="stack" style={{ gap: 4 }}><span className="eyebrow">{item.id}</span><h3>{demo?.itemLabel?.(item) ?? item.date}</h3></div>
       <dl className="facts trading-facts">
         <div><dt>Prior day</dt><dd>{money(item.previousDayResultUsd)}</dd></div>
         <div><dt>30-day trades/day</dt><dd>{item.norms.averageTradesPerDay}</dd></div>

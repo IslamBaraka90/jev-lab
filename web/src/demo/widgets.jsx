@@ -128,7 +128,7 @@ export function ConfusionMatrix({ matrix, onSelect }) {
                 {row.cells.map((cell, index) => (
                   <td
                     key={index}
-                    className={`num${cell.diagonal ? ' diagonal' : ''}${cell.count ? '' : ' empty'}`}
+                    className={`num${cell.diagonal ? ' diagonal' : ''}${cell.count ? '' : ' cell-empty'}`}
                     style={cell.count ? { backgroundColor: `color-mix(in srgb, var(--${cell.diagonal ? 'positiveBg' : 'warningBg'}) ${Math.round((cell.count / max) * 100)}%, transparent)` } : undefined}
                   >
                     {cell.count && cell.items?.length ? (

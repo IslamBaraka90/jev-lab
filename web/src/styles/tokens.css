@@ -39,6 +39,7 @@
   --s8: 8px;
   --s12: 12px;
   --s16: 16px;
+  --s20: 20px;
   --s24: 24px;
   --s32: 32px;
   --s48: 48px;
@@ -55,6 +56,33 @@
 
   --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  /* Names the later views reach for. Each one resolves to a token above, so there is one palette. */
+  --font-mono: var(--mono);
+  --text-sm: var(--meta);
+  --radius-sm: 10px;
+  --radius: 16px;
+  --line: var(--border);
+  --ink: #000000;
+  --surface-raised: var(--surface2);
+  --warn: var(--warning);
+
+  /* A second and third series for charts that compare two things. Both clear 3:1 on --surface and
+     stay apart under the common colour-vision deficiencies. */
+  --cyan: #4cc3d9;
+  --violet: #a58bf5;
+  --accent2: var(--violet);
+
+  /* One hue per domain, for cards, tiles and the run chip. */
+  --domain-books: #86dfc6;
+  --domain-orders: #ffd388;
+  --domain-fraud: #ff91b4;
+  --domain-crypto: #a58bf5;
+  --domain-portfolio: #4cc3d9;
+  --domain-trades: #6ea8ff;
+  --domain-screening: #c3e88d;
+  --domain-news: #f5a97f;
+  --domain-strategy: #d9a5f0;
 
   /* Sidebar, from the design system's navigation shell. */
   --nav-border: #293551;

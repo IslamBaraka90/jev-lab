@@ -66,10 +66,6 @@ export function GraphView({ item, demo }) {
 
   return (
     <div className="stack graph-view" style={{ gap: 12 }}>
-      <div className="stack" style={{ gap: 4 }}>
-        <span className="eyebrow">{item.id}</span>
-        <h3>{demo?.itemLabel?.(item) ?? item.id}</h3>
-      </div>
 
       <svg
         className="transfer-graph"

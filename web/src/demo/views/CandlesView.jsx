@@ -105,11 +105,7 @@ function LabCandlesView({ item, demo }) {
   if (!candles.length) return <p className="meta">This item has no chart to draw.</p>;
 
   return (
-    <div className="stack candles-view" style={{ gap: 12 }}>
-      <div className="stack" style={{ gap: 4 }}>
-        <span className="eyebrow">{item.id}</span>
-        <h3>{demo?.itemLabel?.(item) ?? item.id}</h3>
-      </div>
+    <div className="stack candles-view" style={{ gap: 12 }}>
       <Suspense fallback={<p className="meta">Drawing the chart…</p>}>
         <CandleChart
           candles={candles}
