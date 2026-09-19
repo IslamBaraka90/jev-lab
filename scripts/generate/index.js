@@ -16,9 +16,14 @@ export const GENERATORS = {
   'bank-reconciliation': () => import('./bank-reconciliation.js'),
   'expense-posting': () => import('./expense-posting.js'),
   'three-way-match': () => import('./three-way-match.js'),
+  'close-blockers': () => import('./close-blockers.js'),
+  'order-risk': () => import('./order-risk.js'),
   'cod-abuse': () => import('./cod-abuse.js'),
+  'dispute-routing': () => import('./dispute-routing.js'),
   'chargeback-evidence': () => import('./chargeback-evidence.js'),
+  'merchant-onboarding': () => import('./merchant-onboarding.js'),
   'delivery-exceptions': () => import('./delivery-exceptions.js'),
+  'card-fraud-triage': () => import('./card-fraud-triage.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

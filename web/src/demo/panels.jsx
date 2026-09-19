@@ -79,6 +79,12 @@ export function EvaluationStrip({ evaluation }) {
           </div>
         ))}
       </dl>
+      {evaluation.call && (
+        <div className="evaluation-call">
+          <span className="eyebrow">The call this builds</span>
+          <pre className="state-json call-json">{JSON.stringify(evaluation.call, null, 2)}</pre>
+        </div>
+      )}
     </section>
   );
 }

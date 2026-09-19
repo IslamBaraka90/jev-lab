@@ -14,7 +14,8 @@ const WAYS_IN = [
 export function HomePage() {
   const counts = catalogCounts();
   const planned = domains().reduce((total, domain) => total + domain.planned, 0);
-  const featured = cards().slice(0, 3);
+  // Everything, while the catalog is small enough to read in one go; the first six once it is not.
+  const featured = cards().slice(0, 6);
 
   return (
     <div className="stack home">

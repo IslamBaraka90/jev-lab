@@ -1,0 +1,7428 @@
+{
+  "demo": "merchant-onboarding",
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "APP-001": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.72,
+        "probabilities": {
+          "HIGH": 0.01,
+          "LOW": 0.79,
+          "MEDIUM": 0.2,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.23,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.76,
+          "2": 0.22,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "NONE": 0.81,
+          "FIVE_PERCENT": 0.05,
+          "ROLLING_HOLD": 0.08,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.92,
+        "probabilities": {
+          "REVIEW": 0.05,
+          "APPROVE": 0.95,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-002": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.97,
+        "probabilities": {
+          "LOW": 0.98,
+          "MEDIUM": 0.02,
+          "PROHIBITED": 0,
+          "HIGH": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.13,
+        "confidence": 0.92,
+        "probabilities": {
+          "0": 0.92,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "FIVE_PERCENT": 0.04,
+          "NONE": 0.89,
+          "TEN_PERCENT": 0.02,
+          "ROLLING_HOLD": 0.05,
+          "TWENTY_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.96,
+        "probabilities": {
+          "DECLINE": 0,
+          "REVIEW": 0.02,
+          "APPROVE": 0.98
+        }
+      }
+    },
+    "APP-003": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.41,
+        "probabilities": {
+          "HIGH": 0.07,
+          "LOW": 0.35,
+          "MEDIUM": 0.55,
+          "PROHIBITED": 0.03
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.29
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 2.96,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.11,
+          "3": 0.37,
+          "4": 0.26,
+          "5": 0.08,
+          "6": 0.01
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "ROLLING_HOLD": 0.17,
+          "TEN_PERCENT": 0.08,
+          "TWENTY_PERCENT": 0.03,
+          "NONE": 0.63,
+          "FIVE_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.35,
+        "probabilities": {
+          "REVIEW": 0.5599999999999999,
+          "DECLINE": 0.22,
+          "APPROVE": 0.22
+        }
+      }
+    },
+    "APP-004": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.89,
+        "probabilities": {
+          "MEDIUM": 0.05,
+          "PROHIBITED": 0,
+          "HIGH": 0.03,
+          "LOW": 0.92
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.49,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.17,
+          "2": 0.05,
+          "3": 0.06,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.59,
+        "probabilities": {
+          "TEN_PERCENT": 0.07,
+          "ROLLING_HOLD": 0.18,
+          "NONE": 0.67,
+          "TWENTY_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.72,
+        "probabilities": {
+          "REVIEW": 0.15,
+          "DECLINE": 0.03,
+          "APPROVE": 0.8200000000000001
+        }
+      }
+    },
+    "APP-005": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.15,
+        "probabilities": {
+          "HIGH": 0.28,
+          "PROHIBITED": 0,
+          "LOW": 0.37,
+          "MEDIUM": 0.35
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.06,
+        "confidence": 0.38,
+        "probabilities": {
+          "0": 0.55,
+          "1": 0.16,
+          "2": 0.06,
+          "3": 0.15,
+          "4": 0.07,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.63,
+        "probabilities": {
+          "NONE": 0.18,
+          "ROLLING_HOLD": 0.71,
+          "FIVE_PERCENT": 0.01,
+          "TWENTY_PERCENT": 0.04,
+          "TEN_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.31,
+        "probabilities": {
+          "DECLINE": 0.05,
+          "APPROVE": 0.54,
+          "REVIEW": 0.4
+        }
+      }
+    },
+    "APP-006": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "LOW": 0.97,
+          "MEDIUM": 0.03,
+          "PROHIBITED": 0,
+          "HIGH": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.12,
+        "confidence": 0.93,
+        "probabilities": {
+          "0": 0.9,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.75,
+        "probabilities": {
+          "FIVE_PERCENT": 0.11,
+          "ROLLING_HOLD": 0.04,
+          "TEN_PERCENT": 0.04,
+          "NONE": 0.8,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.94,
+        "probabilities": {
+          "DECLINE": 0,
+          "REVIEW": 0.04,
+          "APPROVE": 0.96
+        }
+      }
+    },
+    "APP-007": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.96,
+        "probabilities": {
+          "LOW": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.03,
+          "HIGH": 0.97
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 2.63,
+        "confidence": 0.69,
+        "probabilities": {
+          "0": 0,
+          "1": 0.1,
+          "2": 0.25,
+          "3": 0.58,
+          "4": 0.07,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0,
+          "ROLLING_HOLD": 0.94,
+          "FIVE_PERCENT": 0,
+          "TWENTY_PERCENT": 0.04,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.58,
+        "probabilities": {
+          "APPROVE": 0.23,
+          "DECLINE": 0.05,
+          "REVIEW": 0.72
+        }
+      }
+    },
+    "APP-008": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.98,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "LOW": 0.99,
+          "MEDIUM": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "NONE": 0.9,
+          "ROLLING_HOLD": 0.04,
+          "FIVE_PERCENT": 0.04,
+          "TWENTY_PERCENT": 0,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.98,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.99,
+          "REVIEW": 0.01
+        }
+      }
+    },
+    "APP-009": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "PROHIBITED",
+        "confidence": 0.96,
+        "probabilities": {
+          "HIGH": 0.01,
+          "LOW": 0,
+          "PROHIBITED": 0.98,
+          "MEDIUM": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.3,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.85,
+          "1": 0.08,
+          "2": 0.02,
+          "3": 0.02,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.72,
+        "probabilities": {
+          "ROLLING_HOLD": 0.78,
+          "TWENTY_PERCENT": 0.06,
+          "NONE": 0.13,
+          "FIVE_PERCENT": 0,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.97,
+        "probabilities": {
+          "APPROVE": 0,
+          "REVIEW": 0.02,
+          "DECLINE": 0.98
+        }
+      }
+    },
+    "APP-010": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.98,
+        "probabilities": {
+          "MEDIUM": 0.02,
+          "PROHIBITED": 0,
+          "HIGH": 0,
+          "LOW": 0.98
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "NONE": 0.84,
+          "ROLLING_HOLD": 0.09,
+          "TEN_PERCENT": 0.03,
+          "FIVE_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.98,
+        "probabilities": {
+          "REVIEW": 0.01,
+          "APPROVE": 0.99,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-011": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.94,
+        "probabilities": {
+          "MEDIUM": 0.04,
+          "PROHIBITED": 0,
+          "HIGH": 0.01,
+          "LOW": 0.95
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.55,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0.67,
+          "1": 0.2,
+          "2": 0.05,
+          "3": 0.07,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "FIVE_PERCENT": 0.09,
+          "TWENTY_PERCENT": 0.02,
+          "TEN_PERCENT": 0.05,
+          "NONE": 0.77,
+          "ROLLING_HOLD": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.69,
+        "probabilities": {
+          "APPROVE": 0.79,
+          "DECLINE": 0.05,
+          "REVIEW": 0.16
+        }
+      }
+    },
+    "APP-012": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.32,
+        "probabilities": {
+          "HIGH": 0.01,
+          "LOW": 0.49,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.5
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 2.07,
+        "confidence": 0.64,
+        "probabilities": {
+          "0": 0,
+          "1": 0.27,
+          "2": 0.4,
+          "3": 0.32,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.59,
+        "probabilities": {
+          "ROLLING_HOLD": 0.19,
+          "TWENTY_PERCENT": 0.02,
+          "NONE": 0.68,
+          "TEN_PERCENT": 0.06,
+          "FIVE_PERCENT": 0.05
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.49,
+        "probabilities": {
+          "REVIEW": 0.66,
+          "DECLINE": 0.02,
+          "APPROVE": 0.32
+        }
+      }
+    },
+    "APP-013": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.75,
+        "probabilities": {
+          "MEDIUM": 0.15,
+          "LOW": 0.81,
+          "HIGH": 0.04,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.42,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.17,
+          "2": 0.04,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.56,
+        "probabilities": {
+          "NONE": 0.65,
+          "TEN_PERCENT": 0.07,
+          "ROLLING_HOLD": 0.17,
+          "TWENTY_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.33,
+        "probabilities": {
+          "APPROVE": 0.55,
+          "REVIEW": 0.41,
+          "DECLINE": 0.04
+        }
+      }
+    },
+    "APP-014": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.4,
+        "probabilities": {
+          "MEDIUM": 0.45,
+          "PROHIBITED": 0,
+          "LOW": 0,
+          "HIGH": 0.55
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.08
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0.63,
+          "1": 0.17,
+          "2": 0.05,
+          "3": 0.09,
+          "4": 0.05,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.93,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.04,
+          "FIVE_PERCENT": 0,
+          "NONE": 0,
+          "ROLLING_HOLD": 0.94,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.5,
+        "probabilities": {
+          "REVIEW": 0.66,
+          "APPROVE": 0.18,
+          "DECLINE": 0.16
+        }
+      }
+    },
+    "APP-015": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.98,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "LOW": 0.98,
+          "MEDIUM": 0.02
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.05,
+        "confidence": 0.92,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.87,
+          "2": 0.08,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "ROLLING_HOLD": 0.05,
+          "TEN_PERCENT": 0.02,
+          "NONE": 0.87,
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.95,
+        "probabilities": {
+          "APPROVE": 0.97,
+          "DECLINE": 0,
+          "REVIEW": 0.03
+        }
+      }
+    },
+    "APP-016": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.22,
+        "probabilities": {
+          "LOW": 0.42,
+          "PROHIBITED": 0.01,
+          "MEDIUM": 0.21,
+          "HIGH": 0.36
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.25,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.76,
+          "2": 0.19,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.2,
+        "probabilities": {
+          "NONE": 0.37,
+          "ROLLING_HOLD": 0.35,
+          "FIVE_PERCENT": 0.08,
+          "TWENTY_PERCENT": 0.08,
+          "TEN_PERCENT": 0.12
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.55,
+        "probabilities": {
+          "APPROVE": 0.29,
+          "DECLINE": 0.01,
+          "REVIEW": 0.7
+        }
+      }
+    },
+    "APP-017": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.52,
+        "probabilities": {
+          "MEDIUM": 0.64,
+          "LOW": 0.3,
+          "PROHIBITED": 0.01,
+          "HIGH": 0.05
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.91,
+        "confidence": 0.67,
+        "probabilities": {
+          "0": 0,
+          "1": 0.33,
+          "2": 0.45,
+          "3": 0.22,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.47,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.03,
+          "NONE": 0.58,
+          "ROLLING_HOLD": 0.16,
+          "FIVE_PERCENT": 0.14,
+          "TEN_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.6,
+        "probabilities": {
+          "APPROVE": 0.25,
+          "DECLINE": 0.02,
+          "REVIEW": 0.73
+        }
+      }
+    },
+    "APP-018": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.93,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.05,
+          "LOW": 0.95
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.21,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0.88,
+          "1": 0.09,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "NONE": 0.73,
+          "FIVE_PERCENT": 0.07,
+          "TEN_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.02,
+          "ROLLING_HOLD": 0.12
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.93,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.95,
+          "REVIEW": 0.05
+        }
+      }
+    },
+    "APP-019": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.58,
+        "probabilities": {
+          "LOW": 0.68,
+          "PROHIBITED": 0.07,
+          "MEDIUM": 0.14,
+          "HIGH": 0.1
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.19
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.16,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.53,
+          "1": 0.16,
+          "2": 0.06,
+          "3": 0.16,
+          "4": 0.06,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.75,
+        "probabilities": {
+          "NONE": 0.81,
+          "ROLLING_HOLD": 0.08,
+          "FIVE_PERCENT": 0.06,
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.32,
+        "probabilities": {
+          "REVIEW": 0.34,
+          "APPROVE": 0.55,
+          "DECLINE": 0.11
+        }
+      }
+    },
+    "APP-020": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.23,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "HIGH": 0.19,
+          "LOW": 0.42,
+          "MEDIUM": 0.39
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.15,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.89,
+          "1": 0.09,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.48,
+        "probabilities": {
+          "TEN_PERCENT": 0.1,
+          "ROLLING_HOLD": 0.58,
+          "FIVE_PERCENT": 0.02,
+          "NONE": 0.23,
+          "TWENTY_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.75,
+        "probabilities": {
+          "REVIEW": 0.16,
+          "APPROVE": 0.83,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-021": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.98,
+        "probabilities": {
+          "MEDIUM": 0.02,
+          "PROHIBITED": 0,
+          "HIGH": 0,
+          "LOW": 0.98
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.1,
+        "confidence": 0.94,
+        "probabilities": {
+          "0": 0.92,
+          "1": 0.07,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "TEN_PERCENT": 0.04,
+          "ROLLING_HOLD": 0.05,
+          "NONE": 0.81,
+          "FIVE_PERCENT": 0.09,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.96,
+        "probabilities": {
+          "REVIEW": 0.02,
+          "DECLINE": 0,
+          "APPROVE": 0.98
+        }
+      }
+    },
+    "APP-022": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.37,
+        "probabilities": {
+          "HIGH": 0.14,
+          "LOW": 0.33,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.53
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 2.22,
+        "confidence": 0.63,
+        "probabilities": {
+          "0": 0,
+          "1": 0.2,
+          "2": 0.39,
+          "3": 0.39,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.3,
+        "probabilities": {
+          "ROLLING_HOLD": 0.31,
+          "TWENTY_PERCENT": 0.04,
+          "NONE": 0.45,
+          "TEN_PERCENT": 0.11,
+          "FIVE_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.58,
+        "probabilities": {
+          "REVIEW": 0.72,
+          "DECLINE": 0.02,
+          "APPROVE": 0.26
+        }
+      }
+    },
+    "APP-023": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.82,
+        "probabilities": {
+          "HIGH": 0.01,
+          "MEDIUM": 0.12,
+          "PROHIBITED": 0,
+          "LOW": 0.87
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.14,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.85,
+          "2": 0.13,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.6,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.15,
+          "FIVE_PERCENT": 0.08,
+          "TEN_PERCENT": 0.06,
+          "NONE": 0.68
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.78,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.85,
+          "REVIEW": 0.15
+        }
+      }
+    },
+    "APP-024": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.86,
+        "probabilities": {
+          "LOW": 0.89,
+          "HIGH": 0.03,
+          "MEDIUM": 0.08,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.32,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.81,
+          "1": 0.11,
+          "2": 0.03,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.62,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.03,
+          "TEN_PERCENT": 0.05,
+          "FIVE_PERCENT": 0.07,
+          "NONE": 0.69,
+          "ROLLING_HOLD": 0.16
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.75,
+        "probabilities": {
+          "DECLINE": 0.03,
+          "APPROVE": 0.83,
+          "REVIEW": 0.14
+        }
+      }
+    },
+    "APP-025": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.93,
+        "probabilities": {
+          "MEDIUM": 0.05,
+          "PROHIBITED": 0,
+          "LOW": 0.95,
+          "HIGH": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.35,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.16,
+          "2": 0.04,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.81,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.06,
+          "NONE": 0.85,
+          "ROLLING_HOLD": 0.04,
+          "TEN_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.68,
+        "probabilities": {
+          "REVIEW": 0.21,
+          "APPROVE": 0.78,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-026": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.87,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.91,
+          "MEDIUM": 0.09,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.1,
+        "confidence": 0.94,
+        "probabilities": {
+          "0": 0.92,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.77,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.04,
+          "NONE": 0.81,
+          "ROLLING_HOLD": 0.1,
+          "TEN_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.94,
+        "probabilities": {
+          "REVIEW": 0.04,
+          "APPROVE": 0.96,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-027": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.59,
+        "probabilities": {
+          "PROHIBITED": 0.04,
+          "HIGH": 0.69,
+          "LOW": 0,
+          "MEDIUM": 0.27
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.67,
+        "confidence": 0.03,
+        "probabilities": {
+          "0": 0.45,
+          "1": 0.12,
+          "2": 0.06,
+          "3": 0.14,
+          "4": 0.14,
+          "5": 0.08,
+          "6": 0.01
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.92,
+        "probabilities": {
+          "ROLLING_HOLD": 0.93,
+          "TEN_PERCENT": 0.02,
+          "FIVE_PERCENT": 0,
+          "NONE": 0,
+          "TWENTY_PERCENT": 0.05
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.58,
+        "probabilities": {
+          "REVIEW": 0.72,
+          "APPROVE": 0.05,
+          "DECLINE": 0.23
+        }
+      }
+    },
+    "APP-028": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.43,
+        "probabilities": {
+          "MEDIUM": 0.28,
+          "LOW": 0.57,
+          "HIGH": 0.15,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.63,
+        "confidence": 0.61,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.49,
+          "2": 0.34,
+          "3": 0.15,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.39,
+        "probabilities": {
+          "NONE": 0.51,
+          "ROLLING_HOLD": 0.26,
+          "TEN_PERCENT": 0.1,
+          "TWENTY_PERCENT": 0.06,
+          "FIVE_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.33,
+        "probabilities": {
+          "APPROVE": 0.43,
+          "DECLINE": 0.02,
+          "REVIEW": 0.55
+        }
+      }
+    },
+    "APP-029": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.95,
+        "probabilities": {
+          "HIGH": 0.97,
+          "LOW": 0,
+          "MEDIUM": 0.03,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.1
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 4.1,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.15,
+          "4": 0.61,
+          "5": 0.22,
+          "6": 0.02
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.85,
+        "probabilities": {
+          "NONE": 0,
+          "FIVE_PERCENT": 0,
+          "ROLLING_HOLD": 0.88,
+          "TWENTY_PERCENT": 0.09,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.55,
+        "probabilities": {
+          "REVIEW": 0.7,
+          "APPROVE": 0.01,
+          "DECLINE": 0.29
+        }
+      }
+    },
+    "APP-030": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "MEDIUM": 0.03,
+          "PROHIBITED": 0,
+          "HIGH": 0,
+          "LOW": 0.97
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.09,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.84,
+          "ROLLING_HOLD": 0.09,
+          "FIVE_PERCENT": 0.03,
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.98,
+        "probabilities": {
+          "REVIEW": 0.02,
+          "APPROVE": 0.98,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-031": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "PROHIBITED",
+        "confidence": 0.71,
+        "probabilities": {
+          "HIGH": 0.15,
+          "PROHIBITED": 0.78,
+          "MEDIUM": 0.06,
+          "LOW": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 2.11,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0,
+          "1": 0.32,
+          "2": 0.29,
+          "3": 0.35,
+          "4": 0.04,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.67,
+        "probabilities": {
+          "ROLLING_HOLD": 0.74,
+          "TEN_PERCENT": 0.03,
+          "NONE": 0.17,
+          "FIVE_PERCENT": 0.01,
+          "TWENTY_PERCENT": 0.05
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.72,
+        "probabilities": {
+          "APPROVE": 0,
+          "DECLINE": 0.81,
+          "REVIEW": 0.19
+        }
+      }
+    },
+    "APP-032": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.56,
+        "probabilities": {
+          "HIGH": 0.12,
+          "PROHIBITED": 0.04,
+          "MEDIUM": 0.17,
+          "LOW": 0.67
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.09
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.99,
+        "confidence": 0.42,
+        "probabilities": {
+          "0": 0.64,
+          "1": 0.1,
+          "2": 0.04,
+          "3": 0.11,
+          "4": 0.07,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.56,
+        "probabilities": {
+          "NONE": 0.65,
+          "FIVE_PERCENT": 0.04,
+          "TEN_PERCENT": 0.07,
+          "TWENTY_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.21
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.29,
+        "probabilities": {
+          "DECLINE": 0.16,
+          "APPROVE": 0.53,
+          "REVIEW": 0.31
+        }
+      }
+    },
+    "APP-033": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.18,
+        "probabilities": {
+          "HIGH": 0.28,
+          "MEDIUM": 0.39,
+          "PROHIBITED": 0.09,
+          "LOW": 0.24
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.34
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.34,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.53,
+          "1": 0.12,
+          "2": 0.05,
+          "3": 0.15,
+          "4": 0.1,
+          "5": 0.05,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.55,
+        "probabilities": {
+          "ROLLING_HOLD": 0.2,
+          "TWENTY_PERCENT": 0.02,
+          "NONE": 0.64,
+          "FIVE_PERCENT": 0.07,
+          "TEN_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.45,
+        "probabilities": {
+          "APPROVE": 0.23,
+          "REVIEW": 0.63,
+          "DECLINE": 0.14
+        }
+      }
+    },
+    "APP-034": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.97,
+        "probabilities": {
+          "MEDIUM": 0.02,
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "LOW": 0.98
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.22,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0.86,
+          "1": 0.1,
+          "2": 0.02,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "NONE": 0.76,
+          "ROLLING_HOLD": 0.07,
+          "TEN_PERCENT": 0.05,
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.11
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.9,
+        "probabilities": {
+          "APPROVE": 0.93,
+          "DECLINE": 0.01,
+          "REVIEW": 0.06
+        }
+      }
+    },
+    "APP-035": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.74,
+        "probabilities": {
+          "HIGH": 0.07,
+          "MEDIUM": 0.13,
+          "PROHIBITED": 0,
+          "LOW": 0.8
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.19,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.86,
+          "1": 0.11,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.53,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.17,
+          "FIVE_PERCENT": 0.1,
+          "NONE": 0.62,
+          "TEN_PERCENT": 0.08
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.41,
+        "probabilities": {
+          "DECLINE": 0.01,
+          "APPROVE": 0.6,
+          "REVIEW": 0.39
+        }
+      }
+    },
+    "APP-036": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.35,
+        "probabilities": {
+          "MEDIUM": 0.3,
+          "PROHIBITED": 0.05,
+          "HIGH": 0.14,
+          "LOW": 0.51
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.41
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.1,
+        "confidence": 0.36,
+        "probabilities": {
+          "0": 0.49,
+          "1": 0.22,
+          "2": 0.07,
+          "3": 0.17,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.53,
+        "probabilities": {
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.04,
+          "TEN_PERCENT": 0.07,
+          "NONE": 0.62,
+          "ROLLING_HOLD": 0.21
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.2,
+        "probabilities": {
+          "APPROVE": 0.44,
+          "DECLINE": 0.1,
+          "REVIEW": 0.45999999999999996
+        }
+      }
+    },
+    "APP-037": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.4,
+        "probabilities": {
+          "HIGH": 0.55,
+          "LOW": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.45
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.44,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.76,
+          "1": 0.15,
+          "2": 0.03,
+          "3": 0.04,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.88,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.06,
+          "FIVE_PERCENT": 0,
+          "ROLLING_HOLD": 0.91,
+          "TEN_PERCENT": 0.03,
+          "NONE": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.5,
+        "probabilities": {
+          "APPROVE": 0.23,
+          "REVIEW": 0.67,
+          "DECLINE": 0.1
+        }
+      }
+    },
+    "APP-038": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.92,
+        "probabilities": {
+          "LOW": 0.94,
+          "MEDIUM": 0.05,
+          "PROHIBITED": 0,
+          "HIGH": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.09,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "FIVE_PERCENT": 0.06,
+          "ROLLING_HOLD": 0.09,
+          "TEN_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.02,
+          "NONE": 0.77
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.64,
+        "probabilities": {
+          "DECLINE": 0,
+          "REVIEW": 0.24,
+          "APPROVE": 0.76
+        }
+      }
+    },
+    "APP-039": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.45,
+        "probabilities": {
+          "MEDIUM": 0.37,
+          "LOW": 0.59,
+          "PROHIBITED": 0,
+          "HIGH": 0.04
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.17,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.81,
+          "2": 0.13,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.68,
+        "probabilities": {
+          "TEN_PERCENT": 0.04,
+          "FIVE_PERCENT": 0.07,
+          "ROLLING_HOLD": 0.13,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.75
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.73,
+        "probabilities": {
+          "DECLINE": 0.02,
+          "APPROVE": 0.82,
+          "REVIEW": 0.16
+        }
+      }
+    },
+    "APP-040": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "HIGH": 0,
+          "MEDIUM": 0.03,
+          "LOW": 0.97,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.18,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0.9,
+          "1": 0.07,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.89,
+        "probabilities": {
+          "ROLLING_HOLD": 0.02,
+          "TWENTY_PERCENT": 0,
+          "TEN_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.05,
+          "NONE": 0.91
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.95,
+        "probabilities": {
+          "APPROVE": 0.97,
+          "REVIEW": 0.03,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-041": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.9,
+        "probabilities": {
+          "MEDIUM": 0.05,
+          "HIGH": 0.02,
+          "PROHIBITED": 0.01,
+          "LOW": 0.92
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.1
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.46,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.81,
+          "1": 0.06,
+          "2": 0.03,
+          "3": 0.06,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.1,
+          "FIVE_PERCENT": 0.05,
+          "NONE": 0.81
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.48,
+        "probabilities": {
+          "DECLINE": 0.09,
+          "APPROVE": 0.66,
+          "REVIEW": 0.25
+        }
+      }
+    },
+    "APP-042": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.8,
+        "probabilities": {
+          "HIGH": 0.04,
+          "LOW": 0.85,
+          "MEDIUM": 0.11,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.46,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.11,
+          "2": 0.04,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.67,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.06,
+          "ROLLING_HOLD": 0.14,
+          "NONE": 0.73,
+          "TEN_PERCENT": 0.05
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.77,
+        "probabilities": {
+          "REVIEW": 0.13,
+          "APPROVE": 0.84,
+          "DECLINE": 0.03
+        }
+      }
+    },
+    "APP-043": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.8,
+        "probabilities": {
+          "HIGH": 0.03,
+          "MEDIUM": 0.12,
+          "LOW": 0.85,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.21,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.8,
+          "2": 0.13,
+          "3": 0.04,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.77,
+        "probabilities": {
+          "NONE": 0.83,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.05,
+          "FIVE_PERCENT": 0.08
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.77,
+        "probabilities": {
+          "APPROVE": 0.85,
+          "REVIEW": 0.13,
+          "DECLINE": 0.02
+        }
+      }
+    },
+    "APP-044": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "LOW": 0.97,
+          "HIGH": 0,
+          "MEDIUM": 0.03,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.9400000000000001,
+          "1": 0.06,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.73,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.06,
+          "TEN_PERCENT": 0.04,
+          "ROLLING_HOLD": 0.1,
+          "NONE": 0.79
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.81,
+        "probabilities": {
+          "APPROVE": 0.88,
+          "DECLINE": 0,
+          "REVIEW": 0.12
+        }
+      }
+    },
+    "APP-045": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.98,
+        "probabilities": {
+          "LOW": 0,
+          "HIGH": 0.98,
+          "MEDIUM": 0.02,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.57,
+          "1": 0.21,
+          "2": 0.07,
+          "3": 0.12,
+          "4": 0.03,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.91,
+        "probabilities": {
+          "FIVE_PERCENT": 0,
+          "TEN_PERCENT": 0.02,
+          "TWENTY_PERCENT": 0.05,
+          "NONE": 0,
+          "ROLLING_HOLD": 0.93
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.36,
+        "probabilities": {
+          "DECLINE": 0.03,
+          "REVIEW": 0.58,
+          "APPROVE": 0.39
+        }
+      }
+    },
+    "APP-046": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "PROHIBITED",
+        "confidence": 0.92,
+        "probabilities": {
+          "PROHIBITED": 0.94,
+          "HIGH": 0.01,
+          "LOW": 0,
+          "MEDIUM": 0.05
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.42,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.12,
+          "2": 0.02,
+          "3": 0.03,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.75,
+        "probabilities": {
+          "ROLLING_HOLD": 0.8,
+          "TEN_PERCENT": 0.03,
+          "FIVE_PERCENT": 0,
+          "NONE": 0.11,
+          "TWENTY_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.97,
+        "probabilities": {
+          "REVIEW": 0.02,
+          "APPROVE": 0,
+          "DECLINE": 0.98
+        }
+      }
+    },
+    "APP-047": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.34,
+        "probabilities": {
+          "MEDIUM": 0.5,
+          "HIGH": 0.09,
+          "PROHIBITED": 0.01,
+          "LOW": 0.4
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 2.27,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0,
+          "1": 0.19,
+          "2": 0.37,
+          "3": 0.42,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.52,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.03,
+          "NONE": 0.6,
+          "ROLLING_HOLD": 0.2,
+          "TEN_PERCENT": 0.07,
+          "FIVE_PERCENT": 0.1
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.52,
+        "probabilities": {
+          "APPROVE": 0.28,
+          "REVIEW": 0.68,
+          "DECLINE": 0.04
+        }
+      }
+    },
+    "APP-048": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.87,
+        "probabilities": {
+          "MEDIUM": 0.1,
+          "LOW": 0,
+          "HIGH": 0.9,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.22,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0.86,
+          "1": 0.1,
+          "2": 0.02,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.9,
+        "probabilities": {
+          "TEN_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.92,
+          "NONE": 0,
+          "TWENTY_PERCENT": 0.05,
+          "FIVE_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.36,
+        "probabilities": {
+          "DECLINE": 0.02,
+          "APPROVE": 0.41,
+          "REVIEW": 0.57
+        }
+      }
+    },
+    "APP-049": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.94,
+        "probabilities": {
+          "LOW": 0.96,
+          "HIGH": 0,
+          "MEDIUM": 0.04,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.26,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.84,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.62,
+        "probabilities": {
+          "TEN_PERCENT": 0.07,
+          "TWENTY_PERCENT": 0.03,
+          "FIVE_PERCENT": 0.1,
+          "NONE": 0.69,
+          "ROLLING_HOLD": 0.11
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.79,
+        "probabilities": {
+          "REVIEW": 0.13,
+          "DECLINE": 0.01,
+          "APPROVE": 0.86
+        }
+      }
+    },
+    "APP-050": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.94,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.04,
+          "LOW": 0.96
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.22,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.77,
+          "2": 0.21,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.05,
+          "FIVE_PERCENT": 0.1,
+          "NONE": 0.81,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.91,
+        "probabilities": {
+          "REVIEW": 0.06,
+          "APPROVE": 0.94,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-051": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.9,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "HIGH": 0,
+          "MEDIUM": 0.07,
+          "LOW": 0.93
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.17,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0.89,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "ROLLING_HOLD": 0.06,
+          "FIVE_PERCENT": 0.04,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.86,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.96,
+        "probabilities": {
+          "REVIEW": 0.03,
+          "DECLINE": 0,
+          "APPROVE": 0.97
+        }
+      }
+    },
+    "APP-052": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "MEDIUM": 0.03,
+          "HIGH": 0,
+          "LOW": 0.97,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "NONE": 0.9,
+          "ROLLING_HOLD": 0.05,
+          "FIVE_PERCENT": 0.03,
+          "TEN_PERCENT": 0.02,
+          "TWENTY_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.97,
+        "probabilities": {
+          "REVIEW": 0.02,
+          "DECLINE": 0,
+          "APPROVE": 0.98
+        }
+      }
+    },
+    "APP-053": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.87,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "HIGH": 0.01,
+          "LOW": 0.91,
+          "MEDIUM": 0.08
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.36,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.16,
+          "2": 0.03,
+          "3": 0.04,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "TEN_PERCENT": 0.04,
+          "NONE": 0.79,
+          "FIVE_PERCENT": 0.05,
+          "ROLLING_HOLD": 0.1,
+          "TWENTY_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.63,
+        "probabilities": {
+          "REVIEW": 0.23,
+          "APPROVE": 0.76,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-054": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.99,
+        "probabilities": {
+          "LOW": 0.99,
+          "HIGH": 0,
+          "MEDIUM": 0.01,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.11,
+        "confidence": 0.94,
+        "probabilities": {
+          "0": 0.91,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "TWENTY_PERCENT": 0,
+          "TEN_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.03,
+          "NONE": 0.92,
+          "ROLLING_HOLD": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.99,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.99,
+          "REVIEW": 0.01
+        }
+      }
+    },
+    "APP-055": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.8,
+        "probabilities": {
+          "HIGH": 0.04,
+          "MEDIUM": 0.11,
+          "LOW": 0.85,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.54,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0.75,
+          "1": 0.12,
+          "2": 0.03,
+          "3": 0.07,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.02,
+          "ROLLING_HOLD": 0.14,
+          "FIVE_PERCENT": 0.06,
+          "TEN_PERCENT": 0.05,
+          "NONE": 0.73
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.72,
+        "probabilities": {
+          "APPROVE": 0.81,
+          "REVIEW": 0.16,
+          "DECLINE": 0.03
+        }
+      }
+    },
+    "APP-056": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.53,
+        "probabilities": {
+          "MEDIUM": 0.26,
+          "HIGH": 0.09,
+          "LOW": 0.65,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.09,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.3,
+        "probabilities": {
+          "NONE": 0.43,
+          "TEN_PERCENT": 0.07,
+          "FIVE_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.4,
+          "TWENTY_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.8,
+        "probabilities": {
+          "REVIEW": 0.13,
+          "APPROVE": 0.86,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-057": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.78,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.84,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.16
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.37,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.05,
+          "1": 0.62,
+          "2": 0.26,
+          "3": 0.07,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "ROLLING_HOLD": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.03,
+          "NONE": 0.87,
+          "FIVE_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.49,
+        "probabilities": {
+          "REVIEW": 0.33,
+          "DECLINE": 0.01,
+          "APPROVE": 0.66
+        }
+      }
+    },
+    "APP-058": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "MEDIUM": 0.03,
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "LOW": 0.97
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.1,
+        "confidence": 0.94,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "TEN_PERCENT": 0.02,
+          "ROLLING_HOLD": 0.02,
+          "TWENTY_PERCENT": 0,
+          "FIVE_PERCENT": 0.04,
+          "NONE": 0.92
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.98,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.99,
+          "REVIEW": 0.01
+        }
+      }
+    },
+    "APP-059": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.85,
+        "probabilities": {
+          "HIGH": 0.04,
+          "MEDIUM": 0.06,
+          "LOW": 0.89,
+          "PROHIBITED": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.65,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0.74,
+          "1": 0.09,
+          "2": 0.03,
+          "3": 0.06,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.78,
+        "probabilities": {
+          "NONE": 0.83,
+          "ROLLING_HOLD": 0.08,
+          "TEN_PERCENT": 0.03,
+          "FIVE_PERCENT": 0.05,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.5,
+        "probabilities": {
+          "APPROVE": 0.67,
+          "REVIEW": 0.21,
+          "DECLINE": 0.12
+        }
+      }
+    },
+    "APP-060": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.95,
+        "probabilities": {
+          "LOW": 0.97,
+          "HIGH": 0,
+          "MEDIUM": 0.03,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.3,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.8,
+          "1": 0.13,
+          "2": 0.04,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.04,
+          "ROLLING_HOLD": 0.04,
+          "TEN_PERCENT": 0.02,
+          "NONE": 0.89
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.9,
+        "probabilities": {
+          "APPROVE": 0.9299999999999999,
+          "DECLINE": 0.01,
+          "REVIEW": 0.06
+        }
+      }
+    },
+    "APP-061": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 1,
+        "probabilities": {
+          "MEDIUM": 0,
+          "LOW": 1,
+          "HIGH": 0,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.95,
+          "TEN_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.02,
+          "TWENTY_PERCENT": 0,
+          "FIVE_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.99,
+        "probabilities": {
+          "APPROVE": 0.99,
+          "REVIEW": 0.01,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-062": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.56,
+        "probabilities": {
+          "HIGH": 0.67,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.33,
+          "LOW": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.08
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.12,
+          "2": 0.03,
+          "3": 0.04,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.91,
+        "probabilities": {
+          "NONE": 0,
+          "ROLLING_HOLD": 0.92,
+          "FIVE_PERCENT": 0,
+          "TWENTY_PERCENT": 0.06,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.62,
+        "probabilities": {
+          "DECLINE": 0.09,
+          "APPROVE": 0.16,
+          "REVIEW": 0.75
+        }
+      }
+    },
+    "APP-063": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.85,
+        "probabilities": {
+          "LOW": 0.89,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.09,
+          "HIGH": 0.02
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.1,
+        "confidence": 0.94,
+        "probabilities": {
+          "0": 0.92,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.61,
+        "probabilities": {
+          "NONE": 0.69,
+          "TEN_PERCENT": 0.06,
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.16
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.82,
+        "probabilities": {
+          "REVIEW": 0.12,
+          "APPROVE": 0.88,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-064": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "PROHIBITED",
+        "confidence": 0.94,
+        "probabilities": {
+          "MEDIUM": 0.01,
+          "LOW": 0.01,
+          "PROHIBITED": 0.96,
+          "HIGH": 0.02
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.07,
+          "2": 0.02,
+          "3": 0.05,
+          "4": 0.08,
+          "5": 0.05,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.55,
+        "probabilities": {
+          "NONE": 0.29,
+          "TEN_PERCENT": 0.03,
+          "FIVE_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.64,
+          "TWENTY_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.91,
+        "probabilities": {
+          "REVIEW": 0.06,
+          "APPROVE": 0,
+          "DECLINE": 0.94
+        }
+      }
+    },
+    "APP-065": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.88,
+        "probabilities": {
+          "LOW": 0.91,
+          "MEDIUM": 0.07,
+          "PROHIBITED": 0,
+          "HIGH": 0.02
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.43,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.73,
+        "probabilities": {
+          "FIVE_PERCENT": 0.1,
+          "NONE": 0.78,
+          "TEN_PERCENT": 0.04,
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.79,
+        "probabilities": {
+          "DECLINE": 0.02,
+          "REVIEW": 0.12,
+          "APPROVE": 0.86
+        }
+      }
+    },
+    "APP-066": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.96,
+        "probabilities": {
+          "LOW": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.03,
+          "HIGH": 0.97
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.21
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.47,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.76,
+          "1": 0.13,
+          "2": 0.03,
+          "3": 0.05,
+          "4": 0.03,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0,
+          "ROLLING_HOLD": 0.95,
+          "FIVE_PERCENT": 0,
+          "TWENTY_PERCENT": 0.04,
+          "TEN_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.36,
+        "probabilities": {
+          "APPROVE": 0.38,
+          "DECLINE": 0.05,
+          "REVIEW": 0.57
+        }
+      }
+    },
+    "APP-067": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.92,
+        "probabilities": {
+          "HIGH": 0.01,
+          "LOW": 0.94,
+          "MEDIUM": 0.05,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.46,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.11,
+          "2": 0.04,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "NONE": 0.86,
+          "FIVE_PERCENT": 0.05,
+          "ROLLING_HOLD": 0.05,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.7,
+        "probabilities": {
+          "REVIEW": 0.15,
+          "APPROVE": 0.8,
+          "DECLINE": 0.05
+        }
+      }
+    },
+    "APP-068": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.78,
+        "probabilities": {
+          "MEDIUM": 0.14,
+          "PROHIBITED": 0,
+          "LOW": 0.83,
+          "HIGH": 0.03
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.26,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.85,
+          "1": 0.1,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.02,
+          "TEN_PERCENT": 0.04,
+          "ROLLING_HOLD": 0.11,
+          "FIVE_PERCENT": 0.04,
+          "NONE": 0.79
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.8,
+        "probabilities": {
+          "APPROVE": 0.87,
+          "REVIEW": 0.13,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-069": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.91,
+        "probabilities": {
+          "HIGH": 0.93,
+          "LOW": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.07
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.83,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0,
+          "1": 0.4,
+          "2": 0.38,
+          "3": 0.22,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.93,
+        "probabilities": {
+          "ROLLING_HOLD": 0.95,
+          "FIVE_PERCENT": 0,
+          "NONE": 0,
+          "TEN_PERCENT": 0.02,
+          "TWENTY_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.72,
+        "probabilities": {
+          "REVIEW": 0.81,
+          "APPROVE": 0.18,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-070": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.9,
+        "probabilities": {
+          "HIGH": 0.01,
+          "MEDIUM": 0.06,
+          "LOW": 0.93,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.19,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.9,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.6,
+        "probabilities": {
+          "NONE": 0.68,
+          "TWENTY_PERCENT": 0.02,
+          "TEN_PERCENT": 0.07,
+          "ROLLING_HOLD": 0.14,
+          "FIVE_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.91,
+        "probabilities": {
+          "APPROVE": 0.94,
+          "REVIEW": 0.05,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-071": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.83,
+        "probabilities": {
+          "PROHIBITED": 0.1,
+          "MEDIUM": 0.02,
+          "HIGH": 0.88,
+          "LOW": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 4.77,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.03,
+          "4": 0.28,
+          "5": 0.58,
+          "6": 0.11
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.9,
+        "probabilities": {
+          "TEN_PERCENT": 0.02,
+          "TWENTY_PERCENT": 0.04,
+          "NONE": 0.02,
+          "ROLLING_HOLD": 0.92,
+          "FIVE_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.67,
+        "probabilities": {
+          "APPROVE": 0,
+          "DECLINE": 0.78,
+          "REVIEW": 0.22
+        }
+      }
+    },
+    "APP-072": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "LOW": 0.97,
+          "PROHIBITED": 0,
+          "HIGH": 0,
+          "MEDIUM": 0.03
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.11,
+        "confidence": 0.94,
+        "probabilities": {
+          "0": 0.92,
+          "1": 0.07,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.68,
+        "probabilities": {
+          "ROLLING_HOLD": 0.13,
+          "TEN_PERCENT": 0.05,
+          "NONE": 0.75,
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.9,
+        "probabilities": {
+          "APPROVE": 0.93,
+          "DECLINE": 0,
+          "REVIEW": 0.07
+        }
+      }
+    },
+    "APP-073": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.69,
+        "probabilities": {
+          "HIGH": 0.77,
+          "PROHIBITED": 0,
+          "LOW": 0,
+          "MEDIUM": 0.23
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 3.46,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.54,
+          "4": 0.38,
+          "5": 0.05,
+          "6": 0.01
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.85,
+        "probabilities": {
+          "ROLLING_HOLD": 0.88,
+          "TEN_PERCENT": 0.03,
+          "NONE": 0.01,
+          "TWENTY_PERCENT": 0.08,
+          "FIVE_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.84,
+        "probabilities": {
+          "APPROVE": 0.03,
+          "DECLINE": 0.07,
+          "REVIEW": 0.9
+        }
+      }
+    },
+    "APP-074": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.81,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "LOW": 0.86,
+          "HIGH": 0.02,
+          "MEDIUM": 0.12
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.2,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0.88,
+          "1": 0.08,
+          "2": 0.02,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.7,
+        "probabilities": {
+          "NONE": 0.75,
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.11,
+          "FIVE_PERCENT": 0.07,
+          "TEN_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.89,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.93,
+          "REVIEW": 0.07
+        }
+      }
+    },
+    "APP-075": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.34,
+        "probabilities": {
+          "HIGH": 0.5,
+          "LOW": 0.32,
+          "PROHIBITED": 0.04,
+          "MEDIUM": 0.14
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.1
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.97,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.64,
+          "1": 0.11,
+          "2": 0.04,
+          "3": 0.11,
+          "4": 0.07,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.31,
+        "probabilities": {
+          "ROLLING_HOLD": 0.37,
+          "TWENTY_PERCENT": 0.05,
+          "TEN_PERCENT": 0.08,
+          "NONE": 0.46,
+          "FIVE_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.26,
+        "probabilities": {
+          "REVIEW": 0.51,
+          "DECLINE": 0.14,
+          "APPROVE": 0.35
+        }
+      }
+    },
+    "APP-076": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.35,
+        "probabilities": {
+          "HIGH": 0.01,
+          "MEDIUM": 0.48,
+          "PROHIBITED": 0,
+          "LOW": 0.51
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.66,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0,
+          "1": 0.51,
+          "2": 0.34,
+          "3": 0.15,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.67,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.08,
+          "FIVE_PERCENT": 0.13,
+          "TEN_PERCENT": 0.05,
+          "NONE": 0.73
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.58,
+        "probabilities": {
+          "DECLINE": 0.01,
+          "APPROVE": 0.27,
+          "REVIEW": 0.72
+        }
+      }
+    },
+    "APP-077": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.93,
+        "probabilities": {
+          "MEDIUM": 0.05,
+          "LOW": 0.95,
+          "HIGH": 0,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.12,
+        "confidence": 0.93,
+        "probabilities": {
+          "0": 0.91,
+          "1": 0.07,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "NONE": 0.72,
+          "TEN_PERCENT": 0.07,
+          "ROLLING_HOLD": 0.1,
+          "TWENTY_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.88,
+        "probabilities": {
+          "APPROVE": 0.92,
+          "DECLINE": 0,
+          "REVIEW": 0.08
+        }
+      }
+    },
+    "APP-078": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "PROHIBITED",
+        "confidence": 0.94,
+        "probabilities": {
+          "LOW": 0.01,
+          "MEDIUM": 0.02,
+          "HIGH": 0.02,
+          "PROHIBITED": 0.95
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.29,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.86,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.63,
+        "probabilities": {
+          "FIVE_PERCENT": 0.01,
+          "TWENTY_PERCENT": 0.1,
+          "TEN_PERCENT": 0.04,
+          "ROLLING_HOLD": 0.7,
+          "NONE": 0.15
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.95,
+        "probabilities": {
+          "DECLINE": 0.96,
+          "REVIEW": 0.03,
+          "APPROVE": 0.01
+        }
+      }
+    },
+    "APP-079": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.97,
+          "MEDIUM": 0.03,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.25,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.84,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "ROLLING_HOLD": 0.06,
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.86,
+          "FIVE_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.92,
+        "probabilities": {
+          "REVIEW": 0.05,
+          "DECLINE": 0.01,
+          "APPROVE": 0.94
+        }
+      }
+    },
+    "APP-080": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.97,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "LOW": 0.98,
+          "MEDIUM": 0.02
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.9299999999999999,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "NONE": 0.8,
+          "ROLLING_HOLD": 0.09,
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.97,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.98,
+          "REVIEW": 0.02
+        }
+      }
+    },
+    "APP-081": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.14,
+        "probabilities": {
+          "LOW": 0.34,
+          "MEDIUM": 0.36,
+          "HIGH": 0.3,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.13,
+          "2": 0.03,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.35,
+        "probabilities": {
+          "NONE": 0.32,
+          "ROLLING_HOLD": 0.48,
+          "TEN_PERCENT": 0.11,
+          "FIVE_PERCENT": 0.02,
+          "TWENTY_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.51,
+        "probabilities": {
+          "APPROVE": 0.68,
+          "REVIEW": 0.26,
+          "DECLINE": 0.06
+        }
+      }
+    },
+    "APP-082": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.91,
+        "probabilities": {
+          "HIGH": 0.02,
+          "PROHIBITED": 0,
+          "LOW": 0.93,
+          "MEDIUM": 0.04
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.45,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.81,
+          "1": 0.08,
+          "2": 0.02,
+          "3": 0.04,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "ROLLING_HOLD": 0.04,
+          "FIVE_PERCENT": 0.04,
+          "TEN_PERCENT": 0.02,
+          "TWENTY_PERCENT": 0,
+          "NONE": 0.9
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.73,
+        "probabilities": {
+          "APPROVE": 0.82,
+          "REVIEW": 0.1,
+          "DECLINE": 0.08
+        }
+      }
+    },
+    "APP-083": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.2,
+        "probabilities": {
+          "HIGH": 0.29,
+          "LOW": 0.3,
+          "MEDIUM": 0.41000000000000003,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.43,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.13,
+          "2": 0.03,
+          "3": 0.05,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.45,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.07,
+          "FIVE_PERCENT": 0.02,
+          "ROLLING_HOLD": 0.55,
+          "NONE": 0.28,
+          "TEN_PERCENT": 0.08
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.46,
+        "probabilities": {
+          "REVIEW": 0.3,
+          "APPROVE": 0.64,
+          "DECLINE": 0.06
+        }
+      }
+    },
+    "APP-084": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.42,
+        "probabilities": {
+          "MEDIUM": 0.43,
+          "LOW": 0,
+          "PROHIBITED": 0,
+          "HIGH": 0.57
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.18,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.55,
+          "2": 0.15,
+          "3": 0.09,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.94,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.96,
+          "NONE": 0,
+          "FIVE_PERCENT": 0,
+          "TEN_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.33,
+        "probabilities": {
+          "APPROVE": 0.38,
+          "REVIEW": 0.55,
+          "DECLINE": 0.07
+        }
+      }
+    },
+    "APP-085": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.75,
+        "probabilities": {
+          "MEDIUM": 0.13,
+          "HIGH": 0.06,
+          "PROHIBITED": 0,
+          "LOW": 0.81
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.41,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.76,
+          "1": 0.14,
+          "2": 0.04,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.41,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.05,
+          "NONE": 0.52,
+          "TEN_PERCENT": 0.09,
+          "ROLLING_HOLD": 0.28,
+          "FIVE_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.73,
+        "probabilities": {
+          "APPROVE": 0.82,
+          "DECLINE": 0.01,
+          "REVIEW": 0.17
+        }
+      }
+    },
+    "APP-086": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "PROHIBITED",
+        "confidence": 0.96,
+        "probabilities": {
+          "MEDIUM": 0.01,
+          "LOW": 0,
+          "HIGH": 0.02,
+          "PROHIBITED": 0.97
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.98
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.52,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0.82,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.05,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.62,
+        "probabilities": {
+          "ROLLING_HOLD": 0.69,
+          "TEN_PERCENT": 0.04,
+          "NONE": 0.16,
+          "FIVE_PERCENT": 0.01,
+          "TWENTY_PERCENT": 0.1
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.98,
+        "probabilities": {
+          "REVIEW": 0.01,
+          "APPROVE": 0,
+          "DECLINE": 0.99
+        }
+      }
+    },
+    "APP-087": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.28,
+        "probabilities": {
+          "HIGH": 0.21,
+          "MEDIUM": 0.46,
+          "LOW": 0.33,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.24,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0.82,
+          "1": 0.14,
+          "2": 0.02,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.63,
+        "probabilities": {
+          "NONE": 0.15,
+          "FIVE_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.71,
+          "TWENTY_PERCENT": 0.06,
+          "TEN_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.65,
+        "probabilities": {
+          "REVIEW": 0.22,
+          "APPROVE": 0.77,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-088": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.02,
+          "LOW": 0.98
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.9299999999999999,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "NONE": 0.86,
+          "FIVE_PERCENT": 0.05,
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.05
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.97,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.98,
+          "REVIEW": 0.02
+        }
+      }
+    },
+    "APP-089": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.7,
+        "probabilities": {
+          "MEDIUM": 0.2,
+          "HIGH": 0.03,
+          "PROHIBITED": 0,
+          "LOW": 0.77
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.36,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.81,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.59,
+        "probabilities": {
+          "ROLLING_HOLD": 0.15,
+          "NONE": 0.68,
+          "TEN_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.61,
+        "probabilities": {
+          "APPROVE": 0.74,
+          "DECLINE": 0.03,
+          "REVIEW": 0.23
+        }
+      }
+    },
+    "APP-090": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.93,
+        "probabilities": {
+          "MEDIUM": 0.05,
+          "HIGH": 0,
+          "LOW": 0.95,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.78,
+          "1": 0.13,
+          "2": 0.04,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "NONE": 0.84,
+          "ROLLING_HOLD": 0.07,
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.05
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.92,
+        "probabilities": {
+          "APPROVE": 0.95,
+          "DECLINE": 0,
+          "REVIEW": 0.05
+        }
+      }
+    },
+    "APP-091": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.9,
+        "probabilities": {
+          "MEDIUM": 0.07,
+          "PROHIBITED": 0,
+          "HIGH": 0.01,
+          "LOW": 0.92
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.02,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.68,
+          "2": 0.09,
+          "3": 0.05,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "TEN_PERCENT": 0.02,
+          "ROLLING_HOLD": 0.03,
+          "NONE": 0.92,
+          "FIVE_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.8,
+        "probabilities": {
+          "REVIEW": 0.12,
+          "DECLINE": 0.01,
+          "APPROVE": 0.87
+        }
+      }
+    },
+    "APP-092": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.71,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "LOW": 0.78,
+          "HIGH": 0.05,
+          "MEDIUM": 0.17
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.41,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.8,
+          "1": 0.1,
+          "2": 0.02,
+          "3": 0.05,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.76,
+        "probabilities": {
+          "ROLLING_HOLD": 0.09,
+          "TEN_PERCENT": 0.04,
+          "FIVE_PERCENT": 0.05,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.81
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.65,
+        "probabilities": {
+          "DECLINE": 0.01,
+          "REVIEW": 0.22,
+          "APPROVE": 0.77
+        }
+      }
+    },
+    "APP-093": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.59,
+        "probabilities": {
+          "HIGH": 0.69,
+          "LOW": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.31
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.08
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.13,
+          "2": 0.02,
+          "3": 0.04,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.93,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.04,
+          "NONE": 0,
+          "ROLLING_HOLD": 0.94,
+          "TEN_PERCENT": 0.02,
+          "FIVE_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.38,
+        "probabilities": {
+          "APPROVE": 0.35,
+          "REVIEW": 0.58,
+          "DECLINE": 0.07
+        }
+      }
+    },
+    "APP-094": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.99,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.99,
+          "MEDIUM": 0.01,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.96,
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "NONE": 0.9,
+          "FIVE_PERCENT": 0.05,
+          "ROLLING_HOLD": 0.03,
+          "TWENTY_PERCENT": 0,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.98,
+        "probabilities": {
+          "REVIEW": 0.01,
+          "APPROVE": 0.99,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-095": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.83,
+        "probabilities": {
+          "LOW": 0.87,
+          "MEDIUM": 0.12,
+          "HIGH": 0.01,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.65,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0.69,
+          "1": 0.14,
+          "2": 0.05,
+          "3": 0.08,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.05,
+          "ROLLING_HOLD": 0.05,
+          "TEN_PERCENT": 0.02,
+          "NONE": 0.87
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.59,
+        "probabilities": {
+          "APPROVE": 0.73,
+          "DECLINE": 0.05,
+          "REVIEW": 0.22
+        }
+      }
+    },
+    "APP-096": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.91,
+        "probabilities": {
+          "HIGH": 0.01,
+          "MEDIUM": 0.05,
+          "PROHIBITED": 0,
+          "LOW": 0.93
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.39,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.11,
+          "2": 0.04,
+          "3": 0.05,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "ROLLING_HOLD": 0.06,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.83,
+          "TEN_PERCENT": 0.03,
+          "FIVE_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.73,
+        "probabilities": {
+          "APPROVE": 0.82,
+          "REVIEW": 0.15,
+          "DECLINE": 0.03
+        }
+      }
+    },
+    "APP-097": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.2,
+        "probabilities": {
+          "HIGH": 0.37,
+          "PROHIBITED": 0,
+          "LOW": 0.23,
+          "MEDIUM": 0.4
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.74,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0,
+          "1": 0.47,
+          "2": 0.32,
+          "3": 0.2,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.36,
+        "probabilities": {
+          "NONE": 0.49,
+          "ROLLING_HOLD": 0.26,
+          "FIVE_PERCENT": 0.1,
+          "TWENTY_PERCENT": 0.07,
+          "TEN_PERCENT": 0.08
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.66,
+        "probabilities": {
+          "APPROVE": 0.21,
+          "DECLINE": 0.01,
+          "REVIEW": 0.78
+        }
+      }
+    },
+    "APP-098": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.78,
+        "probabilities": {
+          "HIGH": 0.04,
+          "LOW": 0.83,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.13
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.1,
+        "confidence": 0.94,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.63,
+        "probabilities": {
+          "ROLLING_HOLD": 0.08,
+          "TWENTY_PERCENT": 0.02,
+          "NONE": 0.71,
+          "FIVE_PERCENT": 0.13,
+          "TEN_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.67,
+        "probabilities": {
+          "APPROVE": 0.78,
+          "REVIEW": 0.22,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-099": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.58,
+        "probabilities": {
+          "LOW": 0.68,
+          "MEDIUM": 0.16,
+          "PROHIBITED": 0.07,
+          "HIGH": 0.08
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.25
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.81,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0.7,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.09,
+          "4": 0.06,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.72,
+        "probabilities": {
+          "ROLLING_HOLD": 0.11,
+          "TEN_PERCENT": 0.05,
+          "NONE": 0.77,
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.19,
+        "probabilities": {
+          "APPROVE": 0.46,
+          "DECLINE": 0.12,
+          "REVIEW": 0.42
+        }
+      }
+    },
+    "APP-100": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.68,
+        "probabilities": {
+          "HIGH": 0.06,
+          "MEDIUM": 0.17,
+          "PROHIBITED": 0,
+          "LOW": 0.77
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.17,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0.89,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.58,
+        "probabilities": {
+          "ROLLING_HOLD": 0.13999999999999999,
+          "TWENTY_PERCENT": 0.02,
+          "NONE": 0.66,
+          "FIVE_PERCENT": 0.1,
+          "TEN_PERCENT": 0.08
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.55,
+        "probabilities": {
+          "DECLINE": 0.01,
+          "REVIEW": 0.29,
+          "APPROVE": 0.7
+        }
+      }
+    },
+    "APP-101": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.99,
+        "probabilities": {
+          "MEDIUM": 0.01,
+          "PROHIBITED": 0,
+          "HIGH": 0,
+          "LOW": 0.99
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.07,
+        "confidence": 0.96,
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "TEN_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.05,
+          "NONE": 0.87,
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.97,
+        "probabilities": {
+          "REVIEW": 0.02,
+          "DECLINE": 0,
+          "APPROVE": 0.98
+        }
+      }
+    },
+    "APP-102": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.85,
+        "probabilities": {
+          "HIGH": 0.03,
+          "LOW": 0.89,
+          "MEDIUM": 0.04,
+          "PROHIBITED": 0.04
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.74,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0.7,
+          "1": 0.1,
+          "2": 0.04,
+          "3": 0.09,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.72,
+        "probabilities": {
+          "ROLLING_HOLD": 0.12,
+          "FIVE_PERCENT": 0.06,
+          "NONE": 0.77,
+          "TEN_PERCENT": 0.04,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.57,
+        "probabilities": {
+          "APPROVE": 0.72,
+          "DECLINE": 0.07,
+          "REVIEW": 0.21
+        }
+      }
+    },
+    "APP-103": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.16,
+        "probabilities": {
+          "HIGH": 0.24,
+          "PROHIBITED": 0.07,
+          "MEDIUM": 0.37,
+          "LOW": 0.32
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.35
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.48,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.61,
+          "2": 0.28,
+          "3": 0.08,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.39,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.04,
+          "ROLLING_HOLD": 0.23,
+          "FIVE_PERCENT": 0.11,
+          "TEN_PERCENT": 0.1,
+          "NONE": 0.52
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.41,
+        "probabilities": {
+          "DECLINE": 0.16,
+          "APPROVE": 0.24,
+          "REVIEW": 0.6
+        }
+      }
+    },
+    "APP-104": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.91,
+        "probabilities": {
+          "LOW": 0.9400000000000001,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.06,
+          "HIGH": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.19,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.86,
+          "1": 0.11,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.78,
+        "probabilities": {
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.07,
+          "NONE": 0.82,
+          "ROLLING_HOLD": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.68,
+        "probabilities": {
+          "REVIEW": 0.21,
+          "DECLINE": 0.01,
+          "APPROVE": 0.78
+        }
+      }
+    },
+    "APP-105": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.84,
+        "probabilities": {
+          "LOW": 0.88,
+          "HIGH": 0.02,
+          "MEDIUM": 0.05,
+          "PROHIBITED": 0.05
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.23
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.44,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.05,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.72,
+        "probabilities": {
+          "FIVE_PERCENT": 0.11,
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.06,
+          "TEN_PERCENT": 0.04,
+          "NONE": 0.78
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.59,
+        "probabilities": {
+          "APPROVE": 0.72,
+          "DECLINE": 0.09,
+          "REVIEW": 0.19
+        }
+      }
+    },
+    "APP-106": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.98,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.02,
+          "LOW": 0.98
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.25,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.82,
+          "1": 0.13,
+          "2": 0.03,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.8,
+        "probabilities": {
+          "NONE": 0.84,
+          "FIVE_PERCENT": 0.06,
+          "ROLLING_HOLD": 0.05,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.94,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.96,
+          "REVIEW": 0.04
+        }
+      }
+    },
+    "APP-107": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.99,
+        "probabilities": {
+          "MEDIUM": 0.01,
+          "PROHIBITED": 0,
+          "HIGH": 0.99,
+          "LOW": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.52,
+          "1": 0.22,
+          "2": 0.07,
+          "3": 0.14,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0,
+          "ROLLING_HOLD": 0.95,
+          "FIVE_PERCENT": 0,
+          "TEN_PERCENT": 0.01,
+          "TWENTY_PERCENT": 0.04
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.7,
+        "probabilities": {
+          "REVIEW": 0.8,
+          "APPROVE": 0.17,
+          "DECLINE": 0.03
+        }
+      }
+    },
+    "APP-108": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.32,
+        "probabilities": {
+          "HIGH": 0.29,
+          "MEDIUM": 0.22,
+          "LOW": 0.49,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.43,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.1,
+          "2": 0.04,
+          "3": 0.05,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.29,
+        "probabilities": {
+          "FIVE_PERCENT": 0.06,
+          "NONE": 0.43,
+          "ROLLING_HOLD": 0.34,
+          "TEN_PERCENT": 0.1,
+          "TWENTY_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.26,
+        "probabilities": {
+          "REVIEW": 0.5,
+          "APPROVE": 0.48,
+          "DECLINE": 0.02
+        }
+      }
+    },
+    "APP-109": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.94,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.96,
+          "MEDIUM": 0.04,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.06,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.71,
+        "probabilities": {
+          "ROLLING_HOLD": 0.11,
+          "FIVE_PERCENT": 0.05,
+          "TWENTY_PERCENT": 0.02,
+          "TEN_PERCENT": 0.05,
+          "NONE": 0.77
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.96,
+        "probabilities": {
+          "APPROVE": 0.97,
+          "REVIEW": 0.03,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-110": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.95,
+        "probabilities": {
+          "MEDIUM": 0.03,
+          "PROHIBITED": 0,
+          "HIGH": 0.01,
+          "LOW": 0.96
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.49,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0.78,
+          "1": 0.1,
+          "2": 0.03,
+          "3": 0.05,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "ROLLING_HOLD": 0.04,
+          "TEN_PERCENT": 0.02,
+          "NONE": 0.91,
+          "TWENTY_PERCENT": 0,
+          "FIVE_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.78,
+        "probabilities": {
+          "APPROVE": 0.86,
+          "DECLINE": 0.04,
+          "REVIEW": 0.1
+        }
+      }
+    },
+    "APP-111": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.87,
+        "probabilities": {
+          "MEDIUM": 0.09,
+          "PROHIBITED": 0,
+          "LOW": 0.9,
+          "HIGH": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.15,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.91,
+          "1": 0.07,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.68,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.06,
+          "ROLLING_HOLD": 0.11,
+          "FIVE_PERCENT": 0.08,
+          "NONE": 0.74
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.93,
+        "probabilities": {
+          "APPROVE": 0.95,
+          "REVIEW": 0.05,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-112": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.98,
+        "probabilities": {
+          "LOW": 0.98,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.02,
+          "HIGH": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.18,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.87,
+          "1": 0.1,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "ROLLING_HOLD": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.08,
+          "TEN_PERCENT": 0.03,
+          "NONE": 0.85
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.97,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.98,
+          "REVIEW": 0.02
+        }
+      }
+    },
+    "APP-113": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.61,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "HIGH": 0.71,
+          "MEDIUM": 0.29,
+          "LOW": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.09
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 3.73,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.36,
+          "4": 0.51,
+          "5": 0.11,
+          "6": 0.01
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.9,
+        "probabilities": {
+          "ROLLING_HOLD": 0.93,
+          "FIVE_PERCENT": 0,
+          "TWENTY_PERCENT": 0.05,
+          "NONE": 0,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.42,
+        "probabilities": {
+          "REVIEW": 0.61,
+          "DECLINE": 0.37,
+          "APPROVE": 0.02
+        }
+      }
+    },
+    "APP-114": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.99,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.99,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.9400000000000001,
+          "1": 0.06,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.86,
+        "probabilities": {
+          "NONE": 0.89,
+          "TWENTY_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.03,
+          "FIVE_PERCENT": 0.05,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.99,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.99,
+          "REVIEW": 0.01
+        }
+      }
+    },
+    "APP-115": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.13,
+        "probabilities": {
+          "LOW": 0.23,
+          "PROHIBITED": 0.12,
+          "MEDIUM": 0.3,
+          "HIGH": 0.35
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.45,
+        "confidence": 0.16,
+        "probabilities": {
+          "0": 0.53,
+          "1": 0.09,
+          "2": 0.03,
+          "3": 0.16,
+          "4": 0.12,
+          "5": 0.06,
+          "6": 0.01
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.56,
+        "probabilities": {
+          "ROLLING_HOLD": 0.2,
+          "TWENTY_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.06,
+          "TEN_PERCENT": 0.07,
+          "NONE": 0.65
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.42,
+        "probabilities": {
+          "DECLINE": 0.12,
+          "APPROVE": 0.27,
+          "REVIEW": 0.61
+        }
+      }
+    },
+    "APP-116": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.62,
+        "probabilities": {
+          "MEDIUM": 0.71,
+          "HIGH": 0.1,
+          "PROHIBITED": 0,
+          "LOW": 0.19
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.94,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0,
+          "1": 0.32,
+          "2": 0.42,
+          "3": 0.26,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.51,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.04,
+          "NONE": 0.61,
+          "FIVE_PERCENT": 0.11,
+          "ROLLING_HOLD": 0.15,
+          "TEN_PERCENT": 0.09
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.69,
+        "probabilities": {
+          "APPROVE": 0.2,
+          "DECLINE": 0.01,
+          "REVIEW": 0.79
+        }
+      }
+    },
+    "APP-117": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.96,
+        "probabilities": {
+          "HIGH": 0.97,
+          "MEDIUM": 0.03,
+          "LOW": 0,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.33,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.78,
+          "1": 0.14,
+          "2": 0.03,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.88,
+        "probabilities": {
+          "ROLLING_HOLD": 0.91,
+          "TEN_PERCENT": 0.04,
+          "TWENTY_PERCENT": 0.05,
+          "NONE": 0,
+          "FIVE_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.47,
+        "probabilities": {
+          "REVIEW": 0.65,
+          "DECLINE": 0.01,
+          "APPROVE": 0.34
+        }
+      }
+    },
+    "APP-118": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.84,
+        "probabilities": {
+          "HIGH": 0.06,
+          "LOW": 0.88,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.06
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.15,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.87,
+          "1": 0.11,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "ROLLING_HOLD": 0.12,
+          "TWENTY_PERCENT": 0.03,
+          "NONE": 0.72,
+          "TEN_PERCENT": 0.07,
+          "FIVE_PERCENT": 0.06
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.48,
+        "probabilities": {
+          "REVIEW": 0.34,
+          "DECLINE": 0,
+          "APPROVE": 0.66
+        }
+      }
+    },
+    "APP-119": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.69,
+        "probabilities": {
+          "MEDIUM": 0.2,
+          "HIGH": 0.77,
+          "PROHIBITED": 0.03,
+          "LOW": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.09
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 4.9,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.22,
+          "5": 0.59,
+          "6": 0.17
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.89,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.06,
+          "ROLLING_HOLD": 0.91,
+          "NONE": 0.01,
+          "FIVE_PERCENT": 0,
+          "TEN_PERCENT": 0.02
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "DECLINE",
+        "confidence": 0.77,
+        "probabilities": {
+          "APPROVE": 0,
+          "DECLINE": 0.85,
+          "REVIEW": 0.15
+        }
+      }
+    },
+    "APP-120": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.96,
+        "probabilities": {
+          "MEDIUM": 0.03,
+          "HIGH": 0,
+          "LOW": 0.97,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.9,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.74,
+          "2": 0.07,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.7,
+        "probabilities": {
+          "NONE": 0.77,
+          "ROLLING_HOLD": 0.05,
+          "FIVE_PERCENT": 0.12,
+          "TEN_PERCENT": 0.05,
+          "TWENTY_PERCENT": 0.01
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.88,
+        "probabilities": {
+          "REVIEW": 0.08,
+          "DECLINE": 0,
+          "APPROVE": 0.92
+        }
+      }
+    },
+    "APP-121": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.67,
+        "probabilities": {
+          "LOW": 0,
+          "MEDIUM": 0.24,
+          "HIGH": 0.76,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.82,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0.59,
+          "1": 0.19,
+          "2": 0.06,
+          "3": 0.11,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.91,
+        "probabilities": {
+          "TEN_PERCENT": 0.01,
+          "TWENTY_PERCENT": 0.06,
+          "NONE": 0,
+          "ROLLING_HOLD": 0.93,
+          "FIVE_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.53,
+        "probabilities": {
+          "APPROVE": 0.22,
+          "DECLINE": 0.1,
+          "REVIEW": 0.6799999999999999
+        }
+      }
+    },
+    "APP-122": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.95,
+        "probabilities": {
+          "LOW": 0.96,
+          "MEDIUM": 0.04,
+          "PROHIBITED": 0,
+          "HIGH": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.17,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0.91,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.89,
+        "probabilities": {
+          "ROLLING_HOLD": 0.03,
+          "TEN_PERCENT": 0.02,
+          "NONE": 0.92,
+          "FIVE_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.91,
+        "probabilities": {
+          "APPROVE": 0.95,
+          "DECLINE": 0,
+          "REVIEW": 0.05
+        }
+      }
+    },
+    "APP-123": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.94,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.96,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.04
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.13,
+        "confidence": 0.93,
+        "probabilities": {
+          "0": 0.92,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "ROLLING_HOLD": 0.09,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.83,
+          "FIVE_PERCENT": 0.04,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.94,
+        "probabilities": {
+          "DECLINE": 0,
+          "REVIEW": 0.04,
+          "APPROVE": 0.96
+        }
+      }
+    },
+    "APP-124": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.53,
+        "probabilities": {
+          "MEDIUM": 0.35,
+          "HIGH": 0,
+          "LOW": 0.65,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.56,
+        "confidence": 0.67,
+        "probabilities": {
+          "0": 0,
+          "1": 0.55,
+          "2": 0.35,
+          "3": 0.1,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "ROLLING_HOLD": 0.02,
+          "TWENTY_PERCENT": 0,
+          "TEN_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.08,
+          "NONE": 0.88
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.47,
+        "probabilities": {
+          "APPROVE": 0.35,
+          "REVIEW": 0.64,
+          "DECLINE": 0.01
+        }
+      }
+    },
+    "APP-125": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.98,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "LOW": 0.99,
+          "HIGH": 0,
+          "MEDIUM": 0.01
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.06,
+        "confidence": 0.97,
+        "probabilities": {
+          "0": 0.95,
+          "1": 0.04,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "TEN_PERCENT": 0.03,
+          "ROLLING_HOLD": 0.12,
+          "FIVE_PERCENT": 0.04,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.8
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.97,
+        "probabilities": {
+          "DECLINE": 0,
+          "REVIEW": 0.02,
+          "APPROVE": 0.98
+        }
+      }
+    },
+    "APP-126": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.46,
+        "probabilities": {
+          "MEDIUM": 0.3,
+          "PROHIBITED": 0.01,
+          "LOW": 0.58,
+          "HIGH": 0.11
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.15,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.9,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.54,
+        "probabilities": {
+          "NONE": 0.62,
+          "TEN_PERCENT": 0.08,
+          "ROLLING_HOLD": 0.2,
+          "TWENTY_PERCENT": 0.03,
+          "FIVE_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.54,
+        "probabilities": {
+          "APPROVE": 0.69,
+          "DECLINE": 0.02,
+          "REVIEW": 0.29
+        }
+      }
+    },
+    "APP-127": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.91,
+        "probabilities": {
+          "MEDIUM": 0.06,
+          "PROHIBITED": 0,
+          "HIGH": 0.01,
+          "LOW": 0.93
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.07,
+        "confidence": 0.96,
+        "probabilities": {
+          "0": 0.95,
+          "1": 0.05,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.65,
+        "probabilities": {
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.02,
+          "TEN_PERCENT": 0.06,
+          "NONE": 0.72,
+          "ROLLING_HOLD": 0.14
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.94,
+        "probabilities": {
+          "APPROVE": 0.96,
+          "DECLINE": 0,
+          "REVIEW": 0.04
+        }
+      }
+    },
+    "APP-128": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.21,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "LOW": 0.41,
+          "HIGH": 0.36,
+          "MEDIUM": 0.23
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.52,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.15,
+          "2": 0.04,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.4,
+        "probabilities": {
+          "TEN_PERCENT": 0.08,
+          "ROLLING_HOLD": 0.28,
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.05,
+          "NONE": 0.53
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.24,
+        "probabilities": {
+          "DECLINE": 0.02,
+          "REVIEW": 0.49,
+          "APPROVE": 0.49
+        }
+      }
+    },
+    "APP-129": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.63,
+        "probabilities": {
+          "LOW": 0.72,
+          "PROHIBITED": 0.04,
+          "MEDIUM": 0.15,
+          "HIGH": 0.09
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.5599999999999999,
+          "1": 0.21,
+          "2": 0.07,
+          "3": 0.12,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.56,
+        "probabilities": {
+          "NONE": 0.65,
+          "ROLLING_HOLD": 0.2,
+          "FIVE_PERCENT": 0.05,
+          "TWENTY_PERCENT": 0.03,
+          "TEN_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.34,
+        "probabilities": {
+          "APPROVE": 0.56,
+          "DECLINE": 0.09,
+          "REVIEW": 0.35
+        }
+      }
+    },
+    "APP-130": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.92,
+        "probabilities": {
+          "PROHIBITED": 0,
+          "HIGH": 0.01,
+          "MEDIUM": 0.05,
+          "LOW": 0.94
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.19,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0.88,
+          "1": 0.09,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "ROLLING_HOLD": 0.07,
+          "FIVE_PERCENT": 0.07,
+          "NONE": 0.79,
+          "TWENTY_PERCENT": 0.02,
+          "TEN_PERCENT": 0.05
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.88,
+        "probabilities": {
+          "REVIEW": 0.08,
+          "DECLINE": 0,
+          "APPROVE": 0.92
+        }
+      }
+    },
+    "APP-131": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.97,
+        "probabilities": {
+          "MEDIUM": 0.02,
+          "HIGH": 0,
+          "LOW": 0.98,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.22,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0.87,
+          "1": 0.09,
+          "2": 0.02,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "FIVE_PERCENT": 0.05,
+          "TEN_PERCENT": 0.04,
+          "ROLLING_HOLD": 0.05,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.85
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.96,
+        "probabilities": {
+          "REVIEW": 0.02,
+          "APPROVE": 0.98,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-132": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "MEDIUM",
+        "confidence": 0.24,
+        "probabilities": {
+          "LOW": 0.2,
+          "HIGH": 0.37,
+          "MEDIUM": 0.43,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.99,
+        "confidence": 0.42,
+        "probabilities": {
+          "0": 0.55,
+          "1": 0.18,
+          "2": 0.07,
+          "3": 0.13,
+          "4": 0.06,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "ROLLING_HOLD",
+        "confidence": 0.57,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.07,
+          "TEN_PERCENT": 0.07,
+          "FIVE_PERCENT": 0.01,
+          "NONE": 0.19,
+          "ROLLING_HOLD": 0.66
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.23,
+        "probabilities": {
+          "DECLINE": 0.06,
+          "APPROVE": 0.46,
+          "REVIEW": 0.48
+        }
+      }
+    },
+    "APP-133": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.48,
+        "probabilities": {
+          "LOW": 0.61,
+          "HIGH": 0.23,
+          "MEDIUM": 0.16,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.16,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0.89,
+          "1": 0.09,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.42,
+        "probabilities": {
+          "FIVE_PERCENT": 0.15,
+          "TEN_PERCENT": 0.11,
+          "TWENTY_PERCENT": 0.04,
+          "NONE": 0.53,
+          "ROLLING_HOLD": 0.17
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "REVIEW",
+        "confidence": 0.29,
+        "probabilities": {
+          "DECLINE": 0.01,
+          "REVIEW": 0.52,
+          "APPROVE": 0.47
+        }
+      }
+    },
+    "APP-134": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.97,
+        "probabilities": {
+          "HIGH": 0,
+          "MEDIUM": 0.03,
+          "LOW": 0.97,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.29,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.82,
+          "1": 0.12,
+          "2": 0.04,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "TWENTY_PERCENT": 0.01,
+          "FIVE_PERCENT": 0.06,
+          "NONE": 0.86,
+          "ROLLING_HOLD": 0.04,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.95,
+        "probabilities": {
+          "REVIEW": 0.03,
+          "APPROVE": 0.97,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-135": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.97,
+        "probabilities": {
+          "MEDIUM": 0.02,
+          "LOW": 0.98,
+          "HIGH": 0,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.08,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.62,
+        "probabilities": {
+          "NONE": 0.7,
+          "TEN_PERCENT": 0.06,
+          "ROLLING_HOLD": 0.14,
+          "TWENTY_PERCENT": 0.02,
+          "FIVE_PERCENT": 0.08
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.95,
+        "probabilities": {
+          "APPROVE": 0.97,
+          "REVIEW": 0.03,
+          "DECLINE": 0
+        }
+      }
+    },
+    "APP-136": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.73,
+        "probabilities": {
+          "PROHIBITED": 0.03,
+          "MEDIUM": 0.16,
+          "HIGH": 0.01,
+          "LOW": 0.8
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.27
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.43,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.68,
+          "2": 0.21,
+          "3": 0.09,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.79,
+        "probabilities": {
+          "TEN_PERCENT": 0.03,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.84,
+          "ROLLING_HOLD": 0.05,
+          "FIVE_PERCENT": 0.07
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.37,
+        "probabilities": {
+          "APPROVE": 0.58,
+          "REVIEW": 0.33,
+          "DECLINE": 0.09
+        }
+      }
+    },
+    "APP-137": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.77,
+        "probabilities": {
+          "MEDIUM": 0.17,
+          "LOW": 0.83,
+          "HIGH": 0,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 1.52,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.55,
+          "2": 0.33,
+          "3": 0.1,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "ROLLING_HOLD": 0.08,
+          "TEN_PERCENT": 0.04,
+          "FIVE_PERCENT": 0.08,
+          "TWENTY_PERCENT": 0.01,
+          "NONE": 0.79
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.34,
+        "probabilities": {
+          "DECLINE": 0.01,
+          "APPROVE": 0.5700000000000001,
+          "REVIEW": 0.42
+        }
+      }
+    },
+    "APP-138": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.97,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "LOW": 0.98,
+          "MEDIUM": 0.02
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.09,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.07,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "NONE": 0.86,
+          "ROLLING_HOLD": 0.04,
+          "FIVE_PERCENT": 0.06,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.96,
+        "probabilities": {
+          "DECLINE": 0,
+          "APPROVE": 0.97,
+          "REVIEW": 0.03
+        }
+      }
+    },
+    "APP-139": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.99,
+        "probabilities": {
+          "HIGH": 0,
+          "PROHIBITED": 0,
+          "MEDIUM": 0.01,
+          "LOW": 0.99
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.27,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0.83,
+          "1": 0.11,
+          "2": 0.03,
+          "3": 0.03,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.82,
+        "probabilities": {
+          "NONE": 0.85,
+          "ROLLING_HOLD": 0.04,
+          "FIVE_PERCENT": 0.07,
+          "TWENTY_PERCENT": 0.01,
+          "TEN_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.93,
+        "probabilities": {
+          "DECLINE": 0.01,
+          "APPROVE": 0.95,
+          "REVIEW": 0.04
+        }
+      }
+    },
+    "APP-140": {
+      "risk_tier": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.99,
+        "probabilities": {
+          "MEDIUM": 0,
+          "HIGH": 0,
+          "LOW": 1,
+          "PROHIBITED": 0
+        }
+      },
+      "prohibited_match": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "document_doubt": {
+        "type": "score",
+        "score": 0.09,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.06,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "reserve": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.95,
+          "TWENTY_PERCENT": 0,
+          "TEN_PERCENT": 0.01,
+          "ROLLING_HOLD": 0.01,
+          "FIVE_PERCENT": 0.03
+        }
+      },
+      "decision": {
+        "type": "choice",
+        "choice": "APPROVE",
+        "confidence": 0.99,
+        "probabilities": {
+          "APPROVE": 0.99,
+          "REVIEW": 0.01,
+          "DECLINE": 0
+        }
+      }
+    }
+  }
+}

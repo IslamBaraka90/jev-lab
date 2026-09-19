@@ -1,0 +1,713 @@
+[
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 40904.74,
+    "applicationId": "APP-093"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 52781.33,
+    "applicationId": "APP-062"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 116292.25,
+    "applicationId": "APP-027"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 49559.79,
+    "applicationId": "APP-045"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 17008.53,
+    "applicationId": "APP-066"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 27554.62,
+    "applicationId": "APP-037"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 30163.69,
+    "applicationId": "APP-121"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 21993.07,
+    "applicationId": "APP-084"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 28134,
+    "applicationId": "APP-107"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 17019,
+    "applicationId": "APP-007"
+  },
+  {
+    "outcome": "CHARGEBACK_HEAVY",
+    "kind": "went bad later",
+    "chargebacksLater": 13198.5,
+    "applicationId": "APP-014"
+  },
+  {
+    "outcome": "PROHIBITED",
+    "kind": "prohibited from the start",
+    "applicationId": "APP-046"
+  },
+  {
+    "outcome": "PROHIBITED",
+    "kind": "prohibited from the start",
+    "applicationId": "APP-009"
+  },
+  {
+    "outcome": "PROHIBITED",
+    "kind": "prohibited from the start",
+    "applicationId": "APP-031"
+  },
+  {
+    "outcome": "PROHIBITED",
+    "kind": "prohibited from the start",
+    "applicationId": "APP-086"
+  },
+  {
+    "outcome": "PROHIBITED",
+    "kind": "prohibited from the start",
+    "applicationId": "APP-064"
+  },
+  {
+    "outcome": "PROHIBITED",
+    "kind": "prohibited from the start",
+    "applicationId": "APP-078"
+  },
+  {
+    "outcome": "FRAUD",
+    "kind": "documents do not hold up",
+    "applicationId": "APP-119"
+  },
+  {
+    "outcome": "FRAUD",
+    "kind": "documents do not hold up",
+    "applicationId": "APP-113"
+  },
+  {
+    "outcome": "FRAUD",
+    "kind": "documents do not hold up",
+    "applicationId": "APP-073"
+  },
+  {
+    "outcome": "FRAUD",
+    "kind": "documents do not hold up",
+    "applicationId": "APP-071"
+  },
+  {
+    "outcome": "FRAUD",
+    "kind": "documents do not hold up",
+    "applicationId": "APP-029"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-126"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-069"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-133"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-117"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-048"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-016"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-100"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-116"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "looks risky, turned out fine",
+    "applicationId": "APP-087"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-136"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-044"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-032"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-088"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-079"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-024"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-085"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-103"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-021"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-111"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-118"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-131"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-020"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-114"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-090"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-023"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-124"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-006"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-041"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-013"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-110"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-051"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-047"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-060"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-098"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-095"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-097"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-059"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-061"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-055"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-017"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-125"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-012"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-038"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-080"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-139"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-003"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-022"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-033"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-135"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-034"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-127"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-011"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-001"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-108"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-042"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-030"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-075"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-068"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-049"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-040"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-134"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-140"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-052"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-004"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-115"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-043"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-130"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-072"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-025"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-026"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-036"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-129"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-109"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-104"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-120"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-019"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-067"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-058"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-063"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-008"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-082"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-123"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-112"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-089"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-081"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-091"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-105"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-039"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-094"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-056"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-018"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-050"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-065"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-074"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-128"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-005"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-054"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-122"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-053"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-035"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-028"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-137"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-106"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-077"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-132"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-092"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-101"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-076"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-015"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-096"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-010"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-099"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-070"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-138"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-057"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-102"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-083"
+  },
+  {
+    "outcome": "GOOD",
+    "kind": "ordinary",
+    "applicationId": "APP-002"
+  }
+]

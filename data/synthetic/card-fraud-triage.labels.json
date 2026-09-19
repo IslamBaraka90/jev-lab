@@ -1,0 +1,2443 @@
+[
+  {
+    "fraud": true,
+    "type": "STOLEN_CARD",
+    "kind": "fraud",
+    "quiet": false,
+    "alertId": "ALT-0014"
+  },
+  {
+    "fraud": true,
+    "type": "STOLEN_CARD",
+    "kind": "fraud",
+    "quiet": false,
+    "alertId": "ALT-0003"
+  },
+  {
+    "fraud": true,
+    "type": "STOLEN_CARD",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0217"
+  },
+  {
+    "fraud": true,
+    "type": "STOLEN_CARD",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0335"
+  },
+  {
+    "fraud": true,
+    "type": "STOLEN_CARD",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0366"
+  },
+  {
+    "fraud": true,
+    "type": "CARD_TESTING",
+    "kind": "fraud",
+    "quiet": false,
+    "alertId": "ALT-0001"
+  },
+  {
+    "fraud": true,
+    "type": "CARD_TESTING",
+    "kind": "fraud",
+    "quiet": false,
+    "alertId": "ALT-0005"
+  },
+  {
+    "fraud": true,
+    "type": "CARD_TESTING",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0302"
+  },
+  {
+    "fraud": true,
+    "type": "CARD_TESTING",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0309"
+  },
+  {
+    "fraud": true,
+    "type": "ACCOUNT_TAKEOVER",
+    "kind": "fraud",
+    "quiet": false,
+    "alertId": "ALT-0051"
+  },
+  {
+    "fraud": true,
+    "type": "ACCOUNT_TAKEOVER",
+    "kind": "fraud",
+    "quiet": false,
+    "alertId": "ALT-0038"
+  },
+  {
+    "fraud": true,
+    "type": "ACCOUNT_TAKEOVER",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0329"
+  },
+  {
+    "fraud": true,
+    "type": "FRIENDLY_FRAUD",
+    "kind": "fraud",
+    "quiet": false,
+    "alertId": "ALT-0023"
+  },
+  {
+    "fraud": true,
+    "type": "FRIENDLY_FRAUD",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0342"
+  },
+  {
+    "fraud": true,
+    "type": "MERCHANT_COLLUSION",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0382"
+  },
+  {
+    "fraud": true,
+    "type": "MERCHANT_COLLUSION",
+    "kind": "fraud",
+    "quiet": true,
+    "alertId": "ALT-0241"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0155"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0157"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0158"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0188"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0172"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0183"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0160"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "holiday abroad",
+    "alertId": "ALT-0184"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "wedding spending",
+    "alertId": "ALT-0054"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "wedding spending",
+    "alertId": "ALT-0029"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "wedding spending",
+    "alertId": "ALT-0046"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "wedding spending",
+    "alertId": "ALT-0028"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "wedding spending",
+    "alertId": "ALT-0032"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "wedding spending",
+    "alertId": "ALT-0021"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "a planned big purchase",
+    "alertId": "ALT-0036"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "a planned big purchase",
+    "alertId": "ALT-0040"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "a planned big purchase",
+    "alertId": "ALT-0022"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "a planned big purchase",
+    "alertId": "ALT-0050"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "a planned big purchase",
+    "alertId": "ALT-0035"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "a planned big purchase",
+    "alertId": "ALT-0049"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "renewals on one day",
+    "alertId": "ALT-0020"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "renewals on one day",
+    "alertId": "ALT-0006"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "renewals on one day",
+    "alertId": "ALT-0010"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "renewals on one day",
+    "alertId": "ALT-0012"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "loud false alarm",
+    "look": "renewals on one day",
+    "alertId": "ALT-0015"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0199"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0294"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0237"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0144"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0047"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0017"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0115"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0135"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0324"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0311"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0009"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0195"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0318"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0120"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0292"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0352"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0194"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0065"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0114"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0383"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0230"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0242"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0256"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0176"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0083"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0298"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0181"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0316"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0234"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0108"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0175"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0062"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0167"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0027"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0145"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0182"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0118"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0102"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0283"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0351"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0284"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0059"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0002"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0387"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0220"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0095"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0334"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0171"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0088"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0212"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0111"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0228"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0151"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0045"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0139"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0201"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0289"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0104"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0150"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0259"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0377"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0337"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0313"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0097"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0322"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0250"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0109"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0354"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0291"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0133"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0057"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0286"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0039"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0268"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0238"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0379"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0243"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0202"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0099"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0008"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0093"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0206"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0105"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0142"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0265"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0026"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0140"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0154"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0016"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0112"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0210"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0287"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0396"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0068"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0304"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0385"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0271"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0390"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0225"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0328"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0290"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0240"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0177"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0308"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0100"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0200"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0152"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0101"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0170"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0214"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0186"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0399"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0031"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0123"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0398"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0165"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0042"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0198"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0208"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0281"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0086"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0055"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0124"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0295"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0137"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0221"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0392"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0394"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0107"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0025"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0187"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0358"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0148"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0244"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0179"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0077"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0343"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0254"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0223"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0048"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0279"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0024"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0361"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0149"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0327"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0301"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0356"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0348"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0082"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0278"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0143"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0231"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0319"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0236"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0275"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0216"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0341"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0305"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0052"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0066"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0180"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0375"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0159"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0347"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0357"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0185"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0041"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0087"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0205"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0110"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0363"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0122"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0127"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0266"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0113"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0312"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0119"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0332"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0161"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0226"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0132"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0129"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0263"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0267"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0117"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0338"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0276"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0056"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0260"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0058"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0030"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0280"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0248"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0339"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0136"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0349"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0053"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0325"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0344"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0081"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0373"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0340"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0252"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0169"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0272"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0173"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0355"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0247"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0189"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0219"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0285"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0103"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0346"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0323"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0074"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0235"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0197"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0345"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0222"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0076"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0255"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0069"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0064"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0070"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0218"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0321"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0249"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0174"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0269"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0209"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0262"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0072"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0371"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0364"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0391"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0368"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0300"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0060"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0330"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0106"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0288"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0178"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0384"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0360"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0044"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0315"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0033"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0131"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0207"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0156"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0089"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0381"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0128"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0336"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0232"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0393"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0061"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0204"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0264"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0365"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0085"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0079"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0367"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0019"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0094"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0168"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0063"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0299"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0078"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0080"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0374"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0331"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0084"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0380"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0125"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0034"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0314"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0229"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0277"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0211"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0273"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0274"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0215"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0004"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0203"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0121"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0306"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0395"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0134"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0282"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0190"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0400"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0376"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0372"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0386"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0192"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0370"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0293"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0091"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0162"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0296"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0166"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0096"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0071"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0397"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0246"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0146"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0362"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0389"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0227"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0191"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0130"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0326"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0317"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0303"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0270"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0320"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0163"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0378"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0164"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0233"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0261"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0369"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0257"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0011"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0007"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0126"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0147"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0013"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0043"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0037"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0350"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0153"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0075"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0258"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0359"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0297"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0333"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0310"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0307"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0251"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0092"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0073"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0245"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0353"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0098"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0138"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0239"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0196"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0018"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0116"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0213"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0193"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0067"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0090"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0141"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0224"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0253"
+  },
+  {
+    "fraud": false,
+    "type": "NONE",
+    "kind": "ordinary",
+    "alertId": "ALT-0388"
+  }
+]
