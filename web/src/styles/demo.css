@@ -796,38 +796,7 @@
 .peer-valuation-report details { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; }
 .peer-valuation-report summary { cursor: pointer; font-weight: 700; }
 
-/* A document on the stage: a filing or a transcript, kept readable rather than squeezed into a cell. */
-.document-view .document-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s4) var(--s16);
-  margin: 0;
-}
-.document-view .document-meta div { display: flex; gap: var(--s8); }
-.document-view .document-meta dt { color: var(--muted); font-size: 0.82rem; }
-.document-view .document-meta dd { margin: 0; font-size: 0.82rem; }
-.document-view .document-body {
-  white-space: pre-wrap;
-  max-height: 460px;
-  overflow-y: auto;
-  padding: var(--s12) var(--s16);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--surface2);
-  line-height: 1.55;
-  font-size: 0.92rem;
-}
-.document-view .document-body.muted { color: var(--muted); }
-.document-view .document-prior summary { cursor: pointer; color: var(--muted); font-size: 0.85rem; padding: var(--s4) 0; }
-
-/* Two equity curves on one set of axes: every signal against the ones a filter kept. */
-.report-line.compare { stroke: var(--accent2, #8b5cf6); stroke-dasharray: 5 3; }
-.equity-legend { display: flex; gap: var(--s16); align-items: center; }
-.equity-legend span { display: inline-flex; align-items: center; gap: var(--s8); }
-.equity-legend .legend-line { display: inline-block; width: 18px; height: 2px; }
-.equity-legend .series-key { background: var(--accent, currentColor); }
-.equity-legend .compare-key { background: var(--accent2, #8b5cf6); }
-
 /* Two strategy result curves on one pair of axes, with the stress window behind them. */
 .pair-curves .stress-window { fill: var(--warn, #f59e0b); opacity: 0.12; }
 .pair-curves .facts dt { font-variant-numeric: tabular-nums; }
+.event-cluster-report table { min-width: 820px; }

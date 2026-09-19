@@ -1,0 +1,3422 @@
+[
+  {
+    "headlineId": "EC-0001",
+    "eventId": "EV-01",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0002",
+    "eventId": "EV-02",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": "PAIR-1",
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0003",
+    "eventId": "EV-03",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0004",
+    "eventId": "EV-04",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": "PAIR-2",
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0005",
+    "eventId": "EV-05",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0006",
+    "eventId": "EV-06",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": "PAIR-3",
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0007",
+    "eventId": "EV-07",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0008",
+    "eventId": "EV-08",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": "PAIR-4",
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0009",
+    "eventId": "EV-09",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0010",
+    "eventId": "EV-10",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": "PAIR-5",
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0011",
+    "eventId": "EV-11",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0012",
+    "eventId": "EV-12",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": "PAIR-6",
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0013",
+    "eventId": "EV-13",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0014",
+    "eventId": "EV-14",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0015",
+    "eventId": "EV-15",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0016",
+    "eventId": "EV-16",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0017",
+    "eventId": "EV-17",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0018",
+    "eventId": "EV-18",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0019",
+    "eventId": "EV-19",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0020",
+    "eventId": "EV-20",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0021",
+    "eventId": "EV-21",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0022",
+    "eventId": "EV-22",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0023",
+    "eventId": "EV-23",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0024",
+    "eventId": "EV-24",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0025",
+    "eventId": "EV-25",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0026",
+    "eventId": "EV-26",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0027",
+    "eventId": "EV-27",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0028",
+    "eventId": "EV-28",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0029",
+    "eventId": "EV-29",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0030",
+    "eventId": "EV-30",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0031",
+    "eventId": "EV-31",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0032",
+    "eventId": "EV-32",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0033",
+    "eventId": "EV-33",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0034",
+    "eventId": "EV-34",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0035",
+    "eventId": "EV-35",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0036",
+    "eventId": "EV-36",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0037",
+    "eventId": "EV-37",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0038",
+    "eventId": "EV-38",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0039",
+    "eventId": "EV-39",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0040",
+    "eventId": "EV-40",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0041",
+    "eventId": "EV-41",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0042",
+    "eventId": "EV-42",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0043",
+    "eventId": "EV-43",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0044",
+    "eventId": "EV-44",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0045",
+    "eventId": "EV-45",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0046",
+    "eventId": "EV-46",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": false,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0047",
+    "eventId": "EV-01",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0048",
+    "eventId": "EV-02",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0049",
+    "eventId": "EV-03",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0050",
+    "eventId": "EV-04",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0051",
+    "eventId": "EV-05",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0052",
+    "eventId": "EV-06",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0053",
+    "eventId": "EV-07",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0054",
+    "eventId": "EV-08",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0055",
+    "eventId": "EV-09",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0056",
+    "eventId": "EV-10",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0057",
+    "eventId": "EV-11",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0058",
+    "eventId": "EV-12",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0059",
+    "eventId": "EV-13",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0060",
+    "eventId": "EV-14",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0061",
+    "eventId": "EV-15",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0062",
+    "eventId": "EV-16",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0063",
+    "eventId": "EV-17",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0064",
+    "eventId": "EV-18",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0065",
+    "eventId": "EV-19",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0066",
+    "eventId": "EV-20",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0067",
+    "eventId": "EV-21",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0068",
+    "eventId": "EV-22",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0069",
+    "eventId": "EV-23",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0070",
+    "eventId": "EV-24",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0071",
+    "eventId": "EV-25",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0072",
+    "eventId": "EV-26",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0073",
+    "eventId": "EV-27",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0074",
+    "eventId": "EV-28",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0075",
+    "eventId": "EV-29",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0076",
+    "eventId": "EV-30",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0077",
+    "eventId": "EV-31",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0078",
+    "eventId": "EV-32",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0079",
+    "eventId": "EV-33",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0080",
+    "eventId": "EV-34",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0081",
+    "eventId": "EV-35",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0082",
+    "eventId": "EV-36",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0083",
+    "eventId": "EV-37",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0084",
+    "eventId": "EV-38",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0085",
+    "eventId": "EV-39",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0086",
+    "eventId": "EV-40",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0087",
+    "eventId": "EV-41",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0088",
+    "eventId": "EV-42",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0089",
+    "eventId": "EV-43",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0090",
+    "eventId": "EV-44",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0091",
+    "eventId": "EV-45",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0092",
+    "eventId": "EV-46",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0093",
+    "eventId": "EV-01",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0094",
+    "eventId": "EV-02",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0095",
+    "eventId": "EV-03",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0096",
+    "eventId": "EV-04",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0097",
+    "eventId": "EV-05",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0098",
+    "eventId": "EV-06",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0099",
+    "eventId": "EV-07",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0100",
+    "eventId": "EV-08",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0101",
+    "eventId": "EV-09",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0102",
+    "eventId": "EV-10",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0103",
+    "eventId": "EV-11",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0104",
+    "eventId": "EV-12",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0105",
+    "eventId": "EV-13",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0106",
+    "eventId": "EV-14",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0107",
+    "eventId": "EV-15",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0108",
+    "eventId": "EV-16",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0109",
+    "eventId": "EV-17",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0110",
+    "eventId": "EV-18",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0111",
+    "eventId": "EV-19",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0112",
+    "eventId": "EV-20",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0113",
+    "eventId": "EV-21",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0114",
+    "eventId": "EV-22",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0115",
+    "eventId": "EV-23",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0116",
+    "eventId": "EV-24",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0117",
+    "eventId": "EV-25",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0118",
+    "eventId": "EV-26",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0119",
+    "eventId": "EV-27",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0120",
+    "eventId": "EV-28",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0121",
+    "eventId": "EV-29",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0122",
+    "eventId": "EV-30",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0123",
+    "eventId": "EV-31",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0124",
+    "eventId": "EV-32",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0125",
+    "eventId": "EV-33",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0126",
+    "eventId": "EV-34",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0127",
+    "eventId": "EV-35",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0128",
+    "eventId": "EV-36",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0129",
+    "eventId": "EV-37",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0130",
+    "eventId": "EV-38",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0131",
+    "eventId": "EV-39",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0132",
+    "eventId": "EV-40",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0133",
+    "eventId": "EV-41",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0134",
+    "eventId": "EV-42",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0135",
+    "eventId": "EV-43",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0136",
+    "eventId": "EV-44",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0137",
+    "eventId": "EV-45",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0138",
+    "eventId": "EV-46",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0139",
+    "eventId": "EV-01",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0140",
+    "eventId": "EV-02",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0141",
+    "eventId": "EV-03",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0142",
+    "eventId": "EV-04",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0143",
+    "eventId": "EV-05",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0144",
+    "eventId": "EV-06",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0145",
+    "eventId": "EV-07",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0146",
+    "eventId": "EV-08",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0147",
+    "eventId": "EV-09",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0148",
+    "eventId": "EV-10",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0149",
+    "eventId": "EV-11",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0150",
+    "eventId": "EV-12",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0151",
+    "eventId": "EV-13",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0152",
+    "eventId": "EV-14",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0153",
+    "eventId": "EV-15",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0154",
+    "eventId": "EV-16",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0155",
+    "eventId": "EV-17",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0156",
+    "eventId": "EV-18",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0157",
+    "eventId": "EV-19",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0158",
+    "eventId": "EV-20",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0159",
+    "eventId": "EV-21",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0160",
+    "eventId": "EV-22",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0161",
+    "eventId": "EV-23",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0162",
+    "eventId": "EV-24",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0163",
+    "eventId": "EV-25",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0164",
+    "eventId": "EV-26",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0165",
+    "eventId": "EV-27",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0166",
+    "eventId": "EV-28",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0167",
+    "eventId": "EV-29",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0168",
+    "eventId": "EV-30",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0169",
+    "eventId": "EV-31",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0170",
+    "eventId": "EV-32",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0171",
+    "eventId": "EV-33",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0172",
+    "eventId": "EV-34",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0173",
+    "eventId": "EV-35",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0174",
+    "eventId": "EV-36",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0175",
+    "eventId": "EV-37",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0176",
+    "eventId": "EV-38",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0177",
+    "eventId": "EV-39",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0178",
+    "eventId": "EV-40",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0179",
+    "eventId": "EV-41",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0180",
+    "eventId": "EV-42",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0181",
+    "eventId": "EV-43",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0182",
+    "eventId": "EV-44",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0183",
+    "eventId": "EV-45",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0184",
+    "eventId": "EV-46",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0185",
+    "eventId": "EV-01",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0186",
+    "eventId": "EV-02",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0187",
+    "eventId": "EV-03",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0188",
+    "eventId": "EV-04",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0189",
+    "eventId": "EV-05",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0190",
+    "eventId": "EV-06",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0191",
+    "eventId": "EV-07",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0192",
+    "eventId": "EV-08",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0193",
+    "eventId": "EV-09",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0194",
+    "eventId": "EV-10",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0195",
+    "eventId": "EV-11",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0196",
+    "eventId": "EV-12",
+    "addsInformation": true,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0197",
+    "eventId": "EV-13",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0198",
+    "eventId": "EV-14",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0199",
+    "eventId": "EV-15",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0200",
+    "eventId": "EV-16",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0201",
+    "eventId": "EV-17",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0202",
+    "eventId": "EV-18",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0203",
+    "eventId": "EV-19",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0204",
+    "eventId": "EV-20",
+    "addsInformation": true,
+    "isPrimary": true,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": true
+  },
+  {
+    "headlineId": "EC-0205",
+    "eventId": "EV-21",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0206",
+    "eventId": "EV-22",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0207",
+    "eventId": "EV-23",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0208",
+    "eventId": "EV-24",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0209",
+    "eventId": "EV-25",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0210",
+    "eventId": "EV-26",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0211",
+    "eventId": "EV-27",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0212",
+    "eventId": "EV-28",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0213",
+    "eventId": "EV-29",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0214",
+    "eventId": "EV-30",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0215",
+    "eventId": "EV-31",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0216",
+    "eventId": "EV-32",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0217",
+    "eventId": "EV-33",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0218",
+    "eventId": "EV-34",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0219",
+    "eventId": "EV-35",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0220",
+    "eventId": "EV-36",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0221",
+    "eventId": "EV-37",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0222",
+    "eventId": "EV-38",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0223",
+    "eventId": "EV-39",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0224",
+    "eventId": "EV-40",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0225",
+    "eventId": "EV-41",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0226",
+    "eventId": "EV-42",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0227",
+    "eventId": "EV-43",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0228",
+    "eventId": "EV-44",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0229",
+    "eventId": "EV-45",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0230",
+    "eventId": "EV-46",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0231",
+    "eventId": "EV-01",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0232",
+    "eventId": "EV-02",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0233",
+    "eventId": "EV-03",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0234",
+    "eventId": "EV-04",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0235",
+    "eventId": "EV-05",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0236",
+    "eventId": "EV-06",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0237",
+    "eventId": "EV-07",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0238",
+    "eventId": "EV-08",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0239",
+    "eventId": "EV-09",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0240",
+    "eventId": "EV-10",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0241",
+    "eventId": "EV-11",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0242",
+    "eventId": "EV-12",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0243",
+    "eventId": "EV-13",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0244",
+    "eventId": "EV-14",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0245",
+    "eventId": "EV-15",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0246",
+    "eventId": "EV-16",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0247",
+    "eventId": "EV-17",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0248",
+    "eventId": "EV-18",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0249",
+    "eventId": "EV-19",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0250",
+    "eventId": "EV-20",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0251",
+    "eventId": "EV-21",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0252",
+    "eventId": "EV-22",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0253",
+    "eventId": "EV-23",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0254",
+    "eventId": "EV-24",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0255",
+    "eventId": "EV-25",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0256",
+    "eventId": "EV-26",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0257",
+    "eventId": "EV-27",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0258",
+    "eventId": "EV-28",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0259",
+    "eventId": "EV-29",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0260",
+    "eventId": "EV-30",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0261",
+    "eventId": "EV-31",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0262",
+    "eventId": "EV-32",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0263",
+    "eventId": "EV-33",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0264",
+    "eventId": "EV-34",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0265",
+    "eventId": "EV-35",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0266",
+    "eventId": "EV-36",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0267",
+    "eventId": "EV-37",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0268",
+    "eventId": "EV-38",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0269",
+    "eventId": "EV-39",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0270",
+    "eventId": "EV-40",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0271",
+    "eventId": "EV-41",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0272",
+    "eventId": "EV-42",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0273",
+    "eventId": "EV-43",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0274",
+    "eventId": "EV-44",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0275",
+    "eventId": "EV-45",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0276",
+    "eventId": "EV-46",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0277",
+    "eventId": "EV-01",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0278",
+    "eventId": "EV-02",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0279",
+    "eventId": "EV-03",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0280",
+    "eventId": "EV-04",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0281",
+    "eventId": "EV-05",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0282",
+    "eventId": "EV-06",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0283",
+    "eventId": "EV-07",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0284",
+    "eventId": "EV-08",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0285",
+    "eventId": "EV-09",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0286",
+    "eventId": "EV-10",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0287",
+    "eventId": "EV-11",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0288",
+    "eventId": "EV-12",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0289",
+    "eventId": "EV-13",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0290",
+    "eventId": "EV-14",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0291",
+    "eventId": "EV-15",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0292",
+    "eventId": "EV-16",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0293",
+    "eventId": "EV-17",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0294",
+    "eventId": "EV-18",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0295",
+    "eventId": "EV-19",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0296",
+    "eventId": "EV-20",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0297",
+    "eventId": "EV-21",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0298",
+    "eventId": "EV-22",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0299",
+    "eventId": "EV-23",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0300",
+    "eventId": "EV-24",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0301",
+    "eventId": "EV-25",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0302",
+    "eventId": "EV-26",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0303",
+    "eventId": "EV-27",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0304",
+    "eventId": "EV-28",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0305",
+    "eventId": "EV-29",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0306",
+    "eventId": "EV-30",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0307",
+    "eventId": "EV-31",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0308",
+    "eventId": "EV-32",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0309",
+    "eventId": "EV-33",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0310",
+    "eventId": "EV-34",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0311",
+    "eventId": "EV-35",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0312",
+    "eventId": "EV-36",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0313",
+    "eventId": "EV-37",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0314",
+    "eventId": "EV-38",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0315",
+    "eventId": "EV-39",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0316",
+    "eventId": "EV-40",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0317",
+    "eventId": "EV-41",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0318",
+    "eventId": "EV-42",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0319",
+    "eventId": "EV-43",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0320",
+    "eventId": "EV-44",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0321",
+    "eventId": "EV-45",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0322",
+    "eventId": "EV-46",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0323",
+    "eventId": "EV-01",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0324",
+    "eventId": "EV-02",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0325",
+    "eventId": "EV-03",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0326",
+    "eventId": "EV-04",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0327",
+    "eventId": "EV-05",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0328",
+    "eventId": "EV-06",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0329",
+    "eventId": "EV-07",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0330",
+    "eventId": "EV-08",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0331",
+    "eventId": "EV-09",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0332",
+    "eventId": "EV-10",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0333",
+    "eventId": "EV-11",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0334",
+    "eventId": "EV-12",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0335",
+    "eventId": "EV-13",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0336",
+    "eventId": "EV-14",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0337",
+    "eventId": "EV-15",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0338",
+    "eventId": "EV-16",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0339",
+    "eventId": "EV-17",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0340",
+    "eventId": "EV-18",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0341",
+    "eventId": "EV-19",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0342",
+    "eventId": "EV-20",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0343",
+    "eventId": "EV-21",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0344",
+    "eventId": "EV-22",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0345",
+    "eventId": "EV-23",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0346",
+    "eventId": "EV-24",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0347",
+    "eventId": "EV-25",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0348",
+    "eventId": "EV-26",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0349",
+    "eventId": "EV-27",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0350",
+    "eventId": "EV-28",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0351",
+    "eventId": "EV-29",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0352",
+    "eventId": "EV-30",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0353",
+    "eventId": "EV-31",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0354",
+    "eventId": "EV-32",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0355",
+    "eventId": "EV-33",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0356",
+    "eventId": "EV-34",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0357",
+    "eventId": "EV-35",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0358",
+    "eventId": "EV-36",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0359",
+    "eventId": "EV-37",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0360",
+    "eventId": "EV-38",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0361",
+    "eventId": "EV-39",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0362",
+    "eventId": "EV-40",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0363",
+    "eventId": "EV-41",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0364",
+    "eventId": "EV-42",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0365",
+    "eventId": "EV-43",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0366",
+    "eventId": "EV-44",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0367",
+    "eventId": "EV-45",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0368",
+    "eventId": "EV-46",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0369",
+    "eventId": "EV-01",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0370",
+    "eventId": "EV-02",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0371",
+    "eventId": "EV-03",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0372",
+    "eventId": "EV-04",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0373",
+    "eventId": "EV-05",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0374",
+    "eventId": "EV-06",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0375",
+    "eventId": "EV-07",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0376",
+    "eventId": "EV-08",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0377",
+    "eventId": "EV-09",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0378",
+    "eventId": "EV-10",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0379",
+    "eventId": "EV-11",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  },
+  {
+    "headlineId": "EC-0380",
+    "eventId": "EV-12",
+    "addsInformation": false,
+    "isPrimary": false,
+    "sameEvent": true,
+    "nearDuplicatePair": null,
+    "rumourConfirmation": false
+  }
+]

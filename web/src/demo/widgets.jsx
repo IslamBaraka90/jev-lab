@@ -304,6 +304,7 @@ export function ReportPanel({ report, onSelect }) {
       {report.ratioRows?.length > 0 && <RatioCrossCheck rows={report.ratioRows} />}
       {report.yieldSafety && <DividendSafetyScatter chart={report.yieldSafety} rows={report.dividendRows} />}
       {report.peerSets?.length > 0 && <PeerValuationReport sets={report.peerSets} />}
+      {report.eventClusters && <EventClusterReport clusters={report.eventClusters} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
@@ -408,6 +409,10 @@ function DividendSafetyScatter({ chart, rows = [] }) {
 function PeerValuationReport({ sets }) {
   const multiple = (value) => Number.isFinite(value) ? `${value.toFixed(2)}×` : '–';
   return <div className="stack peer-valuation-report" style={{ gap: 14 }}><h4>Peer picks against computed multiples</h4>{sets.map((set) => <details key={set.id} open><summary>{set.name} · Jev {set.modelPick} / computed {set.computedBest ?? 'n/a'}{set.loose ? ' · loose set' : ''}</summary><div className="details-content stack" style={{ gap: 10 }}><p className="meta">Cheapest P/E: {set.cheapestPe ?? '–'} · P/B: {set.cheapestPb ?? '–'} · P/FCF: {set.cheapestPfcf ?? '–'} · {set.comparable ? 'Jev accepted comparability' : 'Jev rejected comparability'} · premium {set.premiumJustified ? 'earned' : 'not earned'} · discount reason {set.discountReason}</p><div className="table-scroll"><table className="data-table compact"><thead><tr><th>Peer</th><th className="num">P/E</th><th className="num">P/B</th><th className="num">P/FCF</th><th className="num">EV proxy / FCF</th><th className="num">Operating margin</th><th className="num">4y revenue change</th></tr></thead><tbody>{set.peers.map((peer) => <tr key={peer.symbol}><th scope="row">{peer.symbol}{peer.symbol === set.modelPick ? ' · Jev' : ''}{peer.symbol === set.computedBest ? ' · computed' : ''}</th><td className="num">{multiple(peer.pe)}</td><td className="num">{multiple(peer.pb)}</td><td className="num">{multiple(peer.pfcf)}</td><td className="num">{multiple(peer.evFcf)}</td><td className="num">{Number.isFinite(peer.margin) ? `${peer.margin.toFixed(1)}%` : '–'}</td><td className="num">{Number.isFinite(peer.growth) ? `${peer.growth.toFixed(1)}%` : '–'}</td></tr>)}</tbody></table></div></div></details>)}</div>;
+}
+
+function EventClusterReport({ clusters }) {
+  return <div className="stack event-cluster-report" style={{ gap: 10 }}><h4>Raw feed → clustered feed</h4><p className="meta">{clusters.before} headlines before · {clusters.after} clusters after</p><div className="table-scroll"><table className="data-table compact"><thead><tr><th>Cluster’s reading source</th><th>Primary outlet</th><th className="num">Headlines</th><th className="num">Adding information</th></tr></thead><tbody>{clusters.rows.map((row) => <tr key={row.id}><th scope="row">{row.title}</th><td>{row.primary}</td><td className="num">{row.size}</td><td className="num">{row.informative}</td></tr>)}</tbody></table></div></div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {

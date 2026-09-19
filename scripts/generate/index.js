@@ -55,6 +55,7 @@ export const GENERATORS = {
   'news-impact': () => import('./news-impact.js'),
   'filings-read': () => import('./filings-read.js'),
   'rumour-grading': () => import('./rumour-grading.js'),
+  'event-clustering': () => import('./event-clustering.js'),
   'golden-cross-review': () => import('./golden-cross-review.js'),
   'regime-classification': () => import('./regime-classification.js'),
   'strategy-correlation': () => import('./strategy-correlation.js'),
