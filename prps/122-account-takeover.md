@@ -45,9 +45,9 @@ Standard demo folder plus `scripts/generate/account-takeover.js`.
 
 Template list, plus:
 
-- [ ] Impossible travel is derivable from the timestamps and locations in the state, not pre-computed.
-- [ ] Friction cost is shown beside the catch rate everywhere it appears.
-- [ ] Each planted shape is represented at least three times.
+- [x] Impossible travel is derivable from the timestamps and locations in the state, not pre-computed.
+- [x] Friction cost is shown beside the catch rate everywhere it appears.
+- [x] Each planted shape is represented at least three times.
 
 ## Video beats
 
@@ -58,3 +58,8 @@ Template list, plus:
 ## Notes
 
 Session timelines read better than tables on camera; the timeline view is worth the extra build here.
+
+Implemented and recorded on 2026-09-19 with `jev-1.13.0`: 260 of 260 session responses cached,
+100% takeover catch rate, 91.5% least-disruptive action accuracy, and fifteen of 246 legitimate
+sessions challenged for 50 friction points. The complete immutable run is documented in
+`demos/account-takeover/notes.md`.

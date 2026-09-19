@@ -191,7 +191,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'timeline',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.account.customerName} · ${item.session.network.country}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
