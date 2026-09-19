@@ -125,11 +125,32 @@ function kpis({ graded, high, takenHigh, lowBand, byItem, currency }) {
 
   return [
     { label: 'High-risk money refused or held', value: `${high.length - takenHigh.length} of ${high.length}`, context: takenHigh.length ? `${money(total(takenHigh), currency)} of it would have been taken` : 'none of it was accepted', tone: takenHigh.length ? 'warn' : 'good' },
-    { label: 'Band agrees with the label', value: share(bandRight.length, graded.length), context: `${bandRight.length} of ${graded.length} wallets in the right band` },
+    { label: 'Band agrees with the label', value: share(bandRight.length, graded.length), context: `${bandRight.length} of ${graded.length}, reading the rubric's own words: four of six is "high", two is "low"` },
+    { label: 'A bar that splits the file', value: split(graded, byItem).label, context: split(graded, byItem).detail, tone: split(graded, byItem).clean ? 'good' : 'warn' },
     { label: 'Driver named on the high-risk wallets', value: `${driverRight.length} of ${high.length}`, context: 'mixer, sanctions or gambling, exactly' },
     { label: 'Ordinary wallets refused', value: `${rejectedLow.length} of ${lowBand.length}`, context: `${money(total(rejectedLow), currency)} of ordinary deposits turned away`, tone: rejectedLow.length ? 'warn' : 'good' },
     { label: 'Accepted', value: money(total(accepted), currency), context: `${accepted.length} deposits, ${accepted.filter((result) => byItem.get(result.item.id).riskBand === 'high').length} of them high risk` },
   ];
+}
+
+/**
+ * Whether one number on the scale separates the high-risk wallets from everything else. A model can
+ * grade a file perfectly well without using the words at the top of a rubric, and this says so.
+ */
+function split(graded, byItem) {
+  const scores = (band) => graded.filter((result) => byItem.get(result.item.id).riskBand === band).map((result) => result.evaluation.risk);
+  const high = scores('high');
+  const rest = graded.filter((result) => byItem.get(result.item.id).riskBand !== 'high').map((result) => result.evaluation.risk);
+  if (!high.length || !rest.length) return { label: '–', detail: 'nothing to separate', clean: false };
+
+  const lowestHigh = Math.min(...high);
+  const highestRest = Math.max(...rest);
+  if (lowestHigh > highestRest) {
+    const bar = Math.round(((lowestHigh + highestRest) / 2) * 10) / 10;
+    return { label: `${bar} of 6`, detail: `every high-risk wallet scored ${lowestHigh.toFixed(2)} or more and nothing else went above ${highestRest.toFixed(2)}`, clean: true };
+  }
+  const overlap = rest.filter((value) => value >= lowestHigh).length;
+  return { label: 'none', detail: `${overlap} wallets that are not high risk score at or above the lowest high-risk wallet (${lowestHigh.toFixed(2)})`, clean: false };
 }
 
 function checks(graded, byItem, labels) {
@@ -144,7 +165,7 @@ function checks(graded, byItem, labels) {
 
   const decoyList = labels.filter((label) => label.kind === 'looks bad, is not');
   const refusedDecoys = decoyList.filter((label) => graded.some((result) => result.item.id === label.wallet && result.evaluation.rejected));
-  const ordinary = graded.filter((result) => byItem.get(result.item.id).kind === 'ordinary');
+  const ordinary = graded.filter((result) => byItem.get(result.item.id).kind === 'everyday');
   const refusedOrdinary = ordinary.filter((result) => result.evaluation.rejected);
   return [
     ...rows,
@@ -223,7 +244,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.chain} · ${money(item.amountOffered)} offered`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
