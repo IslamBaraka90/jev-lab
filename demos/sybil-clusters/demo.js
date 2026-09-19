@@ -132,12 +132,14 @@ function kpis({ graded, farmed, real, byItem, currency }) {
   const excludedFarmed = farmed.filter((result) => result.evaluation.excluded);
   const excludedReal = real.filter((result) => result.evaluation.excluded);
   const signalRight = farmed.filter((result) => result.evaluation.signal === byItem.get(result.item.id).linkingSignal);
+  const claimed = real.filter((result) => result.evaluation.signal !== 'NONE');
 
   return [
     { label: 'Clusters excluded whole', value: `${whole.length} of ${recovered.length}`, context: recovered.map((entry) => `${entry.id}: ${entry.found}/${entry.total}`).join(' · '), tone: whole.length === recovered.length ? 'good' : 'warn' },
     { label: 'Farmed wallets excluded', value: `${excludedFarmed.length} of ${farmed.length}`, context: `${money(allocation(excludedFarmed), currency)} of allocation saved` },
     { label: 'Real users excluded', value: `${excludedReal.length} of ${real.length}`, context: `${money(allocation(excludedReal), currency)} taken from people who earned it`, tone: excludedReal.length ? 'warn' : 'good' },
     { label: 'Linking signal named', value: `${signalRight.length} of ${farmed.length}`, context: 'the trait the farmer was actually careless about' },
+    { label: 'Signals claimed where there are none', value: `${claimed.length} of ${real.length}`, context: 'wallets with no cluster that were still given a link', tone: claimed.length > real.length / 4 ? 'warn' : 'good' },
     { label: 'Allocation paid out', value: money(allocation(graded.filter((result) => !result.evaluation.excluded)), currency), context: `${graded.filter((result) => !result.evaluation.excluded).length} wallets, ${farmed.length - excludedFarmed.length} of them farmed` },
   ];
 }
@@ -229,7 +231,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${money(item.allocation)} at stake · ${item.actionCount} actions`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
