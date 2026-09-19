@@ -228,7 +228,6 @@ export default {
   dataClass: 'mixed',
   readMinutes: 4,
   view: 'table',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${money(item.totalValueUsd)} · ${item.holdingCount} holdings · ${item.objectiveId}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

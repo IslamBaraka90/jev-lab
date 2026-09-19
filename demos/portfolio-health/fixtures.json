@@ -1,7 +1,1160 @@
 {
   "demo": "portfolio-health",
-  "model": null,
-  "recordedAt": null,
-  "source": "not recorded yet - run: npm run record portfolio-health",
-  "answers": {}
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "PF-01": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 0.99,
+        "probabilities": {
+          "CURRENCY": 1,
+          "LIQUIDITY": 0,
+          "CORRELATION": 0,
+          "NONE": 0,
+          "CONCENTRATION": 0,
+          "DRIFT": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.2,
+        "confidence": 0.65,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.13,
+          "4": 0.51,
+          "5": 0.28,
+          "6": 0.06
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "HEDGE",
+        "confidence": 0.96,
+        "probabilities": {
+          "REBALANCE": 0.01,
+          "HOLD": 0,
+          "HEDGE": 0.97,
+          "TRIM": 0.02
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.29
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.58
+      }
+    },
+    "PF-02": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CORRELATION",
+        "confidence": 0.92,
+        "probabilities": {
+          "LIQUIDITY": 0,
+          "CONCENTRATION": 0.06,
+          "CURRENCY": 0,
+          "CORRELATION": 0.94,
+          "NONE": 0,
+          "DRIFT": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.14,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.13,
+          "4": 0.58,
+          "5": 0.26,
+          "6": 0.02
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.84,
+        "probabilities": {
+          "HOLD": 0,
+          "REBALANCE": 0.12,
+          "HEDGE": 0,
+          "TRIM": 0.88
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.24
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.92
+      }
+    },
+    "PF-03": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.36,
+        "probabilities": {
+          "LIQUIDITY": 0.17,
+          "CONCENTRATION": 0.47,
+          "CURRENCY": 0,
+          "CORRELATION": 0.1,
+          "DRIFT": 0.12,
+          "NONE": 0.14
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 2.92,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.11,
+          "2": 0.15,
+          "3": 0.39999999999999997,
+          "4": 0.27,
+          "5": 0.04,
+          "6": 0.01
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.28,
+        "probabilities": {
+          "HEDGE": 0.02,
+          "REBALANCE": 0.41,
+          "HOLD": 0.11,
+          "TRIM": 0.46
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.67
+      }
+    },
+    "PF-04": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.23,
+        "probabilities": {
+          "NONE": 0.24,
+          "CURRENCY": 0,
+          "CONCENTRATION": 0.36,
+          "LIQUIDITY": 0.07,
+          "CORRELATION": 0.25,
+          "DRIFT": 0.08
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 2.33,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.2,
+          "2": 0.23,
+          "3": 0.37,
+          "4": 0.12,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.34,
+        "probabilities": {
+          "HOLD": 0.25,
+          "REBALANCE": 0.24,
+          "HEDGE": 0.01,
+          "TRIM": 0.5
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.57
+      }
+    },
+    "PF-05": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.99,
+        "probabilities": {
+          "LIQUIDITY": 0.01,
+          "CORRELATION": 0,
+          "CONCENTRATION": 0.99,
+          "NONE": 0,
+          "DRIFT": 0,
+          "CURRENCY": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.51,
+        "confidence": 0.64,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.05,
+          "4": 0.42,
+          "5": 0.46,
+          "6": 0.07
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.6,
+        "probabilities": {
+          "TRIM": 0.7,
+          "HOLD": 0.12,
+          "HEDGE": 0.1,
+          "REBALANCE": 0.08
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.24
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.81
+      }
+    },
+    "PF-06": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.43,
+        "probabilities": {
+          "CURRENCY": 0,
+          "LIQUIDITY": 0.27,
+          "CORRELATION": 0.08,
+          "NONE": 0.06,
+          "CONCENTRATION": 0.53,
+          "DRIFT": 0.06
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 3.66,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.03,
+          "2": 0.05,
+          "3": 0.28,
+          "4": 0.48,
+          "5": 0.14,
+          "6": 0.01
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.67,
+        "probabilities": {
+          "HEDGE": 0.02,
+          "HOLD": 0.07,
+          "REBALANCE": 0.15,
+          "TRIM": 0.76
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.34
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.72
+      }
+    },
+    "PF-07": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.97,
+        "probabilities": {
+          "DRIFT": 0,
+          "CONCENTRATION": 0.98,
+          "NONE": 0,
+          "CORRELATION": 0,
+          "LIQUIDITY": 0.02,
+          "CURRENCY": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.41,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.09,
+          "4": 0.44,
+          "5": 0.39,
+          "6": 0.07
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.55,
+        "probabilities": {
+          "TRIM": 0.66,
+          "HEDGE": 0.11,
+          "HOLD": 0.18,
+          "REBALANCE": 0.05
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.42
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "PF-08": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 0.98,
+        "probabilities": {
+          "CONCENTRATION": 0.02,
+          "CURRENCY": 0.98,
+          "LIQUIDITY": 0,
+          "CORRELATION": 0,
+          "NONE": 0,
+          "DRIFT": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.51,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.42,
+          "5": 0.38,
+          "6": 0.12
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "HEDGE",
+        "confidence": 0.92,
+        "probabilities": {
+          "REBALANCE": 0.02,
+          "HEDGE": 0.94,
+          "HOLD": 0,
+          "TRIM": 0.04
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.7
+      }
+    },
+    "PF-09": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.97,
+        "probabilities": {
+          "NONE": 0,
+          "CONCENTRATION": 0.98,
+          "CURRENCY": 0,
+          "CORRELATION": 0,
+          "LIQUIDITY": 0.02,
+          "DRIFT": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.52,
+        "confidence": 0.61,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.39,
+          "5": 0.43,
+          "6": 0.1
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.43,
+        "probabilities": {
+          "TRIM": 0.57,
+          "HOLD": 0.18,
+          "HEDGE": 0.19,
+          "REBALANCE": 0.06
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.4
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.83
+      }
+    },
+    "PF-10": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CORRELATION",
+        "confidence": 0.97,
+        "probabilities": {
+          "CORRELATION": 0.98,
+          "CURRENCY": 0,
+          "DRIFT": 0,
+          "CONCENTRATION": 0.01,
+          "LIQUIDITY": 0.01,
+          "NONE": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.32,
+        "confidence": 0.67,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.1,
+          "4": 0.49,
+          "5": 0.37,
+          "6": 0.03
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.7,
+        "probabilities": {
+          "HOLD": 0,
+          "REBALANCE": 0.22,
+          "TRIM": 0.78,
+          "HEDGE": 0
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "PF-11": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CORRELATION",
+        "confidence": 0.91,
+        "probabilities": {
+          "NONE": 0,
+          "CONCENTRATION": 0.07,
+          "CURRENCY": 0,
+          "LIQUIDITY": 0.01,
+          "DRIFT": 0,
+          "CORRELATION": 0.92
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.35,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.08,
+          "4": 0.5,
+          "5": 0.38,
+          "6": 0.04
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.71,
+        "probabilities": {
+          "TRIM": 0.78,
+          "REBALANCE": 0.22,
+          "HEDGE": 0,
+          "HOLD": 0
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.32
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "PF-12": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.43,
+        "probabilities": {
+          "CONCENTRATION": 0.53,
+          "LIQUIDITY": 0.14,
+          "NONE": 0.1,
+          "CORRELATION": 0.09,
+          "CURRENCY": 0,
+          "DRIFT": 0.14
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 3.05,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.09,
+          "2": 0.12,
+          "3": 0.42,
+          "4": 0.28,
+          "5": 0.06,
+          "6": 0.01
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.29,
+        "probabilities": {
+          "HOLD": 0.09,
+          "HEDGE": 0.01,
+          "REBALANCE": 0.44,
+          "TRIM": 0.45999999999999996
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.59
+      }
+    },
+    "PF-13": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 0.97,
+        "probabilities": {
+          "CORRELATION": 0,
+          "DRIFT": 0,
+          "CURRENCY": 0.98,
+          "LIQUIDITY": 0,
+          "CONCENTRATION": 0.02,
+          "NONE": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.63,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.37,
+          "5": 0.43,
+          "6": 0.14
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "HEDGE",
+        "confidence": 0.89,
+        "probabilities": {
+          "TRIM": 0.04,
+          "REBALANCE": 0.04,
+          "HEDGE": 0.92,
+          "HOLD": 0
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.71
+      }
+    },
+    "PF-14": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.92,
+        "probabilities": {
+          "DRIFT": 0.01,
+          "LIQUIDITY": 0.05,
+          "CURRENCY": 0,
+          "NONE": 0,
+          "CONCENTRATION": 0.9299999999999999,
+          "CORRELATION": 0.01
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.09,
+        "confidence": 0.61,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.17,
+          "4": 0.45,
+          "5": 0.27,
+          "6": 0.05
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.57,
+        "probabilities": {
+          "REBALANCE": 0.05,
+          "TRIM": 0.68,
+          "HOLD": 0.18,
+          "HEDGE": 0.09
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.45
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.8
+      }
+    },
+    "PF-15": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "DRIFT",
+        "confidence": 0.97,
+        "probabilities": {
+          "CONCENTRATION": 0.01,
+          "CURRENCY": 0,
+          "DRIFT": 0.98,
+          "CORRELATION": 0,
+          "LIQUIDITY": 0.01,
+          "NONE": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 5.46,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.46,
+          "6": 0.5
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "REBALANCE",
+        "confidence": 0.93,
+        "probabilities": {
+          "TRIM": 0.05,
+          "HOLD": 0,
+          "HEDGE": 0,
+          "REBALANCE": 0.95
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.61
+      }
+    },
+    "PF-16": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "LIQUIDITY",
+        "confidence": 0.21,
+        "probabilities": {
+          "DRIFT": 0.06,
+          "CORRELATION": 0.15,
+          "LIQUIDITY": 0.34,
+          "CONCENTRATION": 0.32,
+          "CURRENCY": 0,
+          "NONE": 0.13
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 3.99,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.18,
+          "4": 0.56,
+          "5": 0.21,
+          "6": 0.02
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.92,
+        "probabilities": {
+          "HOLD": 0.01,
+          "HEDGE": 0,
+          "REBALANCE": 0.04,
+          "TRIM": 0.95
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "PF-17": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "DRIFT",
+        "confidence": 0.98,
+        "probabilities": {
+          "CORRELATION": 0,
+          "NONE": 0,
+          "DRIFT": 0.98,
+          "LIQUIDITY": 0.01,
+          "CONCENTRATION": 0.01,
+          "CURRENCY": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 5.51,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.03,
+          "5": 0.42,
+          "6": 0.55
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "REBALANCE",
+        "confidence": 0.96,
+        "probabilities": {
+          "HOLD": 0,
+          "REBALANCE": 0.97,
+          "HEDGE": 0,
+          "TRIM": 0.03
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.68
+      }
+    },
+    "PF-18": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CORRELATION",
+        "confidence": 0.2,
+        "probabilities": {
+          "CONCENTRATION": 0.21,
+          "CURRENCY": 0,
+          "LIQUIDITY": 0.27,
+          "CORRELATION": 0.33,
+          "DRIFT": 0.1,
+          "NONE": 0.09
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.12,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.15,
+          "4": 0.52,
+          "5": 0.27,
+          "6": 0.03
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.9,
+        "probabilities": {
+          "TRIM": 0.92,
+          "HEDGE": 0.01,
+          "HOLD": 0.02,
+          "REBALANCE": 0.05
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.19
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "PF-19": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "DRIFT",
+        "confidence": 0.27,
+        "probabilities": {
+          "DRIFT": 0.39,
+          "LIQUIDITY": 0.14,
+          "CONCENTRATION": 0.31,
+          "CURRENCY": 0,
+          "CORRELATION": 0.1,
+          "NONE": 0.06
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 3.3,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.06,
+          "2": 0.12,
+          "3": 0.36,
+          "4": 0.37,
+          "5": 0.07,
+          "6": 0.01
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.36,
+        "probabilities": {
+          "REBALANCE": 0.44,
+          "HOLD": 0.03,
+          "HEDGE": 0.01,
+          "TRIM": 0.52
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.27
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.59
+      }
+    },
+    "PF-20": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CORRELATION",
+        "confidence": 0.29,
+        "probabilities": {
+          "CONCENTRATION": 0.27,
+          "DRIFT": 0.04,
+          "LIQUIDITY": 0.11,
+          "CORRELATION": 0.4,
+          "NONE": 0.17,
+          "CURRENCY": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 3.33,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.04,
+          "2": 0.09,
+          "3": 0.38,
+          "4": 0.39999999999999997,
+          "5": 0.06,
+          "6": 0.01
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.74,
+        "probabilities": {
+          "REBALANCE": 0.07,
+          "TRIM": 0.81,
+          "HOLD": 0.11,
+          "HEDGE": 0.01
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.32
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.55
+      }
+    },
+    "PF-21": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 1,
+        "probabilities": {
+          "CORRELATION": 0,
+          "CURRENCY": 1,
+          "NONE": 0,
+          "CONCENTRATION": 0,
+          "LIQUIDITY": 0,
+          "DRIFT": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.78,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.04,
+          "4": 0.3,
+          "5": 0.48,
+          "6": 0.18
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "HEDGE",
+        "confidence": 0.98,
+        "probabilities": {
+          "HEDGE": 0.98,
+          "HOLD": 0,
+          "REBALANCE": 0.01,
+          "TRIM": 0.01
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.55
+      }
+    },
+    "PF-22": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CONCENTRATION",
+        "confidence": 0.97,
+        "probabilities": {
+          "NONE": 0,
+          "CONCENTRATION": 0.98,
+          "CURRENCY": 0,
+          "CORRELATION": 0,
+          "LIQUIDITY": 0.02,
+          "DRIFT": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.89,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.24,
+          "5": 0.56,
+          "6": 0.18
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.82,
+        "probabilities": {
+          "TRIM": 0.86,
+          "HOLD": 0.03,
+          "REBALANCE": 0.02,
+          "HEDGE": 0.09
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "PF-23": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "DRIFT",
+        "confidence": 0.98,
+        "probabilities": {
+          "CONCENTRATION": 0.01,
+          "CURRENCY": 0,
+          "LIQUIDITY": 0,
+          "DRIFT": 0.99,
+          "CORRELATION": 0,
+          "NONE": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 5.38,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.52,
+          "6": 0.43
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "REBALANCE",
+        "confidence": 0.97,
+        "probabilities": {
+          "TRIM": 0.02,
+          "HEDGE": 0,
+          "HOLD": 0,
+          "REBALANCE": 0.98
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.08
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.67
+      }
+    },
+    "PF-24": {
+      "main_risk": {
+        "type": "choice",
+        "choice": "CORRELATION",
+        "confidence": 0.55,
+        "probabilities": {
+          "CURRENCY": 0,
+          "LIQUIDITY": 0.02,
+          "CORRELATION": 0.63,
+          "NONE": 0,
+          "CONCENTRATION": 0.35,
+          "DRIFT": 0
+        }
+      },
+      "severity": {
+        "type": "score",
+        "score": 4.92,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.19,
+          "5": 0.65,
+          "6": 0.15
+        }
+      },
+      "action": {
+        "type": "choice",
+        "choice": "TRIM",
+        "confidence": 0.81,
+        "probabilities": {
+          "REBALANCE": 0.14,
+          "HOLD": 0,
+          "TRIM": 0.86,
+          "HEDGE": 0
+        }
+      },
+      "fits_objective": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "diversified_in_name_only": {
+        "type": "noul",
+        "noul": 0.92
+      }
+    }
+  }
 }
