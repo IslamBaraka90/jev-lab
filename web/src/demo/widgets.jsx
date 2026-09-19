@@ -150,6 +150,9 @@ export function CoverageCurve({ curve }) {
   const x = (point) => 40 + (point.reviewed / maxReviewed) * (width - 60);
   const y = (point) => height - 30 - (point.caught / Math.max(curve.of, 1)) * (height - 50);
   const path = curve.points.map((point, index) => `${index ? 'L' : 'M'}${x(point).toFixed(1)},${y(point).toFixed(1)}`).join('');
+  // A demo may also carry a rate per point, such as the share of automatic postings that were right.
+  const rates = curve.points.filter((point) => Number.isFinite(point.rate));
+  const ratePath = rates.map((point, index) => `${index ? 'L' : 'M'}${x(point).toFixed(1)},${(height - 30 - point.rate * (height - 50)).toFixed(1)}`).join('');
 
   return (
     <div className="stack" style={{ gap: 8 }}>
@@ -158,6 +161,7 @@ export function CoverageCurve({ curve }) {
         <line className="axis-line" x1={40} y1={height - 30} x2={width - 16} y2={height - 30} />
         <line className="axis-line" x1={40} y1={16} x2={40} y2={height - 30} />
         <path className="curve-line" d={path} />
+        {ratePath && <path className="curve-rate" d={ratePath} />}
         {curve.points.map((point) => (
           <circle key={point.threshold} className="curve-dot" cx={x(point)} cy={y(point)} r={3.5}>
             <title>{`${Math.round(point.threshold * 100)}%: ${point.reviewed} lines, ${point.caught} of ${curve.of} problems`}</title>
@@ -168,6 +172,7 @@ export function CoverageCurve({ curve }) {
         </text>
         <text className="axis-text" x={40} y={12}>
           {curve.yLabel} (of {curve.of})
+          {rates.length > 0 ? ` · dashed: ${curve.rateLabel ?? 'rate'}` : ''}
         </text>
       </svg>
       <details>
@@ -179,6 +184,11 @@ export function CoverageCurve({ curve }) {
                 <th scope="col">Threshold</th>
                 <th scope="col" className="num">Lines opened</th>
                 <th scope="col" className="num">Problems caught</th>
+                {rates.length > 0 && (
+                  <th scope="col" className="num">
+                    {curve.rateLabel ?? 'Rate'}
+                  </th>
+                )}
               </tr>
             </thead>
             <tbody>
@@ -189,6 +199,7 @@ export function CoverageCurve({ curve }) {
                   <td className="num">
                     {point.caught} of {curve.of}
                   </td>
+                  {rates.length > 0 && <td className="num">{Number.isFinite(point.rate) ? `${Math.round(point.rate * 100)}%` : '–'}</td>}
                 </tr>
               ))}
             </tbody>

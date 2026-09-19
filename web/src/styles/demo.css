@@ -418,3 +418,12 @@
   color: var(--muted);
   max-width: 88ch;
 }
+
+/* 103 expense posting: the coverage curve's optional second series. */
+
+.coverage-curve .curve-rate {
+  fill: none;
+  stroke: var(--control);
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+}
