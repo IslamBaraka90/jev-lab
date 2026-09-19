@@ -14,8 +14,7 @@ const WAYS_IN = [
 export function HomePage() {
   const counts = catalogCounts();
   const planned = domains().reduce((total, domain) => total + domain.planned, 0);
-  // Everything, while the catalog is small enough to read in one go; the first six once it is not.
-  const featured = cards().slice(0, 6);
+  const allCards = cards();
 
   return (
     <div className="stack home">
@@ -67,11 +66,11 @@ export function HomePage() {
         </div>
       </section>
 
-      {featured.length > 0 && (
-        <section className="stack" aria-labelledby="featured-title">
-          <h2 id="featured-title">Start here</h2>
+      {allCards.length > 0 && (
+        <section className="stack" aria-labelledby="all-demos-title">
+          <h2 id="all-demos-title">All demos</h2>
           <ul className="demo-grid">
-            {featured.map((card) => (
+            {allCards.map((card) => (
               <DemoCard key={card.id} card={card} />
             ))}
           </ul>
@@ -88,7 +87,7 @@ export function HomePage() {
                 <span className="meta">{domain.blurb}</span>
               </Link>
               <span className="meta num">
-                {cards().filter((card) => card.domain === domain.id).length} of {domain.planned}
+                {allCards.filter((card) => card.domain === domain.id).length} of {domain.planned}
               </span>
             </li>
           ))}
