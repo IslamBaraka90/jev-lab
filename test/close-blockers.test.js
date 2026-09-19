@@ -98,6 +98,24 @@ test('flagging every unusual movement fails on the supported accounts', async ()
   assert.notEqual(kpi(report, 'Blockers found'), '13 of 13');
 });
 
+test('an account held back but called NONE is not a blocker the model found', async () => {
+  // What the recorded run actually did on three of the supported accounts: name the blocker type
+  // right, and still say the close cannot go ahead. That is not a catch, and it must not count as one.
+  const { results } = await runDemo(demo, {
+    dataset,
+    ask: ({ item: entry }) => {
+      const label = planted.get(entry.id);
+      const blocks = label.kind !== 'clean';
+      return { answers: answerFor(label.blocker, { blocks, severity: blocks ? 4 : 0.5, owner: label.expectedOwner }) };
+    },
+  });
+  const report = demo.report(results, { ...context, labels });
+
+  assert.equal(kpi(report, 'Blockers found'), '13 of 13', 'the six supported accounts are not blockers, whatever was said about them');
+  assert.equal(kpi(report, 'Supported accounts left alone'), '0 of 6');
+  assert.equal(report.checks.find((check) => check.id === 'decoys').count, 6);
+});
+
 test('the severity bar trades workload against how much of the queue is real', async () => {
   const { results } = await runDemo(demo, {
     dataset,

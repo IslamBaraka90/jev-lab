@@ -68,5 +68,32 @@ even when the balance belongs to receivables.
 
 ## What the recorded run found
 
-Not recorded yet. The estimate for the run is about 60 requests, 42K input and 15K output tokens,
-roughly two minutes.
+Sixty answers on 19 September 2026, model `jev-1.13.0`, 62,282 input and 10,158 output tokens, about
+two minutes.
+
+- **Every account was classified correctly.** All sixty blocker types agree with the label, so the
+  confusion matrix is the diagonal and nothing else: the four unreconciled accounts, three missing
+  accruals, two intercompany differences, two unrevalued balances and two unsupported journals, and
+  `NONE` on all forty-seven of the rest, including every one of the six supported accounts.
+- **All thirteen blockers were held back**, including the four that move by a perfectly ordinary
+  amount. Those four are only findable in the preparer's note, which is the result this dataset was
+  built to test.
+- **No ordinary account was flagged.** Zero false blocks across the forty-one quiet accounts.
+- **Three of the six supported accounts were held back anyway** — the software prepayment that
+  finished releasing, the corporation tax instalment paid on the 14th, and the released restructuring
+  provision. It named all three `NONE`, and still said the close could not go ahead. That gap between
+  "what is this" and "does it stop me" is the most interesting thing in the run, and it is the whole
+  cost of the file: three partners get asked to re-explain something that is already filed.
+- **Owner agreement was 9 of 13**, and all four disagreements are the deliberate override cases, where
+  the blocker decides the owner rather than the account does. It sent the unrevalued accrued income to
+  receivables rather than treasury, the unsupported VAT journal to tax rather than financial control,
+  and both unbilled-work accruals to financial control rather than payables. Two of those four are
+  genuinely arguable — an audit fee accrual is as much the controller's as payables' — so this number
+  measures agreement with a convention as much as competence, and the four are listed here rather than
+  disappearing into a percentage.
+- **Severity separated the groups in the right order**: 4.65 of 6 on the planted blockers, 3.50 on the
+  supported accounts, 1.38 on the ordinary ones. The gap between the first two is thin, and it is the
+  same weakness as the three false holds. Raising the bar to 5 leaves a queue of four accounts, all of
+  them real.
+- **Close readiness came out at 73.3% with no real blocker hidden inside it.** Sixteen accounts were
+  held; thirteen had to be.

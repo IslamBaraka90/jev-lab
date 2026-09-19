@@ -110,7 +110,7 @@ function report(results, context = {}) {
   const graded = results.filter((result) => byItem.has(result.item.id));
   const planted = labels.filter((label) => label.kind === 'blocker');
   const decoys = labels.filter((label) => label.kind === 'decoy');
-  const caught = graded.filter((result) => named(result, byItem.get(result.item.id)) && result.evaluation.blocks);
+  const caught = graded.filter((result) => byItem.get(result.item.id).kind === 'blocker' && named(result, byItem.get(result.item.id)) && result.evaluation.blocks);
   const cleared = results.filter((result) => !result.evaluation.blocks);
   const missed = cleared.filter((result) => byItem.get(result.item.id)?.kind === 'blocker');
 
@@ -254,7 +254,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.account} · ${item.name}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
