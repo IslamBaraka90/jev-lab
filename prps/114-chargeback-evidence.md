@@ -17,7 +17,7 @@ Judge whether an evidence packet can win the case, and name the one document tha
 
 - `demos/chargeback-evidence/data.json` — 120 packets across reason codes: fraud, product not received, product unacceptable, subscription cancelled, duplicate. Each lists which documents exist: AVS and CVV results, delivery confirmation with signature, tracking, terms acceptance timestamp, customer communications, refund history, device and IP match.
 - Planted: 22 strong packets, 31 one-document-away packets, 19 hopeless ones, and the rest mixed. The missing document is recorded in the labels.
-- Labels: `{ packetId, outcome: WIN|LOSS, missingDocument }`.
+- Labels: `{ packetId, outcome, missingDocument, nextStep, deadlineRisk, kind, flipsWithDocument }`.
 
 ## State
 
@@ -44,9 +44,9 @@ Standard demo folder plus `scripts/generate/chargeback-evidence.js`.
 
 Template list, plus:
 
-- [ ] The score is calibrated against labelled outcomes and the reliability curve is shown.
-- [ ] `missing_document` accuracy is reported separately from the win-likelihood score.
-- [ ] Deadline risk is derived from the dates in the state, not from a label.
+- [x] The score is calibrated against labelled outcomes and the reliability curve is shown.
+- [x] `missing_document` accuracy is reported separately from the win-likelihood score.
+- [x] Deadline risk is derived from the dates in the state, not from a label.
 
 ## Video beats
 
@@ -57,3 +57,7 @@ Template list, plus:
 ## Notes
 
 Network rules differ by scheme; the page says the requirements here are illustrative and lists the ones used.
+
+Implemented and recorded on 2026-09-19 with `jev-1.13.0`: 120 of 120 packet responses cached,
+82.5% outcome accuracy and 81.7% missing-document accuracy. The full immutable result audit is in
+`demos/chargeback-evidence/notes.md`.

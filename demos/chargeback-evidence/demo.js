@@ -180,7 +180,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'table',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${readable(item.dispute.reasonCode)} · ${money(item.dispute.amount, item.dispute.currency)}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

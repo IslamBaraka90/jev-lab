@@ -27,5 +27,17 @@ not presented as guaranteed recovery.
 
 ## Recorded run
 
-Pending. This section will be replaced after all 120 Jev responses are cached.
+All 120 responses were recorded on 2026-09-19 with `jev-1.13.0` and cached in `fixtures.json`. The
+run used 185,757 input tokens and 19,404 output tokens. Every packet ID has all four answers; there
+are no missing, extra or malformed records.
 
+The model classified the current win/loss outcome correctly for 99 of 120 packets (82.5%), named the
+decisive missing document for 98 of 120 (81.7%), and chose the intended next step for 93 of 120
+(77.5%). Deadline risk matched 117 of 120 labels (97.5%). It chose `GATHER_MORE` for $64,329.73 of
+the $99,273.84 disputed amount; this is work-in-progress value, not guaranteed recovery.
+
+All 31 one-document-away packets received the correct outcome, document and next step. The main
+weakness was stopping: all 19 hopeless packets were sent to `GATHER_MORE` rather than
+`ACCEPT_LOSS`. The model also scored 21 labelled wins below the 3.5/6 win threshold, and ten of the
+22 missing-document errors were complete packets for which it requested a communications log.
+Those answers remain unchanged in the fixture and appear in the reliability curve and checks.
