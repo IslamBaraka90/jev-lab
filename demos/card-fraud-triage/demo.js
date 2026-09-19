@@ -246,7 +246,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${money(item.amount)} · ${item.merchantCategory.toLowerCase()} · rule #${item.ruleRank}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
