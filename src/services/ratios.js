@@ -68,3 +68,28 @@ export function dividendRatios(item) {
   };
 }
 // #endregion
+
+// #region demo:valuation-data
+export function valuationMultiples(peer) {
+  const years = peer.annualStatements ?? [];
+  const first = years[0];
+  const latest = years.at(-1);
+  if (!latest || !finite(peer.price) || !finite(peer.sharesOutstanding) || peer.sharesOutstanding <= 0) return { complete: false };
+  const marketCap = peer.price * peer.sharesOutstanding;
+  const freeCashFlow = finite(latest.operatingCashFlow) && finite(latest.capitalExpenditure) ? latest.operatingCashFlow + latest.capitalExpenditure : null;
+  const enterpriseValueProxy = finite(latest.totalDebt) && finite(latest.cash) ? marketCap + latest.totalDebt - latest.cash : null;
+  const priceToEarnings = finite(latest.netIncome) && latest.netIncome > 0 ? marketCap / latest.netIncome : null;
+  const priceToBook = finite(latest.equity) && latest.equity > 0 ? marketCap / latest.equity : null;
+  const priceToFreeCashFlow = finite(freeCashFlow) && freeCashFlow > 0 ? marketCap / freeCashFlow : null;
+  const evToFreeCashFlow = finite(enterpriseValueProxy) && finite(freeCashFlow) && freeCashFlow > 0 ? enterpriseValueProxy / freeCashFlow : null;
+  const operatingMargin = ratio(latest.operatingIncome, latest.revenue);
+  const revenueGrowth = first ? change(first.revenue, latest.revenue) : null;
+  const multiples = { priceToEarnings, priceToBook, priceToFreeCashFlow };
+  return {
+    complete: Object.values(multiples).some(finite), marketCap: round(marketCap, 0), enterpriseValueProxy: round(enterpriseValueProxy, 0),
+    priceToEarnings: round(priceToEarnings), priceToBook: round(priceToBook), priceToFreeCashFlow: round(priceToFreeCashFlow), evToFreeCashFlow: round(evToFreeCashFlow),
+    operatingMarginPercent: finite(operatingMargin) ? round(operatingMargin * 100, 1) : null,
+    revenueGrowthPercent: finite(revenueGrowth) ? round(revenueGrowth * 100, 1) : null,
+  };
+}
+// #endregion

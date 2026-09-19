@@ -207,6 +207,71 @@
       "symbol": "SPY",
       "rows": 0,
       "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/GOOGL.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "GOOGL",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/GOOGL.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "GOOGL",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/WFC.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "WFC",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/WFC.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "WFC",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/C.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "C",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/C.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "C",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/COP.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "COP",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/COP.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "COP",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/SLB.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "SLB",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/SLB.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "SLB",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
     }
   },
   "note": "Fetched once for the demos in this repository. Prices and statements are used to make the examples real; this is not a redistributed dataset."

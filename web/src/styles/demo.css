@@ -791,3 +791,7 @@
 .ratio-cross-check table { min-width: 1120px; }
 .ratio-cross-check tr.ratio-disagree { background: color-mix(in srgb, var(--warningBg) 58%, transparent); }
 .dividend-safety-chart table { min-width: 980px; }
+.peer-grid { min-width: 1280px; }
+.peer-valuation-report table { min-width: 900px; }
+.peer-valuation-report details { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; }
+.peer-valuation-report summary { cursor: pointer; font-weight: 700; }

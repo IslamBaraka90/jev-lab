@@ -9,6 +9,7 @@ import { ComparisonView } from './ComparisonView.jsx';
 import { CalendarView } from './CalendarView.jsx';
 import { SessionCurveView } from './SessionCurveView.jsx';
 import { StatementsView } from './StatementsView.jsx';
+import { PeerGridView } from './PeerGridView.jsx';
 
 // How an item is drawn on the stage. A demo names one in its definition; anything unknown falls back
 // to the plain field table, so a new demo always renders something.
@@ -24,6 +25,7 @@ export const VIEWS = {
   calendar: CalendarView,
   sessionCurve: SessionCurveView,
   statements: StatementsView,
+  peerGrid: PeerGridView,
   document: DocumentView,
 };
 

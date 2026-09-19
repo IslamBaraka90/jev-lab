@@ -51,6 +51,7 @@ export const GENERATORS = {
   'accounting-flags': () => import('./accounting-flags.js'),
   'fundamental-read': () => import('./fundamental-read.js'),
   'dividend-safety': () => import('./dividend-safety.js'),
+  'peer-valuation': () => import('./peer-valuation.js'),
   'news-impact': () => import('./news-impact.js'),
   'filings-read': () => import('./filings-read.js'),
   'rumour-grading': () => import('./rumour-grading.js'),

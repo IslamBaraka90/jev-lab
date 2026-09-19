@@ -1,0 +1,53 @@
+{
+  "sets": [
+    {
+      "id": "PV-TECH",
+      "name": "Large-cap technology",
+      "members": [
+        "NVDA",
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "loose": false,
+      "note": "Four operating technology companies with different growth and margin profiles."
+    },
+    {
+      "id": "PV-BANKS",
+      "name": "Large US banks",
+      "members": [
+        "JPM",
+        "BAC",
+        "WFC",
+        "C"
+      ],
+      "loose": false,
+      "note": "Four diversified US banks; cash-flow multiples may be unavailable because bank statements do not map cleanly to industrial free cash flow."
+    },
+    {
+      "id": "PV-ENERGY",
+      "name": "Energy operators",
+      "members": [
+        "XOM",
+        "CVX",
+        "COP",
+        "SLB"
+      ],
+      "loose": true,
+      "note": "Deliberately loose: integrated producers, an upstream producer and an oilfield-services company test whether the model rejects a mechanical comparison."
+    },
+    {
+      "id": "PV-STAPLES",
+      "name": "Defensive staples",
+      "members": [
+        "KO",
+        "PG",
+        "JNJ",
+        "WMT",
+        "PEP"
+      ],
+      "loose": false,
+      "note": "Five defensive consumer and health franchises with different margin structures."
+    }
+  ]
+}
