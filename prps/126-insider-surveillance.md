@@ -46,9 +46,9 @@ Standard demo folder plus `scripts/generate/insider-surveillance.js`; reuses the
 
 Template list, plus:
 
-- [ ] No post-trade bars appear in any state; a contract test asserts it.
-- [ ] Employees, roles and the event calendar are fictional, and the page says which part is real (prices) and which is invented.
-- [ ] The chart marks the trade date, the announcement date and the outcome window distinctly.
+- [x] No post-trade bars appear in any state; a contract test asserts it.
+- [x] Employees, roles and the event calendar are fictional, and the page says which part is real (prices) and which is invented.
+- [x] The chart marks the trade date, the announcement date and the outcome window distinctly.
 
 ## Video beats
 
@@ -59,3 +59,10 @@ Template list, plus:
 ## Notes
 
 Real prices with invented people is the pattern the whole trades block uses. Say it once here, clearly, and the later demos can move faster.
+
+Implemented and recorded on 2026-09-19. Jev `jev-1.13.0` received every complete 60-session
+pre-trade window plus the fictional trade, history, access, colleague, calendar and blackout context:
+180/180 fixture records, five answers each, no missing or malformed entries. The audited replay
+opened 9/9 planted cases, opened 0/171 benign trades, cleared all 15 lookalikes, named the planted
+pattern on 164/180 trades, and made 179/180 blackout calls correctly. See the demo notes for the
+immutable disagreements.

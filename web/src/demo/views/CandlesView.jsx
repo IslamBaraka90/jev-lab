@@ -10,7 +10,7 @@ export function CandlesView({ item, result }) {
   const bars = [...before, ...after];
   const width = 780;
   const height = 285;
-  const pad = { top: 24, right: 54, bottom: 38, left: 18 };
+  const pad = { top: 42, right: 54, bottom: 38, left: 18 };
   const low = Math.min(...bars.map((bar) => bar.low));
   const high = Math.max(...bars.map((bar) => bar.high));
   const range = Math.max(high - low, 0.01);
@@ -57,8 +57,8 @@ export function CandlesView({ item, result }) {
           })}
 
           <line className="trade-marker" x1={x(tradeIndex)} x2={x(tradeIndex)} y1={pad.top} y2={height - pad.bottom} />
-          <text className="marker-label trade-label" x={x(tradeIndex) - 4} y={14} textAnchor="end">trade</text>
-          {eventIndex >= 0 && <><line className="event-marker" x1={x(eventIndex)} x2={x(eventIndex)} y1={pad.top} y2={height - pad.bottom} /><text className="marker-label event-label" x={x(eventIndex) + 4} y={14}>fictional event</text></>}
+          <text className="marker-label trade-label" x={x(tradeIndex) - 4} y={16} textAnchor="end">trade</text>
+          {eventIndex >= 0 && <><line className="event-marker" x1={x(eventIndex)} x2={x(eventIndex)} y1={pad.top} y2={height - pad.bottom} /><text className="marker-label event-label" x={x(eventIndex) - 4} y={34} textAnchor="end">fictional event</text></>}
           <text className="candle-axis" x={pad.left} y={height - 12}>{bars[0]?.date}</text>
           <text className="candle-axis" x={width - pad.right} y={height - 12} textAnchor="end">{bars.at(-1)?.date}</text>
           {!result && <text className="outcome-hidden" x={width - pad.right - 8} y={height - pad.bottom - 8} textAnchor="end">Outcome hidden until scored</text>}
@@ -66,9 +66,9 @@ export function CandlesView({ item, result }) {
       </div>
 
       <div className="candle-legend" aria-label="Chart legend">
-        <span><i className="legend-line trade" />Trade date</span>
-        <span><i className="legend-line event" />Fictional announcement</span>
-        <span><i className="legend-box outcome" />Outcome window {result ? 'revealed' : 'hidden'}</span>
+        <span><i className="legend-line trade-key" />Trade date</span>
+        <span><i className="legend-line event-key" />Fictional announcement</span>
+        <span><i className="legend-box outcome-key" />Outcome window {result ? 'revealed' : 'hidden'}</span>
       </div>
 
       <p className="meta">Cached-real Yahoo Finance daily prices. Employee, trade, access and event details are fictional.</p>

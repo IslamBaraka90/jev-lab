@@ -80,6 +80,7 @@ function report(results, context = {}) {
   const falseCases = benign.filter((result) => result.evaluation.caseOpened);
   const dispositionRight = graded.filter((result) => result.evaluation.disposition === intended.get(result.item.id).expectedDisposition);
   const blackoutRight = graded.filter((result) => result.evaluation.blackoutBreach === intended.get(result.item.id).blackoutBreach);
+  const patternRight = graded.filter((result) => result.evaluation.pattern === intended.get(result.item.id).pattern);
 
   return {
     note: 'Prices are cached-real Yahoo Finance bars. Employees, trades, access and calendar events are fictional. Outcome bars were never in Jev’s state.',
@@ -88,6 +89,7 @@ function report(results, context = {}) {
       { label: 'Suspicious trades opened', value: `${caught.length} of ${suspicious.length}`, context: share(caught.length, suspicious.length), tone: caught.length === suspicious.length ? 'good' : 'warn' },
       { label: 'Opened-case precision', value: share(caught.length, opened.length), context: `${opened.length} cases opened · ${falseCases.length} innocent trades included` },
       { label: 'Disposition accuracy', value: share(dispositionRight.length, graded.length), context: `${dispositionRight.length} of ${graded.length}` },
+      { label: 'Pattern accuracy', value: share(patternRight.length, graded.length), context: `${patternRight.length} of ${graded.length}` },
       { label: 'Blackout calls', value: share(blackoutRight.length, graded.length), context: `${blackoutRight.length} of ${graded.length}` },
     ],
     distribution: PATTERNS.map((pattern) => ({ label: pattern, count: graded.filter((result) => result.evaluation.pattern === pattern).length, tone: pattern === 'ROUTINE' ? 'good' : 'warn' })),
@@ -114,8 +116,8 @@ function findings(suspicious, falseCases, intended) {
 function checks(graded, intended) {
   const patternRows = PATTERNS.filter((pattern) => pattern !== 'ROUTINE').map((pattern) => {
     const group = graded.filter((result) => intended.get(result.item.id).pattern === pattern);
-    const missed = group.filter((result) => !result.evaluation.caseOpened);
-    return { id: pattern.toLowerCase(), label: `${readable(pattern)} trades not opened`, count: missed.length, of: group.length, items: missed.map((result) => result.item.id) };
+    const mishandled = group.filter((result) => !result.evaluation.caseOpened || result.evaluation.pattern !== pattern);
+    return { id: pattern.toLowerCase(), label: `${readable(pattern)} cases missed or misnamed`, count: mishandled.length, of: group.length, items: mishandled.map((result) => result.item.id) };
   });
   const lookalikeRows = ['SCHEDULED_PURCHASE', 'SECTOR_WIDE_MOVE'].map((lookalike) => {
     const group = graded.filter((result) => intended.get(result.item.id).lookalike === lookalike);
@@ -163,7 +165,6 @@ export default {
   dataClass: 'mixed',
   readMinutes: 6,
   view: 'candles',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.employee.id} · ${item.trade.side} ${item.trade.symbol}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
