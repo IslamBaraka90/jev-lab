@@ -85,7 +85,7 @@ function report(results, context = {}) {
 export default {
   id: 'peer-valuation', title: 'Peer valuation', domain: 'screening',
   value: 'Choose what is actually cheap inside a peer group and show when a premium or discount has fundamental support.',
-  tags: ['screening', 'valuation', 'peers', 'fundamentals'], dataClass: 'cached-real', readMinutes: 5, view: 'peerGrid', status: 'pending-recording',
+  tags: ['screening', 'valuation', 'peers', 'fundamentals'], dataClass: 'cached-real', readMinutes: 5, view: 'peerGrid',
   itemLabel: (item) => `${item.name} · ${item.members.join(' · ')}`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), buildState, questions, evaluate, report,
   explain: { data: 'src/services/ratios.js#demo:valuation-data', state: 'demos/peer-valuation/demo.js#demo:state', questions: 'demos/peer-valuation/demo.js#demo:questions', evaluate: 'demos/peer-valuation/demo.js#demo:evaluate' },

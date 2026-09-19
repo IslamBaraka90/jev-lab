@@ -1,4 +1,248 @@
 {
   "demo": "peer-valuation",
-  "answers": {}
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "PV-TECH": {
+      "best_value": {
+        "type": "choice",
+        "choice": "GOOGL",
+        "confidence": 0.34,
+        "probabilities": {
+          "JNJ": 0,
+          "NVDA": 0.26,
+          "GOOGL": 0.39,
+          "MSFT": 0.18000000000000002,
+          "PG": 0,
+          "CVX": 0.01,
+          "JPM": 0,
+          "C": 0,
+          "AAPL": 0.16,
+          "SLB": 0,
+          "PEP": 0,
+          "BAC": 0,
+          "WMT": 0,
+          "KO": 0,
+          "COP": 0,
+          "XOM": 0,
+          "WFC": 0
+        }
+      },
+      "premium_justified": {
+        "type": "noul",
+        "noul": 0.71
+      },
+      "discount_reason": {
+        "type": "choice",
+        "choice": "GROWTH",
+        "confidence": 0.35,
+        "probabilities": {
+          "BALANCE_SHEET": 0.04,
+          "NO_DISCOUNT": 0.28,
+          "GOVERNANCE": 0,
+          "GROWTH": 0.49,
+          "CYCLICAL_TROUGH": 0.19
+        }
+      },
+      "confidence_in_ranking": {
+        "type": "score",
+        "score": 2.7,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.12,
+          "2": 0.3,
+          "3": 0.33,
+          "4": 0.18,
+          "5": 0.04,
+          "6": 0.01
+        }
+      },
+      "comparable_set": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "PV-BANKS": {
+      "best_value": {
+        "type": "choice",
+        "choice": "BAC",
+        "confidence": 0.45,
+        "probabilities": {
+          "XOM": 0,
+          "MSFT": 0,
+          "CVX": 0,
+          "C": 0.05,
+          "JPM": 0.28,
+          "GOOGL": 0,
+          "KO": 0,
+          "WMT": 0,
+          "NVDA": 0,
+          "COP": 0,
+          "WFC": 0.18,
+          "PG": 0,
+          "JNJ": 0,
+          "PEP": 0,
+          "AAPL": 0,
+          "BAC": 0.49,
+          "SLB": 0
+        }
+      },
+      "premium_justified": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "discount_reason": {
+        "type": "choice",
+        "choice": "GROWTH",
+        "confidence": 0.12,
+        "probabilities": {
+          "GROWTH": 0.3,
+          "GOVERNANCE": 0.03,
+          "NO_DISCOUNT": 0.22,
+          "BALANCE_SHEET": 0.26,
+          "CYCLICAL_TROUGH": 0.19
+        }
+      },
+      "confidence_in_ranking": {
+        "type": "score",
+        "score": 2.5,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.18,
+          "2": 0.31,
+          "3": 0.29,
+          "4": 0.16,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "comparable_set": {
+        "type": "noul",
+        "noul": 0.7
+      }
+    },
+    "PV-ENERGY": {
+      "best_value": {
+        "type": "choice",
+        "choice": "XOM",
+        "confidence": 0.59,
+        "probabilities": {
+          "KO": 0,
+          "PEP": 0,
+          "MSFT": 0,
+          "GOOGL": 0,
+          "CVX": 0.03,
+          "SLB": 0.06,
+          "WMT": 0,
+          "C": 0,
+          "XOM": 0.62,
+          "NVDA": 0,
+          "PG": 0,
+          "BAC": 0,
+          "COP": 0.29000000000000004,
+          "JPM": 0,
+          "WFC": 0,
+          "JNJ": 0,
+          "AAPL": 0
+        }
+      },
+      "premium_justified": {
+        "type": "noul",
+        "noul": 0.25
+      },
+      "discount_reason": {
+        "type": "choice",
+        "choice": "CYCLICAL_TROUGH",
+        "confidence": 0.36,
+        "probabilities": {
+          "BALANCE_SHEET": 0.09,
+          "GOVERNANCE": 0,
+          "CYCLICAL_TROUGH": 0.49,
+          "NO_DISCOUNT": 0.27,
+          "GROWTH": 0.15
+        }
+      },
+      "confidence_in_ranking": {
+        "type": "score",
+        "score": 1.73,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.41,
+          "2": 0.33,
+          "3": 0.12,
+          "4": 0.04,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "comparable_set": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "PV-STAPLES": {
+      "best_value": {
+        "type": "choice",
+        "choice": "WMT",
+        "confidence": 0.4,
+        "probabilities": {
+          "NVDA": 0,
+          "GOOGL": 0,
+          "BAC": 0,
+          "AAPL": 0,
+          "MSFT": 0,
+          "C": 0,
+          "XOM": 0,
+          "CVX": 0,
+          "COP": 0,
+          "WMT": 0.44,
+          "KO": 0.11,
+          "PG": 0.23,
+          "JNJ": 0.19,
+          "WFC": 0,
+          "SLB": 0,
+          "JPM": 0,
+          "PEP": 0.03
+        }
+      },
+      "premium_justified": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "discount_reason": {
+        "type": "choice",
+        "choice": "NO_DISCOUNT",
+        "confidence": 0.21,
+        "probabilities": {
+          "GROWTH": 0.37,
+          "BALANCE_SHEET": 0.21,
+          "CYCLICAL_TROUGH": 0.05,
+          "GOVERNANCE": 0.01,
+          "NO_DISCOUNT": 0.36
+        }
+      },
+      "confidence_in_ranking": {
+        "type": "score",
+        "score": 2.91,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.09,
+          "2": 0.25,
+          "3": 0.35,
+          "4": 0.23,
+          "5": 0.06,
+          "6": 0.01
+        }
+      },
+      "comparable_set": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    }
+  }
 }
