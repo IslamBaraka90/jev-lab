@@ -1,0 +1,213 @@
+{
+  "files": {
+    "data/market/candles/NVDA.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "NVDA",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/JPM.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "JPM",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/XOM.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "XOM",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/BTC-USD.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "BTC-USD",
+      "rows": 2191,
+      "range": "2020-09-19 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/GLD.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "GLD",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/AAPL.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "AAPL",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/MSFT.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "MSFT",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/KO.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "KO",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/PG.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "PG",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/JNJ.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "JNJ",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/CVX.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "CVX",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/BAC.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "BAC",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/WMT.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "WMT",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/PEP.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "PEP",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/XLE.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "XLE",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/candles/SPY.json": {
+      "source": "Yahoo Finance chart",
+      "symbol": "SPY",
+      "rows": 1506,
+      "range": "2020-09-21 to 2026-09-18",
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/NVDA.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "NVDA",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/JPM.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "JPM",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/XOM.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "XOM",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/BTC-USD.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "BTC-USD",
+      "rows": 0,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/GLD.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "GLD",
+      "rows": 0,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/AAPL.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "AAPL",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/MSFT.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "MSFT",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/KO.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "KO",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/PG.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "PG",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/JNJ.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "JNJ",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/CVX.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "CVX",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/BAC.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "BAC",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/WMT.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "WMT",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/PEP.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "PEP",
+      "rows": 4,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/XLE.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "XLE",
+      "rows": 0,
+      "fetchedAt": "2026-09-19"
+    },
+    "data/market/fundamentals/SPY.json": {
+      "source": "Yahoo Finance quoteSummary",
+      "symbol": "SPY",
+      "rows": 0,
+      "fetchedAt": "2026-09-19"
+    }
+  },
+  "note": "Fetched once for the demos in this repository. Prices and statements are used to make the examples real; this is not a redistributed dataset."
+}
