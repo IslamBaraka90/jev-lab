@@ -89,7 +89,7 @@ function report(results, context = {}) {
 export default {
   id: 'entity-links', title: 'Entity links', domain: 'news',
   value: 'Turn scattered evidence into an active relationship map and show where trouble could travel two steps.',
-  tags: ['news', 'entities', 'relationships', 'contagion'], dataClass: 'synthetic', readMinutes: 6, view: 'graph', status: 'pending-recording',
+  tags: ['news', 'entities', 'relationships', 'contagion'], dataClass: 'synthetic', readMinutes: 6, view: 'graph',
   itemLabel: (item) => `${item.left.name} ↔ ${item.right.name}`,
   data: () => import('./data.json'), labels: () => import('../../data/synthetic/entity-links.labels.json'), fixtures: () => import('./fixtures.json'), buildState, questions, evaluate, report,
   explain: { data: 'scripts/generate/entity-links.js', state: 'demos/entity-links/demo.js#demo:state', questions: 'demos/entity-links/demo.js#demo:questions', evaluate: 'demos/entity-links/demo.js#demo:evaluate' },
