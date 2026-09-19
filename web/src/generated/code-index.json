@@ -1,4 +1,32 @@
 {
+  "demos/account-takeover/demo.js#demo:state": {
+    "path": "demos/account-takeover/demo.js",
+    "startLine": 14,
+    "endLine": 29,
+    "code": "/** The full dataset item plus bank policy; no takeover flag, shape or intended action is supplied. */\nfunction buildState(item, context) {\n  return {\n    task: 'Decide whether an attacker controls this session and choose the least disruptive safe intervention.',\n    review: { as_of: context.asOf, policy_notes: context.policyNotes },\n    action_risk_weights: context.actionRiskWeights,\n    friction_points: [\n      { intervention: 'push approval', points: context.frictionWeights.pushApproval },\n      { intervention: 'call back', points: context.frictionWeights.callBack },\n      { intervention: 'document check', points: context.frictionWeights.documentCheck },\n      { intervention: 'block session', points: context.frictionWeights.blockSession },\n      { intervention: 'freeze account', points: context.frictionWeights.freezeAccount },\n    ],\n    session_case: item,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/account-takeover/demo.js#demo:questions": {
+    "path": "demos/account-takeover/demo.js",
+    "startLine": 33,
+    "endLine": 61,
+    "code": "const questions = {\n  takeover_likelihood: score('How likely is it that an attacker, rather than the customer, controls this session?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain',\n  ]),\n  strongest_signal: choice('Which signal carries the most weight in this decision?', {\n    IMPOSSIBLE_TRAVEL: 'The raw login times and countries cannot plausibly belong to one traveller.',\n    NEW_DEVICE: 'An unrecognised device is the strongest unexplained departure from account history.',\n    CREDENTIAL_RESET_CHAIN: 'Credential or phone recovery is immediately followed by sensitive changes.',\n    BENEFICIARY_CHANGE: 'A new payee followed by a transfer is the decisive change.',\n    BEHAVIOUR_SHIFT: 'The timing, amount or action sequence is unlike the account despite familiar access.',\n    NONE: 'No single risk signal justifies intervening in this session.',\n  }),\n  action: choice('What should the bank do with this session now?', {\n    ALLOW: 'Continue without an extra customer challenge.',\n    STEP_UP: 'Pause only for an additional customer verification.',\n    BLOCK_SESSION: 'End this session while leaving the wider account usable.',\n    FREEZE_ACCOUNT: 'Stop account activity pending a fraud investigation.',\n  }),\n  step_up_method: choice('Which verification method is proportionate if additional assurance is needed?', {\n    PUSH_APPROVAL: 'Send an approval to an already trusted device.',\n    CALL_BACK: 'Call the customer on a previously verified number.',\n    DOCUMENT_CHECK: 'Require identity-document verification.',\n    NOT_NEEDED: 'No step-up is appropriate because the session is allowed, blocked or frozen.',\n  }),\n  customer_friction_justified: noul('Is the customer friction created by the chosen intervention justified by the evidence?', {\n    yes: 'The intervention is proportionate to the risk and expected loss.',\n    no: 'The evidence does not justify challenging or restricting the customer.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/account-takeover/demo.js#demo:evaluate": {
+    "path": "demos/account-takeover/demo.js",
+    "startLine": 65,
+    "endLine": 82,
+    "code": "/** Keeps likelihood, signal, intervention and friction explicit for threshold and decoy analysis. */\nfunction evaluate(answers, item, context) {\n  const action = answers.action.choice;\n  const stepUpMethod = answers.step_up_method.choice;\n  return {\n    flagged: action !== 'ALLOW',\n    likelihood: answers.takeover_likelihood.score,\n    predictedTakeover: answers.takeover_likelihood.score >= 3.5,\n    strongestSignal: answers.strongest_signal.choice,\n    action,\n    stepUpMethod,\n    challenged: action !== 'ALLOW',\n    frictionJustified: answers.customer_friction_justified.noul >= 0.5,\n    frictionProbability: answers.customer_friction_justified.noul,\n    frictionCost: interventionFriction(action, stepUpMethod, context.frictionWeights),\n    label: `${item.id}: ${readable(action)} · ${answers.takeover_likelihood.score.toFixed(1)}/6`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/account-takeover/demo.js#demo:report": {
+    "path": "demos/account-takeover/demo.js",
+    "startLine": 86,
+    "endLine": 110,
+    "code": "/** Pairs every catch measure with legitimate-customer friction and audits all planted shapes/decoys. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const intended = new Map(labels.map((label) => [label.sessionId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const takeovers = graded.filter((result) => intended.get(result.item.id).takeover);\n  const genuine = graded.filter((result) => !intended.get(result.item.id).takeover);\n  const caught = takeovers.filter((result) => result.evaluation.action !== 'ALLOW');\n  const challenged = genuine.filter((result) => result.evaluation.action !== 'ALLOW');\n  const friction = round(challenged.reduce((sum, result) => sum + result.evaluation.frictionCost, 0));\n  const actionRight = graded.filter((result) => result.evaluation.action === intended.get(result.item.id).action);\n\n  return {\n    note: `${graded.length} sessions graded. Catch rate is always shown with legitimate-customer friction.`,\n    findings: repeatedMistake(graded, intended),\n    kpis: headline(graded, takeovers, genuine, caught, challenged, friction, actionRight),\n    distribution: signalDistribution(graded),\n    matrix: signalMatrix(graded, intended),\n    curve: thresholdCurve(graded, intended, context.frictionWeights),\n    checks: shapeChecks(graded, intended),\n    topItems: highestRisk(graded),\n    decoys: decoyOutcomes(graded, intended),\n    friction: { points: friction, challengedLegitimate: challenged.length, legitimateSessions: genuine.length },\n  };\n}",
+    "language": "javascript"
+  },
   "demos/bank-reconciliation/demo.js#demo:state": {
     "path": "demos/bank-reconciliation/demo.js",
     "startLine": 21,
@@ -361,6 +389,13 @@
     "startLine": 82,
     "endLine": 102,
     "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/account-takeover.js#demo:data": {
+    "path": "scripts/generate/account-takeover.js",
+    "startLine": 185,
+    "endLine": 190,
+    "code": "const item = {\n  id: sessionId,\n  account,\n  session,\n  timeline,\n};",
     "language": "javascript"
   },
   "scripts/generate/bank-reconciliation.js#demo:data": {

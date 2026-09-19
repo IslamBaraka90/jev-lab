@@ -24,6 +24,7 @@ export const GENERATORS = {
   'merchant-onboarding': () => import('./merchant-onboarding.js'),
   'delivery-exceptions': () => import('./delivery-exceptions.js'),
   'card-fraud-triage': () => import('./card-fraud-triage.js'),
+  'account-takeover': () => import('./account-takeover.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

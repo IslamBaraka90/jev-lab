@@ -14,6 +14,7 @@ import chargebackEvidence from './chargeback-evidence/demo.js';
 import merchantOnboarding from './merchant-onboarding/demo.js';
 import deliveryExceptions from './delivery-exceptions/demo.js';
 import cardFraudTriage from './card-fraud-triage/demo.js';
+import accountTakeover from './account-takeover/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -44,6 +45,7 @@ export const DEMOS = [
   merchantOnboarding,
   deliveryExceptions,
   cardFraudTriage,
+  accountTakeover,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */

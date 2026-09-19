@@ -452,3 +452,89 @@
   max-height: 260px;
   margin: 0;
 }
+
+/* 122 account takeover: a compact, camera-readable session timeline. */
+
+.session-view {
+  min-width: 0;
+}
+
+.session-facts {
+  margin: 0;
+}
+
+.account-baseline {
+  padding: var(--s12) var(--s16);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface2);
+}
+
+.account-baseline p {
+  margin: var(--s4) 0 0;
+  color: var(--muted);
+}
+
+.session-timeline {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.session-timeline li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: var(--s12);
+  padding-bottom: var(--s16);
+}
+
+.session-timeline li:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 13px;
+  bottom: -1px;
+  width: 2px;
+  background: var(--border);
+}
+
+.session-dot {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.session-event {
+  min-width: 0;
+  padding: var(--s12) var(--s16);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface2);
+}
+
+.session-event time,
+.session-event p {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.session-event p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .session-event .between {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
