@@ -51,6 +51,7 @@ import regimeClassification from './regime-classification/demo.js';
 import goldenCrossReview from './golden-cross-review/demo.js';
 import setupTiming from './setup-timing/demo.js';
 import strategyCorrelation from './strategy-correlation/demo.js';
+import overfitReview from './overfit-review/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -118,6 +119,7 @@ export const DEMOS = [
   setupTiming,
   regimeClassification,
   strategyCorrelation,
+  overfitReview,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */

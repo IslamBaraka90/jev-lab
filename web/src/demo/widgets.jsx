@@ -307,6 +307,7 @@ export function ReportPanel({ report, onSelect }) {
       {report.eventClusters && <EventClusterReport clusters={report.eventClusters} />}
       {report.entityNetwork && <EntityNetworkReport network={report.entityNetwork} />}
       {report.timingGrid && <TimingGridReport grid={report.timingGrid} />}
+      {report.overfitGallery && <OverfitGallery gallery={report.overfitGallery} onSelect={onSelect} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
@@ -424,6 +425,14 @@ function EntityNetworkReport({ network }) {
 
 function TimingGridReport({ grid }) {
   return <div className="stack timing-grid-report" style={{ gap: 10 }}><h4>Daily timing grid · long and short kept separate</h4><div className="table-scroll"><table className="data-table compact"><thead><tr><th>Instrument</th><th>Direction</th><th>Weekday</th><th>Month phase</th><th className="num">Instances</th><th className="num">Jev favourable</th><th className="num">Realised 5-bar return</th><th>Claim status</th></tr></thead><tbody>{grid.cells.map((cell) => <tr key={cell.key} className={cell.sufficient ? undefined : 'timing-insufficient'}><th scope="row">{cell.symbol}</th><td>{cell.direction}</td><td>{cell.weekday.toLowerCase()}</td><td>{cell.monthPhase.toLowerCase()}</td><td className="num">{cell.count}</td><td className="num">{(cell.expectedRate * 100).toFixed(1)}%</td><td className="num">{cell.realisedReturn.toFixed(3)}%</td><td>{cell.sufficient ? 'Included' : 'Insufficient (<20)'}</td></tr>)}</tbody></table></div><div className="table-scroll"><table className="data-table compact"><thead><tr><th>Direction</th><th className="num">Instances</th><th className="num">Jev favourable</th><th className="num">Average realised return</th></tr></thead><tbody>{grid.directionRows.map((row) => <tr key={row.direction}><th scope="row">{row.direction}</th><td className="num">{row.count}</td><td className="num">{(row.favourableRate * 100).toFixed(1)}%</td><td className="num">{row.averageReturn.toFixed(3)}%</td></tr>)}</tbody></table></div></div>;
+}
+
+function OverfitGallery({ gallery, onSelect }) {
+  const spark = (curve) => {
+    const values = curve.map((point) => point.equity), min = Math.min(...values), max = Math.max(...values), span = Math.max(max - min, 1);
+    return values.map((value, index) => `${index ? 'L' : 'M'}${(index / Math.max(values.length - 1, 1) * 126 + 2).toFixed(1)},${(4 + (max - value) / span * 32).toFixed(1)}`).join('');
+  };
+  return <div className="stack overfit-gallery" style={{ gap: 10 }}><h4>{gallery.title}</h4><p className="meta">Every one of the 140 curves, ordered by Jev trust ascending and risk descending. The planted class appears only in this post-answer report.</p><div className="overfit-gallery-grid">{gallery.rows.map((row) => <button type="button" key={row.id} className="overfit-card" onClick={() => onSelect?.(row.id)}><span><strong>{row.id}</strong><small className="meta">trust {row.trust.toFixed(1)} · risk {row.risk.toFixed(1)}</small></span><svg viewBox="0 0 130 40" role="img" aria-label={`${row.id} curve; trust ${row.trust.toFixed(1)}; planted ${row.planted.toLowerCase().replaceAll('_', ' ')}`}><path d={spark(row.curve)} /></svg><span className="meta">{row.symptom.toLowerCase().replaceAll('_', ' ')} · planted {row.planted.toLowerCase().replaceAll('_', ' ')}</span></button>)}</div></div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {

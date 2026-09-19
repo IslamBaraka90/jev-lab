@@ -1,0 +1,18 @@
+const money = (value) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+export function BacktestCurveView({ item, demo }) {
+  const width = 760, height = 230, pad = 48;
+  const values = item.equityCurve.map((point) => point.equity);
+  const min = Math.min(...values), max = Math.max(...values), span = Math.max(max - min, 1);
+  const x = (index) => pad + index / Math.max(values.length - 1, 1) * (width - pad * 1.5);
+  const y = (value) => 20 + (max - value) / span * (height - 58);
+  const path = values.map((value, index) => `${index ? 'L' : 'M'}${x(index).toFixed(1)},${y(value).toFixed(1)}`).join('');
+  return <div className="stack backtest-view" style={{ gap: 14 }}>
+    <div className="stack" style={{ gap: 4 }}><span className="eyebrow">{item.id} · synthetic backtest</span><h3>{demo?.itemLabel?.(item) ?? item.title}</h3><p className="meta">{item.strategy.rule}</p></div>
+    <dl className="facts backtest-facts"><div><dt>Period</dt><dd>{item.period.from} – {item.period.to}</dd></div><div><dt>Trades</dt><dd>{item.tradeCount}</dd></div><div><dt>Universe</dt><dd>{item.universe.pointInTime ? 'Point-in-time' : 'End-date members'}</dd></div><div><dt>Fill lag</dt><dd>{item.signalAndExecution.lagBars} bar{item.signalAndExecution.lagBars === 1 ? '' : 's'}</dd></div></dl>
+    <svg className="backtest-equity" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Equity curve from ${money(values[0])} to ${money(values.at(-1))} over ${item.equityCurve.length} quarterly points`}><line className="report-axis" x1={pad} y1={height - 32} x2={width - 22} y2={height - 32} /><path className="report-line" d={path} />{item.equityCurve.map((point, index) => index % 4 === 0 && <circle key={point.period} className="backtest-point" cx={x(index)} cy={y(point.equity)} r="2.5"><title>{point.period}: {money(point.equity)}</title></circle>)}<text className="report-axis-text" x={pad} y={height - 10}>Quarterly equity · start {money(values[0])} · finish {money(values.at(-1))}</text></svg>
+    <div className="table-scroll"><h4>Parameter sensitivity · selected cell outlined</h4><table className="data-table compact sensitivity-grid"><thead><tr><th>Lookback ↓ / threshold →</th>{item.parameterGrid[0].cells.map((cell) => <th key={cell.entryThreshold} className="num">{cell.entryThreshold.toFixed(2)}</th>)}</tr></thead><tbody>{item.parameterGrid.map((row) => <tr key={row.lookbackSessions}><th scope="row">{row.lookbackSessions} sessions</th>{row.cells.map((cell) => <td key={cell.entryThreshold} className={cell.selected ? 'selected-parameter' : undefined}><strong className="num">{cell.totalReturnPercent.toFixed(1)}%</strong><span className="meta">Sharpe {cell.sharpe.toFixed(2)} · DD {cell.maxDrawdownPercent.toFixed(1)}%</span></td>)}</tr>)}</tbody></table></div>
+    <div className="table-scroll"><table className="data-table compact"><thead><tr><th>Trade return</th><th className="num">Trades</th></tr></thead><tbody>{item.tradeReturnDistribution.map((bucket) => <tr key={bucket.range}><th scope="row">{bucket.range}</th><td className="num">{bucket.trades}</td></tr>)}</tbody></table></div>
+    <dl className="facts research-facts"><div><dt>Costs</dt><dd>{item.costAssumptions.note}</dd></div><div><dt>Universe construction</dt><dd>{item.universe.description}</dd></div><div><dt>Signal known</dt><dd>{item.signalAndExecution.signalKnown}</dd></div><div><dt>Fill assumed</dt><dd>{item.signalAndExecution.fillAssumption}</dd></div>{item.validation && <div><dt>Untouched validation</dt><dd>{item.validation.method} Development Sharpe {item.validation.developmentSharpe.toFixed(2)}; holdout {item.validation.holdoutSharpe.toFixed(2)}.</dd></div>}</dl>
+  </div>;
+}

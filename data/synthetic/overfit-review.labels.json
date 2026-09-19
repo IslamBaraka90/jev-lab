@@ -1,0 +1,562 @@
+[
+  {
+    "backtestId": "OR-0001",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0002",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0003",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0004",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0005",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0006",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0007",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0008",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0009",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0010",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0011",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0012",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0013",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0014",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0015",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0016",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0017",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0018",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0019",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0020",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0021",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0022",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0023",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0024",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0025",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0026",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0027",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0028",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0029",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0030",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0031",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0032",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0033",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0034",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0035",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0036",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0037",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0038",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0039",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0040",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0041",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0042",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0043",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0044",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0045",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0046",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0047",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0048",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0049",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0050",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0051",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0052",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0053",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0054",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0055",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0056",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0057",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0058",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0059",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0060",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0061",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0062",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0063",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0064",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0065",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0066",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0067",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0068",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0069",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0070",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0071",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0072",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0073",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0074",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0075",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0076",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0077",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0078",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0079",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0080",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0081",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0082",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0083",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0084",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0085",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0086",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0087",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0088",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0089",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0090",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0091",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0092",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0093",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0094",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0095",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0096",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0097",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0098",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0099",
+    "kind": "COSTS_OMITTED"
+  },
+  {
+    "backtestId": "OR-0100",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0101",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0102",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0103",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0104",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0105",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0106",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0107",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0108",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0109",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0110",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0111",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0112",
+    "kind": "LOOK_AHEAD"
+  },
+  {
+    "backtestId": "OR-0113",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0114",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0115",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0116",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0117",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0118",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0119",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0120",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0121",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0122",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0123",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0124",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0125",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0126",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0127",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0128",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0129",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0130",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0131",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0132",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0133",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0134",
+    "kind": "SURVIVORSHIP"
+  },
+  {
+    "backtestId": "OR-0135",
+    "kind": "NONE"
+  },
+  {
+    "backtestId": "OR-0136",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0137",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0138",
+    "kind": "PARAMETER_CLIFF"
+  },
+  {
+    "backtestId": "OR-0139",
+    "kind": "FEW_TRADES"
+  },
+  {
+    "backtestId": "OR-0140",
+    "kind": "SURVIVORSHIP"
+  }
+]

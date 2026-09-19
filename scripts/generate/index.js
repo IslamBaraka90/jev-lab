@@ -61,6 +61,7 @@ export const GENERATORS = {
   'setup-timing': () => import('./setup-timing.js'),
   'regime-classification': () => import('./regime-classification.js'),
   'strategy-correlation': () => import('./strategy-correlation.js'),
+  'overfit-review': () => import('./overfit-review.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
