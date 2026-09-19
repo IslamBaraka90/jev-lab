@@ -1,0 +1,1442 @@
+[
+  {
+    "customerId": "C-0001",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0002",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0003",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0004",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0005",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0006",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0007",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0008",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0009",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0010",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0011",
+    "pattern": "PROMO_ABUSER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0012",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0013",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0014",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0015",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0016",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0017",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0018",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0019",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0020",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0021",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0022",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0023",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": true
+  },
+  {
+    "customerId": "C-0024",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0025",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0026",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0027",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0028",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0029",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0030",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0031",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0032",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0033",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0034",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0035",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0036",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0037",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0038",
+    "pattern": "ADDRESS_HOPPER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0039",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0040",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0041",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0042",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0043",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0044",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0045",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0046",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0047",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0048",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0049",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0050",
+    "pattern": "ADDRESS_HOPPER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0051",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0052",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0053",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0054",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0055",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0056",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0057",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0058",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0059",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0060",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0061",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0062",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0063",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0064",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0065",
+    "pattern": "PROMO_ABUSER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0066",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0067",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": true
+  },
+  {
+    "customerId": "C-0068",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0069",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0070",
+    "pattern": "ADDRESS_HOPPER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0071",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0072",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0073",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0074",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0075",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": true
+  },
+  {
+    "customerId": "C-0076",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0077",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0078",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0079",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0080",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0081",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": true
+  },
+  {
+    "customerId": "C-0082",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": true
+  },
+  {
+    "customerId": "C-0083",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0084",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0085",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0086",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0087",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0088",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0089",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0090",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0091",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0092",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0093",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0094",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0095",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0096",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0097",
+    "pattern": "ADDRESS_HOPPER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0098",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0099",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0100",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0101",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0102",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0103",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0104",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0105",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0106",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0107",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0108",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0109",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0110",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0111",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0112",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0113",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0114",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0115",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0116",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0117",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0118",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0119",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0120",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0121",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0122",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0123",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0124",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0125",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0126",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0127",
+    "pattern": "ADDRESS_HOPPER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0128",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0129",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0130",
+    "pattern": "PROMO_ABUSER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0131",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0132",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0133",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0134",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0135",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0136",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0137",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0138",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0139",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0140",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0141",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0142",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0143",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0144",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0145",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0146",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0147",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0148",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0149",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0150",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0151",
+    "pattern": "PROMO_ABUSER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0152",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0153",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0154",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0155",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0156",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0157",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0158",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0159",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0160",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0161",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0162",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0163",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "innocent",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0164",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0165",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0166",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0167",
+    "pattern": "ADDRESS_HOPPER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0168",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0169",
+    "pattern": "PROMO_ABUSER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0170",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0171",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0172",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0173",
+    "pattern": "PROMO_ABUSER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0174",
+    "pattern": "SERIAL_RETURNER",
+    "restriction": "PREPAY_ONLY",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0175",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0176",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0177",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0178",
+    "pattern": "ADDRESS_HOPPER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0179",
+    "pattern": "NORMAL",
+    "restriction": "ALLOW",
+    "kind": "normal",
+    "intent": "CIRCUMSTANTIAL",
+    "courierAtFault": false
+  },
+  {
+    "customerId": "C-0180",
+    "pattern": "SERIAL_REFUSER",
+    "restriction": "BLOCK_COD",
+    "kind": "abuse",
+    "intent": "DELIBERATE",
+    "courierAtFault": false
+  }
+]

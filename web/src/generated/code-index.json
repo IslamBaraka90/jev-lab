@@ -27,6 +27,34 @@
     "code": "/** Grades matching and break reasons, then turns the quality bar into automation and workload. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const labelByItem = new Map(labels.map((label) => [label.statementLineId, label]));\n  const problems = groupProblems(labels);\n  const correct = results.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const cleared = results.filter((result) => result.evaluation.autoCleared);\n  const gradedClears = cleared.filter((result) => labelByItem.has(result.item.id));\n  const preciseClears = gradedClears.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const remaining = context.items.filter((item) => !cleared.some((result) => result.item.id === item.id));\n  const reconciliation = reconcile(context, cleared, remaining);\n\n  return {\n    note: `Graded against ${problems.size} planted reconciliation problems. Labels never enter the model state.`,\n    findings: clusterDisagreements(results, labelByItem),\n    kpis: kpis(results, cleared, gradedClears, preciseClears, remaining, context.currency),\n    distribution: distribution(results),\n    matrix: confusion(results, labelByItem),\n    curve: coverage(results, labelByItem, labels),\n    checks: checks(results, labels, problems, labelByItem, reconciliation),\n    topItems: topItems(results, labelByItem, context.currency),\n    reconciliation,\n    resolvedProblems: resolvedProblemCount(correct, problems),\n  };\n}",
     "language": "javascript"
   },
+  "demos/cod-abuse/demo.js#demo:state": {
+    "path": "demos/cod-abuse/demo.js",
+    "startLine": 18,
+    "endLine": 40,
+    "code": "/** Raw history plus the store evidence needed to excuse an outage; no behaviour rate is supplied. */\nfunction buildState(item, context) {\n  return {\n    task: 'Decide whether this customer shows repeat non-fulfilment abuse before the next order ships.',\n    customer: {\n      id: item.id,\n      name: item.name,\n      phone: item.phone,\n      account_ids: item.accountIds,\n    },\n    store_baselines: {\n      average_refusal_rate: context.baselines.refusalRate,\n      average_return_rate: context.baselines.returnRate,\n      average_shipping_cost: context.averageShippingCost,\n      currency: context.currency,\n    },\n    courier_outage_days: context.courierOutageDays,\n    delivery_reason_codes: context.reasonCodes,\n    order_history: item.orders.map((order) => ({\n      ...order,\n    })),\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/cod-abuse/demo.js#demo:questions": {
+    "path": "demos/cod-abuse/demo.js",
+    "startLine": 44,
+    "endLine": 75,
+    "code": "const questions = {\n  pattern: choice('Which behaviour pattern best explains this customer history?', {\n    SERIAL_REFUSER: 'Repeated cash-on-delivery parcels are refused or never accepted.',\n    SERIAL_RETURNER: 'Orders are repeatedly accepted and then returned inside the window.',\n    ADDRESS_HOPPER: 'The same phone uses several accounts and many delivery addresses.',\n    PROMO_ABUSER: 'First-order promotions repeat across multiple linked accounts.',\n    NORMAL: 'The history is ordinary or its bad streak has a documented circumstantial cause.',\n  }),\n  intent: choice('What most likely explains the behaviour shown in the history?', {\n    DELIBERATE: 'The repeated pattern appears intentional and benefits the customer.',\n    CARELESS: 'The customer repeatedly creates avoidable failures without clear abuse.',\n    CIRCUMSTANTIAL: 'An outage, address correction or isolated event explains the failures.',\n  }),\n  restriction: choice('What access should this customer have on the next order?', {\n    ALLOW: 'Keep normal access, including cash on delivery.',\n    PREPAY_ONLY: 'Allow ordering only after payment is collected in advance.',\n    BLOCK_COD: 'Block cash on delivery because repeated fulfilment cost is likely.',\n  }),\n  severity: score('How severe is the repeat non-fulfilment or linked-account behaviour?', [\n    'None',\n    'Slight',\n    'Mild',\n    'Notable',\n    'Serious',\n    'Severe',\n    'Extreme',\n  ]),\n  courier_at_fault: noul('Is the courier or a documented courier outage the main cause of the failed deliveries?', {\n    yes: 'The failure dates and reason codes align with courier evidence.',\n    no: 'The pattern is attributable to the customer or is not a delivery failure.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/cod-abuse/demo.js#demo:evaluate": {
+    "path": "demos/cod-abuse/demo.js",
+    "startLine": 79,
+    "endLine": 95,
+    "code": "/** The lane shown for one customer, kept separate from the model's named behaviour pattern. */\nfunction evaluate(answers, item) {\n  const pattern = answers.pattern.choice;\n  const restriction = answers.restriction.choice;\n  return {\n    flagged: restriction !== 'ALLOW',\n    pattern,\n    patternConfidence: answers.pattern.confidence,\n    intent: answers.intent.choice,\n    restriction,\n    restricted: restriction !== 'ALLOW',\n    severity: answers.severity.score,\n    courierAtFault: answers.courier_at_fault.noul >= 0.5,\n    courierAtFaultProbability: answers.courier_at_fault.noul,\n    label: `${item.id}: ${readable(restriction)} · ${readable(pattern)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/cod-abuse/demo.js#demo:report": {
+    "path": "demos/cod-abuse/demo.js",
+    "startLine": 99,
+    "endLine": 121,
+    "code": "/** Pattern accuracy and lane accuracy stay separate, with both saved cost and restricted value. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const intended = new Map(labels.map((label) => [label.customerId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const patternRight = graded.filter((result) => result.evaluation.pattern === intended.get(result.item.id).pattern);\n  const restrictionRight = graded.filter((result) => result.evaluation.restriction === intended.get(result.item.id).restriction);\n  const restricted = graded.filter((result) => result.evaluation.restricted);\n  const economics = moneyImpact(restricted, context.averageShippingCost);\n\n  return {\n    note: `Pattern and restriction are graded independently across ${graded.length} customer histories.`,\n    findings: repeatedMistake(graded, intended),\n    kpis: headline(graded, patternRight, restrictionRight, restricted, intended, economics, context.currency),\n    distribution: restrictionMix(graded),\n    matrix: confusion(graded, intended),\n    curve: coverage(graded, intended),\n    checks: checks(graded, intended),\n    topItems: worstHistories(graded, context.currency),\n    innocents: innocentOutcomes(graded, intended),\n    economics,\n  };\n}",
+    "language": "javascript"
+  },
   "demos/expense-posting/demo.js#demo:state": {
     "path": "demos/expense-posting/demo.js",
     "startLine": 10,
@@ -144,6 +172,13 @@
     "startLine": 116,
     "endLine": 124,
     "code": "/** The deterministic short-list: same direction first, then relative amount gap, date gap, and id. */\nfunction rankCandidates(statement, ledgerEntries) {\n  const score = (entry) => {\n    const directionPenalty = entry.direction === statement.direction ? 0 : 10;\n    const amountGap = Math.abs(entry.amount - statement.amount) / Math.max(entry.amount, statement.amount, 1);\n    return directionPenalty + amountGap * 2 + daysApart(entry.date, statement.date) * 0.08;\n  };\n  return [...ledgerEntries].sort((left, right) => score(left) - score(right) || left.id.localeCompare(right.id));\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/cod-abuse.js#demo:data": {
+    "path": "scripts/generate/cod-abuse.js",
+    "startLine": 125,
+    "endLine": 143,
+    "code": "/** One order row in a customer's history; behaviour is planted only after the neutral row exists. */\nfunction baseOrder(random, customerId, index, addresses) {\n  const accountId = `A-${customerId.slice(2)}-01`;\n  return {\n    id: null,\n    accountId,\n    date: random.day(PERIOD.from, PERIOD.to),\n    value: amount(random, { min: 18, max: 780 }),\n    currency: 'USD',\n    paymentMethod: random.weighted([['CASH_ON_DELIVERY', 62], ['CARD', 38]]),\n    deliveryOutcome: 'DELIVERED',\n    courierAttempts: 1,\n    reasonCode: 'DELIVERED',\n    addressUsed: random.pick(addresses.slice(0, 2)),\n    promotion: index === 0 ? 'WELCOME15' : null,\n    refundIssued: false,\n    reshippedFromOrderId: null,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/expense-posting.js#demo:data": {
