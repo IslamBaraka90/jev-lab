@@ -85,7 +85,7 @@ function findings(disagreements) {
 export default {
   id: 'fundamental-read', title: 'Fundamental read', domain: 'screening',
   value: 'Read four years of statements directly, grade quality and leverage, and compare the judgement with transparent ratios.',
-  tags: ['screening', 'fundamentals', 'statements', 'ratios'], dataClass: 'cached-real', readMinutes: 5, view: 'statements', status: 'pending-recording',
+  tags: ['screening', 'fundamentals', 'statements', 'ratios'], dataClass: 'cached-real', readMinutes: 5, view: 'statements',
   itemLabel: (item) => `${item.symbol} · ${item.sector ?? 'no issuer sector'} · ${item.cacheCoverage.annualYears} annual years`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'),
   buildState, questions, evaluate, report,
