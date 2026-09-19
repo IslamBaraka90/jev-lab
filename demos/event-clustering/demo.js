@@ -93,7 +93,7 @@ function report(results, context = {}) {
 export default {
   id: 'event-clustering', title: 'Event clustering', domain: 'news',
   value: 'Collapse a noisy headline feed into the events that happened and keep the source worth reading.',
-  tags: ['news', 'clustering', 'sources', 'deduplication'], dataClass: 'synthetic', readMinutes: 6, view: 'queue', status: 'pending-recording',
+  tags: ['news', 'clustering', 'sources', 'deduplication'], dataClass: 'synthetic', readMinutes: 6, view: 'queue',
   itemLabel: (item) => item.title,
   data: () => import('./data.json'), labels: () => import('../../data/synthetic/event-clustering.labels.json'), fixtures: () => import('./fixtures.json'), buildState, questions, evaluate, report,
   explain: { data: 'scripts/generate/event-clustering.js', state: 'demos/event-clustering/demo.js#demo:state', questions: 'demos/event-clustering/demo.js#demo:questions', evaluate: 'demos/event-clustering/demo.js#demo:evaluate' },
