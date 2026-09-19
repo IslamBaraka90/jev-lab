@@ -27,6 +27,34 @@
     "code": "/** Grades matching and break reasons, then turns the quality bar into automation and workload. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const labelByItem = new Map(labels.map((label) => [label.statementLineId, label]));\n  const problems = groupProblems(labels);\n  const correct = results.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const cleared = results.filter((result) => result.evaluation.autoCleared);\n  const gradedClears = cleared.filter((result) => labelByItem.has(result.item.id));\n  const preciseClears = gradedClears.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const remaining = context.items.filter((item) => !cleared.some((result) => result.item.id === item.id));\n  const reconciliation = reconcile(context, cleared, remaining);\n\n  return {\n    note: `Graded against ${problems.size} planted reconciliation problems. Labels never enter the model state.`,\n    findings: clusterDisagreements(results, labelByItem),\n    kpis: kpis(results, cleared, gradedClears, preciseClears, remaining, context.currency),\n    distribution: distribution(results),\n    matrix: confusion(results, labelByItem),\n    curve: coverage(results, labelByItem, labels),\n    checks: checks(results, labels, problems, labelByItem, reconciliation),\n    topItems: topItems(results, labelByItem, context.currency),\n    reconciliation,\n    resolvedProblems: resolvedProblemCount(correct, problems),\n  };\n}",
     "language": "javascript"
   },
+  "demos/chargeback-evidence/demo.js#demo:state": {
+    "path": "demos/chargeback-evidence/demo.js",
+    "startLine": 15,
+    "endLine": 34,
+    "code": "/** The current packet and the illustrative rule for its reason code; no planted outcome is included. */\nfunction buildState(item, context) {\n  const requirements = context.networkRequirements[item.dispute.reasonCode];\n  return {\n    task: 'Decide whether this chargeback evidence packet is ready to submit before its deadline.',\n    packet_id: item.id,\n    policy_notice: context.requirementsNotice,\n    review_clock: {\n      as_of: context.asOf,\n      response_deadline: item.dispute.responseDeadline,\n      typical_document_collection_days: context.documentCollectionDays,\n    },\n    reason_code: item.dispute.reasonCode,\n    reason_requirements: requirements,\n    order: item.order,\n    dispute: item.dispute,\n    evidence_checklist: item.evidence,\n    transaction_signals: item.transactionSignals,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/chargeback-evidence/demo.js#demo:questions": {
+    "path": "demos/chargeback-evidence/demo.js",
+    "startLine": 38,
+    "endLine": 59,
+    "code": "const questions = {\n  win_likelihood: score('How likely is this evidence packet to win if submitted in its current form?', [\n    'Hopeless', 'Very weak', 'Weak', 'Even', 'Strong', 'Very strong', 'Certain',\n  ]),\n  missing_document: choice('Which single document would most improve or complete this packet?', {\n    DELIVERY_PROOF: 'Dated tracking, recipient signature or delivery confirmation tied to the supplied address.',\n    AVS_CVV: 'The payment verification results showing the address and security-code response.',\n    TERMS_ACCEPTANCE: 'A timestamped record of the customer accepting the applicable terms.',\n    COMMS_LOG: 'The dated customer-service, delivery, return or cancellation conversation.',\n    REFUND_PROOF: 'A processed refund or reversal record with its payment reference.',\n    NONE: 'The current packet is complete, or no single missing document would make it viable.',\n  }),\n  next_step: choice('What should the disputes team do next?', {\n    SUBMIT: 'Submit the current evidence before the response deadline.',\n    GATHER_MORE: 'Obtain the decisive missing document while time remains.',\n    ACCEPT_LOSS: 'Do not spend more operating time on a packet that cannot be repaired in time.',\n  }),\n  deadline_risk: noul('Is the response deadline too close to complete the normal evidence-gathering step?', {\n    yes: 'Fewer days remain than the stated typical document-collection time.',\n    no: 'The packet is ready or enough time remains to gather a document.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/chargeback-evidence/demo.js#demo:evaluate": {
+    "path": "demos/chargeback-evidence/demo.js",
+    "startLine": 63,
+    "endLine": 78,
+    "code": "/** Keeps the continuous win score separate from the named document and operating step. */\nfunction evaluate(answers, item) {\n  const winScore = answers.win_likelihood.score;\n  const nextStep = answers.next_step.choice;\n  return {\n    flagged: nextStep === 'GATHER_MORE',\n    predictedOutcome: winScore >= WIN_THRESHOLD ? 'WIN' : 'LOSS',\n    winScore,\n    missingDocument: answers.missing_document.choice,\n    nextStep,\n    deadlineRisk: answers.deadline_risk.noul >= 0.5,\n    deadlineRiskProbability: answers.deadline_risk.noul,\n    amount: item.dispute.amount,\n    label: `${item.id}: ${readable(nextStep)} · ${winScore.toFixed(1)}/6`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/chargeback-evidence/demo.js#demo:report": {
+    "path": "demos/chargeback-evidence/demo.js",
+    "startLine": 82,
+    "endLine": 106,
+    "code": "/** Separately grades outcome, missing evidence and action, then calibrates score bins against wins. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const intended = new Map(labels.map((label) => [label.packetId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const outcomeRight = graded.filter((result) => result.evaluation.predictedOutcome === intended.get(result.item.id).outcome);\n  const missingRight = graded.filter((result) => result.evaluation.missingDocument === intended.get(result.item.id).missingDocument);\n  const stepRight = graded.filter((result) => result.evaluation.nextStep === intended.get(result.item.id).nextStep);\n  const gatherMore = graded.filter((result) => result.evaluation.nextStep === 'GATHER_MORE');\n  const recoverable = round(gatherMore.reduce((sum, result) => sum + result.item.dispute.amount, 0));\n\n  return {\n    note: `Illustrative requirements only. ${graded.length} packets graded; labels never enter the model state.`,\n    findings: repeatedMistake(graded, intended),\n    kpis: headline(graded, outcomeRight, missingRight, stepRight, recoverable, context.currency),\n    distribution: documentDistribution(graded),\n    matrix: documentMatrix(graded, intended),\n    curve: reliability(graded, intended),\n    checks: cohortChecks(graded, intended),\n    topItems: topGatherMore(gatherMore, context.currency),\n    flips: flipOutcomes(graded, intended),\n    money: { gatherMore: recoverable, totalDisputed: round(graded.reduce((sum, result) => sum + result.item.dispute.amount, 0)) },\n    deadlineAccuracy: share(graded.filter((result) => result.evaluation.deadlineRisk === intended.get(result.item.id).deadlineRisk).length, graded.length),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/cod-abuse/demo.js#demo:state": {
     "path": "demos/cod-abuse/demo.js",
     "startLine": 18,
@@ -172,6 +200,13 @@
     "startLine": 116,
     "endLine": 124,
     "code": "/** The deterministic short-list: same direction first, then relative amount gap, date gap, and id. */\nfunction rankCandidates(statement, ledgerEntries) {\n  const score = (entry) => {\n    const directionPenalty = entry.direction === statement.direction ? 0 : 10;\n    const amountGap = Math.abs(entry.amount - statement.amount) / Math.max(entry.amount, statement.amount, 1);\n    return directionPenalty + amountGap * 2 + daysApart(entry.date, statement.date) * 0.08;\n  };\n  return [...ledgerEntries].sort((left, right) => score(left) - score(right) || left.id.localeCompare(right.id));\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/chargeback-evidence.js#demo:data": {
+    "path": "scripts/generate/chargeback-evidence.js",
+    "startLine": 133,
+    "endLine": 161,
+    "code": "const item = {\n  id: packetId,\n  order: {\n    id: `ORD-${String(index + 1).padStart(5, '0')}`,\n    placedAt: `${orderDate}T${String(random.int(8, 22)).padStart(2, '0')}:15:00Z`,\n    merchant: merchantName(random),\n    customer: personName(random),\n    amount: disputeAmount,\n    currency: 'USD',\n    paymentMethod: random.pick(['VISA_CREDIT', 'MASTERCARD_DEBIT', 'VISA_DEBIT']),\n    billingCountry: random.pick(['AE', 'EG', 'GB', 'US']),\n    shippingCountry: random.pick(['AE', 'EG', 'GB', 'US']),\n  },\n  dispute: {\n    reasonCode,\n    customerClaim: REQUIREMENTS[reasonCode].claim,\n    openedAt,\n    responseDeadline: addDays(AS_OF, daysRemaining),\n    amount: disputeAmount,\n    currency: 'USD',\n  },\n  evidence: documents,\n  transactionSignals: {\n    deviceMatchesPriorOrders: random.bool(kind === 'STRONG' ? 0.9 : 0.55),\n    ipCountryMatchesBilling: random.bool(kind === 'STRONG' ? 0.92 : 0.62),\n    priorSuccessfulOrders: random.int(0, 18),\n    priorChargebacks: random.int(0, kind === 'HOPELESS' ? 3 : 1),\n  },\n};",
     "language": "javascript"
   },
   "scripts/generate/cod-abuse.js#demo:data": {
