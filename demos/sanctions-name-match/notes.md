@@ -13,4 +13,15 @@ The planted identity, collision cause and deciding field remain only in the labe
 
 ## Recorded run
 
-Pending. This section will be replaced after all 200 Jev responses are cached and audited.
+Recorded on 2026-09-19 with `jev-1.13.0`. The complete pass cached all 200 candidate pairs and
+all five typed answers per pair (224,088 input tokens and 34,400 output tokens). The fixture audit
+found no missing, extra or malformed records.
+
+The immutable results are intentionally mixed. Jev kept all 18 true matches, made the correct
+same/different call on 170 of 188 candidates with sufficient evidence, and explicitly chose
+`INSUFFICIENT` plus `REVIEW` for 10 of the 12 thin records. It cleared 29 of 170 planted false
+positives; most of the remaining false positives were conservatively held for review. The main
+identity error was the one-digit date-of-birth trap (17 of 28 called the same identity), with one
+additional city/country collision called the same identity. Deciding-field accuracy was 89 of 200.
+
+Those disagreements are part of the cached evaluation. They were not retried, edited or hidden.

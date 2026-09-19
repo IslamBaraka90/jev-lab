@@ -45,9 +45,9 @@ Standard demo folder plus `scripts/generate/sanctions-name-match.js` and a ficti
 
 Template list, plus:
 
-- [ ] The watchlist is entirely fictional and labelled as such in the data file, on the page and in `notes.md`.
-- [ ] No real sanctions list, program name or designated person appears anywhere.
-- [ ] Items where the right answer is "insufficient" are graded as correct when the model says so.
+- [x] The watchlist is entirely fictional and labelled as such in the data file, on the page and in `notes.md`.
+- [x] No real sanctions list, program name or designated person appears anywhere.
+- [x] Items where the right answer is "insufficient" are graded as correct when the model says so.
 
 ## Video beats
 
@@ -58,3 +58,9 @@ Template list, plus:
 ## Notes
 
 Highest-sensitivity demo in the set. The page says plainly: fictional list, illustrative only, never a screening decision.
+
+Implemented and recorded on 2026-09-19. Jev `jev-1.13.0` received every complete candidate pair
+and all matching rules: 200/200 fixture records, five answers each, no missing or malformed entries.
+The audited replay kept 18/18 true matches, explicitly deferred 10/12 insufficient cases, cleared
+29/170 false positives, and scored 89/200 on the planted deciding field. See the demo notes for the
+immutable error analysis.

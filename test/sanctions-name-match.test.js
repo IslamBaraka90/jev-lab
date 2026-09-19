@@ -58,11 +58,11 @@ test('an insufficient record is correct only when Jev defers it explicitly', asy
   const item = dataset.items.find((entry) => entry.id === target.pairId);
   const wrong = answersFor(target);
   wrong.deciding_evidence.choice = 'NAME_FORM_ONLY';
-  wrong.disposition.choice = 'CONFIRM';
   const { results } = await runDemo(demo, { dataset: { ...dataset, items: [item] }, ask: () => ({ answers: wrong }) });
   const report = demo.report(results, { ...context, labels: [target] });
   assert.deepEqual(report.insufficient, { correct: 0, total: 1 });
   assert.equal(report.kpis.find((entry) => entry.label === 'Identity accuracy').value, '0%');
+  assert.equal(report.checks.find((entry) => entry.id === 'insufficient').count, 1);
 });
 
 test('the identity matrix is diagonal for a perfect run', async () => {

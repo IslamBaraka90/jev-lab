@@ -107,7 +107,9 @@ function causeChecks(graded, intended) {
     const group = graded.filter((result) => intended.get(result.item.id).cause === cause);
     const wrong = group.filter((result) => {
       const label = intended.get(result.item.id);
-      if (cause === 'INSUFFICIENT') return predictedClass(result) !== 'INSUFFICIENT';
+      if (cause === 'INSUFFICIENT') {
+        return result.evaluation.decidingEvidence !== 'INSUFFICIENT' || result.evaluation.disposition !== 'REVIEW';
+      }
       return result.evaluation.predictedSame !== label.sameEntity;
     });
     return { id: cause.toLowerCase(), label: `${readable(cause)} candidates mishandled`, count: wrong.length, of: group.length, items: wrong.map((result) => result.item.id) };
@@ -125,7 +127,6 @@ export default {
   readMinutes: 5,
   view: 'comparison',
   pairKeys: ['customer', 'listEntry'],
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.customer.name} ↔ ${item.listEntry.primaryName}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
