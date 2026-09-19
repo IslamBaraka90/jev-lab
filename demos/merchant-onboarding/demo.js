@@ -105,6 +105,8 @@ function evaluate(answers, item) {
     reserveHeld: held,
     prohibitedMatch: answers.prohibited_match.noul >= 0.5,
     documentDoubt: answers.document_doubt.score,
+    approved: decision === 'APPROVE',
+    reviewed: decision === 'REVIEW',
     boarded: decision !== 'DECLINE',
     confidence: answers.decision.confidence,
     label: `${item.id} · ${readable(decision)} · ${readable(answers.risk_tier.choice)}${held ? ` · ${money(held)} held` : ''}`,
@@ -126,7 +128,7 @@ function report(results, context = {}) {
   return {
     note: `A hundred and forty applications. ${bad.length} of these merchants were a problem — ${labels.filter((label) => label.outcome === 'CHARGEBACK_HEAVY').length} went on to heavy chargebacks, ${labels.filter((label) => label.outcome === 'PROHIBITED').length} were never acceptable, ${labels.filter((label) => label.outcome === 'FRAUD').length} sent documents that do not hold up. ${context.note ?? ''}`,
     findings: findings(graded, byItem, good),
-    kpis: kpis({ bad, good, stopped, goodDeclined, graded, byItem }),
+    kpis: kpis({ good, goodDeclined, graded, byItem }),
     distribution: distribution(results),
     matrix: confusion(graded, byItem),
     curve: coverage(graded, byItem),
@@ -141,7 +143,10 @@ function exposure(graded, byItem) {
   const heavy = graded.filter((result) => byItem.get(result.item.id).outcome === 'CHARGEBACK_HEAVY');
   const boarded = heavy.filter((result) => result.evaluation.boarded);
   const declined = heavy.filter((result) => !result.evaluation.boarded);
+  const under = boarded.filter((result) => result.evaluation.reserveHeld < byItem.get(result.item.id).chargebacksLater);
   return {
+    under,
+    shortfall: Math.round(total(under.map((result) => byItem.get(result.item.id).chargebacksLater - result.evaluation.reserveHeld))),
     avoided: total(declined.map((result) => byItem.get(result.item.id).chargebacksLater)),
     faced: total(boarded.map((result) => byItem.get(result.item.id).chargebacksLater)),
     held: total(boarded.map((result) => result.evaluation.reserveHeld)),
@@ -150,17 +155,23 @@ function exposure(graded, byItem) {
   };
 }
 
-function kpis({ bad, good, stopped, goodDeclined, graded, byItem }) {
+function kpis({ good, goodDeclined, graded, byItem }) {
   const exposed = exposure(graded, byItem);
+  const neverAcceptable = graded.filter((result) => ['PROHIBITED', 'FRAUD'].includes(byItem.get(result.item.id).outcome));
+  const approvedAnyway = neverAcceptable.filter((result) => result.evaluation.approved);
+  const reviewed = graded.filter((result) => result.evaluation.reviewed);
+  const reviewedProblems = reviewed.filter((result) => byItem.get(result.item.id).outcome !== 'GOOD');
   const prohibited = graded.filter((result) => byItem.get(result.item.id).outcome === 'PROHIBITED');
   const prohibitedRight = prohibited.filter((result) => result.evaluation.prohibitedMatch && result.evaluation.tier === 'PROHIBITED');
   const wrongProhibited = good.filter((result) => result.evaluation.prohibitedMatch);
+
   return [
-    { label: 'Bad merchants stopped', value: `${stopped.length} of ${bad.length}`, context: 'declined before boarding', tone: stopped.length === bad.length ? 'good' : 'warn' },
+    { label: 'Never-acceptable merchants approved', value: `${approvedAnyway.length} of ${neverAcceptable.length}`, context: 'the prohibited activities and the forged files, which no reserve makes acceptable', tone: approvedAnyway.length ? 'warn' : 'good' },
     { label: 'Good merchants declined', value: `${goodDeclined.length} of ${good.length}`, context: `${money(total(goodDeclined.map((result) => result.item.expectedMonthlyVolume)))} of monthly volume turned away`, tone: goodDeclined.length ? 'warn' : 'good' },
     { label: 'Prohibited called exactly', value: `${prohibitedRight.length} of ${prohibited.length}`, context: wrongProhibited.length ? `${wrongProhibited.length} good merchants also called prohibited` : 'and no good merchant called prohibited', tone: prohibitedRight.length === prohibited.length && !wrongProhibited.length ? 'good' : 'warn' },
-    { label: 'Chargebacks avoided', value: money(exposed.avoided), context: `by declining ${exposed.declined} of the ${exposed.declined + exposed.boarded} merchants that later went bad`, tone: 'good' },
-    { label: 'Reserve against what was boarded', value: exposed.faced ? share(exposed.held, exposed.faced) : '–', context: `${money(exposed.held)} held against ${money(exposed.faced)} of chargebacks on ${exposed.boarded} boarded merchants`, tone: exposed.held >= exposed.faced ? 'good' : 'warn' },
+    { label: 'Reserve against what was not refused', value: exposed.faced ? share(exposed.held, exposed.faced) : '–', context: `${money(exposed.held)} held against ${money(exposed.faced)} of chargebacks on the ${exposed.boarded} that were not refused`, tone: exposed.held >= exposed.faced ? 'good' : 'warn' },
+    { label: 'Under-reserved', value: `${exposed.under.length} of ${exposed.boarded}`, context: exposed.shortfall ? `${money(exposed.shortfall)} more went out than was held on those` : 'every one of them was covered', tone: exposed.under.length ? 'warn' : 'good' },
+    { label: 'Sent to an underwriter', value: reviewed.length, context: `${share(reviewed.length, graded.length)} of the applications · ${reviewedProblems.length} of them were the problem files` },
   ];
 }
 
@@ -171,7 +182,10 @@ function checks(graded, byItem, labels) {
     const wrong = group.filter((label) => {
       const result = graded.find((entry) => entry.item.id === label.applicationId);
       if (!result) return true;
-      return label.outcome === 'GOOD' ? !result.evaluation.boarded : result.evaluation.boarded;
+      if (label.outcome === 'GOOD') return !result.evaluation.boarded;
+      // Taking a merchant that later went bad is only a mistake if too little was held back against it.
+      if (label.outcome === 'CHARGEBACK_HEAVY') return result.evaluation.boarded && result.evaluation.reserveHeld < label.chargebacksLater;
+      return result.evaluation.boarded;
     });
     return { id: kind.replaceAll(/[^a-z]+/gi, '-'), label: checkLabel(kind), detail: DETAIL[kind] ?? '', count: wrong.length, of: group.length, items: wrong.map((entry) => entry.applicationId) };
   });
@@ -181,7 +195,10 @@ function checks(graded, byItem, labels) {
   return [...rows, { id: 'ordinary', label: 'Ordinary merchants declined', detail: 'Small shops and services with paperwork in order and nothing to explain.', count: declined.length, of: ordinary.length, items: declined.map((result) => result.item.id) }];
 }
 
-const checkLabel = (kind) => (kind === 'looks risky, turned out fine' ? 'Good merchants that look risky, declined' : `${sentence(kind)}: boarded anyway`);
+const checkLabel = (kind) => ({
+  'looks risky, turned out fine': 'Good merchants that look risky, declined',
+  'went bad later': 'Went bad later: not refused, and too little held back',
+}[kind] ?? `${sentence(kind)}: not refused`);
 
 const DETAIL = {
   'went bad later': 'Long delivery promises, no returns, a young company and a volume expectation to match.',
@@ -227,14 +244,18 @@ function findings(graded, byItem, good) {
   const declinedDecoys = decoys.filter((result) => !result.evaluation.boarded);
   if (declinedDecoys.length >= 2) lines.push(`${declinedDecoys.length} of the ${decoys.length} merchants that look risky and were fine got refused: ${declinedDecoys.map((result) => `${result.item.id} (${result.item.category.toLowerCase()})`).join(', ')}. Every one of them answers the objection in its own file.`);
 
-  const boardedBad = graded.filter((result) => byItem.get(result.item.id).outcome !== 'GOOD' && result.evaluation.boarded);
-  if (boardedBad.length) {
-    const kinds = boardedBad.map((result) => readable(byItem.get(result.item.id).outcome));
-    lines.push(`${boardedBad.length} ${boardedBad.length === 1 ? 'merchant' : 'merchants'} that should not have been boarded were: ${[...new Set(kinds)].join(', ')}.`);
+  const neverAcceptable = graded.filter((result) => ['PROHIBITED', 'FRAUD'].includes(byItem.get(result.item.id).outcome) && result.evaluation.boarded);
+  if (neverAcceptable.length) {
+    const kinds = neverAcceptable.map((result) => readable(byItem.get(result.item.id).outcome));
+    lines.push(`${neverAcceptable.length} ${neverAcceptable.length === 1 ? 'merchant' : 'merchants'} no reserve makes acceptable were not refused: ${[...new Set(kinds)].join(', ')}. ${neverAcceptable.map((result) => result.item.id).join(', ')}.`);
   }
 
   const exposed = exposure(graded, byItem);
-  if (exposed.faced && exposed.held < exposed.faced) lines.push(`The reserves set against the boarded bad merchants cover ${share(exposed.held, exposed.faced)} of what they went on to cost: ${money(exposed.held)} held against ${money(exposed.faced)}.`);
+  if (exposed.faced) {
+    lines.push(exposed.held >= exposed.faced
+      ? `The merchants that went bad were boarded, and the reserves set on them cover ${share(exposed.held, exposed.faced)} of what they went on to cost: ${money(exposed.held)} held against ${money(exposed.faced)}. Underwriting is pricing, not refusing.`
+      : `The reserves set against the boarded bad merchants cover ${share(exposed.held, exposed.faced)} of what they went on to cost: ${money(exposed.held)} held against ${money(exposed.faced)}.`);
+  }
   return lines;
 }
 
@@ -259,7 +280,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'table',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.tradingName} · ${item.category.toLowerCase()}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

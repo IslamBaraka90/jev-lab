@@ -79,16 +79,42 @@ test('the reserve is money, and a decline holds none of it', () => {
   assert.equal(declined.reserveHeld, 0);
 });
 
-test('a perfect run stops every bad merchant and boards every good one', async () => {
+test('a perfect run refuses what cannot be priced and boards every good merchant', async () => {
   const { results } = await runDemo(demo, { dataset, ask: perfect });
   const report = demo.report(results, { ...context, labels });
 
-  assert.equal(kpi(report, 'Bad merchants stopped').value, '22 of 22');
+  assert.equal(kpi(report, 'Never-acceptable merchants approved').value, '0 of 11', 'the six prohibited and the five forged files');
   assert.equal(kpi(report, 'Good merchants declined').value, '0 of 118');
   assert.equal(kpi(report, 'Prohibited called exactly').value, '6 of 6');
-  assert.match(kpi(report, 'Chargebacks avoided').value, /£414,610|£414,6\d\d/);
+  assert.equal(kpi(report, 'Under-reserved').value, '0 of 0', 'nothing that went bad got past the decline');
   assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0]);
   assert.deepEqual(report.findings, []);
+});
+
+test('taking a merchant that goes bad is judged by the reserve, not by the refusal', async () => {
+  // Board all eleven: with a rolling hold the file is covered, with nothing held it is not.
+  const run = (reserve) => runDemo(demo, {
+    dataset,
+    ask: ({ item: entry }) => {
+      const label = planted.get(entry.id);
+      const never = ['PROHIBITED', 'FRAUD'].includes(label.outcome);
+      return { answers: answerFor({ tier: never ? 'PROHIBITED' : 'MEDIUM', decision: never ? 'DECLINE' : 'APPROVE', reserve: label.outcome === 'CHARGEBACK_HEAVY' ? reserve : 'NONE' }) };
+    },
+  });
+
+  const covered = demo.report((await run('ROLLING_HOLD')).results, { ...context, labels });
+  const bare = demo.report((await run('NONE')).results, { ...context, labels });
+  const under = (report) => report.checks.find((check) => check.id === 'went-bad-later').count;
+
+  // A rolling hold does not cover every one of them — the worst cost more than a third of a month —
+  // but across the eleven it holds back more than they took, which is what a reserve is for.
+  assert.ok(under(covered) < 6 && under(covered) > 0, `${under(covered)} of eleven still short`);
+  assert.equal(Number.parseFloat(kpi(covered, 'Reserve against what was not refused').value) >= 100, true);
+  assert.ok(covered.findings.some((line) => /Underwriting is pricing, not refusing/.test(line)));
+
+  assert.equal(under(bare), 11);
+  assert.equal(kpi(bare, 'Under-reserved').value, '11 of 11');
+  assert.match(kpi(bare, 'Under-reserved').context, /more went out than was held/);
 });
 
 test('boarding everyone shows the cost in money, not just in counts', async () => {
@@ -98,9 +124,9 @@ test('boarding everyone shows the cost in money, not just in counts', async () =
   });
   const report = demo.report(results, { ...context, labels });
 
-  assert.equal(kpi(report, 'Bad merchants stopped').value, '0 of 22');
-  assert.equal(kpi(report, 'Reserve against what was boarded').value, '0%');
-  assert.ok(report.findings.some((line) => /should not have been boarded/.test(line)));
+  assert.equal(kpi(report, 'Never-acceptable merchants approved').value, '11 of 11');
+  assert.equal(kpi(report, 'Reserve against what was not refused').value, '0%');
+  assert.ok(report.findings.some((line) => /no reserve makes acceptable were not refused/.test(line)));
   assert.ok(report.findings.some((line) => /cover 0%/.test(line)));
 });
 
