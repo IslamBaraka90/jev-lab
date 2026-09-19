@@ -46,6 +46,7 @@ import newsImpact from './news-impact/demo.js';
 import filingsRead from './filings-read/demo.js';
 import rumourGrading from './rumour-grading/demo.js';
 import eventClustering from './event-clustering/demo.js';
+import entityLinks from './entity-links/demo.js';
 import regimeClassification from './regime-classification/demo.js';
 import goldenCrossReview from './golden-cross-review/demo.js';
 import strategyCorrelation from './strategy-correlation/demo.js';
@@ -111,6 +112,7 @@ export const DEMOS = [
   filingsRead,
   rumourGrading,
   eventClustering,
+  entityLinks,
   goldenCrossReview,
   regimeClassification,
   strategyCorrelation,

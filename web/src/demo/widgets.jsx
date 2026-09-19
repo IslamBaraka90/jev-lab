@@ -305,6 +305,7 @@ export function ReportPanel({ report, onSelect }) {
       {report.yieldSafety && <DividendSafetyScatter chart={report.yieldSafety} rows={report.dividendRows} />}
       {report.peerSets?.length > 0 && <PeerValuationReport sets={report.peerSets} />}
       {report.eventClusters && <EventClusterReport clusters={report.eventClusters} />}
+      {report.entityNetwork && <EntityNetworkReport network={report.entityNetwork} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
@@ -413,6 +414,11 @@ function PeerValuationReport({ sets }) {
 
 function EventClusterReport({ clusters }) {
   return <div className="stack event-cluster-report" style={{ gap: 10 }}><h4>Raw feed → clustered feed</h4><p className="meta">{clusters.before} headlines before · {clusters.after} clusters after</p><div className="table-scroll"><table className="data-table compact"><thead><tr><th>Cluster’s reading source</th><th>Primary outlet</th><th className="num">Headlines</th><th className="num">Adding information</th></tr></thead><tbody>{clusters.rows.map((row) => <tr key={row.id}><th scope="row">{row.title}</th><td>{row.primary}</td><td className="num">{row.size}</td><td className="num">{row.informative}</td></tr>)}</tbody></table></div></div>;
+}
+
+function EntityNetworkReport({ network }) {
+  const names = new Map(network.nodes.map((node) => [node.id, node.name]));
+  return <div className="stack entity-network-report" style={{ gap: 10 }}><h4>Answer-built contagion view</h4><p className="meta">{network.edges.length} active sufficient edges · {network.paths.length} directed two-step paths. Labels are not used to build this view.</p><div className="table-scroll"><table className="data-table compact"><thead><tr><th>From</th><th>Relationship</th><th>To</th><th className="num">Strength</th><th>Contagion</th></tr></thead><tbody>{network.edges.slice(0, 100).map((edge) => <tr key={edge.id}><td>{names.get(edge.from)}</td><td>{edge.relationship.toLowerCase().replaceAll('_', ' ')}</td><td>{names.get(edge.to)}</td><td className="num">{edge.strength.toFixed(1)} / 6</td><td>{edge.contagion ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div><details><summary>Two-step paths</summary><div className="table-scroll details-content"><table className="data-table compact"><thead><tr><th>From</th><th>Via</th><th>Two steps away</th></tr></thead><tbody>{network.paths.slice(0, 100).map((path, index) => <tr key={`${path.from}-${path.via}-${path.to}-${index}`}><td>{names.get(path.from)}</td><td>{names.get(path.via)}</td><td>{names.get(path.to)}</td></tr>)}</tbody></table></div></details></div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {
