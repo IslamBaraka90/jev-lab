@@ -17,5 +17,18 @@ the published delivery window; no precomputed invalid-scan field enters the mode
 
 ## Recorded run
 
-Pending. This section will be replaced after all 250 Jev responses are cached.
+All 250 responses were recorded on 2026-09-19 with `jev-1.13.0` and cached in `fixtures.json`. The
+run used 385,408 input tokens and 42,710 output tokens. Every shipment ID has all four answers; there
+are no missing, extra or malformed records.
 
+The model assigned the planted primary fault correctly on all 250 shipments (100%) and called
+exactly 14 cases unclear, matching the 14 genuinely unclear labels. It caught all ten invalid
+depot/night attempt scans as courier faults and all eleven linked cash-on-delivery refusals as
+customer refusals. Preventability agreed on 178 of 250 shipments (71.2%), and the model-attributed
+avoidable failed-attempt cost was $3,787.50 of $4,195.00 total failed-attempt cost.
+
+Next-action accuracy was 117 of 250 (46.8%). The largest disagreements were 73 packets where the
+policy expected pickup rerouting but the model preferred contacting the customer, and 45 where the
+policy expected a courier retry but the model preferred pickup. Only six of the eleven correctly
+identified refusal cases were returned to sender. These policy-action differences remain in the
+fixture and report rather than being relabelled after recording.

@@ -184,7 +184,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.shipment.courier} · ${item.address.city}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

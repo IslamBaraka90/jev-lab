@@ -17,7 +17,7 @@ Work out who caused a failed delivery, and what to do with the parcel next.
 
 - `demos/delivery-exceptions/data.json` — 250 failed or delayed shipments. Each: tracking events with timestamps and scan locations, address text with quality problems (missing floor, ambiguous district, wrong postcode), phone contact attempts, courier notes, previous deliveries to the same address, weather or outage context.
 - Planted: 38 address-quality failures, 22 customer-unavailable cases, 19 courier-side failures (misrouted, never attempted despite the scan), 11 refusals that are really COD abuse, and 14 where the cause is genuinely unclear.
-- Labels: `{ shipmentId, fault, bestAction }`.
+- Labels: `{ shipmentId, fault, bestAction, addressQuality, preventable, kind, avoidableCost, neverAttemptedScan }`.
 
 ## State
 
@@ -44,9 +44,9 @@ Standard demo folder plus `scripts/generate/delivery-exceptions.js`.
 
 Template list, plus:
 
-- [ ] The "never attempted despite the scan" cases are detectable from timestamps alone.
-- [ ] The unclear share is reported, not hidden, and compared with the planted count.
-- [ ] Avoidable cost uses a cost-per-attempt value that is visible in the state.
+- [x] The "never attempted despite the scan" cases are detectable from timestamps alone.
+- [x] The unclear share is reported, not hidden, and compared with the planted count.
+- [x] Avoidable cost uses a cost-per-attempt value that is visible in the state.
 
 ## Video beats
 
@@ -57,3 +57,7 @@ Template list, plus:
 ## Notes
 
 This closes the orders block and hands over to fraud; the COD refusals here are the same customers as 112, so the two demos can be shown back to back.
+
+Implemented and recorded on 2026-09-19 with `jev-1.13.0`: 250 of 250 shipment responses cached,
+100% fault accuracy, and 46.8% next-action accuracy. The exact policy disagreements are preserved in
+`demos/delivery-exceptions/notes.md`.
