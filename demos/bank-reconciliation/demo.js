@@ -234,7 +234,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'table',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.statement.direction === 'INFLOW' ? '+' : '−'}${money(item.statement.amount, item.statement.currency)} · ${item.statement.description}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

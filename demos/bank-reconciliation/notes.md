@@ -69,7 +69,14 @@ net reconciliation equation on every partial or complete run:
 
 `opening balance + pre-cleared net + auto-cleared net + remaining net = statement closing balance`
 
-## Recording status
+## What the recorded run found
 
-Answers have not been recorded. The committed fixture is intentionally empty, the page is marked
-`pending-recording`, and no API request is needed to build, test or inspect the demo.
+All 60 items were recorded on 19 September 2026 with `jev-1.13.0`: 103,814 input tokens and 12,298
+output tokens.
+
+- All 60 planted problems were resolved with both the intended ledger entry and break reason.
+- All 13 messy-but-valid matches cleared automatically at the 4-of-6 quality threshold: a 22%
+  auto-clear rate with 100% precision.
+- No valid messy match became a false alarm, and no incorrect line was sent through auto-clear.
+- The remaining 47 statement lines represent $190,466.32 of gross human workload.
+- The report reconciles exactly to the $256,894.94 statement close, with a zero difference.
