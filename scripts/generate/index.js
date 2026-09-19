@@ -51,6 +51,7 @@ export const GENERATORS = {
   'news-impact': () => import('./news-impact.js'),
   'filings-read': () => import('./filings-read.js'),
   'rumour-grading': () => import('./rumour-grading.js'),
+  'golden-cross-review': () => import('./golden-cross-review.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

@@ -767,3 +767,11 @@
 }
 .document-view .document-body.muted { color: var(--muted); }
 .document-view .document-prior summary { cursor: pointer; color: var(--muted); font-size: 0.85rem; padding: var(--s4) 0; }
+
+/* Two equity curves on one set of axes: every signal against the ones a filter kept. */
+.report-line.compare { stroke: var(--accent2, #8b5cf6); stroke-dasharray: 5 3; }
+.equity-legend { display: flex; gap: var(--s16); align-items: center; }
+.equity-legend span { display: inline-flex; align-items: center; gap: var(--s8); }
+.equity-legend .legend-line { display: inline-block; width: 18px; height: 2px; }
+.equity-legend .series-key { background: var(--accent, currentColor); }
+.equity-legend .compare-key { background: var(--accent2, #8b5cf6); }

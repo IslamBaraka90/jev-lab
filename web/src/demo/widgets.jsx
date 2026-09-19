@@ -309,17 +309,50 @@ function CostBars({ items }) {
   return <div className="stack" style={{ gap: 8 }}><h4>Estimated cost by habit</h4><ul className="cost-bars">{items.map((item) => <li key={item.label}><span>{item.label}</span><span className="cost-track"><i style={{ width: `${Math.max(2, item.value / max * 100)}%` }} /></span><strong className="num">{item.value.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}</strong><small className="meta">{item.count} days</small></li>)}</ul></div>;
 }
 
+/**
+ * One equity curve, or two on the same axes when the points carry a `compare` value — which is how a
+ * demo shows "every signal" against "only the ones it kept" without the two being scaled differently.
+ */
 function EquityCurve({ chart }) {
   const width = 760;
   const height = 220;
-  const values = chart.points.map((point) => point.value);
+  const compared = chart.points.some((point) => typeof point.compare === 'number');
+  const values = chart.points.flatMap((point) => (compared ? [point.value, point.compare] : [point.value]));
   const min = Math.min(...values);
   const max = Math.max(...values);
   const span = Math.max(max - min, 1);
   const x = (index) => 54 + index / Math.max(chart.points.length - 1, 1) * (width - 76);
   const y = (value) => 18 + (max - value) / span * (height - 52);
-  const path = chart.points.map((point, index) => `${index ? 'L' : 'M'}${x(index).toFixed(1)},${y(point.value).toFixed(1)}`).join('');
-  return <div className="stack" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="behaviour-report-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.filter((point) => point.flagged).length} flagged days among ${chart.points.length}.`}><line className="report-axis" x1="54" y1={height - 30} x2={width - 22} y2={height - 30} /><path className="report-line" d={path} />{chart.points.map((point, index) => point.flagged && <circle key={point.id} className="report-flag" cx={x(index)} cy={y(point.value)} r="3.5"><title>{`${point.label}: ${point.value.toLocaleString('en-US')} · ${point.pattern}`}</title></circle>)}<text className="report-axis-text" x="54" y={height - 9}>Trading days · flagged days are marked</text></svg><details><summary>Equity curve as a table</summary><div className="table-scroll details-content"><table className="data-table compact"><thead><tr><th>Date</th><th className="num">Equity</th><th>Jev flag</th></tr></thead><tbody>{chart.points.map((point) => <tr key={point.id}><th scope="row">{point.label}</th><td className="num">{point.value.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}</td><td>{point.flagged ? point.pattern : 'None'}</td></tr>)}</tbody></table></div></details></div>;
+  const line = (pick) => chart.points.map((point, index) => `${index ? 'L' : 'M'}${x(index).toFixed(1)},${y(pick(point)).toFixed(1)}`).join('');
+  const money = (value) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  return (
+    <div className="stack" style={{ gap: 8 }}>
+      <h4>{chart.title}</h4>
+      <svg className="behaviour-report-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${compared ? `Two curves over ${chart.points.length} events; the table below carries both.` : `${chart.points.filter((point) => point.flagged).length} flagged days among ${chart.points.length}.`}`}>
+        <line className="report-axis" x1="54" y1={height - 30} x2={width - 22} y2={height - 30} />
+        <path className="report-line" d={line((point) => point.value)} />
+        {compared && <path className="report-line compare" d={line((point) => point.compare)} />}
+        {chart.points.map((point, index) => point.flagged && <circle key={point.id} className="report-flag" cx={x(index)} cy={y(compared ? point.compare : point.value)} r="3.5"><title>{`${point.label}: ${(compared ? point.compare : point.value).toLocaleString('en-US')} · ${point.pattern}`}</title></circle>)}
+        <text className="report-axis-text" x="54" y={height - 9}>{compared ? `${chart.seriesLabel} against ${chart.compareLabel} · marked where the second one traded` : 'Trading days · flagged days are marked'}</text>
+      </svg>
+      {compared && (
+        <p className="meta equity-legend">
+          <span><i className="legend-line series-key" />{chart.seriesLabel}</span>
+          <span><i className="legend-line compare-key" />{chart.compareLabel}</span>
+        </p>
+      )}
+      <details>
+        <summary>Equity curve as a table</summary>
+        <div className="table-scroll details-content">
+          <table className="data-table compact">
+            <thead><tr><th>Date</th><th className="num">{compared ? chart.seriesLabel : 'Equity'}</th>{compared && <th className="num">{chart.compareLabel}</th>}<th>Jev flag</th></tr></thead>
+            <tbody>{chart.points.map((point) => <tr key={point.id}><th scope="row">{point.label}</th><td className="num">{money(point.value)}</td>{compared && <td className="num">{money(point.compare)}</td>}<td>{point.flagged ? point.pattern : 'None'}</td></tr>)}</tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+  );
 }
 
 function SizeScatter({ chart }) {
