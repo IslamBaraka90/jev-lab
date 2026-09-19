@@ -33,6 +33,7 @@ export const GENERATORS = {
   'mixer-tracing': () => import('./mixer-tracing.js'),
   'sybil-clusters': () => import('./sybil-clusters.js'),
   'portfolio-health': () => import('./portfolio-health.js'),
+  'rebalance-review': () => import('./rebalance-review.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

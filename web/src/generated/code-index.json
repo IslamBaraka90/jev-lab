@@ -475,6 +475,34 @@
     "code": "/** Graded against the problem each portfolio was built to carry, one risk per book. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.portfolioId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const withRisk = graded.filter((result) => byItem.get(result.item.id).plantedRisk !== 'NONE');\n  const healthy = graded.filter((result) => byItem.get(result.item.id).plantedRisk === 'NONE');\n  const named = withRisk.filter((result) => result.evaluation.risk === byItem.get(result.item.id).plantedRisk);\n\n  return {\n    note: `Twenty-four portfolios, ${withRisk.length} built to carry one problem each and ${healthy.length} built to carry none. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, healthy),\n    kpis: kpis({ graded, withRisk, healthy, named, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, withRisk),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/rebalance-review/demo.js#demo:state": {
+    "path": "demos/rebalance-review/demo.js",
+    "startLine": 23,
+    "endLine": 49,
+    "code": "/** The trade, the position it moves, and everything the rebalancer did not know when it proposed it. */\nfunction buildState(item, context) {\n  const account = context.accounts.find((entry) => entry.id === item.accountId);\n  return {\n    task: 'Review this proposed trade: approve it, resize it, defer it or reject it, and say what the problem is if there is one.',\n    desk: { manager: context.manager, prices_as_of: context.pricesAsOf, rules: context.rules, tolerance: context.tolerance, note: context.note },\n    account: { id: account.id, name: account.name, taxable: account.taxable, mandate: account.mandate },\n    trade: {\n      symbol: item.symbol,\n      side: item.side,\n      shares: item.shares,\n      value_usd: item.valueUsd,\n      price: item.price,\n    },\n    position: {\n      weight_now_percent: item.currentWeightPercent,\n      target_percent: item.targetWeightPercent,\n      weight_after_this_trade_percent: item.weightAfterPercent,\n    },\n    liquidity: {\n      average_daily_volume_shares: item.averageDailyVolume,\n      this_trade_as_share_of_that_percent: item.shareOfAverageVolumePercent,\n    },\n    history_in_this_name: item.recentTradesInThisName,\n    same_name_in_another_account_today: item.sameNameOtherAccountToday,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/rebalance-review/demo.js#demo:questions": {
+    "path": "demos/rebalance-review/demo.js",
+    "startLine": 53,
+    "endLine": 81,
+    "code": "const questions = {\n  verdict: choice('What happens to this trade?', {\n    APPROVE: 'Send it as proposed.',\n    RESIZE: 'The trade is right and the size is not.',\n    DEFER: 'Not today. It needs a date, a netting, or a person.',\n    REJECT: 'Do not do this trade at all.',\n  }),\n  size_band: choice('If it goes, how much of it goes?', {\n    AS_PROPOSED: 'The whole thing, as it stands.',\n    HALF: 'Half now.',\n    QUARTER: 'A quarter now.',\n    SPLIT_OVER_DAYS: 'Broken into pieces across several days.',\n  }),\n  issue: choice('What is wrong with it, if anything?', {\n    LIQUIDITY: 'It is too large a share of what this instrument trades in a day.',\n    TAX_LOT: 'It realises a loss the account cannot use, or repurchases too soon after one.',\n    CROSSING: 'Another account is trading the same name the other way today.',\n    TOO_SMALL: 'It costs more to do than the drift it corrects is worth.',\n    MANDATE_CONFLICT: 'It undoes something the mandate asked for on purpose.',\n    NONE: 'Nothing. It does what a rebalance is for.',\n  }),\n  execution_risk: score('How hard would this trade be to do well?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Severe',\n  ]),\n  needs_pm_sign_off: noul('Does a portfolio manager need to see this before it goes?', {\n    yes: 'Something here is a judgement the desk should not make alone.',\n    no: 'It is inside the rules as written.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/rebalance-review/demo.js#demo:evaluate": {
+    "path": "demos/rebalance-review/demo.js",
+    "startLine": 85,
+    "endLine": 103,
+    "code": "/** The verdict, and the order it turns into if there is one. */\nfunction evaluate(answers, item) {\n  const verdict = answers.verdict.choice;\n  const band = answers.size_band.choice;\n  const fraction = { AS_PROPOSED: 1, HALF: 0.5, QUARTER: 0.25, SPLIT_OVER_DAYS: 1 }[band];\n  const goes = verdict === 'APPROVE' || verdict === 'RESIZE';\n\n  return {\n    verdict,\n    issue: answers.issue.choice,\n    band,\n    executionRisk: answers.execution_risk.score,\n    needsSignOff: answers.needs_pm_sign_off.noul >= 0.5,\n    goes,\n    orderValue: goes ? Math.round(item.valueUsd * fraction) : 0,\n    confidence: answers.verdict.confidence,\n    label: `${item.id} · ${item.side.toLowerCase()} ${item.symbol} · ${readable(verdict)}${goes && band !== 'AS_PROPOSED' ? ` (${readable(band)})` : ''}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/rebalance-review/demo.js#demo:report": {
+    "path": "demos/rebalance-review/demo.js",
+    "startLine": 107,
+    "endLine": 126,
+    "code": "/** What survived the review, and whether the things that should not have survived did. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.tradeId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const problems = graded.filter((result) => byItem.get(result.item.id).issue !== 'NONE');\n  const clean = graded.filter((result) => byItem.get(result.item.id).issue === 'NONE');\n  const caught = problems.filter((result) => result.evaluation.verdict !== 'APPROVE');\n\n  return {\n    note: `Two hundred proposed trades across six accounts, ${problems.length} of them carrying something the rebalancer could not see. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, clean),\n    kpis: kpis({ graded, problems, clean, caught, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, problems),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/sanctions-name-match/demo.js#demo:state": {
     "path": "demos/sanctions-name-match/demo.js",
     "startLine": 12,
@@ -732,6 +760,13 @@
     "startLine": 121,
     "endLine": 139,
     "code": "/** One holding: an invented weight over a real instrument, with that instrument's own numbers. */\nfunction holdingOf(symbol, weight, total) {\n  const shape = profile(symbol);\n  const value = round((weight / 100) * total);\n  return {\n    symbol,\n    name: shape.industry ?? shape.sector ?? symbol,\n    sector: shape.sector ?? 'Other',\n    assetClass: assetClassOf(symbol),\n    currency: shape.currency,\n    weightPercent: round(weight, 1),\n    valueUsd: value,\n    price: last(symbol).price,\n    twelveMonthReturnPercent: returnOver(symbol),\n    volatilityPercent: volatility(symbol),\n    worstFallPercent: drawdown(symbol),\n    daysOfAverageVolume: round(value / last(symbol).price / Math.max(averageVolume(symbol), 1), 3),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/rebalance-review.js#demo:data": {
+    "path": "scripts/generate/rebalance-review.js",
+    "startLine": 76,
+    "endLine": 100,
+    "code": "/** One proposed trade, with the position around it and what the instrument can absorb. */\nfunction trade(random, { account, symbol, side, valueUsd, currentPercent, targetPercent, recentTrades = [], sameNameOtherAccount = null, mandateNote = null }) {\n  const price = last(symbol).price;\n  const shares = Math.round(valueUsd / price);\n  const volume = Math.max(averageVolume(symbol), 1);\n  return {\n    key: `${account.id}-${symbol}-${random.int(100_000, 999_999)}`,\n    id: null,\n    accountId: account.id,\n    accountTaxable: account.taxable,\n    symbol,\n    side,\n    shares,\n    valueUsd: round(valueUsd),\n    price,\n    currentWeightPercent: round(currentPercent, 2),\n    targetWeightPercent: round(targetPercent, 2),\n    weightAfterPercent: round(currentPercent + (side === 'BUY' ? 1 : -1) * (valueUsd / account.valueUsd) * 100, 2),\n    shareOfAverageVolumePercent: round((shares / volume) * 100, 2),\n    averageDailyVolume: volume,\n    recentTradesInThisName: recentTrades,\n    sameNameOtherAccountToday: sameNameOtherAccount,\n    mandateNote,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/sanctions-name-match.js#demo:data": {

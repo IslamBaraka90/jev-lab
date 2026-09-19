@@ -23,6 +23,7 @@ import walletRisk from './wallet-risk/demo.js';
 import mixerTracing from './mixer-tracing/demo.js';
 import sybilClusters from './sybil-clusters/demo.js';
 import portfolioHealth from './portfolio-health/demo.js';
+import rebalanceReview from './rebalance-review/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -62,6 +63,7 @@ export const DEMOS = [
   mixerTracing,
   sybilClusters,
   portfolioHealth,
+  rebalanceReview,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
