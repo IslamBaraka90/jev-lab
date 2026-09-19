@@ -2,6 +2,7 @@ import { LedgerView } from './LedgerView.jsx';
 import { QueueView } from './QueueView.jsx';
 import { TableView } from './TableView.jsx';
 import { TimelineView } from './TimelineView.jsx';
+import { ComparisonView } from './ComparisonView.jsx';
 
 // How an item is drawn on the stage. A demo names one in its definition; anything unknown falls back
 // to the plain field table, so a new demo always renders something.
@@ -11,6 +12,7 @@ export const VIEWS = {
   ledger: LedgerView,
   queue: QueueView,
   timeline: TimelineView,
+  comparison: ComparisonView,
 };
 
 export function ItemView({ view, ...props }) {

@@ -363,6 +363,34 @@
     "code": "/** Grades both costs at once: the fraud that got through, and the good orders that were turned away. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.orderId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const fraud = graded.filter((result) => byItem.get(result.item.id).fraud);\n  const good = graded.filter((result) => !byItem.get(result.item.id).fraud);\n  const stopped = fraud.filter((result) => result.evaluation.stopped);\n  const named = fraud.filter((result) => result.evaluation.pattern === byItem.get(result.item.id).pattern);\n  const falseDeclines = good.filter((result) => result.evaluation.declined);\n\n  return {\n    note: `Three hundred orders, ${labels.filter((label) => label.fraud).length} of them fraud and ${labels.filter((label) => label.kind === 'decoy').length} good orders built to look worse than the fraud. ${context.fraudRateNote ?? ''}`,\n    findings: findings(graded, byItem, good),\n    kpis: kpis({ fraud, stopped, named, falseDeclines, good, graded, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, fraud),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/sanctions-name-match/demo.js#demo:state": {
+    "path": "demos/sanctions-name-match/demo.js",
+    "startLine": 12,
+    "endLine": 20,
+    "code": "/** Sends both complete records, the engine score and the fictional matching policy; never the label. */\nfunction buildState(item, context) {\n  return {\n    task: 'Compare the two identity records and choose a defensible screening disposition.',\n    fictional_notice: context.fictionalNotice,\n    matching_rules: context.matchingRules,\n    candidate_pair: item,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sanctions-name-match/demo.js#demo:questions": {
+    "path": "demos/sanctions-name-match/demo.js",
+    "startLine": 24,
+    "endLine": 35,
+    "code": "const questions = {\n  same_entity: noul('Are the customer and the fictional list entry the same person?', { yes: 'The available fields support one identity.', no: 'The records are different people.' }),\n  deciding_evidence: choice('Which field should settle this candidate?', {\n    DATE_OF_BIRTH: 'The date or age difference is decisive.', NATIONALITY: 'Nationality or country evidence is decisive.', ADDRESS: 'The address evidence is decisive.',\n    IDENTIFIER: 'An identifier fragment confirms or contradicts identity.', NAME_FORM_ONLY: 'Only the spelling or transliteration supports the hit.', INSUFFICIENT: 'Material fields are missing, so the candidate cannot be settled.',\n  }),\n  match_strength: score('How strong is the identity match?', ['No resemblance', 'Weak', 'Possible', 'Likely', 'Strong', 'Very strong', 'Identical']),\n  disposition: choice('What should happen to this fictional screening candidate?', {\n    CLEAR: 'Clear the false positive.', REVIEW: 'Hold for more identity evidence.', CONFIRM: 'Keep the candidate as a confirmed identity match.',\n  }),\n  needs_more_data: noul('Is more identity data needed before this candidate can be settled?', { yes: 'The current record is materially incomplete.', no: 'The visible evidence is sufficient.' }),\n};",
+    "language": "javascript"
+  },
+  "demos/sanctions-name-match/demo.js#demo:evaluate": {
+    "path": "demos/sanctions-name-match/demo.js",
+    "startLine": 39,
+    "endLine": 53,
+    "code": "/** Turns the five answers into one identity call while preserving an explicit insufficient outcome. */\nfunction evaluate(answers, item) {\n  const probability = answers.same_entity.noul;\n  const disposition = answers.disposition.choice;\n  return {\n    flagged: disposition !== 'CLEAR',\n    sameEntityProbability: probability,\n    predictedSame: probability >= 0.5,\n    decidingEvidence: answers.deciding_evidence.choice,\n    matchStrength: answers.match_strength.score,\n    disposition,\n    needsMoreData: answers.needs_more_data.noul >= 0.5,\n    label: `${item.id}: ${readable(disposition)} · ${probability >= 0.5 ? 'same identity' : 'different identity'}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sanctions-name-match/demo.js#demo:report": {
+    "path": "demos/sanctions-name-match/demo.js",
+    "startLine": 57,
+    "endLine": 86,
+    "code": "/** Grades true matches, false positives and legitimate deferrals without turning uncertainty into an error. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const intended = new Map(labels.map((label) => [label.pairId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const sufficient = graded.filter((result) => intended.get(result.item.id).decidingField !== 'INSUFFICIENT');\n  const insufficient = graded.filter((result) => intended.get(result.item.id).decidingField === 'INSUFFICIENT');\n  const trueMatches = sufficient.filter((result) => intended.get(result.item.id).sameEntity);\n  const falseMatches = sufficient.filter((result) => !intended.get(result.item.id).sameEntity);\n  const correctIdentity = sufficient.filter((result) => result.evaluation.predictedSame === intended.get(result.item.id).sameEntity);\n  const kept = trueMatches.filter((result) => result.evaluation.disposition === 'CONFIRM');\n  const cleared = falseMatches.filter((result) => result.evaluation.disposition === 'CLEAR');\n  const deferred = insufficient.filter((result) => result.evaluation.decidingEvidence === 'INSUFFICIENT' && result.evaluation.disposition === 'REVIEW');\n  const evidenceRight = graded.filter((result) => result.evaluation.decidingEvidence === intended.get(result.item.id).decidingField);\n\n  return {\n    note: `${graded.length} candidates against a wholly fictional list. Illustrative only; never a screening decision.`,\n    kpis: [\n      { label: 'Identity accuracy', value: share(correctIdentity.length + deferred.length, graded.length), context: `${correctIdentity.length} sufficient calls plus ${deferred.length} correct deferrals` },\n      { label: 'True matches kept', value: share(kept.length, trueMatches.length), context: `${kept.length} of ${trueMatches.length}`, tone: kept.length === trueMatches.length ? 'good' : 'warn' },\n      { label: 'False positives cleared', value: share(cleared.length, falseMatches.length), context: `${cleared.length} of ${falseMatches.length}` },\n      { label: 'Deciding evidence', value: share(evidenceRight.length, graded.length), context: `${evidenceRight.length} of ${graded.length} fields` },\n    ],\n    distribution: DISPOSITIONS.map((value) => ({ label: value, count: graded.filter((result) => result.evaluation.disposition === value).length, tone: value === 'CLEAR' ? 'good' : value === 'REVIEW' ? 'warn' : 'bad' })),\n    matrix: identityMatrix(graded, intended),\n    checks: causeChecks(graded, intended),\n    topItems: graded.filter((result) => result.evaluation.needsMoreData).slice(0, 12).map((result) => ({ id: result.item.id, label: `${result.item.customer.name} · more data requested`, value: readable(result.evaluation.decidingEvidence) })),\n    insufficient: { correct: deferred.length, total: insufficient.length },\n  };\n}",
+    "language": "javascript"
+  },
   "demos/three-way-match/demo.js#demo:state": {
     "path": "demos/three-way-match/demo.js",
     "startLine": 19,
@@ -508,6 +536,13 @@
     "startLine": 88,
     "endLine": 122,
     "code": "/** One checkout, with the signals a payments team actually has when the order lands. */\nfunction order(random, { placedAt, basket, tenureDays, priorOrders, priorChargebacks = 0, priorRefunds = 0, connectionCountry = HOME, billingCountry = HOME, shippingCountry = HOME, binCountry = billingCountry, newShippingAddress = false, deviceIsNew = false, ordersFromThisDeviceToday = 1, deviceDistinctCards = 1, accountChangedHoursAgo = null, checkoutSeconds, coupon = null, giftMessage = false, shippingLine1, billingName }) {\n  const total = round(basket.reduce((sum, line) => sum + line.unitPrice * line.quantity, 0));\n  return {\n    key: `${placedAt}-${random.int(100_000, 999_999)}`,\n    id: null,\n    placedAt,\n    total,\n    itemCount: basket.reduce((sum, line) => sum + line.quantity, 0),\n    customerTenureDays: tenureDays,\n    priorOrders,\n    priorChargebacks,\n    connectionCountry,\n    billingCountry,\n    shippingCountry,\n    newShippingAddress,\n    ordersFromThisDeviceToday,\n    checkoutSeconds,\n    basket,\n    priorRefunds,\n    lifetimeValue: round(priorOrders * random.float(38, 210)),\n    accountChangedHoursAgo,\n    card: cardMask(random),\n    binCountry,\n    deviceId: `DEV-${random.int(100_000, 999_999)}`,\n    deviceIsNew,\n    deviceDistinctCards,\n    billingName: billingName ?? personName(random),\n    billingCity: cityName(random),\n    shippingCity: cityName(random),\n    shippingLine1: shippingLine1 ?? streetAddress(random),\n    coupon,\n    giftMessage,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/sanctions-name-match.js#demo:data": {
+    "path": "scripts/generate/sanctions-name-match.js",
+    "startLine": 162,
+    "endLine": 171,
+    "code": "const item = {\n  id: pairId,\n  notice: NOTICE,\n  customer,\n  listEntry,\n  screeningEngine: {\n    fuzzyNameScore: Number(random.float(scoreBase - 0.035, scoreBase + 0.025, 3)),\n    generatedCandidateBecause: 'The normalised customer name resembled the primary name or an alias.',\n  },\n};",
     "language": "javascript"
   },
   "scripts/generate/three-way-match.js#demo:data": {

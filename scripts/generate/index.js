@@ -26,6 +26,7 @@ export const GENERATORS = {
   'card-fraud-triage': () => import('./card-fraud-triage.js'),
   'account-takeover': () => import('./account-takeover.js'),
   'aml-alert-triage': () => import('./aml-alert-triage.js'),
+  'sanctions-name-match': () => import('./sanctions-name-match.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
@@ -35,7 +36,7 @@ export async function generate(slug) {
   if (!generator) throw new Error(`No generator for "${slug}". Known: ${Object.keys(GENERATORS).join(', ')}`);
 
   const { generate: build, SEED } = await generator();
-  const { dataset, labels } = build(SEED);
+  const { dataset, labels, artifacts = [] } = build(SEED);
   assertDataset(dataset, `${slug} dataset`);
   if (dataset.id !== slug) throw new Error(`${slug} generator produced id "${dataset.id}"`);
 
@@ -49,6 +50,14 @@ export async function generate(slug) {
     await mkdir(path.dirname(file), { recursive: true });
     await writeFile(file, asJson(labels));
     labelCount = Array.isArray(labels) ? labels.length : Object.keys(labels).length;
+  }
+
+  for (const artifact of artifacts) {
+    const file = path.resolve(repoRoot, artifact.path);
+    const relative = path.relative(repoRoot, file);
+    if (relative.startsWith('..') || path.isAbsolute(relative)) throw new Error(`${slug} artifact escapes the repository: ${artifact.path}`);
+    await mkdir(path.dirname(file), { recursive: true });
+    await writeFile(file, asJson(artifact.data));
   }
 
   return { slug, items: dataset.items.length, labels: labelCount, dataFile: path.relative(repoRoot, dataFile) };

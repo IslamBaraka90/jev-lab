@@ -16,6 +16,7 @@ import deliveryExceptions from './delivery-exceptions/demo.js';
 import cardFraudTriage from './card-fraud-triage/demo.js';
 import accountTakeover from './account-takeover/demo.js';
 import amlAlertTriage from './aml-alert-triage/demo.js';
+import sanctionsNameMatch from './sanctions-name-match/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -48,6 +49,7 @@ export const DEMOS = [
   cardFraudTriage,
   amlAlertTriage,
   accountTakeover,
+  sanctionsNameMatch,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */

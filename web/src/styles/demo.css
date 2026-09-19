@@ -538,3 +538,19 @@
     flex-direction: column;
   }
 }
+
+/* Paired evidence stays aligned row by row for identity and portfolio comparisons. */
+
+.comparison-table {
+  table-layout: fixed;
+  min-width: 720px;
+}
+
+.comparison-table th:first-child {
+  width: 18%;
+}
+
+.comparison-table td {
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
