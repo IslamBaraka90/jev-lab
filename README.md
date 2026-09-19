@@ -176,3 +176,14 @@ test/                              Offline tests
 1. Define the feature's questions in `src/questions/` with `choice`, `score` and `noul` from `@typesafe-ai/sdk`.
 2. Add a router in `src/routes/` that builds the state, calls `typesafe.systemOne()` and applies your decision logic in code, for example [confidence thresholds](https://docs.typesafe.ai/confidence).
 3. Mount the router in `src/app.js` and add a test in `test/`.
+
+## License
+
+[MIT](LICENSE). The code, the demo definitions, the generators and the synthetic datasets in
+`data/synthetic` are all covered by it.
+
+The cached market data in `data/market` is not: those files were fetched once from Yahoo Finance and
+are committed so the demos run without a network, with a manifest recording what was taken and when.
+They are Yahoo's data under Yahoo's terms, not the author's to relicense. Anyone reusing this
+repository commercially should refetch that directory from a source they are licensed to use —
+`npm run fetch:market` rebuilds it — or drop the cached-real demos and keep the synthetic ones.

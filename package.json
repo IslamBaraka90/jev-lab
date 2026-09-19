@@ -1,6 +1,13 @@
 {
   "name": "jev-test",
   "version": "0.1.0",
+  "license": "MIT",
+  "author": "Islam Baraka",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IslamBaraka90/jev-lab.git"
+  },
+  "homepage": "https://github.com/IslamBaraka90/jev-lab#readme",
   "private": true,
   "description": "Express app for testing TypeSafe's Jev model",
   "type": "module",
