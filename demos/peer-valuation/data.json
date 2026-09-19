@@ -1,0 +1,1005 @@
+{
+  "id": "peer-valuation",
+  "class": "cached-real",
+  "generatedAt": "2026-09-19",
+  "source": "data/market/fundamentals/*.json + data/market/candles/*.json",
+  "context": {
+    "note": "Prices, volumes and fundamentals are real, cached once from Yahoo Finance and committed. Nothing is fetched at build time or in the browser, and none of this is investment advice.",
+    "units": "Statement amounts are whole units of the stated currency; price is the last cached close. Null means unavailable and is never treated as zero.",
+    "coverage": "Four named peer sets are retained. ETFs and trusts deliberately remain where specified, even when issuer statements are absent."
+  },
+  "items": [
+    {
+      "id": "PV-TECH",
+      "name": "Large-cap technology",
+      "members": [
+        "NVDA",
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "loose": false,
+      "note": "Four operating technology companies with different growth and margin profiles.",
+      "peers": [
+        {
+          "symbol": "NVDA",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "currency": "USD",
+          "price": 222.27,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 24147000000,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2023-01-31",
+              "revenue": 26974000000,
+              "operatingIncome": 5577000000,
+              "netIncome": 4368000000,
+              "operatingCashFlow": 5641000000,
+              "capitalExpenditure": -1833000000,
+              "totalDebt": 12031000000,
+              "cash": 13296000000,
+              "equity": 22101000000
+            },
+            {
+              "fiscalYearEnd": "2024-01-31",
+              "revenue": 60922000000,
+              "operatingIncome": 32972000000,
+              "netIncome": 29760000000,
+              "operatingCashFlow": 28090000000,
+              "capitalExpenditure": -1069000000,
+              "totalDebt": 11056000000,
+              "cash": 25984000000,
+              "equity": 42978000000
+            },
+            {
+              "fiscalYearEnd": "2025-01-31",
+              "revenue": 130497000000,
+              "operatingIncome": 81453000000,
+              "netIncome": 72880000000,
+              "operatingCashFlow": 64089000000,
+              "capitalExpenditure": -3236000000,
+              "totalDebt": 9982000000,
+              "cash": 43210000000,
+              "equity": 79327000000
+            },
+            {
+              "fiscalYearEnd": "2026-01-31",
+              "revenue": 215938000000,
+              "operatingIncome": 130387000000,
+              "netIncome": 120067000000,
+              "operatingCashFlow": 102718000000,
+              "capitalExpenditure": -6042000000,
+              "totalDebt": 11040000000,
+              "cash": 62556000000,
+              "equity": 157293000000
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "industry": "Consumer Electronics",
+          "currency": "USD",
+          "price": 336.13,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 14594180000,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-09-30",
+              "revenue": 394328000000,
+              "operatingIncome": 119437000000,
+              "netIncome": 99803000000,
+              "operatingCashFlow": 122151000000,
+              "capitalExpenditure": -10708000000,
+              "totalDebt": 132480000000,
+              "cash": 48304000000,
+              "equity": 50672000000
+            },
+            {
+              "fiscalYearEnd": "2023-09-30",
+              "revenue": 383285000000,
+              "operatingIncome": 114301000000,
+              "netIncome": 96995000000,
+              "operatingCashFlow": 110543000000,
+              "capitalExpenditure": -10959000000,
+              "totalDebt": 111088000000,
+              "cash": 61555000000,
+              "equity": 62146000000
+            },
+            {
+              "fiscalYearEnd": "2024-09-30",
+              "revenue": 391035000000,
+              "operatingIncome": 123216000000,
+              "netIncome": 93736000000,
+              "operatingCashFlow": 118254000000,
+              "capitalExpenditure": -9447000000,
+              "totalDebt": 106629000000,
+              "cash": 65171000000,
+              "equity": 56950000000
+            },
+            {
+              "fiscalYearEnd": "2025-09-30",
+              "revenue": 416161000000,
+              "operatingIncome": 133050000000,
+              "netIncome": 112010000000,
+              "operatingCashFlow": 111482000000,
+              "capitalExpenditure": -12715000000,
+              "totalDebt": 98657000000,
+              "cash": 54697000000,
+              "equity": 73733000000
+            }
+          ]
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "currency": "USD",
+          "price": 493.78,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 7425545491,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2023-06-30",
+              "revenue": 211915000000,
+              "operatingIncome": 88523000000,
+              "netIncome": 72361000000,
+              "operatingCashFlow": 87582000000,
+              "capitalExpenditure": -28107000000,
+              "totalDebt": 59965000000,
+              "cash": 111256000000,
+              "equity": 206223000000
+            },
+            {
+              "fiscalYearEnd": "2024-06-30",
+              "revenue": 245122000000,
+              "operatingIncome": 109433000000,
+              "netIncome": 88136000000,
+              "operatingCashFlow": 118548000000,
+              "capitalExpenditure": -44477000000,
+              "totalDebt": 67127000000,
+              "cash": 75531000000,
+              "equity": 268477000000
+            },
+            {
+              "fiscalYearEnd": "2025-06-30",
+              "revenue": 281724000000,
+              "operatingIncome": 128528000000,
+              "netIncome": 101832000000,
+              "operatingCashFlow": 136162000000,
+              "capitalExpenditure": -64551000000,
+              "totalDebt": 60588000000,
+              "cash": 94555000000,
+              "equity": 343479000000
+            },
+            {
+              "fiscalYearEnd": "2026-06-30",
+              "revenue": 331839000000,
+              "operatingIncome": 155237000000,
+              "netIncome": 133749000000,
+              "operatingCashFlow": 182935000000,
+              "capitalExpenditure": -115948000000,
+              "totalDebt": 56826000000,
+              "cash": 76651000000,
+              "equity": 442387000000
+            }
+          ]
+        },
+        {
+          "symbol": "GOOGL",
+          "sector": "Communication Services",
+          "industry": "Internet Content & Information",
+          "currency": "USD",
+          "price": 349.54,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 5867155790,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 282836000000,
+              "operatingIncome": 74842000000,
+              "netIncome": 59972000000,
+              "operatingCashFlow": 91495000000,
+              "capitalExpenditure": -31485000000,
+              "totalDebt": 29679000000,
+              "cash": 113762000000,
+              "equity": 256144000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 307394000000,
+              "operatingIncome": 84293000000,
+              "netIncome": 73795000000,
+              "operatingCashFlow": 101746000000,
+              "capitalExpenditure": -32251000000,
+              "totalDebt": 27121000000,
+              "cash": 110916000000,
+              "equity": 283379000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 350018000000,
+              "operatingIncome": 112390000000,
+              "netIncome": 100118000000,
+              "operatingCashFlow": 125299000000,
+              "capitalExpenditure": -52535000000,
+              "totalDebt": 22574000000,
+              "cash": 95657000000,
+              "equity": 325084000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 402836000000,
+              "operatingIncome": 129039000000,
+              "netIncome": 132170000000,
+              "operatingCashFlow": 164713000000,
+              "capitalExpenditure": -91447000000,
+              "totalDebt": 59291000000,
+              "cash": 126843000000,
+              "equity": 415265000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PV-BANKS",
+      "name": "Large US banks",
+      "members": [
+        "JPM",
+        "BAC",
+        "WFC",
+        "C"
+      ],
+      "loose": false,
+      "note": "Four diversified US banks; cash-flow multiples may be unavailable because bank statements do not map cleanly to industrial free cash flow.",
+      "peers": [
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "industry": "Banks - Diversified",
+          "currency": "USD",
+          "price": 349.67,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 2658186195,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 127727000000,
+              "operatingIncome": null,
+              "netIncome": 37676000000,
+              "operatingCashFlow": 107119000000,
+              "capitalExpenditure": null,
+              "totalDebt": 339892000000,
+              "cash": 567234000000,
+              "equity": 292332000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 154952000000,
+              "operatingIncome": null,
+              "netIncome": 49552000000,
+              "operatingCashFlow": 12974000000,
+              "capitalExpenditure": null,
+              "totalDebt": 436537000000,
+              "cash": 624151000000,
+              "equity": 327878000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 169439000000,
+              "operatingIncome": null,
+              "netIncome": 58471000000,
+              "operatingCashFlow": -42012000000,
+              "capitalExpenditure": null,
+              "totalDebt": 454311000000,
+              "cash": 469317000000,
+              "equity": 344758000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 181847000000,
+              "operatingIncome": null,
+              "netIncome": 57048000000,
+              "operatingCashFlow": -147782000000,
+              "capitalExpenditure": null,
+              "totalDebt": 499982000000,
+              "cash": 343338000000,
+              "equity": 362438000000
+            }
+          ]
+        },
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "industry": "Banks - Diversified",
+          "currency": "USD",
+          "price": 57.73,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 6992748365,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 94950000000,
+              "operatingIncome": null,
+              "netIncome": 27528000000,
+              "operatingCashFlow": -6327000000,
+              "capitalExpenditure": null,
+              "totalDebt": 302914000000,
+              "cash": 237462000000,
+              "equity": 273197000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 102769000000,
+              "operatingIncome": null,
+              "netIncome": 26305000000,
+              "operatingCashFlow": 44982000000,
+              "capitalExpenditure": null,
+              "totalDebt": 334302000000,
+              "cash": 341419000000,
+              "equity": 291646000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 105856000000,
+              "operatingIncome": null,
+              "netIncome": 26973000000,
+              "operatingCashFlow": -8805000000,
+              "capitalExpenditure": null,
+              "totalDebt": 326670000000,
+              "cash": 296486000000,
+              "equity": 293963000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 113097000000,
+              "operatingIncome": null,
+              "netIncome": 30509000000,
+              "operatingCashFlow": 12613000000,
+              "capitalExpenditure": null,
+              "totalDebt": 365904000000,
+              "cash": 239319000000,
+              "equity": 303243000000
+            }
+          ]
+        },
+        {
+          "symbol": "WFC",
+          "sector": "Financial Services",
+          "industry": "Banks - Diversified",
+          "currency": "USD",
+          "price": 86.12,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 3023999336,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 74368000000,
+              "operatingIncome": null,
+              "netIncome": 13677000000,
+              "operatingCashFlow": 27048000000,
+              "capitalExpenditure": null,
+              "totalDebt": 195392000000,
+              "cash": 159157000000,
+              "equity": 180227000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 82597000000,
+              "operatingIncome": null,
+              "netIncome": 19142000000,
+              "operatingCashFlow": 40358000000,
+              "capitalExpenditure": null,
+              "totalDebt": 219471000000,
+              "cash": 237219000000,
+              "equity": 185735000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 82296000000,
+              "operatingIncome": null,
+              "netIncome": 19722000000,
+              "operatingCashFlow": 3035000000,
+              "capitalExpenditure": null,
+              "totalDebt": 175782000000,
+              "cash": 203361000000,
+              "equity": 179120000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 83699000000,
+              "operatingIncome": null,
+              "netIncome": 21338000000,
+              "operatingCashFlow": -19001000000,
+              "capitalExpenditure": null,
+              "totalDebt": 193035000000,
+              "cash": 174210000000,
+              "equity": 181117000000
+            }
+          ]
+        },
+        {
+          "symbol": "C",
+          "sector": "Financial Services",
+          "industry": "Banks - Diversified",
+          "currency": "USD",
+          "price": 131.77,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 1677436783,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 74480000000,
+              "operatingIncome": null,
+              "netIncome": 14845000000,
+              "operatingCashFlow": 25069000000,
+              "capitalExpenditure": -5632000000,
+              "totalDebt": 318702000000,
+              "cash": 342025000000,
+              "equity": 201189000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 78090000000,
+              "operatingIncome": null,
+              "netIncome": 9228000000,
+              "operatingCashFlow": -73416000000,
+              "capitalExpenditure": -6583000000,
+              "totalDebt": 324076000000,
+              "cash": 260932000000,
+              "equity": 205453000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 80672000000,
+              "operatingIncome": null,
+              "netIncome": 12682000000,
+              "operatingCashFlow": -19669000000,
+              "capitalExpenditure": -6500000000,
+              "totalDebt": 335805000000,
+              "cash": 276532000000,
+              "equity": 208598000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 85213000000,
+              "operatingIncome": null,
+              "netIncome": 14306000000,
+              "operatingCashFlow": -67632000000,
+              "capitalExpenditure": -6520000000,
+              "totalDebt": 367705000000,
+              "cash": 349579000000,
+              "equity": 212291000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PV-ENERGY",
+      "name": "Energy operators",
+      "members": [
+        "XOM",
+        "CVX",
+        "COP",
+        "SLB"
+      ],
+      "loose": true,
+      "note": "Deliberately loose: integrated producers, an upstream producer and an oilfield-services company test whether the model rejects a mechanical comparison.",
+      "peers": [
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "industry": "Oil & Gas Integrated",
+          "currency": "USD",
+          "price": 163.54,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 4111911960,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 398675000000,
+              "operatingIncome": 64028000000,
+              "netIncome": 55740000000,
+              "operatingCashFlow": 76797000000,
+              "capitalExpenditure": -18407000000,
+              "totalDebt": 41193000000,
+              "cash": 29640000000,
+              "equity": 195049000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 334697000000,
+              "operatingIncome": 44461000000,
+              "netIncome": 36010000000,
+              "operatingCashFlow": 55369000000,
+              "capitalExpenditure": -21919000000,
+              "totalDebt": 41573000000,
+              "cash": 31539000000,
+              "equity": 204802000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 339247000000,
+              "operatingIncome": 39652000000,
+              "netIncome": 33680000000,
+              "operatingCashFlow": 55022000000,
+              "capitalExpenditure": -24306000000,
+              "totalDebt": 41710000000,
+              "cash": 23029000000,
+              "equity": 263705000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 323905000000,
+              "operatingIncome": 33938000000,
+              "netIncome": 28844000000,
+              "operatingCashFlow": 51970000000,
+              "capitalExpenditure": -28358000000,
+              "totalDebt": null,
+              "cash": 10681000000,
+              "equity": 259386000000
+            }
+          ]
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "industry": "Oil & Gas Integrated",
+          "currency": "USD",
+          "price": 209.51,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 1961603274,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 235717000000,
+              "operatingIncome": 39950000000,
+              "netIncome": 35465000000,
+              "operatingCashFlow": 49602000000,
+              "capitalExpenditure": -11974000000,
+              "totalDebt": 23339000000,
+              "cash": 17901000000,
+              "equity": 159282000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 196913000000,
+              "operatingIncome": 26229000000,
+              "netIncome": 21369000000,
+              "operatingCashFlow": 35609000000,
+              "capitalExpenditure": -15829000000,
+              "totalDebt": 20836000000,
+              "cash": 8223000000,
+              "equity": 160957000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 193414000000,
+              "operatingIncome": 18917000000,
+              "netIncome": 17661000000,
+              "operatingCashFlow": 31492000000,
+              "capitalExpenditure": -16448000000,
+              "totalDebt": 24541000000,
+              "cash": 6785000000,
+              "equity": 152318000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 184432000000,
+              "operatingIncome": 16674000000,
+              "netIncome": 12299000000,
+              "operatingCashFlow": 33939000000,
+              "capitalExpenditure": -17347000000,
+              "totalDebt": 40758000000,
+              "cash": 6297000000,
+              "equity": 186450000000
+            }
+          ]
+        },
+        {
+          "symbol": "COP",
+          "sector": "Energy",
+          "industry": "Oil & Gas E&P",
+          "currency": "USD",
+          "price": 131.83,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 1201337479,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 78494000000,
+              "operatingIncome": 25462000000,
+              "netIncome": 18680000000,
+              "operatingCashFlow": 28314000000,
+              "capitalExpenditure": -10159000000,
+              "totalDebt": 16643000000,
+              "cash": 9243000000,
+              "equity": 48003000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 56141000000,
+              "operatingIncome": 15026000000,
+              "netIncome": 10957000000,
+              "operatingCashFlow": 19965000000,
+              "capitalExpenditure": -11248000000,
+              "totalDebt": 18937000000,
+              "cash": 6606000000,
+              "equity": 49279000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 54745000000,
+              "operatingIncome": 12783000000,
+              "netIncome": 9245000000,
+              "operatingCashFlow": 20124000000,
+              "capitalExpenditure": -12118000000,
+              "totalDebt": 24324000000,
+              "cash": 6114000000,
+              "equity": 64796000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 58944000000,
+              "operatingIncome": 11342000000,
+              "netIncome": 7988000000,
+              "operatingCashFlow": 19796000000,
+              "capitalExpenditure": -12553000000,
+              "totalDebt": 23444000000,
+              "cash": 6981000000,
+              "equity": 64487000000
+            }
+          ]
+        },
+        {
+          "symbol": "SLB",
+          "sector": "Energy",
+          "industry": "Oil & Gas Equipment & Services",
+          "currency": "USD",
+          "price": 51.12,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 1484143231,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 28091000000,
+              "operatingIncome": 4151000000,
+              "netIncome": 3441000000,
+              "operatingCashFlow": 3720000000,
+              "capitalExpenditure": -1715000000,
+              "totalDebt": 12226000000,
+              "cash": 2894000000,
+              "equity": 17685000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 33135000000,
+              "operatingIncome": 5488000000,
+              "netIncome": 4203000000,
+              "operatingCashFlow": 6637000000,
+              "capitalExpenditure": -2092000000,
+              "totalDebt": 11965000000,
+              "cash": 3989000000,
+              "equity": 20189000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 36289000000,
+              "operatingIncome": 6326000000,
+              "netIncome": 4461000000,
+              "operatingCashFlow": 6602000000,
+              "capitalExpenditure": -2129000000,
+              "totalDebt": 12074000000,
+              "cash": 4669000000,
+              "equity": 21130000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 35708000000,
+              "operatingIncome": 5458000000,
+              "netIncome": 3374000000,
+              "operatingCashFlow": 6489000000,
+              "capitalExpenditure": -1946000000,
+              "totalDebt": 11636000000,
+              "cash": 4212000000,
+              "equity": 26109000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PV-STAPLES",
+      "name": "Defensive staples",
+      "members": [
+        "KO",
+        "PG",
+        "JNJ",
+        "WMT",
+        "PEP"
+      ],
+      "loose": false,
+      "note": "Five defensive consumer and health franchises with different margin structures.",
+      "peers": [
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "industry": "Beverages - Non-Alcoholic",
+          "currency": "USD",
+          "price": 88.25,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 4302549243,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 43004000000,
+              "operatingIncome": 12042000000,
+              "netIncome": 9542000000,
+              "operatingCashFlow": 11018000000,
+              "capitalExpenditure": -1484000000,
+              "totalDebt": 39149000000,
+              "cash": 11631000000,
+              "equity": 24105000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 45754000000,
+              "operatingIncome": 13098000000,
+              "netIncome": 10714000000,
+              "operatingCashFlow": 11599000000,
+              "capitalExpenditure": -1852000000,
+              "totalDebt": 42064000000,
+              "cash": 13663000000,
+              "equity": 25941000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 47061000000,
+              "operatingIncome": 14022000000,
+              "netIncome": 10631000000,
+              "operatingCashFlow": 6805000000,
+              "capitalExpenditure": -2064000000,
+              "totalDebt": 44522000000,
+              "cash": 14571000000,
+              "equity": 24856000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 47941000000,
+              "operatingIncome": 14911000000,
+              "netIncome": 13107000000,
+              "operatingCashFlow": 7408000000,
+              "capitalExpenditure": -2112000000,
+              "totalDebt": 45492000000,
+              "cash": 15806000000,
+              "equity": 32169000000
+            }
+          ]
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "industry": "Household & Personal Products",
+          "currency": "USD",
+          "price": 146.39,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 2324433060,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2023-06-30",
+              "revenue": 82006000000,
+              "operatingIncome": 18134000000,
+              "netIncome": 14653000000,
+              "operatingCashFlow": 16848000000,
+              "capitalExpenditure": -3062000000,
+              "totalDebt": 35424000000,
+              "cash": 8246000000,
+              "equity": 46777000000
+            },
+            {
+              "fiscalYearEnd": "2024-06-30",
+              "revenue": 84039000000,
+              "operatingIncome": 19886000000,
+              "netIncome": 14879000000,
+              "operatingCashFlow": 19846000000,
+              "capitalExpenditure": -3322000000,
+              "totalDebt": 33369000000,
+              "cash": 9482000000,
+              "equity": 50286000000
+            },
+            {
+              "fiscalYearEnd": "2025-06-30",
+              "revenue": 84284000000,
+              "operatingIncome": 20451000000,
+              "netIncome": 15974000000,
+              "operatingCashFlow": 17817000000,
+              "capitalExpenditure": -3773000000,
+              "totalDebt": 35463000000,
+              "cash": 9556000000,
+              "equity": 52012000000
+            },
+            {
+              "fiscalYearEnd": "2026-06-30",
+              "revenue": 87032000000,
+              "operatingIncome": 19748000000,
+              "netIncome": 16046000000,
+              "operatingCashFlow": 19556000000,
+              "capitalExpenditure": -4409000000,
+              "totalDebt": 35026000000,
+              "cash": 9942000000,
+              "equity": 54081000000
+            }
+          ]
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "industry": "Drug Manufacturers - General",
+          "currency": "USD",
+          "price": 269.99,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 2409898597,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 79990000000,
+              "operatingIncome": 21013000000,
+              "netIncome": 17941000000,
+              "operatingCashFlow": 21194000000,
+              "capitalExpenditure": -4009000000,
+              "totalDebt": 39642000000,
+              "cash": 22281000000,
+              "equity": 76804000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 85159000000,
+              "operatingIncome": 22009000000,
+              "netIncome": 35153000000,
+              "operatingCashFlow": 22791000000,
+              "capitalExpenditure": -5013000000,
+              "totalDebt": 29332000000,
+              "cash": 22927000000,
+              "equity": 68774000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 88821000000,
+              "operatingIncome": 21249000000,
+              "netIncome": 14066000000,
+              "operatingCashFlow": 24266000000,
+              "capitalExpenditure": -6207000000,
+              "totalDebt": 36634000000,
+              "cash": 24522000000,
+              "equity": 71490000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 94193000000,
+              "operatingIncome": 25596000000,
+              "netIncome": 26804000000,
+              "operatingCashFlow": 24530000000,
+              "capitalExpenditure": -5217000000,
+              "totalDebt": 47933000000,
+              "cash": 20102000000,
+              "equity": 81544000000
+            }
+          ]
+        },
+        {
+          "symbol": "WMT",
+          "sector": "Consumer Defensive",
+          "industry": "Discount Stores",
+          "currency": "USD",
+          "price": 106.73,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 7933746241,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2023-01-31",
+              "revenue": 611289000000,
+              "operatingIncome": 20428000000,
+              "netIncome": 11680000000,
+              "operatingCashFlow": 28841000000,
+              "capitalExpenditure": -16857000000,
+              "totalDebt": 58923000000,
+              "cash": 8625000000,
+              "equity": 76693000000
+            },
+            {
+              "fiscalYearEnd": "2024-01-31",
+              "revenue": 648125000000,
+              "operatingIncome": 27012000000,
+              "netIncome": 15511000000,
+              "operatingCashFlow": 35726000000,
+              "capitalExpenditure": -20606000000,
+              "totalDebt": 61321000000,
+              "cash": 9867000000,
+              "equity": 83861000000
+            },
+            {
+              "fiscalYearEnd": "2025-01-31",
+              "revenue": 680985000000,
+              "operatingIncome": 29348000000,
+              "netIncome": 19436000000,
+              "operatingCashFlow": 36443000000,
+              "capitalExpenditure": -23783000000,
+              "totalDebt": 60114000000,
+              "cash": 9037000000,
+              "equity": 91013000000
+            },
+            {
+              "fiscalYearEnd": "2026-01-31",
+              "revenue": 713163000000,
+              "operatingIncome": 29825000000,
+              "netIncome": 21893000000,
+              "operatingCashFlow": 41565000000,
+              "capitalExpenditure": -26642000000,
+              "totalDebt": 67095000000,
+              "cash": 10727000000,
+              "equity": 99617000000
+            }
+          ]
+        },
+        {
+          "symbol": "PEP",
+          "sector": "Consumer Defensive",
+          "industry": "Beverages - Non-Alcoholic",
+          "currency": "USD",
+          "price": 129.75,
+          "priceDate": "2026-09-18",
+          "sharesOutstanding": 1366000000,
+          "annualStatements": [
+            {
+              "fiscalYearEnd": "2022-12-31",
+              "revenue": 86392000000,
+              "operatingIncome": 11357000000,
+              "netIncome": 8910000000,
+              "operatingCashFlow": 10811000000,
+              "capitalExpenditure": -5207000000,
+              "totalDebt": 39554000000,
+              "cash": 5348000000,
+              "equity": 17149000000
+            },
+            {
+              "fiscalYearEnd": "2023-12-31",
+              "revenue": 91471000000,
+              "operatingIncome": 12913000000,
+              "netIncome": 9074000000,
+              "operatingCashFlow": 13442000000,
+              "capitalExpenditure": -5518000000,
+              "totalDebt": 44661000000,
+              "cash": 10003000000,
+              "equity": 18503000000
+            },
+            {
+              "fiscalYearEnd": "2024-12-31",
+              "revenue": 91854000000,
+              "operatingIncome": 12920000000,
+              "netIncome": 9578000000,
+              "operatingCashFlow": 12507000000,
+              "capitalExpenditure": -5318000000,
+              "totalDebt": 44948000000,
+              "cash": 9266000000,
+              "equity": 18041000000
+            },
+            {
+              "fiscalYearEnd": "2025-12-31",
+              "revenue": 93925000000,
+              "operatingIncome": 13491000000,
+              "netIncome": 8240000000,
+              "operatingCashFlow": 12087000000,
+              "capitalExpenditure": -4415000000,
+              "totalDebt": 49901000000,
+              "cash": 9530000000,
+              "equity": 20406000000
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

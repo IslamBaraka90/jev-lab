@@ -298,6 +298,12 @@ export function ReportPanel({ report, onSelect }) {
       {report.costs?.length > 0 && <CostBars items={report.costs} />}
       {report.equityCurve && <EquityCurve chart={report.equityCurve} />}
       {report.sizeScatter && <SizeScatter chart={report.sizeScatter} />}
+      {report.breakdowns?.map((table) => <BreakdownTable key={table.title} table={table} />)}
+      {report.comparisonTable && <ComparisonTable table={report.comparisonTable} />}
+      {report.qualityGrid && <QualityLeverageGrid chart={report.qualityGrid} />}
+      {report.ratioRows?.length > 0 && <RatioCrossCheck rows={report.ratioRows} />}
+      {report.yieldSafety && <DividendSafetyScatter chart={report.yieldSafety} rows={report.dividendRows} />}
+      {report.peerSets?.length > 0 && <PeerValuationReport sets={report.peerSets} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
@@ -362,6 +368,46 @@ function SizeScatter({ chart }) {
   const x = (value) => 54 + value / max * (width - 80);
   const y = (value) => height - 36 - value / max * (height - 58);
   return <div className="stack" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="behaviour-report-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.length} trades; the diagonal represents actual size equal to the rolling norm.`}><line className="report-axis" x1="54" y1={height - 36} x2={width - 22} y2={height - 36} /><line className="report-axis" x1="54" y1="20" x2="54" y2={height - 36} /><line className="report-norm-line" x1="54" y1={height - 36} x2={x(max)} y2={y(max)} />{chart.points.map((point, index) => <circle key={`${point.label}-${index}`} className={point.flagged ? 'scatter-point flagged' : 'scatter-point'} cx={x(point.norm)} cy={y(point.value)} r="2.4"><title>{`${point.label}: norm ${point.norm}, actual ${point.value}`}</title></circle>)}<text className="report-axis-text" x="54" y={height - 10}>Rolling median size →</text><text className="report-axis-text" x="58" y="14">Actual size ↑</text></svg></div>;
+}
+
+function BreakdownTable({ table }) {
+  return <div className="table-scroll"><h4>{table.title}</h4><table className="data-table compact"><thead><tr><th>Group</th><th className="num">Setups</th><th className="num">Missed</th><th className="num">Miss rate</th><th className="num">Missed outcome</th></tr></thead><tbody>{table.rows.map((row) => <tr key={row.label}><th scope="row">{row.label}</th><td className="num">{row.total}</td><td className="num">{row.missed}</td><td className="num">{(row.rate * 100).toFixed(1)}%</td><td className="num">{row.outcome.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}</td></tr>)}</tbody></table></div>;
+}
+
+function ComparisonTable({ table }) {
+  return <div className="table-scroll"><h4>{table.title}</h4><table className="data-table compact"><thead><tr><th>Measure</th>{table.columns.map((column) => <th key={column.label} className="num">{column.label}</th>)}</tr></thead><tbody>{table.rows.map((row) => <tr key={row.key}><th scope="row">{row.label}</th>{table.columns.map((column) => <td key={column.label} className="num">{row.format(column[row.key])}</td>)}</tr>)}</tbody></table></div>;
+}
+
+function QualityLeverageGrid({ chart }) {
+  const width = 560, height = 300, pad = 44;
+  const x = (value) => pad + value / 6 * (width - pad * 2);
+  const y = (value) => height - pad - value / 6 * (height - pad * 2);
+  return <div className="stack" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="quality-grid" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.map((point) => `${point.label}: quality ${point.quality.toFixed(1)}, leverage ${point.leverage.toFixed(1)}${point.gap ? ', statement gap' : ''}`).join('; ')}`}>
+    {Array.from({ length: 7 }, (_, tick) => <g key={tick}><line className="report-axis" x1={x(tick)} y1={pad} x2={x(tick)} y2={height - pad} /><line className="report-axis" x1={pad} y1={y(tick)} x2={width - pad} y2={y(tick)} /><text className="report-axis-text" x={x(tick)} y={height - 16} textAnchor="middle">{tick}</text><text className="report-axis-text" x={24} y={y(tick) + 4} textAnchor="middle">{tick}</text></g>)}
+    {chart.points.map((point) => <g key={point.id} className={point.gap ? 'quality-point gap' : 'quality-point'}><circle cx={x(point.leverage)} cy={y(point.quality)} r="8"><title>{`${point.label}: quality ${point.quality.toFixed(1)}, leverage ${point.leverage.toFixed(1)}`}</title></circle><text x={x(point.leverage) + 10} y={y(point.quality) - 8}>{point.label}</text></g>)}
+    <text className="report-axis-text" x={width / 2} y={height - 2} textAnchor="middle">Leverage risk →</text><text className="report-axis-text" x={pad} y={16}>Quality ↑</text>
+  </svg></div>;
+}
+
+function RatioCrossCheck({ rows }) {
+  return <div className="table-scroll ratio-cross-check"><h4>Jev reading against computed ratios</h4><table className="data-table compact"><thead><tr><th>Symbol</th><th>Jev earnings</th><th>Computed earnings</th><th>Jev direction</th><th>Computed direction</th><th className="num">Cash conversion</th><th className="num">Debt / equity</th><th className="num">Net debt / EBITDA proxy</th><th>Gap</th></tr></thead><tbody>{rows.map((row) => <tr key={row.id} className={row.disagree ? 'ratio-disagree' : undefined}><th scope="row">{row.symbol}{row.disagree ? ' ⚠' : ''}</th><td>{row.modelEarnings}</td><td>{row.computedEarnings}</td><td>{row.modelDirection}</td><td>{row.computedDirection}</td><td className="num">{Number.isFinite(row.cashConversion) ? row.cashConversion.toFixed(2) : '–'}</td><td className="num">{Number.isFinite(row.debtToEquity) ? row.debtToEquity.toFixed(2) : '–'}</td><td className="num">{Number.isFinite(row.netDebtProxy) ? row.netDebtProxy.toFixed(2) : '–'}</td><td>{row.gap}</td></tr>)}</tbody></table></div>;
+}
+
+function DividendSafetyScatter({ chart, rows = [] }) {
+  const width = 600, height = 300, pad = 48;
+  const maxYield = Math.max(...chart.points.map((point) => point.yield), 1) * 1.1;
+  const x = (value) => pad + value / maxYield * (width - pad * 2);
+  const y = (value) => height - pad - value / 6 * (height - pad * 2);
+  return <div className="stack dividend-safety-chart" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="quality-grid" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.map((point) => `${point.label}: ${point.yield.toFixed(2)} percent yield, safety ${point.safety.toFixed(1)}`).join('; ')}`}>
+    {Array.from({ length: 7 }, (_, tick) => <g key={tick}><line className="report-axis" x1={pad} y1={y(tick)} x2={width - pad} y2={y(tick)} /><text className="report-axis-text" x={26} y={y(tick) + 4}>{tick}</text></g>)}
+    {chart.points.map((point) => <g key={point.id} className={point.highRisk ? 'quality-point gap' : 'quality-point'}><circle cx={x(point.yield)} cy={y(point.safety)} r="8"><title>{`${point.label}: ${point.yield.toFixed(2)}% yield, safety ${point.safety.toFixed(1)}/6`}</title></circle><text x={x(point.yield) + 10} y={y(point.safety) - 8}>{point.label}</text></g>)}
+    <text className="report-axis-text" x={width / 2} y={height - 4} textAnchor="middle">Computed yield →</text><text className="report-axis-text" x={pad} y={16}>Jev safety ↑</text>
+  </svg><details><summary>Yield and safety as a table</summary><div className="table-scroll details-content"><table className="data-table compact"><thead><tr><th>Symbol</th><th className="num">Jev safety</th><th className="num">Yield</th><th className="num">Earnings cover</th><th className="num">Cash cover</th><th className="num">Dividend growth</th><th>First pressure · Jev / computed</th><th>Debt-funded · Jev / computed</th></tr></thead><tbody>{rows.map((row) => <tr key={row.id}><th scope="row">{row.symbol}</th><td className="num">{row.safety.toFixed(1)} / 6</td><td className="num">{Number.isFinite(row.yield) ? `${row.yield.toFixed(2)}%` : '–'}</td><td className="num">{Number.isFinite(row.earningsCover) ? `${row.earningsCover.toFixed(2)}×` : '–'}</td><td className="num">{Number.isFinite(row.cashCover) ? `${row.cashCover.toFixed(2)}×` : '–'}</td><td className="num">{Number.isFinite(row.growth) ? `${row.growth.toFixed(1)}%` : '–'}</td><td>{row.modelBreak} / {row.computedBreak}</td><td>{row.debtFunded ? 'Yes' : 'No'} / {row.computedDebtFunded === null ? '–' : row.computedDebtFunded ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></details></div>;
+}
+
+function PeerValuationReport({ sets }) {
+  const multiple = (value) => Number.isFinite(value) ? `${value.toFixed(2)}×` : '–';
+  return <div className="stack peer-valuation-report" style={{ gap: 14 }}><h4>Peer picks against computed multiples</h4>{sets.map((set) => <details key={set.id} open><summary>{set.name} · Jev {set.modelPick} / computed {set.computedBest ?? 'n/a'}{set.loose ? ' · loose set' : ''}</summary><div className="details-content stack" style={{ gap: 10 }}><p className="meta">Cheapest P/E: {set.cheapestPe ?? '–'} · P/B: {set.cheapestPb ?? '–'} · P/FCF: {set.cheapestPfcf ?? '–'} · {set.comparable ? 'Jev accepted comparability' : 'Jev rejected comparability'} · premium {set.premiumJustified ? 'earned' : 'not earned'} · discount reason {set.discountReason}</p><div className="table-scroll"><table className="data-table compact"><thead><tr><th>Peer</th><th className="num">P/E</th><th className="num">P/B</th><th className="num">P/FCF</th><th className="num">EV proxy / FCF</th><th className="num">Operating margin</th><th className="num">4y revenue change</th></tr></thead><tbody>{set.peers.map((peer) => <tr key={peer.symbol}><th scope="row">{peer.symbol}{peer.symbol === set.modelPick ? ' · Jev' : ''}{peer.symbol === set.computedBest ? ' · computed' : ''}</th><td className="num">{multiple(peer.pe)}</td><td className="num">{multiple(peer.pb)}</td><td className="num">{multiple(peer.pfcf)}</td><td className="num">{multiple(peer.evFcf)}</td><td className="num">{Number.isFinite(peer.margin) ? `${peer.margin.toFixed(1)}%` : '–'}</td><td className="num">{Number.isFinite(peer.growth) ? `${peer.growth.toFixed(1)}%` : '–'}</td></tr>)}</tbody></table></div></div></details>)}</div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {

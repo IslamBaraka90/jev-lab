@@ -11,7 +11,7 @@ import { yahooFinance } from '../src/lib/yahoo-finance.js';
 import { marketFile, readJson, repoRoot } from '../src/services/dataset.js';
 
 /** The universe the demos draw on: five from the backtest suite, plus peers for the screening block. */
-export const SYMBOLS = ['NVDA', 'JPM', 'XOM', 'BTC-USD', 'GLD', 'AAPL', 'MSFT', 'KO', 'PG', 'JNJ', 'CVX', 'BAC', 'WMT', 'PEP', 'XLE', 'SPY'];
+export const SYMBOLS = ['NVDA', 'JPM', 'XOM', 'BTC-USD', 'GLD', 'AAPL', 'MSFT', 'KO', 'PG', 'JNJ', 'CVX', 'BAC', 'WMT', 'PEP', 'XLE', 'SPY', 'GOOGL', 'WFC', 'C', 'COP', 'SLB'];
 
 const FUNDAMENTAL_MODULES = ['summaryProfile', 'defaultKeyStatistics', 'financialData', 'incomeStatementHistory', 'balanceSheetHistory', 'cashflowStatementHistory'];
 

@@ -33,17 +33,21 @@ import incomePlanning from './income-planning/demo.js';
 import postTradeReview from './post-trade-review/demo.js';
 import tradeFeatureAnalysis from './trade-feature-analysis/demo.js';
 import traderBehaviour from './trader-behaviour/demo.js';
+import missedTrades from './missed-trades/demo.js';
 import executionQuality from './execution-quality/demo.js';
 import journalVsReality from './journal-vs-reality/demo.js';
 import goalScreening from './goal-screening/demo.js';
 import shariaScreen from './sharia-screen/demo.js';
 import accountingFlags from './accounting-flags/demo.js';
+import fundamentalRead from './fundamental-read/demo.js';
+import dividendSafety from './dividend-safety/demo.js';
+import peerValuation from './peer-valuation/demo.js';
 import newsImpact from './news-impact/demo.js';
 import filingsRead from './filings-read/demo.js';
 import rumourGrading from './rumour-grading/demo.js';
 import regimeClassification from './regime-classification/demo.js';
-import strategyCorrelation from './strategy-correlation/demo.js';
 import goldenCrossReview from './golden-cross-review/demo.js';
+import strategyCorrelation from './strategy-correlation/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -93,11 +97,15 @@ export const DEMOS = [
   postTradeReview,
   tradeFeatureAnalysis,
   traderBehaviour,
+  missedTrades,
   executionQuality,
   journalVsReality,
   goalScreening,
   shariaScreen,
   accountingFlags,
+  fundamentalRead,
+  dividendSafety,
+  peerValuation,
   newsImpact,
   filingsRead,
   rumourGrading,

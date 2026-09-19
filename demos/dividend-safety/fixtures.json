@@ -1,0 +1,792 @@
+{
+  "demo": "dividend-safety",
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "DS-NVDA": {
+      "safety": {
+        "type": "score",
+        "score": 5.14,
+        "confidence": 0.65,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.02,
+          "4": 0.07,
+          "5": 0.5,
+          "6": 0.37
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "SHARE_BUYBACKS",
+        "confidence": 0.14,
+        "probabilities": {
+          "SHARE_BUYBACKS": 0.28,
+          "CYCLICALITY": 0.2,
+          "EARNINGS_COVER": 0.2,
+          "NONE": 0.24,
+          "CASH_COVER": 0.05,
+          "DEBT_MATURITIES": 0.03
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_LOW",
+        "confidence": 0.79,
+        "probabilities": {
+          "MODERATE": 0.01,
+          "LOW": 0.15,
+          "VERY_LOW": 0.84,
+          "VERY_HIGH": 0,
+          "HIGH": 0
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "DS-JPM": {
+      "safety": {
+        "type": "score",
+        "score": 2.11,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.24,
+          "2": 0.3,
+          "3": 0.19,
+          "4": 0.12,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "CASH_COVER",
+        "confidence": 0.97,
+        "probabilities": {
+          "DEBT_MATURITIES": 0,
+          "CASH_COVER": 0.98,
+          "CYCLICALITY": 0,
+          "NONE": 0,
+          "EARNINGS_COVER": 0.01,
+          "SHARE_BUYBACKS": 0.01
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "HIGH",
+        "confidence": 0.26,
+        "probabilities": {
+          "MODERATE": 0.3,
+          "VERY_LOW": 0.06,
+          "HIGH": 0.39999999999999997,
+          "LOW": 0.15,
+          "VERY_HIGH": 0.09
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.32
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.6
+      }
+    },
+    "DS-XOM": {
+      "safety": {
+        "type": "score",
+        "score": 2.68,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.1,
+          "2": 0.32,
+          "3": 0.37,
+          "4": 0.18,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "EARNINGS_COVER",
+        "confidence": 0.29,
+        "probabilities": {
+          "SHARE_BUYBACKS": 0.24,
+          "CASH_COVER": 0.29,
+          "EARNINGS_COVER": 0.39999999999999997,
+          "CYCLICALITY": 0.03,
+          "DEBT_MATURITIES": 0.02,
+          "NONE": 0.02
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "MODERATE",
+        "confidence": 0.43,
+        "probabilities": {
+          "MODERATE": 0.54,
+          "HIGH": 0.18,
+          "VERY_LOW": 0.03,
+          "VERY_HIGH": 0.02,
+          "LOW": 0.23
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.44
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.14
+      }
+    },
+    "DS-BTC-USD": {
+      "safety": {
+        "type": "score",
+        "score": 0.2,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.04,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.92,
+        "probabilities": {
+          "CYCLICALITY": 0.01,
+          "CASH_COVER": 0.04,
+          "NONE": 0.9299999999999999,
+          "EARNINGS_COVER": 0.01,
+          "DEBT_MATURITIES": 0.01,
+          "SHARE_BUYBACKS": 0
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_HIGH",
+        "confidence": 0.77,
+        "probabilities": {
+          "HIGH": 0.04,
+          "LOW": 0.01,
+          "VERY_HIGH": 0.81,
+          "MODERATE": 0.01,
+          "VERY_LOW": 0.13
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.04
+      }
+    },
+    "DS-GLD": {
+      "safety": {
+        "type": "score",
+        "score": 0.58,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0.7,
+          "1": 0.16,
+          "2": 0.05,
+          "3": 0.06,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.77,
+        "probabilities": {
+          "SHARE_BUYBACKS": 0,
+          "EARNINGS_COVER": 0.03,
+          "CASH_COVER": 0.15,
+          "DEBT_MATURITIES": 0.01,
+          "CYCLICALITY": 0.01,
+          "NONE": 0.8
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_HIGH",
+        "confidence": 0.63,
+        "probabilities": {
+          "MODERATE": 0.05,
+          "LOW": 0.03,
+          "VERY_HIGH": 0.7,
+          "VERY_LOW": 0.09,
+          "HIGH": 0.13
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "DS-AAPL": {
+      "safety": {
+        "type": "score",
+        "score": 5.11,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.1,
+          "5": 0.58,
+          "6": 0.29
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "SHARE_BUYBACKS",
+        "confidence": 0.55,
+        "probabilities": {
+          "CASH_COVER": 0.07,
+          "CYCLICALITY": 0.01,
+          "NONE": 0.09,
+          "EARNINGS_COVER": 0.15,
+          "DEBT_MATURITIES": 0.05,
+          "SHARE_BUYBACKS": 0.63
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_LOW",
+        "confidence": 0.77,
+        "probabilities": {
+          "HIGH": 0,
+          "LOW": 0.18,
+          "VERY_HIGH": 0,
+          "MODERATE": 0,
+          "VERY_LOW": 0.82
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.06
+      }
+    },
+    "DS-MSFT": {
+      "safety": {
+        "type": "score",
+        "score": 4.3,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.02,
+          "2": 0.05,
+          "3": 0.1,
+          "4": 0.32,
+          "5": 0.42,
+          "6": 0.08
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "CASH_COVER",
+        "confidence": 0.3,
+        "probabilities": {
+          "CASH_COVER": 0.41,
+          "EARNINGS_COVER": 0.08,
+          "DEBT_MATURITIES": 0.02,
+          "SHARE_BUYBACKS": 0.41,
+          "NONE": 0.07,
+          "CYCLICALITY": 0.01
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_LOW",
+        "confidence": 0.44,
+        "probabilities": {
+          "MODERATE": 0.06,
+          "VERY_HIGH": 0,
+          "VERY_LOW": 0.56,
+          "HIGH": 0.01,
+          "LOW": 0.37
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.13
+      }
+    },
+    "DS-KO": {
+      "safety": {
+        "type": "score",
+        "score": 2.34,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.18,
+          "2": 0.37,
+          "3": 0.24,
+          "4": 0.13,
+          "5": 0.03,
+          "6": 0.01
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "CASH_COVER",
+        "confidence": 0.91,
+        "probabilities": {
+          "SHARE_BUYBACKS": 0.04,
+          "CYCLICALITY": 0,
+          "EARNINGS_COVER": 0.02,
+          "NONE": 0,
+          "CASH_COVER": 0.93,
+          "DEBT_MATURITIES": 0.01
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.26,
+        "probabilities": {
+          "VERY_HIGH": 0.02,
+          "MODERATE": 0.38,
+          "HIGH": 0.09,
+          "LOW": 0.39999999999999997,
+          "VERY_LOW": 0.11
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.4
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "DS-PG": {
+      "safety": {
+        "type": "score",
+        "score": 4.29,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.03,
+          "3": 0.11,
+          "4": 0.41,
+          "5": 0.39,
+          "6": 0.05
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "SHARE_BUYBACKS",
+        "confidence": 0.29,
+        "probabilities": {
+          "CASH_COVER": 0.19,
+          "DEBT_MATURITIES": 0.02,
+          "EARNINGS_COVER": 0.33,
+          "SHARE_BUYBACKS": 0.41,
+          "CYCLICALITY": 0.01,
+          "NONE": 0.04
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_LOW",
+        "confidence": 0.53,
+        "probabilities": {
+          "VERY_LOW": 0.63,
+          "LOW": 0.36,
+          "MODERATE": 0.01,
+          "VERY_HIGH": 0,
+          "HIGH": 0
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.13
+      }
+    },
+    "DS-JNJ": {
+      "safety": {
+        "type": "score",
+        "score": 3.71,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.03,
+          "2": 0.09,
+          "3": 0.23,
+          "4": 0.44,
+          "5": 0.18,
+          "6": 0.02
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "EARNINGS_COVER",
+        "confidence": 0.76,
+        "probabilities": {
+          "DEBT_MATURITIES": 0.02,
+          "EARNINGS_COVER": 0.8,
+          "CYCLICALITY": 0,
+          "CASH_COVER": 0.08,
+          "NONE": 0.01,
+          "SHARE_BUYBACKS": 0.08
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.5,
+        "probabilities": {
+          "HIGH": 0.01,
+          "LOW": 0.6,
+          "MODERATE": 0.12,
+          "VERY_LOW": 0.27,
+          "VERY_HIGH": 0
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.6
+      }
+    },
+    "DS-CVX": {
+      "safety": {
+        "type": "score",
+        "score": 2.46,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.14,
+          "2": 0.4,
+          "3": 0.32,
+          "4": 0.12,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "EARNINGS_COVER",
+        "confidence": 0.69,
+        "probabilities": {
+          "CYCLICALITY": 0.02,
+          "EARNINGS_COVER": 0.75,
+          "SHARE_BUYBACKS": 0.11,
+          "DEBT_MATURITIES": 0.03,
+          "NONE": 0.01,
+          "CASH_COVER": 0.08
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "MODERATE",
+        "confidence": 0.44,
+        "probabilities": {
+          "VERY_HIGH": 0.01,
+          "MODERATE": 0.56,
+          "LOW": 0.18,
+          "VERY_LOW": 0.03,
+          "HIGH": 0.22
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.35
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "DS-BAC": {
+      "safety": {
+        "type": "score",
+        "score": 2.5,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.13,
+          "2": 0.38,
+          "3": 0.27,
+          "4": 0.16,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "CASH_COVER",
+        "confidence": 0.98,
+        "probabilities": {
+          "CYCLICALITY": 0,
+          "CASH_COVER": 0.98,
+          "NONE": 0,
+          "DEBT_MATURITIES": 0,
+          "SHARE_BUYBACKS": 0.01,
+          "EARNINGS_COVER": 0.01
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "MODERATE",
+        "confidence": 0.41,
+        "probabilities": {
+          "MODERATE": 0.54,
+          "VERY_HIGH": 0.01,
+          "HIGH": 0.12,
+          "VERY_LOW": 0.04,
+          "LOW": 0.29
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "DS-WMT": {
+      "safety": {
+        "type": "score",
+        "score": 4.36,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.1,
+          "4": 0.39,
+          "5": 0.43,
+          "6": 0.05
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "EARNINGS_COVER",
+        "confidence": 0.23,
+        "probabilities": {
+          "DEBT_MATURITIES": 0.05,
+          "CYCLICALITY": 0.02,
+          "SHARE_BUYBACKS": 0.27,
+          "EARNINGS_COVER": 0.35,
+          "CASH_COVER": 0.25,
+          "NONE": 0.06
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_LOW",
+        "confidence": 0.47,
+        "probabilities": {
+          "LOW": 0.41,
+          "VERY_LOW": 0.58,
+          "HIGH": 0,
+          "MODERATE": 0.01,
+          "VERY_HIGH": 0
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.67
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.35
+      }
+    },
+    "DS-PEP": {
+      "safety": {
+        "type": "score",
+        "score": 2.82,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.12,
+          "2": 0.28,
+          "3": 0.27,
+          "4": 0.24,
+          "5": 0.06,
+          "6": 0.01
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "EARNINGS_COVER",
+        "confidence": 0.45,
+        "probabilities": {
+          "DEBT_MATURITIES": 0.02,
+          "CASH_COVER": 0.24,
+          "CYCLICALITY": 0,
+          "EARNINGS_COVER": 0.55,
+          "NONE": 0.01,
+          "SHARE_BUYBACKS": 0.18
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "LOW",
+        "confidence": 0.4,
+        "probabilities": {
+          "HIGH": 0.05,
+          "LOW": 0.52,
+          "MODERATE": 0.27,
+          "VERY_LOW": 0.14,
+          "VERY_HIGH": 0.01
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.59
+      }
+    },
+    "DS-XLE": {
+      "safety": {
+        "type": "score",
+        "score": 0.69,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0.61,
+          "1": 0.2,
+          "2": 0.1,
+          "3": 0.08,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "DEBT_MATURITIES": 0.01,
+          "CASH_COVER": 0.09,
+          "EARNINGS_COVER": 0.06,
+          "CYCLICALITY": 0.12,
+          "NONE": 0.71,
+          "SHARE_BUYBACKS": 0.01
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_HIGH",
+        "confidence": 0.41,
+        "probabilities": {
+          "MODERATE": 0.19,
+          "VERY_HIGH": 0.53,
+          "VERY_LOW": 0.02,
+          "LOW": 0.01,
+          "HIGH": 0.25
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    },
+    "DS-SPY": {
+      "safety": {
+        "type": "score",
+        "score": 0.76,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.64,
+          "1": 0.16,
+          "2": 0.07,
+          "3": 0.09,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "first_to_break": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.84,
+        "probabilities": {
+          "SHARE_BUYBACKS": 0,
+          "DEBT_MATURITIES": 0.01,
+          "CASH_COVER": 0.07,
+          "CYCLICALITY": 0.01,
+          "NONE": 0.87,
+          "EARNINGS_COVER": 0.04
+        }
+      },
+      "cut_risk_12m": {
+        "type": "choice",
+        "choice": "VERY_HIGH",
+        "confidence": 0.36,
+        "probabilities": {
+          "VERY_HIGH": 0.48,
+          "MODERATE": 0.13,
+          "VERY_LOW": 0.2,
+          "LOW": 0.09,
+          "HIGH": 0.1
+        }
+      },
+      "growth_sustainable": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "payout_funded_by_debt": {
+        "type": "noul",
+        "noul": 0.05
+      }
+    }
+  }
+}
