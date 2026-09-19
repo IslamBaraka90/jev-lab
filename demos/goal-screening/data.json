@@ -44,18 +44,18 @@
       "sector": "Technology",
       "industry": "Semiconductors",
       "statementYears": 4,
-      "revenue": 60922000000,
-      "revenueGrowthPercent": 31.2,
-      "grossMarginPercent": 72.7,
-      "operatingMarginPercent": 54.1,
-      "netMarginPercent": 48.8,
-      "totalAssets": 65728000000,
-      "totalDebt": 11056000000,
-      "debtToAssetsPercent": 16.8,
-      "cash": 25984000000,
-      "operatingCashFlow": 28090000000,
-      "freeCashFlow": 27021000000,
-      "dividendsPaid": -395000000,
+      "revenue": 215938000000,
+      "revenueGrowthPercent": 100,
+      "grossMarginPercent": 71.1,
+      "operatingMarginPercent": 60.4,
+      "netMarginPercent": 55.6,
+      "totalAssets": 206803000000,
+      "totalDebt": 11040000000,
+      "debtToAssetsPercent": 5.3,
+      "cash": 62556000000,
+      "operatingCashFlow": 102718000000,
+      "freeCashFlow": 96676000000,
+      "dividendsPaid": -974000000,
       "sharesOutstanding": 24147000000,
       "price": 222.27,
       "priceAsOf": "2026-09-18",
@@ -65,6 +65,30 @@
       "worstFallPercent": -36.89,
       "averageDailyVolume": 128630078,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 215938000000,
+          "operatingIncome": 130387000000,
+          "netIncome": 120067000000,
+          "totalAssets": 206803000000,
+          "totalDebt": 11040000000,
+          "cash": 62556000000,
+          "operatingCashFlow": 102718000000,
+          "freeCashFlow": 96676000000,
+          "dividendsPaid": -974000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 130497000000,
+          "operatingIncome": 81453000000,
+          "netIncome": 72880000000,
+          "totalAssets": 111601000000,
+          "totalDebt": 9982000000,
+          "cash": 43210000000,
+          "operatingCashFlow": 64089000000,
+          "freeCashFlow": 60853000000,
+          "dividendsPaid": -834000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 60922000000,
@@ -88,30 +112,6 @@
           "operatingCashFlow": 5641000000,
           "freeCashFlow": 3808000000,
           "dividendsPaid": -398000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 215938000000,
-          "operatingIncome": 130387000000,
-          "netIncome": 120067000000,
-          "totalAssets": 206803000000,
-          "totalDebt": 11040000000,
-          "cash": 62556000000,
-          "operatingCashFlow": 102718000000,
-          "freeCashFlow": 96676000000,
-          "dividendsPaid": -974000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 26974000000,
-          "operatingIncome": null,
-          "netIncome": 4368000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -123,18 +123,18 @@
       "sector": "Technology",
       "industry": "Semiconductors",
       "statementYears": 4,
-      "revenue": 60922000000,
-      "revenueGrowthPercent": 31.2,
-      "grossMarginPercent": 72.7,
-      "operatingMarginPercent": 54.1,
-      "netMarginPercent": 48.8,
-      "totalAssets": 65728000000,
-      "totalDebt": 11056000000,
-      "debtToAssetsPercent": 16.8,
-      "cash": 25984000000,
-      "operatingCashFlow": 28090000000,
-      "freeCashFlow": 27021000000,
-      "dividendsPaid": -395000000,
+      "revenue": 215938000000,
+      "revenueGrowthPercent": 100,
+      "grossMarginPercent": 71.1,
+      "operatingMarginPercent": 60.4,
+      "netMarginPercent": 55.6,
+      "totalAssets": 206803000000,
+      "totalDebt": 11040000000,
+      "debtToAssetsPercent": 5.3,
+      "cash": 62556000000,
+      "operatingCashFlow": 102718000000,
+      "freeCashFlow": 96676000000,
+      "dividendsPaid": -974000000,
       "sharesOutstanding": 24147000000,
       "price": 222.27,
       "priceAsOf": "2026-09-18",
@@ -144,6 +144,30 @@
       "worstFallPercent": -36.89,
       "averageDailyVolume": 128630078,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 215938000000,
+          "operatingIncome": 130387000000,
+          "netIncome": 120067000000,
+          "totalAssets": 206803000000,
+          "totalDebt": 11040000000,
+          "cash": 62556000000,
+          "operatingCashFlow": 102718000000,
+          "freeCashFlow": 96676000000,
+          "dividendsPaid": -974000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 130497000000,
+          "operatingIncome": 81453000000,
+          "netIncome": 72880000000,
+          "totalAssets": 111601000000,
+          "totalDebt": 9982000000,
+          "cash": 43210000000,
+          "operatingCashFlow": 64089000000,
+          "freeCashFlow": 60853000000,
+          "dividendsPaid": -834000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 60922000000,
@@ -167,30 +191,6 @@
           "operatingCashFlow": 5641000000,
           "freeCashFlow": 3808000000,
           "dividendsPaid": -398000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 215938000000,
-          "operatingIncome": 130387000000,
-          "netIncome": 120067000000,
-          "totalAssets": 206803000000,
-          "totalDebt": 11040000000,
-          "cash": 62556000000,
-          "operatingCashFlow": 102718000000,
-          "freeCashFlow": 96676000000,
-          "dividendsPaid": -974000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 26974000000,
-          "operatingIncome": null,
-          "netIncome": 4368000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -202,18 +202,18 @@
       "sector": "Technology",
       "industry": "Semiconductors",
       "statementYears": 4,
-      "revenue": 60922000000,
-      "revenueGrowthPercent": 31.2,
-      "grossMarginPercent": 72.7,
-      "operatingMarginPercent": 54.1,
-      "netMarginPercent": 48.8,
-      "totalAssets": 65728000000,
-      "totalDebt": 11056000000,
-      "debtToAssetsPercent": 16.8,
-      "cash": 25984000000,
-      "operatingCashFlow": 28090000000,
-      "freeCashFlow": 27021000000,
-      "dividendsPaid": -395000000,
+      "revenue": 215938000000,
+      "revenueGrowthPercent": 100,
+      "grossMarginPercent": 71.1,
+      "operatingMarginPercent": 60.4,
+      "netMarginPercent": 55.6,
+      "totalAssets": 206803000000,
+      "totalDebt": 11040000000,
+      "debtToAssetsPercent": 5.3,
+      "cash": 62556000000,
+      "operatingCashFlow": 102718000000,
+      "freeCashFlow": 96676000000,
+      "dividendsPaid": -974000000,
       "sharesOutstanding": 24147000000,
       "price": 222.27,
       "priceAsOf": "2026-09-18",
@@ -223,6 +223,30 @@
       "worstFallPercent": -36.89,
       "averageDailyVolume": 128630078,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 215938000000,
+          "operatingIncome": 130387000000,
+          "netIncome": 120067000000,
+          "totalAssets": 206803000000,
+          "totalDebt": 11040000000,
+          "cash": 62556000000,
+          "operatingCashFlow": 102718000000,
+          "freeCashFlow": 96676000000,
+          "dividendsPaid": -974000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 130497000000,
+          "operatingIncome": 81453000000,
+          "netIncome": 72880000000,
+          "totalAssets": 111601000000,
+          "totalDebt": 9982000000,
+          "cash": 43210000000,
+          "operatingCashFlow": 64089000000,
+          "freeCashFlow": 60853000000,
+          "dividendsPaid": -834000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 60922000000,
@@ -246,30 +270,6 @@
           "operatingCashFlow": 5641000000,
           "freeCashFlow": 3808000000,
           "dividendsPaid": -398000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 215938000000,
-          "operatingIncome": 130387000000,
-          "netIncome": 120067000000,
-          "totalAssets": 206803000000,
-          "totalDebt": 11040000000,
-          "cash": 62556000000,
-          "operatingCashFlow": 102718000000,
-          "freeCashFlow": 96676000000,
-          "dividendsPaid": -974000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 26974000000,
-          "operatingIncome": null,
-          "netIncome": 4368000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -281,18 +281,18 @@
       "sector": "Technology",
       "industry": "Semiconductors",
       "statementYears": 4,
-      "revenue": 60922000000,
-      "revenueGrowthPercent": 31.2,
-      "grossMarginPercent": 72.7,
-      "operatingMarginPercent": 54.1,
-      "netMarginPercent": 48.8,
-      "totalAssets": 65728000000,
-      "totalDebt": 11056000000,
-      "debtToAssetsPercent": 16.8,
-      "cash": 25984000000,
-      "operatingCashFlow": 28090000000,
-      "freeCashFlow": 27021000000,
-      "dividendsPaid": -395000000,
+      "revenue": 215938000000,
+      "revenueGrowthPercent": 100,
+      "grossMarginPercent": 71.1,
+      "operatingMarginPercent": 60.4,
+      "netMarginPercent": 55.6,
+      "totalAssets": 206803000000,
+      "totalDebt": 11040000000,
+      "debtToAssetsPercent": 5.3,
+      "cash": 62556000000,
+      "operatingCashFlow": 102718000000,
+      "freeCashFlow": 96676000000,
+      "dividendsPaid": -974000000,
       "sharesOutstanding": 24147000000,
       "price": 222.27,
       "priceAsOf": "2026-09-18",
@@ -302,6 +302,30 @@
       "worstFallPercent": -36.89,
       "averageDailyVolume": 128630078,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 215938000000,
+          "operatingIncome": 130387000000,
+          "netIncome": 120067000000,
+          "totalAssets": 206803000000,
+          "totalDebt": 11040000000,
+          "cash": 62556000000,
+          "operatingCashFlow": 102718000000,
+          "freeCashFlow": 96676000000,
+          "dividendsPaid": -974000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 130497000000,
+          "operatingIncome": 81453000000,
+          "netIncome": 72880000000,
+          "totalAssets": 111601000000,
+          "totalDebt": 9982000000,
+          "cash": 43210000000,
+          "operatingCashFlow": 64089000000,
+          "freeCashFlow": 60853000000,
+          "dividendsPaid": -834000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 60922000000,
@@ -325,30 +349,6 @@
           "operatingCashFlow": 5641000000,
           "freeCashFlow": 3808000000,
           "dividendsPaid": -398000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 215938000000,
-          "operatingIncome": 130387000000,
-          "netIncome": 120067000000,
-          "totalAssets": 206803000000,
-          "totalDebt": 11040000000,
-          "cash": 62556000000,
-          "operatingCashFlow": 102718000000,
-          "freeCashFlow": 96676000000,
-          "dividendsPaid": -974000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 26974000000,
-          "operatingIncome": null,
-          "netIncome": 4368000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -360,18 +360,18 @@
       "sector": "Technology",
       "industry": "Semiconductors",
       "statementYears": 4,
-      "revenue": 60922000000,
-      "revenueGrowthPercent": 31.2,
-      "grossMarginPercent": 72.7,
-      "operatingMarginPercent": 54.1,
-      "netMarginPercent": 48.8,
-      "totalAssets": 65728000000,
-      "totalDebt": 11056000000,
-      "debtToAssetsPercent": 16.8,
-      "cash": 25984000000,
-      "operatingCashFlow": 28090000000,
-      "freeCashFlow": 27021000000,
-      "dividendsPaid": -395000000,
+      "revenue": 215938000000,
+      "revenueGrowthPercent": 100,
+      "grossMarginPercent": 71.1,
+      "operatingMarginPercent": 60.4,
+      "netMarginPercent": 55.6,
+      "totalAssets": 206803000000,
+      "totalDebt": 11040000000,
+      "debtToAssetsPercent": 5.3,
+      "cash": 62556000000,
+      "operatingCashFlow": 102718000000,
+      "freeCashFlow": 96676000000,
+      "dividendsPaid": -974000000,
       "sharesOutstanding": 24147000000,
       "price": 222.27,
       "priceAsOf": "2026-09-18",
@@ -381,6 +381,30 @@
       "worstFallPercent": -36.89,
       "averageDailyVolume": 128630078,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 215938000000,
+          "operatingIncome": 130387000000,
+          "netIncome": 120067000000,
+          "totalAssets": 206803000000,
+          "totalDebt": 11040000000,
+          "cash": 62556000000,
+          "operatingCashFlow": 102718000000,
+          "freeCashFlow": 96676000000,
+          "dividendsPaid": -974000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 130497000000,
+          "operatingIncome": 81453000000,
+          "netIncome": 72880000000,
+          "totalAssets": 111601000000,
+          "totalDebt": 9982000000,
+          "cash": 43210000000,
+          "operatingCashFlow": 64089000000,
+          "freeCashFlow": 60853000000,
+          "dividendsPaid": -834000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 60922000000,
@@ -404,30 +428,6 @@
           "operatingCashFlow": 5641000000,
           "freeCashFlow": 3808000000,
           "dividendsPaid": -398000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 215938000000,
-          "operatingIncome": 130387000000,
-          "netIncome": 120067000000,
-          "totalAssets": 206803000000,
-          "totalDebt": 11040000000,
-          "cash": 62556000000,
-          "operatingCashFlow": 102718000000,
-          "freeCashFlow": 96676000000,
-          "dividendsPaid": -974000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 26974000000,
-          "operatingIncome": null,
-          "netIncome": 4368000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -439,18 +439,18 @@
       "sector": "Technology",
       "industry": "Semiconductors",
       "statementYears": 4,
-      "revenue": 60922000000,
-      "revenueGrowthPercent": 31.2,
-      "grossMarginPercent": 72.7,
-      "operatingMarginPercent": 54.1,
-      "netMarginPercent": 48.8,
-      "totalAssets": 65728000000,
-      "totalDebt": 11056000000,
-      "debtToAssetsPercent": 16.8,
-      "cash": 25984000000,
-      "operatingCashFlow": 28090000000,
-      "freeCashFlow": 27021000000,
-      "dividendsPaid": -395000000,
+      "revenue": 215938000000,
+      "revenueGrowthPercent": 100,
+      "grossMarginPercent": 71.1,
+      "operatingMarginPercent": 60.4,
+      "netMarginPercent": 55.6,
+      "totalAssets": 206803000000,
+      "totalDebt": 11040000000,
+      "debtToAssetsPercent": 5.3,
+      "cash": 62556000000,
+      "operatingCashFlow": 102718000000,
+      "freeCashFlow": 96676000000,
+      "dividendsPaid": -974000000,
       "sharesOutstanding": 24147000000,
       "price": 222.27,
       "priceAsOf": "2026-09-18",
@@ -460,6 +460,30 @@
       "worstFallPercent": -36.89,
       "averageDailyVolume": 128630078,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 215938000000,
+          "operatingIncome": 130387000000,
+          "netIncome": 120067000000,
+          "totalAssets": 206803000000,
+          "totalDebt": 11040000000,
+          "cash": 62556000000,
+          "operatingCashFlow": 102718000000,
+          "freeCashFlow": 96676000000,
+          "dividendsPaid": -974000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 130497000000,
+          "operatingIncome": 81453000000,
+          "netIncome": 72880000000,
+          "totalAssets": 111601000000,
+          "totalDebt": 9982000000,
+          "cash": 43210000000,
+          "operatingCashFlow": 64089000000,
+          "freeCashFlow": 60853000000,
+          "dividendsPaid": -834000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 60922000000,
@@ -483,30 +507,6 @@
           "operatingCashFlow": 5641000000,
           "freeCashFlow": 3808000000,
           "dividendsPaid": -398000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 215938000000,
-          "operatingIncome": 130387000000,
-          "netIncome": 120067000000,
-          "totalAssets": 206803000000,
-          "totalDebt": 11040000000,
-          "cash": 62556000000,
-          "operatingCashFlow": 102718000000,
-          "freeCashFlow": 96676000000,
-          "dividendsPaid": -974000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 26974000000,
-          "operatingIncome": null,
-          "netIncome": 4368000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -519,7 +519,7 @@
       "industry": "Software - Infrastructure",
       "statementYears": 4,
       "revenue": 331839000000,
-      "revenueGrowthPercent": 5.6,
+      "revenueGrowthPercent": 16.1,
       "grossMarginPercent": 67.9,
       "operatingMarginPercent": 46.8,
       "netMarginPercent": 40.3,
@@ -552,16 +552,16 @@
           "dividendsPaid": -26445000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 281724000000,
-          "operatingIncome": null,
+          "operatingIncome": 128528000000,
           "netIncome": 101832000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 619003000000,
+          "totalDebt": 60588000000,
+          "cash": 94555000000,
+          "operatingCashFlow": 136162000000,
+          "freeCashFlow": 71611000000,
+          "dividendsPaid": -24082000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -576,16 +576,16 @@
           "dividendsPaid": -21771000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 281724000000,
-          "operatingIncome": 128528000000,
-          "netIncome": 101832000000,
-          "totalAssets": 619003000000,
-          "totalDebt": 60588000000,
-          "cash": 94555000000,
-          "operatingCashFlow": 136162000000,
-          "freeCashFlow": 71611000000,
-          "dividendsPaid": -24082000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 211915000000,
+          "operatingIncome": 88523000000,
+          "netIncome": 72361000000,
+          "totalAssets": 411976000000,
+          "totalDebt": 59965000000,
+          "cash": 111256000000,
+          "operatingCashFlow": 87582000000,
+          "freeCashFlow": 59475000000,
+          "dividendsPaid": -19800000000
         }
       ]
     },
@@ -598,7 +598,7 @@
       "industry": "Software - Infrastructure",
       "statementYears": 4,
       "revenue": 331839000000,
-      "revenueGrowthPercent": 5.6,
+      "revenueGrowthPercent": 16.1,
       "grossMarginPercent": 67.9,
       "operatingMarginPercent": 46.8,
       "netMarginPercent": 40.3,
@@ -631,16 +631,16 @@
           "dividendsPaid": -26445000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 281724000000,
-          "operatingIncome": null,
+          "operatingIncome": 128528000000,
           "netIncome": 101832000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 619003000000,
+          "totalDebt": 60588000000,
+          "cash": 94555000000,
+          "operatingCashFlow": 136162000000,
+          "freeCashFlow": 71611000000,
+          "dividendsPaid": -24082000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -655,16 +655,16 @@
           "dividendsPaid": -21771000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 281724000000,
-          "operatingIncome": 128528000000,
-          "netIncome": 101832000000,
-          "totalAssets": 619003000000,
-          "totalDebt": 60588000000,
-          "cash": 94555000000,
-          "operatingCashFlow": 136162000000,
-          "freeCashFlow": 71611000000,
-          "dividendsPaid": -24082000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 211915000000,
+          "operatingIncome": 88523000000,
+          "netIncome": 72361000000,
+          "totalAssets": 411976000000,
+          "totalDebt": 59965000000,
+          "cash": 111256000000,
+          "operatingCashFlow": 87582000000,
+          "freeCashFlow": 59475000000,
+          "dividendsPaid": -19800000000
         }
       ]
     },
@@ -677,7 +677,7 @@
       "industry": "Software - Infrastructure",
       "statementYears": 4,
       "revenue": 331839000000,
-      "revenueGrowthPercent": 5.6,
+      "revenueGrowthPercent": 16.1,
       "grossMarginPercent": 67.9,
       "operatingMarginPercent": 46.8,
       "netMarginPercent": 40.3,
@@ -710,16 +710,16 @@
           "dividendsPaid": -26445000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 281724000000,
-          "operatingIncome": null,
+          "operatingIncome": 128528000000,
           "netIncome": 101832000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 619003000000,
+          "totalDebt": 60588000000,
+          "cash": 94555000000,
+          "operatingCashFlow": 136162000000,
+          "freeCashFlow": 71611000000,
+          "dividendsPaid": -24082000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -734,16 +734,16 @@
           "dividendsPaid": -21771000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 281724000000,
-          "operatingIncome": 128528000000,
-          "netIncome": 101832000000,
-          "totalAssets": 619003000000,
-          "totalDebt": 60588000000,
-          "cash": 94555000000,
-          "operatingCashFlow": 136162000000,
-          "freeCashFlow": 71611000000,
-          "dividendsPaid": -24082000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 211915000000,
+          "operatingIncome": 88523000000,
+          "netIncome": 72361000000,
+          "totalAssets": 411976000000,
+          "totalDebt": 59965000000,
+          "cash": 111256000000,
+          "operatingCashFlow": 87582000000,
+          "freeCashFlow": 59475000000,
+          "dividendsPaid": -19800000000
         }
       ]
     },
@@ -756,7 +756,7 @@
       "industry": "Software - Infrastructure",
       "statementYears": 4,
       "revenue": 331839000000,
-      "revenueGrowthPercent": 5.6,
+      "revenueGrowthPercent": 16.1,
       "grossMarginPercent": 67.9,
       "operatingMarginPercent": 46.8,
       "netMarginPercent": 40.3,
@@ -789,16 +789,16 @@
           "dividendsPaid": -26445000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 281724000000,
-          "operatingIncome": null,
+          "operatingIncome": 128528000000,
           "netIncome": 101832000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 619003000000,
+          "totalDebt": 60588000000,
+          "cash": 94555000000,
+          "operatingCashFlow": 136162000000,
+          "freeCashFlow": 71611000000,
+          "dividendsPaid": -24082000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -813,16 +813,16 @@
           "dividendsPaid": -21771000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 281724000000,
-          "operatingIncome": 128528000000,
-          "netIncome": 101832000000,
-          "totalAssets": 619003000000,
-          "totalDebt": 60588000000,
-          "cash": 94555000000,
-          "operatingCashFlow": 136162000000,
-          "freeCashFlow": 71611000000,
-          "dividendsPaid": -24082000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 211915000000,
+          "operatingIncome": 88523000000,
+          "netIncome": 72361000000,
+          "totalAssets": 411976000000,
+          "totalDebt": 59965000000,
+          "cash": 111256000000,
+          "operatingCashFlow": 87582000000,
+          "freeCashFlow": 59475000000,
+          "dividendsPaid": -19800000000
         }
       ]
     },
@@ -835,7 +835,7 @@
       "industry": "Software - Infrastructure",
       "statementYears": 4,
       "revenue": 331839000000,
-      "revenueGrowthPercent": 5.6,
+      "revenueGrowthPercent": 16.1,
       "grossMarginPercent": 67.9,
       "operatingMarginPercent": 46.8,
       "netMarginPercent": 40.3,
@@ -868,16 +868,16 @@
           "dividendsPaid": -26445000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 281724000000,
-          "operatingIncome": null,
+          "operatingIncome": 128528000000,
           "netIncome": 101832000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 619003000000,
+          "totalDebt": 60588000000,
+          "cash": 94555000000,
+          "operatingCashFlow": 136162000000,
+          "freeCashFlow": 71611000000,
+          "dividendsPaid": -24082000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -892,16 +892,16 @@
           "dividendsPaid": -21771000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 281724000000,
-          "operatingIncome": 128528000000,
-          "netIncome": 101832000000,
-          "totalAssets": 619003000000,
-          "totalDebt": 60588000000,
-          "cash": 94555000000,
-          "operatingCashFlow": 136162000000,
-          "freeCashFlow": 71611000000,
-          "dividendsPaid": -24082000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 211915000000,
+          "operatingIncome": 88523000000,
+          "netIncome": 72361000000,
+          "totalAssets": 411976000000,
+          "totalDebt": 59965000000,
+          "cash": 111256000000,
+          "operatingCashFlow": 87582000000,
+          "freeCashFlow": 59475000000,
+          "dividendsPaid": -19800000000
         }
       ]
     },
@@ -914,7 +914,7 @@
       "industry": "Software - Infrastructure",
       "statementYears": 4,
       "revenue": 331839000000,
-      "revenueGrowthPercent": 5.6,
+      "revenueGrowthPercent": 16.1,
       "grossMarginPercent": 67.9,
       "operatingMarginPercent": 46.8,
       "netMarginPercent": 40.3,
@@ -947,16 +947,16 @@
           "dividendsPaid": -26445000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 281724000000,
-          "operatingIncome": null,
+          "operatingIncome": 128528000000,
           "netIncome": 101832000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 619003000000,
+          "totalDebt": 60588000000,
+          "cash": 94555000000,
+          "operatingCashFlow": 136162000000,
+          "freeCashFlow": 71611000000,
+          "dividendsPaid": -24082000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -971,16 +971,16 @@
           "dividendsPaid": -21771000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 281724000000,
-          "operatingIncome": 128528000000,
-          "netIncome": 101832000000,
-          "totalAssets": 619003000000,
-          "totalDebt": 60588000000,
-          "cash": 94555000000,
-          "operatingCashFlow": 136162000000,
-          "freeCashFlow": 71611000000,
-          "dividendsPaid": -24082000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 211915000000,
+          "operatingIncome": 88523000000,
+          "netIncome": 72361000000,
+          "totalAssets": 411976000000,
+          "totalDebt": 59965000000,
+          "cash": 111256000000,
+          "operatingCashFlow": 87582000000,
+          "freeCashFlow": 59475000000,
+          "dividendsPaid": -19800000000
         }
       ]
     },
@@ -993,7 +993,7 @@
       "industry": "Consumer Electronics",
       "statementYears": 4,
       "revenue": 416161000000,
-      "revenueGrowthPercent": 2.1,
+      "revenueGrowthPercent": 1.8,
       "grossMarginPercent": 46.9,
       "operatingMarginPercent": 32,
       "netMarginPercent": 26.9,
@@ -1026,16 +1026,16 @@
           "dividendsPaid": -15421000000
         },
         {
-          "fiscalYearEnd": "2021-09-30",
+          "fiscalYearEnd": "2024-09-30",
           "revenue": 391035000000,
-          "operatingIncome": null,
+          "operatingIncome": 123216000000,
           "netIncome": 93736000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 364980000000,
+          "totalDebt": 106629000000,
+          "cash": 65171000000,
+          "operatingCashFlow": 118254000000,
+          "freeCashFlow": 108807000000,
+          "dividendsPaid": -15234000000
         },
         {
           "fiscalYearEnd": "2023-09-30",
@@ -1050,16 +1050,16 @@
           "dividendsPaid": -15025000000
         },
         {
-          "fiscalYearEnd": "2024-09-30",
-          "revenue": 391035000000,
-          "operatingIncome": 123216000000,
-          "netIncome": 93736000000,
-          "totalAssets": 364980000000,
-          "totalDebt": 106629000000,
-          "cash": 65171000000,
-          "operatingCashFlow": 118254000000,
-          "freeCashFlow": 108807000000,
-          "dividendsPaid": -15234000000
+          "fiscalYearEnd": "2022-09-30",
+          "revenue": 394328000000,
+          "operatingIncome": 119437000000,
+          "netIncome": 99803000000,
+          "totalAssets": 352755000000,
+          "totalDebt": 132480000000,
+          "cash": 48304000000,
+          "operatingCashFlow": 122151000000,
+          "freeCashFlow": 111443000000,
+          "dividendsPaid": -14841000000
         }
       ]
     },
@@ -1072,7 +1072,7 @@
       "industry": "Consumer Electronics",
       "statementYears": 4,
       "revenue": 416161000000,
-      "revenueGrowthPercent": 2.1,
+      "revenueGrowthPercent": 1.8,
       "grossMarginPercent": 46.9,
       "operatingMarginPercent": 32,
       "netMarginPercent": 26.9,
@@ -1105,16 +1105,16 @@
           "dividendsPaid": -15421000000
         },
         {
-          "fiscalYearEnd": "2021-09-30",
+          "fiscalYearEnd": "2024-09-30",
           "revenue": 391035000000,
-          "operatingIncome": null,
+          "operatingIncome": 123216000000,
           "netIncome": 93736000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 364980000000,
+          "totalDebt": 106629000000,
+          "cash": 65171000000,
+          "operatingCashFlow": 118254000000,
+          "freeCashFlow": 108807000000,
+          "dividendsPaid": -15234000000
         },
         {
           "fiscalYearEnd": "2023-09-30",
@@ -1129,16 +1129,16 @@
           "dividendsPaid": -15025000000
         },
         {
-          "fiscalYearEnd": "2024-09-30",
-          "revenue": 391035000000,
-          "operatingIncome": 123216000000,
-          "netIncome": 93736000000,
-          "totalAssets": 364980000000,
-          "totalDebt": 106629000000,
-          "cash": 65171000000,
-          "operatingCashFlow": 118254000000,
-          "freeCashFlow": 108807000000,
-          "dividendsPaid": -15234000000
+          "fiscalYearEnd": "2022-09-30",
+          "revenue": 394328000000,
+          "operatingIncome": 119437000000,
+          "netIncome": 99803000000,
+          "totalAssets": 352755000000,
+          "totalDebt": 132480000000,
+          "cash": 48304000000,
+          "operatingCashFlow": 122151000000,
+          "freeCashFlow": 111443000000,
+          "dividendsPaid": -14841000000
         }
       ]
     },
@@ -1151,7 +1151,7 @@
       "industry": "Consumer Electronics",
       "statementYears": 4,
       "revenue": 416161000000,
-      "revenueGrowthPercent": 2.1,
+      "revenueGrowthPercent": 1.8,
       "grossMarginPercent": 46.9,
       "operatingMarginPercent": 32,
       "netMarginPercent": 26.9,
@@ -1184,16 +1184,16 @@
           "dividendsPaid": -15421000000
         },
         {
-          "fiscalYearEnd": "2021-09-30",
+          "fiscalYearEnd": "2024-09-30",
           "revenue": 391035000000,
-          "operatingIncome": null,
+          "operatingIncome": 123216000000,
           "netIncome": 93736000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 364980000000,
+          "totalDebt": 106629000000,
+          "cash": 65171000000,
+          "operatingCashFlow": 118254000000,
+          "freeCashFlow": 108807000000,
+          "dividendsPaid": -15234000000
         },
         {
           "fiscalYearEnd": "2023-09-30",
@@ -1208,16 +1208,16 @@
           "dividendsPaid": -15025000000
         },
         {
-          "fiscalYearEnd": "2024-09-30",
-          "revenue": 391035000000,
-          "operatingIncome": 123216000000,
-          "netIncome": 93736000000,
-          "totalAssets": 364980000000,
-          "totalDebt": 106629000000,
-          "cash": 65171000000,
-          "operatingCashFlow": 118254000000,
-          "freeCashFlow": 108807000000,
-          "dividendsPaid": -15234000000
+          "fiscalYearEnd": "2022-09-30",
+          "revenue": 394328000000,
+          "operatingIncome": 119437000000,
+          "netIncome": 99803000000,
+          "totalAssets": 352755000000,
+          "totalDebt": 132480000000,
+          "cash": 48304000000,
+          "operatingCashFlow": 122151000000,
+          "freeCashFlow": 111443000000,
+          "dividendsPaid": -14841000000
         }
       ]
     },
@@ -1230,7 +1230,7 @@
       "industry": "Consumer Electronics",
       "statementYears": 4,
       "revenue": 416161000000,
-      "revenueGrowthPercent": 2.1,
+      "revenueGrowthPercent": 1.8,
       "grossMarginPercent": 46.9,
       "operatingMarginPercent": 32,
       "netMarginPercent": 26.9,
@@ -1263,16 +1263,16 @@
           "dividendsPaid": -15421000000
         },
         {
-          "fiscalYearEnd": "2021-09-30",
+          "fiscalYearEnd": "2024-09-30",
           "revenue": 391035000000,
-          "operatingIncome": null,
+          "operatingIncome": 123216000000,
           "netIncome": 93736000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 364980000000,
+          "totalDebt": 106629000000,
+          "cash": 65171000000,
+          "operatingCashFlow": 118254000000,
+          "freeCashFlow": 108807000000,
+          "dividendsPaid": -15234000000
         },
         {
           "fiscalYearEnd": "2023-09-30",
@@ -1287,16 +1287,16 @@
           "dividendsPaid": -15025000000
         },
         {
-          "fiscalYearEnd": "2024-09-30",
-          "revenue": 391035000000,
-          "operatingIncome": 123216000000,
-          "netIncome": 93736000000,
-          "totalAssets": 364980000000,
-          "totalDebt": 106629000000,
-          "cash": 65171000000,
-          "operatingCashFlow": 118254000000,
-          "freeCashFlow": 108807000000,
-          "dividendsPaid": -15234000000
+          "fiscalYearEnd": "2022-09-30",
+          "revenue": 394328000000,
+          "operatingIncome": 119437000000,
+          "netIncome": 99803000000,
+          "totalAssets": 352755000000,
+          "totalDebt": 132480000000,
+          "cash": 48304000000,
+          "operatingCashFlow": 122151000000,
+          "freeCashFlow": 111443000000,
+          "dividendsPaid": -14841000000
         }
       ]
     },
@@ -1309,7 +1309,7 @@
       "industry": "Consumer Electronics",
       "statementYears": 4,
       "revenue": 416161000000,
-      "revenueGrowthPercent": 2.1,
+      "revenueGrowthPercent": 1.8,
       "grossMarginPercent": 46.9,
       "operatingMarginPercent": 32,
       "netMarginPercent": 26.9,
@@ -1342,16 +1342,16 @@
           "dividendsPaid": -15421000000
         },
         {
-          "fiscalYearEnd": "2021-09-30",
+          "fiscalYearEnd": "2024-09-30",
           "revenue": 391035000000,
-          "operatingIncome": null,
+          "operatingIncome": 123216000000,
           "netIncome": 93736000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 364980000000,
+          "totalDebt": 106629000000,
+          "cash": 65171000000,
+          "operatingCashFlow": 118254000000,
+          "freeCashFlow": 108807000000,
+          "dividendsPaid": -15234000000
         },
         {
           "fiscalYearEnd": "2023-09-30",
@@ -1366,16 +1366,16 @@
           "dividendsPaid": -15025000000
         },
         {
-          "fiscalYearEnd": "2024-09-30",
-          "revenue": 391035000000,
-          "operatingIncome": 123216000000,
-          "netIncome": 93736000000,
-          "totalAssets": 364980000000,
-          "totalDebt": 106629000000,
-          "cash": 65171000000,
-          "operatingCashFlow": 118254000000,
-          "freeCashFlow": 108807000000,
-          "dividendsPaid": -15234000000
+          "fiscalYearEnd": "2022-09-30",
+          "revenue": 394328000000,
+          "operatingIncome": 119437000000,
+          "netIncome": 99803000000,
+          "totalAssets": 352755000000,
+          "totalDebt": 132480000000,
+          "cash": 48304000000,
+          "operatingCashFlow": 122151000000,
+          "freeCashFlow": 111443000000,
+          "dividendsPaid": -14841000000
         }
       ]
     },
@@ -1388,7 +1388,7 @@
       "industry": "Consumer Electronics",
       "statementYears": 4,
       "revenue": 416161000000,
-      "revenueGrowthPercent": 2.1,
+      "revenueGrowthPercent": 1.8,
       "grossMarginPercent": 46.9,
       "operatingMarginPercent": 32,
       "netMarginPercent": 26.9,
@@ -1421,16 +1421,16 @@
           "dividendsPaid": -15421000000
         },
         {
-          "fiscalYearEnd": "2021-09-30",
+          "fiscalYearEnd": "2024-09-30",
           "revenue": 391035000000,
-          "operatingIncome": null,
+          "operatingIncome": 123216000000,
           "netIncome": 93736000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 364980000000,
+          "totalDebt": 106629000000,
+          "cash": 65171000000,
+          "operatingCashFlow": 118254000000,
+          "freeCashFlow": 108807000000,
+          "dividendsPaid": -15234000000
         },
         {
           "fiscalYearEnd": "2023-09-30",
@@ -1445,16 +1445,16 @@
           "dividendsPaid": -15025000000
         },
         {
-          "fiscalYearEnd": "2024-09-30",
-          "revenue": 391035000000,
-          "operatingIncome": 123216000000,
-          "netIncome": 93736000000,
-          "totalAssets": 364980000000,
-          "totalDebt": 106629000000,
-          "cash": 65171000000,
-          "operatingCashFlow": 118254000000,
-          "freeCashFlow": 108807000000,
-          "dividendsPaid": -15234000000
+          "fiscalYearEnd": "2022-09-30",
+          "revenue": 394328000000,
+          "operatingIncome": 119437000000,
+          "netIncome": 99803000000,
+          "totalAssets": 352755000000,
+          "totalDebt": 132480000000,
+          "cash": 48304000000,
+          "operatingCashFlow": 122151000000,
+          "freeCashFlow": 111443000000,
+          "dividendsPaid": -14841000000
         }
       ]
     },
@@ -4311,7 +4311,7 @@
       "industry": "Household & Personal Products",
       "statementYears": 4,
       "revenue": 87032000000,
-      "revenueGrowthPercent": 1.1,
+      "revenueGrowthPercent": 2,
       "grossMarginPercent": 50.2,
       "operatingMarginPercent": 22.7,
       "netMarginPercent": 18.4,
@@ -4344,16 +4344,16 @@
           "dividendsPaid": -10232000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 84284000000,
-          "operatingIncome": null,
+          "operatingIncome": 20451000000,
           "netIncome": 15974000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 125231000000,
+          "totalDebt": 35463000000,
+          "cash": 9556000000,
+          "operatingCashFlow": 17817000000,
+          "freeCashFlow": 14044000000,
+          "dividendsPaid": -9872000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -4368,16 +4368,16 @@
           "dividendsPaid": -9312000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 84284000000,
-          "operatingIncome": 20451000000,
-          "netIncome": 15974000000,
-          "totalAssets": 125231000000,
-          "totalDebt": 35463000000,
-          "cash": 9556000000,
-          "operatingCashFlow": 17817000000,
-          "freeCashFlow": 14044000000,
-          "dividendsPaid": -9872000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 82006000000,
+          "operatingIncome": 18134000000,
+          "netIncome": 14653000000,
+          "totalAssets": 120829000000,
+          "totalDebt": 35424000000,
+          "cash": 8246000000,
+          "operatingCashFlow": 16848000000,
+          "freeCashFlow": 13786000000,
+          "dividendsPaid": -8999000000
         }
       ]
     },
@@ -4390,7 +4390,7 @@
       "industry": "Household & Personal Products",
       "statementYears": 4,
       "revenue": 87032000000,
-      "revenueGrowthPercent": 1.1,
+      "revenueGrowthPercent": 2,
       "grossMarginPercent": 50.2,
       "operatingMarginPercent": 22.7,
       "netMarginPercent": 18.4,
@@ -4423,16 +4423,16 @@
           "dividendsPaid": -10232000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 84284000000,
-          "operatingIncome": null,
+          "operatingIncome": 20451000000,
           "netIncome": 15974000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 125231000000,
+          "totalDebt": 35463000000,
+          "cash": 9556000000,
+          "operatingCashFlow": 17817000000,
+          "freeCashFlow": 14044000000,
+          "dividendsPaid": -9872000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -4447,16 +4447,16 @@
           "dividendsPaid": -9312000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 84284000000,
-          "operatingIncome": 20451000000,
-          "netIncome": 15974000000,
-          "totalAssets": 125231000000,
-          "totalDebt": 35463000000,
-          "cash": 9556000000,
-          "operatingCashFlow": 17817000000,
-          "freeCashFlow": 14044000000,
-          "dividendsPaid": -9872000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 82006000000,
+          "operatingIncome": 18134000000,
+          "netIncome": 14653000000,
+          "totalAssets": 120829000000,
+          "totalDebt": 35424000000,
+          "cash": 8246000000,
+          "operatingCashFlow": 16848000000,
+          "freeCashFlow": 13786000000,
+          "dividendsPaid": -8999000000
         }
       ]
     },
@@ -4469,7 +4469,7 @@
       "industry": "Household & Personal Products",
       "statementYears": 4,
       "revenue": 87032000000,
-      "revenueGrowthPercent": 1.1,
+      "revenueGrowthPercent": 2,
       "grossMarginPercent": 50.2,
       "operatingMarginPercent": 22.7,
       "netMarginPercent": 18.4,
@@ -4502,16 +4502,16 @@
           "dividendsPaid": -10232000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 84284000000,
-          "operatingIncome": null,
+          "operatingIncome": 20451000000,
           "netIncome": 15974000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 125231000000,
+          "totalDebt": 35463000000,
+          "cash": 9556000000,
+          "operatingCashFlow": 17817000000,
+          "freeCashFlow": 14044000000,
+          "dividendsPaid": -9872000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -4526,16 +4526,16 @@
           "dividendsPaid": -9312000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 84284000000,
-          "operatingIncome": 20451000000,
-          "netIncome": 15974000000,
-          "totalAssets": 125231000000,
-          "totalDebt": 35463000000,
-          "cash": 9556000000,
-          "operatingCashFlow": 17817000000,
-          "freeCashFlow": 14044000000,
-          "dividendsPaid": -9872000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 82006000000,
+          "operatingIncome": 18134000000,
+          "netIncome": 14653000000,
+          "totalAssets": 120829000000,
+          "totalDebt": 35424000000,
+          "cash": 8246000000,
+          "operatingCashFlow": 16848000000,
+          "freeCashFlow": 13786000000,
+          "dividendsPaid": -8999000000
         }
       ]
     },
@@ -4548,7 +4548,7 @@
       "industry": "Household & Personal Products",
       "statementYears": 4,
       "revenue": 87032000000,
-      "revenueGrowthPercent": 1.1,
+      "revenueGrowthPercent": 2,
       "grossMarginPercent": 50.2,
       "operatingMarginPercent": 22.7,
       "netMarginPercent": 18.4,
@@ -4581,16 +4581,16 @@
           "dividendsPaid": -10232000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 84284000000,
-          "operatingIncome": null,
+          "operatingIncome": 20451000000,
           "netIncome": 15974000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 125231000000,
+          "totalDebt": 35463000000,
+          "cash": 9556000000,
+          "operatingCashFlow": 17817000000,
+          "freeCashFlow": 14044000000,
+          "dividendsPaid": -9872000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -4605,16 +4605,16 @@
           "dividendsPaid": -9312000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 84284000000,
-          "operatingIncome": 20451000000,
-          "netIncome": 15974000000,
-          "totalAssets": 125231000000,
-          "totalDebt": 35463000000,
-          "cash": 9556000000,
-          "operatingCashFlow": 17817000000,
-          "freeCashFlow": 14044000000,
-          "dividendsPaid": -9872000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 82006000000,
+          "operatingIncome": 18134000000,
+          "netIncome": 14653000000,
+          "totalAssets": 120829000000,
+          "totalDebt": 35424000000,
+          "cash": 8246000000,
+          "operatingCashFlow": 16848000000,
+          "freeCashFlow": 13786000000,
+          "dividendsPaid": -8999000000
         }
       ]
     },
@@ -4627,7 +4627,7 @@
       "industry": "Household & Personal Products",
       "statementYears": 4,
       "revenue": 87032000000,
-      "revenueGrowthPercent": 1.1,
+      "revenueGrowthPercent": 2,
       "grossMarginPercent": 50.2,
       "operatingMarginPercent": 22.7,
       "netMarginPercent": 18.4,
@@ -4660,16 +4660,16 @@
           "dividendsPaid": -10232000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 84284000000,
-          "operatingIncome": null,
+          "operatingIncome": 20451000000,
           "netIncome": 15974000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 125231000000,
+          "totalDebt": 35463000000,
+          "cash": 9556000000,
+          "operatingCashFlow": 17817000000,
+          "freeCashFlow": 14044000000,
+          "dividendsPaid": -9872000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -4684,16 +4684,16 @@
           "dividendsPaid": -9312000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 84284000000,
-          "operatingIncome": 20451000000,
-          "netIncome": 15974000000,
-          "totalAssets": 125231000000,
-          "totalDebt": 35463000000,
-          "cash": 9556000000,
-          "operatingCashFlow": 17817000000,
-          "freeCashFlow": 14044000000,
-          "dividendsPaid": -9872000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 82006000000,
+          "operatingIncome": 18134000000,
+          "netIncome": 14653000000,
+          "totalAssets": 120829000000,
+          "totalDebt": 35424000000,
+          "cash": 8246000000,
+          "operatingCashFlow": 16848000000,
+          "freeCashFlow": 13786000000,
+          "dividendsPaid": -8999000000
         }
       ]
     },
@@ -4706,7 +4706,7 @@
       "industry": "Household & Personal Products",
       "statementYears": 4,
       "revenue": 87032000000,
-      "revenueGrowthPercent": 1.1,
+      "revenueGrowthPercent": 2,
       "grossMarginPercent": 50.2,
       "operatingMarginPercent": 22.7,
       "netMarginPercent": 18.4,
@@ -4739,16 +4739,16 @@
           "dividendsPaid": -10232000000
         },
         {
-          "fiscalYearEnd": "2022-06-30",
+          "fiscalYearEnd": "2025-06-30",
           "revenue": 84284000000,
-          "operatingIncome": null,
+          "operatingIncome": 20451000000,
           "netIncome": 15974000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
+          "totalAssets": 125231000000,
+          "totalDebt": 35463000000,
+          "cash": 9556000000,
+          "operatingCashFlow": 17817000000,
+          "freeCashFlow": 14044000000,
+          "dividendsPaid": -9872000000
         },
         {
           "fiscalYearEnd": "2024-06-30",
@@ -4763,16 +4763,16 @@
           "dividendsPaid": -9312000000
         },
         {
-          "fiscalYearEnd": "2025-06-30",
-          "revenue": 84284000000,
-          "operatingIncome": 20451000000,
-          "netIncome": 15974000000,
-          "totalAssets": 125231000000,
-          "totalDebt": 35463000000,
-          "cash": 9556000000,
-          "operatingCashFlow": 17817000000,
-          "freeCashFlow": 14044000000,
-          "dividendsPaid": -9872000000
+          "fiscalYearEnd": "2023-06-30",
+          "revenue": 82006000000,
+          "operatingIncome": 18134000000,
+          "netIncome": 14653000000,
+          "totalAssets": 120829000000,
+          "totalDebt": 35424000000,
+          "cash": 8246000000,
+          "operatingCashFlow": 16848000000,
+          "freeCashFlow": 13786000000,
+          "dividendsPaid": -8999000000
         }
       ]
     },
@@ -5258,18 +5258,18 @@
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
       "statementYears": 4,
-      "revenue": 648125000000,
-      "revenueGrowthPercent": 2.3,
-      "grossMarginPercent": 24.4,
+      "revenue": 713163000000,
+      "revenueGrowthPercent": 5.3,
+      "grossMarginPercent": 24.9,
       "operatingMarginPercent": 4.2,
-      "netMarginPercent": 2.4,
-      "totalAssets": 252399000000,
-      "totalDebt": 61321000000,
-      "debtToAssetsPercent": 24.3,
-      "cash": 9867000000,
-      "operatingCashFlow": 35726000000,
-      "freeCashFlow": 15120000000,
-      "dividendsPaid": -6140000000,
+      "netMarginPercent": 3.1,
+      "totalAssets": 284668000000,
+      "totalDebt": 67095000000,
+      "debtToAssetsPercent": 23.6,
+      "cash": 10727000000,
+      "operatingCashFlow": 41565000000,
+      "freeCashFlow": 14923000000,
+      "dividendsPaid": -7507000000,
       "sharesOutstanding": 7933746241,
       "price": 106.73,
       "priceAsOf": "2026-09-18",
@@ -5279,6 +5279,30 @@
       "worstFallPercent": -23.52,
       "averageDailyVolume": 24390802,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 713163000000,
+          "operatingIncome": 29825000000,
+          "netIncome": 21893000000,
+          "totalAssets": 284668000000,
+          "totalDebt": 67095000000,
+          "cash": 10727000000,
+          "operatingCashFlow": 41565000000,
+          "freeCashFlow": 14923000000,
+          "dividendsPaid": -7507000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 680985000000,
+          "operatingIncome": 29348000000,
+          "netIncome": 19436000000,
+          "totalAssets": 260823000000,
+          "totalDebt": 60114000000,
+          "cash": 9037000000,
+          "operatingCashFlow": 36443000000,
+          "freeCashFlow": 12660000000,
+          "dividendsPaid": -6688000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 648125000000,
@@ -5302,30 +5326,6 @@
           "operatingCashFlow": 28841000000,
           "freeCashFlow": 11984000000,
           "dividendsPaid": -6114000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 713163000000,
-          "operatingIncome": 29825000000,
-          "netIncome": 21893000000,
-          "totalAssets": 284668000000,
-          "totalDebt": 67095000000,
-          "cash": 10727000000,
-          "operatingCashFlow": 41565000000,
-          "freeCashFlow": 14923000000,
-          "dividendsPaid": -7507000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 605881000000,
-          "operatingIncome": null,
-          "netIncome": 11680000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -5337,18 +5337,18 @@
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
       "statementYears": 4,
-      "revenue": 648125000000,
-      "revenueGrowthPercent": 2.3,
-      "grossMarginPercent": 24.4,
+      "revenue": 713163000000,
+      "revenueGrowthPercent": 5.3,
+      "grossMarginPercent": 24.9,
       "operatingMarginPercent": 4.2,
-      "netMarginPercent": 2.4,
-      "totalAssets": 252399000000,
-      "totalDebt": 61321000000,
-      "debtToAssetsPercent": 24.3,
-      "cash": 9867000000,
-      "operatingCashFlow": 35726000000,
-      "freeCashFlow": 15120000000,
-      "dividendsPaid": -6140000000,
+      "netMarginPercent": 3.1,
+      "totalAssets": 284668000000,
+      "totalDebt": 67095000000,
+      "debtToAssetsPercent": 23.6,
+      "cash": 10727000000,
+      "operatingCashFlow": 41565000000,
+      "freeCashFlow": 14923000000,
+      "dividendsPaid": -7507000000,
       "sharesOutstanding": 7933746241,
       "price": 106.73,
       "priceAsOf": "2026-09-18",
@@ -5358,6 +5358,30 @@
       "worstFallPercent": -23.52,
       "averageDailyVolume": 24390802,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 713163000000,
+          "operatingIncome": 29825000000,
+          "netIncome": 21893000000,
+          "totalAssets": 284668000000,
+          "totalDebt": 67095000000,
+          "cash": 10727000000,
+          "operatingCashFlow": 41565000000,
+          "freeCashFlow": 14923000000,
+          "dividendsPaid": -7507000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 680985000000,
+          "operatingIncome": 29348000000,
+          "netIncome": 19436000000,
+          "totalAssets": 260823000000,
+          "totalDebt": 60114000000,
+          "cash": 9037000000,
+          "operatingCashFlow": 36443000000,
+          "freeCashFlow": 12660000000,
+          "dividendsPaid": -6688000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 648125000000,
@@ -5381,30 +5405,6 @@
           "operatingCashFlow": 28841000000,
           "freeCashFlow": 11984000000,
           "dividendsPaid": -6114000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 713163000000,
-          "operatingIncome": 29825000000,
-          "netIncome": 21893000000,
-          "totalAssets": 284668000000,
-          "totalDebt": 67095000000,
-          "cash": 10727000000,
-          "operatingCashFlow": 41565000000,
-          "freeCashFlow": 14923000000,
-          "dividendsPaid": -7507000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 605881000000,
-          "operatingIncome": null,
-          "netIncome": 11680000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -5416,18 +5416,18 @@
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
       "statementYears": 4,
-      "revenue": 648125000000,
-      "revenueGrowthPercent": 2.3,
-      "grossMarginPercent": 24.4,
+      "revenue": 713163000000,
+      "revenueGrowthPercent": 5.3,
+      "grossMarginPercent": 24.9,
       "operatingMarginPercent": 4.2,
-      "netMarginPercent": 2.4,
-      "totalAssets": 252399000000,
-      "totalDebt": 61321000000,
-      "debtToAssetsPercent": 24.3,
-      "cash": 9867000000,
-      "operatingCashFlow": 35726000000,
-      "freeCashFlow": 15120000000,
-      "dividendsPaid": -6140000000,
+      "netMarginPercent": 3.1,
+      "totalAssets": 284668000000,
+      "totalDebt": 67095000000,
+      "debtToAssetsPercent": 23.6,
+      "cash": 10727000000,
+      "operatingCashFlow": 41565000000,
+      "freeCashFlow": 14923000000,
+      "dividendsPaid": -7507000000,
       "sharesOutstanding": 7933746241,
       "price": 106.73,
       "priceAsOf": "2026-09-18",
@@ -5437,6 +5437,30 @@
       "worstFallPercent": -23.52,
       "averageDailyVolume": 24390802,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 713163000000,
+          "operatingIncome": 29825000000,
+          "netIncome": 21893000000,
+          "totalAssets": 284668000000,
+          "totalDebt": 67095000000,
+          "cash": 10727000000,
+          "operatingCashFlow": 41565000000,
+          "freeCashFlow": 14923000000,
+          "dividendsPaid": -7507000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 680985000000,
+          "operatingIncome": 29348000000,
+          "netIncome": 19436000000,
+          "totalAssets": 260823000000,
+          "totalDebt": 60114000000,
+          "cash": 9037000000,
+          "operatingCashFlow": 36443000000,
+          "freeCashFlow": 12660000000,
+          "dividendsPaid": -6688000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 648125000000,
@@ -5460,30 +5484,6 @@
           "operatingCashFlow": 28841000000,
           "freeCashFlow": 11984000000,
           "dividendsPaid": -6114000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 713163000000,
-          "operatingIncome": 29825000000,
-          "netIncome": 21893000000,
-          "totalAssets": 284668000000,
-          "totalDebt": 67095000000,
-          "cash": 10727000000,
-          "operatingCashFlow": 41565000000,
-          "freeCashFlow": 14923000000,
-          "dividendsPaid": -7507000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 605881000000,
-          "operatingIncome": null,
-          "netIncome": 11680000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -5495,18 +5495,18 @@
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
       "statementYears": 4,
-      "revenue": 648125000000,
-      "revenueGrowthPercent": 2.3,
-      "grossMarginPercent": 24.4,
+      "revenue": 713163000000,
+      "revenueGrowthPercent": 5.3,
+      "grossMarginPercent": 24.9,
       "operatingMarginPercent": 4.2,
-      "netMarginPercent": 2.4,
-      "totalAssets": 252399000000,
-      "totalDebt": 61321000000,
-      "debtToAssetsPercent": 24.3,
-      "cash": 9867000000,
-      "operatingCashFlow": 35726000000,
-      "freeCashFlow": 15120000000,
-      "dividendsPaid": -6140000000,
+      "netMarginPercent": 3.1,
+      "totalAssets": 284668000000,
+      "totalDebt": 67095000000,
+      "debtToAssetsPercent": 23.6,
+      "cash": 10727000000,
+      "operatingCashFlow": 41565000000,
+      "freeCashFlow": 14923000000,
+      "dividendsPaid": -7507000000,
       "sharesOutstanding": 7933746241,
       "price": 106.73,
       "priceAsOf": "2026-09-18",
@@ -5516,6 +5516,30 @@
       "worstFallPercent": -23.52,
       "averageDailyVolume": 24390802,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 713163000000,
+          "operatingIncome": 29825000000,
+          "netIncome": 21893000000,
+          "totalAssets": 284668000000,
+          "totalDebt": 67095000000,
+          "cash": 10727000000,
+          "operatingCashFlow": 41565000000,
+          "freeCashFlow": 14923000000,
+          "dividendsPaid": -7507000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 680985000000,
+          "operatingIncome": 29348000000,
+          "netIncome": 19436000000,
+          "totalAssets": 260823000000,
+          "totalDebt": 60114000000,
+          "cash": 9037000000,
+          "operatingCashFlow": 36443000000,
+          "freeCashFlow": 12660000000,
+          "dividendsPaid": -6688000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 648125000000,
@@ -5539,30 +5563,6 @@
           "operatingCashFlow": 28841000000,
           "freeCashFlow": 11984000000,
           "dividendsPaid": -6114000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 713163000000,
-          "operatingIncome": 29825000000,
-          "netIncome": 21893000000,
-          "totalAssets": 284668000000,
-          "totalDebt": 67095000000,
-          "cash": 10727000000,
-          "operatingCashFlow": 41565000000,
-          "freeCashFlow": 14923000000,
-          "dividendsPaid": -7507000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 605881000000,
-          "operatingIncome": null,
-          "netIncome": 11680000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -5574,18 +5574,18 @@
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
       "statementYears": 4,
-      "revenue": 648125000000,
-      "revenueGrowthPercent": 2.3,
-      "grossMarginPercent": 24.4,
+      "revenue": 713163000000,
+      "revenueGrowthPercent": 5.3,
+      "grossMarginPercent": 24.9,
       "operatingMarginPercent": 4.2,
-      "netMarginPercent": 2.4,
-      "totalAssets": 252399000000,
-      "totalDebt": 61321000000,
-      "debtToAssetsPercent": 24.3,
-      "cash": 9867000000,
-      "operatingCashFlow": 35726000000,
-      "freeCashFlow": 15120000000,
-      "dividendsPaid": -6140000000,
+      "netMarginPercent": 3.1,
+      "totalAssets": 284668000000,
+      "totalDebt": 67095000000,
+      "debtToAssetsPercent": 23.6,
+      "cash": 10727000000,
+      "operatingCashFlow": 41565000000,
+      "freeCashFlow": 14923000000,
+      "dividendsPaid": -7507000000,
       "sharesOutstanding": 7933746241,
       "price": 106.73,
       "priceAsOf": "2026-09-18",
@@ -5595,6 +5595,30 @@
       "worstFallPercent": -23.52,
       "averageDailyVolume": 24390802,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 713163000000,
+          "operatingIncome": 29825000000,
+          "netIncome": 21893000000,
+          "totalAssets": 284668000000,
+          "totalDebt": 67095000000,
+          "cash": 10727000000,
+          "operatingCashFlow": 41565000000,
+          "freeCashFlow": 14923000000,
+          "dividendsPaid": -7507000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 680985000000,
+          "operatingIncome": 29348000000,
+          "netIncome": 19436000000,
+          "totalAssets": 260823000000,
+          "totalDebt": 60114000000,
+          "cash": 9037000000,
+          "operatingCashFlow": 36443000000,
+          "freeCashFlow": 12660000000,
+          "dividendsPaid": -6688000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 648125000000,
@@ -5618,30 +5642,6 @@
           "operatingCashFlow": 28841000000,
           "freeCashFlow": 11984000000,
           "dividendsPaid": -6114000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 713163000000,
-          "operatingIncome": 29825000000,
-          "netIncome": 21893000000,
-          "totalAssets": 284668000000,
-          "totalDebt": 67095000000,
-          "cash": 10727000000,
-          "operatingCashFlow": 41565000000,
-          "freeCashFlow": 14923000000,
-          "dividendsPaid": -7507000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 605881000000,
-          "operatingIncome": null,
-          "netIncome": 11680000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
@@ -5653,18 +5653,18 @@
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
       "statementYears": 4,
-      "revenue": 648125000000,
-      "revenueGrowthPercent": 2.3,
-      "grossMarginPercent": 24.4,
+      "revenue": 713163000000,
+      "revenueGrowthPercent": 5.3,
+      "grossMarginPercent": 24.9,
       "operatingMarginPercent": 4.2,
-      "netMarginPercent": 2.4,
-      "totalAssets": 252399000000,
-      "totalDebt": 61321000000,
-      "debtToAssetsPercent": 24.3,
-      "cash": 9867000000,
-      "operatingCashFlow": 35726000000,
-      "freeCashFlow": 15120000000,
-      "dividendsPaid": -6140000000,
+      "netMarginPercent": 3.1,
+      "totalAssets": 284668000000,
+      "totalDebt": 67095000000,
+      "debtToAssetsPercent": 23.6,
+      "cash": 10727000000,
+      "operatingCashFlow": 41565000000,
+      "freeCashFlow": 14923000000,
+      "dividendsPaid": -7507000000,
       "sharesOutstanding": 7933746241,
       "price": 106.73,
       "priceAsOf": "2026-09-18",
@@ -5674,6 +5674,30 @@
       "worstFallPercent": -23.52,
       "averageDailyVolume": 24390802,
       "annualStatements": [
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "revenue": 713163000000,
+          "operatingIncome": 29825000000,
+          "netIncome": 21893000000,
+          "totalAssets": 284668000000,
+          "totalDebt": 67095000000,
+          "cash": 10727000000,
+          "operatingCashFlow": 41565000000,
+          "freeCashFlow": 14923000000,
+          "dividendsPaid": -7507000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "revenue": 680985000000,
+          "operatingIncome": 29348000000,
+          "netIncome": 19436000000,
+          "totalAssets": 260823000000,
+          "totalDebt": 60114000000,
+          "cash": 9037000000,
+          "operatingCashFlow": 36443000000,
+          "freeCashFlow": 12660000000,
+          "dividendsPaid": -6688000000
+        },
         {
           "fiscalYearEnd": "2024-01-31",
           "revenue": 648125000000,
@@ -5697,30 +5721,6 @@
           "operatingCashFlow": 28841000000,
           "freeCashFlow": 11984000000,
           "dividendsPaid": -6114000000
-        },
-        {
-          "fiscalYearEnd": "2026-01-31",
-          "revenue": 713163000000,
-          "operatingIncome": 29825000000,
-          "netIncome": 21893000000,
-          "totalAssets": 284668000000,
-          "totalDebt": 67095000000,
-          "cash": 10727000000,
-          "operatingCashFlow": 41565000000,
-          "freeCashFlow": 14923000000,
-          "dividendsPaid": -7507000000
-        },
-        {
-          "fiscalYearEnd": "2022-01-31",
-          "revenue": 605881000000,
-          "operatingIncome": null,
-          "netIncome": 11680000000,
-          "totalAssets": null,
-          "totalDebt": null,
-          "cash": null,
-          "operatingCashFlow": null,
-          "freeCashFlow": null,
-          "dividendsPaid": null
         }
       ]
     },
