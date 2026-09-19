@@ -307,6 +307,34 @@
     "code": "/** Grades both costs at once: the fraud that got through, and the good orders that were turned away. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.orderId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const fraud = graded.filter((result) => byItem.get(result.item.id).fraud);\n  const good = graded.filter((result) => !byItem.get(result.item.id).fraud);\n  const stopped = fraud.filter((result) => result.evaluation.stopped);\n  const named = fraud.filter((result) => result.evaluation.pattern === byItem.get(result.item.id).pattern);\n  const falseDeclines = good.filter((result) => result.evaluation.declined);\n\n  return {\n    note: `Three hundred orders, ${labels.filter((label) => label.fraud).length} of them fraud and ${labels.filter((label) => label.kind === 'decoy').length} good orders built to look worse than the fraud. ${context.fraudRateNote ?? ''}`,\n    findings: findings(graded, byItem, good),\n    kpis: kpis({ fraud, stopped, named, falseDeclines, good, graded, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, fraud),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/sybil-clusters/demo.js#demo:state": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 22,
+    "endLine": 48,
+    "code": "/** One wallet, and how much of the crowd looks like it. The crowd is counted, never named. */\nfunction buildState(item, context) {\n  return {\n    task: 'Decide whether this wallet is one of several belonging to the same person, and whether to exclude it from the allocation.',\n    programme: { name: context.programme, currency: context.currency, wallets_in_the_programme: context.wallets, rule: context.allocationRule, how_similarity_is_measured: context.similarityNote },\n    wallet: {\n      address: item.address,\n      created: item.createdAt,\n      funded_by: item.fundingSource,\n      funded_with: item.fundedWith,\n      days_active: item.daysActive,\n      actions_taken: item.actionCount,\n      action_sequence: item.actionSequence,\n      gas_price_gwei: item.gasPriceGwei,\n      gas_price_variation: item.gasPriceStdev,\n      withdrew_to: item.withdrawalEndpoint,\n      allocation_at_stake: item.allocation,\n    },\n    how_many_others_look_like_this: {\n      share_its_funding_source: item.walletsWithTheSameFundingSource,\n      were_created_within_ten_minutes: item.walletsWithinTenMinutesOfCreation,\n      took_the_same_actions_in_the_same_order: item.walletsWithTheSameActionSequence,\n      paid_exactly_the_same_gas_price: item.walletsWithTheSameGasPrice,\n      withdrew_to_the_same_address: item.walletsWithTheSameWithdrawalEndpoint,\n    },\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sybil-clusters/demo.js#demo:questions": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 52,
+    "endLine": 72,
+    "code": "const questions = {\n  sybil_likelihood: score('How likely is it that this wallet is one of several belonging to one person?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain',\n  ]),\n  linking_signal: choice('What links it to the others, if anything does?', {\n    FUNDING_SOURCE: 'The same address funded a group of wallets that includes this one.',\n    CREATION_TIMING: 'A group of wallets, this one among them, appeared within minutes of each other.',\n    ACTION_SEQUENCE: 'The same actions in the same order as a group of other wallets.',\n    GAS_PATTERN: 'A gas price shared to the decimal with a group of others, which people do not do.',\n    WITHDRAWAL_ENDPOINT: 'The money ends up at an address a group of wallets shares.',\n    NONE: 'Nothing links it. Whatever it shares, it shares with the whole population.',\n  }),\n  exclude_from_allocation: noul('Should this wallet be left out of the allocation?', {\n    yes: 'The evidence that this is one of several is strong enough to take the allocation away.',\n    no: 'Give it the allocation. Doubt is not evidence.',\n  }),\n  independent_user: noul('Does this look like one person with one wallet?', {\n    yes: 'The funding, timing, actions and gas all look like somebody acting for themselves.',\n    no: 'It behaves like part of a set.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/sybil-clusters/demo.js#demo:evaluate": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 76,
+    "endLine": 89,
+    "code": "/** The verdict on one wallet, and the allocation it turns on. */\nfunction evaluate(answers, item) {\n  const excluded = answers.exclude_from_allocation.noul >= 0.5;\n\n  return {\n    likelihood: answers.sybil_likelihood.score,\n    signal: answers.linking_signal.choice,\n    excluded,\n    independent: answers.independent_user.noul >= 0.5,\n    confidence: answers.linking_signal.confidence,\n    allocationAtStake: item.allocation,\n    label: `${item.id} · ${excluded ? 'excluded' : 'allocated'} · ${money(item.allocation)}${answers.linking_signal.choice === 'NONE' ? '' : ` · ${readable(answers.linking_signal.choice)}`}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sybil-clusters/demo.js#demo:report": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 93,
+    "endLine": 111,
+    "code": "/** Two costs, always together: the allocation saved, and the real users it was taken from. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.wallet, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const farmed = graded.filter((result) => byItem.get(result.item.id).clusterId);\n  const real = graded.filter((result) => !byItem.get(result.item.id).clusterId);\n\n  return {\n    note: `A hundred and fifty wallets. ${farmed.length} of them are eight people, twelve share nothing but an exchange, and six did the same things because they read the same guide. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, real),\n    kpis: kpis({ graded, farmed, real, byItem, currency: context.currency }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, farmed),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/three-way-match/demo.js#demo:state": {
     "path": "demos/three-way-match/demo.js",
     "startLine": 19,
@@ -466,6 +494,13 @@
     "startLine": 88,
     "endLine": 122,
     "code": "/** One checkout, with the signals a payments team actually has when the order lands. */\nfunction order(random, { placedAt, basket, tenureDays, priorOrders, priorChargebacks = 0, priorRefunds = 0, connectionCountry = HOME, billingCountry = HOME, shippingCountry = HOME, binCountry = billingCountry, newShippingAddress = false, deviceIsNew = false, ordersFromThisDeviceToday = 1, deviceDistinctCards = 1, accountChangedHoursAgo = null, checkoutSeconds, coupon = null, giftMessage = false, shippingLine1, billingName }) {\n  const total = round(basket.reduce((sum, line) => sum + line.unitPrice * line.quantity, 0));\n  return {\n    key: `${placedAt}-${random.int(100_000, 999_999)}`,\n    id: null,\n    placedAt,\n    total,\n    itemCount: basket.reduce((sum, line) => sum + line.quantity, 0),\n    customerTenureDays: tenureDays,\n    priorOrders,\n    priorChargebacks,\n    connectionCountry,\n    billingCountry,\n    shippingCountry,\n    newShippingAddress,\n    ordersFromThisDeviceToday,\n    checkoutSeconds,\n    basket,\n    priorRefunds,\n    lifetimeValue: round(priorOrders * random.float(38, 210)),\n    accountChangedHoursAgo,\n    card: cardMask(random),\n    binCountry,\n    deviceId: `DEV-${random.int(100_000, 999_999)}`,\n    deviceIsNew,\n    deviceDistinctCards,\n    billingName: billingName ?? personName(random),\n    billingCity: cityName(random),\n    shippingCity: cityName(random),\n    shippingLine1: shippingLine1 ?? streetAddress(random),\n    coupon,\n    giftMessage,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/sybil-clusters.js#demo:data": {
+    "path": "scripts/generate/sybil-clusters.js",
+    "startLine": 85,
+    "endLine": 103,
+    "code": "/** One wallet as the allocation sees it: when it appeared, what it did, and how it paid for gas. */\nfunction wallet(random, { createdAt, fundingSource, funded, actions, gasPriceGwei, gasStdev, withdrawalEndpoint, allocation }) {\n  const address = walletAddress(random);\n  return {\n    key: address,\n    id: null,\n    address,\n    createdAt,\n    fundingSource,\n    fundedWith: funded,\n    actionCount: actions.length,\n    actionSequence: actions,\n    daysActive: random.int(4, 150),\n    gasPriceGwei,\n    gasPriceStdev: gasStdev,\n    withdrawalEndpoint,\n    allocation,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/three-way-match.js#demo:data": {
