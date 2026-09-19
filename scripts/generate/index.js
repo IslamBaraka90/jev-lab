@@ -41,6 +41,7 @@ export const GENERATORS = {
   'factor-exposure': () => import('./factor-exposure.js'),
   'income-planning': () => import('./income-planning.js'),
   'post-trade-review': () => import('./post-trade-review.js'),
+  'trade-feature-analysis': () => import('./trade-feature-analysis.js'),
   'execution-quality': () => import('./execution-quality.js'),
   'journal-vs-reality': () => import('./journal-vs-reality.js'),
   'goal-screening': () => import('./goal-screening.js'),

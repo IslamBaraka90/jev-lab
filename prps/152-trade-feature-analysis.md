@@ -45,9 +45,9 @@ Standard demo folder plus `scripts/generate/trade-feature-analysis.js`.
 
 Template list, plus:
 
-- [ ] Outcomes are never in the state, and the reveal happens only in the report.
-- [ ] The planted edge features are shown after the model's ranking, not before.
-- [ ] "Would take again" is compared with the actual base rate, with the difference stated.
+- [x] Outcomes are never in the state, and the reveal happens only in the report.
+- [x] The planted edge features are shown after the model's ranking, not before.
+- [x] "Would take again" is compared with the actual base rate, with the difference stated.
 
 ## Video beats
 

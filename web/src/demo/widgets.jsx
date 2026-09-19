@@ -291,11 +291,24 @@ export function ReportPanel({ report, onSelect }) {
         </ul>
       )}
       {report.distribution?.length > 0 && <DistributionBar items={report.distribution} onSelect={(entry) => onSelect?.(entry.itemId)} />}
+      {report.analysisRows?.length > 0 && <FeatureGapTable title={report.analysisTitle} rows={report.analysisRows} />}
       {report.matrix && <ConfusionMatrix matrix={report.matrix} onSelect={onSelect} />}
       {report.fingerprints && <FingerprintChart chart={report.fingerprints} />}
       {report.curve && <CoverageCurve curve={report.curve} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
+  );
+}
+
+function FeatureGapTable({ title = 'Feature gaps', rows }) {
+  return (
+    <div className="table-scroll">
+      <h4>{title}</h4>
+      <table className="data-table compact">
+        <thead><tr><th>Model answer</th><th>Winners</th><th>Losers</th><th className="num">Gap</th></tr></thead>
+        <tbody>{rows.map((row) => <tr key={row.feature}><th scope="row">{row.feature}</th><td>{row.winners}</td><td>{row.losers}</td><td className="num">{Number(row.gap).toFixed(2)}</td></tr>)}</tbody>
+      </table>
+    </div>
   );
 }
