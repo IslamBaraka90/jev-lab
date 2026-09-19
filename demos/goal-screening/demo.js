@@ -242,7 +242,6 @@ export default {
   dataClass: 'cached-real',
   readMinutes: 4,
   view: 'table',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.symbol} · ${item.goalId}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
