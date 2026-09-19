@@ -1,0 +1,802 @@
+[
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0157"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0126"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0017"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0051"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0018"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0046"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0032"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0158"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0101"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0132"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0166"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0052"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0189"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0029"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0011"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0138"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0139"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0194"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0082"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0001"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0022"
+  },
+  {
+    "drift": "SIZE",
+    "entryId": "JR-0176"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0014"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0164"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0104"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0035"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0143"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0182"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0198"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0076"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0099"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0008"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0066"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0160"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0186"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0088"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0154"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0077"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0167"
+  },
+  {
+    "drift": "ENTRY",
+    "entryId": "JR-0062"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0084"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0129"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0031"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0092"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0003"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0073"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0168"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0047"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0109"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0079"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0127"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0085"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0137"
+  },
+  {
+    "drift": "EXIT",
+    "entryId": "JR-0065"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0140"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0009"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0187"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0161"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0061"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0055"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0038"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0037"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0024"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0172"
+  },
+  {
+    "drift": "INSTRUMENT",
+    "entryId": "JR-0125"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0023"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0071"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0121"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0106"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0036"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0028"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0184"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0081"
+  },
+  {
+    "drift": "RATIONALISATION",
+    "entryId": "JR-0200"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0021"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0100"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0045"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0093"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0006"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0033"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0107"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0097"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0095"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0096"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0040"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0147"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0002"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0044"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0122"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0171"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0048"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0135"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0113"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0150"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0149"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0080"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0103"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0146"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0162"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0016"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0120"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0177"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0123"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0175"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0185"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0169"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0128"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0070"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0005"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0090"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0027"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0163"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0050"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0083"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0180"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0025"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0141"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0072"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0190"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0130"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0049"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0060"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0114"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0110"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0086"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0020"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0054"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0063"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0174"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0170"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0057"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0078"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0152"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0094"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0015"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0039"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0136"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0042"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0013"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0105"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0059"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0034"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0053"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0010"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0151"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0124"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0131"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0112"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0030"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0199"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0188"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0153"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0087"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0004"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0064"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0144"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0148"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0178"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0098"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0075"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0068"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0156"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0026"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0117"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0192"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0195"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0191"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0056"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0134"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0179"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0197"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0119"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0089"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0116"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0007"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0074"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0102"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0193"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0173"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0142"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0155"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0019"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0091"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0118"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0058"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0183"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0111"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0145"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0133"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0115"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0012"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0108"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0043"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0067"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0159"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0165"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0069"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0041"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0181"
+  },
+  {
+    "drift": "NONE",
+    "entryId": "JR-0196"
+  }
+]
