@@ -24,6 +24,7 @@ export const GENERATORS = {
   'aml-alert-triage': () => import('./aml-alert-triage.js'),
   'mule-network': () => import('./mule-network.js'),
   'wallet-risk': () => import('./wallet-risk.js'),
+  'mixer-tracing': () => import('./mixer-tracing.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
