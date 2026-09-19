@@ -91,7 +91,7 @@ function setupOutcomes(graded, byItem) {
 }
 
 export default {
-  id: 'trade-feature-analysis', title: 'Trade feature analysis', domain: 'trades', status: 'pending-recording',
+  id: 'trade-feature-analysis', title: 'Trade feature analysis', domain: 'trades',
   value: 'Find which parts of a setup actually separate the winners from the losers, instead of guessing.',
   tags: ['trades', 'features', 'outcomes', 'real prices'], dataClass: 'mixed', readMinutes: 5, view: 'candles',
   itemLabel: (item) => `${item.id} · ${item.symbol} · ${title(item.setupType)} · ${item.entryDate}`,
