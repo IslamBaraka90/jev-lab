@@ -1,0 +1,5640 @@
+{
+  "id": "merchant-onboarding",
+  "class": "synthetic",
+  "generatedAt": "2026-09-19",
+  "seed": 1115,
+  "source": "scripts/generate/merchant-onboarding.js",
+  "context": {
+    "acquirer": "Kestrel Payments",
+    "currency": "GBP",
+    "period": "Applications received in August 2026",
+    "prohibitedActivities": [
+      "Any health claim that a product treats, cures or prevents a condition.",
+      "Betting, casino or lottery services without a licence number on the application.",
+      "Adult content sold directly to consumers, including subscription sites.",
+      "Investment or trading products promising a return.",
+      "Sale of prescription medicines, weapons, or goods that infringe a trademark."
+    ],
+    "categoryRules": [
+      "Travel, dropshipping and anything delivered more than fourteen days after payment carries delivery risk and is not approved without a reserve.",
+      "A company trading for less than six months is capped at a medium tier whatever its category.",
+      "Expected monthly volume more than twenty times the average of the category is treated as unexplained until the merchant explains it.",
+      "A bank account in a country the business does not trade in is a decline unless the documents explain it."
+    ],
+    "volumeBands": {
+      "small": "under 20,000 a month",
+      "medium": "20,000 to 100,000",
+      "large": "over 100,000"
+    },
+    "documentChecklist": [
+      "Certificate of incorporation",
+      "Director identity document",
+      "Bank statement in the trading name",
+      "Proof of trading address"
+    ],
+    "reserveGuidance": "A reserve holds that share of one month’s settlement against future chargebacks. A rolling hold keeps a tenth of every settlement for ninety days, which builds to about a third of a month.",
+    "note": "The category rules here are illustrative and are not any acquirer’s real policy."
+  },
+  "items": [
+    {
+      "id": "APP-001",
+      "submittedAt": "2026-08-01",
+      "legalName": "Bluewater Supply Ltd",
+      "tradingName": "Bluewater Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 111,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 48983.19,
+      "averageTicket": 175.36,
+      "deliveryPromiseDays": 1,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make stationery to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-002",
+      "submittedAt": "2026-08-01",
+      "legalName": "Cedar Goods Ltd",
+      "tradingName": "Cedar Goods",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 134,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4000.02,
+      "averageTicket": 12.19,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2004. Everything is stocked in our Exeter unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-003",
+      "submittedAt": "2026-08-01",
+      "legalName": "Cedar Supply Ltd",
+      "tradingName": "Cedar Supply",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 178,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 5879.93,
+      "averageTicket": 20.69,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.22,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward pet supplies at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-004",
+      "submittedAt": "2026-08-01",
+      "legalName": "Marlow Holdings Ltd",
+      "tradingName": "Copperline Goods",
+      "nameMismatch": true,
+      "category": "Digital goods",
+      "monthsRegistered": 254,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 6240.93,
+      "averageTicket": 53.92,
+      "deliveryPromiseDays": 11,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward camping gear at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-005",
+      "submittedAt": "2026-08-02",
+      "legalName": "Falcon Supply Ltd",
+      "tradingName": "Falcon Supply",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 146,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 27041.41,
+      "averageTicket": 12.41,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.23,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2014. Everything is stocked in our Hull unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-006",
+      "submittedAt": "2026-08-02",
+      "legalName": "Lantern Group Ltd",
+      "tradingName": "Lantern Group",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 255,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 25767.54,
+      "averageTicket": 213.87,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2015. Everything is stocked in our Hull unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-007",
+      "submittedAt": "2026-08-02",
+      "legalName": "Marlow Retail Ltd",
+      "tradingName": "Marlow Retail",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 6,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 94550,
+      "averageTicket": 100,
+      "deliveryPromiseDays": 37,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "Left after a chargeback review",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Premium garden tools at unbeatable prices. Worldwide shipping 25-40 days. All sales are final. Contact us through the form.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-008",
+      "submittedAt": "2026-08-02",
+      "legalName": "Marlow Trading Ltd",
+      "tradingName": "Marlow Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 199,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4564.9,
+      "averageTicket": 60.6,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make stationery to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-009",
+      "submittedAt": "2026-08-03",
+      "legalName": "Bluewater Supply Ltd",
+      "tradingName": "Bluewater Supply",
+      "nameMismatch": false,
+      "category": "Adult adjacent",
+      "monthsRegistered": 14,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 99905.81,
+      "averageTicket": 20.92,
+      "deliveryPromiseDays": 1,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Live cams, 18+, subscription from nine pounds a month. Discreet billing under a neutral name on your statement.",
+      "refundPolicy": "Refunds at our discretion within seven days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-010",
+      "submittedAt": "2026-08-03",
+      "legalName": "Copperline Trading Ltd",
+      "tradingName": "Copperline Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 67,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4166.32,
+      "averageTicket": 187.5,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make kitchenware to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-011",
+      "submittedAt": "2026-08-03",
+      "legalName": "Copperline Holdings Ltd",
+      "tradingName": "Kestrel Goods",
+      "nameMismatch": true,
+      "category": "Retail",
+      "monthsRegistered": 80,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 26664.03,
+      "averageTicket": 18.08,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.26,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2010. Everything is stocked in our Hull unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-012",
+      "submittedAt": "2026-08-03",
+      "legalName": "Meridian Group Ltd",
+      "tradingName": "Meridian Group",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 65,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 57157.68,
+      "averageTicket": 200,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make pet supplies to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-013",
+      "submittedAt": "2026-08-03",
+      "legalName": "Rooftop Holdings Ltd",
+      "tradingName": "Rooftop Goods",
+      "nameMismatch": true,
+      "category": "Professional services",
+      "monthsRegistered": 134,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 21266.04,
+      "averageTicket": 57.61,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward lighting at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-014",
+      "submittedAt": "2026-08-03",
+      "legalName": "Rooftop Group Ltd",
+      "tradingName": "Rooftop Group",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 5,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 62850,
+      "averageTicket": 85.53,
+      "deliveryPromiseDays": 25,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "Left after a chargeback review",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "The best garden tools on the internet. Order now, limited stock! Delivery 30-45 days. No refunds after dispatch.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-015",
+      "submittedAt": "2026-08-03",
+      "legalName": "Rooftop Trading Ltd",
+      "tradingName": "Rooftop Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 184,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4000.24,
+      "averageTicket": 144.09,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward pet supplies at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-016",
+      "submittedAt": "2026-08-03",
+      "legalName": "Tinbridge Supply Ltd",
+      "tradingName": "Tinbridge Supply",
+      "nameMismatch": false,
+      "category": "Crypto adjacent",
+      "monthsRegistered": 73,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 119880.35,
+      "averageTicket": 588.52,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.34,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We sell hardware wallets and security keys. We do not take deposits, hold funds, or offer any investment product.",
+      "refundPolicy": "Thirty-day returns on unopened devices.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-017",
+      "submittedAt": "2026-08-03",
+      "legalName": "Tinbridge Trading Ltd",
+      "tradingName": "Tinbridge Trading",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 233,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 75470.44,
+      "averageTicket": 78.19,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.27,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward phone accessories at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Corner of the page cut off"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-018",
+      "submittedAt": "2026-08-04",
+      "legalName": "Beacon Goods Ltd",
+      "tradingName": "Beacon Goods",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 127,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 57983.15,
+      "averageTicket": 12,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.37,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2014. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-019",
+      "submittedAt": "2026-08-04",
+      "legalName": "Copperline Holdings Ltd",
+      "tradingName": "Copperline Goods",
+      "nameMismatch": true,
+      "category": "Supplements",
+      "monthsRegistered": 104,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 37150.84,
+      "averageTicket": 18.61,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward garden tools at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-020",
+      "submittedAt": "2026-08-04",
+      "legalName": "Kestrel Group Ltd",
+      "tradingName": "Kestrel Group",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 120,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 12266.2,
+      "averageTicket": 230.44,
+      "deliveryPromiseDays": 11,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward camping gear at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-021",
+      "submittedAt": "2026-08-04",
+      "legalName": "Northwind Goods Ltd",
+      "tradingName": "Northwind Goods",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 206,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 29741.17,
+      "averageTicket": 50,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.21,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2007. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-022",
+      "submittedAt": "2026-08-05",
+      "legalName": "Copperline Trading Ltd",
+      "tradingName": "Copperline Trading",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 162,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 85596.78,
+      "averageTicket": 50,
+      "deliveryPromiseDays": 11,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make kitchenware to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-023",
+      "submittedAt": "2026-08-05",
+      "legalName": "Meridian Trading Ltd",
+      "tradingName": "Meridian Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 122,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 96500,
+      "averageTicket": 123.03,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward pet supplies at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-024",
+      "submittedAt": "2026-08-06",
+      "legalName": "Beacon Retail Ltd",
+      "tradingName": "Beacon Retail",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 66,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 16548.89,
+      "averageTicket": 231.09,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward lighting at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-025",
+      "submittedAt": "2026-08-06",
+      "legalName": "Copperline Direct Ltd",
+      "tradingName": "Copperline Direct",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 29,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 20043.65,
+      "averageTicket": 268.31,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.15,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2005. Everything is stocked in our Exeter unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-026",
+      "submittedAt": "2026-08-06",
+      "legalName": "Orchard Supply Ltd",
+      "tradingName": "Orchard Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 185,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 37152.85,
+      "averageTicket": 182.13,
+      "deliveryPromiseDays": 5,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make phone accessories to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-027",
+      "submittedAt": "2026-08-06",
+      "legalName": "Quarry Holdings Ltd",
+      "tradingName": "Quarry Supply",
+      "nameMismatch": true,
+      "category": "Travel",
+      "monthsRegistered": 3,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 323034.03,
+      "averageTicket": 60,
+      "deliveryPromiseDays": 27,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "The best pet supplies on the internet. Order now, limited stock! Delivery 30-45 days. No refunds after dispatch.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-028",
+      "submittedAt": "2026-08-06",
+      "legalName": "Saltmarsh Supply Ltd",
+      "tradingName": "Saltmarsh Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 27,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 116329.25,
+      "averageTicket": 35.2,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward phone accessories at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Dated four months ago"
+        }
+      ]
+    },
+    {
+      "id": "APP-029",
+      "submittedAt": "2026-08-07",
+      "legalName": "Lantern Holdings Ltd",
+      "tradingName": "Cedar Direct",
+      "nameMismatch": true,
+      "category": "Digital goods",
+      "monthsRegistered": 10,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 44800,
+      "averageTicket": 214.86,
+      "deliveryPromiseDays": 19,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Trending garden tools, shipped direct from our partners. Please allow up to six weeks. Returns are not accepted on sale items, which is most items.",
+      "refundPolicy": "Returns accepted within fourteen days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Identity document expired in 2023 and the photograph looks reused from another file"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-030",
+      "submittedAt": "2026-08-07",
+      "legalName": "Marlow Trading Ltd",
+      "tradingName": "Marlow Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 29,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4005.3,
+      "averageTicket": 18.23,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make camping gear to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-031",
+      "submittedAt": "2026-08-07",
+      "legalName": "Meridian Group Ltd",
+      "tradingName": "Meridian Group",
+      "nameMismatch": false,
+      "category": "Gambling adjacent",
+      "monthsRegistered": 31,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 27939.58,
+      "averageTicket": 20.08,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Daily jackpots and live casino tables. Deposit in seconds and start playing, no documents required.",
+      "refundPolicy": "No refunds once the service has been accessed.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Corner of the page cut off"
+        }
+      ]
+    },
+    {
+      "id": "APP-032",
+      "submittedAt": "2026-08-07",
+      "legalName": "Quarry Supply Ltd",
+      "tradingName": "Quarry Supply",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 134,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4047.61,
+      "averageTicket": 170.43,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.05,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make running shoes to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-033",
+      "submittedAt": "2026-08-08",
+      "legalName": "Beacon Retail Ltd",
+      "tradingName": "Beacon Retail",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 68,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 25437.35,
+      "averageTicket": 159.02,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make lighting to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-034",
+      "submittedAt": "2026-08-08",
+      "legalName": "Copperline Direct Ltd",
+      "tradingName": "Copperline Direct",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 189,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 64149.52,
+      "averageTicket": 19.27,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.18,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2010. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-035",
+      "submittedAt": "2026-08-08",
+      "legalName": "Marlow Retail Ltd",
+      "tradingName": "Marlow Retail",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 78,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 102463.92,
+      "averageTicket": 75.5,
+      "deliveryPromiseDays": 5,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward skincare at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-036",
+      "submittedAt": "2026-08-08",
+      "legalName": "Saltmarsh Holdings Ltd",
+      "tradingName": "Tinbridge Goods",
+      "nameMismatch": true,
+      "category": "Professional services",
+      "monthsRegistered": 26,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 78202.16,
+      "averageTicket": 19.47,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make skincare to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-037",
+      "submittedAt": "2026-08-08",
+      "legalName": "Tinbridge Group Ltd",
+      "tradingName": "Tinbridge Group",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 5,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 102054.13,
+      "averageTicket": 85.5,
+      "deliveryPromiseDays": 44,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Premium lighting at unbeatable prices. Worldwide shipping 25-40 days. All sales are final. Contact us through the form.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-038",
+      "submittedAt": "2026-08-09",
+      "legalName": "Cedar Trading Ltd",
+      "tradingName": "Cedar Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 249,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 98896.77,
+      "averageTicket": 18.4,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward kitchenware at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-039",
+      "submittedAt": "2026-08-09",
+      "legalName": "Lantern Goods Ltd",
+      "tradingName": "Lantern Goods",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 26,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 6459.69,
+      "averageTicket": 144.58,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make camping gear to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-040",
+      "submittedAt": "2026-08-09",
+      "legalName": "Northwind Direct Ltd",
+      "tradingName": "Northwind Direct",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 194,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 12319.87,
+      "averageTicket": 59.49,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2009. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-041",
+      "submittedAt": "2026-08-09",
+      "legalName": "Pinefield Group Ltd",
+      "tradingName": "Pinefield Group",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 179,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 12155.59,
+      "averageTicket": 82.89,
+      "deliveryPromiseDays": 11,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward pet supplies at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-042",
+      "submittedAt": "2026-08-10",
+      "legalName": "Bluewater Group Ltd",
+      "tradingName": "Bluewater Group",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 173,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 47400,
+      "averageTicket": 12.56,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make pet supplies to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-043",
+      "submittedAt": "2026-08-10",
+      "legalName": "Bluewater Group Ltd",
+      "tradingName": "Bluewater Group",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 187,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 72764.71,
+      "averageTicket": 29.64,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 1998. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-044",
+      "submittedAt": "2026-08-10",
+      "legalName": "Cedar Goods Ltd",
+      "tradingName": "Cedar Goods",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 100,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 22452.24,
+      "averageTicket": 76.98,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward lighting at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-045",
+      "submittedAt": "2026-08-10",
+      "legalName": "Saltmarsh Holdings Ltd",
+      "tradingName": "Falcon Group",
+      "nameMismatch": true,
+      "category": "Dropshipping",
+      "monthsRegistered": 7,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 137666.08,
+      "averageTicket": 66.93,
+      "deliveryPromiseDays": 26,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Trending lighting, shipped direct from our partners. Please allow up to six weeks. Returns are not accepted on sale items, which is most items.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-046",
+      "submittedAt": "2026-08-10",
+      "legalName": "Orchard Direct Ltd",
+      "tradingName": "Orchard Direct",
+      "nameMismatch": false,
+      "category": "Adult adjacent",
+      "monthsRegistered": 5,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 114150,
+      "averageTicket": 22.16,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Live cams, 18+, subscription from nine pounds a month. Discreet billing under a neutral name on your statement.",
+      "refundPolicy": "Refunds at our discretion within seven days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-047",
+      "submittedAt": "2026-08-10",
+      "legalName": "Quarry Trading Ltd",
+      "tradingName": "Quarry Trading",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 164,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 78872.97,
+      "averageTicket": 12.02,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward phone accessories at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-048",
+      "submittedAt": "2026-08-11",
+      "legalName": "Bluewater Goods Ltd",
+      "tradingName": "Bluewater Goods",
+      "nameMismatch": false,
+      "category": "Travel",
+      "monthsRegistered": 194,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 96001.6,
+      "averageTicket": 53.14,
+      "deliveryPromiseDays": 36,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.14,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Independent travel agent since 1999, bonded and licensed. Balances are taken sixty days before departure and held in a client account.",
+      "refundPolicy": "Cancellations follow the bonding scheme terms, in writing, with a full schedule on the site.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-049",
+      "submittedAt": "2026-08-11",
+      "legalName": "Cedar Trading Ltd",
+      "tradingName": "Cedar Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 238,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 11870.96,
+      "averageTicket": 204.25,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.39,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward skincare at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-050",
+      "submittedAt": "2026-08-11",
+      "legalName": "Marlow Goods Ltd",
+      "tradingName": "Marlow Goods",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 213,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 78456.07,
+      "averageTicket": 12,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2009. Everything is stocked in our Hull unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-051",
+      "submittedAt": "2026-08-11",
+      "legalName": "Meridian Trading Ltd",
+      "tradingName": "Meridian Trading",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 26,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 6550,
+      "averageTicket": 191.64,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward lighting at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-052",
+      "submittedAt": "2026-08-11",
+      "legalName": "Pinefield Group Ltd",
+      "tradingName": "Pinefield Group",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 186,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 15965.77,
+      "averageTicket": 12.52,
+      "deliveryPromiseDays": 5,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make stationery to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-053",
+      "submittedAt": "2026-08-12",
+      "legalName": "Tinbridge Holdings Ltd",
+      "tradingName": "Lantern Trading",
+      "nameMismatch": true,
+      "category": "Retail",
+      "monthsRegistered": 122,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 91850,
+      "averageTicket": 31.1,
+      "deliveryPromiseDays": 11,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2018. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-054",
+      "submittedAt": "2026-08-12",
+      "legalName": "Marlow Direct Ltd",
+      "tradingName": "Marlow Direct",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 33,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 7638.47,
+      "averageTicket": 50,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward phone accessories at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-055",
+      "submittedAt": "2026-08-12",
+      "legalName": "Marlow Retail Ltd",
+      "tradingName": "Marlow Retail",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 93,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 78527.2,
+      "averageTicket": 315.25,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2017. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-056",
+      "submittedAt": "2026-08-12",
+      "legalName": "Meridian Trading Ltd",
+      "tradingName": "Meridian Trading",
+      "nameMismatch": false,
+      "category": "Travel",
+      "monthsRegistered": 161,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 50050,
+      "averageTicket": 256.72,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2016. Everything is stocked in our Hull unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-057",
+      "submittedAt": "2026-08-12",
+      "legalName": "Quarry Goods Ltd",
+      "tradingName": "Quarry Goods",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 158,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 11849.81,
+      "averageTicket": 21.73,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward stationery at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Dated four months ago"
+        }
+      ]
+    },
+    {
+      "id": "APP-058",
+      "submittedAt": "2026-08-12",
+      "legalName": "Saltmarsh Supply Ltd",
+      "tradingName": "Saltmarsh Supply",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 126,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 6572.69,
+      "averageTicket": 220.82,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2016. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-059",
+      "submittedAt": "2026-08-13",
+      "legalName": "Copperline Group Ltd",
+      "tradingName": "Copperline Group",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 155,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4224.1,
+      "averageTicket": 224.08,
+      "deliveryPromiseDays": 5,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.34,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward garden tools at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-060",
+      "submittedAt": "2026-08-13",
+      "legalName": "Falcon Retail Ltd",
+      "tradingName": "Falcon Retail",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 32,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 68026.27,
+      "averageTicket": 21.76,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2006. Everything is stocked in our Hull unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-061",
+      "submittedAt": "2026-08-13",
+      "legalName": "Quarry Group Ltd",
+      "tradingName": "Quarry Group",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 238,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4272.14,
+      "averageTicket": 12,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2009. Everything is stocked in our Exeter unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-062",
+      "submittedAt": "2026-08-14",
+      "legalName": "Beacon Direct Ltd",
+      "tradingName": "Beacon Direct",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 4,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 146614.81,
+      "averageTicket": 69.26,
+      "deliveryPromiseDays": 27,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Premium running shoes at unbeatable prices. Worldwide shipping 25-40 days. All sales are final. Contact us through the form.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-063",
+      "submittedAt": "2026-08-14",
+      "legalName": "Bluewater Direct Ltd",
+      "tradingName": "Bluewater Direct",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 182,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 90075.34,
+      "averageTicket": 36.1,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make kitchenware to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-064",
+      "submittedAt": "2026-08-14",
+      "legalName": "Copperline Supply Ltd",
+      "tradingName": "Copperline Supply",
+      "nameMismatch": false,
+      "category": "Gambling adjacent",
+      "monthsRegistered": 34,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 17177.38,
+      "averageTicket": 82.26,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Place your bets on tonight’s fixtures. Instant payouts, no verification needed, new players get a hundred free spins.",
+      "refundPolicy": "No refunds once the service has been accessed.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-065",
+      "submittedAt": "2026-08-14",
+      "legalName": "Falcon Goods Ltd",
+      "tradingName": "Falcon Goods",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 80,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 27760.8,
+      "averageTicket": 300,
+      "deliveryPromiseDays": 1,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.24,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2007. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-066",
+      "submittedAt": "2026-08-14",
+      "legalName": "Ironbark Supply Ltd",
+      "tradingName": "Ironbark Supply",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 7,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 94491.82,
+      "averageTicket": 230.16,
+      "deliveryPromiseDays": 39,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Trending skincare, shipped direct from our partners. Please allow up to six weeks. Returns are not accepted on sale items, which is most items.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-067",
+      "submittedAt": "2026-08-14",
+      "legalName": "Meridian Group Ltd",
+      "tradingName": "Meridian Group",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 239,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 5227.77,
+      "averageTicket": 17.91,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.35,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2006. Everything is stocked in our Exeter unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-068",
+      "submittedAt": "2026-08-14",
+      "legalName": "Pinefield Direct Ltd",
+      "tradingName": "Pinefield Direct",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 16,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 93700,
+      "averageTicket": 300,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2008. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-069",
+      "submittedAt": "2026-08-15",
+      "legalName": "Kestrel Retail Ltd",
+      "tradingName": "Kestrel Retail",
+      "nameMismatch": false,
+      "category": "Travel",
+      "monthsRegistered": 233,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 83478.29,
+      "averageTicket": 50,
+      "deliveryPromiseDays": 58,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "Moving from another acquirer on price",
+      "declaredChargebackRatePercent": 0.32,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Independent travel agent since 2000, bonded and licensed. Balances are taken sixty days before departure and held in a client account.",
+      "refundPolicy": "Cancellations follow the bonding scheme terms, in writing, with a full schedule on the site.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Corner of the page cut off"
+        }
+      ]
+    },
+    {
+      "id": "APP-070",
+      "submittedAt": "2026-08-15",
+      "legalName": "Meridian Direct Ltd",
+      "tradingName": "Meridian Direct",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 60,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 26432.59,
+      "averageTicket": 123.31,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.32,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward stationery at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-071",
+      "submittedAt": "2026-08-15",
+      "legalName": "Harbour Holdings Ltd",
+      "tradingName": "Orchard Goods",
+      "nameMismatch": true,
+      "category": "Digital goods",
+      "monthsRegistered": 14,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 162510.73,
+      "averageTicket": 80.99,
+      "deliveryPromiseDays": 19,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make skincare to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Returns accepted within fourteen days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Company number does not exist on the register"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-072",
+      "submittedAt": "2026-08-15",
+      "legalName": "Rooftop Group Ltd",
+      "tradingName": "Rooftop Group",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 259,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 23176.72,
+      "averageTicket": 145.52,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make garden tools to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-073",
+      "submittedAt": "2026-08-16",
+      "legalName": "Lantern Holdings Ltd",
+      "tradingName": "Cedar Direct",
+      "nameMismatch": true,
+      "category": "Retail",
+      "monthsRegistered": 6,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 60675.77,
+      "averageTicket": 40.28,
+      "deliveryPromiseDays": 20,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make stationery to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Returns accepted within fourteen days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Utility bill address is a mail forwarding office, and the issuer logo is the wrong shape"
+        }
+      ]
+    },
+    {
+      "id": "APP-074",
+      "submittedAt": "2026-08-16",
+      "legalName": "Cedar Trading Ltd",
+      "tradingName": "Cedar Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 256,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 25265.92,
+      "averageTicket": 19.08,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make pet supplies to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-075",
+      "submittedAt": "2026-08-16",
+      "legalName": "Northwind Trading Ltd",
+      "tradingName": "Northwind Trading",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 88,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 116247.11,
+      "averageTicket": 35.36,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.15,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make running shoes to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-076",
+      "submittedAt": "2026-08-16",
+      "legalName": "Pinefield Retail Ltd",
+      "tradingName": "Pinefield Retail",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 75,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 10710.89,
+      "averageTicket": 223.02,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2011. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Corner of the page cut off"
+        }
+      ]
+    },
+    {
+      "id": "APP-077",
+      "submittedAt": "2026-08-17",
+      "legalName": "Bluewater Goods Ltd",
+      "tradingName": "Bluewater Goods",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 38,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 63006.43,
+      "averageTicket": 141.52,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.18,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward skincare at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-078",
+      "submittedAt": "2026-08-17",
+      "legalName": "Meridian Group Ltd",
+      "tradingName": "Meridian Group",
+      "nameMismatch": false,
+      "category": "Adult adjacent",
+      "monthsRegistered": 31,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 25762.86,
+      "averageTicket": 90.62,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Live cams, 18+, subscription from nine pounds a month. Discreet billing under a neutral name on your statement.",
+      "refundPolicy": "No refunds once the service has been accessed.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-079",
+      "submittedAt": "2026-08-17",
+      "legalName": "Quarry Group Ltd",
+      "tradingName": "Quarry Group",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 41,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 5569.18,
+      "averageTicket": 12,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2002. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-080",
+      "submittedAt": "2026-08-18",
+      "legalName": "Falcon Goods Ltd",
+      "tradingName": "Falcon Goods",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 213,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 6412.77,
+      "averageTicket": 12.68,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.13,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make lighting to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-081",
+      "submittedAt": "2026-08-18",
+      "legalName": "Falcon Trading Ltd",
+      "tradingName": "Falcon Trading",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 70,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 17369.81,
+      "averageTicket": 14.23,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make lighting to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-082",
+      "submittedAt": "2026-08-18",
+      "legalName": "Meridian Retail Ltd",
+      "tradingName": "Meridian Retail",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 131,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 7188.11,
+      "averageTicket": 249.13,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward camping gear at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-083",
+      "submittedAt": "2026-08-18",
+      "legalName": "Orchard Direct Ltd",
+      "tradingName": "Orchard Direct",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 119,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 7982.73,
+      "averageTicket": 89.33,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make camping gear to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-084",
+      "submittedAt": "2026-08-18",
+      "legalName": "Quarry Trading Ltd",
+      "tradingName": "Quarry Trading",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 4,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 66645.66,
+      "averageTicket": 314.48,
+      "deliveryPromiseDays": 43,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Trending kitchenware, shipped direct from our partners. Please allow up to six weeks. Returns are not accepted on sale items, which is most items.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-085",
+      "submittedAt": "2026-08-18",
+      "legalName": "Tinbridge Retail Ltd",
+      "tradingName": "Tinbridge Retail",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 223,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 89570.06,
+      "averageTicket": 65.19,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.34,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2016. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-086",
+      "submittedAt": "2026-08-19",
+      "legalName": "Meridian Trading Ltd",
+      "tradingName": "Meridian Trading",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 16,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 35003.27,
+      "averageTicket": 112.65,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Our lighting formula reverses joint damage and cures inflammation in fourteen days. Doctors will not tell you this.",
+      "refundPolicy": "Refunds at our discretion within seven days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-087",
+      "submittedAt": "2026-08-19",
+      "legalName": "Quarry Group Ltd",
+      "tradingName": "Quarry Group",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 41,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 33326.23,
+      "averageTicket": 379.34,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "Moving from another acquirer on price",
+      "declaredChargebackRatePercent": 0.19,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Our partners hold stock in Norwich and ship within five working days, tracked, with our phone number on the docket.",
+      "refundPolicy": "Thirty-day returns, we pay the postage.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-088",
+      "submittedAt": "2026-08-20",
+      "legalName": "Beacon Goods Ltd",
+      "tradingName": "Beacon Goods",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 175,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 6932.84,
+      "averageTicket": 306.08,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.16,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make garden tools to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-089",
+      "submittedAt": "2026-08-20",
+      "legalName": "Ironbark Group Ltd",
+      "tradingName": "Ironbark Group",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 29,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 20279.99,
+      "averageTicket": 62.5,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.24,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make kitchenware to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-090",
+      "submittedAt": "2026-08-20",
+      "legalName": "Lantern Trading Ltd",
+      "tradingName": "Lantern Trading",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 244,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 39663.57,
+      "averageTicket": 263.57,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2007. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-091",
+      "submittedAt": "2026-08-20",
+      "legalName": "Marlow Trading Ltd",
+      "tradingName": "Marlow Trading",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 106,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4618.97,
+      "averageTicket": 46.11,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2004. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-092",
+      "submittedAt": "2026-08-20",
+      "legalName": "Saltmarsh Group Ltd",
+      "tradingName": "Saltmarsh Group",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 35,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 95162.26,
+      "averageTicket": 42.7,
+      "deliveryPromiseDays": 1,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2007. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-093",
+      "submittedAt": "2026-08-21",
+      "legalName": "Beacon Goods Ltd",
+      "tradingName": "Beacon Goods",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 2,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 104883.95,
+      "averageTicket": 200,
+      "deliveryPromiseDays": 25,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Premium phone accessories at unbeatable prices. Worldwide shipping 25-40 days. All sales are final. Contact us through the form.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-094",
+      "submittedAt": "2026-08-21",
+      "legalName": "Harbour Trading Ltd",
+      "tradingName": "Harbour Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 210,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 9546.82,
+      "averageTicket": 32.25,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward running shoes at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-095",
+      "submittedAt": "2026-08-21",
+      "legalName": "Kestrel Supply Ltd",
+      "tradingName": "Kestrel Supply",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 15,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 7626.58,
+      "averageTicket": 34.6,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2012. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-096",
+      "submittedAt": "2026-08-21",
+      "legalName": "Marlow Retail Ltd",
+      "tradingName": "Marlow Retail",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 179,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 18783.02,
+      "averageTicket": 350,
+      "deliveryPromiseDays": 5,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2004. Everything is stocked in our Perth unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-097",
+      "submittedAt": "2026-08-22",
+      "legalName": "Beacon Direct Ltd",
+      "tradingName": "Beacon Direct",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 172,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 119607.48,
+      "averageTicket": 300,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward phone accessories at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Corner of the page cut off"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-098",
+      "submittedAt": "2026-08-22",
+      "legalName": "Harbour Retail Ltd",
+      "tradingName": "Harbour Retail",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 130,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 96419.14,
+      "averageTicket": 131.61,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.11,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2011. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-099",
+      "submittedAt": "2026-08-23",
+      "legalName": "Bluewater Direct Ltd",
+      "tradingName": "Bluewater Direct",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 189,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 19349.55,
+      "averageTicket": 12.64,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward running shoes at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-100",
+      "submittedAt": "2026-08-23",
+      "legalName": "Cedar Trading Ltd",
+      "tradingName": "Cedar Trading",
+      "nameMismatch": false,
+      "category": "Crypto adjacent",
+      "monthsRegistered": 92,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 27527.06,
+      "averageTicket": 94.46,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "Moving from another acquirer on price",
+      "declaredChargebackRatePercent": 0.13,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We sell hardware wallets and security keys. We do not take deposits, hold funds, or offer any investment product.",
+      "refundPolicy": "Thirty-day returns on unopened devices.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-101",
+      "submittedAt": "2026-08-23",
+      "legalName": "Copperline Supply Ltd",
+      "tradingName": "Copperline Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 97,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 32238.34,
+      "averageTicket": 247.28,
+      "deliveryPromiseDays": 8,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward stationery at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-102",
+      "submittedAt": "2026-08-23",
+      "legalName": "Falcon Trading Ltd",
+      "tradingName": "Falcon Trading",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 213,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 14302.95,
+      "averageTicket": 150,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward camping gear at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-103",
+      "submittedAt": "2026-08-23",
+      "legalName": "Harbour Supply Ltd",
+      "tradingName": "Harbour Supply",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 54,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 24820.44,
+      "averageTicket": 12,
+      "deliveryPromiseDays": 11,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.2,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make kitchenware to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Low resolution scan, readable"
+        }
+      ]
+    },
+    {
+      "id": "APP-104",
+      "submittedAt": "2026-08-23",
+      "legalName": "Lantern Supply Ltd",
+      "tradingName": "Lantern Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 110,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 20250.82,
+      "averageTicket": 50,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward lighting at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-105",
+      "submittedAt": "2026-08-23",
+      "legalName": "Meridian Retail Ltd",
+      "tradingName": "Meridian Retail",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 92,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 9800,
+      "averageTicket": 26.92,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.15,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward pet supplies at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-106",
+      "submittedAt": "2026-08-23",
+      "legalName": "Northwind Retail Ltd",
+      "tradingName": "Northwind Retail",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 224,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 77850,
+      "averageTicket": 48.68,
+      "deliveryPromiseDays": 1,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2017. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-107",
+      "submittedAt": "2026-08-24",
+      "legalName": "Rooftop Holdings Ltd",
+      "tradingName": "Ironbark Goods",
+      "nameMismatch": true,
+      "category": "Dropshipping",
+      "monthsRegistered": 6,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 234450,
+      "averageTicket": 79,
+      "deliveryPromiseDays": 44,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Premium running shoes at unbeatable prices. Worldwide shipping 25-40 days. All sales are final. Contact us through the form.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-108",
+      "submittedAt": "2026-08-24",
+      "legalName": "Kestrel Direct Ltd",
+      "tradingName": "Kestrel Direct",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 44,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 105220.1,
+      "averageTicket": 19.43,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.22,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make camping gear to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-109",
+      "submittedAt": "2026-08-25",
+      "legalName": "Beacon Group Ltd",
+      "tradingName": "Beacon Group",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 77,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 45867.49,
+      "averageTicket": 13.09,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.38,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make phone accessories to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-110",
+      "submittedAt": "2026-08-25",
+      "legalName": "Lantern Trading Ltd",
+      "tradingName": "Lantern Trading",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 92,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 6100.61,
+      "averageTicket": 16.31,
+      "deliveryPromiseDays": 5,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward pet supplies at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-111",
+      "submittedAt": "2026-08-25",
+      "legalName": "Northwind Direct Ltd",
+      "tradingName": "Northwind Direct",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 199,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 29090.84,
+      "averageTicket": 125.08,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make stationery to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-112",
+      "submittedAt": "2026-08-25",
+      "legalName": "Pinefield Trading Ltd",
+      "tradingName": "Pinefield Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 18,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 5319.37,
+      "averageTicket": 100,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.33,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward lighting at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-113",
+      "submittedAt": "2026-08-26",
+      "legalName": "Harbour Holdings Ltd",
+      "tradingName": "Bluewater Goods",
+      "nameMismatch": true,
+      "category": "Dropshipping",
+      "monthsRegistered": 5,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 43700,
+      "averageTicket": 167.53,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Premium camping gear at unbeatable prices. Worldwide shipping 25-40 days. All sales are final. Contact us through the form.",
+      "refundPolicy": "Returns accepted within fourteen days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Utility bill address is a mail forwarding office, and the issuer logo is the wrong shape"
+        }
+      ]
+    },
+    {
+      "id": "APP-114",
+      "submittedAt": "2026-08-26",
+      "legalName": "Cedar Retail Ltd",
+      "tradingName": "Cedar Retail",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 30,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 12435.84,
+      "averageTicket": 120.43,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.23,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward running shoes at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-115",
+      "submittedAt": "2026-08-26",
+      "legalName": "Copperline Group Ltd",
+      "tradingName": "Copperline Group",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 114,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 72627.47,
+      "averageTicket": 12.37,
+      "deliveryPromiseDays": 1,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make stationery to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Thirty-day returns, refund to the original card.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-116",
+      "submittedAt": "2026-08-26",
+      "legalName": "Falcon Trading Ltd",
+      "tradingName": "Falcon Trading",
+      "nameMismatch": false,
+      "category": "Crypto adjacent",
+      "monthsRegistered": 95,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 32650,
+      "averageTicket": 765.64,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "Moving from another acquirer on price",
+      "declaredChargebackRatePercent": 0.07,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We sell hardware wallets and security keys. We do not take deposits, hold funds, or offer any investment product.",
+      "refundPolicy": "Thirty-day returns on unopened devices.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Corner of the page cut off"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-117",
+      "submittedAt": "2026-08-26",
+      "legalName": "Marlow Supply Ltd",
+      "tradingName": "Marlow Supply",
+      "nameMismatch": false,
+      "category": "Travel",
+      "monthsRegistered": 127,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 140219.84,
+      "averageTicket": 52.86,
+      "deliveryPromiseDays": 47,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.07,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Independent travel agent since 2006, bonded and licensed. Balances are taken sixty days before departure and held in a client account.",
+      "refundPolicy": "Cancellations follow the bonding scheme terms, in writing, with a full schedule on the site.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-118",
+      "submittedAt": "2026-08-26",
+      "legalName": "Pinefield Supply Ltd",
+      "tradingName": "Pinefield Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 126,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 112500,
+      "averageTicket": 248.25,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2018. Everything is stocked in our Exeter unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-119",
+      "submittedAt": "2026-08-27",
+      "legalName": "Copperline Holdings Ltd",
+      "tradingName": "Copperline Trading",
+      "nameMismatch": true,
+      "category": "Dropshipping",
+      "monthsRegistered": 5,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 40750,
+      "averageTicket": 45.28,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Trending garden tools, shipped direct from our partners. Please allow up to six weeks. Returns are not accepted on sale items, which is most items.",
+      "refundPolicy": "Returns accepted within fourteen days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Company number does not exist on the register"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-120",
+      "submittedAt": "2026-08-27",
+      "legalName": "Falcon Goods Ltd",
+      "tradingName": "Falcon Goods",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 81,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 8231.74,
+      "averageTicket": 27.01,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.31,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward skincare at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Dated four months ago"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-121",
+      "submittedAt": "2026-08-27",
+      "legalName": "Bluewater Holdings Ltd",
+      "tradingName": "Harbour Group",
+      "nameMismatch": true,
+      "category": "Digital goods",
+      "monthsRegistered": 4,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 167576.07,
+      "averageTicket": 60.16,
+      "deliveryPromiseDays": 38,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Premium stationery at unbeatable prices. Worldwide shipping 25-40 days. All sales are final. Contact us through the form.",
+      "refundPolicy": "All sales are final once the order is placed. Delivery times are estimates and delays are not grounds for a refund.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-122",
+      "submittedAt": "2026-08-27",
+      "legalName": "Ironbark Trading Ltd",
+      "tradingName": "Ironbark Trading",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 170,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 18268.64,
+      "averageTicket": 12.01,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2016. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-123",
+      "submittedAt": "2026-08-27",
+      "legalName": "Orchard Retail Ltd",
+      "tradingName": "Orchard Retail",
+      "nameMismatch": false,
+      "category": "Professional services",
+      "monthsRegistered": 98,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 8047.77,
+      "averageTicket": 21.54,
+      "deliveryPromiseDays": 9,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make lighting to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-124",
+      "submittedAt": "2026-08-27",
+      "legalName": "Rooftop Retail Ltd",
+      "tradingName": "Rooftop Retail",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 20,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4435.28,
+      "averageTicket": 22.52,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2014. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Corner of the page cut off"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-125",
+      "submittedAt": "2026-08-28",
+      "legalName": "Cedar Retail Ltd",
+      "tradingName": "Cedar Retail",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 169,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 4895.62,
+      "averageTicket": 23.94,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward camping gear at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-126",
+      "submittedAt": "2026-08-28",
+      "legalName": "Copperline Goods Ltd",
+      "tradingName": "Copperline Goods",
+      "nameMismatch": false,
+      "category": "Crypto adjacent",
+      "monthsRegistered": 88,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 81659.2,
+      "averageTicket": 250.71,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.34,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We sell hardware wallets and security keys. We do not take deposits, hold funds, or offer any investment product.",
+      "refundPolicy": "Thirty-day returns on unopened devices.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-127",
+      "submittedAt": "2026-08-28",
+      "legalName": "Ironbark Supply Ltd",
+      "tradingName": "Ironbark Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 155,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 64786.1,
+      "averageTicket": 73.54,
+      "deliveryPromiseDays": 5,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.26,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make garden tools to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-128",
+      "submittedAt": "2026-08-28",
+      "legalName": "Ironbark Trading Ltd",
+      "tradingName": "Ironbark Trading",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 200,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 113100,
+      "averageTicket": 100,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make phone accessories to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-129",
+      "submittedAt": "2026-08-28",
+      "legalName": "Cedar Holdings Ltd",
+      "tradingName": "Meridian Supply",
+      "nameMismatch": true,
+      "category": "Digital goods",
+      "monthsRegistered": 143,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 5450,
+      "averageTicket": 18.94,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "We make skincare to order in the United Kingdom. Lead time is five to seven working days and we email a photo before anything ships.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-130",
+      "submittedAt": "2026-08-28",
+      "legalName": "Rooftop Supply Ltd",
+      "tradingName": "Rooftop Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 201,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 89345.5,
+      "averageTicket": 253.47,
+      "deliveryPromiseDays": 7,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.17,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward lighting at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-131",
+      "submittedAt": "2026-08-28",
+      "legalName": "Rooftop Trading Ltd",
+      "tradingName": "Rooftop Trading",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 78,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 51288.94,
+      "averageTicket": 150,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.16,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward stationery at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-132",
+      "submittedAt": "2026-08-29",
+      "legalName": "Meridian Direct Ltd",
+      "tradingName": "Meridian Direct",
+      "nameMismatch": false,
+      "category": "Dropshipping",
+      "monthsRegistered": 67,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 80501.04,
+      "averageTicket": 50,
+      "deliveryPromiseDays": 11,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2009. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-133",
+      "submittedAt": "2026-08-29",
+      "legalName": "Northwind Supply Ltd",
+      "tradingName": "Northwind Supply",
+      "nameMismatch": false,
+      "category": "Supplements",
+      "monthsRegistered": 81,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 104009.79,
+      "averageTicket": 56.49,
+      "deliveryPromiseDays": 4,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.07,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Vitamins and protein powders, labelled to UK food standards. We make no medical claims and our labels say so.",
+      "refundPolicy": "Unopened tubs returnable for thirty days.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-134",
+      "submittedAt": "2026-08-29",
+      "legalName": "Quarry Retail Ltd",
+      "tradingName": "Quarry Retail",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 57,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 38491.76,
+      "averageTicket": 98.97,
+      "deliveryPromiseDays": 3,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2016. Everything is stocked in our Exeter unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-135",
+      "submittedAt": "2026-08-30",
+      "legalName": "Bluewater Goods Ltd",
+      "tradingName": "Bluewater Goods",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 94,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 8750,
+      "averageTicket": 263.79,
+      "deliveryPromiseDays": 12,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.33,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward running shoes at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-136",
+      "submittedAt": "2026-08-30",
+      "legalName": "Northwind Holdings Ltd",
+      "tradingName": "Bluewater Retail",
+      "nameMismatch": true,
+      "category": "Supplements",
+      "monthsRegistered": 196,
+      "directors": 2,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 5500,
+      "averageTicket": 34.52,
+      "deliveryPromiseDays": 6,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward pet supplies at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Low resolution scan, readable"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-137",
+      "submittedAt": "2026-08-30",
+      "legalName": "Cedar Direct Ltd",
+      "tradingName": "Cedar Direct",
+      "nameMismatch": false,
+      "category": "Digital goods",
+      "monthsRegistered": 87,
+      "directors": 3,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 12505.27,
+      "averageTicket": 87.44,
+      "deliveryPromiseDays": 1,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 3,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 1999. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Dated four months ago"
+        }
+      ]
+    },
+    {
+      "id": "APP-138",
+      "submittedAt": "2026-08-30",
+      "legalName": "Cedar Supply Ltd",
+      "tradingName": "Cedar Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 59,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 32600,
+      "averageTicket": 12,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2005. Everything is stocked in our Norwich unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-139",
+      "submittedAt": "2026-08-30",
+      "legalName": "Orchard Supply Ltd",
+      "tradingName": "Orchard Supply",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 134,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 8042.18,
+      "averageTicket": 196.19,
+      "deliveryPromiseDays": 10,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0.1,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Family-run since 2003. Everything is stocked in our Stoke unit and posted the same day, tracked, with a thirty-day return on anything unopened. Our phone number is on every page.",
+      "refundPolicy": "Fourteen-day returns on unused goods.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    },
+    {
+      "id": "APP-140",
+      "submittedAt": "2026-08-30",
+      "legalName": "Saltmarsh Group Ltd",
+      "tradingName": "Saltmarsh Group",
+      "nameMismatch": false,
+      "category": "Retail",
+      "monthsRegistered": 164,
+      "directors": 1,
+      "directorHistory": "Nothing adverse found",
+      "expectedMonthlyVolume": 7700,
+      "averageTicket": 65.83,
+      "deliveryPromiseDays": 2,
+      "tradingCountry": "GB",
+      "bankCountry": "GB",
+      "previousProcessor": "None declared",
+      "declaredChargebackRatePercent": 0,
+      "documentsClear": 4,
+      "documentsExpected": 4,
+      "websiteExcerpt": "Straightforward phone accessories at sensible prices. Free returns for thirty days, a real address at the bottom of this page, and a support line answered by us.",
+      "refundPolicy": "Refunds within thirty days, postage paid by us on faulty items.",
+      "documents": [
+        {
+          "name": "Certificate of incorporation",
+          "note": "Clear"
+        },
+        {
+          "name": "Director identity document",
+          "note": "Clear"
+        },
+        {
+          "name": "Bank statement in the trading name",
+          "note": "Clear"
+        },
+        {
+          "name": "Proof of trading address",
+          "note": "Clear"
+        }
+      ]
+    }
+  ]
+}

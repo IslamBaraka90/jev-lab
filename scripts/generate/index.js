@@ -19,6 +19,7 @@ export const GENERATORS = {
   'close-blockers': () => import('./close-blockers.js'),
   'order-risk': () => import('./order-risk.js'),
   'dispute-routing': () => import('./dispute-routing.js'),
+  'merchant-onboarding': () => import('./merchant-onboarding.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
