@@ -75,7 +75,7 @@ function record(file, entry) {
 /** Keeps the statement lines the demos read, and drops the rest of Yahoo's payload. */
 function compactFundamentals(symbol, summary, series = []) {
   const day = (value) => (value ? new Date(value).toISOString().slice(0, 10) : null);
-  const years = [...series].sort((left, right) => String(right.date).localeCompare(String(left.date)));
+  const years = [...series].sort((left, right) => String(day(right.date)).localeCompare(String(day(left.date))));
   const income = summary.incomeStatementHistory?.incomeStatementHistory ?? [];
   const pick = (row, ...names) => names.map((name) => row?.[name]).find((value) => typeof value === 'number') ?? null;
 

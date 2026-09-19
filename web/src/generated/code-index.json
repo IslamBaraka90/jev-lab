@@ -503,6 +503,34 @@
     "code": "/** What survived the review, and whether the things that should not have survived did. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.tradeId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const problems = graded.filter((result) => byItem.get(result.item.id).issue !== 'NONE');\n  const clean = graded.filter((result) => byItem.get(result.item.id).issue === 'NONE');\n  const caught = problems.filter((result) => result.evaluation.verdict !== 'APPROVE');\n\n  return {\n    note: `Two hundred proposed trades across six accounts, ${problems.length} of them carrying something the rebalancer could not see. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, clean),\n    kpis: kpis({ graded, problems, clean, caught, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, problems),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/sharia-screen/demo.js#demo:state": {
+    "path": "demos/sharia-screen/demo.js",
+    "startLine": 19,
+    "endLine": 47,
+    "code": "/** The business, the balance sheet as filed, and the rule set. No ratios: working them out is the task. */\nfunction buildState(item, context) {\n  return {\n    task: 'Screen this company against the rule set below. Work out each ratio yourself from the lines given, and compare it with the limit.',\n    rule_set: {\n      name: item.standardName,\n      denominator_to_use: item.denominatorName,\n      denominator_value: item.denominator,\n      debt_limit_percent: item.debtLimitPercent,\n      cash_and_interest_bearing_securities_limit_percent: item.liquidAssetsLimitPercent,\n      receivables_limit_percent: item.receivablesLimitPercent,\n      impure_income_limit_percent: item.impureIncomeLimitPercent,\n    },\n    activity_screen: context.activityScreen,\n    company: { symbol: item.symbol, sector: item.sector, industry: item.industry, what_it_does: item.business },\n    balance_sheet: {\n      fiscal_year_end: item.fiscalYearEnd,\n      revenue: item.revenue,\n      total_assets: item.totalAssets,\n      total_debt: item.totalDebt,\n      cash_and_short_term_investments: item.cashAndSecurities,\n      accounts_receivable: item.receivables,\n      interest_income: item.interestIncome,\n      interest_expense: item.interestExpense,\n      market_capitalisation: item.marketCap,\n    },\n    note: 'A line that is null is not on file. Saying so is a valid answer and a better one than guessing.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sharia-screen/demo.js#demo:questions": {
+    "path": "demos/sharia-screen/demo.js",
+    "startLine": 51,
+    "endLine": 79,
+    "code": "const questions = {\n  activity_compliant: noul('Does what this business does pass the activity screen?', {\n    yes: 'Its revenue does not come from anything the screen prohibits.',\n    no: 'Its main business, or a material part of it, is on the prohibited list.',\n  }),\n  debt_ratio_pass: noul('Is interest-bearing debt inside the limit for this rule set?', {\n    yes: 'Debt over the stated denominator is below the limit.',\n    no: 'It is at or above the limit, or the lines needed to work it out are not on file.',\n  }),\n  interest_securities_pass: noul('Are cash and interest-bearing securities inside the limit?', {\n    yes: 'Cash and short-term investments over the denominator are below the limit.',\n    no: 'They are at or above it, or the lines are not there.',\n  }),\n  receivables_pass: noul('Are receivables inside the limit?', {\n    yes: 'Accounts receivable over the denominator are below the limit.',\n    no: 'They are at or above it, or the line is missing.',\n  }),\n  impure_income_band: choice('How much of revenue is income from interest?', {\n    UNDER_3: 'Under three per cent of revenue.',\n    THREE_TO_FIVE: 'Between three and five per cent.',\n    OVER_5: 'Above five per cent of revenue.',\n    NOT_IN_THE_DATA: 'The statements on file do not break this out.',\n  }),\n  verdict: choice('What is the verdict under this rule set?', {\n    PASS: 'It clears the activity screen and every ratio limit.',\n    FAIL: 'At least one screen is failed outright.',\n    NEEDS_REVIEW: 'A person has to decide: the data is incomplete, or the activity question is a judgement.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/sharia-screen/demo.js#demo:evaluate": {
+    "path": "demos/sharia-screen/demo.js",
+    "startLine": 83,
+    "endLine": 104,
+    "code": "/** The model's three pass/fail calls beside the same three ratios computed here from the filed lines. */\nfunction evaluate(answers, item) {\n  const ratios = compute(item);\n  const said = {\n    debt: answers.debt_ratio_pass.noul >= 0.5,\n    liquid: answers.interest_securities_pass.noul >= 0.5,\n    receivables: answers.receivables_pass.noul >= 0.5,\n  };\n  const agrees = RATIOS.map(({ key }) => [key, ratios[key].pass === null ? null : ratios[key].pass === said[key]]);\n\n  return {\n    said,\n    ratios,\n    agrees: Object.fromEntries(agrees),\n    activityCompliant: answers.activity_compliant.noul >= 0.5,\n    band: answers.impure_income_band.choice,\n    verdict: answers.verdict.choice,\n    confidence: answers.verdict.confidence,\n    consistent: consistent(answers.verdict.choice, said, answers.activity_compliant.noul >= 0.5),\n    label: `${item.symbol} · ${item.standardId} · ${readable(answers.verdict.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sharia-screen/demo.js#demo:report": {
+    "path": "demos/sharia-screen/demo.js",
+    "startLine": 140,
+    "endLine": 157,
+    "code": "/** Arithmetic first: where the model's ratio calls and the demo's own calculation disagree. */\nfunction report(results, context = {}) {\n  const graded = results.filter((result) => result.evaluation);\n  const calls = graded\n    .flatMap((result) => RATIOS.map(({ key }) => ({ result, key, agrees: result.evaluation.agrees[key] })))\n    .filter((call) => call.agrees !== null);\n\n  return {\n    note: `Forty-eight screenings: sixteen instruments against three rule sets. ${context.note ?? ''}`,\n    findings: findings(graded, calls),\n    kpis: kpis(graded, calls),\n    distribution: distribution(graded),\n    matrix: standardMatrix(graded),\n    curve: coverage(graded, calls),\n    checks: checks(graded, calls),\n    topItems: topItems(graded),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/sybil-clusters/demo.js#demo:state": {
     "path": "demos/sybil-clusters/demo.js",
     "startLine": 22,
@@ -739,6 +767,13 @@
     "startLine": 76,
     "endLine": 100,
     "code": "/** One proposed trade, with the position around it and what the instrument can absorb. */\nfunction trade(random, { account, symbol, side, valueUsd, currentPercent, targetPercent, recentTrades = [], sameNameOtherAccount = null, mandateNote = null }) {\n  const price = last(symbol).price;\n  const shares = Math.round(valueUsd / price);\n  const volume = Math.max(averageVolume(symbol), 1);\n  return {\n    key: `${account.id}-${symbol}-${random.int(100_000, 999_999)}`,\n    id: null,\n    accountId: account.id,\n    accountTaxable: account.taxable,\n    symbol,\n    side,\n    shares,\n    valueUsd: round(valueUsd),\n    price,\n    currentWeightPercent: round(currentPercent, 2),\n    targetWeightPercent: round(targetPercent, 2),\n    weightAfterPercent: round(currentPercent + (side === 'BUY' ? 1 : -1) * (valueUsd / account.valueUsd) * 100, 2),\n    shareOfAverageVolumePercent: round((shares / volume) * 100, 2),\n    averageDailyVolume: volume,\n    recentTradesInThisName: recentTrades,\n    sameNameOtherAccountToday: sameNameOtherAccount,\n    mandateNote,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/sharia-screen.js#demo:data": {
+    "path": "scripts/generate/sharia-screen.js",
+    "startLine": 97,
+    "endLine": 131,
+    "code": "/** One company under one standard: the business, the balance sheet, and the rules being applied. */\nfunction screening(symbol, standard) {\n  const profile = fundamentals(symbol);\n  const latest = profile.annual.find((year) => year.totalAssets !== null) ?? {};\n  const price = last(symbol);\n  const marketCap = profile.marketCap ?? (profile.sharesOutstanding ? Math.round(profile.sharesOutstanding * price.price) : null);\n  const byMarketCap = standard.denominator.startsWith('market');\n\n  return {\n    id: `${symbol}-${standard.id}`,\n    symbol,\n    standardId: standard.id,\n    standardName: standard.name,\n    sector: profile.sector,\n    industry: profile.industry,\n    business: BUSINESS[symbol],\n    fiscalYearEnd: latest.fiscalYearEnd ?? null,\n    revenue: latest.revenue ?? null,\n    totalAssets: latest.totalAssets ?? null,\n    totalDebt: latest.totalDebt ?? null,\n    cashAndSecurities: latest.cash ?? null,\n    receivables: latest.receivables ?? null,\n    interestIncome: latest.interestIncome ?? null,\n    interestExpense: latest.interestExpense ?? null,\n    marketCap,\n    price: price.price,\n    priceAsOf: price.date,\n    denominator: byMarketCap ? marketCap : latest.totalAssets ?? null,\n    denominatorName: standard.denominator,\n    debtLimitPercent: standard.debtLimitPercent,\n    liquidAssetsLimitPercent: standard.liquidAssetsLimitPercent,\n    receivablesLimitPercent: standard.receivablesLimitPercent,\n    impureIncomeLimitPercent: standard.impureIncomeLimitPercent,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/sybil-clusters.js#demo:data": {
