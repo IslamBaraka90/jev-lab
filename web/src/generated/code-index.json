@@ -1,4 +1,32 @@
 {
+  "demos/aml-alert-triage/demo.js#demo:state": {
+    "path": "demos/aml-alert-triage/demo.js",
+    "startLine": 22,
+    "endLine": 52,
+    "code": "/** The alert, ninety days of the account, and what the customer said they would do. */\nfunction buildState(item, context) {\n  return {\n    task: 'Triage this monitoring alert: name the typology if there is one, decide whether to close, monitor or escalate, and say what is missing.',\n    bank: { name: context.bank, currency: context.currency, cash_reporting_threshold: context.cashReportingThreshold, capacity: context.analystCapacity, scope: context.wording },\n    alert: {\n      fired: item.firedAt,\n      scenario: item.scenario,\n      triggering_payments: item.triggeringPaymentList,\n      triggering_total: item.triggeringTotal,\n    },\n    customer: {\n      type: item.customerType,\n      stated_activity: item.statedActivity,\n      expected_monthly_turnover: item.expectedMonthlyTurnover,\n      onboarding_risk_rating: item.onboardingRisk,\n      months_dormant_before_this: item.monthsDormantBefore,\n    },\n    last_ninety_days: {\n      credits: item.creditsIn90Days,\n      credit_total: item.creditTotal90Days,\n      debits: item.debitsIn90Days,\n      debit_total: item.debitTotal90Days,\n      distinct_counterparties: item.distinctCounterparties90Days,\n      share_in_cash_percent: item.cashSharePercent,\n      main_corridor: item.mainCorridor,\n      corridor_risk_rating: item.corridorRisk,\n    },\n    history: { earlier_alerts: item.priorAlerts, how_they_ended: item.priorOutcome, relationship_file: item.relationshipNote },\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/aml-alert-triage/demo.js#demo:questions": {
+    "path": "demos/aml-alert-triage/demo.js",
+    "startLine": 56,
+    "endLine": 83,
+    "code": "const questions = {\n  typology: choice('What pattern does this alert fit, if any?', {\n    STRUCTURING: 'Payments arranged to stay under a reporting threshold.',\n    LAYERING: 'Money moved through accounts to put distance between it and where it came from.',\n    MULE_ACTIVITY: 'An account taking money from many people and passing it straight on.',\n    TRADE_BASED: 'Trade paperwork used to move value: invoices that do not match the goods.',\n    THIRD_PARTY_FUNDING: 'The account is funded by someone with no visible connection to the customer.',\n    NONE: 'The activity fits an ordinary life or an ordinary business.',\n  }),\n  activity_explained: noul('Does what the customer told the bank explain this activity?', {\n    yes: 'The stated work, the expected turnover and the file account for what happened.',\n    no: 'The activity does not follow from anything the customer has told the bank.',\n  }),\n  suspicion: score('How much does this alert deserve an analyst’s time?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain',\n  ]),\n  disposition: choice('What happens to this alert?', {\n    CLOSE: 'Close it with the reason. Nothing here needs a person again.',\n    MONITOR: 'Leave the account under watch and look again if the pattern repeats.',\n    ESCALATE: 'Send it to the financial crime team to investigate properly.',\n  }),\n  information_missing: choice('What single piece of information would settle this?', {\n    SOURCE_OF_FUNDS: 'Where the money came from.',\n    COUNTERPARTY_IDENTITY: 'Who the other side of these payments actually is.',\n    BUSINESS_PURPOSE: 'What the payments were for.',\n    NONE: 'Nothing is missing. The file already answers it.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/aml-alert-triage/demo.js#demo:evaluate": {
+    "path": "demos/aml-alert-triage/demo.js",
+    "startLine": 87,
+    "endLine": 102,
+    "code": "/** One alert's triage: what it is, what happens to it, and what an analyst should ask for. */\nfunction evaluate(answers, item) {\n  const disposition = answers.disposition.choice;\n\n  return {\n    typology: answers.typology.choice,\n    disposition,\n    suspicion: answers.suspicion.score,\n    explained: answers.activity_explained.noul >= 0.5,\n    missing: answers.information_missing.choice,\n    kept: disposition !== 'CLOSE',\n    escalated: disposition === 'ESCALATE',\n    confidence: answers.typology.confidence,\n    label: `${item.id} · ${readable(disposition)}${answers.typology.choice === 'NONE' ? '' : ` · ${readable(answers.typology.choice)}`}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/aml-alert-triage/demo.js#demo:report": {
+    "path": "demos/aml-alert-triage/demo.js",
+    "startLine": 106,
+    "endLine": 125,
+    "code": "/** Queue reduction is only a number next to a catch rate, so the two are always reported together. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.alertId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const real = graded.filter((result) => byItem.get(result.item.id).truePositive);\n  const kept = graded.filter((result) => result.evaluation.kept);\n  const keptReal = real.filter((result) => result.evaluation.kept);\n\n  return {\n    note: `${context.note ?? ''} ${context.wording ?? ''}`.trim(),\n    findings: findings(graded, byItem, real),\n    kpis: kpis({ graded, real, kept, keptReal, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, real),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/bank-reconciliation/demo.js#demo:state": {
     "path": "demos/bank-reconciliation/demo.js",
     "startLine": 21,
@@ -277,6 +305,13 @@
     "startLine": 82,
     "endLine": 102,
     "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/aml-alert-triage.js#demo:data": {
+    "path": "scripts/generate/aml-alert-triage.js",
+    "startLine": 80,
+    "endLine": 107,
+    "code": "/** One alert: the rule that fired, what set it off, and ninety days of the account around it. */\nfunction alert(random, { scenario, triggerCount, triggerTotal, customerType, statedActivity, expectedMonthly, credits, creditTotal, debits, debitTotal, counterparties, cashSharePercent, corridor, onboardingRisk, monthsDormant = 0, priorAlerts = 0, priorOutcome = 'No earlier alerts', relationshipNote, triggering }) {\n  return {\n    key: `${scenario}-${random.int(100_000, 999_999)}`,\n    id: null,\n    firedAt: random.day('2026-08-01', '2026-08-31'),\n    scenario,\n    triggeringPayments: triggerCount,\n    triggeringTotal: triggerTotal,\n    customerType,\n    statedActivity,\n    expectedMonthlyTurnover: expectedMonthly,\n    creditsIn90Days: credits,\n    creditTotal90Days: creditTotal,\n    debitsIn90Days: debits,\n    debitTotal90Days: debitTotal,\n    distinctCounterparties90Days: counterparties,\n    cashSharePercent,\n    mainCorridor: corridor.route,\n    corridorRisk: corridor.risk,\n    onboardingRisk,\n    monthsDormantBefore: monthsDormant,\n    priorAlerts,\n    priorOutcome,\n    relationshipNote,\n    triggeringPaymentList: triggering,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/bank-reconciliation.js#demo:data": {

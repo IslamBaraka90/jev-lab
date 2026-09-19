@@ -1,0 +1,1832 @@
+[
+  {
+    "truePositive": true,
+    "typology": "STRUCTURING",
+    "kind": "worth an analyst",
+    "alertId": "AML-0089"
+  },
+  {
+    "truePositive": true,
+    "typology": "STRUCTURING",
+    "kind": "worth an analyst",
+    "alertId": "AML-0090"
+  },
+  {
+    "truePositive": true,
+    "typology": "STRUCTURING",
+    "kind": "worth an analyst",
+    "alertId": "AML-0042"
+  },
+  {
+    "truePositive": true,
+    "typology": "STRUCTURING",
+    "kind": "worth an analyst",
+    "alertId": "AML-0298"
+  },
+  {
+    "truePositive": true,
+    "typology": "MULE_ACTIVITY",
+    "kind": "worth an analyst",
+    "alertId": "AML-0025"
+  },
+  {
+    "truePositive": true,
+    "typology": "MULE_ACTIVITY",
+    "kind": "worth an analyst",
+    "alertId": "AML-0243"
+  },
+  {
+    "truePositive": true,
+    "typology": "MULE_ACTIVITY",
+    "kind": "worth an analyst",
+    "alertId": "AML-0293"
+  },
+  {
+    "truePositive": true,
+    "typology": "TRADE_BASED",
+    "kind": "worth an analyst",
+    "alertId": "AML-0040"
+  },
+  {
+    "truePositive": true,
+    "typology": "TRADE_BASED",
+    "kind": "worth an analyst",
+    "alertId": "AML-0222"
+  },
+  {
+    "truePositive": true,
+    "typology": "TRADE_BASED",
+    "kind": "worth an analyst",
+    "alertId": "AML-0260"
+  },
+  {
+    "truePositive": true,
+    "typology": "THIRD_PARTY_FUNDING",
+    "kind": "worth an analyst",
+    "alertId": "AML-0050"
+  },
+  {
+    "truePositive": true,
+    "typology": "THIRD_PARTY_FUNDING",
+    "kind": "worth an analyst",
+    "alertId": "AML-0182"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0127"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0087"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0252"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0067"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0006"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0201"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0053"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a property sale",
+    "alertId": "AML-0039"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0134"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0007"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0076"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0270"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0131"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0151"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0038"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a bonus or redundancy payment",
+    "alertId": "AML-0130"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0061"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0159"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0237"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0086"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0168"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0220"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0208"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "a seasonal business",
+    "alertId": "AML-0120"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "money collected for a wedding",
+    "alertId": "AML-0216"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "money collected for a wedding",
+    "alertId": "AML-0101"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "money collected for a wedding",
+    "alertId": "AML-0026"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "money collected for a wedding",
+    "alertId": "AML-0035"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "money collected for a wedding",
+    "alertId": "AML-0224"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "explained in the file",
+    "look": "money collected for a wedding",
+    "alertId": "AML-0102"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0158"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0154"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0041"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0116"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0018"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0209"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0277"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0206"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0269"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0160"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0069"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0254"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0234"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0221"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0080"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0249"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0287"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0112"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0170"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0299"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0079"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0008"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0072"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0129"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0107"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0198"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0094"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0236"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0093"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0262"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0297"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0084"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0265"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0185"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0195"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0275"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0125"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0240"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0285"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0279"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0153"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0016"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0136"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0288"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0066"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0024"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0271"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0176"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0108"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0155"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0267"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0225"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0215"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0181"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0132"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0157"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0091"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0150"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0247"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0113"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0071"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0149"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0218"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0070"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0253"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0273"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0188"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0141"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0143"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0171"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0062"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0290"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0106"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0051"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0296"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0013"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0060"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0037"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0250"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0205"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0077"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0189"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0115"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0078"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0068"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0097"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0140"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0049"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0015"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0263"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0137"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0117"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0214"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0259"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0005"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0028"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0232"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0197"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0027"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0126"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0289"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0020"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0147"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0029"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0031"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0235"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0034"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0017"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0264"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0036"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0162"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0058"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0241"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0173"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0242"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0200"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0105"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0109"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0248"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0210"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0083"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0194"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0187"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0133"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0048"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0046"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0032"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0238"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0223"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0166"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0045"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0144"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0056"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0292"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0085"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0121"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0010"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0219"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0246"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0295"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0272"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0059"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0002"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0179"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0169"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0063"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0023"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0276"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0282"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0135"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0012"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0239"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0104"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0283"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0192"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0167"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0052"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0190"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0278"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0284"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0152"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0075"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0047"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0165"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0003"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0255"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0044"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0011"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0128"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0193"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0119"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0256"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0057"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0229"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0033"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0261"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0211"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0183"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0074"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0099"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0100"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0092"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0114"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0096"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0043"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0009"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0217"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0244"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0123"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0098"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0212"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0281"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0064"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0274"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0286"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0082"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0230"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0014"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0124"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0204"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0111"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0142"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0177"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0103"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0021"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0148"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0245"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0291"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0294"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0156"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0228"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0065"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0233"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0196"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0266"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0163"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0199"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0145"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0174"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0054"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0175"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0184"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0268"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0122"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0213"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0191"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0180"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0227"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0231"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0139"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0257"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0172"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0088"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0030"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0073"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0186"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0095"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0022"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0019"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0258"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0280"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0081"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0118"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0207"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0300"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0178"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0161"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0203"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0138"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0164"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0110"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0226"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0202"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0251"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0004"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0055"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0001"
+  },
+  {
+    "truePositive": false,
+    "typology": "NONE",
+    "kind": "everyday",
+    "alertId": "AML-0146"
+  }
+]
