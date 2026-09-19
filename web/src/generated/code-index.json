@@ -307,6 +307,34 @@
     "code": "/** Grades the named mismatch and hold, then proves every dollar of risk is either held or missed. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const labelByItem = new Map(labels.map((label) => [label.packetId, label]));\n  const graded = results.filter((result) => labelByItem.has(result.item.id));\n  const problems = graded.filter((result) => labelByItem.get(result.item.id).kind === 'problem');\n  const heldProblems = problems.filter((result) => result.evaluation.held);\n  const falseHolds = graded.filter((result) => labelByItem.get(result.item.id).kind !== 'problem' && result.evaluation.held);\n  const exposure = moneyIdentity(problems, heldProblems, labelByItem, context.taxRatePercent);\n\n  return {\n    note: `Graded against ${problems.length} planted mismatches. Labels never enter the model state.`,\n    findings: repeatedMistake(graded, labelByItem),\n    kpis: headline(graded, problems, heldProblems, falseHolds, exposure, context.reportingCurrency),\n    distribution: distribution(graded),\n    matrix: confusion(graded, labelByItem),\n    curve: coverage(graded, labelByItem),\n    checks: checks(graded, labelByItem),\n    topItems: topItems(graded, labelByItem, context.reportingCurrency),\n    money: exposure,\n    supplierRanking: supplierRanking(graded, labelByItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/wallet-risk/demo.js#demo:state": {
+    "path": "demos/wallet-risk/demo.js",
+    "startLine": 24,
+    "endLine": 44,
+    "code": "/** The wallet's shape and company: how old, how busy, whose money, and how far from something flagged. */\nfunction buildState(item, context) {\n  return {\n    task: 'Grade this wallet before the deposit is taken, name what drives the grade, and decide whether to accept it.',\n    desk: { name: context.desk, currency: context.currency, what_is_normal: context.typical, labelled_entities: context.entities, note: context.note },\n    wallet: {\n      address: item.address,\n      chain: item.chain,\n      age_days: item.ageDays,\n      transactions: item.transactions,\n      total_received: item.totalReceived,\n      total_sent: item.totalSent,\n      balance: item.balance,\n      transactions_last_30_days: item.transactionsLast30Days,\n      received_last_30_days: item.receivedLast30Days,\n    },\n    deposit_offered: item.amountOffered,\n    counterparty_mix: item.counterpartyMix,\n    distance: { hops_to_the_nearest_flagged_entity: item.hopsToFlaggedEntity, which_entity: item.nearestFlaggedEntity },\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/wallet-risk/demo.js#demo:questions": {
+    "path": "demos/wallet-risk/demo.js",
+    "startLine": 48,
+    "endLine": 73,
+    "code": "const questions = {\n  risk: score('How risky is taking money from this wallet?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Severe',\n  ]),\n  main_exposure: choice('What drives that grade?', {\n    MIXER: 'Money that has been through a mixer.',\n    SANCTIONED_ENTITY: 'A listed address, at or near this wallet.',\n    GAMBLING: 'Betting flow making up much of what this wallet does.',\n    BRIDGE: 'Volume moving across chains through a bridge.',\n    EXCHANGE: 'Exchange flow, which is where most ordinary volume goes.',\n    NONE: 'Nothing here drives a grade. The wallet is unremarkable.',\n  }),\n  decision: choice('What happens to this deposit?', {\n    ACCEPT: 'Take the money.',\n    REVIEW: 'Hold it and ask the customer where it came from.',\n    REJECT: 'Refuse the deposit.',\n  }),\n  exposure_direct: noul('Is the exposure direct rather than several hops away?', {\n    yes: 'This wallet dealt with the flagged or risky entity itself.',\n    no: 'Whatever it is sits at a distance, through other addresses.',\n  }),\n  activity_consistent: noul('Does the activity fit what this wallet appears to be?', {\n    yes: 'The volume, the count and the counterparties tell one story.',\n    no: 'The shape of the activity does not fit the kind of wallet this looks like.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/wallet-risk/demo.js#demo:evaluate": {
+    "path": "demos/wallet-risk/demo.js",
+    "startLine": 77,
+    "endLine": 94,
+    "code": "/** The grade, the driver, and the money it would let through or hold back. */\nfunction evaluate(answers, item) {\n  const risk = answers.risk.score;\n  const decision = answers.decision.choice;\n\n  return {\n    risk,\n    band: risk >= BAND_FLOOR.high ? 'high' : risk >= BAND_FLOOR.medium ? 'medium' : 'low',\n    exposure: answers.main_exposure.choice,\n    decision,\n    direct: answers.exposure_direct.noul >= 0.5,\n    consistent: answers.activity_consistent.noul >= 0.5,\n    accepted: decision === 'ACCEPT',\n    rejected: decision === 'REJECT',\n    confidence: answers.main_exposure.confidence,\n    label: `${item.id} · ${readable(decision)} · ${money(item.amountOffered)}${answers.main_exposure.choice === 'NONE' ? '' : ` · ${readable(answers.main_exposure.choice)}`}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/wallet-risk/demo.js#demo:report": {
+    "path": "demos/wallet-risk/demo.js",
+    "startLine": 98,
+    "endLine": 117,
+    "code": "/** Two questions at once: is the grade right, and would the desk have taken the money anyway. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.wallet, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const high = graded.filter((result) => byItem.get(result.item.id).riskBand === 'high');\n  const takenHigh = high.filter((result) => result.evaluation.accepted);\n  const lowBand = graded.filter((result) => byItem.get(result.item.id).riskBand === 'low');\n\n  return {\n    note: `Two hundred and forty wallets. ${high.length} carry exposure that should stop the money, ${graded.filter((result) => byItem.get(result.item.id).riskBand === 'medium').length} are worth asking about, and ${labels.filter((label) => label.kind === 'looks bad, is not').length} look alarming and are ordinary. ${context.note ?? ''}`,\n    findings: findings(graded, byItem),\n    kpis: kpis({ graded, high, takenHigh, lowBand, byItem, currency: context.currency }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, high),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/__example__/demo.js#demo:state": {
     "path": "demos/__example__/demo.js",
     "startLine": 7,
@@ -410,6 +438,13 @@
     "startLine": 125,
     "endLine": 153,
     "code": "/** Builds the three source documents before a planted difference is applied. */\nfunction freshPacket(random, supplier, index) {\n  const [itemCode, description] = random.pick(PRODUCTS);\n  const ordered = random.int(12, 120);\n  const price = unitPrice(random, { min: 18, max: 420 });\n  const freight = random.pick([0, 0, 25, 50, 75]);\n  const poDate = addDays(START_DAY, index);\n  const receiptDate = addDays(poDate, random.int(2, 8));\n  const invoiceDate = addDays(receiptDate, random.int(0, 3));\n  const currency = random.pick(CURRENCIES);\n  const stem = String(index + 1).padStart(4, '0');\n  const line = { itemCode, description, quantity: ordered, unitPrice: price };\n  const invoiceLine = { itemCode, description, quantityBilled: ordered, unitPrice: price };\n  const invoice = {\n    id: `INV-${stem}`,\n    date: invoiceDate,\n    purchaseOrderId: `PO-${stem}`,\n    goodsReceiptId: `GR-${stem}`,\n    currency,\n    lines: [invoiceLine],\n    freight,\n  };\n  recalculate(invoice);\n  return {\n    purchaseOrder: { id: `PO-${stem}`, date: poDate, supplier: supplier.name, currency, incoterm: random.pick(INCOTERMS), lines: [line] },\n    goodsReceipt: { id: `GR-${stem}`, purchaseOrderId: `PO-${stem}`, date: receiptDate, lines: [{ itemCode, quantityReceived: ordered, condition: 'accepted' }] },\n    invoice,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/wallet-risk.js#demo:data": {
+    "path": "scripts/generate/wallet-risk.js",
+    "startLine": 76,
+    "endLine": 98,
+    "code": "/** One wallet as a deposit desk sees it: how old, how busy, and who its money came from. */\nfunction wallet(random, { ageDays, transactions, received, sent, mix, hopsToFlagged, nearestFlagged, last30Transactions, last30Received, chain = null, offered }) {\n  const address = walletAddress(random);\n  return {\n    key: address,\n    id: null,\n    address,\n    chain: chain ?? random.pick(CHAINS),\n    ageDays,\n    transactions,\n    totalReceived: received,\n    totalSent: sent,\n    balance: round(Math.max(0, received - sent)),\n    amountOffered: offered,\n    counterpartyMix: mix,\n    largestCounterparty: mix[0]?.label ?? 'UNKNOWN',\n    largestCounterpartySharePercent: mix[0]?.sharePercent ?? 0,\n    hopsToFlaggedEntity: hopsToFlagged,\n    nearestFlaggedEntity: nearestFlagged,\n    transactionsLast30Days: last30Transactions,\n    receivedLast30Days: last30Received,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/example.js": {

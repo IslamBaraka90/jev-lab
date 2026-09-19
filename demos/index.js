@@ -13,6 +13,7 @@ import merchantOnboarding from './merchant-onboarding/demo.js';
 import cardFraudTriage from './card-fraud-triage/demo.js';
 import amlAlertTriage from './aml-alert-triage/demo.js';
 import muleNetwork from './mule-network/demo.js';
+import walletRisk from './wallet-risk/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -30,7 +31,7 @@ export const DOMAINS = [
 export const DOMAIN_BY_ID = Object.fromEntries(DOMAINS.map((domain) => [domain.id, domain]));
 
 /** Demos shown in the catalog, in the order the series walks them. Each PRP adds its own. */
-export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, closeBlockers, orderRisk, disputeRouting, merchantOnboarding, cardFraudTriage, amlAlertTriage, muleNetwork];
+export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, closeBlockers, orderRisk, disputeRouting, merchantOnboarding, cardFraudTriage, amlAlertTriage, muleNetwork, walletRisk];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
 export const ALL_DEMOS = [...DEMOS, example];

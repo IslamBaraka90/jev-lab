@@ -23,6 +23,7 @@ export const GENERATORS = {
   'card-fraud-triage': () => import('./card-fraud-triage.js'),
   'aml-alert-triage': () => import('./aml-alert-triage.js'),
   'mule-network': () => import('./mule-network.js'),
+  'wallet-risk': () => import('./wallet-risk.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
