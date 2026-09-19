@@ -195,6 +195,34 @@
     "code": "/** Accuracy against the intended account, and what automation costs at each confidence threshold. */\nfunction report(results, { labels = [], accounts = [] } = {}) {\n  const intended = new Map(labels.map((label) => [label.expenseId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const correct = (result) => intended.get(result.item.id).account === result.evaluation.account;\n  const auto = graded.filter((result) => result.evaluation.autoPost);\n\n  return {\n    note: `Graded against the account each expense was meant for. At ${Math.round(AUTO_THRESHOLD * 100)}% confidence, ${auto.length} of ${graded.length} post without a person.`,\n    findings: confusions(graded, intended, accounts),\n    kpis: headline(graded, auto, correct),\n    distribution: chosenAccounts(graded, accounts),\n    matrix: confusion(graded, intended, accounts),\n    curve: coverage(graded, intended),\n    checks: KINDS.map((kind) => difficulty(kind, graded, intended, correct)),\n    topItems: leastClear(graded),\n  };\n}",
     "language": "javascript"
   },
+  "demos/goal-screening/demo.js#demo:state": {
+    "path": "demos/goal-screening/demo.js",
+    "startLine": 20,
+    "endLine": 57,
+    "code": "/** One company's own numbers, and the goal it is being read against. Nothing about the others. */\nfunction buildState(item, context) {\n  return {\n    task: 'Read this company against the goal below and say how well it fits, what would disqualify it, and whether the statements are enough to tell.',\n    goal: item.goalBrief,\n    how_to_read_this: context.howToRead,\n    company: {\n      symbol: item.symbol,\n      sector: item.sector,\n      industry: item.industry,\n      years_of_statements_on_file: item.statementYears,\n    },\n    latest_year: {\n      revenue: item.revenue,\n      revenue_growth_percent_a_year: item.revenueGrowthPercent,\n      gross_margin_percent: item.grossMarginPercent,\n      operating_margin_percent: item.operatingMarginPercent,\n      net_margin_percent: item.netMarginPercent,\n      total_assets: item.totalAssets,\n      total_debt: item.totalDebt,\n      debt_to_assets_percent: item.debtToAssetsPercent,\n      cash: item.cash,\n      operating_cash_flow: item.operatingCashFlow,\n      free_cash_flow: item.freeCashFlow,\n      dividends_paid: item.dividendsPaid,\n    },\n    price_behaviour: {\n      price: item.price,\n      as_of: item.priceAsOf,\n      twelve_month_return_percent: item.twelveMonthReturnPercent,\n      three_year_return_percent: item.threeYearReturnPercent,\n      volatility_percent: item.volatilityPercent,\n      worst_fall_in_three_years_percent: item.worstFallPercent,\n      average_daily_volume: item.averageDailyVolume,\n    },\n    annual_statements: item.annualStatements,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/goal-screening/demo.js#demo:questions": {
+    "path": "demos/goal-screening/demo.js",
+    "startLine": 61,
+    "endLine": 84,
+    "code": "const questions = {\n  fit_to_goal: score('How well does this fit the goal as written?', [\n    'Unsuitable', 'Poor', 'Weak', 'Acceptable', 'Good', 'Very good', 'Ideal',\n  ]),\n  disqualifier: choice('What, if anything, rules it out for this goal?', {\n    LEVERAGE: 'It owes too much for what this goal can carry.',\n    LIQUIDITY: 'It cannot be sold quickly enough, or its cash position is too thin.',\n    EARNINGS_QUALITY: 'The profits do not arrive as cash, or do not arrive reliably.',\n    VALUATION: 'Whatever the business is, the price asks too much of it.',\n    VOLATILITY: 'It moves more than this goal can tolerate.',\n    NONE: 'Nothing rules it out.',\n  }),\n  shortlist: noul('Would you put it on the shortlist for this goal?', {\n    yes: 'It belongs in front of whoever wrote the brief.',\n    no: 'It does not belong on this list.',\n  }),\n  evidence_strength: score('How strong is the evidence for that reading?', [\n    'None', 'Very weak', 'Weak', 'Moderate', 'Strong', 'Very strong', 'Conclusive',\n  ]),\n  data_sufficient: noul('Are the statements on file enough to judge this?', {\n    yes: 'What is here answers the question the goal asks.',\n    no: 'Too much is missing to say either way.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/goal-screening/demo.js#demo:evaluate": {
+    "path": "demos/goal-screening/demo.js",
+    "startLine": 88,
+    "endLine": 101,
+    "code": "/** One reading of one company against one goal. */\nfunction evaluate(answers, item) {\n  return {\n    fit: answers.fit_to_goal.score,\n    disqualifier: answers.disqualifier.choice,\n    shortlisted: answers.shortlist.noul >= 0.5,\n    evidence: answers.evidence_strength.score,\n    dataSufficient: answers.data_sufficient.noul >= 0.5,\n    confidence: answers.disqualifier.confidence,\n    symbol: item.symbol,\n    goalId: item.goalId,\n    label: `${item.symbol} for \"${item.goalId}\" · fit ${answers.fit_to_goal.score.toFixed(1)}${answers.disqualifier.choice === 'NONE' ? '' : ` · ${readable(answers.disqualifier.choice)}`}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/goal-screening/demo.js#demo:report": {
+    "path": "demos/goal-screening/demo.js",
+    "startLine": 105,
+    "endLine": 123,
+    "code": "/** No labels anywhere: what is graded is consistency, and whether the reasons match the numbers. */\nfunction report(results, context = {}) {\n  const graded = results.filter((result) => result.evaluation);\n  const bySymbol = new Map();\n  for (const result of graded) {\n    bySymbol.set(result.item.symbol, [...(bySymbol.get(result.item.symbol) ?? []), result]);\n  }\n\n  return {\n    note: `Ninety-six readings: sixteen companies against six goals. ${context.note ?? ''}`,\n    findings: findings(graded, bySymbol),\n    kpis: kpis(graded, bySymbol),\n    distribution: distribution(graded),\n    matrix: goalMatrix(graded),\n    curve: coverage(graded),\n    checks: checks(graded),\n    topItems: topItems(graded),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/journal-vs-reality/demo.js#demo:state": {
     "path": "demos/journal-vs-reality/demo.js",
     "startLine": 19,
@@ -634,6 +662,13 @@
     "startLine": 142,
     "endLine": 161,
     "code": "/** One expense: a vendor, a date, an amount, a memo of varying usefulness, and how it was paid. */\nfunction expense(random, { vendor, memo, value, refund = false }) {\n  const date = random.day(PERIOD.from, PERIOD.to);\n  const method = random.weighted([['card', 72], ['direct debit', 16], ['bank transfer', 12]]);\n\n  return {\n    key: `${vendor}-${date}-${value}-${random.int(1000, 9999)}`,\n    id: null,\n    date,\n    vendor,\n    description: memo,\n    amount: refund ? round(-value) : round(value),\n    currency: 'AED',\n    paymentMethod: method,\n    card: method === 'card' ? `**** ${random.int(1000, 9999)}` : null,\n    reference: `TX-${random.int(100_000, 999_999)}`,\n    isRefund: refund,\n    priorPostings: [],\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/goal-screening.js#demo:data": {
+    "path": "scripts/generate/goal-screening.js",
+    "startLine": 91,
+    "endLine": 105,
+    "code": "/** One year of a real company's statements, exactly as the cached file has them. */\nfunction statementLine(year) {\n  return {\n    fiscalYearEnd: year.fiscalYearEnd,\n    revenue: year.revenue,\n    operatingIncome: year.operatingIncome,\n    netIncome: year.netIncome,\n    totalAssets: year.totalAssets,\n    totalDebt: year.totalDebt,\n    cash: year.cash,\n    operatingCashFlow: year.operatingCashFlow,\n    freeCashFlow: year.freeCashFlow,\n    dividendsPaid: year.dividendsPaid,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/journal-vs-reality.js#demo:data": {
