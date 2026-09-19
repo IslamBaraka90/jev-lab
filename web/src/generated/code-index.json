@@ -1,4 +1,32 @@
 {
+  "demos/accounting-flags/demo.js#demo:state": {
+    "path": "demos/accounting-flags/demo.js",
+    "startLine": 19,
+    "endLine": 34,
+    "code": "/** Three years as filed, the notes as written, and what normal looks like in this sector. */\nfunction buildState(item, context) {\n  const norms = context.sectorNorms.find((entry) => entry.id === item.sectorId);\n  return {\n    task: 'Read these three years and say which pattern, if any, deserves a second look before this year is signed off.',\n    company: { name: item.company, sector: item.sector, year_under_review: item.fiscalYearEnd },\n    amounts_in: `${context.currency}, ${context.unit}`,\n    statements: item.statements,\n    notes_to_the_accounts: item.notes,\n    auditor: item.auditor,\n    auditor_history: item.auditorHistory,\n    what_is_normal_for_this_sector: norms,\n    reviewing_standard: 'Most years are unremarkable and are signed off without comment. Hold one up only where the pattern is strong enough that somebody relying on these numbers would be misled.',\n    note: 'The notes are the only place a reason for something in the numbers will ever appear.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/accounting-flags/demo.js#demo:questions": {
+    "path": "demos/accounting-flags/demo.js",
+    "startLine": 38,
+    "endLine": 66,
+    "code": "const questions = {\n  flag: choice('What is the strongest pattern in these statements?', {\n    RECEIVABLES: 'Receivables are growing much faster than the revenue behind them.',\n    INVENTORY: 'Stock is building while sales fall.',\n    REVENUE_TIMING: 'Revenue is being recognised well ahead of the cash.',\n    CAPITALISED_COSTS: 'Costs that used to run through the profit and loss are suddenly on the balance sheet.',\n    RELATED_PARTY: 'A material share of revenue is with a party connected to the company.',\n    RESTATEMENT: 'An earlier year has been restated, or the auditor has changed.',\n    NONE: 'Nothing here needs a second look.',\n  }),\n  severity: score('How serious is it?', ['None', 'Slight', 'Mild', 'Notable', 'Serious', 'Severe', 'Critical']),\n  business_explanation_exists: noul('Do the notes explain the pattern?', {\n    yes: 'A note gives a business reason that accounts for what the numbers do.',\n    no: 'Nothing in the notes explains it.',\n  }),\n  second_flag: choice('Is there a second pattern underneath the first?', {\n    RECEIVABLES: 'Receivables are also running ahead of revenue.',\n    INVENTORY: 'Stock is also building against the sales trend.',\n    REVENUE_TIMING: 'The cash is also lagging the reported profit.',\n    CAPITALISED_COSTS: 'Capitalised costs have also jumped.',\n    RELATED_PARTY: 'There is also a connected-party concentration.',\n    RESTATEMENT: 'There is also a restatement or an auditor change.',\n    NONE: 'There is only the one.',\n  }),\n  investigate: noul('Should this year be held up for review before it is signed off?', {\n    yes: 'The pattern is strong enough that somebody relying on these numbers would be misled. Hold the sign-off.',\n    no: 'Worth noting, or nothing at all, but not worth holding up the accounts for.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/accounting-flags/demo.js#demo:evaluate": {
+    "path": "demos/accounting-flags/demo.js",
+    "startLine": 70,
+    "endLine": 82,
+    "code": "/** One company-year's reading: the pattern named, how serious, and whether the notes were believed. */\nfunction evaluate(answers, item) {\n  const flag = answers.flag.choice;\n  return {\n    flag,\n    severity: answers.severity.score,\n    explained: answers.business_explanation_exists.noul >= 0.5,\n    second: answers.second_flag.choice,\n    investigate: answers.investigate.noul >= 0.5,\n    confidence: answers.flag.confidence,\n    label: `${item.id} · ${item.company} · ${flag === 'NONE' ? 'nothing to see' : readable(flag)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/accounting-flags/demo.js#demo:report": {
+    "path": "demos/accounting-flags/demo.js",
+    "startLine": 86,
+    "endLine": 105,
+    "code": "/** Two scores kept apart: the patterns found, and the innocent ones let through. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.companyYearId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const planted = graded.filter((result) => byItem.get(result.item.id).flag !== 'NONE');\n  const clean = graded.filter((result) => byItem.get(result.item.id).flag === 'NONE');\n  const decoys = graded.filter((result) => byItem.get(result.item.id).decoy);\n\n  return {\n    note: `A hundred and twenty company-years. ${planted.length} carry a planted pattern, ${decoys.length} of those have an innocent explanation in the notes, and ${clean.length} are clean. ${context.note ?? ''}`,\n    findings: findings({ graded, planted, clean, decoys, byItem }),\n    kpis: kpis({ graded, planted, clean, decoys, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, planted),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/aml-alert-triage/demo.js#demo:state": {
     "path": "demos/aml-alert-triage/demo.js",
     "startLine": 22,
@@ -641,6 +669,13 @@
     "startLine": 82,
     "endLine": 102,
     "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/accounting-flags.js#demo:data": {
+    "path": "scripts/generate/accounting-flags.js",
+    "startLine": 101,
+    "endLine": 125,
+    "code": "/** One company-year: three years of statements, the notes filed with them, and who signed them off. */\nfunction companyYear(random, plan) {\n  // An inventory build cannot be planted on a business that holds no stock, so those sectors are out.\n  const holdsStock = (entry) => entry.dio >= 30;\n  const sector = random.pick([plan.flag, plan.second].includes('INVENTORY') ? SECTORS.filter(holdsStock) : SECTORS);\n  const shape = baseline(random, sector);\n  const wobble = [0, 1, 2].map(() => ordinaryYear(random));\n  const years = [0, 1, 2].map((offset) => statement(shape, wobble, offset, offset === 2 ? plan : {}));\n\n  return {\n    id: plan.id,\n    company: plan.name,\n    sector: sector.name,\n    sectorId: sector.id,\n    fiscalYearEnd: years[2].fiscalYearEnd,\n    yearsOnFile: years.length,\n    statements: years,\n    notes: disclosures(random, plan, years),\n    auditor: plan.flag === 'RESTATEMENT' && !plan.decoy ? random.pick(AUDITORS) : shape.auditor,\n    auditorHistory: plan.flag === 'RESTATEMENT' && !plan.decoy\n      ? [`${shape.auditor} signed the two earlier years`, 'a new firm was appointed for the year under review']\n      : [`${shape.auditor} has signed all three years`],\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/aml-alert-triage.js#demo:data": {
