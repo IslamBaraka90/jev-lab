@@ -127,7 +127,7 @@ const round = (value) => Math.round(value * 100) / 100;
 export default {
   id: 'trader-behaviour', title: 'Trader behaviour', domain: 'trades',
   value: 'Read a complete trading day and name the repeatable habit that is costing money.',
-  tags: ['trades', 'behaviour', 'coaching', 'sessions'], dataClass: 'synthetic', readMinutes: 4, view: 'sessionCurve', status: 'pending-recording',
+  tags: ['trades', 'behaviour', 'coaching', 'sessions'], dataClass: 'synthetic', readMinutes: 4, view: 'sessionCurve',
   itemLabel: (item) => `${item.date} · ${item.trades.length} trades · ${money(item.resultUsd)}`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), labels: () => import('../../data/synthetic/trader-behaviour.labels.json'),
   buildState, questions, evaluate, report,
