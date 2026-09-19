@@ -3,9 +3,11 @@
 A demo site and a backtest lab for TypeSafe's Jev model, built on the official JavaScript SDK,
 [`@typesafe-ai/sdk`](https://docs.typesafe.ai/sdk/javascript).
 
-- **Demos** put typed questions to Jev over real financial work: ledgers, orders, fraud, wallets, portfolios, trades,
-  filings and strategies. Each one shows the state that was sent, the answers that came back, and a report that grades
-  them. Specifications live in [`prps/`](prps/README.md).
+- **Demos** — fifty of them, across nine domains — put typed questions to Jev over real financial work: ledgers, orders,
+  fraud, wallets, portfolios, trades, filings and strategies. Each one shows the state that was sent, the answers that
+  came back, and a report that grades them against data where the right answer is known. Every demo folder carries a
+  `notes.md` saying what the recorded run actually found, including where it did badly. Specifications live in
+  [`prps/`](prps/README.md).
 - **The lab** backtests Jev's trade decisions on historical daily candles, replays every decision on a chart, and reports
   what the trades earned. It also keeps the support ticket example from the
   [quickstart](https://docs.typesafe.ai/introduction/quickstart).
@@ -23,6 +25,12 @@ calls the API before that.
 Data comes in two kinds, and every page says which it is: **cached real** market data in `data/market`, fetched once from
 Yahoo Finance with a manifest recording what and when, and **synthetic** data generated here from a fixed seed, with the
 planted problems kept in `data/synthetic/*.labels.json`, outside the demo folders, so they can never reach a state.
+
+## Keys
+
+There is no API key in this repository and there never has been. `.env` is ignored, `.env.example` carries names with
+empty values, and [`test/no-secrets.test.js`](test/no-secrets.test.js) fails the build if a tracked file ever contains
+anything shaped like a credential — or if the key on the machine running the tests turns up anywhere in the git history.
 
 ## Setup
 
