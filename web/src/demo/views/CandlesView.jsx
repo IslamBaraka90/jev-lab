@@ -85,6 +85,10 @@ function InsiderCandlesView({ item, result }) {
           </table>
         </div>
       </details>
+    </div>
+  );
+}
+
 // A trade or a fill drawn on the real chart, using the same candle chart the lab uses. A demo hands it
 // `item.chart = { candles, markIndex, trade }` and nothing else: the chart marks the plan and the exit
 // when the trade carries them, and the bars after the marked one are the ones the demo chose to show.
