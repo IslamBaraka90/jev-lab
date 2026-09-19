@@ -3,7 +3,7 @@
 Open items parked deliberately, so the demo series keeps moving. Each one says what is wrong, what it
 would cost to fix, and what the fix actually is. Nothing here blocks building the next demo.
 
-Last reviewed after demo 104's handover, with 101, 102 and 103 recorded.
+Last reviewed after demo 105, with 101 to 105 built and recorded.
 
 ---
 
@@ -86,9 +86,9 @@ One-line fix in `web/src/demo/widgets.jsx`, shared file, so it waits for a quiet
 
 ## 4. Watch items, not yet problems
 
-- **Progress against the plan.** 50 demos are specified; 101, 102 and 103 are recorded, 104 is handed
-  over, 105 is in build. `DOMAINS[].planned` in `demos/index.js` still claims the full 50, which is
-  correct as intent but should be re-checked when a domain finishes.
+- **Progress against the plan.** 50 demos are specified and five are done: 101 to 105 are built and
+  recorded, which finishes the books domain. `DOMAINS[].planned` in `demos/index.js` still claims the
+  full 50, which is right as intent, but the books count can now be checked against what shipped.
 - **The token estimate formula is settled; the handovers still carry the old one.** Estimating from the
   state alone needs a factor that swings from 3.07× (101) to 5.16× (105), because the questions are
   sent on every request and a small state makes them the bigger half. Counting both collapses it:
