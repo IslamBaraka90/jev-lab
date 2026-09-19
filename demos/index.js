@@ -27,6 +27,7 @@ import sybilClusters from './sybil-clusters/demo.js';
 import portfolioHealth from './portfolio-health/demo.js';
 import rebalanceReview from './rebalance-review/demo.js';
 import mandateCompliance from './mandate-compliance/demo.js';
+import portfolioCompare from './portfolio-compare/demo.js';
 import postTradeReview from './post-trade-review/demo.js';
 import executionQuality from './execution-quality/demo.js';
 import journalVsReality from './journal-vs-reality/demo.js';
@@ -73,6 +74,7 @@ export const DEMOS = [
   portfolioHealth,
   rebalanceReview,
   mandateCompliance,
+  portfolioCompare,
   postTradeReview,
   executionQuality,
   journalVsReality,

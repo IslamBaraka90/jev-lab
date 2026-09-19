@@ -37,6 +37,7 @@ export const GENERATORS = {
   'portfolio-health': () => import('./portfolio-health.js'),
   'rebalance-review': () => import('./rebalance-review.js'),
   'mandate-compliance': () => import('./mandate-compliance.js'),
+  'portfolio-compare': () => import('./portfolio-compare.js'),
   'post-trade-review': () => import('./post-trade-review.js'),
   'execution-quality': () => import('./execution-quality.js'),
   'journal-vs-reality': () => import('./journal-vs-reality.js'),

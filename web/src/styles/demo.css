@@ -555,6 +555,15 @@
   vertical-align: top;
 }
 
+.comparison-goal {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  background: var(--surface-raised);
+  line-height: 1.5;
+}
+
 /* The shared transfer graph: one account in the middle, its neighbourhood bright, the rest dim. */
 
 .transfer-graph {
