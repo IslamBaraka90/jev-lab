@@ -25,6 +25,7 @@ export const GENERATORS = {
   'delivery-exceptions': () => import('./delivery-exceptions.js'),
   'card-fraud-triage': () => import('./card-fraud-triage.js'),
   'account-takeover': () => import('./account-takeover.js'),
+  'aml-alert-triage': () => import('./aml-alert-triage.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

@@ -15,6 +15,7 @@ import merchantOnboarding from './merchant-onboarding/demo.js';
 import deliveryExceptions from './delivery-exceptions/demo.js';
 import cardFraudTriage from './card-fraud-triage/demo.js';
 import accountTakeover from './account-takeover/demo.js';
+import amlAlertTriage from './aml-alert-triage/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -45,6 +46,7 @@ export const DEMOS = [
   merchantOnboarding,
   deliveryExceptions,
   cardFraudTriage,
+  amlAlertTriage,
   accountTakeover,
 ];
 
