@@ -26,6 +26,7 @@ import goalScreening from './goal-screening/demo.js';
 import shariaScreen from './sharia-screen/demo.js';
 import accountingFlags from './accounting-flags/demo.js';
 import newsImpact from './news-impact/demo.js';
+import filingsRead from './filings-read/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -43,7 +44,7 @@ export const DOMAINS = [
 export const DOMAIN_BY_ID = Object.fromEntries(DOMAINS.map((domain) => [domain.id, domain]));
 
 /** Demos shown in the catalog, in the order the series walks them. Each PRP adds its own. */
-export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, closeBlockers, orderRisk, disputeRouting, merchantOnboarding, cardFraudTriage, amlAlertTriage, muleNetwork, walletRisk, mixerTracing, sybilClusters, portfolioHealth, rebalanceReview, mandateCompliance, postTradeReview, executionQuality, journalVsReality, goalScreening, shariaScreen, accountingFlags, newsImpact];
+export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, closeBlockers, orderRisk, disputeRouting, merchantOnboarding, cardFraudTriage, amlAlertTriage, muleNetwork, walletRisk, mixerTracing, sybilClusters, portfolioHealth, rebalanceReview, mandateCompliance, postTradeReview, executionQuality, journalVsReality, goalScreening, shariaScreen, accountingFlags, newsImpact, filingsRead];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
 export const ALL_DEMOS = [...DEMOS, example];

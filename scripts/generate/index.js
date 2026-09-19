@@ -36,6 +36,7 @@ export const GENERATORS = {
   'sharia-screen': () => import('./sharia-screen.js'),
   'accounting-flags': () => import('./accounting-flags.js'),
   'news-impact': () => import('./news-impact.js'),
+  'filings-read': () => import('./filings-read.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

@@ -1,0 +1,812 @@
+[
+  {
+    "documentId": "FD-0001",
+    "guidance": "MAINTAINED",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0002",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0003",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0004",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0005",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0006",
+    "guidance": "WITHDRAWN",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0007",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0008",
+    "guidance": "WITHDRAWN",
+    "toneShift": 1,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0009",
+    "guidance": "WITHDRAWN",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0010",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0011",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0012",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0013",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0014",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0015",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0016",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0017",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0018",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0019",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0020",
+    "guidance": "WITHDRAWN",
+    "toneShift": 1,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0021",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0022",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0023",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0024",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0025",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0026",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0027",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0028",
+    "guidance": "WITHDRAWN",
+    "toneShift": 1,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0029",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "SIGNIFICANT",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0030",
+    "guidance": "RAISED",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0031",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0032",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0033",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "ROUTINE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0034",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0035",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0036",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0037",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0038",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0039",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0040",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0041",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0042",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0043",
+    "guidance": "MAINTAINED",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0044",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0045",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0046",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0047",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0048",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "ROUTINE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0049",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0050",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0051",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0052",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0053",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "SIGNIFICANT",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0054",
+    "guidance": "WITHDRAWN",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0055",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0056",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "OBVIOUS",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0057",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0058",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0059",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0060",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0061",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0062",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0063",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0064",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0065",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0066",
+    "guidance": "MAINTAINED",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0067",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0068",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0069",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0070",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0071",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0072",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0073",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0074",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0075",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0076",
+    "guidance": "RAISED",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "SIGNIFICANT",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0077",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0078",
+    "guidance": "CUT",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0079",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0080",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0081",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0082",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0083",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0084",
+    "guidance": "MAINTAINED",
+    "toneShift": 2,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": true,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0085",
+    "guidance": "NOT_MENTIONED",
+    "toneShift": 3,
+    "newRisk": "BURIED",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RISKS"
+  },
+  {
+    "documentId": "FD-0086",
+    "guidance": "RAISED",
+    "toneShift": 5,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0087",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0088",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "CALL"
+  },
+  {
+    "documentId": "FD-0089",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  },
+  {
+    "documentId": "FD-0090",
+    "guidance": "MAINTAINED",
+    "toneShift": 3,
+    "newRisk": "NONE",
+    "insider": "NONE",
+    "beatButWorse": false,
+    "kind": "RESULTS"
+  }
+]

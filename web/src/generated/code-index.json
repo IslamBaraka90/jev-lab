@@ -223,6 +223,34 @@
     "code": "/** Accuracy against the intended account, and what automation costs at each confidence threshold. */\nfunction report(results, { labels = [], accounts = [] } = {}) {\n  const intended = new Map(labels.map((label) => [label.expenseId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const correct = (result) => intended.get(result.item.id).account === result.evaluation.account;\n  const auto = graded.filter((result) => result.evaluation.autoPost);\n\n  return {\n    note: `Graded against the account each expense was meant for. At ${Math.round(AUTO_THRESHOLD * 100)}% confidence, ${auto.length} of ${graded.length} post without a person.`,\n    findings: confusions(graded, intended, accounts),\n    kpis: headline(graded, auto, correct),\n    distribution: chosenAccounts(graded, accounts),\n    matrix: confusion(graded, intended, accounts),\n    curve: coverage(graded, intended),\n    checks: KINDS.map((kind) => difficulty(kind, graded, intended, correct)),\n    topItems: leastClear(graded),\n  };\n}",
     "language": "javascript"
   },
+  "demos/filings-read/demo.js#demo:state": {
+    "path": "demos/filings-read/demo.js",
+    "startLine": 19,
+    "endLine": 32,
+    "code": "/** The document as filed, and the period before it where there is one. Nothing summarised. */\nfunction buildState(item, context) {\n  return {\n    task: 'Read this document and say what it changes: the guidance, the tone against the numbers, any risk that was not there last time, and anything disclosed in passing.',\n    company: { ticker: item.ticker, name: item.company, sector: item.sector },\n    document_kind: context.documentKinds[item.kind],\n    published_on: item.publishedOn,\n    period: item.quarter,\n    title: item.title,\n    document: item.text,\n    the_period_before: item.priorPeriod,\n    note: 'Everything here is invented. Read it as you would read the real thing.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/filings-read/demo.js#demo:questions": {
+    "path": "demos/filings-read/demo.js",
+    "startLine": 36,
+    "endLine": 59,
+    "code": "const questions = {\n  guidance_change: choice('What happened to guidance in this document?', {\n    RAISED: 'The outlook was moved up.',\n    MAINTAINED: 'The outlook was repeated unchanged.',\n    CUT: 'The outlook was moved down.',\n    WITHDRAWN: 'The outlook was taken away and not replaced.',\n    NOT_MENTIONED: 'Guidance is not addressed in this document at all.',\n  }),\n  tone_shift: score('How has the tone moved since the period before?', [\n    'Much worse', 'Worse', 'Slightly worse', 'Unchanged', 'Slightly better', 'Better', 'Much better',\n  ]),\n  new_risk_factor: noul('Is there a risk here that was not there last time?', {\n    yes: 'Something in this document is not in the previous period’s list.',\n    no: 'Everything here has been disclosed before.',\n  }),\n  insider_transaction_significant: noul('Is there an insider transaction worth noticing?', {\n    yes: 'Somebody inside the company bought or sold, and the size or the timing of it matters.',\n    no: 'Either there is none, or it is the routine kind that tells you nothing.',\n  }),\n  numbers_and_tone_agree: noul('Do the numbers and the language point the same way?', {\n    yes: 'What the figures say and what the management says are the same story.',\n    no: 'One of them is better than the other, and the gap is the point.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/filings-read/demo.js#demo:evaluate": {
+    "path": "demos/filings-read/demo.js",
+    "startLine": 63,
+    "endLine": 75,
+    "code": "/** One read of one document, before any label is in the room. */\nfunction evaluate(answers, item) {\n  return {\n    guidance: answers.guidance_change.choice,\n    tone: answers.tone_shift.score,\n    newRisk: answers.new_risk_factor.noul >= 0.5,\n    insider: answers.insider_transaction_significant.noul >= 0.5,\n    insiderStrength: answers.insider_transaction_significant.noul,\n    agree: answers.numbers_and_tone_agree.noul >= 0.5,\n    confidence: answers.guidance_change.confidence,\n    label: `${item.id} · ${item.ticker} · ${item.title} · guidance ${readable(answers.guidance_change.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/filings-read/demo.js#demo:report": {
+    "path": "demos/filings-read/demo.js",
+    "startLine": 79,
+    "endLine": 96,
+    "code": "/** Guidance, tone, the buried risks and the five passing mentions, each scored on its own terms. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.documentId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const of = (field, value) => graded.filter((result) => byItem.get(result.item.id)[field] === value);\n\n  return {\n    note: `Ninety invented documents: thirty results releases, thirty risk sections and thirty call excerpts. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, of),\n    kpis: kpis(graded, byItem, of),\n    distribution: distribution(graded),\n    matrix: guidanceMatrix(graded, byItem),\n    curve: coverage(graded, byItem),\n    checks: checks(graded, byItem, of, labels),\n    topItems: topItems(graded, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/goal-screening/demo.js#demo:state": {
     "path": "demos/goal-screening/demo.js",
     "startLine": 20,
@@ -753,6 +781,13 @@
     "startLine": 142,
     "endLine": 161,
     "code": "/** One expense: a vendor, a date, an amount, a memo of varying usefulness, and how it was paid. */\nfunction expense(random, { vendor, memo, value, refund = false }) {\n  const date = random.day(PERIOD.from, PERIOD.to);\n  const method = random.weighted([['card', 72], ['direct debit', 16], ['bank transfer', 12]]);\n\n  return {\n    key: `${vendor}-${date}-${value}-${random.int(1000, 9999)}`,\n    id: null,\n    date,\n    vendor,\n    description: memo,\n    amount: refund ? round(-value) : round(value),\n    currency: 'AED',\n    paymentMethod: method,\n    card: method === 'card' ? `**** ${random.int(1000, 9999)}` : null,\n    reference: `TX-${random.int(100_000, 999_999)}`,\n    isRefund: refund,\n    priorPostings: [],\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/filings-read.js#demo:data": {
+    "path": "scripts/generate/filings-read.js",
+    "startLine": 107,
+    "endLine": 134,
+    "code": "/** One document, the period before it where that makes sense, and the label kept out of both. */\nfunction document(random, plan) {\n  const written = plan.kind === 'RESULTS' ? release(random, plan) : plan.kind === 'RISKS' ? risks(random, plan) : call(random, plan);\n\n  return {\n    item: {\n      id: plan.id,\n      ticker: plan.company.ticker,\n      company: plan.company.name,\n      sector: plan.company.sector,\n      kind: plan.kind,\n      quarter: plan.quarter,\n      publishedOn: written.date,\n      title: written.title,\n      text: written.text,\n      priorPeriod: written.prior ?? null,\n      words: written.text.split(/\\s+/).length,\n    },\n    label: {\n      guidance: plan.guidance,\n      toneShift: plan.tone,\n      newRisk: plan.newRisk ?? 'NONE',\n      insider: plan.insider ?? 'NONE',\n      beatButWorse: Boolean(plan.beatButWorse),\n      kind: plan.kind,\n    },\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/goal-screening.js#demo:data": {
