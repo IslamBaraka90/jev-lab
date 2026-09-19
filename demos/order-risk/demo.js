@@ -121,7 +121,7 @@ function report(results, context = {}) {
   return {
     note: `Three hundred orders, ${labels.filter((label) => label.fraud).length} of them fraud and ${labels.filter((label) => label.kind === 'decoy').length} good orders built to look worse than the fraud. ${context.fraudRateNote ?? ''}`,
     findings: findings(graded, byItem, good),
-    kpis: kpis({ fraud, stopped, named, falseDeclines, good, graded }),
+    kpis: kpis({ fraud, stopped, named, falseDeclines, good, graded, byItem }),
     distribution: distribution(results),
     matrix: confusion(graded, byItem),
     curve: coverage(graded, byItem, fraud),
@@ -131,15 +131,17 @@ function report(results, context = {}) {
 }
 // #endregion
 
-function kpis({ fraud, stopped, named, falseDeclines, good, graded }) {
+function kpis({ fraud, stopped, named, falseDeclines, good, graded, byItem }) {
   const reviewed = graded.filter((result) => result.evaluation.reviewed);
   const approved = graded.filter((result) => !result.evaluation.stopped);
+  const missedFraud = approved.filter((result) => byItem.get(result.item.id).fraud);
+  const reviewedGood = reviewed.filter((result) => !byItem.get(result.item.id).fraud);
   return [
     { label: 'Fraud stopped', value: `${stopped.length} of ${fraud.length}`, context: `declined or held for a person · ${money(sum(stopped))} of ${money(sum(fraud))}`, tone: stopped.length === fraud.length ? 'good' : 'warn' },
     { label: 'Pattern named right', value: `${named.length} of ${fraud.length}`, context: 'the reason attached to the order' },
     { label: 'Good orders declined', value: falseDeclines.length, context: `${money(sum(falseDeclines))} of basket value turned away`, tone: falseDeclines.length ? 'warn' : 'good' },
-    { label: 'Sent to a person', value: `${reviewed.length}`, context: `${share(reviewed.length, graded.length)} of the week · about twenty a day is the team's limit` },
-    { label: 'Approved value', value: money(sum(approved)), context: `${approved.length} orders through without a person, ${good.length - falseDeclines.length - reviewed.filter((result) => !result.evaluation.declined).length} of them good` },
+    { label: 'Sent to a person', value: `${reviewed.length}`, context: `${Math.round(reviewed.length / 7)} a day against a limit of about twenty · ${reviewedGood.length} of them did not need it`, tone: reviewed.length / 7 > 20 ? 'warn' : 'good' },
+    { label: 'Approved value', value: money(sum(approved)), context: `${approved.length} orders through without a person${missedFraud.length ? `, ${missedFraud.length} of them fraud worth ${money(sum(missedFraud))}` : ', none of them fraud'}`, tone: missedFraud.length ? 'warn' : 'good' },
   ];
 }
 
@@ -240,7 +242,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${money(item.total)} · ${item.itemCount} item${item.itemCount === 1 ? '' : 's'}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
