@@ -31,10 +31,12 @@ test('every generator is deterministic and produces a valid dataset with labels'
     assert.equal(JSON.stringify(first), JSON.stringify(second), `${slug} is not deterministic`);
 
     if (first.labels) {
+      // A label points at its item through a field whose name ends in Id: lineId, expenseId,
+      // statementLineId. Whatever a demo calls it, it has to name an item that exists.
       const ids = new Set(first.dataset.items.map((item) => item.id));
       for (const label of first.labels) {
-        const id = label.lineId ?? label.id ?? label.itemId;
-        assert.ok(ids.has(id), `${slug} labels point at ${id}, which is not in the dataset`);
+        const pointers = Object.entries(label).filter(([key, value]) => /Id$/.test(key) && typeof value === 'string' && ids.has(value));
+        assert.ok(pointers.length > 0, `${slug} label ${JSON.stringify(label).slice(0, 80)} names no item in the dataset`);
       }
     }
   }

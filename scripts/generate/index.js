@@ -13,6 +13,7 @@ import { assertDataset, demoDataFile, labelsFile, repoRoot } from '../../src/ser
 export const GENERATORS = {
   __example__: () => import('./example.js'),
   'ledger-integrity': () => import('./ledger-integrity.js'),
+  'expense-posting': () => import('./expense-posting.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
