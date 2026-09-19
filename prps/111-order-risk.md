@@ -17,7 +17,7 @@ Approve, review or decline a checkout in one call, with the reason attached to t
 
 - `demos/order-risk/data.json` — 300 orders from an electronics and fashion store. Each: basket lines, totals, currency, customer tenure, prior order count, chargeback history, device fingerprint id, IP country, billing and shipping countries, address-match flags, card mask, BIN country, hour of day, checkout duration, coupon use.
 - Planted: 9 fraudulent orders (0.5% would be too few to show) across four patterns — card testing with small baskets, reshipper address, account takeover with a changed address, and first-time high-value with mismatched countries. Plus 12 legitimate orders that look terrible: a genuine gift shipment abroad, a returning customer on a new device, a big-ticket first order from a corporate buyer.
-- Labels: `{ orderId, fraud: true|false, pattern }`.
+- Labels: `{ orderId, fraud, pattern, kind, look }`. `kind` is `fraud` / `decoy` / `ordinary`, and `look` names which sort of good-order-that-looks-bad a decoy is, so the report and the notes can group them.
 
 ## State
 
@@ -48,6 +48,7 @@ Template list, plus:
 - [ ] False declines are reported in money as well as count.
 - [ ] Every planted pattern appears at least twice in the dataset.
 - [ ] The decoys are listed in `notes.md` with why they look risky.
+- [ ] Ordinary orders carry the same signals as the fraud — chargebacks, foreign shipping, new devices, changed accounts — so no single field separates them, and a test asserts it.
 
 ## Video beats
 
