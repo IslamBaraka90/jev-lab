@@ -335,6 +335,34 @@
     "code": "/** Grades the run against the planted problems: caught, missed, false alarms, and the review workload. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label]));\n  const problems = [...new Set(labels.map((label) => label.problemId))];\n  const found = (result) => planted.get(result.item.id)?.issue === result.evaluation.issue;\n\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = new Set(flagged.filter(found).map((result) => planted.get(result.item.id).problemId));\n  const falseAlarms = flagged.filter((result) => !planted.has(result.item.id));\n  const missed = labels.filter((label) => !caught.has(label.problemId) && results.some((result) => result.item.id === label.lineId));\n\n  return {\n    note: `Graded against ${problems.length} problems planted in ${labels.length} lines. The model never sees them.`,\n    findings: cluster(falseAlarms),\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Problems caught', value: `${caught.size} of ${problems.length}`, tone: caught.size === problems.length ? 'good' : 'warn' },\n      { label: 'Lines flagged', value: flagged.length, context: `${falseAlarms.length} with nothing planted` },\n      { label: 'Sent to a person', value: results.filter((result) => result.evaluation.forReview).length, context: `at ${Math.round(REVIEW_THRESHOLD * 100)}% and above` },\n    ],\n    distribution: countIssues(results),\n    matrix: confusion(results, planted),\n    curve: coverage(results, planted, problems.length),\n    checks: [\n      { id: 'missed', label: 'Planted problems the model did not name', detail: 'Graded on the issue type, not just on flagging the line.', count: new Set(missed.map((label) => label.problemId)).size, of: problems.length, items: missed.map((label) => label.lineId) },\n      { id: 'false-alarms', label: 'Clean lines flagged as problems', detail: 'Each one costs a person time at month end.', count: falseAlarms.length, of: results.length - labels.length, items: falseAlarms.map((result) => result.item.id) },\n    ],\n    topItems: [...flagged]\n      .sort((a, b) => b.evaluation.severity - a.evaluation.severity)\n      .slice(0, 10)\n      .map((result) => ({ id: result.item.id, label: `${result.evaluation.label}${planted.has(result.item.id) ? ' · planted' : ''}`, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
     "language": "javascript"
   },
+  "demos/mandate-compliance/demo.js#demo:state": {
+    "path": "demos/mandate-compliance/demo.js",
+    "startLine": 19,
+    "endLine": 45,
+    "code": "/** One rule, one portfolio, one number, and the definitions that decide what the number means. */\nfunction buildState(item, context) {\n  return {\n    task: 'Decide whether this portfolio breaches this rule on this date, and say what kind of breach it is.',\n    policy: {\n      manager: context.manager,\n      measurement_date: context.measurementDate,\n      definitions: context.definitions,\n      note: context.note,\n    },\n    portfolio: { id: item.portfolioId, name: item.portfolioName, mandate: item.mandate },\n    rule: {\n      reference: item.ruleId,\n      as_written: item.rule,\n      limit: item.limit,\n      limit_unit: item.limitUnit,\n      the_limit_is_a_minimum: item.limitIsAFloor,\n      tolerance: item.tolerance,\n      what_is_measured: item.whatIsMeasured,\n    },\n    measurement: {\n      value: item.measuredValue,\n      unit: item.limitUnit,\n      note: item.measurementNote,\n    },\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/mandate-compliance/demo.js#demo:questions": {
+    "path": "demos/mandate-compliance/demo.js",
+    "startLine": 49,
+    "endLine": 70,
+    "code": "const questions = {\n  breach: noul('Does this portfolio breach this rule on the measurement date?', {\n    yes: 'The number is on the wrong side of the limit, beyond any tolerance the rule allows.',\n    no: 'The rule is met, or the difference is inside the tolerance the policy itself gives.',\n  }),\n  breach_kind: choice('What kind of rule is at issue?', {\n    SINGLE_NAME: 'A limit on how much may sit in one issuer.',\n    SECTOR: 'A limit on a sector, a country or a market.',\n    CREDIT_QUALITY: 'A limit on credit rating or on how much may be rated below something.',\n    LIQUIDITY: 'A limit on cash, on sellability, or on how much of an instrument is held.',\n    LEVERAGE: 'A limit on gross exposure, borrowing or derivatives.',\n    PROHIBITED: 'A rule that forbids something outright.',\n    NONE: 'Nothing is at issue: the rule is met with room to spare.',\n  }),\n  severity: score('If it is a breach, how serious is it?', [\n    'None', 'Technical', 'Minor', 'Notable', 'Material', 'Serious', 'Critical',\n  ]),\n  interpretation_dependent: noul('Does the answer depend on how the rule is read?', {\n    yes: 'Two careful people reading this policy could reach different answers on this check.',\n    no: 'The rule and the number decide it between them.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/mandate-compliance/demo.js#demo:evaluate": {
+    "path": "demos/mandate-compliance/demo.js",
+    "startLine": 74,
+    "endLine": 87,
+    "code": "/** One line of the compliance report: breached or not, what kind, and how much it matters. */\nfunction evaluate(answers, item) {\n  const breach = answers.breach.noul >= 0.5;\n\n  return {\n    breach,\n    kind: answers.breach_kind.choice,\n    severity: answers.severity.score,\n    interpretation: answers.interpretation_dependent.noul >= 0.5,\n    confidence: answers.breach.noul >= 0.5 ? answers.breach.noul : 1 - answers.breach.noul,\n    distanceFromLimit: Math.round((item.measuredValue - item.limit) * 100) / 100,\n    label: `${item.id} · ${breach ? 'breach' : 'met'} · ${item.whatIsMeasured} ${item.measuredValue}${item.limitUnit === '%' ? '%' : ` ${item.limitUnit}`} against ${item.limit}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/mandate-compliance/demo.js#demo:report": {
+    "path": "demos/mandate-compliance/demo.js",
+    "startLine": 91,
+    "endLine": 110,
+    "code": "/** Breaches, near misses and the eight that depend on a reading, each counted on its own. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.checkId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const breaches = graded.filter((result) => byItem.get(result.item.id).breach);\n  const caught = breaches.filter((result) => result.evaluation.breach);\n  const clean = graded.filter((result) => !byItem.get(result.item.id).breach);\n\n  return {\n    note: `Two hundred and forty checks: ${breaches.length} breaches, ${labels.filter((label) => label.kind === 'near miss').length} inside tolerance, and ${labels.filter((label) => label.kind === 'depends how you read it').length} that turn on how the rule is read. ${context.note ?? ''}`,\n    findings: findings(graded, byItem),\n    kpis: kpis({ graded, breaches, caught, clean, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, breaches),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/merchant-onboarding/demo.js#demo:state": {
     "path": "demos/merchant-onboarding/demo.js",
     "startLine": 26,
@@ -753,6 +781,13 @@
     "startLine": 80,
     "endLine": 108,
     "code": "/** One posting: a document of two or three lines that balances, in the period, entered by a clerk. */\nfunction document(state, { date, memo, lines }) {\n  const { random } = state;\n  const id = `DOC-${String(++state.documents).padStart(4, '0')}`;\n  const postedAt = random.timeOnDay(nextWorkday(date));\n  const postedBy = random.pick(state.clerks);\n\n  for (const [index, line] of lines.entries()) {\n    state.lines.push({\n      key: `${id}-${index + 1}`,\n      id: `${id}-${index + 1}`,\n      documentId: id,\n      date,\n      account: line.code,\n      accountName: account(line.code).name,\n      accountType: account(line.code).type,\n      normalBalance: account(line.code).normalBalance,\n      debit: round(line.debit ?? 0),\n      credit: round(line.credit ?? 0),\n      currency: CURRENCY,\n      memo: line.memo ?? memo,\n      counterparty: line.counterparty ?? null,\n      reference: `${id}/${index + 1}`,\n      postedBy,\n      postedAt,\n    });\n  }\n  return id;\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/mandate-compliance.js#demo:data": {
+    "path": "scripts/generate/mandate-compliance.js",
+    "startLine": 103,
+    "endLine": 122,
+    "code": "/** One check: one rule, one portfolio, and the numbers that rule asks about. */\nfunction check(random, { portfolio, rule, kind }) {\n  const { measured, note } = measurement(random, rule, kind);\n  return {\n    id: `${portfolio.id}-${rule.id}`,\n    portfolioId: portfolio.id,\n    portfolioName: portfolio.name,\n    mandate: portfolio.mandate,\n    ruleId: rule.id,\n    ruleKind: rule.kind,\n    rule: rule.text,\n    limit: rule.limit,\n    limitUnit: rule.unit,\n    limitIsAFloor: Boolean(rule.floor),\n    tolerance: rule.tolerance,\n    whatIsMeasured: rule.measure,\n    measuredValue: measured,\n    measurementNote: note,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/merchant-onboarding.js#demo:data": {

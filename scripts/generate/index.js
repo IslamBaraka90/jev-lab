@@ -35,6 +35,7 @@ export const GENERATORS = {
   'sybil-clusters': () => import('./sybil-clusters.js'),
   'portfolio-health': () => import('./portfolio-health.js'),
   'rebalance-review': () => import('./rebalance-review.js'),
+  'mandate-compliance': () => import('./mandate-compliance.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
