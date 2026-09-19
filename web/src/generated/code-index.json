@@ -27,6 +27,34 @@
     "code": "/** Grades matching and break reasons, then turns the quality bar into automation and workload. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const labelByItem = new Map(labels.map((label) => [label.statementLineId, label]));\n  const problems = groupProblems(labels);\n  const correct = results.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const cleared = results.filter((result) => result.evaluation.autoCleared);\n  const gradedClears = cleared.filter((result) => labelByItem.has(result.item.id));\n  const preciseClears = gradedClears.filter((result) => agrees(result, labelByItem.get(result.item.id)));\n  const remaining = context.items.filter((item) => !cleared.some((result) => result.item.id === item.id));\n  const reconciliation = reconcile(context, cleared, remaining);\n\n  return {\n    note: `Graded against ${problems.size} planted reconciliation problems. Labels never enter the model state.`,\n    findings: clusterDisagreements(results, labelByItem),\n    kpis: kpis(results, cleared, gradedClears, preciseClears, remaining, context.currency),\n    distribution: distribution(results),\n    matrix: confusion(results, labelByItem),\n    curve: coverage(results, labelByItem, labels),\n    checks: checks(results, labels, problems, labelByItem, reconciliation),\n    topItems: topItems(results, labelByItem, context.currency),\n    reconciliation,\n    resolvedProblems: resolvedProblemCount(correct, problems),\n  };\n}",
     "language": "javascript"
   },
+  "demos/close-blockers/demo.js#demo:state": {
+    "path": "demos/close-blockers/demo.js",
+    "startLine": 24,
+    "endLine": 51,
+    "code": "/** One account as the close pack shows it: the numbers, the status, the note, and the calendar. */\nfunction buildState(item, context) {\n  return {\n    task: 'Decide whether this account blocks the month-end close, what kind of problem it is, and which team has to clear it.',\n    close: {\n      entity: context.entity,\n      period: context.period,\n      currency: context.currency,\n      working_day: context.workingDay,\n      deadline_working_day: context.deadlineWorkingDay,\n      materiality: context.materiality,\n      group_companies: context.subsidiaries,\n    },\n    comparison: context.comparison,\n    account: {\n      code: item.account,\n      name: item.name,\n      category: item.category,\n      balance: item.balance,\n      prior_balance: item.priorBalance,\n      movement: item.movement,\n      expected_movement: { low: item.expectedMovementLow, high: item.expectedMovementHigh },\n      reconciliation: item.reconciliation,\n      open_items: item.openItems,\n      preparer_note: item.preparerNote || '(the preparer left no note)',\n    },\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/close-blockers/demo.js#demo:questions": {
+    "path": "demos/close-blockers/demo.js",
+    "startLine": 55,
+    "endLine": 78,
+    "code": "const questions = {\n  blocker_type: choice('What is stopping this account from being closed?', {\n    UNRECONCILED: 'The account has not been reconciled, or the reconciliation does not agree.',\n    MISSING_ACCRUAL: 'Goods or services were received in the period with nothing booked for them.',\n    INTERCOMPANY: 'The balance does not agree with the matching balance in a group company.',\n    FX_REVALUATION: 'A foreign currency balance has not been revalued at the period-end rate.',\n    UNSUPPORTED_JOURNAL: 'A manual entry sits in the account with no approval or backup behind it.',\n    NONE: 'Nothing here stops the close, however unusual the movement looks.',\n  }),\n  blocks_close: noul('Does this account have to be worked on before the books can be closed?', {\n    yes: 'The close cannot be signed off while this account is in this state.',\n    no: 'The account is ready, or its difference is explained, supported and immaterial.',\n  }),\n  severity: score('How serious is this account for the close?', [\n    'None', 'Cosmetic', 'Minor', 'Notable', 'Material', 'Serious', 'Critical',\n  ]),\n  owner: choice('Which team has to clear this account?', {\n    AP: 'Accounts payable: supplier invoices, goods received not invoiced, expense accruals, card statements.',\n    AR: 'Accounts receivable: customer balances, cash application, credit notes, accrued and deferred revenue.',\n    TREASURY: 'Treasury: bank and cash, loans, foreign exchange and revaluation, intercompany balances.',\n    TAX: 'Tax: VAT, payroll taxes, corporation tax and withholding.',\n    CONTROLLER: 'Financial control: manual journals, provisions, payroll and inventory accounting, anything unsupported.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/close-blockers/demo.js#demo:evaluate": {
+    "path": "demos/close-blockers/demo.js",
+    "startLine": 82,
+    "endLine": 102,
+    "code": "/** Turns four answers into the line this account gets on the close board. */\nfunction evaluate(answers, item, context) {\n  const blocker = answers.blocker_type.choice;\n  const probability = answers.blocks_close.noul;\n  const blocks = probability >= BLOCK_PROBABILITY;\n  const owner = answers.owner.choice;\n\n  return {\n    blocker,\n    blocks,\n    owner,\n    severity: answers.severity.score,\n    probability,\n    confidence: answers.blocker_type.confidence,\n    outsideExpected: item.movement > item.expectedMovementHigh || item.movement < item.expectedMovementLow,\n    material: Math.abs(item.movement) >= (context.materiality ?? 0),\n    label: blocks\n      ? `${item.account} ${item.name} · ${readable(blocker)} · ${owner}`\n      : `${item.account} ${item.name} · cleared`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/close-blockers/demo.js#demo:report": {
+    "path": "demos/close-blockers/demo.js",
+    "startLine": 106,
+    "endLine": 127,
+    "code": "/** Grades the board against what was planted: what blocks, what was left alone, and who owns it. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.accountId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const planted = labels.filter((label) => label.kind === 'blocker');\n  const decoys = labels.filter((label) => label.kind === 'decoy');\n  const caught = graded.filter((result) => named(result, byItem.get(result.item.id)) && result.evaluation.blocks);\n  const cleared = results.filter((result) => !result.evaluation.blocks);\n  const missed = cleared.filter((result) => byItem.get(result.item.id)?.kind === 'blocker');\n\n  return {\n    note: `Sixty accounts on working day four: ${planted.length} of them genuinely block the close and ${decoys.length} only look as if they do. ${severityGap(graded, byItem)} Labels never enter the model state.`,\n    findings: findings(graded, byItem, decoys),\n    kpis: kpis({ graded, caught, planted, decoys, cleared, missed, byItem, total: results.length }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, planted),\n    checks: checks(graded, byItem, planted, decoys),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/expense-posting/demo.js#demo:state": {
     "path": "demos/expense-posting/demo.js",
     "startLine": 10,
@@ -144,6 +172,13 @@
     "startLine": 116,
     "endLine": 124,
     "code": "/** The deterministic short-list: same direction first, then relative amount gap, date gap, and id. */\nfunction rankCandidates(statement, ledgerEntries) {\n  const score = (entry) => {\n    const directionPenalty = entry.direction === statement.direction ? 0 : 10;\n    const amountGap = Math.abs(entry.amount - statement.amount) / Math.max(entry.amount, statement.amount, 1);\n    return directionPenalty + amountGap * 2 + daysApart(entry.date, statement.date) * 0.08;\n  };\n  return [...ledgerEntries].sort((left, right) => score(left) - score(right) || left.id.localeCompare(right.id));\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/close-blockers.js#demo:data": {
+    "path": "scripts/generate/close-blockers.js",
+    "startLine": 185,
+    "endLine": 212,
+    "code": "/** One trial balance line: where it sits, how it moved, and what the preparer wrote about it. */\nfunction trialBalanceLine(random, account, plan) {\n  const prior = round(account.base * random.float(0.94, 1.06, 4));\n  const expected = expectedRange(account);\n  const movement = movementFor(random, expected, plan?.swing ?? 'none', prior);\n  const openItems = plan?.openItems ?? (random.bool(0.12) ? random.int(1, 4) : 0);\n\n  return {\n    id: `TB-${account.code}`,\n    account: account.code,\n    name: account.name,\n    category: account.category,\n    balance: round(prior + movement),\n    priorBalance: prior,\n    movement,\n    expectedMovementLow: expected.low,\n    expectedMovementHigh: expected.high,\n    reconciliation: reconciliationStatus(random, plan, openItems),\n    openItems,\n    preparerNote: plan?.note ?? random.pick(CLEAN_NOTES),\n  };\n}\n\n/** How much this account normally moves in a month, as a band around zero. */\nfunction expectedRange(account) {\n  const size = Math.max(4_000, Math.round((Math.abs(account.base) * 0.08) / 1_000) * 1_000);\n  return { low: -size, high: size };\n}",
     "language": "javascript"
   },
   "scripts/generate/expense-posting.js#demo:data": {

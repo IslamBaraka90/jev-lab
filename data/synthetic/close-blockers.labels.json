@@ -1,0 +1,428 @@
+[
+  {
+    "accountId": "TB-1000",
+    "account": "1000",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1010",
+    "account": "1010",
+    "blocker": "FX_REVALUATION",
+    "expectedOwner": "TREASURY",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-1020",
+    "account": "1020",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1030",
+    "account": "1030",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1100",
+    "account": "1100",
+    "blocker": "UNRECONCILED",
+    "expectedOwner": "AR",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-1110",
+    "account": "1110",
+    "blocker": "NONE",
+    "expectedOwner": "AR",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1120",
+    "account": "1120",
+    "blocker": "NONE",
+    "expectedOwner": "AR",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1200",
+    "account": "1200",
+    "blocker": "FX_REVALUATION",
+    "expectedOwner": "TREASURY",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-1210",
+    "account": "1210",
+    "blocker": "NONE",
+    "expectedOwner": "AR",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1300",
+    "account": "1300",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "decoy",
+    "note": "Looks alarming, is fully supported"
+  },
+  {
+    "accountId": "TB-1310",
+    "account": "1310",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "decoy",
+    "note": "Looks alarming, is fully supported"
+  },
+  {
+    "accountId": "TB-1320",
+    "account": "1320",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1330",
+    "account": "1330",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1400",
+    "account": "1400",
+    "blocker": "UNSUPPORTED_JOURNAL",
+    "expectedOwner": "CONTROLLER",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-1410",
+    "account": "1410",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1420",
+    "account": "1420",
+    "blocker": "NONE",
+    "expectedOwner": "AP",
+    "kind": "decoy",
+    "note": "Looks alarming, is fully supported"
+  },
+  {
+    "accountId": "TB-1430",
+    "account": "1430",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1500",
+    "account": "1500",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1510",
+    "account": "1510",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1520",
+    "account": "1520",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1600",
+    "account": "1600",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1610",
+    "account": "1610",
+    "blocker": "INTERCOMPANY",
+    "expectedOwner": "TREASURY",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-1620",
+    "account": "1620",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1700",
+    "account": "1700",
+    "blocker": "NONE",
+    "expectedOwner": "TAX",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1710",
+    "account": "1710",
+    "blocker": "NONE",
+    "expectedOwner": "TAX",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-1800",
+    "account": "1800",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2000",
+    "account": "2000",
+    "blocker": "NONE",
+    "expectedOwner": "AP",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2010",
+    "account": "2010",
+    "blocker": "NONE",
+    "expectedOwner": "AP",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2020",
+    "account": "2020",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2100",
+    "account": "2100",
+    "blocker": "NONE",
+    "expectedOwner": "AP",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2110",
+    "account": "2110",
+    "blocker": "NONE",
+    "expectedOwner": "AP",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2120",
+    "account": "2120",
+    "blocker": "MISSING_ACCRUAL",
+    "expectedOwner": "AP",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-2130",
+    "account": "2130",
+    "blocker": "NONE",
+    "expectedOwner": "AP",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2140",
+    "account": "2140",
+    "blocker": "MISSING_ACCRUAL",
+    "expectedOwner": "AP",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-2200",
+    "account": "2200",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2210",
+    "account": "2210",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "decoy",
+    "note": "Looks alarming, is fully supported"
+  },
+  {
+    "accountId": "TB-2220",
+    "account": "2220",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2300",
+    "account": "2300",
+    "blocker": "UNSUPPORTED_JOURNAL",
+    "expectedOwner": "CONTROLLER",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-2310",
+    "account": "2310",
+    "blocker": "NONE",
+    "expectedOwner": "TAX",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2320",
+    "account": "2320",
+    "blocker": "NONE",
+    "expectedOwner": "TAX",
+    "kind": "decoy",
+    "note": "Looks alarming, is fully supported"
+  },
+  {
+    "accountId": "TB-2330",
+    "account": "2330",
+    "blocker": "NONE",
+    "expectedOwner": "TAX",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2340",
+    "account": "2340",
+    "blocker": "NONE",
+    "expectedOwner": "TAX",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2400",
+    "account": "2400",
+    "blocker": "NONE",
+    "expectedOwner": "AR",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2410",
+    "account": "2410",
+    "blocker": "NONE",
+    "expectedOwner": "AR",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2420",
+    "account": "2420",
+    "blocker": "NONE",
+    "expectedOwner": "AR",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2500",
+    "account": "2500",
+    "blocker": "INTERCOMPANY",
+    "expectedOwner": "TREASURY",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-2510",
+    "account": "2510",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2520",
+    "account": "2520",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2600",
+    "account": "2600",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2610",
+    "account": "2610",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2700",
+    "account": "2700",
+    "blocker": "MISSING_ACCRUAL",
+    "expectedOwner": "AP",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-2710",
+    "account": "2710",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2720",
+    "account": "2720",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "decoy",
+    "note": "Looks alarming, is fully supported"
+  },
+  {
+    "accountId": "TB-2800",
+    "account": "2800",
+    "blocker": "UNRECONCILED",
+    "expectedOwner": "AP",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-2900",
+    "account": "2900",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-2910",
+    "account": "2910",
+    "blocker": "UNRECONCILED",
+    "expectedOwner": "CONTROLLER",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-2920",
+    "account": "2920",
+    "blocker": "UNRECONCILED",
+    "expectedOwner": "TREASURY",
+    "kind": "blocker"
+  },
+  {
+    "accountId": "TB-3000",
+    "account": "3000",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-3100",
+    "account": "3100",
+    "blocker": "NONE",
+    "expectedOwner": "CONTROLLER",
+    "kind": "clean"
+  },
+  {
+    "accountId": "TB-3200",
+    "account": "3200",
+    "blocker": "NONE",
+    "expectedOwner": "TREASURY",
+    "kind": "clean"
+  }
+]
