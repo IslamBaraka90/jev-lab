@@ -6,6 +6,9 @@ import { defineConfig } from 'vite';
 // (`npm run dev`); `npm run build` writes web/dist, which `npm start` serves.
 export default defineConfig({
   root: fileURLToPath(new URL('.', import.meta.url)),
+  // Vite reads env files from `root` by default, which would be web/.env. The project keeps one
+  // .env at the top level for the server, and the build reads VITE_* from that same file.
+  envDir: fileURLToPath(new URL('..', import.meta.url)),
   plugins: [react()],
   server: {
     port: 5173,
