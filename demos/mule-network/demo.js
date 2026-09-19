@@ -240,7 +240,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 5,
   view: 'graph',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.accountType.toLowerCase()} · ${item.transfersIn} in, ${item.transfersOut} out`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
