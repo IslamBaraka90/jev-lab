@@ -1,3 +1,4 @@
+import { CandlesView } from './CandlesView.jsx';
 import { GraphView } from './GraphView.jsx';
 import { LedgerView } from './LedgerView.jsx';
 import { QueueView } from './QueueView.jsx';
