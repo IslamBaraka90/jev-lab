@@ -231,7 +231,6 @@ export default {
   dataClass: 'mixed',
   readMinutes: 4,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.side.toLowerCase()} ${item.symbol} · ${money(item.valueUsd)}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
