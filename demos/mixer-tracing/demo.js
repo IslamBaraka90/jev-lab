@@ -213,7 +213,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'graph',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.chain} · ${money(item.fundingTotal)} funded · ${item.longestPathHops} hops`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
