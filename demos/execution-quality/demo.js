@@ -224,7 +224,6 @@ export default {
   dataClass: 'mixed',
   readMinutes: 4,
   view: 'candles',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.side.toLowerCase()} ${item.symbol} · ${money(item.sizeUsd)}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
