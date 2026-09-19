@@ -39,6 +39,7 @@ import journalVsReality from './journal-vs-reality/demo.js';
 import goalScreening from './goal-screening/demo.js';
 import shariaScreen from './sharia-screen/demo.js';
 import accountingFlags from './accounting-flags/demo.js';
+import fundamentalRead from './fundamental-read/demo.js';
 import newsImpact from './news-impact/demo.js';
 import filingsRead from './filings-read/demo.js';
 import rumourGrading from './rumour-grading/demo.js';
@@ -98,6 +99,7 @@ export const DEMOS = [
   goalScreening,
   shariaScreen,
   accountingFlags,
+  fundamentalRead,
   newsImpact,
   filingsRead,
   rumourGrading,

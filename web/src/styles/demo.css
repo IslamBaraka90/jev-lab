@@ -774,3 +774,19 @@
 .equity-legend .legend-line { display: inline-block; width: 18px; height: 2px; }
 .equity-legend .series-key { background: var(--accent, currentColor); }
 .equity-legend .compare-key { background: var(--accent2, #8b5cf6); }
+
+/* 162 fundamental read: four aligned years plus a model-versus-ratio cross-check. */
+.statement-table { min-width: 820px; table-layout: fixed; }
+.statement-table th:first-child { width: 190px; }
+.statement-table td span { display: block; }
+.statement-change { display: block; margin-top: 3px; font-size: 10px; }
+.statement-change.up { color: var(--positive); }
+.statement-change.down { color: var(--danger); }
+.statement-empty { padding: 24px; border: 1px dashed var(--border); border-radius: var(--radius-sm); background: var(--surface2); }
+.statement-empty p { margin: 6px 0 0; color: var(--muted); }
+.quality-grid { width: 100%; max-width: 680px; height: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface2); }
+.quality-point circle { fill: var(--primary); opacity: .78; stroke: var(--surface); stroke-width: 1.5; }
+.quality-point.gap circle { fill: var(--warning); }
+.quality-point text { fill: var(--text); font-size: 10px; }
+.ratio-cross-check table { min-width: 1120px; }
+.ratio-cross-check tr.ratio-disagree { background: color-mix(in srgb, var(--warningBg) 58%, transparent); }

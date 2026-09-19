@@ -49,6 +49,7 @@ export const GENERATORS = {
   'goal-screening': () => import('./goal-screening.js'),
   'sharia-screen': () => import('./sharia-screen.js'),
   'accounting-flags': () => import('./accounting-flags.js'),
+  'fundamental-read': () => import('./fundamental-read.js'),
   'news-impact': () => import('./news-impact.js'),
   'filings-read': () => import('./filings-read.js'),
   'rumour-grading': () => import('./rumour-grading.js'),

@@ -8,6 +8,7 @@ import { TimelineView } from './TimelineView.jsx';
 import { ComparisonView } from './ComparisonView.jsx';
 import { CalendarView } from './CalendarView.jsx';
 import { SessionCurveView } from './SessionCurveView.jsx';
+import { StatementsView } from './StatementsView.jsx';
 
 // How an item is drawn on the stage. A demo names one in its definition; anything unknown falls back
 // to the plain field table, so a new demo always renders something.
@@ -22,6 +23,7 @@ export const VIEWS = {
   candles: CandlesView,
   calendar: CalendarView,
   sessionCurve: SessionCurveView,
+  statements: StatementsView,
   document: DocumentView,
 };
 

@@ -300,6 +300,8 @@ export function ReportPanel({ report, onSelect }) {
       {report.sizeScatter && <SizeScatter chart={report.sizeScatter} />}
       {report.breakdowns?.map((table) => <BreakdownTable key={table.title} table={table} />)}
       {report.comparisonTable && <ComparisonTable table={report.comparisonTable} />}
+      {report.qualityGrid && <QualityLeverageGrid chart={report.qualityGrid} />}
+      {report.ratioRows?.length > 0 && <RatioCrossCheck rows={report.ratioRows} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
@@ -372,6 +374,21 @@ function BreakdownTable({ table }) {
 
 function ComparisonTable({ table }) {
   return <div className="table-scroll"><h4>{table.title}</h4><table className="data-table compact"><thead><tr><th>Measure</th>{table.columns.map((column) => <th key={column.label} className="num">{column.label}</th>)}</tr></thead><tbody>{table.rows.map((row) => <tr key={row.key}><th scope="row">{row.label}</th>{table.columns.map((column) => <td key={column.label} className="num">{row.format(column[row.key])}</td>)}</tr>)}</tbody></table></div>;
+}
+
+function QualityLeverageGrid({ chart }) {
+  const width = 560, height = 300, pad = 44;
+  const x = (value) => pad + value / 6 * (width - pad * 2);
+  const y = (value) => height - pad - value / 6 * (height - pad * 2);
+  return <div className="stack" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="quality-grid" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.map((point) => `${point.label}: quality ${point.quality.toFixed(1)}, leverage ${point.leverage.toFixed(1)}${point.gap ? ', statement gap' : ''}`).join('; ')}`}>
+    {Array.from({ length: 7 }, (_, tick) => <g key={tick}><line className="report-axis" x1={x(tick)} y1={pad} x2={x(tick)} y2={height - pad} /><line className="report-axis" x1={pad} y1={y(tick)} x2={width - pad} y2={y(tick)} /><text className="report-axis-text" x={x(tick)} y={height - 16} textAnchor="middle">{tick}</text><text className="report-axis-text" x={24} y={y(tick) + 4} textAnchor="middle">{tick}</text></g>)}
+    {chart.points.map((point) => <g key={point.id} className={point.gap ? 'quality-point gap' : 'quality-point'}><circle cx={x(point.leverage)} cy={y(point.quality)} r="8"><title>{`${point.label}: quality ${point.quality.toFixed(1)}, leverage ${point.leverage.toFixed(1)}`}</title></circle><text x={x(point.leverage) + 10} y={y(point.quality) - 8}>{point.label}</text></g>)}
+    <text className="report-axis-text" x={width / 2} y={height - 2} textAnchor="middle">Leverage risk →</text><text className="report-axis-text" x={pad} y={16}>Quality ↑</text>
+  </svg></div>;
+}
+
+function RatioCrossCheck({ rows }) {
+  return <div className="table-scroll ratio-cross-check"><h4>Jev reading against computed ratios</h4><table className="data-table compact"><thead><tr><th>Symbol</th><th>Jev earnings</th><th>Computed earnings</th><th>Jev direction</th><th>Computed direction</th><th className="num">Cash conversion</th><th className="num">Debt / equity</th><th className="num">Net debt / EBITDA proxy</th><th>Gap</th></tr></thead><tbody>{rows.map((row) => <tr key={row.id} className={row.disagree ? 'ratio-disagree' : undefined}><th scope="row">{row.symbol}{row.disagree ? ' ⚠' : ''}</th><td>{row.modelEarnings}</td><td>{row.computedEarnings}</td><td>{row.modelDirection}</td><td>{row.computedDirection}</td><td className="num">{Number.isFinite(row.cashConversion) ? row.cashConversion.toFixed(2) : '–'}</td><td className="num">{Number.isFinite(row.debtToEquity) ? row.debtToEquity.toFixed(2) : '–'}</td><td className="num">{Number.isFinite(row.netDebtProxy) ? row.netDebtProxy.toFixed(2) : '–'}</td><td>{row.gap}</td></tr>)}</tbody></table></div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {
