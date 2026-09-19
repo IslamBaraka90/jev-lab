@@ -62,6 +62,7 @@ export function generate(seed = SEED) {
   });
   for (const item of items) delete item.key;
   for (const label of labels) delete label.key;
+  frontLoad(items);
 
   return {
     dataset: {
@@ -82,6 +83,17 @@ export function generate(seed = SEED) {
     },
     labels,
   };
+}
+
+/** The transaction first on the queue card; the engine's own bookkeeping after it. */
+function frontLoad(items) {
+  const front = ['id', 'firedAt', 'rule', 'rulePrecisionPercent', 'amount', 'merchantCategory', 'merchantCountry', 'newDevice', 'declinesInLastDay', 'customerTenureYears', 'averageMonthlySpend', 'typicalTransaction', 'authorisationsAtThisMerchantBefore'];
+  items.forEach((item, index) => {
+    const ordered = {};
+    for (const key of front) ordered[key] = item[key];
+    for (const key of Object.keys(item)) if (!(key in ordered)) ordered[key] = item[key];
+    items[index] = ordered;
+  });
 }
 
 // #region demo:data

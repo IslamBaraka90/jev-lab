@@ -288,8 +288,8 @@
   },
   "scripts/generate/card-fraud-triage.js#demo:data": {
     "path": "scripts/generate/card-fraud-triage.js",
-    "startLine": 88,
-    "endLine": 116,
+    "startLine": 100,
+    "endLine": 128,
     "code": "/** One alert: the rule that fired, the transaction, and what this card has been doing lately. */\nfunction alert(random, { ruleId, amountValue, category, country, hour, history, tenureYears, usualCountries, monthlyAverage, newDevice = false, sameMerchantCount = 1, declinesBefore = 0, loud = false }) {\n  const rule = RULE_BY_ID[ruleId];\n  const floor = loud ? Math.round(rule.score[0] + (rule.score[1] - rule.score[0]) * 0.8) : rule.score[0];\n  return {\n    key: `${ruleId}-${random.int(100_000, 999_999)}`,\n    id: null,\n    firedAt: `2026-08-14T${String(hour).padStart(2, '0')}:${String(random.int(0, 59)).padStart(2, '0')}:00Z`,\n    rule: rule.name,\n    ruleId,\n    rulePrecisionPercent: rule.precision,\n    ruleScore: random.int(floor, rule.score[1]),\n    ruleRank: null,\n    amount: amountValue,\n    merchant: merchantName(random),\n    merchantCategory: category,\n    merchantCountry: country,\n    card: cardMask(random),\n    cardholder: personName(random),\n    customerTenureYears: tenureYears,\n    usualCountries,\n    averageMonthlySpend: monthlyAverage,\n    typicalTransaction: round(monthlyAverage / random.int(12, 30)),\n    newDevice,\n    authorisationsAtThisMerchantBefore: sameMerchantCount - 1,\n    declinesInLastDay: declinesBefore,\n    recentTransactions: history,\n  };\n}",
     "language": "javascript"
   },
