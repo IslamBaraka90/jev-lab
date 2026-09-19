@@ -1,0 +1,902 @@
+[
+  {
+    "packetId": "P-0001",
+    "mismatch": "PARTIAL_DELIVERY",
+    "amountAtRisk": 2598.94,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0002",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0003",
+    "mismatch": "PARTIAL_DELIVERY",
+    "amountAtRisk": 2166.93,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0004",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0005",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0006",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0007",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0008",
+    "mismatch": "PRICE",
+    "amountAtRisk": 486.86,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0009",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0010",
+    "mismatch": "CURRENCY",
+    "amountAtRisk": 24611.6,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0011",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0012",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0013",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0014",
+    "mismatch": "PRICE",
+    "amountAtRisk": 166.66,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0015",
+    "mismatch": "PARTIAL_DELIVERY",
+    "amountAtRisk": 741.91,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0016",
+    "mismatch": "QUANTITY",
+    "amountAtRisk": 856.17,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0017",
+    "mismatch": "PRICE",
+    "amountAtRisk": 1477.44,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0018",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0019",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0020",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0021",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0022",
+    "mismatch": "CURRENCY",
+    "amountAtRisk": 15799.15,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0023",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0024",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0025",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0026",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0027",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0028",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0029",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0030",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0031",
+    "mismatch": "PRICE",
+    "amountAtRisk": 2439.53,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0032",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0033",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0034",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0035",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0036",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0037",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0038",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0039",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0040",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0041",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0042",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0043",
+    "mismatch": "CURRENCY",
+    "amountAtRisk": 23959.16,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0044",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0045",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0046",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0047",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0048",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0049",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0050",
+    "mismatch": "PRICE",
+    "amountAtRisk": 231.17,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0051",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0052",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0053",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0054",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0055",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0056",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0057",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0058",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0059",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0060",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0061",
+    "mismatch": "TAX",
+    "amountAtRisk": 132.08,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0062",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0063",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0064",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0065",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0066",
+    "mismatch": "TAX",
+    "amountAtRisk": 106.16,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0067",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0068",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0069",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0070",
+    "mismatch": "PRICE",
+    "amountAtRisk": 76.61,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0071",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0072",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0073",
+    "mismatch": "TAX",
+    "amountAtRisk": 57.74,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0074",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0075",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0076",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0077",
+    "mismatch": "PARTIAL_DELIVERY",
+    "amountAtRisk": 2118.27,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0078",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0079",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0080",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0081",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0082",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0083",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0084",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0085",
+    "mismatch": "PRICE",
+    "amountAtRisk": 25.12,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0086",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0087",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0088",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0089",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0090",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0091",
+    "mismatch": "QUANTITY",
+    "amountAtRisk": 709.35,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0092",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0093",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0094",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0095",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0096",
+    "mismatch": "QUANTITY",
+    "amountAtRisk": 741.59,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0097",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0098",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0099",
+    "mismatch": "DUPLICATE",
+    "amountAtRisk": 5223.29,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0100",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0101",
+    "mismatch": "CURRENCY",
+    "amountAtRisk": 14139.77,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0102",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0103",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0104",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0105",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0106",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0107",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0108",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0109",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0110",
+    "mismatch": "PARTIAL_DELIVERY",
+    "amountAtRisk": 2257.29,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0111",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0112",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0113",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0114",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0115",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0116",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0117",
+    "mismatch": "QUANTITY",
+    "amountAtRisk": 672.42,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0118",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0119",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0120",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0121",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0122",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0123",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0124",
+    "mismatch": "DUPLICATE",
+    "amountAtRisk": 12401.38,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0125",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0126",
+    "mismatch": "TAX",
+    "amountAtRisk": 118.84,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0127",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0128",
+    "mismatch": "PRICE",
+    "amountAtRisk": 524.96,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0129",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0130",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0131",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0132",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0133",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0134",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0135",
+    "mismatch": "QUANTITY",
+    "amountAtRisk": 858.44,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0136",
+    "mismatch": "QUANTITY",
+    "amountAtRisk": 1974.11,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0137",
+    "mismatch": "PARTIAL_DELIVERY",
+    "amountAtRisk": 2913.79,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0138",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "within-tolerance"
+  },
+  {
+    "packetId": "P-0139",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0140",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0141",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0142",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0143",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0144",
+    "mismatch": "QUANTITY",
+    "amountAtRisk": 204.77,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0145",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0146",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0147",
+    "mismatch": "NONE",
+    "amountAtRisk": 0,
+    "kind": "clean"
+  },
+  {
+    "packetId": "P-0148",
+    "mismatch": "PRICE",
+    "amountAtRisk": 2068.5,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0149",
+    "mismatch": "DUPLICATE",
+    "amountAtRisk": 14783.75,
+    "kind": "problem"
+  },
+  {
+    "packetId": "P-0150",
+    "mismatch": "TAX",
+    "amountAtRisk": 171.53,
+    "kind": "problem"
+  }
+]

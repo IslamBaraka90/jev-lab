@@ -15,6 +15,7 @@ export const GENERATORS = {
   'ledger-integrity': () => import('./ledger-integrity.js'),
   'bank-reconciliation': () => import('./bank-reconciliation.js'),
   'expense-posting': () => import('./expense-posting.js'),
+  'three-way-match': () => import('./three-way-match.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
