@@ -46,7 +46,14 @@ vendor, so those rows are a lookup rather than a judgement.
 and "open this file" link is dead until `VITE_REPO_URL` is set at build time. `VITE_REPO_REF` defaults
 to `main`, which means line links drift as the code moves — pin it to a commit for the video build.
 
-### 2.2 Nothing has been deployed yet
+### 2.2 Demo 105 is finished but not merged
+
+`demo/105-close-blockers` is built, recorded and rebased onto `main`, and it carries a fix every demo
+page needs (the code panel was rewriting its own markup). It could not be merged because `main` was
+checked out in another worktree at the time. Merge it with `git merge --no-ff demo/105-close-blockers`
+from whichever worktree holds `main`.
+
+### 2.3 Nothing has been deployed yet
 
 `vercel.json` is written (static build, SPA rewrites, immutable asset caching) but no deploy has run.
 Worth doing once with a throwaway project to confirm three things: the build command works from a clean
@@ -82,8 +89,16 @@ One-line fix in `web/src/demo/widgets.jsx`, shared file, so it waits for a quiet
 - **Progress against the plan.** 50 demos are specified; 101, 102 and 103 are recorded, 104 is handed
   over, 105 is in build. `DOMAINS[].planned` in `demos/index.js` still claims the full 50, which is
   correct as intent but should be re-checked when a domain finishes.
-- **The token estimate factor.** Measured at 3.07× (101), 3.55× (102) and 3.51× (103) over `chars / 4`.
-  The handovers tell agents to use 3.5. Re-check after two more demos and settle on a number.
+- **The token estimate formula is settled; the handovers still carry the old one.** Estimating from the
+  state alone needs a factor that swings from 3.07× (101) to 5.16× (105), because the questions are
+  sent on every request and a small state makes them the bigger half. Counting both collapses it:
+
+  > input tokens per item ≈ **1.8 × (state chars + questions chars) / 4**
+
+  which lands within 8% on 101, 102 and 105 and 8% under on 103 (measured factors 1.86, 1.93, 1.65,
+  1.65). Output has run 200–260 tokens per item for four questions. `handovers/104-three-way-match.md`
+  still tells the next agent to multiply the state by 3.5, so fix that when the next handover is
+  written.
 - **Live mode has never been exercised by anyone but me.** It is opt-in per demo with a confirmation
   dialog that states the request count, and the static server refuses `/api/*` so browser checks stay
   free. Before the site goes public, decide whether live mode ships at all.
