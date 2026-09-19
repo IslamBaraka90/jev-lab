@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Icon } from '../components/Icon.jsx';
 
 // The shared report pieces. A demo's `report()` returns data in these shapes and never draws its own
@@ -101,6 +102,7 @@ export function TopItems({ items = [], title = 'Worth opening', onSelect }) {
 
 /** Predicted against actual, for demos that know the right answer. The diagonal is the good news. */
 export function ConfusionMatrix({ matrix, onSelect }) {
+  const [selection, setSelection] = useState(null);
   if (!matrix?.rows?.length) return null;
   const max = Math.max(...matrix.rows.flatMap((row) => row.cells.map((cell) => cell.count)), 1);
 
@@ -129,7 +131,17 @@ export function ConfusionMatrix({ matrix, onSelect }) {
                     className={`num${cell.diagonal ? ' diagonal' : ''}${cell.count ? '' : ' empty'}`}
                     style={cell.count ? { backgroundColor: `color-mix(in srgb, var(--${cell.diagonal ? 'positiveBg' : 'warningBg'}) ${Math.round((cell.count / max) * 100)}%, transparent)` } : undefined}
                   >
-                    {cell.count || '·'}
+                    {cell.count && cell.items?.length ? (
+                      <button
+                        type="button"
+                        className="matrix-cell-button"
+                        aria-label={cell.ariaLabel ?? `${row.label}, ${matrix.columns[index]}: ${cell.count}`}
+                        aria-expanded={selection?.key === `${row.label}:${index}`}
+                        onClick={() => setSelection({ key: `${row.label}:${index}`, label: cell.ariaLabel ?? `${row.label} called ${matrix.columns[index]}`, items: cell.items })}
+                      >
+                        {cell.count}
+                      </button>
+                    ) : (cell.count || '·')}
                   </td>
                 ))}
               </tr>
@@ -137,6 +149,54 @@ export function ConfusionMatrix({ matrix, onSelect }) {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+/** A compact, data-derived comparison of normalised fingerprints across labelled groups. */
+export function FingerprintChart({ chart }) {
+  if (!chart?.series?.length || !chart?.metrics?.length) return null;
+  return (
+    <div className="stack fingerprint-chart" style={{ gap: 8 }}>
+      <h4>{chart.title}</h4>
+      <div className="table-scroll">
+        <table className="data-table compact">
+          <thead>
+            <tr>
+              <th scope="col">Fingerprint</th>
+              {chart.metrics.map((metric) => <th key={metric.key} scope="col">{metric.label}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {chart.series.map((series) => (
+              <tr key={series.id}>
+                <th scope="row">{series.label}</th>
+                {chart.metrics.map((metric) => {
+                  const value = series.values.find((entry) => entry.key === metric.key)?.value ?? 0;
+                  return (
+                    <td key={metric.key}>
+                      <span className="fingerprint-bar" aria-label={`${metric.label}: ${Math.round(value * 100)} percent`}>
+                        <span style={{ width: `${Math.max(2, Math.round(value * 100))}%` }} />
+                      </span>
+                      <span className="meta num">{Math.round(value * 100)}%</span>
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {selection && (
+        <div className="matrix-drilldown stack" role="region" aria-live="polite" aria-label={selection.label}>
+          <strong>{selection.label}</strong>
+          <div className="cluster-list">
+            {selection.items.map((id) => (
+              <button key={id} type="button" className="button ghost chip" onClick={() => onSelect?.(id)}>{id}</button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -232,6 +292,7 @@ export function ReportPanel({ report, onSelect }) {
       )}
       {report.distribution?.length > 0 && <DistributionBar items={report.distribution} onSelect={(entry) => onSelect?.(entry.itemId)} />}
       {report.matrix && <ConfusionMatrix matrix={report.matrix} onSelect={onSelect} />}
+      {report.fingerprints && <FingerprintChart chart={report.fingerprints} />}
       {report.curve && <CoverageCurve curve={report.curve} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />

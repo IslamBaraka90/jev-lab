@@ -30,6 +30,7 @@ export const GENERATORS = {
   'insider-surveillance': () => import('./insider-surveillance.js'),
   'mule-network': () => import('./mule-network.js'),
   'wallet-risk': () => import('./wallet-risk.js'),
+  'wallet-profiling': () => import('./wallet-profiling.js'),
   'mixer-tracing': () => import('./mixer-tracing.js'),
   'sybil-clusters': () => import('./sybil-clusters.js'),
   'portfolio-health': () => import('./portfolio-health.js'),

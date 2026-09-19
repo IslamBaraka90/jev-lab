@@ -20,6 +20,7 @@ import sanctionsNameMatch from './sanctions-name-match/demo.js';
 import insiderSurveillance from './insider-surveillance/demo.js';
 import muleNetwork from './mule-network/demo.js';
 import walletRisk from './wallet-risk/demo.js';
+import walletProfiling from './wallet-profiling/demo.js';
 import mixerTracing from './mixer-tracing/demo.js';
 import sybilClusters from './sybil-clusters/demo.js';
 import portfolioHealth from './portfolio-health/demo.js';
@@ -60,6 +61,7 @@ export const DEMOS = [
   insiderSurveillance,
   muleNetwork,
   walletRisk,
+  walletProfiling,
   mixerTracing,
   sybilClusters,
   portfolioHealth,

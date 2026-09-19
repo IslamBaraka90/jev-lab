@@ -1,0 +1,1602 @@
+[
+  {
+    "wallet": "WPF-0001",
+    "walletId": "WPF-0001",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0002",
+    "walletId": "WPF-0002",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0003",
+    "walletId": "WPF-0003",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0004",
+    "walletId": "WPF-0004",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0005",
+    "walletId": "WPF-0005",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0006",
+    "walletId": "WPF-0006",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0007",
+    "walletId": "WPF-0007",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0008",
+    "walletId": "WPF-0008",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0009",
+    "walletId": "WPF-0009",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0010",
+    "walletId": "WPF-0010",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0011",
+    "walletId": "WPF-0011",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0012",
+    "walletId": "WPF-0012",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0013",
+    "walletId": "WPF-0013",
+    "type": "EXCHANGE",
+    "ambiguous": true,
+    "ambiguousWith": "BRIDGE",
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0014",
+    "walletId": "WPF-0014",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0015",
+    "walletId": "WPF-0015",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0016",
+    "walletId": "WPF-0016",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0017",
+    "walletId": "WPF-0017",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0018",
+    "walletId": "WPF-0018",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0019",
+    "walletId": "WPF-0019",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0020",
+    "walletId": "WPF-0020",
+    "type": "RETAIL",
+    "ambiguous": true,
+    "ambiguousWith": "MEV_BOT",
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0021",
+    "walletId": "WPF-0021",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0022",
+    "walletId": "WPF-0022",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0023",
+    "walletId": "WPF-0023",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0024",
+    "walletId": "WPF-0024",
+    "type": "EXCHANGE",
+    "ambiguous": true,
+    "ambiguousWith": "BRIDGE",
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0025",
+    "walletId": "WPF-0025",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0026",
+    "walletId": "WPF-0026",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0027",
+    "walletId": "WPF-0027",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0028",
+    "walletId": "WPF-0028",
+    "type": "EXCHANGE",
+    "ambiguous": true,
+    "ambiguousWith": "BRIDGE",
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0029",
+    "walletId": "WPF-0029",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0030",
+    "walletId": "WPF-0030",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0031",
+    "walletId": "WPF-0031",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0032",
+    "walletId": "WPF-0032",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0033",
+    "walletId": "WPF-0033",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0034",
+    "walletId": "WPF-0034",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0035",
+    "walletId": "WPF-0035",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0036",
+    "walletId": "WPF-0036",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0037",
+    "walletId": "WPF-0037",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0038",
+    "walletId": "WPF-0038",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0039",
+    "walletId": "WPF-0039",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0040",
+    "walletId": "WPF-0040",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0041",
+    "walletId": "WPF-0041",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0042",
+    "walletId": "WPF-0042",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0043",
+    "walletId": "WPF-0043",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0044",
+    "walletId": "WPF-0044",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0045",
+    "walletId": "WPF-0045",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0046",
+    "walletId": "WPF-0046",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0047",
+    "walletId": "WPF-0047",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0048",
+    "walletId": "WPF-0048",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0049",
+    "walletId": "WPF-0049",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0050",
+    "walletId": "WPF-0050",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0051",
+    "walletId": "WPF-0051",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0052",
+    "walletId": "WPF-0052",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0053",
+    "walletId": "WPF-0053",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0054",
+    "walletId": "WPF-0054",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0055",
+    "walletId": "WPF-0055",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0056",
+    "walletId": "WPF-0056",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0057",
+    "walletId": "WPF-0057",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0058",
+    "walletId": "WPF-0058",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0059",
+    "walletId": "WPF-0059",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0060",
+    "walletId": "WPF-0060",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0061",
+    "walletId": "WPF-0061",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0062",
+    "walletId": "WPF-0062",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0063",
+    "walletId": "WPF-0063",
+    "type": "RETAIL",
+    "ambiguous": true,
+    "ambiguousWith": "MEV_BOT",
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0064",
+    "walletId": "WPF-0064",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0065",
+    "walletId": "WPF-0065",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0066",
+    "walletId": "WPF-0066",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0067",
+    "walletId": "WPF-0067",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0068",
+    "walletId": "WPF-0068",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0069",
+    "walletId": "WPF-0069",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0070",
+    "walletId": "WPF-0070",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0071",
+    "walletId": "WPF-0071",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0072",
+    "walletId": "WPF-0072",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0073",
+    "walletId": "WPF-0073",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0074",
+    "walletId": "WPF-0074",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0075",
+    "walletId": "WPF-0075",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0076",
+    "walletId": "WPF-0076",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0077",
+    "walletId": "WPF-0077",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0078",
+    "walletId": "WPF-0078",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0079",
+    "walletId": "WPF-0079",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0080",
+    "walletId": "WPF-0080",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0081",
+    "walletId": "WPF-0081",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0082",
+    "walletId": "WPF-0082",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0083",
+    "walletId": "WPF-0083",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0084",
+    "walletId": "WPF-0084",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0085",
+    "walletId": "WPF-0085",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0086",
+    "walletId": "WPF-0086",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0087",
+    "walletId": "WPF-0087",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0088",
+    "walletId": "WPF-0088",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0089",
+    "walletId": "WPF-0089",
+    "type": "RETAIL",
+    "ambiguous": true,
+    "ambiguousWith": "MEV_BOT",
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0090",
+    "walletId": "WPF-0090",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0091",
+    "walletId": "WPF-0091",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0092",
+    "walletId": "WPF-0092",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0093",
+    "walletId": "WPF-0093",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0094",
+    "walletId": "WPF-0094",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0095",
+    "walletId": "WPF-0095",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0096",
+    "walletId": "WPF-0096",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0097",
+    "walletId": "WPF-0097",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0098",
+    "walletId": "WPF-0098",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0099",
+    "walletId": "WPF-0099",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0100",
+    "walletId": "WPF-0100",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0101",
+    "walletId": "WPF-0101",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0102",
+    "walletId": "WPF-0102",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0103",
+    "walletId": "WPF-0103",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0104",
+    "walletId": "WPF-0104",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0105",
+    "walletId": "WPF-0105",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0106",
+    "walletId": "WPF-0106",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0107",
+    "walletId": "WPF-0107",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0108",
+    "walletId": "WPF-0108",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0109",
+    "walletId": "WPF-0109",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0110",
+    "walletId": "WPF-0110",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0111",
+    "walletId": "WPF-0111",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0112",
+    "walletId": "WPF-0112",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0113",
+    "walletId": "WPF-0113",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0114",
+    "walletId": "WPF-0114",
+    "type": "EXCHANGE",
+    "ambiguous": true,
+    "ambiguousWith": "BRIDGE",
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0115",
+    "walletId": "WPF-0115",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0116",
+    "walletId": "WPF-0116",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0117",
+    "walletId": "WPF-0117",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0118",
+    "walletId": "WPF-0118",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0119",
+    "walletId": "WPF-0119",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0120",
+    "walletId": "WPF-0120",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0121",
+    "walletId": "WPF-0121",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0122",
+    "walletId": "WPF-0122",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0123",
+    "walletId": "WPF-0123",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0124",
+    "walletId": "WPF-0124",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0125",
+    "walletId": "WPF-0125",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0126",
+    "walletId": "WPF-0126",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0127",
+    "walletId": "WPF-0127",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0128",
+    "walletId": "WPF-0128",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0129",
+    "walletId": "WPF-0129",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0130",
+    "walletId": "WPF-0130",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0131",
+    "walletId": "WPF-0131",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0132",
+    "walletId": "WPF-0132",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0133",
+    "walletId": "WPF-0133",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0134",
+    "walletId": "WPF-0134",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0135",
+    "walletId": "WPF-0135",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0136",
+    "walletId": "WPF-0136",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0137",
+    "walletId": "WPF-0137",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0138",
+    "walletId": "WPF-0138",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0139",
+    "walletId": "WPF-0139",
+    "type": "RETAIL",
+    "ambiguous": true,
+    "ambiguousWith": "MEV_BOT",
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0140",
+    "walletId": "WPF-0140",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0141",
+    "walletId": "WPF-0141",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0142",
+    "walletId": "WPF-0142",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0143",
+    "walletId": "WPF-0143",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0144",
+    "walletId": "WPF-0144",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0145",
+    "walletId": "WPF-0145",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0146",
+    "walletId": "WPF-0146",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0147",
+    "walletId": "WPF-0147",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0148",
+    "walletId": "WPF-0148",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0149",
+    "walletId": "WPF-0149",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0150",
+    "walletId": "WPF-0150",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0151",
+    "walletId": "WPF-0151",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0152",
+    "walletId": "WPF-0152",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0153",
+    "walletId": "WPF-0153",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0154",
+    "walletId": "WPF-0154",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0155",
+    "walletId": "WPF-0155",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0156",
+    "walletId": "WPF-0156",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0157",
+    "walletId": "WPF-0157",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0158",
+    "walletId": "WPF-0158",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0159",
+    "walletId": "WPF-0159",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0160",
+    "walletId": "WPF-0160",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0161",
+    "walletId": "WPF-0161",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0162",
+    "walletId": "WPF-0162",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0163",
+    "walletId": "WPF-0163",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0164",
+    "walletId": "WPF-0164",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0165",
+    "walletId": "WPF-0165",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0166",
+    "walletId": "WPF-0166",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0167",
+    "walletId": "WPF-0167",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0168",
+    "walletId": "WPF-0168",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0169",
+    "walletId": "WPF-0169",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0170",
+    "walletId": "WPF-0170",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0171",
+    "walletId": "WPF-0171",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0172",
+    "walletId": "WPF-0172",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0173",
+    "walletId": "WPF-0173",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0174",
+    "walletId": "WPF-0174",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0175",
+    "walletId": "WPF-0175",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0176",
+    "walletId": "WPF-0176",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0177",
+    "walletId": "WPF-0177",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0178",
+    "walletId": "WPF-0178",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0179",
+    "walletId": "WPF-0179",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0180",
+    "walletId": "WPF-0180",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0181",
+    "walletId": "WPF-0181",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0182",
+    "walletId": "WPF-0182",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0183",
+    "walletId": "WPF-0183",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0184",
+    "walletId": "WPF-0184",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0185",
+    "walletId": "WPF-0185",
+    "type": "RETAIL",
+    "ambiguous": true,
+    "ambiguousWith": "MEV_BOT",
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0186",
+    "walletId": "WPF-0186",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0187",
+    "walletId": "WPF-0187",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0188",
+    "walletId": "WPF-0188",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0189",
+    "walletId": "WPF-0189",
+    "type": "SCAM_COLLECTOR",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 3
+  },
+  {
+    "wallet": "WPF-0190",
+    "walletId": "WPF-0190",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0191",
+    "walletId": "WPF-0191",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0192",
+    "walletId": "WPF-0192",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0193",
+    "walletId": "WPF-0193",
+    "type": "MARKET_MAKER",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0194",
+    "walletId": "WPF-0194",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0195",
+    "walletId": "WPF-0195",
+    "type": "RETAIL",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 1
+  },
+  {
+    "wallet": "WPF-0196",
+    "walletId": "WPF-0196",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0197",
+    "walletId": "WPF-0197",
+    "type": "EXCHANGE",
+    "ambiguous": true,
+    "ambiguousWith": "BRIDGE",
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0198",
+    "walletId": "WPF-0198",
+    "type": "MEV_BOT",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  },
+  {
+    "wallet": "WPF-0199",
+    "walletId": "WPF-0199",
+    "type": "BRIDGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 5
+  },
+  {
+    "wallet": "WPF-0200",
+    "walletId": "WPF-0200",
+    "type": "EXCHANGE",
+    "ambiguous": false,
+    "ambiguousWith": null,
+    "automation": 6
+  }
+]
