@@ -50,6 +50,7 @@ export const GENERATORS = {
   'sharia-screen': () => import('./sharia-screen.js'),
   'accounting-flags': () => import('./accounting-flags.js'),
   'fundamental-read': () => import('./fundamental-read.js'),
+  'dividend-safety': () => import('./dividend-safety.js'),
   'news-impact': () => import('./news-impact.js'),
   'filings-read': () => import('./filings-read.js'),
   'rumour-grading': () => import('./rumour-grading.js'),

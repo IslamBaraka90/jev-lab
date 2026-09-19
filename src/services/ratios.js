@@ -29,3 +29,42 @@ export function computedRatios(item) {
   return { statementGap, complete: true, debtToEquity: round(debtToEquity), netDebtToEbitdaProxy: round(netDebtToEbitdaProxy), cashConversion: round(cashConversion), marginTrendPoints: round(marginTrend * 100, 1), revenueTrendPercent: round(revenueTrend * 100, 1), earningsQuality, direction, leverageScore, capexDiscipline };
 }
 // #endregion
+
+// #region demo:dividend-data
+export function dividendRatios(item) {
+  const years = item.annualStatements ?? [];
+  const complete = years.length >= 4 && years.every((year) => [year.dividendsPaid, year.netIncome, year.operatingCashFlow, year.capitalExpenditure].every(finite));
+  if (!complete || !finite(item.latestPrice) || !finite(item.sharesOutstanding) || item.sharesOutstanding <= 0) {
+    return { complete: false, coverageGap: years.length < 4 ? 'SHORT_HISTORY' : 'MISSING_LINES', historicalCuts: [] };
+  }
+  const first = years[0];
+  const latest = years.at(-1);
+  const paid = (year) => Math.abs(year.dividendsPaid);
+  const freeCashFlow = (year) => year.operatingCashFlow + year.capitalExpenditure;
+  const payoutOnEarnings = ratio(paid(latest), latest.netIncome);
+  const payoutOnFcf = ratio(paid(latest), freeCashFlow(latest));
+  const dividendGrowth = paid(first) > 0 ? (paid(latest) / paid(first)) ** (1 / (years.length - 1)) - 1 : null;
+  const yieldPercent = paid(latest) / item.sharesOutstanding / item.latestPrice * 100;
+  const debtChange = change(first.totalDebt, latest.totalDebt);
+  const historicalCuts = years.slice(1).flatMap((year, index) => paid(year) < paid(years[index]) * 0.98 ? [{ from: years[index].fiscalYearEnd, to: year.fiscalYearEnd, changePercent: round(change(paid(years[index]), paid(year)) * 100, 1) }] : []);
+  const debtFunded = finite(debtChange) ? freeCashFlow(latest) < paid(latest) && debtChange > 0.05 : null;
+  let safetyScore = 6;
+  if (freeCashFlow(latest) <= 0 || payoutOnFcf > 1.2) safetyScore -= 3;
+  else if (payoutOnFcf > 0.9) safetyScore -= 2;
+  else if (payoutOnFcf > 0.7) safetyScore -= 1;
+  if (latest.netIncome <= 0 || payoutOnEarnings > 1.2) safetyScore -= 2;
+  else if (payoutOnEarnings > 0.8) safetyScore -= 1;
+  if (debtFunded === true) safetyScore -= 1;
+  if (historicalCuts.length) safetyScore -= 2;
+  safetyScore = Math.max(0, Math.min(6, safetyScore));
+  const firstToBreak = freeCashFlow(latest) <= paid(latest) ? 'CASH_COVER'
+    : latest.netIncome <= paid(latest) ? 'EARNINGS_COVER'
+      : debtFunded === true ? 'DEBT_MATURITIES'
+        : ['Energy', 'Basic Materials'].includes(item.sector) && payoutOnFcf > 0.65 ? 'CYCLICALITY' : 'NONE';
+  return {
+    complete: true, coverageGap: finite(debtChange) ? 'NONE' : 'MISSING_DEBT', payoutOnEarnings: round(payoutOnEarnings), payoutOnFcf: round(payoutOnFcf),
+    dividendGrowthPercent: round(dividendGrowth * 100, 1), yieldPercent: round(yieldPercent, 2), debtChangePercent: finite(debtChange) ? round(debtChange * 100, 1) : null,
+    historicalCuts, debtFunded, safetyScore, firstToBreak,
+  };
+}
+// #endregion

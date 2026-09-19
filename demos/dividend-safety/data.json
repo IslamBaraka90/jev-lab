@@ -1,0 +1,745 @@
+{
+  "id": "dividend-safety",
+  "class": "cached-real",
+  "generatedAt": "2026-09-19",
+  "source": "data/market/fundamentals/*.json + data/market/candles/*.json",
+  "context": {
+    "note": "Prices, volumes and fundamentals are real, cached once from Yahoo Finance and committed. Nothing is fetched at build time or in the browser, and none of this is investment advice.",
+    "units": "Statement amounts are whole units of the reporting currency. Negative dividendsPaid is a cash outflow. Null means unavailable, not zero.",
+    "coverage": "Four annual periods are retained where issuer statements exist. Debt maturities and historical share counts were unavailable in the committed provider cache and are disclosed as unavailable rather than inferred."
+  },
+  "items": [
+    {
+      "id": "DS-NVDA",
+      "symbol": "NVDA",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "currency": "USD",
+      "sharesOutstanding": 24147000000,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2023-01-31",
+          "dividendsPaid": -398000000,
+          "netIncome": 4368000000,
+          "operatingCashFlow": 5641000000,
+          "capitalExpenditure": -1833000000,
+          "totalDebt": 12031000000,
+          "cash": 13296000000
+        },
+        {
+          "fiscalYearEnd": "2024-01-31",
+          "dividendsPaid": -395000000,
+          "netIncome": 29760000000,
+          "operatingCashFlow": 28090000000,
+          "capitalExpenditure": -1069000000,
+          "totalDebt": 11056000000,
+          "cash": 25984000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "dividendsPaid": -834000000,
+          "netIncome": 72880000000,
+          "operatingCashFlow": 64089000000,
+          "capitalExpenditure": -3236000000,
+          "totalDebt": 9982000000,
+          "cash": 43210000000
+        },
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "dividendsPaid": -974000000,
+          "netIncome": 120067000000,
+          "operatingCashFlow": 102718000000,
+          "capitalExpenditure": -6042000000,
+          "totalDebt": 11040000000,
+          "cash": 62556000000
+        }
+      ],
+      "latestPrice": 222.27,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-JPM",
+      "symbol": "JPM",
+      "sector": "Financial Services",
+      "industry": "Banks - Diversified",
+      "currency": "USD",
+      "sharesOutstanding": 2658186195,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-12-31",
+          "dividendsPaid": -13562000000,
+          "netIncome": 37676000000,
+          "operatingCashFlow": 107119000000,
+          "capitalExpenditure": null,
+          "totalDebt": 339892000000,
+          "cash": 567234000000
+        },
+        {
+          "fiscalYearEnd": "2023-12-31",
+          "dividendsPaid": -13463000000,
+          "netIncome": 49552000000,
+          "operatingCashFlow": 12974000000,
+          "capitalExpenditure": null,
+          "totalDebt": 436537000000,
+          "cash": 624151000000
+        },
+        {
+          "fiscalYearEnd": "2024-12-31",
+          "dividendsPaid": -14783000000,
+          "netIncome": 58471000000,
+          "operatingCashFlow": -42012000000,
+          "capitalExpenditure": null,
+          "totalDebt": 454311000000,
+          "cash": 469317000000
+        },
+        {
+          "fiscalYearEnd": "2025-12-31",
+          "dividendsPaid": -16625000000,
+          "netIncome": 57048000000,
+          "operatingCashFlow": -147782000000,
+          "capitalExpenditure": null,
+          "totalDebt": 499982000000,
+          "cash": 343338000000
+        }
+      ],
+      "latestPrice": 349.67,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-XOM",
+      "symbol": "XOM",
+      "sector": "Energy",
+      "industry": "Oil & Gas Integrated",
+      "currency": "USD",
+      "sharesOutstanding": 4111911960,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-12-31",
+          "dividendsPaid": -14939000000,
+          "netIncome": 55740000000,
+          "operatingCashFlow": 76797000000,
+          "capitalExpenditure": -18407000000,
+          "totalDebt": 41193000000,
+          "cash": 29640000000
+        },
+        {
+          "fiscalYearEnd": "2023-12-31",
+          "dividendsPaid": -14941000000,
+          "netIncome": 36010000000,
+          "operatingCashFlow": 55369000000,
+          "capitalExpenditure": -21919000000,
+          "totalDebt": 41573000000,
+          "cash": 31539000000
+        },
+        {
+          "fiscalYearEnd": "2024-12-31",
+          "dividendsPaid": -16704000000,
+          "netIncome": 33680000000,
+          "operatingCashFlow": 55022000000,
+          "capitalExpenditure": -24306000000,
+          "totalDebt": 41710000000,
+          "cash": 23029000000
+        },
+        {
+          "fiscalYearEnd": "2025-12-31",
+          "dividendsPaid": -17231000000,
+          "netIncome": 28844000000,
+          "operatingCashFlow": 51970000000,
+          "capitalExpenditure": -28358000000,
+          "totalDebt": null,
+          "cash": 10681000000
+        }
+      ],
+      "latestPrice": 163.54,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-BTC-USD",
+      "symbol": "BTC-USD",
+      "sector": null,
+      "industry": null,
+      "currency": null,
+      "sharesOutstanding": null,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [],
+      "latestPrice": 80901.46,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 0,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-GLD",
+      "symbol": "GLD",
+      "sector": null,
+      "industry": null,
+      "currency": null,
+      "sharesOutstanding": null,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [],
+      "latestPrice": 401.17,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 0,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-AAPL",
+      "symbol": "AAPL",
+      "sector": "Technology",
+      "industry": "Consumer Electronics",
+      "currency": "USD",
+      "sharesOutstanding": 14594180000,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-09-30",
+          "dividendsPaid": -14841000000,
+          "netIncome": 99803000000,
+          "operatingCashFlow": 122151000000,
+          "capitalExpenditure": -10708000000,
+          "totalDebt": 132480000000,
+          "cash": 48304000000
+        },
+        {
+          "fiscalYearEnd": "2023-09-30",
+          "dividendsPaid": -15025000000,
+          "netIncome": 96995000000,
+          "operatingCashFlow": 110543000000,
+          "capitalExpenditure": -10959000000,
+          "totalDebt": 111088000000,
+          "cash": 61555000000
+        },
+        {
+          "fiscalYearEnd": "2024-09-30",
+          "dividendsPaid": -15234000000,
+          "netIncome": 93736000000,
+          "operatingCashFlow": 118254000000,
+          "capitalExpenditure": -9447000000,
+          "totalDebt": 106629000000,
+          "cash": 65171000000
+        },
+        {
+          "fiscalYearEnd": "2025-09-30",
+          "dividendsPaid": -15421000000,
+          "netIncome": 112010000000,
+          "operatingCashFlow": 111482000000,
+          "capitalExpenditure": -12715000000,
+          "totalDebt": 98657000000,
+          "cash": 54697000000
+        }
+      ],
+      "latestPrice": 336.13,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-MSFT",
+      "symbol": "MSFT",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "currency": "USD",
+      "sharesOutstanding": 7425545491,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2023-06-30",
+          "dividendsPaid": -19800000000,
+          "netIncome": 72361000000,
+          "operatingCashFlow": 87582000000,
+          "capitalExpenditure": -28107000000,
+          "totalDebt": 59965000000,
+          "cash": 111256000000
+        },
+        {
+          "fiscalYearEnd": "2024-06-30",
+          "dividendsPaid": -21771000000,
+          "netIncome": 88136000000,
+          "operatingCashFlow": 118548000000,
+          "capitalExpenditure": -44477000000,
+          "totalDebt": 67127000000,
+          "cash": 75531000000
+        },
+        {
+          "fiscalYearEnd": "2025-06-30",
+          "dividendsPaid": -24082000000,
+          "netIncome": 101832000000,
+          "operatingCashFlow": 136162000000,
+          "capitalExpenditure": -64551000000,
+          "totalDebt": 60588000000,
+          "cash": 94555000000
+        },
+        {
+          "fiscalYearEnd": "2026-06-30",
+          "dividendsPaid": -26445000000,
+          "netIncome": 133749000000,
+          "operatingCashFlow": 182935000000,
+          "capitalExpenditure": -115948000000,
+          "totalDebt": 56826000000,
+          "cash": 76651000000
+        }
+      ],
+      "latestPrice": 493.78,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-KO",
+      "symbol": "KO",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Non-Alcoholic",
+      "currency": "USD",
+      "sharesOutstanding": 4302549243,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-12-31",
+          "dividendsPaid": -7616000000,
+          "netIncome": 9542000000,
+          "operatingCashFlow": 11018000000,
+          "capitalExpenditure": -1484000000,
+          "totalDebt": 39149000000,
+          "cash": 11631000000
+        },
+        {
+          "fiscalYearEnd": "2023-12-31",
+          "dividendsPaid": -7952000000,
+          "netIncome": 10714000000,
+          "operatingCashFlow": 11599000000,
+          "capitalExpenditure": -1852000000,
+          "totalDebt": 42064000000,
+          "cash": 13663000000
+        },
+        {
+          "fiscalYearEnd": "2024-12-31",
+          "dividendsPaid": -8359000000,
+          "netIncome": 10631000000,
+          "operatingCashFlow": 6805000000,
+          "capitalExpenditure": -2064000000,
+          "totalDebt": 44522000000,
+          "cash": 14571000000
+        },
+        {
+          "fiscalYearEnd": "2025-12-31",
+          "dividendsPaid": -8779000000,
+          "netIncome": 13107000000,
+          "operatingCashFlow": 7408000000,
+          "capitalExpenditure": -2112000000,
+          "totalDebt": 45492000000,
+          "cash": 15806000000
+        }
+      ],
+      "latestPrice": 88.25,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-PG",
+      "symbol": "PG",
+      "sector": "Consumer Defensive",
+      "industry": "Household & Personal Products",
+      "currency": "USD",
+      "sharesOutstanding": 2324433060,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2023-06-30",
+          "dividendsPaid": -8999000000,
+          "netIncome": 14653000000,
+          "operatingCashFlow": 16848000000,
+          "capitalExpenditure": -3062000000,
+          "totalDebt": 35424000000,
+          "cash": 8246000000
+        },
+        {
+          "fiscalYearEnd": "2024-06-30",
+          "dividendsPaid": -9312000000,
+          "netIncome": 14879000000,
+          "operatingCashFlow": 19846000000,
+          "capitalExpenditure": -3322000000,
+          "totalDebt": 33369000000,
+          "cash": 9482000000
+        },
+        {
+          "fiscalYearEnd": "2025-06-30",
+          "dividendsPaid": -9872000000,
+          "netIncome": 15974000000,
+          "operatingCashFlow": 17817000000,
+          "capitalExpenditure": -3773000000,
+          "totalDebt": 35463000000,
+          "cash": 9556000000
+        },
+        {
+          "fiscalYearEnd": "2026-06-30",
+          "dividendsPaid": -10232000000,
+          "netIncome": 16046000000,
+          "operatingCashFlow": 19556000000,
+          "capitalExpenditure": -4409000000,
+          "totalDebt": 35026000000,
+          "cash": 9942000000
+        }
+      ],
+      "latestPrice": 146.39,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-JNJ",
+      "symbol": "JNJ",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "currency": "USD",
+      "sharesOutstanding": 2409898597,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-12-31",
+          "dividendsPaid": -11682000000,
+          "netIncome": 17941000000,
+          "operatingCashFlow": 21194000000,
+          "capitalExpenditure": -4009000000,
+          "totalDebt": 39642000000,
+          "cash": 22281000000
+        },
+        {
+          "fiscalYearEnd": "2023-12-31",
+          "dividendsPaid": -11770000000,
+          "netIncome": 35153000000,
+          "operatingCashFlow": 22791000000,
+          "capitalExpenditure": -5013000000,
+          "totalDebt": 29332000000,
+          "cash": 22927000000
+        },
+        {
+          "fiscalYearEnd": "2024-12-31",
+          "dividendsPaid": -11823000000,
+          "netIncome": 14066000000,
+          "operatingCashFlow": 24266000000,
+          "capitalExpenditure": -6207000000,
+          "totalDebt": 36634000000,
+          "cash": 24522000000
+        },
+        {
+          "fiscalYearEnd": "2025-12-31",
+          "dividendsPaid": -12381000000,
+          "netIncome": 26804000000,
+          "operatingCashFlow": 24530000000,
+          "capitalExpenditure": -5217000000,
+          "totalDebt": 47933000000,
+          "cash": 20102000000
+        }
+      ],
+      "latestPrice": 269.99,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-CVX",
+      "symbol": "CVX",
+      "sector": "Energy",
+      "industry": "Oil & Gas Integrated",
+      "currency": "USD",
+      "sharesOutstanding": 1961603274,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-12-31",
+          "dividendsPaid": -10968000000,
+          "netIncome": 35465000000,
+          "operatingCashFlow": 49602000000,
+          "capitalExpenditure": -11974000000,
+          "totalDebt": 23339000000,
+          "cash": 17901000000
+        },
+        {
+          "fiscalYearEnd": "2023-12-31",
+          "dividendsPaid": -11336000000,
+          "netIncome": 21369000000,
+          "operatingCashFlow": 35609000000,
+          "capitalExpenditure": -15829000000,
+          "totalDebt": 20836000000,
+          "cash": 8223000000
+        },
+        {
+          "fiscalYearEnd": "2024-12-31",
+          "dividendsPaid": -11801000000,
+          "netIncome": 17661000000,
+          "operatingCashFlow": 31492000000,
+          "capitalExpenditure": -16448000000,
+          "totalDebt": 24541000000,
+          "cash": 6785000000
+        },
+        {
+          "fiscalYearEnd": "2025-12-31",
+          "dividendsPaid": -12751000000,
+          "netIncome": 12299000000,
+          "operatingCashFlow": 33939000000,
+          "capitalExpenditure": -17347000000,
+          "totalDebt": 40758000000,
+          "cash": 6297000000
+        }
+      ],
+      "latestPrice": 209.51,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-BAC",
+      "symbol": "BAC",
+      "sector": "Financial Services",
+      "industry": "Banks - Diversified",
+      "currency": "USD",
+      "sharesOutstanding": 6992748365,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-12-31",
+          "dividendsPaid": -8576000000,
+          "netIncome": 27528000000,
+          "operatingCashFlow": -6327000000,
+          "capitalExpenditure": null,
+          "totalDebt": 302914000000,
+          "cash": 237462000000
+        },
+        {
+          "fiscalYearEnd": "2023-12-31",
+          "dividendsPaid": -9087000000,
+          "netIncome": 26305000000,
+          "operatingCashFlow": 44982000000,
+          "capitalExpenditure": null,
+          "totalDebt": 334302000000,
+          "cash": 341419000000
+        },
+        {
+          "fiscalYearEnd": "2024-12-31",
+          "dividendsPaid": -9503000000,
+          "netIncome": 26973000000,
+          "operatingCashFlow": -8805000000,
+          "capitalExpenditure": null,
+          "totalDebt": 326670000000,
+          "cash": 296486000000
+        },
+        {
+          "fiscalYearEnd": "2025-12-31",
+          "dividendsPaid": -9563000000,
+          "netIncome": 30509000000,
+          "operatingCashFlow": 12613000000,
+          "capitalExpenditure": null,
+          "totalDebt": 365904000000,
+          "cash": 239319000000
+        }
+      ],
+      "latestPrice": 57.73,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-WMT",
+      "symbol": "WMT",
+      "sector": "Consumer Defensive",
+      "industry": "Discount Stores",
+      "currency": "USD",
+      "sharesOutstanding": 7933746241,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2023-01-31",
+          "dividendsPaid": -6114000000,
+          "netIncome": 11680000000,
+          "operatingCashFlow": 28841000000,
+          "capitalExpenditure": -16857000000,
+          "totalDebt": 58923000000,
+          "cash": 8625000000
+        },
+        {
+          "fiscalYearEnd": "2024-01-31",
+          "dividendsPaid": -6140000000,
+          "netIncome": 15511000000,
+          "operatingCashFlow": 35726000000,
+          "capitalExpenditure": -20606000000,
+          "totalDebt": 61321000000,
+          "cash": 9867000000
+        },
+        {
+          "fiscalYearEnd": "2025-01-31",
+          "dividendsPaid": -6688000000,
+          "netIncome": 19436000000,
+          "operatingCashFlow": 36443000000,
+          "capitalExpenditure": -23783000000,
+          "totalDebt": 60114000000,
+          "cash": 9037000000
+        },
+        {
+          "fiscalYearEnd": "2026-01-31",
+          "dividendsPaid": -7507000000,
+          "netIncome": 21893000000,
+          "operatingCashFlow": 41565000000,
+          "capitalExpenditure": -26642000000,
+          "totalDebt": 67095000000,
+          "cash": 10727000000
+        }
+      ],
+      "latestPrice": 106.73,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-PEP",
+      "symbol": "PEP",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Non-Alcoholic",
+      "currency": "USD",
+      "sharesOutstanding": 1366000000,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [
+        {
+          "fiscalYearEnd": "2022-12-31",
+          "dividendsPaid": -6172000000,
+          "netIncome": 8910000000,
+          "operatingCashFlow": 10811000000,
+          "capitalExpenditure": -5207000000,
+          "totalDebt": 39554000000,
+          "cash": 5348000000
+        },
+        {
+          "fiscalYearEnd": "2023-12-31",
+          "dividendsPaid": -6682000000,
+          "netIncome": 9074000000,
+          "operatingCashFlow": 13442000000,
+          "capitalExpenditure": -5518000000,
+          "totalDebt": 44661000000,
+          "cash": 10003000000
+        },
+        {
+          "fiscalYearEnd": "2024-12-31",
+          "dividendsPaid": -7229000000,
+          "netIncome": 9578000000,
+          "operatingCashFlow": 12507000000,
+          "capitalExpenditure": -5318000000,
+          "totalDebt": 44948000000,
+          "cash": 9266000000
+        },
+        {
+          "fiscalYearEnd": "2025-12-31",
+          "dividendsPaid": -7638000000,
+          "netIncome": 8240000000,
+          "operatingCashFlow": 12087000000,
+          "capitalExpenditure": -4415000000,
+          "totalDebt": 49901000000,
+          "cash": 9530000000
+        }
+      ],
+      "latestPrice": 129.75,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 4,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-XLE",
+      "symbol": "XLE",
+      "sector": null,
+      "industry": null,
+      "currency": null,
+      "sharesOutstanding": null,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [],
+      "latestPrice": 64.31,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 0,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    },
+    {
+      "id": "DS-SPY",
+      "symbol": "SPY",
+      "sector": null,
+      "industry": null,
+      "currency": null,
+      "sharesOutstanding": null,
+      "shareCountHistory": [],
+      "debtMaturities": [],
+      "annualStatements": [],
+      "latestPrice": 761.69,
+      "latestPriceDate": "2026-09-18",
+      "cacheCoverage": {
+        "annualYears": 0,
+        "shareCountTrendAvailable": false,
+        "debtMaturitiesAvailable": false
+      }
+    }
+  ]
+}

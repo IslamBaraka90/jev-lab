@@ -302,6 +302,7 @@ export function ReportPanel({ report, onSelect }) {
       {report.comparisonTable && <ComparisonTable table={report.comparisonTable} />}
       {report.qualityGrid && <QualityLeverageGrid chart={report.qualityGrid} />}
       {report.ratioRows?.length > 0 && <RatioCrossCheck rows={report.ratioRows} />}
+      {report.yieldSafety && <DividendSafetyScatter chart={report.yieldSafety} rows={report.dividendRows} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
@@ -389,6 +390,18 @@ function QualityLeverageGrid({ chart }) {
 
 function RatioCrossCheck({ rows }) {
   return <div className="table-scroll ratio-cross-check"><h4>Jev reading against computed ratios</h4><table className="data-table compact"><thead><tr><th>Symbol</th><th>Jev earnings</th><th>Computed earnings</th><th>Jev direction</th><th>Computed direction</th><th className="num">Cash conversion</th><th className="num">Debt / equity</th><th className="num">Net debt / EBITDA proxy</th><th>Gap</th></tr></thead><tbody>{rows.map((row) => <tr key={row.id} className={row.disagree ? 'ratio-disagree' : undefined}><th scope="row">{row.symbol}{row.disagree ? ' ⚠' : ''}</th><td>{row.modelEarnings}</td><td>{row.computedEarnings}</td><td>{row.modelDirection}</td><td>{row.computedDirection}</td><td className="num">{Number.isFinite(row.cashConversion) ? row.cashConversion.toFixed(2) : '–'}</td><td className="num">{Number.isFinite(row.debtToEquity) ? row.debtToEquity.toFixed(2) : '–'}</td><td className="num">{Number.isFinite(row.netDebtProxy) ? row.netDebtProxy.toFixed(2) : '–'}</td><td>{row.gap}</td></tr>)}</tbody></table></div>;
+}
+
+function DividendSafetyScatter({ chart, rows = [] }) {
+  const width = 600, height = 300, pad = 48;
+  const maxYield = Math.max(...chart.points.map((point) => point.yield), 1) * 1.1;
+  const x = (value) => pad + value / maxYield * (width - pad * 2);
+  const y = (value) => height - pad - value / 6 * (height - pad * 2);
+  return <div className="stack dividend-safety-chart" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="quality-grid" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.map((point) => `${point.label}: ${point.yield.toFixed(2)} percent yield, safety ${point.safety.toFixed(1)}`).join('; ')}`}>
+    {Array.from({ length: 7 }, (_, tick) => <g key={tick}><line className="report-axis" x1={pad} y1={y(tick)} x2={width - pad} y2={y(tick)} /><text className="report-axis-text" x={26} y={y(tick) + 4}>{tick}</text></g>)}
+    {chart.points.map((point) => <g key={point.id} className={point.highRisk ? 'quality-point gap' : 'quality-point'}><circle cx={x(point.yield)} cy={y(point.safety)} r="8"><title>{`${point.label}: ${point.yield.toFixed(2)}% yield, safety ${point.safety.toFixed(1)}/6`}</title></circle><text x={x(point.yield) + 10} y={y(point.safety) - 8}>{point.label}</text></g>)}
+    <text className="report-axis-text" x={width / 2} y={height - 4} textAnchor="middle">Computed yield →</text><text className="report-axis-text" x={pad} y={16}>Jev safety ↑</text>
+  </svg><details><summary>Yield and safety as a table</summary><div className="table-scroll details-content"><table className="data-table compact"><thead><tr><th>Symbol</th><th className="num">Jev safety</th><th className="num">Yield</th><th className="num">Earnings cover</th><th className="num">Cash cover</th><th className="num">Dividend growth</th><th>First pressure · Jev / computed</th><th>Debt-funded · Jev / computed</th></tr></thead><tbody>{rows.map((row) => <tr key={row.id}><th scope="row">{row.symbol}</th><td className="num">{row.safety.toFixed(1)} / 6</td><td className="num">{Number.isFinite(row.yield) ? `${row.yield.toFixed(2)}%` : '–'}</td><td className="num">{Number.isFinite(row.earningsCover) ? `${row.earningsCover.toFixed(2)}×` : '–'}</td><td className="num">{Number.isFinite(row.cashCover) ? `${row.cashCover.toFixed(2)}×` : '–'}</td><td className="num">{Number.isFinite(row.growth) ? `${row.growth.toFixed(1)}%` : '–'}</td><td>{row.modelBreak} / {row.computedBreak}</td><td>{row.debtFunded ? 'Yes' : 'No'} / {row.computedDebtFunded === null ? '–' : row.computedDebtFunded ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></details></div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {

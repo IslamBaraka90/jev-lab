@@ -790,3 +790,4 @@
 .quality-point text { fill: var(--text); font-size: 10px; }
 .ratio-cross-check table { min-width: 1120px; }
 .ratio-cross-check tr.ratio-disagree { background: color-mix(in srgb, var(--warningBg) 58%, transparent); }
+.dividend-safety-chart table { min-width: 980px; }
