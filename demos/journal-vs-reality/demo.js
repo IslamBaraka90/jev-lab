@@ -215,7 +215,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'table',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.symbol} · ${item.sizeLabel} · ${item.resultPercent > 0 ? '+' : ''}${item.resultPercent}%`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
