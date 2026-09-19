@@ -1,0 +1,1442 @@
+[
+  {
+    "checkId": "P-ALPHA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ALPHA-R02",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ALPHA-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ALPHA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ALPHA-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ALPHA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ALPHA-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ALPHA-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ALPHA-R09",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ALPHA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ALPHA-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ALPHA-R12",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ALPHA-R13",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ALPHA-R14",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ALPHA-R15",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ALPHA-R16",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ALPHA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ALPHA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ALPHA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ALPHA-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-BETA-R01",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-BETA-R02",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-BETA-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-BETA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-BETA-R05",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-BETA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-BETA-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-BETA-R08",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-BETA-R09",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-BETA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-BETA-R11",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-BETA-R12",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-BETA-R13",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-BETA-R14",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-BETA-R15",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-BETA-R16",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-BETA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-BETA-R18",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-BETA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-BETA-R20",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-GAMMA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-GAMMA-R02",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-GAMMA-R03",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-GAMMA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-GAMMA-R05",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-GAMMA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-GAMMA-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-GAMMA-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-GAMMA-R09",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-GAMMA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-GAMMA-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-GAMMA-R12",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-GAMMA-R13",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-GAMMA-R14",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-GAMMA-R15",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-GAMMA-R16",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-GAMMA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-GAMMA-R18",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-GAMMA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-GAMMA-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-DELTA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-DELTA-R02",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-DELTA-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-DELTA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-DELTA-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-DELTA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-DELTA-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-DELTA-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-DELTA-R09",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-DELTA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-DELTA-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-DELTA-R12",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-DELTA-R13",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-DELTA-R14",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-DELTA-R15",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-DELTA-R16",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-DELTA-R17",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-DELTA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-DELTA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-DELTA-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-EPSILON-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-EPSILON-R02",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-EPSILON-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-EPSILON-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-EPSILON-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-EPSILON-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-EPSILON-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-EPSILON-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-EPSILON-R09",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-EPSILON-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-EPSILON-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-EPSILON-R12",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-EPSILON-R13",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-EPSILON-R14",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-EPSILON-R15",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-EPSILON-R16",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-EPSILON-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-EPSILON-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-EPSILON-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-EPSILON-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ZETA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ZETA-R02",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ZETA-R03",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ZETA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ZETA-R05",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ZETA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ZETA-R07",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ZETA-R08",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ZETA-R09",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ZETA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ZETA-R11",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ZETA-R12",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ZETA-R13",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ZETA-R14",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ZETA-R15",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ZETA-R16",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ZETA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ZETA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ZETA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ZETA-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ETA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ETA-R02",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ETA-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-ETA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ETA-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ETA-R06",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ETA-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ETA-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ETA-R09",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-ETA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ETA-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ETA-R12",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-ETA-R13",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ETA-R14",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ETA-R15",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-ETA-R16",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ETA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ETA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-ETA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-ETA-R20",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-THETA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-THETA-R02",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-THETA-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-THETA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-THETA-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-THETA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-THETA-R07",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-THETA-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-THETA-R09",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-THETA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-THETA-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-THETA-R12",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-THETA-R13",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-THETA-R14",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-THETA-R15",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-THETA-R16",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-THETA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-THETA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-THETA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-THETA-R20",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-IOTA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-IOTA-R02",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-IOTA-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-IOTA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-IOTA-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-IOTA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-IOTA-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-IOTA-R08",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-IOTA-R09",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-IOTA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-IOTA-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-IOTA-R12",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-IOTA-R13",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-IOTA-R14",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-IOTA-R15",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-IOTA-R16",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-IOTA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-IOTA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-IOTA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-IOTA-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-KAPPA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-KAPPA-R02",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-KAPPA-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-KAPPA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-KAPPA-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-KAPPA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-KAPPA-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-KAPPA-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-KAPPA-R09",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-KAPPA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-KAPPA-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-KAPPA-R12",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-KAPPA-R13",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-KAPPA-R14",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-KAPPA-R15",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-KAPPA-R16",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-KAPPA-R17",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-KAPPA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-KAPPA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-KAPPA-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-LAMBDA-R01",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-LAMBDA-R02",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-LAMBDA-R03",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-LAMBDA-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-LAMBDA-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-LAMBDA-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-LAMBDA-R07",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-LAMBDA-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-LAMBDA-R09",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-LAMBDA-R10",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-LAMBDA-R11",
+    "breach": false,
+    "kind": "depends how you read it",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-LAMBDA-R12",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-LAMBDA-R13",
+    "breach": true,
+    "kind": "breach",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-LAMBDA-R14",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-LAMBDA-R15",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-LAMBDA-R16",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-LAMBDA-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-LAMBDA-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-LAMBDA-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-LAMBDA-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-MU-R01",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-MU-R02",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-MU-R03",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  },
+  {
+    "checkId": "P-MU-R04",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-MU-R05",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-MU-R06",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-MU-R07",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-MU-R08",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-MU-R09",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "CREDIT_QUALITY"
+  },
+  {
+    "checkId": "P-MU-R10",
+    "breach": false,
+    "kind": "near miss",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-MU-R11",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-MU-R12",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LIQUIDITY"
+  },
+  {
+    "checkId": "P-MU-R13",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-MU-R14",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-MU-R15",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "LEVERAGE"
+  },
+  {
+    "checkId": "P-MU-R16",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-MU-R17",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-MU-R18",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "PROHIBITED"
+  },
+  {
+    "checkId": "P-MU-R19",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SECTOR"
+  },
+  {
+    "checkId": "P-MU-R20",
+    "breach": false,
+    "kind": "clear pass",
+    "ruleKind": "SINGLE_NAME"
+  }
+]
