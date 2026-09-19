@@ -43,6 +43,7 @@ export const GENERATORS = {
   'post-trade-review': () => import('./post-trade-review.js'),
   'trade-feature-analysis': () => import('./trade-feature-analysis.js'),
   'trader-behaviour': () => import('./trader-behaviour.js'),
+  'missed-trades': () => import('./missed-trades.js'),
   'execution-quality': () => import('./execution-quality.js'),
   'journal-vs-reality': () => import('./journal-vs-reality.js'),
   'goal-screening': () => import('./goal-screening.js'),

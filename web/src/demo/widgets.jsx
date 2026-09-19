@@ -298,6 +298,8 @@ export function ReportPanel({ report, onSelect }) {
       {report.costs?.length > 0 && <CostBars items={report.costs} />}
       {report.equityCurve && <EquityCurve chart={report.equityCurve} />}
       {report.sizeScatter && <SizeScatter chart={report.sizeScatter} />}
+      {report.breakdowns?.map((table) => <BreakdownTable key={table.title} table={table} />)}
+      {report.comparisonTable && <ComparisonTable table={report.comparisonTable} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
@@ -329,6 +331,14 @@ function SizeScatter({ chart }) {
   const x = (value) => 54 + value / max * (width - 80);
   const y = (value) => height - 36 - value / max * (height - 58);
   return <div className="stack" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="behaviour-report-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.length} trades; the diagonal represents actual size equal to the rolling norm.`}><line className="report-axis" x1="54" y1={height - 36} x2={width - 22} y2={height - 36} /><line className="report-axis" x1="54" y1="20" x2="54" y2={height - 36} /><line className="report-norm-line" x1="54" y1={height - 36} x2={x(max)} y2={y(max)} />{chart.points.map((point, index) => <circle key={`${point.label}-${index}`} className={point.flagged ? 'scatter-point flagged' : 'scatter-point'} cx={x(point.norm)} cy={y(point.value)} r="2.4"><title>{`${point.label}: norm ${point.norm}, actual ${point.value}`}</title></circle>)}<text className="report-axis-text" x="54" y={height - 10}>Rolling median size →</text><text className="report-axis-text" x="58" y="14">Actual size ↑</text></svg></div>;
+}
+
+function BreakdownTable({ table }) {
+  return <div className="table-scroll"><h4>{table.title}</h4><table className="data-table compact"><thead><tr><th>Group</th><th className="num">Setups</th><th className="num">Missed</th><th className="num">Miss rate</th><th className="num">Missed outcome</th></tr></thead><tbody>{table.rows.map((row) => <tr key={row.label}><th scope="row">{row.label}</th><td className="num">{row.total}</td><td className="num">{row.missed}</td><td className="num">{(row.rate * 100).toFixed(1)}%</td><td className="num">{row.outcome.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}</td></tr>)}</tbody></table></div>;
+}
+
+function ComparisonTable({ table }) {
+  return <div className="table-scroll"><h4>{table.title}</h4><table className="data-table compact"><thead><tr><th>Measure</th>{table.columns.map((column) => <th key={column.label} className="num">{column.label}</th>)}</tr></thead><tbody>{table.rows.map((row) => <tr key={row.key}><th scope="row">{row.label}</th>{table.columns.map((column) => <td key={column.label} className="num">{row.format(column[row.key])}</td>)}</tr>)}</tbody></table></div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {

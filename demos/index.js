@@ -33,6 +33,7 @@ import incomePlanning from './income-planning/demo.js';
 import postTradeReview from './post-trade-review/demo.js';
 import tradeFeatureAnalysis from './trade-feature-analysis/demo.js';
 import traderBehaviour from './trader-behaviour/demo.js';
+import missedTrades from './missed-trades/demo.js';
 import executionQuality from './execution-quality/demo.js';
 import journalVsReality from './journal-vs-reality/demo.js';
 import goalScreening from './goal-screening/demo.js';
@@ -90,6 +91,7 @@ export const DEMOS = [
   postTradeReview,
   tradeFeatureAnalysis,
   traderBehaviour,
+  missedTrades,
   executionQuality,
   journalVsReality,
   goalScreening,

@@ -1,0 +1,2162 @@
+[
+  {
+    "setupId": "MT-001",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": -2.34,
+    "outcomeUsd": -234,
+    "outcomeDate": "2023-12-05"
+  },
+  {
+    "setupId": "MT-002",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": 2.9,
+    "outcomeUsd": 290,
+    "outcomeDate": "2023-12-13"
+  },
+  {
+    "setupId": "MT-003",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": -1.69,
+    "outcomeUsd": -169,
+    "outcomeDate": "2023-12-13"
+  },
+  {
+    "setupId": "MT-004",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": 0.2,
+    "outcomeUsd": 20,
+    "outcomeDate": "2023-12-19"
+  },
+  {
+    "setupId": "MT-005",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": 0.01,
+    "outcomeUsd": 1,
+    "outcomeDate": "2023-12-19"
+  },
+  {
+    "setupId": "MT-006",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": 0.62,
+    "outcomeUsd": 62,
+    "outcomeDate": "2023-12-26"
+  },
+  {
+    "setupId": "MT-007",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": -0.08,
+    "outcomeUsd": -8,
+    "outcomeDate": "2023-12-27"
+  },
+  {
+    "setupId": "MT-008",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": 0.24,
+    "outcomeUsd": 24,
+    "outcomeDate": "2023-12-28"
+  },
+  {
+    "setupId": "MT-009",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": 0.95,
+    "outcomeUsd": 95,
+    "outcomeDate": "2023-12-29"
+  },
+  {
+    "setupId": "MT-010",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "EARNINGS_NEXT_DAY",
+    "forwardReturnPercent": -1.43,
+    "outcomeUsd": -143,
+    "outcomeDate": "2024-01-04"
+  },
+  {
+    "setupId": "MT-011",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.32,
+    "outcomeUsd": 432,
+    "outcomeDate": "2024-01-08"
+  },
+  {
+    "setupId": "MT-012",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.37,
+    "outcomeUsd": -437,
+    "outcomeDate": "2024-01-09"
+  },
+  {
+    "setupId": "MT-013",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.97,
+    "outcomeUsd": 397,
+    "outcomeDate": "2024-01-09"
+  },
+  {
+    "setupId": "MT-014",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.55,
+    "outcomeUsd": -355,
+    "outcomeDate": "2024-01-10"
+  },
+  {
+    "setupId": "MT-015",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.8,
+    "outcomeUsd": 280,
+    "outcomeDate": "2024-01-10"
+  },
+  {
+    "setupId": "MT-016",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.91,
+    "outcomeUsd": -391,
+    "outcomeDate": "2024-01-11"
+  },
+  {
+    "setupId": "MT-017",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.87,
+    "outcomeUsd": 187,
+    "outcomeDate": "2024-01-11"
+  },
+  {
+    "setupId": "MT-018",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.96,
+    "outcomeUsd": -396,
+    "outcomeDate": "2024-01-12"
+  },
+  {
+    "setupId": "MT-019",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 16.36,
+    "outcomeUsd": 1636,
+    "outcomeDate": "2024-01-17"
+  },
+  {
+    "setupId": "MT-020",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.27,
+    "outcomeUsd": -227,
+    "outcomeDate": "2024-01-22"
+  },
+  {
+    "setupId": "MT-021",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.87,
+    "outcomeUsd": -87,
+    "outcomeDate": "2024-01-23"
+  },
+  {
+    "setupId": "MT-022",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": -2.98,
+    "outcomeUsd": -298,
+    "outcomeDate": "2024-01-23"
+  },
+  {
+    "setupId": "MT-023",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": 2.18,
+    "outcomeUsd": 218,
+    "outcomeDate": "2024-01-29"
+  },
+  {
+    "setupId": "MT-024",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 7.13,
+    "outcomeUsd": 713,
+    "outcomeDate": "2024-02-02"
+  },
+  {
+    "setupId": "MT-025",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 7,
+    "outcomeUsd": 700,
+    "outcomeDate": "2024-02-05"
+  },
+  {
+    "setupId": "MT-026",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": -1.1,
+    "outcomeUsd": -110,
+    "outcomeDate": "2024-02-06"
+  },
+  {
+    "setupId": "MT-027",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.05,
+    "outcomeUsd": -5,
+    "outcomeDate": "2024-02-12"
+  },
+  {
+    "setupId": "MT-028",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.17,
+    "outcomeUsd": 217,
+    "outcomeDate": "2024-02-21"
+  },
+  {
+    "setupId": "MT-029",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.66,
+    "outcomeUsd": -266,
+    "outcomeDate": "2024-02-22"
+  },
+  {
+    "setupId": "MT-030",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.93,
+    "outcomeUsd": 193,
+    "outcomeDate": "2024-02-22"
+  },
+  {
+    "setupId": "MT-031",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.08,
+    "outcomeUsd": -308,
+    "outcomeDate": "2024-02-23"
+  },
+  {
+    "setupId": "MT-032",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.29,
+    "outcomeUsd": 229,
+    "outcomeDate": "2024-02-23"
+  },
+  {
+    "setupId": "MT-033",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.07,
+    "outcomeUsd": -407,
+    "outcomeDate": "2024-02-26"
+  },
+  {
+    "setupId": "MT-034",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.1,
+    "outcomeUsd": -110,
+    "outcomeDate": "2024-02-28"
+  },
+  {
+    "setupId": "MT-035",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.2,
+    "outcomeUsd": 420,
+    "outcomeDate": "2024-02-29"
+  },
+  {
+    "setupId": "MT-036",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.65,
+    "outcomeUsd": 365,
+    "outcomeDate": "2024-02-29"
+  },
+  {
+    "setupId": "MT-037",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.2,
+    "outcomeUsd": 220,
+    "outcomeDate": "2024-03-01"
+  },
+  {
+    "setupId": "MT-038",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 6.78,
+    "outcomeUsd": 678,
+    "outcomeDate": "2024-03-11"
+  },
+  {
+    "setupId": "MT-039",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.74,
+    "outcomeUsd": -74,
+    "outcomeDate": "2024-03-11"
+  },
+  {
+    "setupId": "MT-040",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.18,
+    "outcomeUsd": -18,
+    "outcomeDate": "2024-03-12"
+  },
+  {
+    "setupId": "MT-041",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.91,
+    "outcomeUsd": 191,
+    "outcomeDate": "2024-03-12"
+  },
+  {
+    "setupId": "MT-042",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.02,
+    "outcomeUsd": 102,
+    "outcomeDate": "2024-03-13"
+  },
+  {
+    "setupId": "MT-043",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.81,
+    "outcomeUsd": 181,
+    "outcomeDate": "2024-03-13"
+  },
+  {
+    "setupId": "MT-044",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.79,
+    "outcomeUsd": 179,
+    "outcomeDate": "2024-03-15"
+  },
+  {
+    "setupId": "MT-045",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.59,
+    "outcomeUsd": 159,
+    "outcomeDate": "2024-03-15"
+  },
+  {
+    "setupId": "MT-046",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.96,
+    "outcomeUsd": -196,
+    "outcomeDate": "2024-03-21"
+  },
+  {
+    "setupId": "MT-047",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.94,
+    "outcomeUsd": 494,
+    "outcomeDate": "2024-03-21"
+  },
+  {
+    "setupId": "MT-048",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.03,
+    "outcomeUsd": 3,
+    "outcomeDate": "2024-04-02"
+  },
+  {
+    "setupId": "MT-049",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.66,
+    "outcomeUsd": -66,
+    "outcomeDate": "2024-04-03"
+  },
+  {
+    "setupId": "MT-050",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.06,
+    "outcomeUsd": -206,
+    "outcomeDate": "2024-04-10"
+  },
+  {
+    "setupId": "MT-051",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.26,
+    "outcomeUsd": -326,
+    "outcomeDate": "2024-04-18"
+  },
+  {
+    "setupId": "MT-052",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.95,
+    "outcomeUsd": 295,
+    "outcomeDate": "2024-04-19"
+  },
+  {
+    "setupId": "MT-053",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.06,
+    "outcomeUsd": 406,
+    "outcomeDate": "2024-04-22"
+  },
+  {
+    "setupId": "MT-054",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.22,
+    "outcomeUsd": -122,
+    "outcomeDate": "2024-04-24"
+  },
+  {
+    "setupId": "MT-055",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.97,
+    "outcomeUsd": 397,
+    "outcomeDate": "2024-05-07"
+  },
+  {
+    "setupId": "MT-056",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4,
+    "outcomeUsd": 400,
+    "outcomeDate": "2024-05-14"
+  },
+  {
+    "setupId": "MT-057",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.45,
+    "outcomeUsd": 145,
+    "outcomeDate": "2024-05-14"
+  },
+  {
+    "setupId": "MT-058",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 5.3,
+    "outcomeUsd": 530,
+    "outcomeDate": "2024-05-15"
+  },
+  {
+    "setupId": "MT-059",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 8.07,
+    "outcomeUsd": 807,
+    "outcomeDate": "2024-05-17"
+  },
+  {
+    "setupId": "MT-060",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 7.2,
+    "outcomeUsd": 720,
+    "outcomeDate": "2024-05-20"
+  },
+  {
+    "setupId": "MT-061",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 8.45,
+    "outcomeUsd": 845,
+    "outcomeDate": "2024-05-29"
+  },
+  {
+    "setupId": "MT-062",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 8.46,
+    "outcomeUsd": 846,
+    "outcomeDate": "2024-05-30"
+  },
+  {
+    "setupId": "MT-063",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.2,
+    "outcomeUsd": -320,
+    "outcomeDate": "2024-06-03"
+  },
+  {
+    "setupId": "MT-064",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.83,
+    "outcomeUsd": 183,
+    "outcomeDate": "2024-06-04"
+  },
+  {
+    "setupId": "MT-065",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.75,
+    "outcomeUsd": -175,
+    "outcomeDate": "2024-06-07"
+  },
+  {
+    "setupId": "MT-066",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.95,
+    "outcomeUsd": 95,
+    "outcomeDate": "2024-06-07"
+  },
+  {
+    "setupId": "MT-067",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.22,
+    "outcomeUsd": 122,
+    "outcomeDate": "2024-06-10"
+  },
+  {
+    "setupId": "MT-068",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.63,
+    "outcomeUsd": 163,
+    "outcomeDate": "2024-06-13"
+  },
+  {
+    "setupId": "MT-069",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.08,
+    "outcomeUsd": -108,
+    "outcomeDate": "2024-06-18"
+  },
+  {
+    "setupId": "MT-070",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.98,
+    "outcomeUsd": 98,
+    "outcomeDate": "2024-06-20"
+  },
+  {
+    "setupId": "MT-071",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.54,
+    "outcomeUsd": -54,
+    "outcomeDate": "2024-06-24"
+  },
+  {
+    "setupId": "MT-072",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.77,
+    "outcomeUsd": -77,
+    "outcomeDate": "2024-06-25"
+  },
+  {
+    "setupId": "MT-073",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": -0.41,
+    "outcomeUsd": -41,
+    "outcomeDate": "2024-06-27"
+  },
+  {
+    "setupId": "MT-074",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.64,
+    "outcomeUsd": 164,
+    "outcomeDate": "2024-06-27"
+  },
+  {
+    "setupId": "MT-075",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.05,
+    "outcomeUsd": 105,
+    "outcomeDate": "2024-06-28"
+  },
+  {
+    "setupId": "MT-076",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.9,
+    "outcomeUsd": -90,
+    "outcomeDate": "2024-06-28"
+  },
+  {
+    "setupId": "MT-077",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.59,
+    "outcomeUsd": 359,
+    "outcomeDate": "2024-07-02"
+  },
+  {
+    "setupId": "MT-078",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.86,
+    "outcomeUsd": 286,
+    "outcomeDate": "2024-07-08"
+  },
+  {
+    "setupId": "MT-079",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.01,
+    "outcomeUsd": -1,
+    "outcomeDate": "2024-07-12"
+  },
+  {
+    "setupId": "MT-080",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.97,
+    "outcomeUsd": 397,
+    "outcomeDate": "2024-07-15"
+  },
+  {
+    "setupId": "MT-081",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.12,
+    "outcomeUsd": 312,
+    "outcomeDate": "2024-07-16"
+  },
+  {
+    "setupId": "MT-082",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.56,
+    "outcomeUsd": 156,
+    "outcomeDate": "2024-07-16"
+  },
+  {
+    "setupId": "MT-083",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.66,
+    "outcomeUsd": 166,
+    "outcomeDate": "2024-07-16"
+  },
+  {
+    "setupId": "MT-084",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.94,
+    "outcomeUsd": 294,
+    "outcomeDate": "2024-07-18"
+  },
+  {
+    "setupId": "MT-085",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -6.28,
+    "outcomeUsd": -628,
+    "outcomeDate": "2024-07-19"
+  },
+  {
+    "setupId": "MT-086",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -11.87,
+    "outcomeUsd": -1187,
+    "outcomeDate": "2024-07-25"
+  },
+  {
+    "setupId": "MT-087",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -6.24,
+    "outcomeUsd": -624,
+    "outcomeDate": "2024-07-26"
+  },
+  {
+    "setupId": "MT-088",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -6,
+    "outcomeUsd": -600,
+    "outcomeDate": "2024-07-29"
+  },
+  {
+    "setupId": "MT-089",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -7.85,
+    "outcomeUsd": -785,
+    "outcomeDate": "2024-08-05"
+  },
+  {
+    "setupId": "MT-090",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.88,
+    "outcomeUsd": 88,
+    "outcomeDate": "2024-08-06"
+  },
+  {
+    "setupId": "MT-091",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -8.14,
+    "outcomeUsd": -814,
+    "outcomeDate": "2024-08-09"
+  },
+  {
+    "setupId": "MT-092",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.32,
+    "outcomeUsd": -132,
+    "outcomeDate": "2024-08-12"
+  },
+  {
+    "setupId": "MT-093",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.86,
+    "outcomeUsd": 486,
+    "outcomeDate": "2024-08-15"
+  },
+  {
+    "setupId": "MT-094",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.58,
+    "outcomeUsd": -158,
+    "outcomeDate": "2024-08-21"
+  },
+  {
+    "setupId": "MT-095",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.88,
+    "outcomeUsd": 288,
+    "outcomeDate": "2024-08-27"
+  },
+  {
+    "setupId": "MT-096",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.43,
+    "outcomeUsd": 343,
+    "outcomeDate": "2024-08-28"
+  },
+  {
+    "setupId": "MT-097",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.26,
+    "outcomeUsd": 126,
+    "outcomeDate": "2024-08-29"
+  },
+  {
+    "setupId": "MT-098",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.17,
+    "outcomeUsd": 217,
+    "outcomeDate": "2024-08-30"
+  },
+  {
+    "setupId": "MT-099",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.91,
+    "outcomeUsd": 191,
+    "outcomeDate": "2024-09-12"
+  },
+  {
+    "setupId": "MT-100",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.92,
+    "outcomeUsd": 292,
+    "outcomeDate": "2024-09-19"
+  },
+  {
+    "setupId": "MT-101",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.01,
+    "outcomeUsd": 101,
+    "outcomeDate": "2024-09-23"
+  },
+  {
+    "setupId": "MT-102",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.61,
+    "outcomeUsd": 361,
+    "outcomeDate": "2024-09-24"
+  },
+  {
+    "setupId": "MT-103",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.11,
+    "outcomeUsd": 411,
+    "outcomeDate": "2024-09-26"
+  },
+  {
+    "setupId": "MT-104",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.83,
+    "outcomeUsd": -83,
+    "outcomeDate": "2024-10-01"
+  },
+  {
+    "setupId": "MT-105",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.62,
+    "outcomeUsd": -262,
+    "outcomeDate": "2024-10-03"
+  },
+  {
+    "setupId": "MT-106",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.83,
+    "outcomeUsd": -383,
+    "outcomeDate": "2024-10-07"
+  },
+  {
+    "setupId": "MT-107",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 6.38,
+    "outcomeUsd": 638,
+    "outcomeDate": "2024-10-09"
+  },
+  {
+    "setupId": "MT-108",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.09,
+    "outcomeUsd": -309,
+    "outcomeDate": "2024-10-11"
+  },
+  {
+    "setupId": "MT-109",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.01,
+    "outcomeUsd": 301,
+    "outcomeDate": "2024-10-25"
+  },
+  {
+    "setupId": "MT-110",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": 0.53,
+    "outcomeUsd": 53,
+    "outcomeDate": "2024-10-29"
+  },
+  {
+    "setupId": "MT-111",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.22,
+    "outcomeUsd": -422,
+    "outcomeDate": "2024-11-01"
+  },
+  {
+    "setupId": "MT-112",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.22,
+    "outcomeUsd": -122,
+    "outcomeDate": "2024-11-04"
+  },
+  {
+    "setupId": "MT-113",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.44,
+    "outcomeUsd": -144,
+    "outcomeDate": "2024-11-05"
+  },
+  {
+    "setupId": "MT-114",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.34,
+    "outcomeUsd": -134,
+    "outcomeDate": "2024-11-07"
+  },
+  {
+    "setupId": "MT-115",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.74,
+    "outcomeUsd": -474,
+    "outcomeDate": "2024-11-07"
+  },
+  {
+    "setupId": "MT-116",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.96,
+    "outcomeUsd": 396,
+    "outcomeDate": "2024-11-11"
+  },
+  {
+    "setupId": "MT-117",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.16,
+    "outcomeUsd": -216,
+    "outcomeDate": "2024-11-13"
+  },
+  {
+    "setupId": "MT-118",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 11.95,
+    "outcomeUsd": 1195,
+    "outcomeDate": "2024-11-15"
+  },
+  {
+    "setupId": "MT-119",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 10.82,
+    "outcomeUsd": 1082,
+    "outcomeDate": "2024-11-19"
+  },
+  {
+    "setupId": "MT-120",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 9.75,
+    "outcomeUsd": 975,
+    "outcomeDate": "2024-11-19"
+  },
+  {
+    "setupId": "MT-121",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.36,
+    "outcomeUsd": -236,
+    "outcomeDate": "2024-12-02"
+  },
+  {
+    "setupId": "MT-122",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -6.19,
+    "outcomeUsd": -619,
+    "outcomeDate": "2024-12-18"
+  },
+  {
+    "setupId": "MT-123",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -5.35,
+    "outcomeUsd": -535,
+    "outcomeDate": "2024-12-18"
+  },
+  {
+    "setupId": "MT-124",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.26,
+    "outcomeUsd": -326,
+    "outcomeDate": "2025-01-07"
+  },
+  {
+    "setupId": "MT-125",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.64,
+    "outcomeUsd": -464,
+    "outcomeDate": "2025-01-10"
+  },
+  {
+    "setupId": "MT-126",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.21,
+    "outcomeUsd": 21,
+    "outcomeDate": "2025-02-07"
+  },
+  {
+    "setupId": "MT-127",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.21,
+    "outcomeUsd": -121,
+    "outcomeDate": "2025-02-12"
+  },
+  {
+    "setupId": "MT-128",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": 0.69,
+    "outcomeUsd": 69,
+    "outcomeDate": "2025-02-18"
+  },
+  {
+    "setupId": "MT-129",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.45,
+    "outcomeUsd": -145,
+    "outcomeDate": "2025-03-03"
+  },
+  {
+    "setupId": "MT-130",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": 4.46,
+    "outcomeUsd": 446,
+    "outcomeDate": "2025-03-06"
+  },
+  {
+    "setupId": "MT-131",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.59,
+    "outcomeUsd": -159,
+    "outcomeDate": "2025-03-12"
+  },
+  {
+    "setupId": "MT-132",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.3,
+    "outcomeUsd": -30,
+    "outcomeDate": "2025-03-12"
+  },
+  {
+    "setupId": "MT-133",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -10.1,
+    "outcomeUsd": -1010,
+    "outcomeDate": "2025-03-17"
+  },
+  {
+    "setupId": "MT-134",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -8.7,
+    "outcomeUsd": -870,
+    "outcomeDate": "2025-03-21"
+  },
+  {
+    "setupId": "MT-135",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.55,
+    "outcomeUsd": 55,
+    "outcomeDate": "2025-03-28"
+  },
+  {
+    "setupId": "MT-136",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.93,
+    "outcomeUsd": -93,
+    "outcomeDate": "2025-03-31"
+  },
+  {
+    "setupId": "MT-137",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.49,
+    "outcomeUsd": 49,
+    "outcomeDate": "2025-05-16"
+  },
+  {
+    "setupId": "MT-138",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.32,
+    "outcomeUsd": 32,
+    "outcomeDate": "2025-05-19"
+  },
+  {
+    "setupId": "MT-139",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.04,
+    "outcomeUsd": -4,
+    "outcomeDate": "2025-05-20"
+  },
+  {
+    "setupId": "MT-140",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.42,
+    "outcomeUsd": 142,
+    "outcomeDate": "2025-05-28"
+  },
+  {
+    "setupId": "MT-141",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": 0.77,
+    "outcomeUsd": 77,
+    "outcomeDate": "2025-06-03"
+  },
+  {
+    "setupId": "MT-142",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.95,
+    "outcomeUsd": -195,
+    "outcomeDate": "2025-06-04"
+  },
+  {
+    "setupId": "MT-143",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.48,
+    "outcomeUsd": -148,
+    "outcomeDate": "2025-06-11"
+  },
+  {
+    "setupId": "MT-144",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.98,
+    "outcomeUsd": 498,
+    "outcomeDate": "2025-06-20"
+  },
+  {
+    "setupId": "MT-145",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.82,
+    "outcomeUsd": -182,
+    "outcomeDate": "2025-06-23"
+  },
+  {
+    "setupId": "MT-146",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.41,
+    "outcomeUsd": 41,
+    "outcomeDate": "2025-06-23"
+  },
+  {
+    "setupId": "MT-147",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.56,
+    "outcomeUsd": 56,
+    "outcomeDate": "2025-06-24"
+  },
+  {
+    "setupId": "MT-148",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 9.42,
+    "outcomeUsd": 942,
+    "outcomeDate": "2025-06-30"
+  },
+  {
+    "setupId": "MT-149",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 8.42,
+    "outcomeUsd": 842,
+    "outcomeDate": "2025-07-01"
+  },
+  {
+    "setupId": "MT-150",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 10.13,
+    "outcomeUsd": 1013,
+    "outcomeDate": "2025-07-02"
+  },
+  {
+    "setupId": "MT-151",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.75,
+    "outcomeUsd": 375,
+    "outcomeDate": "2025-07-14"
+  },
+  {
+    "setupId": "MT-152",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 5.24,
+    "outcomeUsd": 524,
+    "outcomeDate": "2025-07-15"
+  },
+  {
+    "setupId": "MT-153",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.53,
+    "outcomeUsd": 53,
+    "outcomeDate": "2025-07-31"
+  },
+  {
+    "setupId": "MT-154",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.02,
+    "outcomeUsd": -2,
+    "outcomeDate": "2025-07-31"
+  },
+  {
+    "setupId": "MT-155",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 8.7,
+    "outcomeUsd": 870,
+    "outcomeDate": "2025-08-12"
+  },
+  {
+    "setupId": "MT-156",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.84,
+    "outcomeUsd": -384,
+    "outcomeDate": "2025-08-13"
+  },
+  {
+    "setupId": "MT-157",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.82,
+    "outcomeUsd": -382,
+    "outcomeDate": "2025-08-14"
+  },
+  {
+    "setupId": "MT-158",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.68,
+    "outcomeUsd": -68,
+    "outcomeDate": "2025-08-19"
+  },
+  {
+    "setupId": "MT-159",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.24,
+    "outcomeUsd": -24,
+    "outcomeDate": "2025-08-19"
+  },
+  {
+    "setupId": "MT-160",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.29,
+    "outcomeUsd": 29,
+    "outcomeDate": "2025-08-20"
+  },
+  {
+    "setupId": "MT-161",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.95,
+    "outcomeUsd": 195,
+    "outcomeDate": "2025-08-26"
+  },
+  {
+    "setupId": "MT-162",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.71,
+    "outcomeUsd": -171,
+    "outcomeDate": "2025-08-28"
+  },
+  {
+    "setupId": "MT-163",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 8.1,
+    "outcomeUsd": 810,
+    "outcomeDate": "2025-08-29"
+  },
+  {
+    "setupId": "MT-164",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.59,
+    "outcomeUsd": -259,
+    "outcomeDate": "2025-08-29"
+  },
+  {
+    "setupId": "MT-165",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -5.44,
+    "outcomeUsd": -544,
+    "outcomeDate": "2025-09-08"
+  },
+  {
+    "setupId": "MT-166",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.3,
+    "outcomeUsd": -130,
+    "outcomeDate": "2025-09-12"
+  },
+  {
+    "setupId": "MT-167",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 6.93,
+    "outcomeUsd": 693,
+    "outcomeDate": "2025-09-19"
+  },
+  {
+    "setupId": "MT-168",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.98,
+    "outcomeUsd": 198,
+    "outcomeDate": "2025-09-22"
+  },
+  {
+    "setupId": "MT-169",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.21,
+    "outcomeUsd": -21,
+    "outcomeDate": "2025-09-23"
+  },
+  {
+    "setupId": "MT-170",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.13,
+    "outcomeUsd": -313,
+    "outcomeDate": "2025-09-24"
+  },
+  {
+    "setupId": "MT-171",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.94,
+    "outcomeUsd": 194,
+    "outcomeDate": "2025-09-26"
+  },
+  {
+    "setupId": "MT-172",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.42,
+    "outcomeUsd": -342,
+    "outcomeDate": "2025-09-26"
+  },
+  {
+    "setupId": "MT-173",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.77,
+    "outcomeUsd": -77,
+    "outcomeDate": "2025-09-29"
+  },
+  {
+    "setupId": "MT-174",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.38,
+    "outcomeUsd": 238,
+    "outcomeDate": "2025-09-29"
+  },
+  {
+    "setupId": "MT-175",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.78,
+    "outcomeUsd": -278,
+    "outcomeDate": "2025-09-30"
+  },
+  {
+    "setupId": "MT-176",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.59,
+    "outcomeUsd": -159,
+    "outcomeDate": "2025-10-07"
+  },
+  {
+    "setupId": "MT-177",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.03,
+    "outcomeUsd": 303,
+    "outcomeDate": "2025-10-09"
+  },
+  {
+    "setupId": "MT-178",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.21,
+    "outcomeUsd": -221,
+    "outcomeDate": "2025-10-20"
+  },
+  {
+    "setupId": "MT-179",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.24,
+    "outcomeUsd": 424,
+    "outcomeDate": "2025-10-20"
+  },
+  {
+    "setupId": "MT-180",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.12,
+    "outcomeUsd": 412,
+    "outcomeDate": "2025-10-22"
+  },
+  {
+    "setupId": "MT-181",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 7.17,
+    "outcomeUsd": 717,
+    "outcomeDate": "2025-10-31"
+  },
+  {
+    "setupId": "MT-182",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 10.52,
+    "outcomeUsd": 1052,
+    "outcomeDate": "2025-10-31"
+  },
+  {
+    "setupId": "MT-183",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.05,
+    "outcomeUsd": 5,
+    "outcomeDate": "2025-11-03"
+  },
+  {
+    "setupId": "MT-184",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.96,
+    "outcomeUsd": -196,
+    "outcomeDate": "2025-11-10"
+  },
+  {
+    "setupId": "MT-185",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.51,
+    "outcomeUsd": 51,
+    "outcomeDate": "2025-11-17"
+  },
+  {
+    "setupId": "MT-186",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.45,
+    "outcomeUsd": 345,
+    "outcomeDate": "2025-11-17"
+  },
+  {
+    "setupId": "MT-187",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.8,
+    "outcomeUsd": 380,
+    "outcomeDate": "2025-11-19"
+  },
+  {
+    "setupId": "MT-188",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.23,
+    "outcomeUsd": 323,
+    "outcomeDate": "2025-11-19"
+  },
+  {
+    "setupId": "MT-189",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.2,
+    "outcomeUsd": 120,
+    "outcomeDate": "2025-12-01"
+  },
+  {
+    "setupId": "MT-190",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 7,
+    "outcomeUsd": 700,
+    "outcomeDate": "2025-12-02"
+  },
+  {
+    "setupId": "MT-191",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.95,
+    "outcomeUsd": -295,
+    "outcomeDate": "2025-12-02"
+  },
+  {
+    "setupId": "MT-192",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 4.52,
+    "outcomeUsd": 452,
+    "outcomeDate": "2025-12-04"
+  },
+  {
+    "setupId": "MT-193",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 3.17,
+    "outcomeUsd": 317,
+    "outcomeDate": "2025-12-11"
+  },
+  {
+    "setupId": "MT-194",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.97,
+    "outcomeUsd": 97,
+    "outcomeDate": "2025-12-15"
+  },
+  {
+    "setupId": "MT-195",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.51,
+    "outcomeUsd": -51,
+    "outcomeDate": "2025-12-18"
+  },
+  {
+    "setupId": "MT-196",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.77,
+    "outcomeUsd": -77,
+    "outcomeDate": "2026-01-06"
+  },
+  {
+    "setupId": "MT-197",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -6.21,
+    "outcomeUsd": -621,
+    "outcomeDate": "2026-01-06"
+  },
+  {
+    "setupId": "MT-198",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.11,
+    "outcomeUsd": 11,
+    "outcomeDate": "2026-01-07"
+  },
+  {
+    "setupId": "MT-199",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 5.63,
+    "outcomeUsd": 563,
+    "outcomeDate": "2026-01-14"
+  },
+  {
+    "setupId": "MT-200",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 6.1,
+    "outcomeUsd": 610,
+    "outcomeDate": "2026-01-15"
+  },
+  {
+    "setupId": "MT-201",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -5.57,
+    "outcomeUsd": -557,
+    "outcomeDate": "2026-01-15"
+  },
+  {
+    "setupId": "MT-202",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 5.45,
+    "outcomeUsd": 545,
+    "outcomeDate": "2026-01-16"
+  },
+  {
+    "setupId": "MT-203",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 5.3,
+    "outcomeUsd": 530,
+    "outcomeDate": "2026-01-22"
+  },
+  {
+    "setupId": "MT-204",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.91,
+    "outcomeUsd": 191,
+    "outcomeDate": "2026-02-09"
+  },
+  {
+    "setupId": "MT-205",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.94,
+    "outcomeUsd": 94,
+    "outcomeDate": "2026-02-27"
+  },
+  {
+    "setupId": "MT-206",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.66,
+    "outcomeUsd": -266,
+    "outcomeDate": "2026-03-03"
+  },
+  {
+    "setupId": "MT-207",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -2.69,
+    "outcomeUsd": -269,
+    "outcomeDate": "2026-03-06"
+  },
+  {
+    "setupId": "MT-208",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -1.8,
+    "outcomeUsd": -180,
+    "outcomeDate": "2026-03-11"
+  },
+  {
+    "setupId": "MT-209",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.87,
+    "outcomeUsd": -87,
+    "outcomeDate": "2026-03-16"
+  },
+  {
+    "setupId": "MT-210",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.56,
+    "outcomeUsd": -456,
+    "outcomeDate": "2026-03-18"
+  },
+  {
+    "setupId": "MT-211",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 5.19,
+    "outcomeUsd": 519,
+    "outcomeDate": "2026-03-18"
+  },
+  {
+    "setupId": "MT-212",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 7.11,
+    "outcomeUsd": 711,
+    "outcomeDate": "2026-03-23"
+  },
+  {
+    "setupId": "MT-213",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.46,
+    "outcomeUsd": -346,
+    "outcomeDate": "2026-03-24"
+  },
+  {
+    "setupId": "MT-214",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.95,
+    "outcomeUsd": -395,
+    "outcomeDate": "2026-03-25"
+  },
+  {
+    "setupId": "MT-215",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": -7.53,
+    "outcomeUsd": -753,
+    "outcomeDate": "2026-04-17"
+  },
+  {
+    "setupId": "MT-216",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 0.08,
+    "outcomeUsd": 8,
+    "outcomeDate": "2026-05-05"
+  },
+  {
+    "setupId": "MT-217",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -0.53,
+    "outcomeUsd": -53,
+    "outcomeDate": "2026-05-08"
+  },
+  {
+    "setupId": "MT-218",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.28,
+    "outcomeUsd": -428,
+    "outcomeDate": "2026-05-20"
+  },
+  {
+    "setupId": "MT-219",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.76,
+    "outcomeUsd": -476,
+    "outcomeDate": "2026-05-21"
+  },
+  {
+    "setupId": "MT-220",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.38,
+    "outcomeUsd": 238,
+    "outcomeDate": "2026-06-03"
+  },
+  {
+    "setupId": "MT-221",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.11,
+    "outcomeUsd": -311,
+    "outcomeDate": "2026-06-08"
+  },
+  {
+    "setupId": "MT-222",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.1,
+    "outcomeUsd": -310,
+    "outcomeDate": "2026-06-09"
+  },
+  {
+    "setupId": "MT-223",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -4.38,
+    "outcomeUsd": -438,
+    "outcomeDate": "2026-06-11"
+  },
+  {
+    "setupId": "MT-224",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -3.64,
+    "outcomeUsd": -364,
+    "outcomeDate": "2026-06-18"
+  },
+  {
+    "setupId": "MT-225",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 15.54,
+    "outcomeUsd": 1554,
+    "outcomeDate": "2026-07-07"
+  },
+  {
+    "setupId": "MT-226",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 2.34,
+    "outcomeUsd": 234,
+    "outcomeDate": "2026-07-30"
+  },
+  {
+    "setupId": "MT-227",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "GAP_RULE_SPIRIT",
+    "forwardReturnPercent": -1.02,
+    "outcomeUsd": -102,
+    "outcomeDate": "2026-07-31"
+  },
+  {
+    "setupId": "MT-228",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 5.77,
+    "outcomeUsd": 577,
+    "outcomeDate": "2026-08-03"
+  },
+  {
+    "setupId": "MT-229",
+    "taken": false,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": 1.74,
+    "outcomeUsd": 174,
+    "outcomeDate": "2026-08-19"
+  },
+  {
+    "setupId": "MT-230",
+    "taken": true,
+    "goodReasonToSkip": false,
+    "goodReason": null,
+    "forwardReturnPercent": -7.34,
+    "outcomeUsd": -734,
+    "outcomeDate": "2026-08-20"
+  },
+  {
+    "setupId": "MT-231",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -0.29,
+    "outcomeUsd": -29,
+    "outcomeDate": "2026-09-02"
+  },
+  {
+    "setupId": "MT-232",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -0.81,
+    "outcomeUsd": -81,
+    "outcomeDate": "2026-09-08"
+  },
+  {
+    "setupId": "MT-233",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -0.56,
+    "outcomeUsd": -56,
+    "outcomeDate": "2026-09-09"
+  },
+  {
+    "setupId": "MT-234",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": 4.98,
+    "outcomeUsd": 498,
+    "outcomeDate": "2026-09-09"
+  },
+  {
+    "setupId": "MT-235",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -0.82,
+    "outcomeUsd": -82,
+    "outcomeDate": "2026-09-10"
+  },
+  {
+    "setupId": "MT-236",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -2.09,
+    "outcomeUsd": -209,
+    "outcomeDate": "2026-09-14"
+  },
+  {
+    "setupId": "MT-237",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -3.03,
+    "outcomeUsd": -303,
+    "outcomeDate": "2026-09-14"
+  },
+  {
+    "setupId": "MT-238",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -3.45,
+    "outcomeUsd": -345,
+    "outcomeDate": "2026-09-15"
+  },
+  {
+    "setupId": "MT-239",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -4.88,
+    "outcomeUsd": -488,
+    "outcomeDate": "2026-09-17"
+  },
+  {
+    "setupId": "MT-240",
+    "taken": false,
+    "goodReasonToSkip": true,
+    "goodReason": "RISK_LIMIT_USED",
+    "forwardReturnPercent": -0.63,
+    "outcomeUsd": -63,
+    "outcomeDate": "2026-09-18"
+  }
+]
