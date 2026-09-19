@@ -743,3 +743,26 @@
 .cost-track i { display: block; height: 100%; border-radius: inherit; background: var(--primary); }
 .cost-bars strong, .cost-bars small { text-align: right; }
 @media (max-width: 720px) { .trading-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cost-bars li { grid-template-columns: 1fr 1.4fr 84px; } .cost-bars small { display: none; } }
+/* A document on the stage: a filing or a transcript, kept readable rather than squeezed into a cell. */
+.document-view .document-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 0;
+}
+.document-view .document-meta div { display: flex; gap: 6px; }
+.document-view .document-meta dt { color: var(--muted); font-size: 0.82rem; }
+.document-view .document-meta dd { margin: 0; font-size: 0.82rem; }
+.document-view .document-body {
+  white-space: pre-wrap;
+  max-height: 460px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+.document-view .document-body.muted { color: var(--muted); }
+.document-view .document-prior summary { cursor: pointer; color: var(--muted); font-size: 0.85rem; padding: 4px 0; }

@@ -39,6 +39,7 @@ import goalScreening from './goal-screening/demo.js';
 import shariaScreen from './sharia-screen/demo.js';
 import accountingFlags from './accounting-flags/demo.js';
 import newsImpact from './news-impact/demo.js';
+import filingsRead from './filings-read/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -94,6 +95,7 @@ export const DEMOS = [
   shariaScreen,
   accountingFlags,
   newsImpact,
+  filingsRead,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
