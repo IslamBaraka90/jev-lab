@@ -32,6 +32,7 @@ export const GENERATORS = {
   'wallet-risk': () => import('./wallet-risk.js'),
   'mixer-tracing': () => import('./mixer-tracing.js'),
   'sybil-clusters': () => import('./sybil-clusters.js'),
+  'portfolio-health': () => import('./portfolio-health.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
