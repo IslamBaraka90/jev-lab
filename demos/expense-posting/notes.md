@@ -47,8 +47,29 @@ but "it posts 61% of the file automatically and is right 99% of the time when it
 The findings line names the single pair of accounts that gets swapped most often. One repeated swap is
 usually a question about where the boundary between two accounts sits, not a series of separate slips.
 
-## Status
+## What the recorded run found
 
-Built and tested; the answers are not recorded yet. `npm run record expense-posting` captures them once
-and commits them, and until then the page shows the data, the state, the report shape and the code, and
-says so.
+400 answers, model `jev-1.13.0`, 555K input and 102K output tokens, about seven minutes.
+
+- **399 of 400 went to the intended account.** All 335 easy charges, all 20 memo-free ones, all 15
+  refunds, and 29 of the 30 ambiguous ones.
+- **The single mistake is the least confident posting in the file.** E-0334, "Packing tape and boxes"
+  from a depot that also does couriers, went to shipping instead of office supplies, at 54% confidence
+  against an average of 99%. At the 70% threshold it is the one charge held back, so 397 post
+  automatically with nothing wrong among them.
+- **Clarity tracked the data.** The clarity score averaged 5.55 of 6 across the file and 3.80 on the
+  twenty charges with no description, which is the right direction without being dramatic.
+
+## The honest caveat: this file is too easy
+
+A 99.8% result says more about the dataset than about the model. Three charges in four come from a
+vendor that only ever posts to one account, and the state shows up to three earlier postings from that
+vendor, so those are a lookup rather than a judgement. The rows that actually asked something are the
+thirty ambiguous ones, and there the score was 29 of 30.
+
+If this demo is meant to show a real accuracy-against-automation trade-off, the lever is the vendor
+history: cap it at one prior posting, or drop it for the ambiguous vendors, and re-record. That costs
+another full run, so it is left as it is and this note says why the headline is so high.
+
+What the run does show well is **calibration**: one wrong answer, and it is the one the model was
+least sure about.

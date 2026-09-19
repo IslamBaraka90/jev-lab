@@ -133,7 +133,12 @@ function report(results, { labels = [], accounts = [] } = {}) {
 function headline(graded, auto, correct) {
   const right = graded.filter(correct);
   const autoRight = auto.filter(correct);
-  const share = (part, whole) => (whole ? `${Math.round((part / whole) * 100)}%` : '–');
+  // 399 of 400 is not 100%. A rate only shows as a whole number when it really is one.
+  const share = (part, whole) => {
+    if (!whole) return '–';
+    const percent = (part / whole) * 100;
+    return `${Number.isInteger(percent) ? percent : percent.toFixed(1)}%`;
+  };
 
   return [
     { label: 'Expenses posted', value: graded.length },
@@ -235,7 +240,6 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'queue',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.vendor}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
