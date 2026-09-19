@@ -8,6 +8,7 @@ import expensePosting from './expense-posting/demo.js';
 import threeWayMatch from './three-way-match/demo.js';
 import codAbuse from './cod-abuse/demo.js';
 import chargebackEvidence from './chargeback-evidence/demo.js';
+import deliveryExceptions from './delivery-exceptions/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -25,7 +26,7 @@ export const DOMAINS = [
 export const DOMAIN_BY_ID = Object.fromEntries(DOMAINS.map((domain) => [domain.id, domain]));
 
 /** Demos shown in the catalog, in the order the series walks them. Each PRP adds its own. */
-export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, codAbuse, chargebackEvidence];
+export const DEMOS = [ledgerIntegrity, bankReconciliation, expensePosting, threeWayMatch, codAbuse, chargebackEvidence, deliveryExceptions];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
 export const ALL_DEMOS = [...DEMOS, example];

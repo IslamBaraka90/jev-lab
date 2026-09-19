@@ -18,6 +18,7 @@ export const GENERATORS = {
   'three-way-match': () => import('./three-way-match.js'),
   'cod-abuse': () => import('./cod-abuse.js'),
   'chargeback-evidence': () => import('./chargeback-evidence.js'),
+  'delivery-exceptions': () => import('./delivery-exceptions.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

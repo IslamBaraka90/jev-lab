@@ -1,0 +1,2502 @@
+[
+  {
+    "shipmentId": "SHP-0001",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0002",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0003",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0004",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0005",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0006",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0007",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0008",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0009",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0010",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0011",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0012",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0013",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0014",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0015",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0016",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0017",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0018",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0019",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0020",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0021",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0022",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0023",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0024",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0025",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0026",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0027",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0028",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0029",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0030",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0031",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0032",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0033",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0034",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0035",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0036",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0037",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0038",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0039",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0040",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0041",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0042",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0043",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0044",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0045",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0046",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0047",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0048",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0049",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0050",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0051",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0052",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0053",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0054",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0055",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0056",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0057",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0058",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0059",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0060",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0061",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0062",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0063",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0064",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0065",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0066",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0067",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0068",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0069",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0070",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0071",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0072",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0073",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0074",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0075",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0076",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0077",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0078",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0079",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0080",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0081",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0082",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0083",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0084",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0085",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0086",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0087",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0088",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0089",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0090",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0091",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0092",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0093",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0094",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0095",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0096",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0097",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0098",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0099",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0100",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0101",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0102",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0103",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0104",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0105",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0106",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0107",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0108",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0109",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0110",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0111",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0112",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0113",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0114",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0115",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0116",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0117",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0118",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0119",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0120",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0121",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0122",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0123",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0124",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0125",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0126",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0127",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0128",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0129",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0130",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0131",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0132",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0133",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0134",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0135",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0136",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0137",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0138",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0139",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0140",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0141",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0142",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0143",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0144",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0145",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0146",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0147",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0148",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0149",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0150",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0151",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0152",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0153",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0154",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0155",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0156",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0157",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0158",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0159",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0160",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0161",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0162",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0163",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0164",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0165",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0166",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0167",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0168",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0169",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0170",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0171",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0172",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0173",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0174",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0175",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0176",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0177",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0178",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0179",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0180",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0181",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0182",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0183",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0184",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0185",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0186",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0187",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0188",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0189",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0190",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0191",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0192",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0193",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0194",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0195",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0196",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0197",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0198",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0199",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0200",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0201",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0202",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0203",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0204",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0205",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0206",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0207",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0208",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0209",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0210",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0211",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0212",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0213",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0214",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0215",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "courier",
+    "avoidableCost": 0,
+    "neverAttemptedScan": true
+  },
+  {
+    "shipmentId": "SHP-0216",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0217",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0218",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0219",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0220",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0221",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0222",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0223",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0224",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0225",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0226",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0227",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0228",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0229",
+    "fault": "CUSTOMER_REFUSAL",
+    "bestAction": "RETURN_TO_SENDER",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "customer-refusal",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0230",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0231",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0232",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0233",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0234",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0235",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0236",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0237",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 8.75,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0238",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0239",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0240",
+    "fault": "UNCLEAR",
+    "bestAction": "RETRY",
+    "addressQuality": 3.8,
+    "preventable": false,
+    "kind": "unclear",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0241",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0242",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 17.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0243",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 1.5,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 22.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0244",
+    "fault": "COURIER",
+    "bestAction": "RETRY",
+    "addressQuality": 5.2,
+    "preventable": false,
+    "kind": "background",
+    "avoidableCost": 0,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0245",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 30,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0246",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "background",
+    "avoidableCost": 7.5,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0247",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 15,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0248",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 26.25,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0249",
+    "fault": "ADDRESS_QUALITY",
+    "bestAction": "REROUTE_PICKUP",
+    "addressQuality": 2.2,
+    "preventable": true,
+    "kind": "address-quality",
+    "avoidableCost": 10,
+    "neverAttemptedScan": false
+  },
+  {
+    "shipmentId": "SHP-0250",
+    "fault": "CUSTOMER_UNAVAILABLE",
+    "bestAction": "CONTACT_CUSTOMER",
+    "addressQuality": 5.2,
+    "preventable": true,
+    "kind": "customer-unavailable",
+    "avoidableCost": 20,
+    "neverAttemptedScan": false
+  }
+]

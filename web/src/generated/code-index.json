@@ -83,6 +83,34 @@
     "code": "/** Pattern accuracy and lane accuracy stay separate, with both saved cost and restricted value. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const intended = new Map(labels.map((label) => [label.customerId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const patternRight = graded.filter((result) => result.evaluation.pattern === intended.get(result.item.id).pattern);\n  const restrictionRight = graded.filter((result) => result.evaluation.restriction === intended.get(result.item.id).restriction);\n  const restricted = graded.filter((result) => result.evaluation.restricted);\n  const economics = moneyImpact(restricted, context.averageShippingCost);\n\n  return {\n    note: `Pattern and restriction are graded independently across ${graded.length} customer histories.`,\n    findings: repeatedMistake(graded, intended),\n    kpis: headline(graded, patternRight, restrictionRight, restricted, intended, economics, context.currency),\n    distribution: restrictionMix(graded),\n    matrix: confusion(graded, intended),\n    curve: coverage(graded, intended),\n    checks: checks(graded, intended),\n    topItems: worstHistories(graded, context.currency),\n    innocents: innocentOutcomes(graded, intended),\n    economics,\n  };\n}",
     "language": "javascript"
   },
+  "demos/delivery-exceptions/demo.js#demo:state": {
+    "path": "demos/delivery-exceptions/demo.js",
+    "startLine": 14,
+    "endLine": 30,
+    "code": "/** All shipment evidence and operating rules, including cost per attempt; no fault label or score. */\nfunction buildState(item, context) {\n  return {\n    task: 'Explain this delivery exception and choose the safest next action for the parcel.',\n    review: { as_of: context.asOf, delivery_window: context.deliveryWindow },\n    shipment_id: item.id,\n    order_id: item.orderId,\n    customer: item.customer,\n    shipment: item.shipment,\n    address: item.address,\n    tracking_events: item.trackingEvents,\n    customer_contact_log: item.contactLog,\n    courier_service_notes: item.courierServiceNotes,\n    same_address_history: item.sameAddressHistory,\n    operating_context: item.operatingContext,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/delivery-exceptions/demo.js#demo:questions": {
+    "path": "demos/delivery-exceptions/demo.js",
+    "startLine": 34,
+    "endLine": 55,
+    "code": "const questions = {\n  fault: choice('What is the best-supported primary cause of this failed or delayed delivery?', {\n    ADDRESS_QUALITY: 'The supplied address is incomplete, contradictory or not precise enough to deliver.',\n    CUSTOMER_UNAVAILABLE: 'Credible attempts were made but the customer could not be reached or was absent.',\n    COURIER: 'The tracking trail shows a misroute, invalid attempt scan or other courier-side failure.',\n    CUSTOMER_REFUSAL: 'The recipient explicitly refused the parcel, including a cash-on-delivery refusal.',\n    UNCLEAR: 'The evidence does not support assigning primary fault to one party.',\n  }),\n  address_quality: score('How usable is the supplied address for another doorstep attempt?', [\n    'Unusable', 'Very poor', 'Poor', 'Workable', 'Good', 'Very good', 'Precise',\n  ]),\n  next_action: choice('What should happen to the parcel next?', {\n    RETRY: 'Arrange another credible courier attempt at the supplied address.',\n    REROUTE_PICKUP: 'Send the parcel to a verified pickup point.',\n    CONTACT_CUSTOMER: 'Pause and obtain address or availability information from the customer.',\n    RETURN_TO_SENDER: 'End delivery attempts and return the parcel.',\n  }),\n  preventable: noul('Could a better address-validation or customer-contact rule have prevented this exception?', {\n    yes: 'An address or contact control could reasonably have prevented the failed attempt.',\n    no: 'The evidence points to courier failure, refusal or irreducible uncertainty.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/delivery-exceptions/demo.js#demo:evaluate": {
+    "path": "demos/delivery-exceptions/demo.js",
+    "startLine": 59,
+    "endLine": 74,
+    "code": "/** Converts four typed answers into queue fields and the avoidable attempt cost shown in the report. */\nfunction evaluate(answers, item) {\n  const fault = answers.fault.choice;\n  const preventable = answers.preventable.noul >= 0.5;\n  const avoidableCost = preventable ? round(item.shipment.failedAttempts * item.shipment.costPerAttempt) : 0;\n  return {\n    flagged: fault !== 'UNCLEAR',\n    fault,\n    addressQuality: answers.address_quality.score,\n    nextAction: answers.next_action.choice,\n    preventable,\n    preventableProbability: answers.preventable.noul,\n    avoidableCost,\n    label: `${item.id}: ${readable(fault)} · ${readable(answers.next_action.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/delivery-exceptions/demo.js#demo:report": {
+    "path": "demos/delivery-exceptions/demo.js",
+    "startLine": 78,
+    "endLine": 101,
+    "code": "/** Grades fault and action, exposes unclear calls and ranks courier-side evidence without smoothing. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const intended = new Map(labels.map((label) => [label.shipmentId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const faultRight = graded.filter((result) => result.evaluation.fault === intended.get(result.item.id).fault);\n  const actionRight = graded.filter((result) => result.evaluation.nextAction === intended.get(result.item.id).bestAction);\n  const preventableRight = graded.filter((result) => result.evaluation.preventable === intended.get(result.item.id).preventable);\n  const avoidableCost = round(graded.reduce((sum, result) => sum + result.evaluation.avoidableCost, 0));\n\n  return {\n    note: `${graded.length} exceptions graded. Attempt cost is visible in every state; planted labels are not.`,\n    findings: repeatedMistake(graded, intended),\n    kpis: headline(graded, faultRight, actionRight, preventableRight, avoidableCost, intended, context.currency),\n    distribution: faultDistribution(graded),\n    matrix: faultMatrix(graded, intended),\n    curve: addressThreshold(graded, intended),\n    checks: cohortChecks(graded, intended),\n    topItems: worstAddresses(graded, context.currency),\n    courierRanking: courierRanking(graded),\n    money: { avoidableCost, allFailedAttemptCost: round(graded.reduce((sum, result) => sum + result.item.shipment.failedAttempts * result.item.shipment.costPerAttempt, 0)) },\n    unclear: { predicted: graded.filter((result) => result.evaluation.fault === 'UNCLEAR').length, planted: graded.filter((result) => intended.get(result.item.id).fault === 'UNCLEAR').length },\n  };\n}",
+    "language": "javascript"
+  },
   "demos/expense-posting/demo.js#demo:state": {
     "path": "demos/expense-posting/demo.js",
     "startLine": 10,
@@ -214,6 +242,13 @@
     "startLine": 125,
     "endLine": 143,
     "code": "/** One order row in a customer's history; behaviour is planted only after the neutral row exists. */\nfunction baseOrder(random, customerId, index, addresses) {\n  const accountId = `A-${customerId.slice(2)}-01`;\n  return {\n    id: null,\n    accountId,\n    date: random.day(PERIOD.from, PERIOD.to),\n    value: amount(random, { min: 18, max: 780 }),\n    currency: 'USD',\n    paymentMethod: random.weighted([['CASH_ON_DELIVERY', 62], ['CARD', 38]]),\n    deliveryOutcome: 'DELIVERED',\n    courierAttempts: 1,\n    reasonCode: 'DELIVERED',\n    addressUsed: random.pick(addresses.slice(0, 2)),\n    promotion: index === 0 ? 'WELCOME15' : null,\n    refundIssued: false,\n    reshippedFromOrderId: null,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/delivery-exceptions.js#demo:data": {
+    "path": "scripts/generate/delivery-exceptions.js",
+    "startLine": 88,
+    "endLine": 117,
+    "code": "const item = {\n  id,\n  orderId: `ORD-D-${String(index + 1).padStart(5, '0')}`,\n  customer,\n  shipment: {\n    courier,\n    serviceLevel: random.pick(['NEXT_DAY', 'STANDARD', 'TWO_DAY']),\n    shippedAt: `${addDays(exceptionDay, -2)}T12:00:00Z`,\n    promisedBy: `${exceptionDay}T21:00:00Z`,\n    cashOnDelivery: fault === 'CUSTOMER_REFUSAL',\n    orderValue: Number(random.float(25, 850, 2)),\n    currency: 'USD',\n    failedAttempts,\n    costPerAttempt,\n  },\n  address,\n  trackingEvents: tracking,\n  contactLog,\n  courierServiceNotes: {\n    deliveryWindow: '09:00–21:00 local time',\n    validAttempt: 'An attempt scan should occur at the destination with a matching GPS reading.',\n    pickupPointAvailable: true,\n  },\n  sameAddressHistory: buildHistory(random, fault),\n  operatingContext: {\n    weather: kind === 'UNCLEAR' && random.bool(0.4) ? 'Heavy rain reported in the district' : 'No material weather alert',\n    courierOutage: false,\n    citywideIncident: false,\n  },\n};",
     "language": "javascript"
   },
   "scripts/generate/expense-posting.js#demo:data": {
