@@ -35,7 +35,7 @@ export function generate(seed = SEED) {
   for (let index = 0; index < 11; index++) add(twoHops(random), { riskBand: 'medium', driver: random.pick(['MIXER', 'SANCTIONED_ENTITY']), kind: 'planted medium' });
   for (let index = 0; index < 11; index++) add(someGambling(random), { riskBand: 'medium', driver: 'GAMBLING', kind: 'planted medium' });
   for (const entry of decoys(random)) add(entry.item, { riskBand: 'low', driver: entry.driver, kind: 'looks bad, is not', look: entry.look });
-  for (let index = 0; index < 186; index++) add(ordinary(random), { riskBand: 'low', driver: 'NONE', kind: 'ordinary' });
+  for (let index = 0; index < 186; index++) add(ordinary(random), { riskBand: 'low', driver: 'NONE', kind: 'everyday' });
 
   items.sort((left, right) => left.key.localeCompare(right.key));
   items.forEach((item, index) => {

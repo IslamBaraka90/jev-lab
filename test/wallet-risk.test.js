@@ -75,6 +75,7 @@ test('a perfect run takes no high-risk money and refuses nothing ordinary', asyn
 
   assert.equal(kpi(report, 'High-risk money refused or held').value, '18 of 18');
   assert.equal(kpi(report, 'Band agrees with the label').value, '100%');
+  assert.match(kpi(report, 'A bar that splits the file').value, /of 6$/, 'a perfect run separates cleanly');
   assert.equal(kpi(report, 'Driver named on the high-risk wallets').value, '18 of 18');
   assert.equal(kpi(report, 'Ordinary wallets refused').value, '0 of 200');
   assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0]);
@@ -106,6 +107,18 @@ test('accepting everything is priced in the money it lets through', async () => 
   assert.equal(kpi(report, 'High-risk money refused or held').value, '0 of 18');
   assert.match(kpi(report, 'High-risk money refused or held').context, /would have been taken/);
   assert.ok(report.findings.some((line) => /high-risk deposits were accepted/.test(line)));
+});
+
+test('the report says when no single number separates the file', async () => {
+  // Every wallet scored the same: there is no bar, and the report must not pretend there is one.
+  const { results } = await runDemo(demo, {
+    dataset,
+    ask: () => ({ answers: answerFor({ risk: 3, exposure: 'NONE', decision: 'REVIEW' }) }),
+  });
+  const report = demo.report(results, { ...context, labels });
+
+  assert.equal(kpi(report, 'A bar that splits the file').value, 'none');
+  assert.match(kpi(report, 'A bar that splits the file').context, /score at or above the lowest high-risk wallet/);
 });
 
 test('the grade bar holds fewer wallets and a denser set of them', async () => {
