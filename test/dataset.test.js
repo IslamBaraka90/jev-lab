@@ -38,6 +38,7 @@ test('cached-real data needs no seed but does need a source', () => {
 test('the summary line names the data class', () => {
   assert.match(datasetSummary(valid), /^Synthetic · seed 1 · generated 2026-09-19 · 2 items$/);
   assert.match(datasetSummary({ ...valid, class: 'cached-real', source: 'Yahoo Finance' }), /^Cached · Yahoo Finance/);
+  assert.match(datasetSummary({ ...valid, class: 'mixed', source: 'Yahoo Finance plus synthetic trades' }), /^Mixed · cached-real and synthetic · seed 1/);
 });
 
 test('the example dataset loads, validates and has its labels outside the demo folder', async () => {

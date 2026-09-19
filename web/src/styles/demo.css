@@ -615,3 +615,34 @@
 .graph-table summary {
   cursor: pointer;
 }
+
+/* Genuine OHLC bars with a deliberately gated post-decision outcome window. */
+
+.candles-view { min-width: 0; }
+.candle-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.candle-chart-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--surface) 90%, black); }
+.candle-chart { display: block; width: 100%; min-width: 680px; height: auto; }
+.candle-grid { stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 5; }
+.candle-axis, .marker-label, .outcome-hidden { fill: var(--muted); font: 11px var(--font-mono); }
+.marker-label { font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.candle line { stroke-width: 1.2; }
+.candle rect { stroke-width: .7; }
+.candle.up line, .candle.up rect { stroke: var(--positive); fill: color-mix(in srgb, var(--positive) 58%, transparent); }
+.candle.down line, .candle.down rect { stroke: var(--danger); fill: color-mix(in srgb, var(--danger) 58%, transparent); }
+.candle.outcome { opacity: .9; }
+.outcome-window { fill: color-mix(in srgb, var(--primary) 9%, transparent); stroke: none; }
+.trade-marker { stroke: var(--warning); stroke-width: 2; stroke-dasharray: 5 4; }
+.event-marker { stroke: var(--primary); stroke-width: 2; stroke-dasharray: 2 4; }
+.trade-label { fill: var(--warning); }
+.event-label { fill: var(--primary); }
+.outcome-hidden { font-style: italic; }
+.candle-legend { display: flex; flex-wrap: wrap; gap: 10px 18px; color: var(--muted); font-size: var(--text-sm); }
+.candle-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.legend-line { display: inline-block; width: 22px; height: 0; border-top: 2px dashed; }
+.legend-line.trade { border-color: var(--warning); }
+.legend-line.event { border-color: var(--primary); }
+.legend-box { display: inline-block; width: 22px; height: 11px; border: 1px solid var(--primary); background: color-mix(in srgb, var(--primary) 9%, transparent); }
+
+@media (max-width: 900px) {
+  .candle-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

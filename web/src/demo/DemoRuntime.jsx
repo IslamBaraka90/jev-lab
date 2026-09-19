@@ -200,7 +200,7 @@ export function DemoRuntime({ demo }) {
               </ol>
             </header>
 
-            {item && <ItemView view={demo.view} item={item} context={state.context} demo={demo} />}
+            {item && <ItemView view={demo.view} item={item} context={state.context} demo={demo} result={result} />}
           </section>
 
           <section className="panel playback" aria-label="Run controls">

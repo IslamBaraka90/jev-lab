@@ -27,6 +27,7 @@ export const GENERATORS = {
   'account-takeover': () => import('./account-takeover.js'),
   'aml-alert-triage': () => import('./aml-alert-triage.js'),
   'sanctions-name-match': () => import('./sanctions-name-match.js'),
+  'insider-surveillance': () => import('./insider-surveillance.js'),
   'mule-network': () => import('./mule-network.js'),
   'wallet-risk': () => import('./wallet-risk.js'),
   'mixer-tracing': () => import('./mixer-tracing.js'),

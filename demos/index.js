@@ -17,6 +17,7 @@ import cardFraudTriage from './card-fraud-triage/demo.js';
 import accountTakeover from './account-takeover/demo.js';
 import amlAlertTriage from './aml-alert-triage/demo.js';
 import sanctionsNameMatch from './sanctions-name-match/demo.js';
+import insiderSurveillance from './insider-surveillance/demo.js';
 import muleNetwork from './mule-network/demo.js';
 import walletRisk from './wallet-risk/demo.js';
 import mixerTracing from './mixer-tracing/demo.js';
@@ -54,6 +55,7 @@ export const DEMOS = [
   amlAlertTriage,
   accountTakeover,
   sanctionsNameMatch,
+  insiderSurveillance,
   muleNetwork,
   walletRisk,
   mixerTracing,
