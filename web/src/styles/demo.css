@@ -554,3 +554,64 @@
   overflow-wrap: anywhere;
   vertical-align: top;
 }
+
+/* The shared transfer graph: one account in the middle, its neighbourhood bright, the rest dim. */
+
+.transfer-graph {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.transfer-graph .edge {
+  stroke: var(--border);
+  fill: none;
+}
+
+.transfer-graph .edge.near {
+  stroke: var(--control);
+}
+
+.transfer-graph .edge.far {
+  opacity: 0.35;
+  stroke-dasharray: 4 4;
+}
+
+.transfer-graph #graph-arrow path {
+  fill: var(--control);
+}
+
+.transfer-graph .node circle {
+  fill: var(--surface2);
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.transfer-graph .node text {
+  fill: var(--muted);
+  font-size: 13px;
+  text-anchor: middle;
+}
+
+.transfer-graph .node .node-note {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.transfer-graph .node.hop-0 circle {
+  fill: var(--primary);
+  stroke: var(--primary);
+}
+
+.transfer-graph .node.hop-0 text {
+  fill: var(--text);
+  font-weight: 600;
+}
+
+.transfer-graph .node.hop-2 {
+  opacity: 0.45;
+}
+
+.graph-table summary {
+  cursor: pointer;
+}

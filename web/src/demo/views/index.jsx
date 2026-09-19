@@ -1,3 +1,4 @@
+import { GraphView } from './GraphView.jsx';
 import { LedgerView } from './LedgerView.jsx';
 import { QueueView } from './QueueView.jsx';
 import { TableView } from './TableView.jsx';
@@ -13,6 +14,7 @@ export const VIEWS = {
   queue: QueueView,
   timeline: TimelineView,
   comparison: ComparisonView,
+  graph: GraphView,
 };
 
 export function ItemView({ view, ...props }) {
