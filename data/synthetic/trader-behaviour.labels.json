@@ -1,0 +1,842 @@
+[
+  {
+    "dayId": "TB-001",
+    "date": "2026-01-05",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-002",
+    "date": "2026-01-06",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-003",
+    "date": "2026-01-07",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-004",
+    "date": "2026-01-08",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-005",
+    "date": "2026-01-09",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-006",
+    "date": "2026-01-12",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-007",
+    "date": "2026-01-13",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-008",
+    "date": "2026-01-14",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-009",
+    "date": "2026-01-15",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-010",
+    "date": "2026-01-16",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-011",
+    "date": "2026-01-19",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-012",
+    "date": "2026-01-20",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-013",
+    "date": "2026-01-21",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-014",
+    "date": "2026-01-22",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-015",
+    "date": "2026-01-23",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-016",
+    "date": "2026-01-26",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-017",
+    "date": "2026-01-27",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-018",
+    "date": "2026-01-28",
+    "pattern": "EARLY_EXIT",
+    "costEstimate": 722,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-019",
+    "date": "2026-01-29",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-020",
+    "date": "2026-01-30",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-021",
+    "date": "2026-02-02",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-022",
+    "date": "2026-02-03",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-023",
+    "date": "2026-02-04",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-024",
+    "date": "2026-02-05",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-025",
+    "date": "2026-02-06",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-026",
+    "date": "2026-02-09",
+    "pattern": "REVENGE",
+    "costEstimate": 530.06,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-027",
+    "date": "2026-02-10",
+    "pattern": "REVENGE",
+    "costEstimate": 415.12,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-028",
+    "date": "2026-02-11",
+    "pattern": "OVERTRADING",
+    "costEstimate": 977,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-029",
+    "date": "2026-02-12",
+    "pattern": "REVENGE",
+    "costEstimate": 468.51,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-030",
+    "date": "2026-02-13",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-031",
+    "date": "2026-02-16",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-032",
+    "date": "2026-02-17",
+    "pattern": "REVENGE",
+    "costEstimate": 543.15,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-033",
+    "date": "2026-02-18",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-034",
+    "date": "2026-02-19",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-035",
+    "date": "2026-02-20",
+    "pattern": "OVERTRADING",
+    "costEstimate": 1073,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-036",
+    "date": "2026-02-23",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-037",
+    "date": "2026-02-24",
+    "pattern": "EARLY_EXIT",
+    "costEstimate": 585,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-038",
+    "date": "2026-02-25",
+    "pattern": "AVERAGING_DOWN",
+    "costEstimate": 1005,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-039",
+    "date": "2026-02-26",
+    "pattern": "REVENGE",
+    "costEstimate": 455.41,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-040",
+    "date": "2026-02-27",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-041",
+    "date": "2026-03-02",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-042",
+    "date": "2026-03-03",
+    "pattern": "EARLY_EXIT",
+    "costEstimate": 719,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-043",
+    "date": "2026-03-04",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-044",
+    "date": "2026-03-05",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-045",
+    "date": "2026-03-06",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-046",
+    "date": "2026-03-09",
+    "pattern": "EARLY_EXIT",
+    "costEstimate": 639,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-047",
+    "date": "2026-03-10",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-048",
+    "date": "2026-03-11",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-049",
+    "date": "2026-03-12",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-050",
+    "date": "2026-03-13",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-051",
+    "date": "2026-03-16",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-052",
+    "date": "2026-03-17",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-053",
+    "date": "2026-03-18",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-054",
+    "date": "2026-03-19",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-055",
+    "date": "2026-03-20",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-056",
+    "date": "2026-03-23",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-057",
+    "date": "2026-03-24",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-058",
+    "date": "2026-03-25",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-059",
+    "date": "2026-03-26",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-060",
+    "date": "2026-03-27",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-061",
+    "date": "2026-03-30",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-062",
+    "date": "2026-03-31",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-063",
+    "date": "2026-04-01",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-064",
+    "date": "2026-04-02",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-065",
+    "date": "2026-04-03",
+    "pattern": "OVERTRADING",
+    "costEstimate": 912,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-066",
+    "date": "2026-04-06",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-067",
+    "date": "2026-04-07",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-068",
+    "date": "2026-04-08",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-069",
+    "date": "2026-04-09",
+    "pattern": "REVENGE",
+    "costEstimate": 368.28,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-070",
+    "date": "2026-04-10",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-071",
+    "date": "2026-04-13",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-072",
+    "date": "2026-04-14",
+    "pattern": "OVERTRADING",
+    "costEstimate": 873,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-073",
+    "date": "2026-04-15",
+    "pattern": "OVERTRADING",
+    "costEstimate": 1040,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-074",
+    "date": "2026-04-16",
+    "pattern": "AVERAGING_DOWN",
+    "costEstimate": 679,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-075",
+    "date": "2026-04-17",
+    "pattern": "OVERTRADING",
+    "costEstimate": 1145,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-076",
+    "date": "2026-04-20",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-077",
+    "date": "2026-04-21",
+    "pattern": "EARLY_EXIT",
+    "costEstimate": 710,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-078",
+    "date": "2026-04-22",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-079",
+    "date": "2026-04-23",
+    "pattern": "OVERTRADING",
+    "costEstimate": 959,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-080",
+    "date": "2026-04-24",
+    "pattern": "REVENGE",
+    "costEstimate": 447.12,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-081",
+    "date": "2026-04-27",
+    "pattern": "EARLY_EXIT",
+    "costEstimate": 671,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-082",
+    "date": "2026-04-28",
+    "pattern": "OVERTRADING",
+    "costEstimate": 943,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-083",
+    "date": "2026-04-29",
+    "pattern": "REVENGE",
+    "costEstimate": 501.54,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-084",
+    "date": "2026-04-30",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-085",
+    "date": "2026-05-01",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-086",
+    "date": "2026-05-04",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-087",
+    "date": "2026-05-05",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-088",
+    "date": "2026-05-06",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-089",
+    "date": "2026-05-07",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-090",
+    "date": "2026-05-08",
+    "pattern": "REVENGE",
+    "costEstimate": 394.06,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-091",
+    "date": "2026-05-11",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-092",
+    "date": "2026-05-12",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": true
+  },
+  {
+    "dayId": "TB-093",
+    "date": "2026-05-13",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-094",
+    "date": "2026-05-14",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-095",
+    "date": "2026-05-15",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-096",
+    "date": "2026-05-18",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-097",
+    "date": "2026-05-19",
+    "pattern": "AVERAGING_DOWN",
+    "costEstimate": 663,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-098",
+    "date": "2026-05-20",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-099",
+    "date": "2026-05-21",
+    "pattern": "REVENGE",
+    "costEstimate": 511.42,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-100",
+    "date": "2026-05-22",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-101",
+    "date": "2026-05-25",
+    "pattern": "AVERAGING_DOWN",
+    "costEstimate": 553,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-102",
+    "date": "2026-05-26",
+    "pattern": "EARLY_EXIT",
+    "costEstimate": 625,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-103",
+    "date": "2026-05-27",
+    "pattern": "REVENGE",
+    "costEstimate": 532.39,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-104",
+    "date": "2026-05-28",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-105",
+    "date": "2026-05-29",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-106",
+    "date": "2026-06-01",
+    "pattern": "OVERTRADING",
+    "costEstimate": 759,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-107",
+    "date": "2026-06-02",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-108",
+    "date": "2026-06-03",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-109",
+    "date": "2026-06-04",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-110",
+    "date": "2026-06-05",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-111",
+    "date": "2026-06-08",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-112",
+    "date": "2026-06-09",
+    "pattern": "AVERAGING_DOWN",
+    "costEstimate": 622,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-113",
+    "date": "2026-06-10",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-114",
+    "date": "2026-06-11",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-115",
+    "date": "2026-06-12",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-116",
+    "date": "2026-06-15",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-117",
+    "date": "2026-06-16",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-118",
+    "date": "2026-06-17",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-119",
+    "date": "2026-06-18",
+    "pattern": "DISCIPLINED",
+    "costEstimate": 0,
+    "goodButLossy": false
+  },
+  {
+    "dayId": "TB-120",
+    "date": "2026-06-19",
+    "pattern": "AVERAGING_DOWN",
+    "costEstimate": 639,
+    "goodButLossy": false
+  }
+]

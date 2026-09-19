@@ -295,10 +295,40 @@ export function ReportPanel({ report, onSelect }) {
       {report.matrix && <ConfusionMatrix matrix={report.matrix} onSelect={onSelect} />}
       {report.fingerprints && <FingerprintChart chart={report.fingerprints} />}
       {report.curve && <CoverageCurve curve={report.curve} />}
+      {report.costs?.length > 0 && <CostBars items={report.costs} />}
+      {report.equityCurve && <EquityCurve chart={report.equityCurve} />}
+      {report.sizeScatter && <SizeScatter chart={report.sizeScatter} />}
       <CheckList checks={report.checks} onSelect={onSelect} />
       <TopItems items={report.topItems} onSelect={onSelect} />
     </section>
   );
+}
+
+function CostBars({ items }) {
+  const max = Math.max(...items.map((item) => item.value), 1);
+  return <div className="stack" style={{ gap: 8 }}><h4>Estimated cost by habit</h4><ul className="cost-bars">{items.map((item) => <li key={item.label}><span>{item.label}</span><span className="cost-track"><i style={{ width: `${Math.max(2, item.value / max * 100)}%` }} /></span><strong className="num">{item.value.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}</strong><small className="meta">{item.count} days</small></li>)}</ul></div>;
+}
+
+function EquityCurve({ chart }) {
+  const width = 760;
+  const height = 220;
+  const values = chart.points.map((point) => point.value);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const span = Math.max(max - min, 1);
+  const x = (index) => 54 + index / Math.max(chart.points.length - 1, 1) * (width - 76);
+  const y = (value) => 18 + (max - value) / span * (height - 52);
+  const path = chart.points.map((point, index) => `${index ? 'L' : 'M'}${x(index).toFixed(1)},${y(point.value).toFixed(1)}`).join('');
+  return <div className="stack" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="behaviour-report-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.filter((point) => point.flagged).length} flagged days among ${chart.points.length}.`}><line className="report-axis" x1="54" y1={height - 30} x2={width - 22} y2={height - 30} /><path className="report-line" d={path} />{chart.points.map((point, index) => point.flagged && <circle key={point.id} className="report-flag" cx={x(index)} cy={y(point.value)} r="3.5"><title>{`${point.label}: ${point.value.toLocaleString('en-US')} · ${point.pattern}`}</title></circle>)}<text className="report-axis-text" x="54" y={height - 9}>Trading days · flagged days are marked</text></svg><details><summary>Equity curve as a table</summary><div className="table-scroll details-content"><table className="data-table compact"><thead><tr><th>Date</th><th className="num">Equity</th><th>Jev flag</th></tr></thead><tbody>{chart.points.map((point) => <tr key={point.id}><th scope="row">{point.label}</th><td className="num">{point.value.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}</td><td>{point.flagged ? point.pattern : 'None'}</td></tr>)}</tbody></table></div></details></div>;
+}
+
+function SizeScatter({ chart }) {
+  const width = 640;
+  const height = 220;
+  const max = Math.max(...chart.points.flatMap((point) => [point.norm, point.value]), 1) * 1.05;
+  const x = (value) => 54 + value / max * (width - 80);
+  const y = (value) => height - 36 - value / max * (height - 58);
+  return <div className="stack" style={{ gap: 8 }}><h4>{chart.title}</h4><svg className="behaviour-report-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${chart.title}. ${chart.points.length} trades; the diagonal represents actual size equal to the rolling norm.`}><line className="report-axis" x1="54" y1={height - 36} x2={width - 22} y2={height - 36} /><line className="report-axis" x1="54" y1="20" x2="54" y2={height - 36} /><line className="report-norm-line" x1="54" y1={height - 36} x2={x(max)} y2={y(max)} />{chart.points.map((point, index) => <circle key={`${point.label}-${index}`} className={point.flagged ? 'scatter-point flagged' : 'scatter-point'} cx={x(point.norm)} cy={y(point.value)} r="2.4"><title>{`${point.label}: norm ${point.norm}, actual ${point.value}`}</title></circle>)}<text className="report-axis-text" x="54" y={height - 10}>Rolling median size →</text><text className="report-axis-text" x="58" y="14">Actual size ↑</text></svg></div>;
 }
 
 function FeatureGapTable({ title = 'Feature gaps', rows }) {
