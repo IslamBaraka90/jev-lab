@@ -363,6 +363,34 @@
     "code": "/** No labels anywhere: what is graded is consistency, and whether the reasons match the numbers. */\nfunction report(results, context = {}) {\n  const graded = results.filter((result) => result.evaluation);\n  const bySymbol = new Map();\n  for (const result of graded) {\n    bySymbol.set(result.item.symbol, [...(bySymbol.get(result.item.symbol) ?? []), result]);\n  }\n\n  return {\n    note: `Ninety-six readings: sixteen companies against six goals. ${context.note ?? ''}`,\n    findings: findings(graded, bySymbol),\n    kpis: kpis(graded, bySymbol),\n    distribution: distribution(graded),\n    matrix: goalMatrix(graded),\n    curve: coverage(graded),\n    checks: checks(graded),\n    topItems: topItems(graded),\n  };\n}",
     "language": "javascript"
   },
+  "demos/income-planning/demo.js#demo:state": {
+    "path": "demos/income-planning/demo.js",
+    "startLine": 13,
+    "endLine": 22,
+    "code": "function buildState(item, context) {\n  return {\n    task: 'Check whether portfolio income and existing cash cover commitments when due. Distinguish annual insufficiency from income that arrives too late, and do not call a covered monthly gap a timing problem.',\n    policy: { interpretation: context.interpretation, sale_rule: item.saleRule, note: context.researchOnly },\n    account: { starting_cash_usd: item.startingCash, annual_income_usd: item.annualIncome, annual_commitments_usd: item.annualCommitments, average_monthly_commitment_usd: item.averageMonthlyCommitment, cash_months_at_start: item.cashMonthsAtStart, six_month_cash_drag_threshold_usd: Math.round(item.averageMonthlyCommitment * 6), minimum_projected_cash_usd: item.minimumProjectedCash },\n    holdings_and_payment_reliability: item.holdings,\n    dated_commitments: item.commitments,\n    twelve_month_calendar: item.calendar.map((entry) => ({ month: entry.month, expected_income_usd: entry.income, commitments_usd: entry.commitment, monthly_gap_usd: entry.gap, projected_cash_after_month_usd: entry.projectedCash })),\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/income-planning/demo.js#demo:questions": {
+    "path": "demos/income-planning/demo.js",
+    "startLine": 26,
+    "endLine": 36,
+    "code": "const questions = {\n  coverage: score('How well are the next twelve months covered?', ['None', 'Severe shortfall', 'Shortfall', 'Tight', 'Adequate', 'Comfortable', 'Ample']),\n  problem: choice('What is the account’s main cash-planning problem?', {\n    SHORTFALL: 'Annual income plus usable cash is insufficient for the commitments.',\n    TIMING: 'Annual income is enough, but projected cash falls below zero before that income arrives.',\n    CASH_DRAG: 'The plan works but cash above six months of commitments remains idle.',\n    NONE: 'Income and a proportionate cash buffer cover the schedule without a sale.',\n  }),\n  worst_month: choice('Which month has the worst actionable gap? For SHORTFALL or TIMING choose the month with the most negative monthly_gap_usd, not a later month with the lowest accumulated cash. CASH_DRAG and NONE must answer NONE.', { ...Object.fromEntries(MONTHS.map((month) => [month, `${month}, if it has the most negative monthly income-minus-commitment gap.`])), NONE: 'No actionable gap month: use this for CASH_DRAG and NONE.' }),\n  sell_needed: noul('Must something be sold to meet a dated commitment under the stated rule?', { yes: 'Income and permitted cash do not cover a dated commitment.', no: 'No sale is required.' }),\n};",
+    "language": "javascript"
+  },
+  "demos/income-planning/demo.js#demo:evaluate": {
+    "path": "demos/income-planning/demo.js",
+    "startLine": 40,
+    "endLine": 51,
+    "code": "function evaluate(answers, item) {\n  const worst = [...item.calendar].sort((left, right) => left.gap - right.gap)[0];\n  return {\n    coverage: answers.coverage.score,\n    problem: answers.problem.choice,\n    worstMonth: answers.worst_month.choice,\n    sellNeeded: answers.sell_needed.noul >= 0.5,\n    confidence: answers.problem.confidence,\n    worstGap: worst.gap,\n    label: `${item.id} · ${title(answers.problem.choice)} · ${answers.worst_month.choice} · ${answers.coverage.score.toFixed(1)}/6`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/income-planning/demo.js#demo:report": {
+    "path": "demos/income-planning/demo.js",
+    "startLine": 55,
+    "endLine": 83,
+    "code": "function report(results, context = {}) {\n  const byItem = new Map((context.labels ?? []).map((label) => [label.accountId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const problemCorrect = graded.filter((result) => result.evaluation.problem === byItem.get(result.item.id).issue);\n  const monthCorrect = graded.filter((result) => result.evaluation.worstMonth === byItem.get(result.item.id).worstMonth);\n  const coverageCorrect = graded.filter((result) => coverageMatches(result.evaluation.coverage, byItem.get(result.item.id).issue));\n  const cashDrag = graded.filter((result) => byItem.get(result.item.id).issue === 'CASH_DRAG');\n  const cashDragFound = cashDrag.filter((result) => result.evaluation.problem === 'CASH_DRAG');\n  const needsAction = graded.filter((result) => ['SHORTFALL', 'TIMING'].includes(byItem.get(result.item.id).issue));\n  return {\n    note: `Forty synthetic accounts: nine annual shortfalls, six timing-only gaps, five idle-cash cases and twenty with no issue. ${context.researchOnly ?? ''}`,\n    findings: findings(graded, byItem),\n    kpis: [\n      { label: 'Coverage accuracy', value: `${coverageCorrect.length} of ${graded.length}`, context: 'score band checked against the planted issue', tone: coverageCorrect.length === graded.length ? 'good' : 'warn' },\n      { label: 'Problem named exactly', value: `${problemCorrect.length} of ${graded.length}`, context: percent(problemCorrect.length, graded.length), tone: problemCorrect.length === graded.length ? 'good' : 'warn' },\n      { label: 'Worst-month accuracy', value: `${monthCorrect.length} of ${graded.length}`, context: 'exactly against the labelled month or NONE', tone: monthCorrect.length === graded.length ? 'good' : 'warn' },\n      { label: 'Cash drag identified', value: `${cashDragFound.length} of ${cashDrag.length}`, context: 'kept separate from shortfall and timing', tone: cashDragFound.length === cashDrag.length ? 'good' : 'warn' },\n    ],\n    distribution: PROBLEMS.map((problem) => ({ label: title(problem), count: graded.filter((result) => result.evaluation.problem === problem).length })).filter((entry) => entry.count),\n    matrix: problemMatrix(graded, byItem),\n    checks: [\n      issueCheck('shortfall', 'Annual shortfalls missed', 'SHORTFALL', graded, byItem),\n      issueCheck('timing', 'Timing-only gaps missed', 'TIMING', graded, byItem),\n      issueCheck('cash-drag', 'Idle-cash cases missed', 'CASH_DRAG', graded, byItem),\n      { id: 'month', label: 'Worst month wrong', detail: 'Exact month from the largest visible monthly gap; NONE for accounts without an actionable gap.', count: graded.length - monthCorrect.length, of: graded.length, items: graded.filter((result) => result.evaluation.worstMonth !== byItem.get(result.item.id).worstMonth).map((result) => result.item.id) },\n    ],\n    topItems: [...needsAction].sort((left, right) => left.evaluation.worstGap - right.evaluation.worstGap).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: money(result.evaluation.worstGap) })),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/insider-surveillance/demo.js#demo:state": {
     "path": "demos/insider-surveillance/demo.js",
     "startLine": 12,
@@ -1012,6 +1040,13 @@
     "startLine": 91,
     "endLine": 105,
     "code": "/** One year of a real company's statements, exactly as the cached file has them. */\nfunction statementLine(year) {\n  return {\n    fiscalYearEnd: year.fiscalYearEnd,\n    revenue: year.revenue,\n    operatingIncome: year.operatingIncome,\n    netIncome: year.netIncome,\n    totalAssets: year.totalAssets,\n    totalDebt: year.totalDebt,\n    cash: year.cash,\n    operatingCashFlow: year.operatingCashFlow,\n    freeCashFlow: year.freeCashFlow,\n    dividendsPaid: year.dividendsPaid,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/income-planning.js#demo:data": {
+    "path": "scripts/generate/income-planning.js",
+    "startLine": 92,
+    "endLine": 94,
+    "code": "function incomeSchedule(holdings) {\n  return MONTHS.map((month) => holdings.reduce((sum, holding) => sum + (holding.schedule.includes(month) ? holding.amountPerPayment : 0), 0));\n}",
     "language": "javascript"
   },
   "scripts/generate/insider-surveillance.js#demo:data": {

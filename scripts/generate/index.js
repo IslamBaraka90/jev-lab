@@ -39,6 +39,7 @@ export const GENERATORS = {
   'mandate-compliance': () => import('./mandate-compliance.js'),
   'portfolio-compare': () => import('./portfolio-compare.js'),
   'factor-exposure': () => import('./factor-exposure.js'),
+  'income-planning': () => import('./income-planning.js'),
   'post-trade-review': () => import('./post-trade-review.js'),
   'execution-quality': () => import('./execution-quality.js'),
   'journal-vs-reality': () => import('./journal-vs-reality.js'),

@@ -29,6 +29,7 @@ import rebalanceReview from './rebalance-review/demo.js';
 import mandateCompliance from './mandate-compliance/demo.js';
 import portfolioCompare from './portfolio-compare/demo.js';
 import factorExposure from './factor-exposure/demo.js';
+import incomePlanning from './income-planning/demo.js';
 import postTradeReview from './post-trade-review/demo.js';
 import executionQuality from './execution-quality/demo.js';
 import journalVsReality from './journal-vs-reality/demo.js';
@@ -79,6 +80,7 @@ export const DEMOS = [
   mandateCompliance,
   portfolioCompare,
   factorExposure,
+  incomePlanning,
   postTradeReview,
   executionQuality,
   journalVsReality,

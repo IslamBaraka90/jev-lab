@@ -1,0 +1,242 @@
+[
+  {
+    "accountId": "IP-01",
+    "issue": "SHORTFALL",
+    "worstMonth": "JAN",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-02",
+    "issue": "SHORTFALL",
+    "worstMonth": "MAR",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-03",
+    "issue": "SHORTFALL",
+    "worstMonth": "MAY",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-04",
+    "issue": "SHORTFALL",
+    "worstMonth": "JUL",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-05",
+    "issue": "SHORTFALL",
+    "worstMonth": "SEP",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-06",
+    "issue": "SHORTFALL",
+    "worstMonth": "JAN",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-07",
+    "issue": "SHORTFALL",
+    "worstMonth": "MAR",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-08",
+    "issue": "SHORTFALL",
+    "worstMonth": "MAY",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-09",
+    "issue": "SHORTFALL",
+    "worstMonth": "JUL",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-10",
+    "issue": "TIMING",
+    "worstMonth": "FEB",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-11",
+    "issue": "TIMING",
+    "worstMonth": "APR",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-12",
+    "issue": "TIMING",
+    "worstMonth": "JUN",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-13",
+    "issue": "TIMING",
+    "worstMonth": "AUG",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-14",
+    "issue": "TIMING",
+    "worstMonth": "OCT",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-15",
+    "issue": "TIMING",
+    "worstMonth": "FEB",
+    "sellNeeded": true
+  },
+  {
+    "accountId": "IP-16",
+    "issue": "CASH_DRAG",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-17",
+    "issue": "CASH_DRAG",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-18",
+    "issue": "CASH_DRAG",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-19",
+    "issue": "CASH_DRAG",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-20",
+    "issue": "CASH_DRAG",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-21",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-22",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-23",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-24",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-25",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-26",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-27",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-28",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-29",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-30",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-31",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-32",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-33",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-34",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-35",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-36",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-37",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-38",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-39",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  },
+  {
+    "accountId": "IP-40",
+    "issue": "NONE",
+    "worstMonth": "NONE",
+    "sellNeeded": false
+  }
+]

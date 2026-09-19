@@ -706,3 +706,21 @@
 @media (max-width: 900px) {
   .candle-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+.calendar-chart {
+  width: 100%;
+  min-height: 260px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--surface) 94%, var(--ink));
+}
+
+.calendar-grid { stroke: var(--line); stroke-width: 1; }
+.calendar-axis { fill: var(--muted); font-size: 11px; }
+.calendar-income { fill: var(--cyan); opacity: 0.85; }
+.calendar-commitment { fill: var(--violet); opacity: 0.82; }
+.calendar-gap { fill: var(--danger); opacity: 0.2; }
+.calendar-legend { display: flex; flex-wrap: wrap; gap: 16px; color: var(--muted); font-size: 13px; }
+.calendar-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.calendar-key { width: 12px; height: 12px; border-radius: 3px; background: var(--cyan); }
+.calendar-key.commitment { background: var(--violet); }
+.calendar-key.gap { background: color-mix(in srgb, var(--danger) 35%, transparent); border: 1px solid var(--danger); }
