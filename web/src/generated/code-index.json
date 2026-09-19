@@ -419,6 +419,34 @@
     "code": "/** Accounts are answered one at a time; networks are what the bank actually has to find. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.accountId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const inNetwork = graded.filter((result) => byItem.get(result.item.id).networkId);\n  const found = inNetwork.filter((result) => result.evaluation.role === byItem.get(result.item.id).role);\n  const ordinary = graded.filter((result) => !byItem.get(result.item.id).networkId);\n\n  return {\n    note: `A hundred and twenty accounts, ${inNetwork.length} of them in three arrangements, and a small employer whose payroll fans out like one. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, ordinary),\n    kpis: kpis({ graded, inNetwork, found, ordinary, byItem, currency: context.currency }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, inNetwork),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
     "language": "javascript"
   },
+  "demos/news-impact/demo.js#demo:state": {
+    "path": "demos/news-impact/demo.js",
+    "startLine": 21,
+    "endLine": 36,
+    "code": "/** The story, and the chart up to the day it broke. Not one bar after it. */\nfunction buildState(item, context) {\n  const upToToday = item.chart.bars.slice(0, item.chart.markIndex + 1);\n  return {\n    task: 'Read this headline against the chart behind it and say whether it matters, which way, over what horizon, and whether the market already knew.',\n    issuer: { ticker: item.ticker, company: item.company, sector: item.sector },\n    date: item.date,\n    headline: item.headline,\n    body: item.body,\n    last_three_headlines: item.priorHeadlines,\n    close_on_the_day: item.close,\n    daily_bars_up_to_and_including_today: upToToday,\n    bar_format: 'date open high low close volume, volume in thousands',\n    note: context.note,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/news-impact/demo.js#demo:questions": {
+    "path": "demos/news-impact/demo.js",
+    "startLine": 40,
+    "endLine": 64,
+    "code": "const questions = {\n  materiality: score('How much does this headline matter to the price?', [\n    'None', 'Trivial', 'Minor', 'Notable', 'Material', 'Major', 'Transformative',\n  ]),\n  direction: choice('Which way, if it matters?', {\n    POSITIVE: 'Good for the price.',\n    NEGATIVE: 'Bad for the price.',\n    MIXED: 'Real, but it cuts both ways.',\n    NEUTRAL: 'No directional read at all.',\n  }),\n  horizon: choice('Over what horizon does it play out?', {\n    SAME_DAY: 'It is in the price by the close.',\n    DAYS: 'It works through over the next few days.',\n    WEEKS: 'It takes weeks to show up.',\n    STRUCTURAL: 'It changes what the business is worth, not what the price does this month.',\n  }),\n  already_priced: noul('Has the market already moved on this?', {\n    yes: 'The bars before the headline already show it being discounted.',\n    no: 'The chart gives no sign anybody knew.',\n  }),\n  tradeable_now: noul('Is there anything to act on today?', {\n    yes: 'A position taken on this today would be taken on the news, not on hope.',\n    no: 'Nothing here is worth acting on at this price.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/news-impact/demo.js#demo:evaluate": {
+    "path": "demos/news-impact/demo.js",
+    "startLine": 68,
+    "endLine": 79,
+    "code": "/** One reading of one headline, before anything that followed it is known. */\nfunction evaluate(answers, item) {\n  return {\n    materiality: answers.materiality.score,\n    direction: answers.direction.choice,\n    horizon: answers.horizon.choice,\n    alreadyPriced: answers.already_priced.noul >= 0.5,\n    tradeable: answers.tradeable_now.noul >= 0.5,\n    confidence: answers.direction.confidence,\n    label: `${item.ticker} · ${item.date} · ${answers.materiality.score.toFixed(1)} of 6 · ${readable(answers.direction.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/news-impact/demo.js#demo:report": {
+    "path": "demos/news-impact/demo.js",
+    "startLine": 83,
+    "endLine": 100,
+    "code": "/** Materiality against what the market actually did next, which is not the same as being right. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.headlineId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const group = (name) => graded.filter((result) => byItem.get(result.item.id).group === name);\n\n  return {\n    note: `Three hundred headlines. ${group('MOVED').length} landed in front of a real move, ${group('NOTHING').length} in front of nothing, and ${group('ROUTINE').length} are routine. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, group),\n    kpis: kpis(graded, byItem, group),\n    distribution: distribution(graded),\n    matrix: directionMatrix(graded, byItem),\n    curve: calibration(graded, byItem),\n    checks: checks(graded, byItem, group),\n    topItems: topItems(graded, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/order-risk/demo.js#demo:state": {
     "path": "demos/order-risk/demo.js",
     "startLine": 23,
@@ -774,6 +802,13 @@
     "startLine": 65,
     "endLine": 78,
     "code": "/** One account as the bank holds it, before any transfer is attached to it. */\nfunction makeAccount(random, index) {\n  const business = random.bool(0.18);\n  return {\n    id: `ACC-${String(index + 1).padStart(4, '0')}`,\n    holder: business ? `${companyName(random)} Ltd` : personName(random),\n    accountType: business ? 'Business' : 'Personal',\n    openedMonthsAgo: random.weighted([[random.int(1, 6), 30], [random.int(7, 24), 40], [random.int(25, 140), 30]]),\n    kycLevel: random.weighted([['full', 72], ['simplified', 22], ['pending refresh', 6]]),\n    declaredIncome: business ? amount(random, { min: 40_000, max: 400_000 }) : amount(random, { min: 12_000, max: 68_000 }),\n    devicesSharedWith: [],\n    addressSharedWith: [],\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/news-impact.js#demo:data": {
+    "path": "scripts/generate/news-impact.js",
+    "startLine": 131,
+    "endLine": 157,
+    "code": "/** One headline: the story, the chart it landed on, and the last three stories about the same issuer. */\nfunction item(entry, all) {\n  const { issuer, bars, at } = entry;\n  const window = bars.slice(at - SHOWN + 1, at + REVEALED + 1);\n  const priors = all\n    .filter((other) => other.issuer.ticker === issuer.ticker && other.bars[other.at].date < bars[at].date)\n    .slice(-3)\n    .map((prior) => `${prior.bars[prior.at].date} · ${prior.story.headline}`);\n\n  return {\n    id: entry.id,\n    ticker: issuer.ticker,\n    company: issuer.name,\n    sector: issuer.sector,\n    date: bars[at].date,\n    headline: entry.story.headline,\n    body: entry.story.body,\n    kind: entry.story.kind,\n    priorHeadlines: priors,\n    close: bars[at].close,\n    chart: {\n      markIndex: SHOWN - 1,\n      label: `${issuer.ticker} · ${bars[at].date}`,\n      bars: window.map((bar) => `${bar.date} ${bar.open} ${bar.high} ${bar.low} ${bar.close} ${bar.volume}`),\n    },\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/order-risk.js#demo:data": {
