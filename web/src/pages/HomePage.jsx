@@ -14,8 +14,10 @@ const WAYS_IN = [
 export function HomePage() {
   const counts = catalogCounts();
   const planned = domains().reduce((total, domain) => total + domain.planned, 0);
-  // Everything, while the catalog is small enough to read in one go; the first six once it is not.
-  const featured = cards().slice(0, 6);
+  // Newest first, so a demo finished today is on the front page the moment it is registered. Capped at
+  // nine, because the front page is a taste of the catalog and the catalog is the catalog.
+  const all = cards();
+  const latest = [...all].reverse().slice(0, 9);
 
   return (
     <div className="stack home">
@@ -67,11 +69,19 @@ export function HomePage() {
         </div>
       </section>
 
-      {featured.length > 0 && (
+      {latest.length > 0 && (
         <section className="stack" aria-labelledby="featured-title">
-          <h2 id="featured-title">Start here</h2>
+          <div className="section-title">
+            <h2 id="featured-title">The demos so far</h2>
+            <span className="meta">
+              Newest first
+              {all.length > latest.length && <> · showing {latest.length} of {all.length}</>}
+              {' · '}
+              <Link to="/demos">browse all {all.length}</Link>
+            </span>
+          </div>
           <ul className="demo-grid">
-            {featured.map((card) => (
+            {latest.map((card) => (
               <DemoCard key={card.id} card={card} />
             ))}
           </ul>
