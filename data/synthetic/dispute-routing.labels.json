@@ -1,0 +1,1542 @@
+[
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0066"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0191"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0012"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0088"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0070"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0074"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0091"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0183"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0037"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0002"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0073"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0125"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0059"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0077"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0072"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0042"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0167"
+  },
+  {
+    "kind": "friendly fraud",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0218"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0120"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0153"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0143"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0141"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0071"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0047"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0181"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0215"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0108"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0172"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0163"
+  },
+  {
+    "kind": "genuine non-delivery",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0031"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0058"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0060"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0178"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0024"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0035"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0018"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0084"
+  },
+  {
+    "kind": "duplicate charge",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DUPLICATE",
+    "disputeId": "DSP-0006"
+  },
+  {
+    "kind": "policy expired",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0100"
+  },
+  {
+    "kind": "policy expired",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0175"
+  },
+  {
+    "kind": "policy expired",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0146"
+  },
+  {
+    "kind": "policy expired",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0142"
+  },
+  {
+    "kind": "policy expired",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0057"
+  },
+  {
+    "kind": "policy expired",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0007"
+  },
+  {
+    "kind": "needs one photo",
+    "correctAction": "REQUEST_EVIDENCE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0202"
+  },
+  {
+    "kind": "needs one photo",
+    "correctAction": "REQUEST_EVIDENCE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0199"
+  },
+  {
+    "kind": "needs one photo",
+    "correctAction": "REQUEST_EVIDENCE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0133"
+  },
+  {
+    "kind": "needs one photo",
+    "correctAction": "REQUEST_EVIDENCE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0106"
+  },
+  {
+    "kind": "needs one photo",
+    "correctAction": "REQUEST_EVIDENCE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0104"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0045"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0113"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0135"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0179"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0207"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0132"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0136"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_50",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0093"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0122"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0118"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0083"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0032"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0148"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0080"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_50",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0139"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0194"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0005"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0034"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0086"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0097"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0078"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0121"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0019"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0217"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0039"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0028"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0137"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0103"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0089"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0115"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0138"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0147"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0094"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0054"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0151"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0001"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0129"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0015"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0200"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0190"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0205"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0017"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0067"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0014"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0020"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0220"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0055"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0023"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0112"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0159"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0195"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0065"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0110"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0161"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0119"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0174"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0210"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_50",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0063"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0085"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0171"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0201"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0186"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0044"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0182"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0176"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0051"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_50",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0152"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0160"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0105"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0180"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0213"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0214"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0173"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0016"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0003"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0123"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0008"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0087"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0036"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0029"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0114"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0162"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0212"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0049"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0185"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0149"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0145"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0116"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0027"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0219"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_50",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0102"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0177"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0209"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0206"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0128"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0203"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0131"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0041"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0130"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0079"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0126"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0188"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0150"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0134"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0082"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0165"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0170"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0117"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0124"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0166"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0193"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0169"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0216"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0068"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0009"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0092"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0013"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0127"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0090"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0109"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_50",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0069"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0095"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0164"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0192"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0155"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0025"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0196"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0154"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0026"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0098"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0111"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0099"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0046"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0064"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0198"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0022"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0011"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0156"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "DENY",
+    "refundBand": "NONE",
+    "reasonCode": "NO_FAULT_FOUND",
+    "disputeId": "DSP-0076"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0140"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0168"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0030"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0056"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0050"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0021"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0048"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0189"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0038"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0204"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0157"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_50",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0144"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0053"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0096"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0040"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0211"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0197"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0101"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0184"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "NOT_RECEIVED",
+    "disputeId": "DSP-0043"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0187"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0208"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0107"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0075"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0033"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "PARTIAL_25",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0158"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL_PLUS_SHIPPING",
+    "reasonCode": "DAMAGE",
+    "disputeId": "DSP-0052"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "SUBSCRIPTION",
+    "disputeId": "DSP-0010"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0004"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0062"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "ESCALATE",
+    "refundBand": "NONE",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0061"
+  },
+  {
+    "kind": "everyday",
+    "correctAction": "REFUND_NOW",
+    "refundBand": "FULL",
+    "reasonCode": "NOT_AS_DESCRIBED",
+    "disputeId": "DSP-0081"
+  }
+]

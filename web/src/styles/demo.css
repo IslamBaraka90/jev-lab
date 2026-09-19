@@ -437,3 +437,18 @@
 .how-steps > li {
   min-width: 0;
 }
+
+/* Dispute routing: the backend call an answer set builds, shown under the evaluation. */
+
+.evaluation-call {
+  display: grid;
+  gap: 6px;
+  margin-top: var(--s8);
+  padding-top: var(--s8);
+  border-top: 1px solid var(--border);
+}
+
+.evaluation-call .call-json {
+  max-height: 260px;
+  margin: 0;
+}
