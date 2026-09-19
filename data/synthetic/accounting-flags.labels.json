@@ -1,0 +1,842 @@
+[
+  {
+    "companyYearId": "AF-0001",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0002",
+    "flag": "INVENTORY",
+    "decoy": false,
+    "seriousness": 3,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0003",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0004",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0005",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0006",
+    "flag": "REVENUE_TIMING",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0007",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0008",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0009",
+    "flag": "REVENUE_TIMING",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0010",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0011",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0012",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0013",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0014",
+    "flag": "INVENTORY",
+    "decoy": false,
+    "seriousness": 3,
+    "secondFlag": "RECEIVABLES"
+  },
+  {
+    "companyYearId": "AF-0015",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0016",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0017",
+    "flag": "INVENTORY",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0018",
+    "flag": "RECEIVABLES",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0019",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0020",
+    "flag": "RELATED_PARTY",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0021",
+    "flag": "RELATED_PARTY",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "RECEIVABLES"
+  },
+  {
+    "companyYearId": "AF-0022",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0023",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0024",
+    "flag": "RELATED_PARTY",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0025",
+    "flag": "RELATED_PARTY",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0026",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0027",
+    "flag": "INVENTORY",
+    "decoy": false,
+    "seriousness": 3,
+    "secondFlag": "RECEIVABLES"
+  },
+  {
+    "companyYearId": "AF-0028",
+    "flag": "INVENTORY",
+    "decoy": false,
+    "seriousness": 3,
+    "secondFlag": "RECEIVABLES"
+  },
+  {
+    "companyYearId": "AF-0029",
+    "flag": "REVENUE_TIMING",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0030",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "CAPITALISED_COSTS"
+  },
+  {
+    "companyYearId": "AF-0031",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0032",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0033",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0034",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0035",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0036",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0037",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0038",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0039",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0040",
+    "flag": "CAPITALISED_COSTS",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0041",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0042",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0043",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0044",
+    "flag": "RESTATEMENT",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0045",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0046",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "CAPITALISED_COSTS"
+  },
+  {
+    "companyYearId": "AF-0047",
+    "flag": "INVENTORY",
+    "decoy": false,
+    "seriousness": 3,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0048",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0049",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0050",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "CAPITALISED_COSTS"
+  },
+  {
+    "companyYearId": "AF-0051",
+    "flag": "RECEIVABLES",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0052",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0053",
+    "flag": "INVENTORY",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0054",
+    "flag": "RELATED_PARTY",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0055",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0056",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0057",
+    "flag": "REVENUE_TIMING",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0058",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0059",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0060",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0061",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0062",
+    "flag": "CAPITALISED_COSTS",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0063",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0064",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0065",
+    "flag": "INVENTORY",
+    "decoy": false,
+    "seriousness": 3,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0066",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0067",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0068",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0069",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0070",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0071",
+    "flag": "CAPITALISED_COSTS",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "RECEIVABLES"
+  },
+  {
+    "companyYearId": "AF-0072",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0073",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0074",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0075",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0076",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0077",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0078",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0079",
+    "flag": "INVENTORY",
+    "decoy": false,
+    "seriousness": 3,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0080",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0081",
+    "flag": "CAPITALISED_COSTS",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0082",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0083",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0084",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0085",
+    "flag": "RESTATEMENT",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "CAPITALISED_COSTS"
+  },
+  {
+    "companyYearId": "AF-0086",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0087",
+    "flag": "RECEIVABLES",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0088",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0089",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "CAPITALISED_COSTS"
+  },
+  {
+    "companyYearId": "AF-0090",
+    "flag": "RESTATEMENT",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0091",
+    "flag": "REVENUE_TIMING",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0092",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0093",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0094",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0095",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0096",
+    "flag": "CAPITALISED_COSTS",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "RECEIVABLES"
+  },
+  {
+    "companyYearId": "AF-0097",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0098",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0099",
+    "flag": "RECEIVABLES",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0100",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0101",
+    "flag": "REVENUE_TIMING",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0102",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0103",
+    "flag": "RELATED_PARTY",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0104",
+    "flag": "CAPITALISED_COSTS",
+    "decoy": false,
+    "seriousness": 4,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0105",
+    "flag": "REVENUE_TIMING",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "CAPITALISED_COSTS"
+  },
+  {
+    "companyYearId": "AF-0106",
+    "flag": "CAPITALISED_COSTS",
+    "decoy": true,
+    "seriousness": 1,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0107",
+    "flag": "RESTATEMENT",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0108",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0109",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0110",
+    "flag": "RESTATEMENT",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "CAPITALISED_COSTS"
+  },
+  {
+    "companyYearId": "AF-0111",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0112",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0113",
+    "flag": "REVENUE_TIMING",
+    "decoy": false,
+    "seriousness": 5,
+    "secondFlag": "RECEIVABLES"
+  },
+  {
+    "companyYearId": "AF-0114",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0115",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0116",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0117",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0118",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0119",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  },
+  {
+    "companyYearId": "AF-0120",
+    "flag": "NONE",
+    "decoy": false,
+    "seriousness": 0,
+    "secondFlag": "NONE"
+  }
+]

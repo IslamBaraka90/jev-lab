@@ -35,6 +35,7 @@ import executionQuality from './execution-quality/demo.js';
 import journalVsReality from './journal-vs-reality/demo.js';
 import goalScreening from './goal-screening/demo.js';
 import shariaScreen from './sharia-screen/demo.js';
+import accountingFlags from './accounting-flags/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -86,6 +87,7 @@ export const DEMOS = [
   journalVsReality,
   goalScreening,
   shariaScreen,
+  accountingFlags,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
