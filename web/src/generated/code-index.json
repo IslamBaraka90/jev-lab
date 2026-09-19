@@ -363,6 +363,34 @@
     "code": "/** Graded against the problem each portfolio was built to carry, one risk per book. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.portfolioId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const withRisk = graded.filter((result) => byItem.get(result.item.id).plantedRisk !== 'NONE');\n  const healthy = graded.filter((result) => byItem.get(result.item.id).plantedRisk === 'NONE');\n  const named = withRisk.filter((result) => result.evaluation.risk === byItem.get(result.item.id).plantedRisk);\n\n  return {\n    note: `Twenty-four portfolios, ${withRisk.length} built to carry one problem each and ${healthy.length} built to carry none. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, healthy),\n    kpis: kpis({ graded, withRisk, healthy, named, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, withRisk),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/post-trade-review/demo.js#demo:state": {
+    "path": "demos/post-trade-review/demo.js",
+    "startLine": 20,
+    "endLine": 52,
+    "code": "/** The plan as written, the fills as they happened, and the bars around them. */\nfunction buildState(item, context) {\n  return {\n    task: 'Review this closed trade: whether it had a plan, whether the plan was possible, whether it was followed, and what to learn.',\n    desk: { rules: context.rules, note: context.note },\n    trade: {\n      symbol: item.symbol,\n      direction: item.direction,\n      signal_date: item.signalDate,\n      signal_price: item.signalPrice,\n      bars_between_signal_and_entry: item.barsBetweenSignalAndEntry,\n      entry_date: item.entryDate,\n      entry_price: item.entryPrice,\n      planned_stop: item.plannedStop,\n      planned_target: item.plannedTarget,\n      planned_horizon_bars: item.plannedHorizonBars,\n      size_usd: item.sizeUsd,\n    },\n    what_happened: {\n      exit_date: item.exitDate,\n      exit_price: item.exitPrice,\n      exit_reason: item.exitReason,\n      bars_held: item.barsHeld,\n      result_percent: item.resultPercent,\n      stop_moves: item.stopMoves,\n    },\n    instrument: {\n      average_daily_range_percent: item.averageDailyRangePercent,\n      how_to_read_the_bars: 'One line per day: date, open, high, low, close, volume. The entry bar is the twenty-sixth.',\n      daily_bars: item.chart.bars,\n    },\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/post-trade-review/demo.js#demo:questions": {
+    "path": "demos/post-trade-review/demo.js",
+    "startLine": 56,
+    "endLine": 84,
+    "code": "const questions = {\n  plan_complete: noul('Was the plan complete before entry: direction, stop, target and holding period?', {\n    yes: 'All four were written down before the trade was taken.',\n    no: 'At least one of them is missing from the record.',\n  }),\n  target_realistic: noul('Could the target have been reached inside the planned horizon?', {\n    yes: 'The instrument moves enough in a day for that target to be reachable in that many bars.',\n    no: 'The target needed more than the instrument’s recent range could deliver in the time allowed.',\n  }),\n  stop_honoured: noul('Was the stop honoured as written?', {\n    yes: 'It was not moved after entry, and it was respected if it was reached.',\n    no: 'The stop was moved, ignored, or never there to honour.',\n  }),\n  exit_discipline: score('How disciplined was the exit?', [\n    'Abandoned', 'Very poor', 'Poor', 'Acceptable', 'Good', 'Very good', 'Textbook',\n  ]),\n  lesson: choice('What is the lesson from this trade?', {\n    NO_STOP: 'It was taken without a stop.',\n    TARGET_TOO_FAR: 'The target was never reachable in the time allowed.',\n    EXITED_EARLY: 'It was closed before either level was reached, for no recorded reason.',\n    MOVED_STOP: 'The stop was moved after entry.',\n    CHASED_ENTRY: 'The entry was taken late, well after the level that justified it.',\n    PLAN_FOLLOWED: 'The plan was complete and it was followed. The result is not the lesson.',\n  }),\n  repeatable_setup: noul('Would this setup be worth taking again?', {\n    yes: 'The idea and the levels were sound, whatever this one did.',\n    no: 'Nothing here is worth repeating.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/post-trade-review/demo.js#demo:evaluate": {
+    "path": "demos/post-trade-review/demo.js",
+    "startLine": 88,
+    "endLine": 101,
+    "code": "/** One trade's review: what was wrong with it, and how well it was closed. */\nfunction evaluate(answers, item) {\n  return {\n    lesson: answers.lesson.choice,\n    planComplete: answers.plan_complete.noul >= 0.5,\n    targetRealistic: answers.target_realistic.noul >= 0.5,\n    stopHonoured: answers.stop_honoured.noul >= 0.5,\n    discipline: answers.exit_discipline.score,\n    repeatable: answers.repeatable_setup.noul >= 0.5,\n    confidence: answers.lesson.confidence,\n    result: item.resultPercent,\n    label: `${item.id} · ${item.symbol} ${item.direction.toLowerCase()} · ${percent(item.resultPercent)} · ${readable(answers.lesson.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/post-trade-review/demo.js#demo:report": {
+    "path": "demos/post-trade-review/demo.js",
+    "startLine": 105,
+    "endLine": 124,
+    "code": "/** The lessons that repeat, and whether the review is reading the plan or the result. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.tradeId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const withFault = graded.filter((result) => byItem.get(result.item.id).lesson !== 'PLAN_FOLLOWED');\n  const named = withFault.filter((result) => result.evaluation.lesson === byItem.get(result.item.id).lesson);\n  const clean = graded.filter((result) => byItem.get(result.item.id).lesson === 'PLAN_FOLLOWED');\n\n  return {\n    note: `Two hundred and twenty closed trades on real price history, ${withFault.length} of them with something wrong with the plan. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, clean),\n    kpis: kpis({ graded, withFault, named, clean, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, withFault),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/rebalance-review/demo.js#demo:state": {
     "path": "demos/rebalance-review/demo.js",
     "startLine": 23,
@@ -592,6 +620,13 @@
     "startLine": 121,
     "endLine": 139,
     "code": "/** One holding: an invented weight over a real instrument, with that instrument's own numbers. */\nfunction holdingOf(symbol, weight, total) {\n  const shape = profile(symbol);\n  const value = round((weight / 100) * total);\n  return {\n    symbol,\n    name: shape.industry ?? shape.sector ?? symbol,\n    sector: shape.sector ?? 'Other',\n    assetClass: assetClassOf(symbol),\n    currency: shape.currency,\n    weightPercent: round(weight, 1),\n    valueUsd: value,\n    price: last(symbol).price,\n    twelveMonthReturnPercent: returnOver(symbol),\n    volatilityPercent: volatility(symbol),\n    worstFallPercent: drawdown(symbol),\n    daysOfAverageVolume: round(value / last(symbol).price / Math.max(averageVolume(symbol), 1), 3),\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/post-trade-review.js#demo:data": {
+    "path": "scripts/generate/post-trade-review.js",
+    "startLine": 96,
+    "endLine": 124,
+    "code": "/** The record a review reads: what was planned, what happened, and the bars around it. */\nfunction tradeRecord({ symbol, direction, signalBar, barsLate, entryBar, entryPrice, plan, horizon, walk, window, range, random }) {\n  return {\n    key: `${symbol}-${entryBar.date}-${random.int(1_000, 9_999)}`,\n    id: null,\n    symbol,\n    direction,\n    signalDate: signalBar.date,\n    signalPrice: round(direction === 'LONG' ? signalBar.close : signalBar.close, 2),\n    barsBetweenSignalAndEntry: barsLate,\n    entryDate: entryBar.date,\n    entryPrice,\n    plannedStop: plan.stop,\n    plannedTarget: plan.target,\n    plannedHorizonBars: horizon,\n    sizeUsd: random.int(4, 60) * 1_000,\n    exitDate: walk.exitDate,\n    exitPrice: walk.exitPrice,\n    exitReason: walk.reason,\n    barsHeld: walk.barsHeld,\n    resultPercent: round(((walk.exitPrice - entryPrice) / entryPrice) * 100 * (direction === 'LONG' ? 1 : -1), 2),\n    stopMoves: walk.stopMoves,\n    averageDailyRangePercent: round((range / entryPrice) * 100, 2),\n    chart: {\n      markIndex: BEFORE,\n      bars: window.map((bar) => `${bar.date} ${bar.open} ${bar.high} ${bar.low} ${bar.close} ${bar.volume ?? 0}`),\n    },\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/rebalance-review.js#demo:data": {

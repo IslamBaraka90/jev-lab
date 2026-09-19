@@ -29,6 +29,7 @@ export const GENERATORS = {
   'portfolio-health': () => import('./portfolio-health.js'),
   'rebalance-review': () => import('./rebalance-review.js'),
   'mandate-compliance': () => import('./mandate-compliance.js'),
+  'post-trade-review': () => import('./post-trade-review.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
