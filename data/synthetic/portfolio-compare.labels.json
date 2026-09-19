@@ -37,7 +37,7 @@
   {
     "pairId": "PC-06",
     "betterFit": "PORTFOLIO_A",
-    "reason": "CONCENTRATION",
+    "reason": "CURRENCY",
     "kind": "decisive",
     "trap": false
   },
@@ -58,7 +58,7 @@
   {
     "pairId": "PC-09",
     "betterFit": "PORTFOLIO_B",
-    "reason": "SECTOR_MIX",
+    "reason": "CONCENTRATION",
     "kind": "decisive",
     "trap": false
   },
@@ -72,7 +72,7 @@
   {
     "pairId": "PC-11",
     "betterFit": "PORTFOLIO_B",
-    "reason": "CONCENTRATION",
+    "reason": "CURRENCY",
     "kind": "decisive",
     "trap": false
   },

@@ -24,7 +24,7 @@ const ARCHETYPES = {
 const GOALS = {
   income: { name: 'Income', words: 'Produce dependable income without taking a large capital-loss risk.', constraints: { minimum_income_yield_percent: 2.5, maximum_drawdown_percent: 28, minimum_liquid_share_percent: 90 } },
   preservation: { name: 'Capital preservation', words: 'Protect capital first; return comes second.', constraints: { maximum_volatility_percent: 20, maximum_drawdown_percent: 22, maximum_single_holding_percent: 30 } },
-  growth: { name: 'Growth', words: 'Seek long-term capital growth while keeping any single name below the limit.', constraints: { maximum_single_holding_percent: 30, minimum_liquid_share_percent: 90, maximum_drawdown_percent: 50 } },
+  growth: { name: 'Growth', words: 'Seek long-term capital growth without adding an unrequested currency bet.', constraints: { maximum_single_holding_percent: 30, maximum_foreign_currency_percent: 10, minimum_liquid_share_percent: 90, maximum_drawdown_percent: 50 } },
   inflation: { name: 'Inflation hedge', words: 'Hold a meaningful real-asset sleeve while remaining diversified and liquid.', constraints: { minimum_real_asset_share_percent: 45, maximum_single_holding_percent: 35, minimum_liquid_share_percent: 85 } },
   low_drawdown: { name: 'Low drawdown', words: 'Avoid deep falls, even if that means giving up the highest recent return.', constraints: { maximum_drawdown_percent: 18, maximum_volatility_percent: 20, maximum_single_holding_percent: 30 } },
 };
@@ -35,12 +35,12 @@ const STANDARD = [
   ['growth', 'growth', 'defensive', 'PORTFOLIO_A', 'SECTOR_MIX'],
   ['inflation', 'inflation', 'balanced', 'PORTFOLIO_A', 'SECTOR_MIX'],
   ['low_drawdown', 'defensive', 'growth', 'PORTFOLIO_A', 'DRAWDOWN_RISK'],
-  ['growth', 'balanced', 'concentrated', 'PORTFOLIO_A', 'CONCENTRATION'],
+  ['growth', 'balanced', 'balanced', 'PORTFOLIO_A', 'CURRENCY'],
   ['income', 'growth', 'income', 'PORTFOLIO_B', 'INCOME'],
   ['preservation', 'growth', 'defensive', 'PORTFOLIO_B', 'DRAWDOWN_RISK'],
-  ['growth', 'defensive', 'growth', 'PORTFOLIO_B', 'SECTOR_MIX'],
-  ['inflation', 'balanced', 'inflation', 'PORTFOLIO_B', 'SECTOR_MIX'],
   ['growth', 'concentrated', 'balanced', 'PORTFOLIO_B', 'CONCENTRATION'],
+  ['inflation', 'balanced', 'inflation', 'PORTFOLIO_B', 'SECTOR_MIX'],
+  ['growth', 'balanced', 'balanced', 'PORTFOLIO_B', 'CURRENCY'],
   ['income', 'illiquid', 'income', 'PORTFOLIO_B', 'LIQUIDITY'],
 ];
 

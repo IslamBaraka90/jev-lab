@@ -371,9 +371,10 @@
       "id": "PC-03",
       "goal": {
         "name": "Growth",
-        "words": "Seek long-term capital growth while keeping any single name below the limit.",
+        "words": "Seek long-term capital growth without adding an unrequested currency bet.",
         "constraints": {
           "maximum_single_holding_percent": 30,
+          "maximum_foreign_currency_percent": 10,
           "minimum_liquid_share_percent": 90,
           "maximum_drawdown_percent": 50
         }
@@ -905,9 +906,10 @@
       "id": "PC-06",
       "goal": {
         "name": "Growth",
-        "words": "Seek long-term capital growth while keeping any single name below the limit.",
+        "words": "Seek long-term capital growth without adding an unrequested currency bet.",
         "constraints": {
           "maximum_single_holding_percent": 30,
+          "maximum_foreign_currency_percent": 10,
           "minimum_liquid_share_percent": 90,
           "maximum_drawdown_percent": 50
         }
@@ -1001,46 +1003,10 @@
         "cashPercent": 5,
         "holdings": [
           {
-            "symbol": "NVDA",
-            "sector": "Technology",
-            "currency": "EUR",
-            "weightPercent": 58,
-            "twelveMonthReturnPercent": 30.52,
-            "volatilityPercent": 37.97,
-            "drawdownPercent": -20.22,
-            "incomeYieldPercent": 0.03,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0
-          },
-          {
-            "symbol": "MSFT",
-            "sector": "Technology",
-            "currency": "GBP",
-            "weightPercent": 12,
-            "twelveMonthReturnPercent": -3.18,
-            "volatilityPercent": 32.16,
-            "drawdownPercent": -34.91,
-            "incomeYieldPercent": 0.7,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0
-          },
-          {
-            "symbol": "AAPL",
-            "sector": "Technology",
-            "currency": "USD",
-            "weightPercent": 10,
-            "twelveMonthReturnPercent": 40.65,
-            "volatilityPercent": 25.07,
-            "drawdownPercent": -13.82,
-            "incomeYieldPercent": 0.5,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0
-          },
-          {
             "symbol": "SPY",
             "sector": "Other",
-            "currency": "USD",
-            "weightPercent": 10,
+            "currency": "EUR",
+            "weightPercent": 25,
             "twelveMonthReturnPercent": 15.55,
             "volatilityPercent": 12.89,
             "drawdownPercent": -9.13,
@@ -1049,34 +1015,72 @@
             "daysOfAverageVolume": 0
           },
           {
+            "symbol": "MSFT",
+            "sector": "Technology",
+            "currency": "GBP",
+            "weightPercent": 18,
+            "twelveMonthReturnPercent": -3.18,
+            "volatilityPercent": 32.16,
+            "drawdownPercent": -34.91,
+            "incomeYieldPercent": 0.7,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0
+          },
+          {
+            "symbol": "JPM",
+            "sector": "Financial Services",
+            "currency": "USD",
+            "weightPercent": 17,
+            "twelveMonthReturnPercent": 12.16,
+            "volatilityPercent": 22.1,
+            "drawdownPercent": -15.47,
+            "incomeYieldPercent": 2.2,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0.001
+          },
+          {
+            "symbol": "JNJ",
+            "sector": "Healthcare",
+            "currency": "USD",
+            "weightPercent": 18,
+            "twelveMonthReturnPercent": 52.36,
+            "volatilityPercent": 19.09,
+            "drawdownPercent": -10.96,
+            "incomeYieldPercent": 3.1,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0.001
+          },
+          {
             "symbol": "GLD",
             "sector": "Other",
             "currency": "USD",
-            "weightPercent": 5,
+            "weightPercent": 17,
             "twelveMonthReturnPercent": 19.05,
             "volatilityPercent": 29.56,
             "drawdownPercent": -26.4,
             "incomeYieldPercent": 0,
             "liquidity": "same day",
-            "daysOfAverageVolume": 0
+            "daysOfAverageVolume": 0.001
           }
         ],
         "summary": {
-          "twelveMonthReturnPercent": 23.89,
-          "volatilityPercent": 31.16,
-          "drawdownPercent": -19.53,
-          "incomeYieldPercent": 0.27,
-          "largestHoldingPercent": 58,
+          "twelveMonthReturnPercent": 18.05,
+          "volatilityPercent": 21.23,
+          "drawdownPercent": -17.66,
+          "incomeYieldPercent": 1.36,
+          "largestHoldingPercent": 25,
           "liquidWithinOneDayPercent": 95,
-          "realAssetSharePercent": 5,
+          "realAssetSharePercent": 17,
           "sectorMixPercent": {
-            "Technology": 80,
-            "Other": 15
+            "Other": 42,
+            "Technology": 18,
+            "Financial Services": 17,
+            "Healthcare": 18
           },
           "currencyMixPercent": {
-            "EUR": 58,
-            "GBP": 12,
-            "USD": 25
+            "EUR": 25,
+            "GBP": 18,
+            "USD": 52
           }
         }
       }
@@ -1441,9 +1445,10 @@
       "id": "PC-09",
       "goal": {
         "name": "Growth",
-        "words": "Seek long-term capital growth while keeping any single name below the limit.",
+        "words": "Seek long-term capital growth without adding an unrequested currency bet.",
         "constraints": {
           "maximum_single_holding_percent": 30,
+          "maximum_foreign_currency_percent": 10,
           "minimum_liquid_share_percent": 90,
           "maximum_drawdown_percent": 50
         }
@@ -1453,93 +1458,10 @@
         "cashPercent": 5,
         "holdings": [
           {
-            "symbol": "KO",
-            "sector": "Consumer Defensive",
-            "currency": "USD",
-            "weightPercent": 20,
-            "twelveMonthReturnPercent": 31.64,
-            "volatilityPercent": 18.72,
-            "drawdownPercent": -8.5,
-            "incomeYieldPercent": 2.9,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0.001
-          },
-          {
-            "symbol": "PG",
-            "sector": "Consumer Defensive",
-            "currency": "USD",
-            "weightPercent": 20,
-            "twelveMonthReturnPercent": -8.69,
-            "volatilityPercent": 19.56,
-            "drawdownPercent": -16.15,
-            "incomeYieldPercent": 2.5,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0.001
-          },
-          {
-            "symbol": "JNJ",
-            "sector": "Healthcare",
-            "currency": "USD",
-            "weightPercent": 20,
-            "twelveMonthReturnPercent": 52.36,
-            "volatilityPercent": 19.09,
-            "drawdownPercent": -10.96,
-            "incomeYieldPercent": 3.1,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0.001
-          },
-          {
-            "symbol": "GLD",
-            "sector": "Other",
-            "currency": "USD",
-            "weightPercent": 20,
-            "twelveMonthReturnPercent": 19.05,
-            "volatilityPercent": 29.56,
-            "drawdownPercent": -26.4,
-            "incomeYieldPercent": 0,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0
-          },
-          {
-            "symbol": "PEP",
-            "sector": "Consumer Defensive",
-            "currency": "USD",
-            "weightPercent": 15,
-            "twelveMonthReturnPercent": -8.13,
-            "volatilityPercent": 21.1,
-            "drawdownPercent": -23.9,
-            "incomeYieldPercent": 3.6,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0.001
-          }
-        ],
-        "summary": {
-          "twelveMonthReturnPercent": 17.65,
-          "volatilityPercent": 20.55,
-          "drawdownPercent": -15.99,
-          "incomeYieldPercent": 2.24,
-          "largestHoldingPercent": 20,
-          "liquidWithinOneDayPercent": 95,
-          "realAssetSharePercent": 20,
-          "sectorMixPercent": {
-            "Consumer Defensive": 55,
-            "Healthcare": 20,
-            "Other": 20
-          },
-          "currencyMixPercent": {
-            "USD": 95
-          }
-        }
-      },
-      "portfolioB": {
-        "name": "Portfolio B",
-        "cashPercent": 5,
-        "holdings": [
-          {
             "symbol": "NVDA",
             "sector": "Technology",
             "currency": "USD",
-            "weightPercent": 25,
+            "weightPercent": 58,
             "twelveMonthReturnPercent": 30.52,
             "volatilityPercent": 37.97,
             "drawdownPercent": -20.22,
@@ -1551,7 +1473,7 @@
             "symbol": "MSFT",
             "sector": "Technology",
             "currency": "USD",
-            "weightPercent": 22,
+            "weightPercent": 12,
             "twelveMonthReturnPercent": -3.18,
             "volatilityPercent": 32.16,
             "drawdownPercent": -34.91,
@@ -1563,7 +1485,7 @@
             "symbol": "AAPL",
             "sector": "Technology",
             "currency": "USD",
-            "weightPercent": 20,
+            "weightPercent": 10,
             "twelveMonthReturnPercent": 40.65,
             "volatilityPercent": 25.07,
             "drawdownPercent": -13.82,
@@ -1575,7 +1497,7 @@
             "symbol": "SPY",
             "sector": "Other",
             "currency": "USD",
-            "weightPercent": 18,
+            "weightPercent": 10,
             "twelveMonthReturnPercent": 15.55,
             "volatilityPercent": 12.89,
             "drawdownPercent": -9.13,
@@ -1584,30 +1506,113 @@
             "daysOfAverageVolume": 0
           },
           {
+            "symbol": "GLD",
+            "sector": "Other",
+            "currency": "USD",
+            "weightPercent": 5,
+            "twelveMonthReturnPercent": 19.05,
+            "volatilityPercent": 29.56,
+            "drawdownPercent": -26.4,
+            "incomeYieldPercent": 0,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0
+          }
+        ],
+        "summary": {
+          "twelveMonthReturnPercent": 23.89,
+          "volatilityPercent": 31.16,
+          "drawdownPercent": -19.53,
+          "incomeYieldPercent": 0.27,
+          "largestHoldingPercent": 58,
+          "liquidWithinOneDayPercent": 95,
+          "realAssetSharePercent": 5,
+          "sectorMixPercent": {
+            "Technology": 80,
+            "Other": 15
+          },
+          "currencyMixPercent": {
+            "USD": 95
+          }
+        }
+      },
+      "portfolioB": {
+        "name": "Portfolio B",
+        "cashPercent": 5,
+        "holdings": [
+          {
+            "symbol": "SPY",
+            "sector": "Other",
+            "currency": "USD",
+            "weightPercent": 25,
+            "twelveMonthReturnPercent": 15.55,
+            "volatilityPercent": 12.89,
+            "drawdownPercent": -9.13,
+            "incomeYieldPercent": 1.2,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0
+          },
+          {
+            "symbol": "MSFT",
+            "sector": "Technology",
+            "currency": "USD",
+            "weightPercent": 18,
+            "twelveMonthReturnPercent": -3.18,
+            "volatilityPercent": 32.16,
+            "drawdownPercent": -34.91,
+            "incomeYieldPercent": 0.7,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0
+          },
+          {
             "symbol": "JPM",
             "sector": "Financial Services",
             "currency": "USD",
-            "weightPercent": 10,
+            "weightPercent": 17,
             "twelveMonthReturnPercent": 12.16,
             "volatilityPercent": 22.1,
             "drawdownPercent": -15.47,
             "incomeYieldPercent": 2.2,
             "liquidity": "same day",
             "daysOfAverageVolume": 0
+          },
+          {
+            "symbol": "JNJ",
+            "sector": "Healthcare",
+            "currency": "USD",
+            "weightPercent": 18,
+            "twelveMonthReturnPercent": 52.36,
+            "volatilityPercent": 19.09,
+            "drawdownPercent": -10.96,
+            "incomeYieldPercent": 3.1,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0
+          },
+          {
+            "symbol": "GLD",
+            "sector": "Other",
+            "currency": "USD",
+            "weightPercent": 17,
+            "twelveMonthReturnPercent": 19.05,
+            "volatilityPercent": 29.56,
+            "drawdownPercent": -26.4,
+            "incomeYieldPercent": 0,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0
           }
         ],
         "summary": {
-          "twelveMonthReturnPercent": 19.08,
-          "volatilityPercent": 26.11,
-          "drawdownPercent": -18.69,
-          "incomeYieldPercent": 0.7,
+          "twelveMonthReturnPercent": 18.05,
+          "volatilityPercent": 21.23,
+          "drawdownPercent": -17.66,
+          "incomeYieldPercent": 1.36,
           "largestHoldingPercent": 25,
           "liquidWithinOneDayPercent": 95,
-          "realAssetSharePercent": 0,
+          "realAssetSharePercent": 17,
           "sectorMixPercent": {
-            "Technology": 67,
-            "Other": 18,
-            "Financial Services": 10
+            "Other": 42,
+            "Technology": 18,
+            "Financial Services": 17,
+            "Healthcare": 18
           },
           "currencyMixPercent": {
             "USD": 95
@@ -1797,9 +1802,10 @@
       "id": "PC-11",
       "goal": {
         "name": "Growth",
-        "words": "Seek long-term capital growth while keeping any single name below the limit.",
+        "words": "Seek long-term capital growth without adding an unrequested currency bet.",
         "constraints": {
           "maximum_single_holding_percent": 30,
+          "maximum_foreign_currency_percent": 10,
           "minimum_liquid_share_percent": 90,
           "maximum_drawdown_percent": 50
         }
@@ -1809,46 +1815,10 @@
         "cashPercent": 5,
         "holdings": [
           {
-            "symbol": "NVDA",
-            "sector": "Technology",
-            "currency": "EUR",
-            "weightPercent": 58,
-            "twelveMonthReturnPercent": 30.52,
-            "volatilityPercent": 37.97,
-            "drawdownPercent": -20.22,
-            "incomeYieldPercent": 0.03,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0
-          },
-          {
-            "symbol": "MSFT",
-            "sector": "Technology",
-            "currency": "GBP",
-            "weightPercent": 12,
-            "twelveMonthReturnPercent": -3.18,
-            "volatilityPercent": 32.16,
-            "drawdownPercent": -34.91,
-            "incomeYieldPercent": 0.7,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0
-          },
-          {
-            "symbol": "AAPL",
-            "sector": "Technology",
-            "currency": "USD",
-            "weightPercent": 10,
-            "twelveMonthReturnPercent": 40.65,
-            "volatilityPercent": 25.07,
-            "drawdownPercent": -13.82,
-            "incomeYieldPercent": 0.5,
-            "liquidity": "same day",
-            "daysOfAverageVolume": 0
-          },
-          {
             "symbol": "SPY",
             "sector": "Other",
-            "currency": "USD",
-            "weightPercent": 10,
+            "currency": "EUR",
+            "weightPercent": 25,
             "twelveMonthReturnPercent": 15.55,
             "volatilityPercent": 12.89,
             "drawdownPercent": -9.13,
@@ -1857,34 +1827,72 @@
             "daysOfAverageVolume": 0
           },
           {
+            "symbol": "MSFT",
+            "sector": "Technology",
+            "currency": "GBP",
+            "weightPercent": 18,
+            "twelveMonthReturnPercent": -3.18,
+            "volatilityPercent": 32.16,
+            "drawdownPercent": -34.91,
+            "incomeYieldPercent": 0.7,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0
+          },
+          {
+            "symbol": "JPM",
+            "sector": "Financial Services",
+            "currency": "USD",
+            "weightPercent": 17,
+            "twelveMonthReturnPercent": 12.16,
+            "volatilityPercent": 22.1,
+            "drawdownPercent": -15.47,
+            "incomeYieldPercent": 2.2,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0.001
+          },
+          {
+            "symbol": "JNJ",
+            "sector": "Healthcare",
+            "currency": "USD",
+            "weightPercent": 18,
+            "twelveMonthReturnPercent": 52.36,
+            "volatilityPercent": 19.09,
+            "drawdownPercent": -10.96,
+            "incomeYieldPercent": 3.1,
+            "liquidity": "same day",
+            "daysOfAverageVolume": 0.001
+          },
+          {
             "symbol": "GLD",
             "sector": "Other",
             "currency": "USD",
-            "weightPercent": 5,
+            "weightPercent": 17,
             "twelveMonthReturnPercent": 19.05,
             "volatilityPercent": 29.56,
             "drawdownPercent": -26.4,
             "incomeYieldPercent": 0,
             "liquidity": "same day",
-            "daysOfAverageVolume": 0
+            "daysOfAverageVolume": 0.001
           }
         ],
         "summary": {
-          "twelveMonthReturnPercent": 23.89,
-          "volatilityPercent": 31.16,
-          "drawdownPercent": -19.53,
-          "incomeYieldPercent": 0.27,
-          "largestHoldingPercent": 58,
+          "twelveMonthReturnPercent": 18.05,
+          "volatilityPercent": 21.23,
+          "drawdownPercent": -17.66,
+          "incomeYieldPercent": 1.36,
+          "largestHoldingPercent": 25,
           "liquidWithinOneDayPercent": 95,
-          "realAssetSharePercent": 5,
+          "realAssetSharePercent": 17,
           "sectorMixPercent": {
-            "Technology": 80,
-            "Other": 15
+            "Other": 42,
+            "Technology": 18,
+            "Financial Services": 17,
+            "Healthcare": 18
           },
           "currencyMixPercent": {
-            "EUR": 58,
-            "GBP": 12,
-            "USD": 25
+            "EUR": 25,
+            "GBP": 18,
+            "USD": 52
           }
         }
       },
@@ -2334,9 +2342,10 @@
       "id": "PC-14",
       "goal": {
         "name": "Growth",
-        "words": "Seek long-term capital growth while keeping any single name below the limit.",
+        "words": "Seek long-term capital growth without adding an unrequested currency bet.",
         "constraints": {
           "maximum_single_holding_percent": 30,
+          "maximum_foreign_currency_percent": 10,
           "minimum_liquid_share_percent": 90,
           "maximum_drawdown_percent": 50
         }

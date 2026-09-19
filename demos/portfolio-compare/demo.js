@@ -108,6 +108,5 @@ export default {
   itemLabel: (item) => `${item.id} · ${item.goal.name}`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), labels: () => import('../../data/synthetic/portfolio-compare.labels.json'),
   buildState, questions, evaluate, report,
-  status: 'pending-recording',
   explain: { data: 'scripts/generate/portfolio-compare.js#demo:data', state: 'demos/portfolio-compare/demo.js#demo:state', questions: 'demos/portfolio-compare/demo.js#demo:questions', evaluate: 'demos/portfolio-compare/demo.js#demo:evaluate' },
 };
