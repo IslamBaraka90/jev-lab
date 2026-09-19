@@ -801,3 +801,6 @@
 .pair-curves .facts dt { font-variant-numeric: tabular-nums; }
 .event-cluster-report table { min-width: 820px; }
 .entity-network-report table { min-width: 760px; }
+.timing-instance table { min-width: 700px; }
+.timing-grid-report table { min-width: 900px; }
+.timing-grid-report tr.timing-insufficient { color: var(--muted); background: color-mix(in srgb, var(--surface2) 75%, transparent); }

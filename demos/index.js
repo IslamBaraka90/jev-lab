@@ -49,6 +49,7 @@ import eventClustering from './event-clustering/demo.js';
 import entityLinks from './entity-links/demo.js';
 import regimeClassification from './regime-classification/demo.js';
 import goldenCrossReview from './golden-cross-review/demo.js';
+import setupTiming from './setup-timing/demo.js';
 import strategyCorrelation from './strategy-correlation/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
@@ -114,6 +115,7 @@ export const DEMOS = [
   eventClustering,
   entityLinks,
   goldenCrossReview,
+  setupTiming,
   regimeClassification,
   strategyCorrelation,
 ];

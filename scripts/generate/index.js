@@ -58,6 +58,7 @@ export const GENERATORS = {
   'event-clustering': () => import('./event-clustering.js'),
   'entity-links': () => import('./entity-links.js'),
   'golden-cross-review': () => import('./golden-cross-review.js'),
+  'setup-timing': () => import('./setup-timing.js'),
   'regime-classification': () => import('./regime-classification.js'),
   'strategy-correlation': () => import('./strategy-correlation.js'),
 };
