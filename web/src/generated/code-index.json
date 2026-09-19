@@ -930,6 +930,34 @@
     "code": "/** What survived the review, and whether the things that should not have survived did. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.tradeId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const problems = graded.filter((result) => byItem.get(result.item.id).issue !== 'NONE');\n  const clean = graded.filter((result) => byItem.get(result.item.id).issue === 'NONE');\n  const caught = problems.filter((result) => result.evaluation.verdict !== 'APPROVE');\n\n  return {\n    note: `Two hundred proposed trades across six accounts, ${problems.length} of them carrying something the rebalancer could not see. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, clean),\n    kpis: kpis({ graded, problems, clean, caught, byItem }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, problems),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem),\n  };\n}",
     "language": "javascript"
   },
+  "demos/regime-classification/demo.js#demo:state": {
+    "path": "demos/regime-classification/demo.js",
+    "startLine": 24,
+    "endLine": 40,
+    "code": "/** The week being judged, the weeks before it, and the daily bars up to its last session. */\nfunction buildState(item, context) {\n  const daily = context.dailySeries[item.symbol];\n  const weekly = context.weeklySeries[item.symbol];\n\n  return {\n    task: 'Say what kind of market this is as at the end of this week, and which kind of strategy should be allowed to trade in it.',\n    instrument: item.symbol,\n    week: { starts: item.weekStart, ends: item.weekEnd, sessions: item.sessionsInTheWeek },\n    long_run_volatility_percent: context.longRunVolatility[item.symbol],\n    weekly_history: weekly.slice(Math.max(0, item.weekIndex - context.weeklySummariesInState + 1), item.weekIndex + 1),\n    week_format: context.weekFormat,\n    daily_bars_to_the_end_of_this_week: daily.slice(Math.max(0, item.lastBarIndex - context.dailyBarsInState + 1), item.lastBarIndex + 1),\n    bar_format: context.barFormat,\n    note: 'Nothing after this week is here. A regime call that could see next week would not be a regime call.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/regime-classification/demo.js#demo:questions": {
+    "path": "demos/regime-classification/demo.js",
+    "startLine": 44,
+    "endLine": 71,
+    "code": "const questions = {\n  regime: choice('What kind of market is this?', {\n    TREND_UP: 'Going up, and the moves down are the small ones.',\n    TREND_DOWN: 'Going down, and the moves up are the small ones.',\n    RANGE: 'Going nowhere between two levels it keeps returning to.',\n    HIGH_VOLATILITY: 'Moving a long way in both directions, faster than it usually does.',\n    EVENT_DRIVEN: 'Being moved by something specific rather than by a trend — gaps, not drift.',\n  }),\n  regime_clarity: score('How clear is that?', [\n    'Unclear', 'Very unclear', 'Somewhat unclear', 'Mixed', 'Clear', 'Very clear', 'Unmistakable',\n  ]),\n  strategy_fit: choice('What should be allowed to trade this week?', {\n    TREND_FOLLOWING: 'Something that buys strength and holds it.',\n    MEAN_REVERSION: 'Something that buys a pullback and expects it to come back.',\n    BREAKOUT: 'Something that buys a level being taken out.',\n    STAY_OUT: 'Nothing. Not every week is worth trading.',\n  }),\n  risk_scaling: choice('At what size?', {\n    NONE: 'Nothing at all this week.',\n    HALF: 'Half of what you would normally risk.',\n    NORMAL: 'The usual size.',\n    INCREASED: 'More than usual, because the conditions warrant it.',\n  }),\n  regime_changing: noul('Is the regime turning over right now?', {\n    yes: 'Whatever this has been, it is in the middle of becoming something else.',\n    no: 'It is doing what it has been doing.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/regime-classification/demo.js#demo:evaluate": {
+    "path": "demos/regime-classification/demo.js",
+    "startLine": 75,
+    "endLine": 87,
+    "code": "/** One week's call, made with no sight of the week after it. */\nfunction evaluate(answers, item) {\n  return {\n    regime: answers.regime.choice,\n    clarity: answers.regime_clarity.score,\n    fit: answers.strategy_fit.choice,\n    size: SIZES[answers.risk_scaling.choice] ?? 1,\n    sizeName: answers.risk_scaling.choice,\n    changing: answers.regime_changing.noul >= 0.5,\n    confidence: answers.regime.confidence,\n    label: `${item.symbol} · week to ${item.weekEnd} · ${readable(answers.regime.choice)} · ${readable(answers.strategy_fit.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/regime-classification/demo.js#demo:report": {
+    "path": "demos/regime-classification/demo.js",
+    "startLine": 116,
+    "endLine": 137,
+    "code": "/** The same strategies, the same bars, the same costs: once always on, once only when allowed. */\nfunction report(results, context = {}) {\n  const graded = results.filter((result) => result.evaluation);\n  const byWeek = new Map(graded.map((result) => [`${result.item.symbol}:${result.item.weekEnd}`, result]));\n  const runs = STRATEGIES.map((strategy) => runBoth(strategy, graded, byWeek, context));\n  const ungated = runs.reduce((sum, run) => sum + run.ungated, 0);\n  const gated = runs.reduce((sum, run) => sum + run.gated, 0);\n\n  return {\n    note: `${graded.length} weeks across ${context.instruments?.length ?? 4} instruments. ${context.note ?? ''}`,\n    findings: findings(graded, runs, context, { ungated, gated }),\n    kpis: kpis(graded, runs, context, { ungated, gated }),\n    distribution: REGIMES\n      .map((value) => ({ label: sentence(value), count: graded.filter((result) => result.evaluation.regime === value).length, tone: value === 'HIGH_VOLATILITY' ? 'warn' : undefined }))\n      .filter((entry) => entry.count),\n    matrix: crossCheck(graded, context),\n    curve: clarityCurve(graded, context),\n    equityCurve: equity(runs, graded),\n    checks: checks(graded, runs, context),\n    topItems: topItems(graded),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/rumour-grading/demo.js#demo:state": {
     "path": "demos/rumour-grading/demo.js",
     "startLine": 20,
@@ -1259,6 +1287,13 @@
     "code": "/**\n * Every bar where the fast average closes above the slow one having been at or below it the day\n * before. That is the whole signal. It takes no parameters that were chosen by looking at results.\n */\nexport function crossovers(bars, { fast = 50, slow = 200 } = {}) {\n  const quick = movingAverage(bars, fast);\n  const steady = movingAverage(bars, slow);\n  const found = [];\n\n  for (let index = 1; index < bars.length; index++) {\n    const before = quick[index - 1] !== null && steady[index - 1] !== null && quick[index - 1] <= steady[index - 1];\n    const after = quick[index] !== null && steady[index] !== null && quick[index] > steady[index];\n    if (before && after) found.push({ index, date: bars[index].date, fast: quick[index], slow: steady[index] });\n  }\n  return found;\n}",
     "language": "javascript"
   },
+  "src/strategies/index.js#strategy:rules": {
+    "path": "src/strategies/index.js",
+    "startLine": 12,
+    "endLine": 39,
+    "code": "/** Buy a pullback: price above its fifty-day average, but back within two per cent of it. */\nexport function pullback(bars, { hold = 10, near = 2 } = {}) {\n  const average = movingAverage(bars, 50);\n  const signals = [];\n  for (let index = 50; index < bars.length - hold; index++) {\n    const line = average[index];\n    if (line === null) continue;\n    const distance = ((bars[index].close - line) / line) * 100;\n    const wasFurther = average[index - 5] !== null && ((bars[index - 5].close - average[index - 5]) / average[index - 5]) * 100 > near * 2;\n    if (distance >= 0 && distance <= near && wasFurther) signals.push(index);\n  }\n  return dedupe(signals, hold);\n}\n\n/** Buy a range break: today closes above the highest high of the twenty bars before it. */\nexport function rangeBreak(bars, { hold = 10, lookback = 20 } = {}) {\n  const signals = [];\n  for (let index = lookback; index < bars.length - hold; index++) {\n    const highest = Math.max(...bars.slice(index - lookback, index).map((bar) => bar.high));\n    if (bars[index].close > highest) signals.push(index);\n  }\n  return dedupe(signals, hold);\n}\n\n/** The fifty over the two hundred, from the module demo 181 is built on. */\nexport function goldenCross(bars, { hold = 10 } = {}) {\n  return dedupe(crossovers(bars).map((cross) => cross.index).filter((index) => index < bars.length - hold), hold);\n}",
+    "language": "javascript"
+  },
   "scripts/generate/account-takeover.js#demo:data": {
     "path": "scripts/generate/account-takeover.js",
     "startLine": 185,
@@ -1467,6 +1502,13 @@
     "startLine": 76,
     "endLine": 100,
     "code": "/** One proposed trade, with the position around it and what the instrument can absorb. */\nfunction trade(random, { account, symbol, side, valueUsd, currentPercent, targetPercent, recentTrades = [], sameNameOtherAccount = null, mandateNote = null }) {\n  const price = last(symbol).price;\n  const shares = Math.round(valueUsd / price);\n  const volume = Math.max(averageVolume(symbol), 1);\n  return {\n    key: `${account.id}-${symbol}-${random.int(100_000, 999_999)}`,\n    id: null,\n    accountId: account.id,\n    accountTaxable: account.taxable,\n    symbol,\n    side,\n    shares,\n    valueUsd: round(valueUsd),\n    price,\n    currentWeightPercent: round(currentPercent, 2),\n    targetWeightPercent: round(targetPercent, 2),\n    weightAfterPercent: round(currentPercent + (side === 'BUY' ? 1 : -1) * (valueUsd / account.valueUsd) * 100, 2),\n    shareOfAverageVolumePercent: round((shares / volume) * 100, 2),\n    averageDailyVolume: volume,\n    recentTradesInThisName: recentTrades,\n    sameNameOtherAccountToday: sameNameOtherAccount,\n    mandateNote,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/regime-classification.js#demo:data": {
+    "path": "scripts/generate/regime-classification.js",
+    "startLine": 109,
+    "endLine": 130,
+    "code": "/** One week: where it sits in the two series, and the short window the chart draws. */\nfunction item(symbol, bars, weeks, weekIndex, order, { firstBar, weekOffset }) {\n  const week = weeks[weekIndex];\n  const from = Math.max(0, week.to - CHART_BARS + 1);\n  const window = bars.slice(from, week.to + 1);\n\n  return {\n    id: null,\n    symbol,\n    weekEnd: bars[week.to].date,\n    weekStart: bars[week.from].date,\n    weekIndex: weekIndex - weekOffset,\n    lastBarIndex: week.to - firstBar,\n    sessionsInTheWeek: week.bars.length,\n    weeksOnFile: order + 1,\n    chart: {\n      markIndex: window.length - week.bars.length,\n      label: `${symbol} · week ending ${bars[week.to].date}`,\n      bars: window.map((bar) => `${bar.date} ${bar.open} ${bar.high} ${bar.low} ${bar.close} ${Math.round((bar.volume ?? 0) / 1000)}`),\n    },\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/rumour-grading.js#demo:data": {

@@ -44,6 +44,7 @@ import dividendSafety from './dividend-safety/demo.js';
 import newsImpact from './news-impact/demo.js';
 import filingsRead from './filings-read/demo.js';
 import rumourGrading from './rumour-grading/demo.js';
+import regimeClassification from './regime-classification/demo.js';
 import goldenCrossReview from './golden-cross-review/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
@@ -106,6 +107,7 @@ export const DEMOS = [
   filingsRead,
   rumourGrading,
   goldenCrossReview,
+  regimeClassification,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
