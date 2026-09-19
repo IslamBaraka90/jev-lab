@@ -1,0 +1,1052 @@
+[
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-092",
+    "walletId": "SW-092"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-004",
+    "walletId": "SW-004"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-144",
+    "walletId": "SW-144"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-126",
+    "walletId": "SW-126"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-086",
+    "walletId": "SW-086"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-077",
+    "walletId": "SW-077"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-051",
+    "walletId": "SW-051"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-013",
+    "walletId": "SW-013"
+  },
+  {
+    "clusterId": "C1",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-018",
+    "walletId": "SW-018"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-073",
+    "walletId": "SW-073"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-056",
+    "walletId": "SW-056"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-029",
+    "walletId": "SW-029"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-015",
+    "walletId": "SW-015"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-037",
+    "walletId": "SW-037"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-053",
+    "walletId": "SW-053"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-135",
+    "walletId": "SW-135"
+  },
+  {
+    "clusterId": "C2",
+    "linkingSignal": "FUNDING_SOURCE",
+    "kind": "farmed",
+    "wallet": "SW-076",
+    "walletId": "SW-076"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-131",
+    "walletId": "SW-131"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-088",
+    "walletId": "SW-088"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-128",
+    "walletId": "SW-128"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-100",
+    "walletId": "SW-100"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-112",
+    "walletId": "SW-112"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-123",
+    "walletId": "SW-123"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-114",
+    "walletId": "SW-114"
+  },
+  {
+    "clusterId": "C3",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-061",
+    "walletId": "SW-061"
+  },
+  {
+    "clusterId": "C4",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-005",
+    "walletId": "SW-005"
+  },
+  {
+    "clusterId": "C4",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-060",
+    "walletId": "SW-060"
+  },
+  {
+    "clusterId": "C4",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-009",
+    "walletId": "SW-009"
+  },
+  {
+    "clusterId": "C4",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-098",
+    "walletId": "SW-098"
+  },
+  {
+    "clusterId": "C4",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-111",
+    "walletId": "SW-111"
+  },
+  {
+    "clusterId": "C4",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-089",
+    "walletId": "SW-089"
+  },
+  {
+    "clusterId": "C4",
+    "linkingSignal": "CREATION_TIMING",
+    "kind": "farmed",
+    "wallet": "SW-127",
+    "walletId": "SW-127"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-028",
+    "walletId": "SW-028"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-074",
+    "walletId": "SW-074"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-059",
+    "walletId": "SW-059"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-068",
+    "walletId": "SW-068"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-075",
+    "walletId": "SW-075"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-033",
+    "walletId": "SW-033"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-134",
+    "walletId": "SW-134"
+  },
+  {
+    "clusterId": "C5",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-006",
+    "walletId": "SW-006"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-022",
+    "walletId": "SW-022"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-066",
+    "walletId": "SW-066"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-105",
+    "walletId": "SW-105"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-148",
+    "walletId": "SW-148"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-140",
+    "walletId": "SW-140"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-048",
+    "walletId": "SW-048"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-010",
+    "walletId": "SW-010"
+  },
+  {
+    "clusterId": "C6",
+    "linkingSignal": "ACTION_SEQUENCE",
+    "kind": "farmed",
+    "wallet": "SW-027",
+    "walletId": "SW-027"
+  },
+  {
+    "clusterId": "C7",
+    "linkingSignal": "GAS_PATTERN",
+    "kind": "farmed",
+    "wallet": "SW-087",
+    "walletId": "SW-087"
+  },
+  {
+    "clusterId": "C7",
+    "linkingSignal": "GAS_PATTERN",
+    "kind": "farmed",
+    "wallet": "SW-080",
+    "walletId": "SW-080"
+  },
+  {
+    "clusterId": "C7",
+    "linkingSignal": "GAS_PATTERN",
+    "kind": "farmed",
+    "wallet": "SW-040",
+    "walletId": "SW-040"
+  },
+  {
+    "clusterId": "C7",
+    "linkingSignal": "GAS_PATTERN",
+    "kind": "farmed",
+    "wallet": "SW-101",
+    "walletId": "SW-101"
+  },
+  {
+    "clusterId": "C7",
+    "linkingSignal": "GAS_PATTERN",
+    "kind": "farmed",
+    "wallet": "SW-030",
+    "walletId": "SW-030"
+  },
+  {
+    "clusterId": "C7",
+    "linkingSignal": "GAS_PATTERN",
+    "kind": "farmed",
+    "wallet": "SW-008",
+    "walletId": "SW-008"
+  },
+  {
+    "clusterId": "C7",
+    "linkingSignal": "GAS_PATTERN",
+    "kind": "farmed",
+    "wallet": "SW-025",
+    "walletId": "SW-025"
+  },
+  {
+    "clusterId": "C8",
+    "linkingSignal": "WITHDRAWAL_ENDPOINT",
+    "kind": "farmed",
+    "wallet": "SW-055",
+    "walletId": "SW-055"
+  },
+  {
+    "clusterId": "C8",
+    "linkingSignal": "WITHDRAWAL_ENDPOINT",
+    "kind": "farmed",
+    "wallet": "SW-017",
+    "walletId": "SW-017"
+  },
+  {
+    "clusterId": "C8",
+    "linkingSignal": "WITHDRAWAL_ENDPOINT",
+    "kind": "farmed",
+    "wallet": "SW-003",
+    "walletId": "SW-003"
+  },
+  {
+    "clusterId": "C8",
+    "linkingSignal": "WITHDRAWAL_ENDPOINT",
+    "kind": "farmed",
+    "wallet": "SW-045",
+    "walletId": "SW-045"
+  },
+  {
+    "clusterId": "C8",
+    "linkingSignal": "WITHDRAWAL_ENDPOINT",
+    "kind": "farmed",
+    "wallet": "SW-041",
+    "walletId": "SW-041"
+  },
+  {
+    "clusterId": "C8",
+    "linkingSignal": "WITHDRAWAL_ENDPOINT",
+    "kind": "farmed",
+    "wallet": "SW-052",
+    "walletId": "SW-052"
+  },
+  {
+    "clusterId": "C8",
+    "linkingSignal": "WITHDRAWAL_ENDPOINT",
+    "kind": "farmed",
+    "wallet": "SW-007",
+    "walletId": "SW-007"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-091",
+    "walletId": "SW-091"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-118",
+    "walletId": "SW-118"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-038",
+    "walletId": "SW-038"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-139",
+    "walletId": "SW-139"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-094",
+    "walletId": "SW-094"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-108",
+    "walletId": "SW-108"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-097",
+    "walletId": "SW-097"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-117",
+    "walletId": "SW-117"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-084",
+    "walletId": "SW-084"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-001",
+    "walletId": "SW-001"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-031",
+    "walletId": "SW-031"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "same exchange, nothing else",
+    "wallet": "SW-137",
+    "walletId": "SW-137"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "read the same guide",
+    "wallet": "SW-109",
+    "walletId": "SW-109"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "read the same guide",
+    "wallet": "SW-136",
+    "walletId": "SW-136"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "read the same guide",
+    "wallet": "SW-014",
+    "walletId": "SW-014"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "read the same guide",
+    "wallet": "SW-083",
+    "walletId": "SW-083"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "read the same guide",
+    "wallet": "SW-104",
+    "walletId": "SW-104"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "read the same guide",
+    "wallet": "SW-072",
+    "walletId": "SW-072"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-132",
+    "walletId": "SW-132"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-049",
+    "walletId": "SW-049"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-119",
+    "walletId": "SW-119"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-093",
+    "walletId": "SW-093"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-044",
+    "walletId": "SW-044"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-043",
+    "walletId": "SW-043"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-026",
+    "walletId": "SW-026"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-116",
+    "walletId": "SW-116"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-095",
+    "walletId": "SW-095"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-064",
+    "walletId": "SW-064"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-063",
+    "walletId": "SW-063"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-110",
+    "walletId": "SW-110"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-130",
+    "walletId": "SW-130"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-150",
+    "walletId": "SW-150"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-125",
+    "walletId": "SW-125"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-079",
+    "walletId": "SW-079"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-050",
+    "walletId": "SW-050"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-024",
+    "walletId": "SW-024"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-034",
+    "walletId": "SW-034"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-057",
+    "walletId": "SW-057"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-023",
+    "walletId": "SW-023"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-120",
+    "walletId": "SW-120"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-039",
+    "walletId": "SW-039"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-069",
+    "walletId": "SW-069"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-081",
+    "walletId": "SW-081"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-032",
+    "walletId": "SW-032"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-085",
+    "walletId": "SW-085"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-143",
+    "walletId": "SW-143"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-146",
+    "walletId": "SW-146"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-113",
+    "walletId": "SW-113"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-124",
+    "walletId": "SW-124"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-102",
+    "walletId": "SW-102"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-078",
+    "walletId": "SW-078"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-115",
+    "walletId": "SW-115"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-035",
+    "walletId": "SW-035"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-062",
+    "walletId": "SW-062"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-099",
+    "walletId": "SW-099"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-036",
+    "walletId": "SW-036"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-002",
+    "walletId": "SW-002"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-021",
+    "walletId": "SW-021"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-147",
+    "walletId": "SW-147"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-090",
+    "walletId": "SW-090"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-042",
+    "walletId": "SW-042"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-121",
+    "walletId": "SW-121"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-122",
+    "walletId": "SW-122"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-054",
+    "walletId": "SW-054"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-106",
+    "walletId": "SW-106"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-142",
+    "walletId": "SW-142"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-071",
+    "walletId": "SW-071"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-133",
+    "walletId": "SW-133"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-129",
+    "walletId": "SW-129"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-065",
+    "walletId": "SW-065"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-141",
+    "walletId": "SW-141"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-103",
+    "walletId": "SW-103"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-149",
+    "walletId": "SW-149"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-012",
+    "walletId": "SW-012"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-067",
+    "walletId": "SW-067"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-138",
+    "walletId": "SW-138"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-107",
+    "walletId": "SW-107"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-145",
+    "walletId": "SW-145"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-096",
+    "walletId": "SW-096"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-070",
+    "walletId": "SW-070"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-016",
+    "walletId": "SW-016"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-047",
+    "walletId": "SW-047"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-046",
+    "walletId": "SW-046"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-020",
+    "walletId": "SW-020"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-011",
+    "walletId": "SW-011"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-019",
+    "walletId": "SW-019"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-058",
+    "walletId": "SW-058"
+  },
+  {
+    "clusterId": null,
+    "linkingSignal": "NONE",
+    "kind": "independent",
+    "wallet": "SW-082",
+    "walletId": "SW-082"
+  }
+]

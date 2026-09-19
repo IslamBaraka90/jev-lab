@@ -447,6 +447,34 @@
     "code": "/** Grades true matches, false positives and legitimate deferrals without turning uncertainty into an error. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const intended = new Map(labels.map((label) => [label.pairId, label]));\n  const graded = results.filter((result) => intended.has(result.item.id));\n  const sufficient = graded.filter((result) => intended.get(result.item.id).decidingField !== 'INSUFFICIENT');\n  const insufficient = graded.filter((result) => intended.get(result.item.id).decidingField === 'INSUFFICIENT');\n  const trueMatches = sufficient.filter((result) => intended.get(result.item.id).sameEntity);\n  const falseMatches = sufficient.filter((result) => !intended.get(result.item.id).sameEntity);\n  const correctIdentity = sufficient.filter((result) => result.evaluation.predictedSame === intended.get(result.item.id).sameEntity);\n  const kept = trueMatches.filter((result) => result.evaluation.disposition === 'CONFIRM');\n  const cleared = falseMatches.filter((result) => result.evaluation.disposition === 'CLEAR');\n  const deferred = insufficient.filter((result) => result.evaluation.decidingEvidence === 'INSUFFICIENT' && result.evaluation.disposition === 'REVIEW');\n  const evidenceRight = graded.filter((result) => result.evaluation.decidingEvidence === intended.get(result.item.id).decidingField);\n\n  return {\n    note: `${graded.length} candidates against a wholly fictional list. Illustrative only; never a screening decision.`,\n    kpis: [\n      { label: 'Identity accuracy', value: share(correctIdentity.length + deferred.length, graded.length), context: `${correctIdentity.length} sufficient calls plus ${deferred.length} correct deferrals` },\n      { label: 'True matches kept', value: share(kept.length, trueMatches.length), context: `${kept.length} of ${trueMatches.length}`, tone: kept.length === trueMatches.length ? 'good' : 'warn' },\n      { label: 'False positives cleared', value: share(cleared.length, falseMatches.length), context: `${cleared.length} of ${falseMatches.length}` },\n      { label: 'Deciding evidence', value: share(evidenceRight.length, graded.length), context: `${evidenceRight.length} of ${graded.length} fields` },\n    ],\n    distribution: DISPOSITIONS.map((value) => ({ label: value, count: graded.filter((result) => result.evaluation.disposition === value).length, tone: value === 'CLEAR' ? 'good' : value === 'REVIEW' ? 'warn' : 'bad' })),\n    matrix: identityMatrix(graded, intended),\n    checks: causeChecks(graded, intended),\n    topItems: graded.filter((result) => result.evaluation.needsMoreData).slice(0, 12).map((result) => ({ id: result.item.id, label: `${result.item.customer.name} · more data requested`, value: readable(result.evaluation.decidingEvidence) })),\n    insufficient: { correct: deferred.length, total: insufficient.length },\n  };\n}",
     "language": "javascript"
   },
+  "demos/sybil-clusters/demo.js#demo:state": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 22,
+    "endLine": 48,
+    "code": "/** One wallet, and how much of the crowd looks like it. The crowd is counted, never named. */\nfunction buildState(item, context) {\n  return {\n    task: 'Decide whether this wallet is one of several belonging to the same person, and whether to exclude it from the allocation.',\n    programme: { name: context.programme, currency: context.currency, wallets_in_the_programme: context.wallets, rule: context.allocationRule, how_similarity_is_measured: context.similarityNote },\n    wallet: {\n      address: item.address,\n      created: item.createdAt,\n      funded_by: item.fundingSource,\n      funded_with: item.fundedWith,\n      days_active: item.daysActive,\n      actions_taken: item.actionCount,\n      action_sequence: item.actionSequence,\n      gas_price_gwei: item.gasPriceGwei,\n      gas_price_variation: item.gasPriceStdev,\n      withdrew_to: item.withdrawalEndpoint,\n      allocation_at_stake: item.allocation,\n    },\n    how_many_others_look_like_this: {\n      share_its_funding_source: item.walletsWithTheSameFundingSource,\n      were_created_within_ten_minutes: item.walletsWithinTenMinutesOfCreation,\n      took_the_same_actions_in_the_same_order: item.walletsWithTheSameActionSequence,\n      paid_exactly_the_same_gas_price: item.walletsWithTheSameGasPrice,\n      withdrew_to_the_same_address: item.walletsWithTheSameWithdrawalEndpoint,\n    },\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sybil-clusters/demo.js#demo:questions": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 52,
+    "endLine": 72,
+    "code": "const questions = {\n  sybil_likelihood: score('How likely is it that this wallet is one of several belonging to one person?', [\n    'None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain',\n  ]),\n  linking_signal: choice('What links it to the others, if anything does?', {\n    FUNDING_SOURCE: 'The same address funded a group of wallets that includes this one.',\n    CREATION_TIMING: 'A group of wallets, this one among them, appeared within minutes of each other.',\n    ACTION_SEQUENCE: 'The same actions in the same order as a group of other wallets.',\n    GAS_PATTERN: 'A gas price shared to the decimal with a group of others, which people do not do.',\n    WITHDRAWAL_ENDPOINT: 'The money ends up at an address a group of wallets shares.',\n    NONE: 'Nothing links it. Whatever it shares, it shares with the whole population.',\n  }),\n  exclude_from_allocation: noul('Should this wallet be left out of the allocation?', {\n    yes: 'The evidence that this is one of several is strong enough to take the allocation away.',\n    no: 'Give it the allocation. Doubt is not evidence.',\n  }),\n  independent_user: noul('Does this look like one person with one wallet?', {\n    yes: 'The funding, timing, actions and gas all look like somebody acting for themselves.',\n    no: 'It behaves like part of a set.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/sybil-clusters/demo.js#demo:evaluate": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 76,
+    "endLine": 89,
+    "code": "/** The verdict on one wallet, and the allocation it turns on. */\nfunction evaluate(answers, item) {\n  const excluded = answers.exclude_from_allocation.noul >= 0.5;\n\n  return {\n    likelihood: answers.sybil_likelihood.score,\n    signal: answers.linking_signal.choice,\n    excluded,\n    independent: answers.independent_user.noul >= 0.5,\n    confidence: answers.linking_signal.confidence,\n    allocationAtStake: item.allocation,\n    label: `${item.id} · ${excluded ? 'excluded' : 'allocated'} · ${money(item.allocation)}${answers.linking_signal.choice === 'NONE' ? '' : ` · ${readable(answers.linking_signal.choice)}`}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/sybil-clusters/demo.js#demo:report": {
+    "path": "demos/sybil-clusters/demo.js",
+    "startLine": 93,
+    "endLine": 111,
+    "code": "/** Two costs, always together: the allocation saved, and the real users it was taken from. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.wallet, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const farmed = graded.filter((result) => byItem.get(result.item.id).clusterId);\n  const real = graded.filter((result) => !byItem.get(result.item.id).clusterId);\n\n  return {\n    note: `A hundred and fifty wallets. ${farmed.length} of them are eight people, twelve share nothing but an exchange, and six did the same things because they read the same guide. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, real),\n    kpis: kpis({ graded, farmed, real, byItem, currency: context.currency }),\n    distribution: distribution(results),\n    matrix: confusion(graded, byItem),\n    curve: coverage(graded, byItem, farmed),\n    checks: checks(graded, byItem, labels),\n    topItems: topItems(results, byItem, context.currency),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/three-way-match/demo.js#demo:state": {
     "path": "demos/three-way-match/demo.js",
     "startLine": 19,
@@ -641,6 +669,13 @@
     "startLine": 162,
     "endLine": 171,
     "code": "const item = {\n  id: pairId,\n  notice: NOTICE,\n  customer,\n  listEntry,\n  screeningEngine: {\n    fuzzyNameScore: Number(random.float(scoreBase - 0.035, scoreBase + 0.025, 3)),\n    generatedCandidateBecause: 'The normalised customer name resembled the primary name or an alias.',\n  },\n};",
+    "language": "javascript"
+  },
+  "scripts/generate/sybil-clusters.js#demo:data": {
+    "path": "scripts/generate/sybil-clusters.js",
+    "startLine": 85,
+    "endLine": 103,
+    "code": "/** One wallet as the allocation sees it: when it appeared, what it did, and how it paid for gas. */\nfunction wallet(random, { createdAt, fundingSource, funded, actions, gasPriceGwei, gasStdev, withdrawalEndpoint, allocation }) {\n  const address = walletAddress(random);\n  return {\n    key: address,\n    id: null,\n    address,\n    createdAt,\n    fundingSource,\n    fundedWith: funded,\n    actionCount: actions.length,\n    actionSequence: actions,\n    daysActive: random.int(4, 150),\n    gasPriceGwei,\n    gasPriceStdev: gasStdev,\n    withdrawalEndpoint,\n    allocation,\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/three-way-match.js#demo:data": {
