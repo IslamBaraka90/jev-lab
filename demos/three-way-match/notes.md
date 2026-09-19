@@ -46,5 +46,22 @@ an amount.
 
 ## Recorded run
 
-Pending. The real Jev answers will be recorded into `fixtures.json`; this section will be replaced
-with the measured result after all 150 responses are cached.
+All 150 packets were recorded with model `jev-1.13.0`: 237,585 input tokens and 20,305 output tokens.
+Every packet has all four answers in `fixtures.json`; there are no missing, extra or malformed records.
+
+- **26 of 34 planted problems were held (76.5%).** Every price, quantity, currency and partial-delivery
+  problem was held. The five tax errors and three duplicate packets were released.
+- **The false-hold rate was 6.9%.** All 108 exact packets were released, but all eight allowed
+  differences were held. Four were called price problems and four quantity problems even though they
+  sat at or below the stated 2% and one-unit tolerances.
+- **The money identity closes exactly.** $104,820.51 of planted exposure was held and $32,994.77 was
+  released, adding to the file's $137,815.28 total with a zero difference.
+- **The repeated mistake is specific.** Five of the fifteen mismatch-name errors were tax errors
+  called `NONE`. Of the three duplicates, one was named `DUPLICATE` but still released and two were
+  called `NONE`.
+
+This is not a clean success story, and the fixtures preserve that. The run caught the obvious
+commercial mismatches but did not reliably apply the tolerance boundary, tax arithmetic or supplier
+history. The intended 1.4% video beat therefore shows a false hold, not a release. That is the useful
+control result: the demo separates detecting a difference from enforcing the policy that says when a
+difference is acceptable.

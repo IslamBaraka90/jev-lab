@@ -1,7 +1,5708 @@
 {
   "demo": "three-way-match",
-  "model": null,
-  "recordedAt": null,
-  "source": "not recorded yet — run: npm run record three-way-match",
-  "answers": {}
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "P-0001": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PARTIAL_DELIVERY",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "PARTIAL_DELIVERY": 1,
+          "TAX": 0,
+          "QUANTITY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 5.21,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.03,
+          "4": 0.22,
+          "5": 0.23,
+          "6": 0.52
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.92
+      }
+    },
+    "P-0002": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "TAX": 0.01,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "NONE": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.32,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0003": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PARTIAL_DELIVERY",
+        "confidence": 0.99,
+        "probabilities": {
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "QUANTITY": 0.01,
+          "TAX": 0,
+          "PARTIAL_DELIVERY": 0.99,
+          "NONE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 5.15,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.03,
+          "4": 0.25,
+          "5": 0.23,
+          "6": 0.49
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.93
+      }
+    },
+    "P-0004": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.02,
+          "NONE": 0.98,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.42,
+        "probabilities": {
+          "0": 0.43,
+          "1": 0.35,
+          "2": 0.1,
+          "3": 0.06,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0005": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "TAX": 0.03,
+          "NONE": 0.97,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.14,
+        "confidence": 0.33,
+        "probabilities": {
+          "0": 0.4,
+          "1": 0.33,
+          "2": 0.12,
+          "3": 0.08,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "P-0006": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.94,
+          "TAX": 0.05,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.22,
+        "confidence": 0.48,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.37,
+          "2": 0.14,
+          "3": 0.08,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.16
+      }
+    },
+    "P-0007": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.97,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.03,
+          "DUPLICATE": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.83
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.48,
+          "1": 0.31,
+          "2": 0.08,
+          "3": 0.05,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.16
+      }
+    },
+    "P-0008": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TAX": 0,
+          "PRICE": 0.97,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.03,
+          "CURRENCY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.09
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.91,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.06,
+          "3": 0.23,
+          "4": 0.44,
+          "5": 0.13,
+          "6": 0.12
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.84
+      }
+    },
+    "P-0009": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "TAX": 0.02,
+          "CURRENCY": 0,
+          "NONE": 0.98,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.85,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0.46,
+          "1": 0.37,
+          "2": 0.09,
+          "3": 0.05,
+          "4": 0.02,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.15
+      }
+    },
+    "P-0010": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 0.98,
+        "probabilities": {
+          "QUANTITY": 0,
+          "CURRENCY": 0.99,
+          "TAX": 0,
+          "NONE": 0.01,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.29
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.54,
+        "confidence": 0.48,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.09,
+          "4": 0.3,
+          "5": 0.33999999999999997,
+          "6": 0.21
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "P-0011": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "TAX": 0.01,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.33,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.74,
+          "1": 0.23,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0012": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.94,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.05,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.26,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.38,
+          "1": 0.34,
+          "2": 0.11,
+          "3": 0.08,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "P-0013": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.83,
+        "probabilities": {
+          "NONE": 0.14,
+          "QUANTITY": 0,
+          "PRICE": 0.85,
+          "TAX": 0.01,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.27
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.14,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.08,
+          "2": 0.2,
+          "3": 0.36,
+          "4": 0.24,
+          "5": 0.05,
+          "6": 0.06
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "P-0014": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TAX": 0,
+          "PRICE": 0.97,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.03,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.07
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.08,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.04,
+          "3": 0.2,
+          "4": 0.46,
+          "5": 0.14,
+          "6": 0.14
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.87
+      }
+    },
+    "P-0015": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PARTIAL_DELIVERY",
+        "confidence": 0.97,
+        "probabilities": {
+          "TAX": 0,
+          "QUANTITY": 0.01,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0.98,
+          "NONE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.34,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.03,
+          "3": 0.16,
+          "4": 0.42,
+          "5": 0.17,
+          "6": 0.21
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.87
+      }
+    },
+    "P-0016": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUANTITY": 0.99,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.01,
+          "PRICE": 0,
+          "TAX": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.23,
+        "confidence": 0.62,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.16,
+          "4": 0.53,
+          "5": 0.14,
+          "6": 0.15
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.89
+      }
+    },
+    "P-0017": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.99,
+        "probabilities": {
+          "PRICE": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "NONE": 0.01,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.72,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.37,
+          "5": 0.3,
+          "6": 0.26
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "P-0018": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TAX": 0.04,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "NONE": 0.96
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.04,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.41,
+          "1": 0.35,
+          "2": 0.11,
+          "3": 0.07,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.15
+      }
+    },
+    "P-0019": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.97,
+          "TAX": 0.03
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.71
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.39,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.35000000000000003,
+          "1": 0.33,
+          "2": 0.13,
+          "3": 0.09,
+          "4": 0.05,
+          "5": 0.01,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0020": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.96,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.03,
+          "PRICE": 0.01,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.3,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.38,
+          "2": 0.14,
+          "3": 0.08,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "P-0021": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "TAX": 0.01,
+          "QUANTITY": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.29,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.76,
+          "1": 0.21,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0022": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 0.98,
+        "probabilities": {
+          "QUANTITY": 0,
+          "CURRENCY": 0.99,
+          "NONE": 0.01,
+          "TAX": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.32
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.77,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.06,
+          "4": 0.26,
+          "5": 0.39,
+          "6": 0.26
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.9
+      }
+    },
+    "P-0023": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.94,
+          "CURRENCY": 0,
+          "TAX": 0.05,
+          "PRICE": 0.01,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.13,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.39,
+          "1": 0.37,
+          "2": 0.11,
+          "3": 0.06,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "P-0024": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.01,
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.72,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0025": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.26,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0026": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.01,
+          "QUANTITY": 0,
+          "PRICE": 0,
+          "NONE": 0.99
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.41,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0.68,
+          "1": 0.29,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0027": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.97,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "TAX": 0.03,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.61,
+        "confidence": 0.64,
+        "probabilities": {
+          "0": 0.64,
+          "1": 0.26,
+          "2": 0.04,
+          "3": 0.02,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.12
+      }
+    },
+    "P-0028": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.38,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.68,
+          "1": 0.29,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0029": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "PRICE": 0.01,
+          "NONE": 0.92,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.07
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.14,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.41,
+          "1": 0.34,
+          "2": 0.11,
+          "3": 0.06,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "P-0030": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.03,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "NONE": 0.97,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.93,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.41,
+          "1": 0.38,
+          "2": 0.11,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.14
+      }
+    },
+    "P-0031": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.99,
+        "probabilities": {
+          "TAX": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 1,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "NONE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.75,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.36,
+          "5": 0.3,
+          "6": 0.27
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.89
+      }
+    },
+    "P-0032": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0.99,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "TAX": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.31,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.74,
+          "1": 0.24,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0033": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.98,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.02
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.9,
+        "confidence": 0.48,
+        "probabilities": {
+          "0": 0.43,
+          "1": 0.39,
+          "2": 0.1,
+          "3": 0.05,
+          "4": 0.02,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "P-0034": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "PRICE": 0,
+          "NONE": 0.99,
+          "QUANTITY": 0,
+          "TAX": 0.01,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.26,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.78,
+          "1": 0.21,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0035": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.74,
+        "probabilities": {
+          "TAX": 0.01,
+          "CURRENCY": 0,
+          "NONE": 0.21,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0.78,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.37
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 2.81,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.13,
+          "2": 0.26,
+          "3": 0.31,
+          "4": 0.17,
+          "5": 0.04,
+          "6": 0.06
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.56
+      }
+    },
+    "P-0036": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.36,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0037": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TAX": 0.03,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.97,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.17,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.36,
+          "2": 0.13,
+          "3": 0.08,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0038": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "TAX": 0.02,
+          "DUPLICATE": 0,
+          "NONE": 0.98,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.45,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.28,
+          "1": 0.35,
+          "2": 0.16,
+          "3": 0.12,
+          "4": 0.05,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "P-0039": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "TAX": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.24,
+          "2": 0.03,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0040": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "NONE": 0.99,
+          "TAX": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.28,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.22,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "P-0041": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0.03,
+          "QUANTITY": 0.01,
+          "TAX": 0.04,
+          "NONE": 0.92
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.4
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.42,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.37,
+          "1": 0.29,
+          "2": 0.11,
+          "3": 0.1,
+          "4": 0.07,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.34
+      }
+    },
+    "P-0042": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "TAX": 0,
+          "QUANTITY": 0,
+          "NONE": 1,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.25,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.2,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "P-0043": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 0.94,
+        "probabilities": {
+          "TAX": 0,
+          "NONE": 0.04,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0.01,
+          "CURRENCY": 0.95
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.52,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.09,
+          "4": 0.23,
+          "5": 0.31,
+          "6": 0.28
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.84
+      }
+    },
+    "P-0044": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.66,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.28,
+          "PRICE": 0.71,
+          "TAX": 0.01,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 2.62,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.14,
+          "2": 0.3,
+          "3": 0.37,
+          "4": 0.11,
+          "5": 0.03,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.63
+      }
+    },
+    "P-0045": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "QUANTITY": 0,
+          "NONE": 0.97,
+          "DUPLICATE": 0,
+          "TAX": 0.03,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.26,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.38,
+          "1": 0.33,
+          "2": 0.12,
+          "3": 0.09,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "P-0046": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.87,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PRICE": 0.02,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.9,
+          "TAX": 0.08,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.88,
+        "confidence": 0.21,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.3,
+          "2": 0.15,
+          "3": 0.15,
+          "4": 0.07,
+          "5": 0.03,
+          "6": 0.06
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.35
+      }
+    },
+    "P-0047": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "TAX": 0.02,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0.02,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.96
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.47,
+        "confidence": 0.14,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.31,
+          "2": 0.12,
+          "3": 0.09,
+          "4": 0.08,
+          "5": 0.03,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.23
+      }
+    },
+    "P-0048": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TAX": 0.02,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "NONE": 0.97,
+          "QUANTITY": 0,
+          "PRICE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.36,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.34,
+          "2": 0.18,
+          "3": 0.12,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.23
+      }
+    },
+    "P-0049": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.03,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.97,
+          "PRICE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.07,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.43,
+          "1": 0.34,
+          "2": 0.1,
+          "3": 0.06,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "P-0050": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.98,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "TAX": 0,
+          "QUANTITY": 0,
+          "PRICE": 0.99,
+          "NONE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.07,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.02,
+          "2": 0.05,
+          "3": 0.17,
+          "4": 0.45,
+          "5": 0.19,
+          "6": 0.11
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "P-0051": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "TAX": 0.02,
+          "NONE": 0.98,
+          "PRICE": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.05,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.42,
+          "1": 0.33,
+          "2": 0.12,
+          "3": 0.07,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "P-0052": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.01,
+          "DUPLICATE": 0,
+          "NONE": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.11
+      }
+    },
+    "P-0053": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TAX": 0.02,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0.02,
+          "CURRENCY": 0,
+          "NONE": 0.96,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.71
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.29,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.33,
+          "1": 0.35,
+          "2": 0.16,
+          "3": 0.09,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.24
+      }
+    },
+    "P-0054": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.92,
+        "probabilities": {
+          "NONE": 0.93,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.02,
+          "PRICE": 0.04,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.66
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.4,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.33,
+          "2": 0.15,
+          "3": 0.11,
+          "4": 0.04,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "P-0055": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.95,
+          "DUPLICATE": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0.04
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.96,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.5,
+          "1": 0.28,
+          "2": 0.09,
+          "3": 0.07,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "P-0056": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.91,
+        "probabilities": {
+          "PRICE": 0,
+          "TAX": 0.03,
+          "QUANTITY": 0.04,
+          "DUPLICATE": 0,
+          "NONE": 0.93,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.53
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.42,
+        "confidence": 0.4,
+        "probabilities": {
+          "0": 0.29,
+          "1": 0.35,
+          "2": 0.14,
+          "3": 0.11,
+          "4": 0.06,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "P-0057": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "TAX": 0.03,
+          "PRICE": 0.03,
+          "NONE": 0.94,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.51,
+        "confidence": 0.35,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.32,
+          "2": 0.16,
+          "3": 0.1,
+          "4": 0.07,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.33
+      }
+    },
+    "P-0058": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.96,
+          "TAX": 0.04,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.27,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.38,
+          "2": 0.15,
+          "3": 0.09,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "P-0059": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TAX": 0.03,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "NONE": 0.97,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.31,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.35000000000000003,
+          "1": 0.33,
+          "2": 0.15,
+          "3": 0.1,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "P-0060": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "QUANTITY": 0,
+          "TAX": 0.01,
+          "NONE": 0.99,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.34,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0061": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PRICE": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.94,
+          "TAX": 0.05,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.36,
+        "confidence": 0.21,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.31,
+          "2": 0.15,
+          "3": 0.1,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.21
+      }
+    },
+    "P-0062": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TAX": 0.02,
+          "QUANTITY": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.98,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.26,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.34,
+          "2": 0.14,
+          "3": 0.08,
+          "4": 0.04,
+          "5": 0.02,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.24
+      }
+    },
+    "P-0063": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "TAX": 0.01,
+          "NONE": 0.99,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.29,
+        "confidence": 0.83,
+        "probabilities": {
+          "0": 0.77,
+          "1": 0.22,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0064": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TAX": 0.03,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01,
+          "NONE": 0.96,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.48,
+        "confidence": 0.36,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.31,
+          "2": 0.16,
+          "3": 0.14,
+          "4": 0.05,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "P-0065": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "QUANTITY": 0,
+          "PRICE": 0,
+          "TAX": 0.03,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.97,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.67,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.25,
+          "1": 0.33,
+          "2": 0.16,
+          "3": 0.15,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.26
+      }
+    },
+    "P-0066": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "TAX": 0.05,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "NONE": 0.95
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.66
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.53,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.3,
+          "2": 0.15,
+          "3": 0.14,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "P-0067": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.95,
+          "TAX": 0.04,
+          "DUPLICATE": 0,
+          "PRICE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.28,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.41000000000000003,
+          "1": 0.3,
+          "2": 0.11,
+          "3": 0.08,
+          "4": 0.04,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "P-0068": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.96,
+          "QUANTITY": 0,
+          "TAX": 0.04,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.04,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.41,
+          "1": 0.35,
+          "2": 0.12,
+          "3": 0.07,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0069": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TAX": 0.03,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "PRICE": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.96
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.04,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0.44,
+          "1": 0.33,
+          "2": 0.1,
+          "3": 0.06,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "P-0070": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.03,
+          "DUPLICATE": 0,
+          "PRICE": 0.97,
+          "TAX": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.99,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.03,
+          "2": 0.06,
+          "3": 0.2,
+          "4": 0.42,
+          "5": 0.13,
+          "6": 0.15
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "P-0071": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0.02,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.96,
+          "TAX": 0.02
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.48,
+        "confidence": 0.4,
+        "probabilities": {
+          "0": 0.28,
+          "1": 0.35,
+          "2": 0.14,
+          "3": 0.13,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.27
+      }
+    },
+    "P-0072": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.84,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0.86,
+          "QUANTITY": 0,
+          "NONE": 0.13,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.18,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.07,
+          "2": 0.17,
+          "3": 0.39,
+          "4": 0.26,
+          "5": 0.04,
+          "6": 0.06
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.74
+      }
+    },
+    "P-0073": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.97,
+          "TAX": 0.03,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.27,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.33,
+          "1": 0.36,
+          "2": 0.14,
+          "3": 0.1,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.21
+      }
+    },
+    "P-0074": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "PRICE": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.05,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "NONE": 0.94,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.44,
+        "confidence": 0.38,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.33,
+          "2": 0.14,
+          "3": 0.12,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "P-0075": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.98,
+          "TAX": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0.01,
+          "QUANTITY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.52,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0.6,
+          "1": 0.34,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0076": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.03,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.97
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.47,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.31,
+          "2": 0.14,
+          "3": 0.12,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.21
+      }
+    },
+    "P-0077": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PARTIAL_DELIVERY",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0,
+          "PARTIAL_DELIVERY": 0.99,
+          "TAX": 0,
+          "PRICE": 0,
+          "QUANTITY": 0.01,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.91,
+        "confidence": 0.36,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.32,
+          "5": 0.27,
+          "6": 0.36
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "P-0078": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.98,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.02,
+          "PRICE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.31,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.74,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0079": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 0.79,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "NONE": 0.17,
+          "TAX": 0.01,
+          "QUANTITY": 0.82,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.37
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.41,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0,
+          "1": 0.04,
+          "2": 0.14,
+          "3": 0.4,
+          "4": 0.27,
+          "5": 0.05,
+          "6": 0.09
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.87
+      }
+    },
+    "P-0080": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.99,
+          "TAX": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.31,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.74,
+          "1": 0.23,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "P-0081": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.96,
+          "PARTIAL_DELIVERY": 0.01,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "TAX": 0.03
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.29
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.52,
+        "confidence": 0.12,
+        "probabilities": {
+          "0": 0.33999999999999997,
+          "1": 0.27,
+          "2": 0.14,
+          "3": 0.11,
+          "4": 0.07,
+          "5": 0.03,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "P-0082": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "CURRENCY": 0,
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.31,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0.75,
+          "1": 0.22,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "P-0083": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 0.7,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.01,
+          "QUANTITY": 0.75,
+          "DUPLICATE": 0,
+          "NONE": 0.24000000000000002
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.83,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.06,
+          "3": 0.3,
+          "4": 0.41,
+          "5": 0.11,
+          "6": 0.1
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    },
+    "P-0084": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.95,
+          "QUANTITY": 0,
+          "TAX": 0.02,
+          "PRICE": 0.03,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.21,
+        "confidence": 0.29,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.34,
+          "2": 0.14,
+          "3": 0.09,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.23
+      }
+    },
+    "P-0085": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.98,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.02,
+          "PRICE": 0.98,
+          "TAX": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.08
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.86,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.06,
+          "3": 0.27,
+          "4": 0.44,
+          "5": 0.1,
+          "6": 0.11
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.85
+      }
+    },
+    "P-0086": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "TAX": 0.01,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.99
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.27,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0.79,
+          "1": 0.2,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.08
+      }
+    },
+    "P-0087": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.97,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "TAX": 0.03,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.28,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.34,
+          "2": 0.13,
+          "3": 0.09,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.21
+      }
+    },
+    "P-0088": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01,
+          "NONE": 0.98,
+          "TAX": 0.01,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.57,
+        "confidence": 0.67,
+        "probabilities": {
+          "0": 0.62,
+          "1": 0.29,
+          "2": 0.05,
+          "3": 0.02,
+          "4": 0.01,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0089": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "NONE": 0.96,
+          "TAX": 0.02,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0.02,
+          "DUPLICATE": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.69,
+        "confidence": 0.01,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.28,
+          "2": 0.13,
+          "3": 0.11,
+          "4": 0.09,
+          "5": 0.05,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.24
+      }
+    },
+    "P-0090": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.98,
+          "PRICE": 0.01,
+          "QUANTITY": 0,
+          "TAX": 0.01,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.68,
+        "confidence": 0.6,
+        "probabilities": {
+          "0": 0.59,
+          "1": 0.29,
+          "2": 0.05,
+          "3": 0.03,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0091": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 1,
+          "PRICE": 0,
+          "TAX": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.72,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.05,
+          "4": 0.41000000000000003,
+          "5": 0.29,
+          "6": 0.25
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.93
+      }
+    },
+    "P-0092": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "TAX": 0.04,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.96,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.96,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.45,
+          "1": 0.34,
+          "2": 0.1,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "P-0093": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "TAX": 0.02,
+          "CURRENCY": 0,
+          "NONE": 0.97,
+          "DUPLICATE": 0,
+          "PRICE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.85
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.59,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0.59,
+          "1": 0.3,
+          "2": 0.06,
+          "3": 0.03,
+          "4": 0.01,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.14
+      }
+    },
+    "P-0094": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "NONE": 0.97,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.01,
+          "CURRENCY": 0,
+          "PRICE": 0.02,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.71,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0.55,
+          "1": 0.31,
+          "2": 0.07,
+          "3": 0.03,
+          "4": 0.02,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0095": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.99,
+          "CURRENCY": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.63,
+        "confidence": 0.63,
+        "probabilities": {
+          "0": 0.62,
+          "1": 0.26,
+          "2": 0.05,
+          "3": 0.04,
+          "4": 0.02,
+          "5": 0,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "P-0096": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 0.95,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0.96,
+          "PRICE": 0.01,
+          "TAX": 0,
+          "CURRENCY": 0,
+          "NONE": 0.03,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.12
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.38,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.15,
+          "4": 0.45,
+          "5": 0.14,
+          "6": 0.23
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.87
+      }
+    },
+    "P-0097": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TAX": 0.03,
+          "CURRENCY": 0,
+          "NONE": 0.96,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.13,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.42,
+          "1": 0.32,
+          "2": 0.11,
+          "3": 0.08,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "P-0098": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "CURRENCY": 0,
+          "NONE": 0.96,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01,
+          "TAX": 0.03,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.54,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.32,
+          "2": 0.14,
+          "3": 0.12,
+          "4": 0.06,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.24
+      }
+    },
+    "P-0099": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.56,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "TAX": 0.02,
+          "NONE": 0.63,
+          "PRICE": 0,
+          "DUPLICATE": 0.35
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.6,
+        "confidence": 0.06,
+        "probabilities": {
+          "0": 0.37,
+          "1": 0.3,
+          "2": 0.07,
+          "3": 0.07,
+          "4": 0.07,
+          "5": 0.03,
+          "6": 0.09
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0100": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "TAX": 0.03,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.97
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.75
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.02,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.42,
+          "1": 0.34,
+          "2": 0.11,
+          "3": 0.07,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "P-0101": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "CURRENCY",
+        "confidence": 0.98,
+        "probabilities": {
+          "QUANTITY": 0,
+          "CURRENCY": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.42,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.12,
+          "4": 0.34,
+          "5": 0.29,
+          "6": 0.19
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.89
+      }
+    },
+    "P-0102": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "TAX": 0.01,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.99
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.93
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.48,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0.64,
+          "1": 0.3,
+          "2": 0.03,
+          "3": 0.02,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.12
+      }
+    },
+    "P-0103": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "TAX": 0.02,
+          "NONE": 0.98,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.94,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.43,
+          "1": 0.36,
+          "2": 0.11,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.16
+      }
+    },
+    "P-0104": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "PRICE": 0.02,
+          "CURRENCY": 0,
+          "TAX": 0.02,
+          "DUPLICATE": 0,
+          "NONE": 0.96,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.69
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.63,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.3,
+          "1": 0.29,
+          "2": 0.14,
+          "3": 0.12,
+          "4": 0.08,
+          "5": 0.03,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    },
+    "P-0105": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.04,
+          "QUANTITY": 0,
+          "PRICE": 0.01,
+          "NONE": 0.95
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.79,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.29,
+          "2": 0.15,
+          "3": 0.13,
+          "4": 0.07,
+          "5": 0.03,
+          "6": 0.06
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "P-0106": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "TAX": 0.04,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.96,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.22,
+        "confidence": 0.29,
+        "probabilities": {
+          "0": 0.37,
+          "1": 0.35,
+          "2": 0.12,
+          "3": 0.07,
+          "4": 0.03,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "P-0107": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.72,
+          "1": 0.25,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0108": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 0.9,
+        "probabilities": {
+          "TAX": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "QUANTITY": 0.93,
+          "NONE": 0.07
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.31
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 3.88,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0,
+          "1": 0.04,
+          "2": 0.09,
+          "3": 0.28,
+          "4": 0.32,
+          "5": 0.08,
+          "6": 0.19
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.87
+      }
+    },
+    "P-0109": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "TAX": 0.01,
+          "NONE": 0.99
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.38,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.25,
+          "2": 0.03,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0110": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PARTIAL_DELIVERY",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUANTITY": 0,
+          "TAX": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 1,
+          "PRICE": 0,
+          "NONE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 5.02,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.03,
+          "4": 0.29,
+          "5": 0.27,
+          "6": 0.41000000000000003
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "P-0111": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "TAX": 0.03,
+          "CURRENCY": 0,
+          "NONE": 0.95,
+          "DUPLICATE": 0,
+          "PRICE": 0.02,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.19,
+        "confidence": 0.31,
+        "probabilities": {
+          "0": 0.39,
+          "1": 0.32,
+          "2": 0.12,
+          "3": 0.1,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "P-0112": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.99,
+          "TAX": 0.01,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.54,
+        "confidence": 0.69,
+        "probabilities": {
+          "0": 0.59,
+          "1": 0.33,
+          "2": 0.05,
+          "3": 0.02,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.13
+      }
+    },
+    "P-0113": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "QUANTITY": 0,
+          "NONE": 0.97,
+          "TAX": 0.03,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "PRICE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.07,
+        "confidence": 0.38,
+        "probabilities": {
+          "0": 0.41,
+          "1": 0.35,
+          "2": 0.12,
+          "3": 0.07,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0114": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.98,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.02,
+          "PRICE": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.27,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.33999999999999997,
+          "2": 0.15,
+          "3": 0.1,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "P-0115": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.98,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01,
+          "TAX": 0.01,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.37,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.25,
+          "2": 0.03,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.13
+      }
+    },
+    "P-0116": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.83,
+        "probabilities": {
+          "NONE": 0.86,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.12,
+          "TAX": 0.02,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.6,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.27,
+          "1": 0.32,
+          "2": 0.16,
+          "3": 0.14,
+          "4": 0.06,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "P-0117": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "TAX": 0,
+          "NONE": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0,
+          "QUANTITY": 1,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.78,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.05,
+          "4": 0.37,
+          "5": 0.32,
+          "6": 0.26
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "P-0118": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "TAX": 0.04,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0.01,
+          "QUANTITY": 0,
+          "NONE": 0.95
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.22,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.35,
+          "1": 0.35,
+          "2": 0.14,
+          "3": 0.1,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.23
+      }
+    },
+    "P-0119": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0.01,
+          "PRICE": 0.02,
+          "NONE": 0.94,
+          "TAX": 0.03,
+          "CURRENCY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.5,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.29,
+          "1": 0.33,
+          "2": 0.15,
+          "3": 0.13,
+          "4": 0.06,
+          "5": 0.02,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    },
+    "P-0120": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "NONE": 0.99
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.46,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0.65,
+          "1": 0.28,
+          "2": 0.04,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.12
+      }
+    },
+    "P-0121": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.04,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.95,
+          "PRICE": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.16,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.4,
+          "1": 0.33,
+          "2": 0.12,
+          "3": 0.08,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.2
+      }
+    },
+    "P-0122": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0.99,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.36,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.26,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "P-0123": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.95,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "TAX": 0.03,
+          "QUANTITY": 0.01,
+          "PRICE": 0,
+          "NONE": 0.96
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.65
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.23,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.36,
+          "2": 0.15,
+          "3": 0.09,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.28
+      }
+    },
+    "P-0124": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "DUPLICATE",
+        "confidence": 0.38,
+        "probabilities": {
+          "TAX": 0.02,
+          "DUPLICATE": 0.47,
+          "PRICE": 0.04,
+          "NONE": 0.47,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 2.6,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.21,
+          "2": 0.11,
+          "3": 0.14,
+          "4": 0.14,
+          "5": 0.07,
+          "6": 0.14
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    },
+    "P-0125": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "NONE": 0.94,
+          "PRICE": 0.03,
+          "QUANTITY": 0,
+          "TAX": 0.03,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.18,
+        "confidence": 0.31,
+        "probabilities": {
+          "0": 0.37,
+          "1": 0.35,
+          "2": 0.14,
+          "3": 0.08,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.21
+      }
+    },
+    "P-0126": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9,
+        "probabilities": {
+          "NONE": 0.92,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PRICE": 0.01,
+          "TAX": 0.07
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.63
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.27,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.34,
+          "1": 0.35,
+          "2": 0.14,
+          "3": 0.1,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.26
+      }
+    },
+    "P-0127": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "NONE": 0.99,
+          "CURRENCY": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.84,
+        "confidence": 0.51,
+        "probabilities": {
+          "0": 0.57,
+          "1": 0.26,
+          "2": 0.05,
+          "3": 0.05,
+          "4": 0.04,
+          "5": 0.02,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.12
+      }
+    },
+    "P-0128": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.99,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.01,
+          "PRICE": 0.99,
+          "TAX": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.37,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.12,
+          "4": 0.48,
+          "5": 0.19,
+          "6": 0.18
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.9
+      }
+    },
+    "P-0129": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "NONE": 0.95,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0.03,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "TAX": 0.02
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.71
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 2.29,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.24,
+          "1": 0.23,
+          "2": 0.1,
+          "3": 0.11,
+          "4": 0.15,
+          "5": 0.09,
+          "6": 0.08
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.27
+      }
+    },
+    "P-0130": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "NONE": 0.95,
+          "PRICE": 0.03,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "TAX": 0.02,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.4,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.35000000000000003,
+          "1": 0.31,
+          "2": 0.14,
+          "3": 0.1,
+          "4": 0.05,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.34
+      }
+    },
+    "P-0131": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "TAX": 0.02,
+          "PRICE": 0,
+          "NONE": 0.95,
+          "QUANTITY": 0.03
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.22,
+        "confidence": 0.29,
+        "probabilities": {
+          "0": 0.37,
+          "1": 0.33,
+          "2": 0.14,
+          "3": 0.09,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.27
+      }
+    },
+    "P-0132": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUANTITY": 0,
+          "DUPLICATE": 0,
+          "NONE": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.34,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.72,
+          "1": 0.25,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0133": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.99,
+        "probabilities": {
+          "CURRENCY": 0,
+          "QUANTITY": 0,
+          "PRICE": 0,
+          "TAX": 0.01,
+          "NONE": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.34,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.09
+      }
+    },
+    "P-0134": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.91,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0.06,
+          "NONE": 0.93,
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0.01,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.66
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.6,
+        "confidence": 0.29,
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.32,
+          "2": 0.12,
+          "3": 0.11,
+          "4": 0.06,
+          "5": 0.03,
+          "6": 0.05
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.26
+      }
+    },
+    "P-0135": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 1,
+        "probabilities": {
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0,
+          "QUANTITY": 1,
+          "CURRENCY": 0,
+          "NONE": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 5.08,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.26,
+          "5": 0.32,
+          "6": 0.4
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.94
+      }
+    },
+    "P-0136": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 1,
+        "probabilities": {
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "QUANTITY": 1,
+          "TAX": 0,
+          "NONE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.06
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.89,
+        "confidence": 0.35,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.33,
+          "5": 0.25,
+          "6": 0.36
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "P-0137": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PARTIAL_DELIVERY",
+        "confidence": 1,
+        "probabilities": {
+          "NONE": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 1,
+          "TAX": 0,
+          "PRICE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 5.5,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.28,
+          "6": 0.62
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.94
+      }
+    },
+    "P-0138": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 0.8,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "NONE": 0.16,
+          "QUANTITY": 0.83,
+          "TAX": 0.01,
+          "PRICE": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.12,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.05,
+          "3": 0.22,
+          "4": 0.42,
+          "5": 0.12,
+          "6": 0.18
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.89
+      }
+    },
+    "P-0139": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.93,
+        "probabilities": {
+          "TAX": 0.02,
+          "QUANTITY": 0,
+          "DUPLICATE": 0.03,
+          "CURRENCY": 0,
+          "NONE": 0.95,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.95,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.26,
+          "2": 0.15,
+          "3": 0.16,
+          "4": 0.1,
+          "5": 0.04,
+          "6": 0.06
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.29
+      }
+    },
+    "P-0140": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.94,
+        "probabilities": {
+          "QUANTITY": 0,
+          "CURRENCY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "TAX": 0.04,
+          "NONE": 0.96
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.72
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.36,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.32,
+          "1": 0.34,
+          "2": 0.15,
+          "3": 0.11,
+          "4": 0.04,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "P-0141": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "QUANTITY": 0,
+          "NONE": 0.98,
+          "TAX": 0.02,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.8
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.39,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0.29,
+          "1": 0.36,
+          "2": 0.16,
+          "3": 0.1,
+          "4": 0.04,
+          "5": 0.02,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.25
+      }
+    },
+    "P-0142": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "TAX": 0.02,
+          "NONE": 0.98,
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.76
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.93,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.45,
+          "1": 0.34,
+          "2": 0.11,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.01
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0143": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "PARTIAL_DELIVERY": 0,
+          "PRICE": 0,
+          "TAX": 0.02,
+          "QUANTITY": 0,
+          "NONE": 0.98,
+          "CURRENCY": 0,
+          "DUPLICATE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.33,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.24,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0144": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "QUANTITY",
+        "confidence": 1,
+        "probabilities": {
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0,
+          "QUANTITY": 1,
+          "NONE": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.03
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 5.23,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.22,
+          "5": 0.24,
+          "6": 0.52
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.95
+      }
+    },
+    "P-0145": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.98,
+        "probabilities": {
+          "NONE": 0.99,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "PRICE": 0,
+          "DUPLICATE": 0,
+          "QUANTITY": 0,
+          "TAX": 0.01
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.79
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 0.86,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0.49,
+          "1": 0.31,
+          "2": 0.09,
+          "3": 0.06,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "P-0146": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.96,
+        "probabilities": {
+          "NONE": 0.97,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "DUPLICATE": 0,
+          "PRICE": 0,
+          "QUANTITY": 0,
+          "TAX": 0.03
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.09,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.41000000000000003,
+          "1": 0.35,
+          "2": 0.11,
+          "3": 0.07,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.02
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.19
+      }
+    },
+    "P-0147": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.97,
+        "probabilities": {
+          "DUPLICATE": 0,
+          "NONE": 0.97,
+          "QUANTITY": 0,
+          "TAX": 0.02,
+          "CURRENCY": 0,
+          "PRICE": 0.01,
+          "PARTIAL_DELIVERY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.73
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.24,
+        "confidence": 0.28,
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.36,
+          "2": 0.12,
+          "3": 0.09,
+          "4": 0.03,
+          "5": 0.01,
+          "6": 0.03
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "P-0148": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "PRICE",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "TAX": 0,
+          "NONE": 0,
+          "DUPLICATE": 0,
+          "PRICE": 1,
+          "CURRENCY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 4.95,
+        "confidence": 0.39,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.04,
+          "4": 0.3,
+          "5": 0.31,
+          "6": 0.35
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.91
+      }
+    },
+    "P-0149": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.66,
+        "probabilities": {
+          "QUANTITY": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "NONE": 0.71,
+          "PRICE": 0,
+          "TAX": 0.01,
+          "DUPLICATE": 0.28
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.11,
+        "confidence": 0.35,
+        "probabilities": {
+          "0": 0.54,
+          "1": 0.22999999999999998,
+          "2": 0.04,
+          "3": 0.05,
+          "4": 0.06,
+          "5": 0.02,
+          "6": 0.06
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.1
+      }
+    },
+    "P-0150": {
+      "mismatch": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.92,
+        "probabilities": {
+          "PRICE": 0.02,
+          "DUPLICATE": 0,
+          "PARTIAL_DELIVERY": 0,
+          "CURRENCY": 0,
+          "NONE": 0.93,
+          "TAX": 0.04,
+          "QUANTITY": 0
+        }
+      },
+      "within_tolerance": {
+        "type": "noul",
+        "noul": 0.45
+      },
+      "overbilling_risk": {
+        "type": "score",
+        "score": 1.49,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.33,
+          "1": 0.3,
+          "2": 0.15,
+          "3": 0.1,
+          "4": 0.06,
+          "5": 0.02,
+          "6": 0.04
+        }
+      },
+      "hold_payment": {
+        "type": "noul",
+        "noul": 0.31
+      }
+    }
+  }
 }

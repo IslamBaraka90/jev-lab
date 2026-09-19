@@ -1,6 +1,6 @@
 # 104 · Three-way match
 
-**Domain:** Books · **Data:** synthetic (seed 1104) · **View:** table (three panes) · **Items:** 150 packets · **Questions:** 4
+**Domain:** Books · **Data:** synthetic (seed 1104) · **View:** table · **Items:** 150 packets · **Questions:** 4
 
 ## Value
 
@@ -18,7 +18,8 @@ Catch the invoices that don't agree with the purchase order or the goods receipt
 - `demos/three-way-match/data.json` — 150 packets from 40 suppliers. Each packet: PO lines (item, quantity, unit price, currency, incoterm), receipt lines (quantity received, date, condition), invoice lines (quantity billed, unit price, tax, freight, total).
 - Planted: 9 unit-price increases above tolerance, 7 over-billed quantities, 5 tax errors, 4 currency mismatches, 3 duplicate invoices for one receipt, 6 partial deliveries billed in full, and 8 within-tolerance differences that must not be flagged.
 - Tolerances live in `context`: 2% on price, 1 unit on quantity, and they are part of the state.
-- Labels: `{ packetId, mismatch, amountAtRisk }`.
+- Labels: `{ packetId, mismatch, amountAtRisk, kind }`, with `kind` separating problems, allowed
+  differences and exact packets for the false-hold report.
 
 ## State
 
@@ -57,4 +58,6 @@ Template list, plus:
 
 ## Notes
 
-Keep the three-pane view aligned line by line; misaligned panes make the demo unreadable on camera.
+The shared table view shipped with the three documents as structured rows; no demo-specific JSX or
+shared runtime change was needed. Recorded model behavior, including the failed tolerance controls,
+is documented without adjustment in `demos/three-way-match/notes.md`.
