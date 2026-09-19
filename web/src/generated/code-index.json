@@ -419,6 +419,34 @@
     "code": "/** No labels anywhere: what is graded is consistency, and whether the reasons match the numbers. */\nfunction report(results, context = {}) {\n  const graded = results.filter((result) => result.evaluation);\n  const bySymbol = new Map();\n  for (const result of graded) {\n    bySymbol.set(result.item.symbol, [...(bySymbol.get(result.item.symbol) ?? []), result]);\n  }\n\n  return {\n    note: `Ninety-six readings: sixteen companies against six goals. ${context.note ?? ''}`,\n    findings: findings(graded, bySymbol),\n    kpis: kpis(graded, bySymbol),\n    distribution: distribution(graded),\n    matrix: goalMatrix(graded),\n    curve: coverage(graded),\n    checks: checks(graded),\n    topItems: topItems(graded),\n  };\n}",
     "language": "javascript"
   },
+  "demos/golden-cross-review/demo.js#demo:state": {
+    "path": "demos/golden-cross-review/demo.js",
+    "startLine": 20,
+    "endLine": 45,
+    "code": "/** The chart up to the cross bar and nothing after it, with the numbers a reader would work from. */\nfunction buildState(item, context) {\n  return {\n    task: 'This cross happened. Decide whether it is worth taking, and say where the stop goes if it is.',\n    rule_that_found_it: context.rule,\n    instrument: item.symbol,\n    cross_date: item.date,\n    at_the_cross: {\n      close: item.close,\n      fifty_day_average: item.fastMa,\n      two_hundred_day_average: item.slowMa,\n      gap_between_them_percent: item.gapPercent,\n      fifty_day_slope_over_20_bars_percent: item.fastSlopePercent,\n      two_hundred_day_slope_over_20_bars_percent: item.slowSlopePercent,\n      price_above_the_slow_average_percent: item.priceAboveSlowPercent,\n      sixty_day_range_as_percent_of_price: item.sixtyDayRangePercent,\n      average_true_range_percent: item.averageTrueRangePercent,\n      volume_against_its_sixty_day_average: item.volumeAgainstAverage,\n      bars_since_this_instrument_last_crossed: item.barsSinceLastCross,\n    },\n    where_a_stop_could_go: item.stopLevels,\n    daily_bars_up_to_and_including_the_cross: item.chart.bars.slice(0, item.chart.markIndex + 1),\n    bar_format: 'date open high low close volume, volume in thousands',\n    note: 'Nothing after the cross bar is here. What happened next is not knowable at this point and is not on this page.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/golden-cross-review/demo.js#demo:questions": {
+    "path": "demos/golden-cross-review/demo.js",
+    "startLine": 49,
+    "endLine": 74,
+    "code": "const questions = {\n  valid_signal: noul('Is this a real change of trend?', {\n    yes: 'The averages crossed because the trend turned, not because a flat market wandered.',\n    no: 'This is the arithmetic of two averages meeting in a market going nowhere.',\n  }),\n  context: choice('What is the chart doing around this cross?', {\n    ESTABLISHED_TREND: 'The move was already under way and the cross is late confirmation.',\n    CHOP: 'Price has been going sideways and the averages are tangled.',\n    POST_GAP: 'A gap did most of the work and the averages are catching up to it.',\n    RANGE_BREAK: 'Price has just left a range it had been held in.',\n    REVERSAL_RISK: 'The cross is up, but the chart looks more like a top than a start.',\n  }),\n  signal_quality: score('How good is this particular signal?', [\n    'Worthless', 'Very poor', 'Poor', 'Fair', 'Good', 'Very good', 'Excellent',\n  ]),\n  decision: choice('Take it or leave it?', {\n    TAKE: 'Worth the trade on what is visible here.',\n    SKIP: 'Not this one.',\n  }),\n  stop_placement: choice('Where does the stop go?', {\n    BELOW_SLOW_MA: 'Under the two-hundred-day average.',\n    BELOW_SWING_LOW: 'Under the last swing low.',\n    ATR_BASED: 'Two average true ranges below the entry.',\n    NONE: 'No stop, because there is no trade.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/golden-cross-review/demo.js#demo:evaluate": {
+    "path": "demos/golden-cross-review/demo.js",
+    "startLine": 78,
+    "endLine": 90,
+    "code": "/** One judgement of one cross, made with no sight of the bars that followed it. */\nfunction evaluate(answers, item) {\n  const take = answers.decision.choice === 'TAKE';\n  return {\n    valid: answers.valid_signal.noul >= 0.5,\n    context: answers.context.choice,\n    quality: answers.signal_quality.score,\n    take,\n    stop: answers.stop_placement.choice,\n    confidence: answers.decision.confidence,\n    label: `${item.symbol} · ${item.date} · ${take ? 'take' : 'skip'} · ${answers.signal_quality.score.toFixed(1)} of 6`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/golden-cross-review/demo.js#demo:report": {
+    "path": "demos/golden-cross-review/demo.js",
+    "startLine": 102,
+    "endLine": 124,
+    "code": "/** Taking every cross against taking only the kept ones, on the same bars and the same costs. */\nfunction report(results, context = {}) {\n  const cost = context.costPercentPerTrade ?? 0.1;\n  const scored = results\n    .filter((result) => result.evaluation)\n    .map((result) => ({ ...result, outcome: outcome(result.item, cost) }))\n    .sort((left, right) => left.item.date.localeCompare(right.item.date));\n  const kept = scored.filter((result) => result.evaluation.take);\n\n  return {\n    note: `${scored.length} crossovers, every one the rule found in the cached bars. Each is entered at the cross close, held ${context.holdingPeriodBars ?? 20} sessions, and charged ${cost} per cent. ${context.note ?? ''}`,\n    findings: findings(scored, kept),\n    kpis: kpis(scored, kept),\n    distribution: CONTEXTS\n      .map((value) => ({ label: sentence(value), count: scored.filter((result) => result.evaluation.context === value).length, tone: value === 'CHOP' || value === 'REVERSAL_RISK' ? 'warn' : undefined }))\n      .filter((entry) => entry.count),\n    matrix: contextMatrix(scored),\n    curve: qualityCurve(scored),\n    equityCurve: equity(scored, kept),\n    checks: checks(scored, kept),\n    topItems: topItems(scored),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/income-planning/demo.js#demo:state": {
     "path": "demos/income-planning/demo.js",
     "startLine": 13,
@@ -1154,6 +1182,13 @@
     "code": "/** Rolls the per-line results up into the report, graded against the planted problems. */\nfunction report(results, { labels = [] } = {}) {\n  const planted = new Map(labels.map((label) => [label.lineId, label.issue]));\n  const flagged = results.filter((result) => result.evaluation.flagged);\n  const caught = flagged.filter((result) => planted.get(result.item.id) === result.evaluation.issue);\n  const missed = [...planted.keys()].filter((id) => !flagged.some((result) => result.item.id === id));\n\n  return {\n    kpis: [\n      { label: 'Lines reviewed', value: results.length },\n      { label: 'Flagged', value: flagged.length },\n      { label: 'Caught', value: `${caught.length} of ${planted.size}`, tone: caught.length === planted.size ? 'good' : 'warn' },\n      { label: 'False alarms', value: flagged.length - caught.length, tone: flagged.length - caught.length === 0 ? 'good' : 'warn' },\n    ],\n    distribution: countBy(results, (result) => result.evaluation.issue),\n    checks: [\n      { id: 'missed', label: 'Planted problems missed', count: missed.length, of: planted.size, items: missed },\n    ],\n    topItems: [...flagged].sort((a, b) => b.evaluation.severity - a.evaluation.severity).slice(0, 5).map((result) => ({ id: result.item.id, label: result.evaluation.label, value: result.evaluation.severity.toFixed(1) })),\n  };\n}",
     "language": "javascript"
   },
+  "src/strategies/golden-cross.js#strategy:detector": {
+    "path": "src/strategies/golden-cross.js",
+    "startLine": 21,
+    "endLine": 36,
+    "code": "/**\n * Every bar where the fast average closes above the slow one having been at or below it the day\n * before. That is the whole signal. It takes no parameters that were chosen by looking at results.\n */\nexport function crossovers(bars, { fast = 50, slow = 200 } = {}) {\n  const quick = movingAverage(bars, fast);\n  const steady = movingAverage(bars, slow);\n  const found = [];\n\n  for (let index = 1; index < bars.length; index++) {\n    const before = quick[index - 1] !== null && steady[index - 1] !== null && quick[index - 1] <= steady[index - 1];\n    const after = quick[index] !== null && steady[index] !== null && quick[index] > steady[index];\n    if (before && after) found.push({ index, date: bars[index].date, fast: quick[index], slow: steady[index] });\n  }\n  return found;\n}",
+    "language": "javascript"
+  },
   "scripts/generate/account-takeover.js#demo:data": {
     "path": "scripts/generate/account-takeover.js",
     "startLine": 185,
@@ -1257,6 +1292,13 @@
     "startLine": 91,
     "endLine": 105,
     "code": "/** One year of a real company's statements, exactly as the cached file has them. */\nfunction statementLine(year) {\n  return {\n    fiscalYearEnd: year.fiscalYearEnd,\n    revenue: year.revenue,\n    operatingIncome: year.operatingIncome,\n    netIncome: year.netIncome,\n    totalAssets: year.totalAssets,\n    totalDebt: year.totalDebt,\n    cash: year.cash,\n    operatingCashFlow: year.operatingCashFlow,\n    freeCashFlow: year.freeCashFlow,\n    dividendsPaid: year.dividendsPaid,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/golden-cross-review.js#demo:data": {
+    "path": "scripts/generate/golden-cross-review.js",
+    "startLine": 54,
+    "endLine": 81,
+    "code": "/** One crossover: the chart up to it, the two averages, and the levels a stop could use. */\nfunction cross_(symbol, bars, cross, barsSinceLast) {\n  const shape = context(bars, cross.index);\n  const window = bars.slice(cross.index - SHOWN + 1, cross.index + HELD + 1);\n\n  return {\n    id: null,\n    symbol,\n    date: cross.date,\n    close: shape.close,\n    fastMa: shape.fastMa,\n    slowMa: shape.slowMa,\n    gapPercent: shape.gapPercent,\n    fastSlopePercent: shape.fastSlopePercent,\n    slowSlopePercent: shape.slowSlopePercent,\n    priceAboveSlowPercent: shape.priceAboveSlowPercent,\n    sixtyDayRangePercent: shape.sixtyDayRangePercent,\n    averageTrueRangePercent: shape.averageTrueRangePercent,\n    volumeAgainstAverage: shape.volumeAgainstAverage,\n    barsSinceLastCross: barsSinceLast,\n    stopLevels: levels(bars, cross.index),\n    chart: {\n      markIndex: SHOWN - 1,\n      label: `${symbol} · 50 over 200 on ${cross.date}`,\n      bars: window.map((bar) => `${bar.date} ${bar.open} ${bar.high} ${bar.low} ${bar.close} ${Math.round((bar.volume ?? 0) / 1000)}`),\n    },\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/income-planning.js#demo:data": {
