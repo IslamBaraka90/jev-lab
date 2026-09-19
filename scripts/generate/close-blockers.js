@@ -101,15 +101,15 @@ const BLOCKERS = [
     note: 'Still sitting at the June rate. The revaluation run did not pick this account up again and the euro has moved a long way since, so the sterling figure is wrong.' },
   { account: '1200', blocker: 'FX_REVALUATION', owner: 'TREASURY', swing: 'high', openItems: 0,
     note: 'Half of this is the euro contract billed in advance and it has never been revalued. Balance is in a mix of currencies at the rate each entry went in at.' },
-  { account: '2300', blocker: 'UNSUPPORTED_JOURNAL', owner: 'CONTROLLER', swing: 'high', openItems: 0,
+  { account: '2300', blocker: 'UNSUPPORTED_JOURNAL', owner: 'CONTROLLER', amount: 52_000, openItems: 0,
     note: 'Journal 4471 for 52k posted on the last day of the month with no description and nothing attached. It is not one of mine and the return does not explain it.' },
-  { account: '1400', blocker: 'UNSUPPORTED_JOURNAL', owner: 'CONTROLLER', swing: 'low', openItems: 0,
+  { account: '1400', blocker: 'UNSUPPORTED_JOURNAL', owner: 'CONTROLLER', amount: -63_000, openItems: 0,
     note: 'There is a manual write-down of 63k in here from journal 4488. No approval in the folder and the stock count sheets do not show a loss anywhere near that.' },
 ];
 
 /** Six accounts that look wrong at a glance and are not. Every one of them has its paperwork. */
 const DECOYS = [
-  { account: '2210', swing: 'low', openItems: 0,
+  { account: '2210', factor: 0.8, openItems: 0,
     note: 'Yes it is up 80%. That is the retention pool the board approved in June, first month it has been accrued in full. Approval and the calculation are both in the close folder.' },
   { account: '1300', swing: 'high', openItems: 0,
     note: 'Same jump as every August, the annual insurance renewal lands this month and releases over the next twelve. Schedule is attached and agrees to the penny.' },
@@ -186,7 +186,7 @@ export function generate(seed = SEED) {
 function trialBalanceLine(random, account, plan) {
   const prior = round(account.base * random.float(0.94, 1.06, 4));
   const expected = expectedRange(account);
-  const movement = movementFor(random, expected, plan?.swing ?? 'none', prior);
+  const movement = movementFor(random, expected, plan, prior);
   const openItems = plan?.openItems ?? (random.bool(0.12) ? random.int(1, 4) : 0);
 
   return {
@@ -212,11 +212,17 @@ function expectedRange(account) {
 }
 // #endregion
 
-/** Movement inside the expected band, well outside it, or the balance emptying out altogether. */
-function movementFor(random, expected, swing, prior) {
-  if (swing === 'empty') return round(-prior * random.float(0.78, 0.96, 3));
-  if (swing === 'high') return round(expected.high * random.float(1.8, 4.2, 3));
-  if (swing === 'low') return round(expected.low * random.float(1.8, 4.2, 3));
+/**
+ * How the account moved. Most accounts drift inside the band the controller expects. A planted one
+ * can move well outside it, empty out altogether, grow by a stated share, or move by exactly the
+ * amount its note talks about, so the note and the numbers can never disagree on camera.
+ */
+function movementFor(random, expected, plan, prior) {
+  if (plan?.amount !== undefined) return plan.amount;
+  if (plan?.factor !== undefined) return round(prior * plan.factor);
+  if (plan?.swing === 'empty') return round(-prior * random.float(0.78, 0.96, 3));
+  if (plan?.swing === 'high') return round(expected.high * random.float(1.8, 4.2, 3));
+  if (plan?.swing === 'low') return round(expected.low * random.float(1.8, 4.2, 3));
   return round(random.float(expected.low * 0.75, expected.high * 0.75));
 }
 
