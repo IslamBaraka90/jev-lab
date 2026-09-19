@@ -235,7 +235,6 @@ export default {
   dataClass: 'mixed',
   readMinutes: 5,
   view: 'candles',
-  status: 'pending-recording',
   itemLabel: (item) => `${item.id} · ${item.symbol} ${item.direction.toLowerCase()} · ${percent(item.resultPercent)}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),
