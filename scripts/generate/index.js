@@ -53,6 +53,7 @@ export const GENERATORS = {
   'rumour-grading': () => import('./rumour-grading.js'),
   'golden-cross-review': () => import('./golden-cross-review.js'),
   'regime-classification': () => import('./regime-classification.js'),
+  'strategy-correlation': () => import('./strategy-correlation.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;

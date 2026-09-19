@@ -951,6 +951,34 @@
     "code": "/** Arithmetic first: where the model's ratio calls and the demo's own calculation disagree. */\nfunction report(results, context = {}) {\n  const graded = results.filter((result) => result.evaluation);\n  const calls = graded\n    .flatMap((result) => RATIOS.map(({ key }) => ({ result, key, agrees: result.evaluation.agrees[key] })))\n    .filter((call) => call.agrees !== null);\n\n  return {\n    note: `Forty-eight screenings: sixteen instruments against three rule sets. ${context.note ?? ''}`,\n    findings: findings(graded, calls),\n    kpis: kpis(graded, calls),\n    distribution: distribution(graded),\n    matrix: standardMatrix(graded),\n    curve: coverage(graded, calls),\n    checks: checks(graded, calls),\n    topItems: topItems(graded),\n  };\n}",
     "language": "javascript"
   },
+  "demos/strategy-correlation/demo.js#demo:state": {
+    "path": "demos/strategy-correlation/demo.js",
+    "startLine": 22,
+    "endLine": 42,
+    "code": "/** Both rules, both books, and both daily series in full. Not one statistic about either. */\nfunction buildState(item, context) {\n  const side = (side_) => ({\n    name: side_.name,\n    rule: side_.rule,\n    instruments: side_.instruments,\n    average_hold_sessions: side_.averageHoldSessions,\n    trades_in_the_period: side_.trades,\n    daily_results_basis_points: context.series[side_.id],\n  });\n\n  return {\n    task: 'These two strategies sit in the same book. Decide how much they overlap, whether holding both is really two bets, and what you would do about the allocation.',\n    market_context: context.marketContext,\n    how_to_read_the_numbers: context.howToRead,\n    trading_days: context.tradingDays,\n    strategy_one: side(item.left),\n    strategy_two: side(item.right),\n    note: 'Nothing has been worked out for you. The two series are the evidence.',\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/strategy-correlation/demo.js#demo:questions": {
+    "path": "demos/strategy-correlation/demo.js",
+    "startLine": 46,
+    "endLine": 66,
+    "code": "const questions = {\n  overlap: score('How much do these two overlap?', [\n    'Independent', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Identical',\n  ]),\n  diversifying: noul('Does holding both actually diversify anything?', {\n    yes: 'The second one earns its place beside the first.',\n    no: 'The second one is mostly the first one again, at a different size.',\n  }),\n  same_underlying_bet: choice('If they overlap, what are they both really betting on?', {\n    SAME_FACTOR: 'The same underlying driver, whatever they trade.',\n    SAME_INSTRUMENT: 'The same thing, traded two ways.',\n    SAME_TIMING: 'Different bets, but they are in and out at the same moments.',\n    DIFFERENT: 'They are not the same bet.',\n  }),\n  allocation_change: choice('What would you do with the allocation?', {\n    INCREASE: 'Put more into this pair; the diversification is real.',\n    KEEP: 'Leave both as they are.',\n    REDUCE: 'Take something off one of them.',\n    DROP_ONE: 'One of these two should not be in the book.',\n  }),\n};",
+    "language": "javascript"
+  },
+  "demos/strategy-correlation/demo.js#demo:evaluate": {
+    "path": "demos/strategy-correlation/demo.js",
+    "startLine": 70,
+    "endLine": 80,
+    "code": "/** One pair's reading, made from two series and two descriptions and no statistic. */\nfunction evaluate(answers, item) {\n  return {\n    overlap: answers.overlap.score,\n    diversifying: answers.diversifying.noul >= 0.5,\n    bet: answers.same_underlying_bet.choice,\n    move: answers.allocation_change.choice,\n    confidence: answers.overlap.confidence,\n    label: `${item.leftId} and ${item.rightId} · overlap ${answers.overlap.score.toFixed(1)} of 6 · ${readable(answers.allocation_change.choice)}`,\n  };\n}",
+    "language": "javascript"
+  },
+  "demos/strategy-correlation/demo.js#demo:report": {
+    "path": "demos/strategy-correlation/demo.js",
+    "startLine": 84,
+    "endLine": 104,
+    "code": "/** The answers beside the correlations the demo worked out, and what the book adds up to. */\nfunction report(results, context = {}) {\n  const labels = context.labels ?? [];\n  const byItem = new Map(labels.map((label) => [label.pairId, label]));\n  const graded = results.filter((result) => byItem.has(result.item.id));\n  const of = (relation) => graded.filter((result) => byItem.get(result.item.id).relation === relation);\n\n  return {\n    note: `Sixty pairs from a book of twelve. ${of('SAME_PARAMETERS').length} are one strategy twice, ${of('SAME_FACTOR').length} share a factor, ${of('STRESS_ONLY').length} only move together under stress, and ${of('INDEPENDENT').length} are genuinely independent. ${context.note ?? ''}`,\n    findings: findings(graded, byItem, of),\n    kpis: kpis(graded, byItem, of),\n    distribution: MOVES\n      .map((move) => ({ label: sentence(move), count: graded.filter((result) => result.evaluation.move === move).length, tone: move === 'DROP_ONE' ? 'warn' : move === 'KEEP' ? 'good' : undefined }))\n      .filter((entry) => entry.count),\n    matrix: betMatrix(graded, byItem),\n    curve: overlapCurve(graded, byItem),\n    sizeScatter: scatter(graded, byItem),\n    checks: checks(graded, byItem, of),\n    topItems: topItems(graded, byItem),\n  };\n}",
+    "language": "javascript"
+  },
   "demos/sybil-clusters/demo.js#demo:state": {
     "path": "demos/sybil-clusters/demo.js",
     "startLine": 22,
@@ -1425,6 +1453,13 @@
     "startLine": 97,
     "endLine": 131,
     "code": "/** One company under one standard: the business, the balance sheet, and the rules being applied. */\nfunction screening(symbol, standard) {\n  const profile = fundamentals(symbol);\n  const latest = profile.annual.find((year) => year.totalAssets !== null) ?? {};\n  const price = last(symbol);\n  const marketCap = profile.marketCap ?? (profile.sharesOutstanding ? Math.round(profile.sharesOutstanding * price.price) : null);\n  const byMarketCap = standard.denominator.startsWith('market');\n\n  return {\n    id: `${symbol}-${standard.id}`,\n    symbol,\n    standardId: standard.id,\n    standardName: standard.name,\n    sector: profile.sector,\n    industry: profile.industry,\n    business: BUSINESS[symbol],\n    fiscalYearEnd: latest.fiscalYearEnd ?? null,\n    revenue: latest.revenue ?? null,\n    totalAssets: latest.totalAssets ?? null,\n    totalDebt: latest.totalDebt ?? null,\n    cashAndSecurities: latest.cash ?? null,\n    receivables: latest.receivables ?? null,\n    interestIncome: latest.interestIncome ?? null,\n    interestExpense: latest.interestExpense ?? null,\n    marketCap,\n    price: price.price,\n    priceAsOf: price.date,\n    denominator: byMarketCap ? marketCap : latest.totalAssets ?? null,\n    denominatorName: standard.denominator,\n    debtLimitPercent: standard.debtLimitPercent,\n    liquidAssetsLimitPercent: standard.liquidAssetsLimitPercent,\n    receivablesLimitPercent: standard.receivablesLimitPercent,\n    impureIncomeLimitPercent: standard.impureIncomeLimitPercent,\n  };\n}",
+    "language": "javascript"
+  },
+  "scripts/generate/strategy-correlation.js#demo:data": {
+    "path": "scripts/generate/strategy-correlation.js",
+    "startLine": 156,
+    "endLine": 177,
+    "code": "/** One pair: both rules, both books, and both daily series. No statistic of any kind. */\nfunction item(id, pair, left, right) {\n  const summarise = (strategy) => ({\n    id: strategy.id,\n    name: strategy.name,\n    rule: strategy.rule,\n    instruments: strategy.instruments,\n    averageHoldSessions: strategy.hold,\n    trades: Math.max(4, Math.round(DAYS / strategy.hold)),\n  });\n\n  return {\n    id,\n    leftId: pair.left.id,\n    rightId: pair.right.id,\n    pair: `${pair.left.name} and ${pair.right.name}`,\n    left: summarise(pair.left),\n    right: summarise(pair.right),\n    // Weekly cumulative totals, for the chart only. The state gets the daily series in full.\n    curves: { left: cumulative(left), right: cumulative(right), stressFromWeek: Math.floor(STRESS_FROM / 5), stressToWeek: Math.ceil(STRESS_TO / 5) },\n  };\n}",
     "language": "javascript"
   },
   "scripts/generate/sybil-clusters.js#demo:data": {

@@ -775,3 +775,7 @@
 .equity-legend .legend-line { display: inline-block; width: 18px; height: 2px; }
 .equity-legend .series-key { background: var(--accent, currentColor); }
 .equity-legend .compare-key { background: var(--accent2, #8b5cf6); }
+
+/* Two strategy result curves on one pair of axes, with the stress window behind them. */
+.pair-curves .stress-window { fill: var(--warn, #f59e0b); opacity: 0.12; }
+.pair-curves .facts dt { font-variant-numeric: tabular-nums; }

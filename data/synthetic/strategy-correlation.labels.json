@@ -1,0 +1,422 @@
+[
+  {
+    "pairId": "SC-0001",
+    "relation": "SAME_PARAMETERS",
+    "correlation": 0.815,
+    "stressCorrelation": 0.884,
+    "calmCorrelation": 0.809
+  },
+  {
+    "pairId": "SC-0002",
+    "relation": "SAME_PARAMETERS",
+    "correlation": 0.784,
+    "stressCorrelation": 0.838,
+    "calmCorrelation": 0.78
+  },
+  {
+    "pairId": "SC-0003",
+    "relation": "SAME_FACTOR",
+    "correlation": 0.791,
+    "stressCorrelation": 0.848,
+    "calmCorrelation": 0.788
+  },
+  {
+    "pairId": "SC-0004",
+    "relation": "ORDINARY",
+    "correlation": 0.067,
+    "stressCorrelation": 0.438,
+    "calmCorrelation": 0.038
+  },
+  {
+    "pairId": "SC-0005",
+    "relation": "ORDINARY",
+    "correlation": 0.01,
+    "stressCorrelation": 0.468,
+    "calmCorrelation": -0.028
+  },
+  {
+    "pairId": "SC-0006",
+    "relation": "ORDINARY",
+    "correlation": 0.141,
+    "stressCorrelation": 0.686,
+    "calmCorrelation": -0.066
+  },
+  {
+    "pairId": "SC-0007",
+    "relation": "ORDINARY",
+    "correlation": 0.15,
+    "stressCorrelation": 0.69,
+    "calmCorrelation": -0.043
+  },
+  {
+    "pairId": "SC-0008",
+    "relation": "ORDINARY",
+    "correlation": 0.07,
+    "stressCorrelation": 0.693,
+    "calmCorrelation": 0.02
+  },
+  {
+    "pairId": "SC-0009",
+    "relation": "ORDINARY",
+    "correlation": 0.067,
+    "stressCorrelation": 0.445,
+    "calmCorrelation": 0.03
+  },
+  {
+    "pairId": "SC-0010",
+    "relation": "ORDINARY",
+    "correlation": 0.03,
+    "stressCorrelation": 0.497,
+    "calmCorrelation": -0.026
+  },
+  {
+    "pairId": "SC-0011",
+    "relation": "ORDINARY",
+    "correlation": -0.034,
+    "stressCorrelation": 0.533,
+    "calmCorrelation": -0.097
+  },
+  {
+    "pairId": "SC-0012",
+    "relation": "SAME_FACTOR",
+    "correlation": 0.799,
+    "stressCorrelation": 0.857,
+    "calmCorrelation": 0.795
+  },
+  {
+    "pairId": "SC-0013",
+    "relation": "SAME_PARAMETERS",
+    "correlation": 0.789,
+    "stressCorrelation": 0.866,
+    "calmCorrelation": 0.785
+  },
+  {
+    "pairId": "SC-0014",
+    "relation": "ORDINARY",
+    "correlation": 0.029,
+    "stressCorrelation": 0.36,
+    "calmCorrelation": -0.002
+  },
+  {
+    "pairId": "SC-0015",
+    "relation": "ORDINARY",
+    "correlation": 0.018,
+    "stressCorrelation": 0.454,
+    "calmCorrelation": -0.024
+  },
+  {
+    "pairId": "SC-0016",
+    "relation": "ORDINARY",
+    "correlation": 0.145,
+    "stressCorrelation": 0.599,
+    "calmCorrelation": -0.064
+  },
+  {
+    "pairId": "SC-0017",
+    "relation": "ORDINARY",
+    "correlation": 0.158,
+    "stressCorrelation": 0.596,
+    "calmCorrelation": -0.013
+  },
+  {
+    "pairId": "SC-0018",
+    "relation": "ORDINARY",
+    "correlation": 0.064,
+    "stressCorrelation": 0.669,
+    "calmCorrelation": 0.008
+  },
+  {
+    "pairId": "SC-0019",
+    "relation": "ORDINARY",
+    "correlation": 0.063,
+    "stressCorrelation": 0.417,
+    "calmCorrelation": 0.023
+  },
+  {
+    "pairId": "SC-0020",
+    "relation": "ORDINARY",
+    "correlation": 0.03,
+    "stressCorrelation": 0.422,
+    "calmCorrelation": -0.025
+  },
+  {
+    "pairId": "SC-0021",
+    "relation": "ORDINARY",
+    "correlation": -0.016,
+    "stressCorrelation": 0.508,
+    "calmCorrelation": -0.083
+  },
+  {
+    "pairId": "SC-0022",
+    "relation": "SAME_PARAMETERS",
+    "correlation": 0.781,
+    "stressCorrelation": 0.835,
+    "calmCorrelation": 0.778
+  },
+  {
+    "pairId": "SC-0023",
+    "relation": "ORDINARY",
+    "correlation": 0.041,
+    "stressCorrelation": 0.37,
+    "calmCorrelation": 0.013
+  },
+  {
+    "pairId": "SC-0024",
+    "relation": "ORDINARY",
+    "correlation": 0.004,
+    "stressCorrelation": 0.454,
+    "calmCorrelation": -0.035
+  },
+  {
+    "pairId": "SC-0025",
+    "relation": "ORDINARY",
+    "correlation": 0.14,
+    "stressCorrelation": 0.624,
+    "calmCorrelation": -0.041
+  },
+  {
+    "pairId": "SC-0026",
+    "relation": "ORDINARY",
+    "correlation": 0.15,
+    "stressCorrelation": 0.632,
+    "calmCorrelation": -0.016
+  },
+  {
+    "pairId": "SC-0027",
+    "relation": "ORDINARY",
+    "correlation": 0.053,
+    "stressCorrelation": 0.618,
+    "calmCorrelation": 0.005
+  },
+  {
+    "pairId": "SC-0028",
+    "relation": "ORDINARY",
+    "correlation": 0.067,
+    "stressCorrelation": 0.423,
+    "calmCorrelation": 0.031
+  },
+  {
+    "pairId": "SC-0029",
+    "relation": "ORDINARY",
+    "correlation": 0.012,
+    "stressCorrelation": 0.457,
+    "calmCorrelation": -0.045
+  },
+  {
+    "pairId": "SC-0030",
+    "relation": "ORDINARY",
+    "correlation": -0.014,
+    "stressCorrelation": 0.541,
+    "calmCorrelation": -0.077
+  },
+  {
+    "pairId": "SC-0031",
+    "relation": "ORDINARY",
+    "correlation": 0.04,
+    "stressCorrelation": 0.306,
+    "calmCorrelation": 0.022
+  },
+  {
+    "pairId": "SC-0032",
+    "relation": "ORDINARY",
+    "correlation": 0.015,
+    "stressCorrelation": 0.261,
+    "calmCorrelation": -0.004
+  },
+  {
+    "pairId": "SC-0033",
+    "relation": "ORDINARY",
+    "correlation": 0.106,
+    "stressCorrelation": 0.614,
+    "calmCorrelation": -0.062
+  },
+  {
+    "pairId": "SC-0034",
+    "relation": "ORDINARY",
+    "correlation": 0.112,
+    "stressCorrelation": 0.605,
+    "calmCorrelation": -0.042
+  },
+  {
+    "pairId": "SC-0035",
+    "relation": "ORDINARY",
+    "correlation": 0.067,
+    "stressCorrelation": 0.646,
+    "calmCorrelation": 0.027
+  },
+  {
+    "pairId": "SC-0036",
+    "relation": "ORDINARY",
+    "correlation": 0.074,
+    "stressCorrelation": 0.442,
+    "calmCorrelation": 0.044
+  },
+  {
+    "pairId": "SC-0037",
+    "relation": "ORDINARY",
+    "correlation": 0.005,
+    "stressCorrelation": 0.424,
+    "calmCorrelation": -0.038
+  },
+  {
+    "pairId": "SC-0038",
+    "relation": "ORDINARY",
+    "correlation": -0.049,
+    "stressCorrelation": 0.445,
+    "calmCorrelation": -0.096
+  },
+  {
+    "pairId": "SC-0039",
+    "relation": "SAME_FACTOR",
+    "correlation": 0.378,
+    "stressCorrelation": 0.55,
+    "calmCorrelation": 0.356
+  },
+  {
+    "pairId": "SC-0040",
+    "relation": "ORDINARY",
+    "correlation": 0.165,
+    "stressCorrelation": 0.467,
+    "calmCorrelation": -0.016
+  },
+  {
+    "pairId": "SC-0041",
+    "relation": "ORDINARY",
+    "correlation": 0.159,
+    "stressCorrelation": 0.473,
+    "calmCorrelation": -0.052
+  },
+  {
+    "pairId": "SC-0042",
+    "relation": "INDEPENDENT",
+    "correlation": 0.168,
+    "stressCorrelation": 0.342,
+    "calmCorrelation": 0.135
+  },
+  {
+    "pairId": "SC-0043",
+    "relation": "ORDINARY",
+    "correlation": 0.086,
+    "stressCorrelation": 0.158,
+    "calmCorrelation": 0.064
+  },
+  {
+    "pairId": "SC-0044",
+    "relation": "INDEPENDENT",
+    "correlation": 0.02,
+    "stressCorrelation": 0.304,
+    "calmCorrelation": -0.039
+  },
+  {
+    "pairId": "SC-0045",
+    "relation": "ORDINARY",
+    "correlation": 0.039,
+    "stressCorrelation": 0.45,
+    "calmCorrelation": -0.018
+  },
+  {
+    "pairId": "SC-0046",
+    "relation": "ORDINARY",
+    "correlation": 0.13,
+    "stressCorrelation": 0.317,
+    "calmCorrelation": -0.009
+  },
+  {
+    "pairId": "SC-0047",
+    "relation": "ORDINARY",
+    "correlation": 0.119,
+    "stressCorrelation": 0.319,
+    "calmCorrelation": -0.069
+  },
+  {
+    "pairId": "SC-0048",
+    "relation": "ORDINARY",
+    "correlation": 0.102,
+    "stressCorrelation": 0.273,
+    "calmCorrelation": 0.071
+  },
+  {
+    "pairId": "SC-0049",
+    "relation": "ORDINARY",
+    "correlation": 0.069,
+    "stressCorrelation": 0.061,
+    "calmCorrelation": 0.056
+  },
+  {
+    "pairId": "SC-0050",
+    "relation": "INDEPENDENT",
+    "correlation": 0.093,
+    "stressCorrelation": 0.137,
+    "calmCorrelation": 0.065
+  },
+  {
+    "pairId": "SC-0051",
+    "relation": "INDEPENDENT",
+    "correlation": 0.011,
+    "stressCorrelation": 0.277,
+    "calmCorrelation": -0.033
+  },
+  {
+    "pairId": "SC-0052",
+    "relation": "SAME_FACTOR",
+    "correlation": 0.942,
+    "stressCorrelation": 0.989,
+    "calmCorrelation": 0.018
+  },
+  {
+    "pairId": "SC-0053",
+    "relation": "ORDINARY",
+    "correlation": 0.231,
+    "stressCorrelation": 0.668,
+    "calmCorrelation": 0.003
+  },
+  {
+    "pairId": "SC-0054",
+    "relation": "STRESS_ONLY",
+    "correlation": 0.191,
+    "stressCorrelation": 0.517,
+    "calmCorrelation": 0.005
+  },
+  {
+    "pairId": "SC-0055",
+    "relation": "ORDINARY",
+    "correlation": 0.316,
+    "stressCorrelation": 0.713,
+    "calmCorrelation": 0.006
+  },
+  {
+    "pairId": "SC-0056",
+    "relation": "STRESS_ONLY",
+    "correlation": 0.292,
+    "stressCorrelation": 0.809,
+    "calmCorrelation": -0.012
+  },
+  {
+    "pairId": "SC-0057",
+    "relation": "STRESS_ONLY",
+    "correlation": 0.317,
+    "stressCorrelation": 0.715,
+    "calmCorrelation": 0.003
+  },
+  {
+    "pairId": "SC-0058",
+    "relation": "SAME_FACTOR",
+    "correlation": 0.694,
+    "stressCorrelation": 0.714,
+    "calmCorrelation": 0.687
+  },
+  {
+    "pairId": "SC-0059",
+    "relation": "INDEPENDENT",
+    "correlation": 0.061,
+    "stressCorrelation": 0.541,
+    "calmCorrelation": -0.01
+  },
+  {
+    "pairId": "SC-0060",
+    "relation": "INDEPENDENT",
+    "correlation": 0.095,
+    "stressCorrelation": 0.635,
+    "calmCorrelation": -0.012
+  }
+]
