@@ -165,7 +165,6 @@ export default {
   value: 'Name what a wallet appears to be from its activity fingerprint alone, and expose where types blur.',
   tags: ['crypto', 'wallets', 'behaviour', 'classification'],
   dataClass: 'synthetic',
-  status: 'pending-recording',
   readMinutes: 4,
   view: 'table',
   itemLabel: (item) => `${item.id} · ${item.transactions.toLocaleString('en-US')} tx · ${item.counterparties.toLocaleString('en-US')} counterparties`,

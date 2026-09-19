@@ -149,6 +149,16 @@ export function ConfusionMatrix({ matrix, onSelect }) {
           </tbody>
         </table>
       </div>
+      {selection && (
+        <div className="matrix-drilldown stack" role="region" aria-live="polite" aria-label={selection.label}>
+          <strong>{selection.label}</strong>
+          <div className="cluster-list">
+            {selection.items.map((id) => (
+              <button key={id} type="button" className="button ghost chip" onClick={() => onSelect?.(id)}>{id}</button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -187,16 +197,6 @@ export function FingerprintChart({ chart }) {
           </tbody>
         </table>
       </div>
-      {selection && (
-        <div className="matrix-drilldown stack" role="region" aria-live="polite" aria-label={selection.label}>
-          <strong>{selection.label}</strong>
-          <div className="cluster-list">
-            {selection.items.map((id) => (
-              <button key={id} type="button" className="button ghost chip" onClick={() => onSelect?.(id)}>{id}</button>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
