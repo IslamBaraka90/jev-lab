@@ -1,0 +1,1402 @@
+[
+  {
+    "pairId": "SNC-0001",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0002",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0003",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0004",
+    "sameEntity": true,
+    "decidingField": "ADDRESS",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0005",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0006",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0007",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0008",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0009",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0010",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0011",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0012",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0013",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0014",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0015",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0016",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0017",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0018",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0019",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0020",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0021",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0022",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0023",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0024",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0025",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0026",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0027",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0028",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0029",
+    "sameEntity": true,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0030",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0031",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0032",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0033",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0034",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0035",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0036",
+    "sameEntity": true,
+    "decidingField": "IDENTIFIER",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0037",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0038",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0039",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0040",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0041",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0042",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0043",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0044",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0045",
+    "sameEntity": true,
+    "decidingField": "NATIONALITY",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0046",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0047",
+    "sameEntity": true,
+    "decidingField": "IDENTIFIER",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0048",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0049",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0050",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0051",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0052",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0053",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0054",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0055",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0056",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0057",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0058",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0059",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0060",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0061",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0062",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0063",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0064",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0065",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0066",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0067",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0068",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0069",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0070",
+    "sameEntity": true,
+    "decidingField": "IDENTIFIER",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0071",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0072",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0073",
+    "sameEntity": true,
+    "decidingField": "ADDRESS",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0074",
+    "sameEntity": true,
+    "decidingField": "NATIONALITY",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0075",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0076",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0077",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0078",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0079",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0080",
+    "sameEntity": true,
+    "decidingField": "NATIONALITY",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0081",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0082",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0083",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0084",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0085",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0086",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0087",
+    "sameEntity": true,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0088",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0089",
+    "sameEntity": true,
+    "decidingField": "IDENTIFIER",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0090",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0091",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0092",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0093",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0094",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0095",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0096",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0097",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0098",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0099",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0100",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0101",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0102",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0103",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0104",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0105",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0106",
+    "sameEntity": true,
+    "decidingField": "IDENTIFIER",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0107",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0108",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0109",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0110",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0111",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0112",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0113",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0114",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0115",
+    "sameEntity": true,
+    "decidingField": "NATIONALITY",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0116",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0117",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0118",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0119",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0120",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0121",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0122",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0123",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0124",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0125",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0126",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0127",
+    "sameEntity": true,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0128",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0129",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0130",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0131",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0132",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0133",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0134",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0135",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0136",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0137",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0138",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0139",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0140",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0141",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0142",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0143",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0144",
+    "sameEntity": true,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0145",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0146",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0147",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0148",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0149",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0150",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0151",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0152",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0153",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0154",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0155",
+    "sameEntity": true,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0156",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0157",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0158",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0159",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0160",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0161",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0162",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0163",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0164",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0165",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0166",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0167",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0168",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0169",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0170",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0171",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0172",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0173",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0174",
+    "sameEntity": true,
+    "decidingField": "ADDRESS",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0175",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0176",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0177",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0178",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0179",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0180",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0181",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0182",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0183",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0184",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0185",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "COMMON_SURNAME",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0186",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0187",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0188",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "FATHER_SON",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0189",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0190",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0191",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0192",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0193",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0194",
+    "sameEntity": false,
+    "decidingField": "INSUFFICIENT",
+    "cause": "INSUFFICIENT",
+    "expectedDisposition": "REVIEW"
+  },
+  {
+    "pairId": "SNC-0195",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "CITY_COUNTRY",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0196",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0197",
+    "sameEntity": true,
+    "decidingField": "IDENTIFIER",
+    "cause": "TRUE_MATCH",
+    "expectedDisposition": "CONFIRM"
+  },
+  {
+    "pairId": "SNC-0198",
+    "sameEntity": false,
+    "decidingField": "NATIONALITY",
+    "cause": "TRANSLITERATION",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0199",
+    "sameEntity": false,
+    "decidingField": "DATE_OF_BIRTH",
+    "cause": "DOB_ONE_DIGIT",
+    "expectedDisposition": "CLEAR"
+  },
+  {
+    "pairId": "SNC-0200",
+    "sameEntity": false,
+    "decidingField": "IDENTIFIER",
+    "cause": "CLEAR_FALSE",
+    "expectedDisposition": "CLEAR"
+  }
+]

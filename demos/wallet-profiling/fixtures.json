@@ -1,0 +1,8608 @@
+{
+  "demo": "wallet-profiling",
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "WPF-0001": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.26,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.17,
+          "2": 0.19,
+          "3": 0.09,
+          "4": 0.23,
+          "5": 0.27,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.47,
+        "probabilities": {
+          "PERIODIC": 0.25,
+          "NONE": 0.1,
+          "CONTINUOUS": 0.65
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "WPF-0002": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.31,
+        "probabilities": {
+          "MARKET_MAKER": 0.42,
+          "RETAIL": 0.04,
+          "MEV_BOT": 0.05,
+          "BRIDGE": 0.18,
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.3
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.57,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.27,
+          "5": 0.63,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.4,
+        "probabilities": {
+          "NONE": 0.06,
+          "PERIODIC": 0.35,
+          "CONTINUOUS": 0.59
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0003": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.34,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.45,
+          "BRIDGE": 0.05,
+          "MEV_BOT": 0.04,
+          "RETAIL": 0.07,
+          "EXCHANGE": 0.38
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.54,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.08,
+          "4": 0.27,
+          "5": 0.62,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.36,
+        "probabilities": {
+          "PERIODIC": 0.35,
+          "NONE": 0.08,
+          "CONTINUOUS": 0.57
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0004": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXCHANGE": 1,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.56,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.03,
+          "3": 0.07,
+          "4": 0.22,
+          "5": 0.61,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.41,
+        "probabilities": {
+          "NONE": 0.09,
+          "CONTINUOUS": 0.61,
+          "PERIODIC": 0.3
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0005": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "RETAIL": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.68,
+        "confidence": 0.19,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.11,
+          "2": 0.12,
+          "3": 0.1,
+          "4": 0.24,
+          "5": 0.37,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.61,
+        "probabilities": {
+          "CONTINUOUS": 0.74,
+          "NONE": 0.07,
+          "PERIODIC": 0.19
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0006": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.76,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0.02,
+          "EXCHANGE": 0.16,
+          "SCAM_COLLECTOR": 0.01,
+          "BRIDGE": 0.01,
+          "RETAIL": 0.8
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.23,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.32,
+          "2": 0.3,
+          "3": 0.21,
+          "4": 0.13,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.61,
+        "probabilities": {
+          "CONTINUOUS": 0.14,
+          "PERIODIC": 0.74,
+          "NONE": 0.12
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "WPF-0007": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.31,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.04,
+          "MARKET_MAKER": 0.36,
+          "RETAIL": 0.04,
+          "BRIDGE": 0.12,
+          "EXCHANGE": 0.43
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.62,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.23,
+          "5": 0.66,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.5,
+        "probabilities": {
+          "NONE": 0.05,
+          "PERIODIC": 0.28,
+          "CONTINUOUS": 0.67
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0008": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.73,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.06,
+          "EXCHANGE": 0.07,
+          "MARKET_MAKER": 0.08,
+          "BRIDGE": 0.78
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.99,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.08,
+          "5": 0.83,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.73,
+        "probabilities": {
+          "NONE": 0.03,
+          "PERIODIC": 0.15,
+          "CONTINUOUS": 0.82
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0009": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 1,
+          "EXCHANGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.47,
+        "confidence": 0.07,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.13,
+          "2": 0.16,
+          "3": 0.09,
+          "4": 0.24,
+          "5": 0.32,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.49,
+        "probabilities": {
+          "NONE": 0.08,
+          "CONTINUOUS": 0.66,
+          "PERIODIC": 0.26
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0010": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.79,
+        "probabilities": {
+          "BRIDGE": 0.01,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0.01,
+          "RETAIL": 0.8099999999999999,
+          "EXCHANGE": 0.16
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.62,
+        "confidence": 0.35,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.23,
+          "2": 0.27,
+          "3": 0.21,
+          "4": 0.2,
+          "5": 0.08,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.51,
+        "probabilities": {
+          "NONE": 0.09,
+          "PERIODIC": 0.68,
+          "CONTINUOUS": 0.23
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "WPF-0011": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.71,
+        "probabilities": {
+          "EXCHANGE": 0.03,
+          "BRIDGE": 0.76,
+          "MARKET_MAKER": 0.13,
+          "MEV_BOT": 0.06,
+          "SCAM_COLLECTOR": 0.02,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.81,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.16,
+          "5": 0.78,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.6,
+        "probabilities": {
+          "NONE": 0.05,
+          "CONTINUOUS": 0.73,
+          "PERIODIC": 0.22
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0012": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.48,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.08,
+          "BRIDGE": 0.56,
+          "EXCHANGE": 0.24,
+          "MEV_BOT": 0.11
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.88,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.13,
+          "5": 0.82,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.74,
+        "probabilities": {
+          "CONTINUOUS": 0.83,
+          "NONE": 0.03,
+          "PERIODIC": 0.14
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0013": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.9,
+        "probabilities": {
+          "BRIDGE": 0.06,
+          "MARKET_MAKER": 0.01,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.01,
+          "EXCHANGE": 0.92,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.89,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.13,
+          "5": 0.81,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "PERIODIC": 0.19,
+          "CONTINUOUS": 0.76,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0014": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "BRIDGE": 0,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.53,
+        "confidence": 0.09,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.13,
+          "2": 0.14,
+          "3": 0.09,
+          "4": 0.24,
+          "5": 0.33,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.54,
+        "probabilities": {
+          "NONE": 0.08,
+          "CONTINUOUS": 0.69,
+          "PERIODIC": 0.23
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0015": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.85,
+        "probabilities": {
+          "EXCHANGE": 0.06,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.04,
+          "RETAIL": 0.89,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.16,
+        "confidence": 0.31,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.36,
+          "2": 0.28,
+          "3": 0.18,
+          "4": 0.13,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.58,
+        "probabilities": {
+          "CONTINUOUS": 0.2,
+          "NONE": 0.08,
+          "PERIODIC": 0.72
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "WPF-0016": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.84,
+        "confidence": 0.28,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.09,
+          "2": 0.1,
+          "3": 0.09,
+          "4": 0.26,
+          "5": 0.4,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "NONE": 0.08,
+          "PERIODIC": 0.2
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "WPF-0017": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.57,
+        "probabilities": {
+          "EXCHANGE": 0.19,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.64,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0.02,
+          "BRIDGE": 0.15
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.03,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.07,
+          "5": 0.81,
+          "6": 0.11
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.59,
+        "probabilities": {
+          "PERIODIC": 0.21,
+          "NONE": 0.06,
+          "CONTINUOUS": 0.73
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.5
+      }
+    },
+    "WPF-0018": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.4,
+        "probabilities": {
+          "MARKET_MAKER": 0.1,
+          "RETAIL": 0,
+          "MEV_BOT": 0.51,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0.35,
+          "EXCHANGE": 0.04
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.12,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.77,
+          "6": 0.18
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "NONE": 0.09,
+          "PERIODIC": 0.2,
+          "CONTINUOUS": 0.71
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "WPF-0019": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 1,
+          "BRIDGE": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.67,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.06,
+          "4": 0.17,
+          "5": 0.66,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.38,
+        "probabilities": {
+          "CONTINUOUS": 0.58,
+          "NONE": 0.13,
+          "PERIODIC": 0.29
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0020": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.1,
+        "probabilities": {
+          "MEV_BOT": 0.19,
+          "BRIDGE": 0.24,
+          "EXCHANGE": 0.18,
+          "SCAM_COLLECTOR": 0.02,
+          "RETAIL": 0.18,
+          "MARKET_MAKER": 0.19
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.69,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.22,
+          "5": 0.69,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.5,
+        "probabilities": {
+          "CONTINUOUS": 0.67,
+          "PERIODIC": 0.28,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0021": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.33,
+        "probabilities": {
+          "MARKET_MAKER": 0.02,
+          "EXCHANGE": 0.29,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.45,
+          "RETAIL": 0,
+          "BRIDGE": 0.24
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.18,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.03,
+          "5": 0.75,
+          "6": 0.22
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.67,
+        "probabilities": {
+          "CONTINUOUS": 0.78,
+          "NONE": 0.06,
+          "PERIODIC": 0.16
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "WPF-0022": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 1,
+          "BRIDGE": 0,
+          "EXCHANGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.52,
+        "confidence": 0.1,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.13,
+          "2": 0.15,
+          "3": 0.1,
+          "4": 0.24,
+          "5": 0.32,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "NONE": 0.07,
+          "PERIODIC": 0.22,
+          "CONTINUOUS": 0.71
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0023": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.4,
+        "probabilities": {
+          "MEV_BOT": 0.51,
+          "MARKET_MAKER": 0.04,
+          "EXCHANGE": 0.07,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0.38,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.15,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.76,
+          "6": 0.2
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "CONTINUOUS": 0.76,
+          "PERIODIC": 0.18,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.55
+      }
+    },
+    "WPF-0024": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.48,
+        "probabilities": {
+          "MEV_BOT": 0.02,
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.57,
+          "MARKET_MAKER": 0.05,
+          "BRIDGE": 0.35,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.88,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.14,
+          "5": 0.77,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.6,
+        "probabilities": {
+          "NONE": 0.06,
+          "CONTINUOUS": 0.74,
+          "PERIODIC": 0.2
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0025": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "EXCHANGE": 0,
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.78,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.1,
+          "2": 0.11,
+          "3": 0.09,
+          "4": 0.24,
+          "5": 0.39999999999999997,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.45,
+        "probabilities": {
+          "CONTINUOUS": 0.64,
+          "NONE": 0.09,
+          "PERIODIC": 0.27
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0026": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.48,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.03,
+          "MEV_BOT": 0.05,
+          "MARKET_MAKER": 0.58,
+          "RETAIL": 0.05,
+          "EXCHANGE": 0.22,
+          "BRIDGE": 0.07
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.69,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.2,
+          "5": 0.7,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.55,
+        "probabilities": {
+          "NONE": 0.06,
+          "PERIODIC": 0.24,
+          "CONTINUOUS": 0.7
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0027": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 1,
+          "RETAIL": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.49,
+        "confidence": 0.07,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.14,
+          "3": 0.09,
+          "4": 0.23,
+          "5": 0.33,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "NONE": 0.09,
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.68
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0028": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.63,
+        "probabilities": {
+          "MEV_BOT": 0.09,
+          "MARKET_MAKER": 0.08,
+          "EXCHANGE": 0.7,
+          "BRIDGE": 0.13,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.9,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.12,
+          "5": 0.81,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.59,
+        "probabilities": {
+          "PERIODIC": 0.21,
+          "NONE": 0.06,
+          "CONTINUOUS": 0.73
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0029": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.91,
+        "probabilities": {
+          "MARKET_MAKER": 0.03,
+          "RETAIL": 0.93,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0,
+          "BRIDGE": 0.01,
+          "EXCHANGE": 0.02
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.64,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.53,
+          "2": 0.27,
+          "3": 0.11,
+          "4": 0.05,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.65,
+        "probabilities": {
+          "PERIODIC": 0.76,
+          "CONTINUOUS": 0.12,
+          "NONE": 0.12
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "WPF-0030": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.59,
+        "probabilities": {
+          "MARKET_MAKER": 0.06,
+          "RETAIL": 0,
+          "MEV_BOT": 0.66,
+          "SCAM_COLLECTOR": 0.01,
+          "BRIDGE": 0.23,
+          "EXCHANGE": 0.04
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.07,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.06,
+          "5": 0.78,
+          "6": 0.15
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.6,
+        "probabilities": {
+          "NONE": 0.07,
+          "PERIODIC": 0.19,
+          "CONTINUOUS": 0.74
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "WPF-0031": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.99,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 1,
+          "EXCHANGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.7,
+        "confidence": 0.56,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.52,
+          "2": 0.27,
+          "3": 0.11,
+          "4": 0.06,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.64,
+        "probabilities": {
+          "PERIODIC": 0.76,
+          "CONTINUOUS": 0.08,
+          "NONE": 0.16
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0032": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.41,
+        "probabilities": {
+          "MARKET_MAKER": 0.51,
+          "EXCHANGE": 0.31,
+          "SCAM_COLLECTOR": 0.02,
+          "MEV_BOT": 0.04,
+          "RETAIL": 0.07,
+          "BRIDGE": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.59,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.25,
+          "5": 0.64,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.49,
+        "probabilities": {
+          "CONTINUOUS": 0.66,
+          "NONE": 0.06,
+          "PERIODIC": 0.28
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0033": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.69,
+        "probabilities": {
+          "MEV_BOT": 0.03,
+          "MARKET_MAKER": 0.17,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.03,
+          "EXCHANGE": 0.73,
+          "BRIDGE": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.62,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.25,
+          "5": 0.66,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.62,
+        "probabilities": {
+          "PERIODIC": 0.21,
+          "CONTINUOUS": 0.75,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0034": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.79,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.1,
+          "BRIDGE": 0.82,
+          "MEV_BOT": 0.02,
+          "MARKET_MAKER": 0.05,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.92,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.11,
+          "5": 0.81,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.67,
+        "probabilities": {
+          "CONTINUOUS": 0.79,
+          "PERIODIC": 0.17,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0035": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.67,
+        "probabilities": {
+          "EXCHANGE": 0.06,
+          "SCAM_COLLECTOR": 0.02,
+          "MEV_BOT": 0.06,
+          "MARKET_MAKER": 0.13,
+          "RETAIL": 0,
+          "BRIDGE": 0.73
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.91,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.1,
+          "5": 0.84,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "CONTINUOUS": 0.76,
+          "NONE": 0.05,
+          "PERIODIC": 0.19
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0036": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "SCAM_COLLECTOR": 1,
+          "EXCHANGE": 0,
+          "BRIDGE": 0,
+          "MEV_BOT": 0,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.73,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.1,
+          "2": 0.13,
+          "3": 0.09,
+          "4": 0.25,
+          "5": 0.37,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "CONTINUOUS": 0.68,
+          "PERIODIC": 0.25,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0037": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.75,
+        "probabilities": {
+          "MEV_BOT": 0.79,
+          "MARKET_MAKER": 0.07,
+          "EXCHANGE": 0.03,
+          "SCAM_COLLECTOR": 0.01,
+          "BRIDGE": 0.1,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.81,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "PERIODIC": 0.21,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0038": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.46,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.04,
+          "EXCHANGE": 0.02,
+          "BRIDGE": 0.38,
+          "RETAIL": 0,
+          "MEV_BOT": 0.55
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.12,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.78,
+          "6": 0.18
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "NONE": 0.08,
+          "CONTINUOUS": 0.67,
+          "PERIODIC": 0.25
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.54
+      }
+    },
+    "WPF-0039": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.78,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.1,
+          "2": 0.11,
+          "3": 0.08,
+          "4": 0.25,
+          "5": 0.4,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.59,
+        "probabilities": {
+          "NONE": 0.06,
+          "PERIODIC": 0.21,
+          "CONTINUOUS": 0.73
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0040": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 1,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0,
+          "EXCHANGE": 1,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.81,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.16,
+          "5": 0.73,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.59,
+        "probabilities": {
+          "NONE": 0.05,
+          "CONTINUOUS": 0.73,
+          "PERIODIC": 0.22
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0041": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.82,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.1,
+          "2": 0.1,
+          "3": 0.07,
+          "4": 0.24,
+          "5": 0.41,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "PERIODIC": 0.21,
+          "NONE": 0.07,
+          "CONTINUOUS": 0.72
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0042": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.87,
+        "probabilities": {
+          "EXCHANGE": 0.03,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.89,
+          "MARKET_MAKER": 0.03,
+          "RETAIL": 0,
+          "BRIDGE": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.15,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.75,
+          "6": 0.2
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "CONTINUOUS": 0.76,
+          "NONE": 0.06,
+          "PERIODIC": 0.18
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "WPF-0043": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.7,
+        "probabilities": {
+          "EXCHANGE": 0.02,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0.15,
+          "MEV_BOT": 0.75,
+          "MARKET_MAKER": 0.08
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.06,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.06,
+          "5": 0.79,
+          "6": 0.14
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.54,
+        "probabilities": {
+          "PERIODIC": 0.22,
+          "CONTINUOUS": 0.69,
+          "NONE": 0.09
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.5
+      }
+    },
+    "WPF-0044": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.32,
+        "probabilities": {
+          "MARKET_MAKER": 0.02,
+          "EXCHANGE": 0.23,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.43,
+          "BRIDGE": 0.32,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.11,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.78,
+          "6": 0.17
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "PERIODIC": 0.18,
+          "CONTINUOUS": 0.76,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.54
+      }
+    },
+    "WPF-0045": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.5,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0.02,
+          "MEV_BOT": 0.59,
+          "EXCHANGE": 0.27,
+          "BRIDGE": 0.12
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.09,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.81,
+          "6": 0.14
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.77,
+        "probabilities": {
+          "NONE": 0.04,
+          "CONTINUOUS": 0.84,
+          "PERIODIC": 0.12
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.5
+      }
+    },
+    "WPF-0046": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "EXCHANGE": 1,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "SCAM_COLLECTOR": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.81,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.16,
+          "5": 0.72,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "PERIODIC": 0.22,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0047": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.78,
+        "probabilities": {
+          "BRIDGE": 0.05,
+          "MARKET_MAKER": 0.07,
+          "MEV_BOT": 0.03,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.03,
+          "EXCHANGE": 0.81
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.67,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.21,
+          "5": 0.7,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "CONTINUOUS": 0.68,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0048": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.76,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0.07,
+          "BRIDGE": 0.8,
+          "EXCHANGE": 0.03,
+          "MEV_BOT": 0.09
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.97,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.82,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.65,
+        "probabilities": {
+          "CONTINUOUS": 0.76,
+          "PERIODIC": 0.19,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0049": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 1,
+          "EXCHANGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.57,
+        "confidence": 0.12,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.12,
+          "2": 0.14,
+          "3": 0.08,
+          "4": 0.24,
+          "5": 0.35,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.5,
+        "probabilities": {
+          "NONE": 0.09,
+          "CONTINUOUS": 0.66,
+          "PERIODIC": 0.25
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0050": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.74,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.13,
+          "EXCHANGE": 0.05,
+          "MEV_BOT": 0.02,
+          "BRIDGE": 0.79
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.89,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.13,
+          "5": 0.8,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.68,
+        "probabilities": {
+          "CONTINUOUS": 0.79,
+          "NONE": 0.04,
+          "PERIODIC": 0.17
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0051": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 1,
+          "RETAIL": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.44,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.15,
+          "3": 0.1,
+          "4": 0.25,
+          "5": 0.3,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.54,
+        "probabilities": {
+          "NONE": 0.07,
+          "PERIODIC": 0.24,
+          "CONTINUOUS": 0.69
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0052": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.79,
+        "probabilities": {
+          "MARKET_MAKER": 0.03,
+          "BRIDGE": 0.11,
+          "EXCHANGE": 0.02,
+          "MEV_BOT": 0.84,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.03,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.07,
+          "5": 0.79,
+          "6": 0.13
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.71,
+          "PERIODIC": 0.22,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "WPF-0053": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.87,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.05,
+          "EXCHANGE": 0.02,
+          "BRIDGE": 0.9,
+          "MEV_BOT": 0.02,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.88,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.13,
+          "5": 0.79,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "CONTINUOUS": 0.71,
+          "NONE": 0.06,
+          "PERIODIC": 0.23
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0054": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.64,
+        "probabilities": {
+          "BRIDGE": 0.21,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.71,
+          "MARKET_MAKER": 0.06,
+          "EXCHANGE": 0.02,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.1,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.78,
+          "6": 0.17
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.24,
+          "NONE": 0.08,
+          "CONTINUOUS": 0.68
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "WPF-0055": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 1,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.83,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.15,
+          "5": 0.73,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "NONE": 0.07,
+          "PERIODIC": 0.22,
+          "CONTINUOUS": 0.71
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0056": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 1,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.59,
+        "confidence": 0.69,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.03,
+          "3": 0.07,
+          "4": 0.21,
+          "5": 0.61,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.46,
+        "probabilities": {
+          "CONTINUOUS": 0.64,
+          "NONE": 0.09,
+          "PERIODIC": 0.27
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0057": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.84,
+        "confidence": 0.25,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.11,
+          "2": 0.09,
+          "3": 0.07,
+          "4": 0.21,
+          "5": 0.43,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "NONE": 0.1,
+          "PERIODIC": 0.21,
+          "CONTINUOUS": 0.6900000000000001
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0058": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.42,
+        "probabilities": {
+          "MEV_BOT": 0.52,
+          "MARKET_MAKER": 0.07,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 0.02,
+          "BRIDGE": 0.39
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.13,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.78,
+          "6": 0.18
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.65,
+        "probabilities": {
+          "PERIODIC": 0.18,
+          "CONTINUOUS": 0.76,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "WPF-0059": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.77,
+        "probabilities": {
+          "RETAIL": 0,
+          "BRIDGE": 0.14,
+          "MEV_BOT": 0.8,
+          "MARKET_MAKER": 0.04,
+          "SCAM_COLLECTOR": 0,
+          "EXCHANGE": 0.02
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.05,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.07,
+          "5": 0.78,
+          "6": 0.14
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.59,
+        "probabilities": {
+          "PERIODIC": 0.21,
+          "CONTINUOUS": 0.72,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "WPF-0060": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.63,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0.08,
+          "EXCHANGE": 0.03,
+          "MEV_BOT": 0.69,
+          "BRIDGE": 0.2
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.1,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.78,
+          "6": 0.17
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "NONE": 0.07,
+          "CONTINUOUS": 0.71,
+          "PERIODIC": 0.22
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.5
+      }
+    },
+    "WPF-0061": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0,
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 1
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.81,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.1,
+          "2": 0.11,
+          "3": 0.09,
+          "4": 0.26,
+          "5": 0.39,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "NONE": 0.08,
+          "PERIODIC": 0.25,
+          "CONTINUOUS": 0.67
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0062": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.66,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 0.05,
+          "BRIDGE": 0.09,
+          "MARKET_MAKER": 0.14,
+          "MEV_BOT": 0.72
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.02,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.07,
+          "5": 0.8099999999999999,
+          "6": 0.11
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "NONE": 0.05,
+          "PERIODIC": 0.19,
+          "CONTINUOUS": 0.76
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0063": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.13,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.02,
+          "BRIDGE": 0.05,
+          "EXCHANGE": 0.24,
+          "MEV_BOT": 0.14,
+          "MARKET_MAKER": 0.28,
+          "RETAIL": 0.27
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.22,
+          "5": 0.67,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.46,
+        "probabilities": {
+          "CONTINUOUS": 0.63,
+          "PERIODIC": 0.31,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0064": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.66,
+        "probabilities": {
+          "BRIDGE": 0.22,
+          "MARKET_MAKER": 0.05,
+          "MEV_BOT": 0.72,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.12,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.79,
+          "6": 0.17
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.54,
+        "probabilities": {
+          "CONTINUOUS": 0.69,
+          "PERIODIC": 0.24,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "WPF-0065": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.71,
+        "probabilities": {
+          "MARKET_MAKER": 0.01,
+          "EXCHANGE": 0.15,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.76,
+          "BRIDGE": 0.08,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.13,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.78,
+          "6": 0.18
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.67,
+        "probabilities": {
+          "CONTINUOUS": 0.78,
+          "PERIODIC": 0.16,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "WPF-0066": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.9,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.05,
+          "RETAIL": 0.92,
+          "MEV_BOT": 0,
+          "BRIDGE": 0.01,
+          "MARKET_MAKER": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.59,
+        "confidence": 0.36,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.23,
+          "2": 0.28,
+          "3": 0.21,
+          "4": 0.2,
+          "5": 0.07,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.42,
+        "probabilities": {
+          "PERIODIC": 0.61,
+          "CONTINUOUS": 0.3,
+          "NONE": 0.09
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "WPF-0067": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.65,
+        "confidence": 0.17,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.12,
+          "2": 0.13,
+          "3": 0.1,
+          "4": 0.24,
+          "5": 0.35,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.46,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "NONE": 0.09,
+          "CONTINUOUS": 0.65
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0068": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.87,
+        "probabilities": {
+          "MARKET_MAKER": 0.03,
+          "EXCHANGE": 0.91,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.02,
+          "RETAIL": 0.03,
+          "BRIDGE": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.68,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.22,
+          "5": 0.69,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "CONTINUOUS": 0.68,
+          "NONE": 0.05,
+          "PERIODIC": 0.26
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0069": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.31,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.02,
+          "MARKET_MAKER": 0.42,
+          "EXCHANGE": 0.41,
+          "BRIDGE": 0.04,
+          "RETAIL": 0.09,
+          "MEV_BOT": 0.02
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.64,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.23,
+          "5": 0.67,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.55,
+        "probabilities": {
+          "CONTINUOUS": 0.7,
+          "NONE": 0.05,
+          "PERIODIC": 0.25
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0070": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.71,
+        "probabilities": {
+          "RETAIL": 0,
+          "BRIDGE": 0.75,
+          "EXCHANGE": 0.03,
+          "MEV_BOT": 0.07,
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.14
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.97,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.82,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.55,
+        "probabilities": {
+          "CONTINUOUS": 0.69,
+          "PERIODIC": 0.24,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "WPF-0071": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.43,
+        "probabilities": {
+          "MARKET_MAKER": 0.05,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.08,
+          "BRIDGE": 0.53,
+          "EXCHANGE": 0.34
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.05,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.84,
+          "6": 0.11
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.66,
+        "probabilities": {
+          "CONTINUOUS": 0.77,
+          "PERIODIC": 0.18,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0072": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.3,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.19,
+          "2": 0.13,
+          "3": 0.09,
+          "4": 0.22,
+          "5": 0.27999999999999997,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.48,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "CONTINUOUS": 0.65,
+          "NONE": 0.09
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0073": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.71,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.03,
+          "MARKET_MAKER": 0.08,
+          "EXCHANGE": 0.06,
+          "BRIDGE": 0.76,
+          "MEV_BOT": 0.07,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.87,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.13,
+          "5": 0.8,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.7,
+        "probabilities": {
+          "CONTINUOUS": 0.8,
+          "NONE": 0.04,
+          "PERIODIC": 0.16
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0074": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.61,
+        "probabilities": {
+          "MEV_BOT": 0.04,
+          "MARKET_MAKER": 0.17,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 0.11,
+          "BRIDGE": 0.67
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.97,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.08,
+          "5": 0.84,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.71,
+        "probabilities": {
+          "PERIODIC": 0.15,
+          "CONTINUOUS": 0.81,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0075": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.31,
+        "probabilities": {
+          "BRIDGE": 0.15,
+          "EXCHANGE": 0.33,
+          "SCAM_COLLECTOR": 0.02,
+          "MEV_BOT": 0.01,
+          "MARKET_MAKER": 0.43,
+          "RETAIL": 0.06
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.63,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.25,
+          "5": 0.66,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.39,
+        "probabilities": {
+          "PERIODIC": 0.34,
+          "CONTINUOUS": 0.59,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0076": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.89,
+        "probabilities": {
+          "MARKET_MAKER": 0.04,
+          "SCAM_COLLECTOR": 0.02,
+          "MEV_BOT": 0.01,
+          "EXCHANGE": 0.02,
+          "BRIDGE": 0.91,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.9,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.12,
+          "5": 0.8,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.69,
+        "probabilities": {
+          "PERIODIC": 0.17,
+          "CONTINUOUS": 0.79,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0077": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 1,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.64,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.06,
+          "4": 0.2,
+          "5": 0.65,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "PERIODIC": 0.22,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0078": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.39,
+        "probabilities": {
+          "MARKET_MAKER": 0.49,
+          "BRIDGE": 0.19,
+          "EXCHANGE": 0.25,
+          "MEV_BOT": 0.02,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.04
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.69,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.21,
+          "5": 0.7,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.47,
+        "probabilities": {
+          "CONTINUOUS": 0.65,
+          "PERIODIC": 0.28,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0079": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "EXCHANGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.42,
+        "confidence": 0.04,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.15,
+          "2": 0.15,
+          "3": 0.11,
+          "4": 0.26,
+          "5": 0.27999999999999997,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.34,
+        "probabilities": {
+          "PERIODIC": 0.32,
+          "CONTINUOUS": 0.56,
+          "NONE": 0.12
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0080": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.61,
+        "probabilities": {
+          "BRIDGE": 0.67,
+          "MARKET_MAKER": 0.17,
+          "EXCHANGE": 0.05,
+          "MEV_BOT": 0.1,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.93,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.11,
+          "5": 0.82,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "PERIODIC": 0.19,
+          "CONTINUOUS": 0.76,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0081": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "BRIDGE": 0,
+          "EXCHANGE": 1,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.84,
+        "confidence": 0.82,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.14,
+          "5": 0.75,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.61,
+        "probabilities": {
+          "PERIODIC": 0.2,
+          "CONTINUOUS": 0.74,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0082": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "BRIDGE": 0,
+          "EXCHANGE": 1,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.78,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.17,
+          "5": 0.71,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "PERIODIC": 0.25,
+          "CONTINUOUS": 0.68,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0083": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.82,
+        "probabilities": {
+          "BRIDGE": 0.86,
+          "SCAM_COLLECTOR": 0.02,
+          "MEV_BOT": 0.04,
+          "MARKET_MAKER": 0.05,
+          "EXCHANGE": 0.03,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.97,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.81,
+          "6": 0.09
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.71,
+          "PERIODIC": 0.24,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "WPF-0084": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.4,
+        "probabilities": {
+          "BRIDGE": 0.11,
+          "EXCHANGE": 0.27,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.06,
+          "MARKET_MAKER": 0.5,
+          "RETAIL": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.25,
+          "5": 0.65,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "CONTINUOUS": 0.67,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0085": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.67,
+        "probabilities": {
+          "EXCHANGE": 0.02,
+          "MEV_BOT": 0.73,
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0.08,
+          "RETAIL": 0,
+          "BRIDGE": 0.17
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.07,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.05,
+          "5": 0.79,
+          "6": 0.14
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.59,
+        "probabilities": {
+          "CONTINUOUS": 0.73,
+          "NONE": 0.07,
+          "PERIODIC": 0.2
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0086": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.79,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.07,
+          "MARKET_MAKER": 0.03,
+          "BRIDGE": 0.04,
+          "RETAIL": 0.83,
+          "EXCHANGE": 0.03,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.34,
+        "confidence": 0.2,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.31,
+          "2": 0.29,
+          "3": 0.19,
+          "4": 0.15,
+          "5": 0.05,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.68,
+          "NONE": 0.1,
+          "CONTINUOUS": 0.22
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "WPF-0087": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 1,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.7,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.21,
+          "5": 0.68,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "CONTINUOUS": 0.71,
+          "PERIODIC": 0.23,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0088": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.85,
+        "probabilities": {
+          "BRIDGE": 0.01,
+          "MARKET_MAKER": 0.05,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0.02,
+          "RETAIL": 0.87,
+          "EXCHANGE": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.09,
+        "confidence": 0.34,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.38,
+          "2": 0.28,
+          "3": 0.18,
+          "4": 0.11,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.54,
+        "probabilities": {
+          "PERIODIC": 0.69,
+          "CONTINUOUS": 0.2,
+          "NONE": 0.11
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "WPF-0089": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.2,
+        "probabilities": {
+          "MARKET_MAKER": 0.25,
+          "RETAIL": 0.34,
+          "MEV_BOT": 0.09,
+          "BRIDGE": 0.11,
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.2
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.54,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.29,
+          "5": 0.61,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.47,
+        "probabilities": {
+          "NONE": 0.06,
+          "PERIODIC": 0.3,
+          "CONTINUOUS": 0.64
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0090": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.56,
+        "probabilities": {
+          "RETAIL": 0.08,
+          "MEV_BOT": 0.01,
+          "BRIDGE": 0.04,
+          "MARKET_MAKER": 0.64,
+          "EXCHANGE": 0.22,
+          "SCAM_COLLECTOR": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.47,
+        "confidence": 0.67,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.09,
+          "4": 0.28,
+          "5": 0.58,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.37,
+        "probabilities": {
+          "PERIODIC": 0.34,
+          "NONE": 0.08,
+          "CONTINUOUS": 0.58
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0091": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.75,
+        "probabilities": {
+          "MEV_BOT": 0.03,
+          "EXCHANGE": 0.11,
+          "MARKET_MAKER": 0.07,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "BRIDGE": 0.79
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.99,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.08,
+          "5": 0.82,
+          "6": 0.09
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.6,
+        "probabilities": {
+          "PERIODIC": 0.22,
+          "CONTINUOUS": 0.73,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "WPF-0092": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "SCAM_COLLECTOR": 1,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.93,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.09,
+          "2": 0.1,
+          "3": 0.07,
+          "4": 0.23,
+          "5": 0.44,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.53,
+        "probabilities": {
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.68,
+          "NONE": 0.08
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0093": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "EXCHANGE": 1,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.8,
+        "confidence": 0.8,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.16,
+          "5": 0.72,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "NONE": 0.05,
+          "PERIODIC": 0.24,
+          "CONTINUOUS": 0.71
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0094": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.42,
+        "probabilities": {
+          "BRIDGE": 0.06,
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.32,
+          "MARKET_MAKER": 0.52,
+          "RETAIL": 0.06,
+          "MEV_BOT": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.68,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.23,
+          "5": 0.68,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.42,
+        "probabilities": {
+          "NONE": 0.07,
+          "PERIODIC": 0.31,
+          "CONTINUOUS": 0.62
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0095": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.83,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0.01,
+          "EXCHANGE": 0.12,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.86,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.23,
+        "confidence": 0.27,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.32,
+          "2": 0.29,
+          "3": 0.2,
+          "4": 0.14,
+          "5": 0.04,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.2,
+          "PERIODIC": 0.72,
+          "NONE": 0.08
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "WPF-0096": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 1,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 1
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.65,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.06,
+          "4": 0.2,
+          "5": 0.65,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.45,
+        "probabilities": {
+          "NONE": 0.08,
+          "PERIODIC": 0.29,
+          "CONTINUOUS": 0.63
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0097": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.35,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.15,
+          "2": 0.16,
+          "3": 0.1,
+          "4": 0.22,
+          "5": 0.29,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.48,
+        "probabilities": {
+          "CONTINUOUS": 0.65,
+          "NONE": 0.09,
+          "PERIODIC": 0.26
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0098": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 1,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "RETAIL": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.07,
+          "4": 0.22,
+          "5": 0.64,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "NONE": 0.06,
+          "PERIODIC": 0.22
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0099": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.42,
+        "probabilities": {
+          "BRIDGE": 0.09,
+          "MARKET_MAKER": 0.51,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.01,
+          "EXCHANGE": 0.27,
+          "RETAIL": 0.11
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.3,
+        "confidence": 0.57,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.04,
+          "3": 0.13,
+          "4": 0.3,
+          "5": 0.5,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.46,
+        "probabilities": {
+          "PERIODIC": 0.29,
+          "CONTINUOUS": 0.64,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0100": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.65,
+        "probabilities": {
+          "RETAIL": 0,
+          "BRIDGE": 0.17,
+          "MEV_BOT": 0.71,
+          "MARKET_MAKER": 0.05,
+          "SCAM_COLLECTOR": 0.02,
+          "EXCHANGE": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.13,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.76,
+          "6": 0.19
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.63,
+        "probabilities": {
+          "NONE": 0.06,
+          "CONTINUOUS": 0.75,
+          "PERIODIC": 0.19
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "WPF-0101": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 1
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.68,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.2,
+          "5": 0.67,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "PERIODIC": 0.23,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "WPF-0102": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.91,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "EXCHANGE": 0.07,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0.93,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.33,
+        "confidence": 0.21,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.32,
+          "2": 0.27,
+          "3": 0.17,
+          "4": 0.17,
+          "5": 0.05,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.54,
+        "probabilities": {
+          "PERIODIC": 0.7,
+          "CONTINUOUS": 0.2,
+          "NONE": 0.1
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0103": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.35,
+        "probabilities": {
+          "MEV_BOT": 0.03,
+          "BRIDGE": 0.03,
+          "EXCHANGE": 0.38,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.09,
+          "MARKET_MAKER": 0.46
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.55,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.08,
+          "4": 0.27,
+          "5": 0.62,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.46,
+        "probabilities": {
+          "PERIODIC": 0.3,
+          "CONTINUOUS": 0.64,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0104": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "EXCHANGE": 1,
+          "BRIDGE": 0,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.67,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.05,
+          "4": 0.2,
+          "5": 0.67,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.4,
+        "probabilities": {
+          "CONTINUOUS": 0.6,
+          "NONE": 0.08,
+          "PERIODIC": 0.32
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0105": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.65,
+        "probabilities": {
+          "BRIDGE": 0.71,
+          "MARKET_MAKER": 0.13,
+          "EXCHANGE": 0.09,
+          "RETAIL": 0,
+          "MEV_BOT": 0.07,
+          "SCAM_COLLECTOR": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.98,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.08,
+          "5": 0.84,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.7,
+        "probabilities": {
+          "NONE": 0.04,
+          "PERIODIC": 0.16,
+          "CONTINUOUS": 0.8
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0106": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.49,
+        "probabilities": {
+          "BRIDGE": 0.58,
+          "MARKET_MAKER": 0.1,
+          "EXCHANGE": 0.23,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.08
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.08,
+          "5": 0.86,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.78,
+        "probabilities": {
+          "NONE": 0.03,
+          "PERIODIC": 0.12,
+          "CONTINUOUS": 0.85
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0107": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "EXCHANGE": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.63,
+        "confidence": 0.15,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.12,
+          "2": 0.12,
+          "3": 0.08,
+          "4": 0.24000000000000002,
+          "5": 0.37,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.68,
+          "NONE": 0.08
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0108": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.98,
+        "probabilities": {
+          "MEV_BOT": 0.01,
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0.01,
+          "EXCHANGE": 0.98,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.62,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.07,
+          "4": 0.2,
+          "5": 0.65,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.4,
+        "probabilities": {
+          "PERIODIC": 0.3,
+          "CONTINUOUS": 0.61,
+          "NONE": 0.09
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0109": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.88,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "BRIDGE": 0.01,
+          "RETAIL": 0.9,
+          "MARKET_MAKER": 0.05,
+          "EXCHANGE": 0.03,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.98,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.39,
+          "2": 0.34,
+          "3": 0.17,
+          "4": 0.08,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.64,
+        "probabilities": {
+          "NONE": 0.13,
+          "PERIODIC": 0.76,
+          "CONTINUOUS": 0.11
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "WPF-0110": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0,
+          "EXCHANGE": 1,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.75,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.16,
+          "5": 0.69,
+          "6": 0.08
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.55,
+        "probabilities": {
+          "NONE": 0.06,
+          "CONTINUOUS": 0.7,
+          "PERIODIC": 0.24
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0111": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.36,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.05,
+          "MARKET_MAKER": 0.05,
+          "RETAIL": 0,
+          "BRIDGE": 0.43,
+          "EXCHANGE": 0.46
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.91,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.12,
+          "5": 0.82,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.71,
+        "probabilities": {
+          "NONE": 0.03,
+          "CONTINUOUS": 0.81,
+          "PERIODIC": 0.16
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0112": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "EXCHANGE": 0,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "SCAM_COLLECTOR": 1
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.84,
+        "confidence": 0.26,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.11,
+          "2": 0.1,
+          "3": 0.07,
+          "4": 0.21,
+          "5": 0.42,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.55,
+        "probabilities": {
+          "CONTINUOUS": 0.7,
+          "PERIODIC": 0.21,
+          "NONE": 0.09
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "WPF-0113": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.56,
+        "probabilities": {
+          "EXCHANGE": 0.02,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0.09,
+          "MEV_BOT": 0.64,
+          "BRIDGE": 0.25,
+          "SCAM_COLLECTOR": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.07,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.81,
+          "6": 0.14
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "CONTINUOUS": 0.76,
+          "PERIODIC": 0.18,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "WPF-0114": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.77,
+        "probabilities": {
+          "BRIDGE": 0.13,
+          "RETAIL": 0,
+          "EXCHANGE": 0.81,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.02,
+          "MARKET_MAKER": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.83,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.16,
+          "5": 0.77,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.54,
+        "probabilities": {
+          "PERIODIC": 0.25,
+          "NONE": 0.05,
+          "CONTINUOUS": 0.7
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0115": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.85,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "EXCHANGE": 0.05,
+          "MARKET_MAKER": 0.05,
+          "RETAIL": 0.88,
+          "BRIDGE": 0.02,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.91,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.44,
+          "2": 0.27,
+          "3": 0.14,
+          "4": 0.1,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.59,
+        "probabilities": {
+          "PERIODIC": 0.73,
+          "NONE": 0.15,
+          "CONTINUOUS": 0.12
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0116": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.95,
+        "probabilities": {
+          "MARKET_MAKER": 0.02,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 0.97,
+          "MEV_BOT": 0.01,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.06,
+          "4": 0.19,
+          "5": 0.67,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.42,
+        "probabilities": {
+          "CONTINUOUS": 0.62,
+          "NONE": 0.08,
+          "PERIODIC": 0.3
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "WPF-0117": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.97,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 0.99,
+          "MARKET_MAKER": 0.01,
+          "RETAIL": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.54,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.08,
+          "4": 0.25,
+          "5": 0.61,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.48,
+        "probabilities": {
+          "NONE": 0.05,
+          "CONTINUOUS": 0.66,
+          "PERIODIC": 0.29
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0118": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.65,
+        "probabilities": {
+          "BRIDGE": 0.05,
+          "MARKET_MAKER": 0.18,
+          "EXCHANGE": 0.7,
+          "MEV_BOT": 0.03,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.27,
+          "5": 0.64,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.5,
+        "probabilities": {
+          "PERIODIC": 0.27,
+          "CONTINUOUS": 0.66,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0119": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.78,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.11,
+          "BRIDGE": 0.8099999999999999,
+          "MEV_BOT": 0.02,
+          "RETAIL": 0,
+          "EXCHANGE": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.93,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.1,
+          "5": 0.83,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.64,
+        "probabilities": {
+          "PERIODIC": 0.18,
+          "CONTINUOUS": 0.76,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0120": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.62,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.11,
+          "3": 0.08,
+          "4": 0.22,
+          "5": 0.37,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.46,
+        "probabilities": {
+          "CONTINUOUS": 0.63,
+          "PERIODIC": 0.26,
+          "NONE": 0.11
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0121": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.62,
+        "probabilities": {
+          "MEV_BOT": 0.6900000000000001,
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.03,
+          "MARKET_MAKER": 0.06,
+          "BRIDGE": 0.21,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.08,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.06,
+          "5": 0.78,
+          "6": 0.15
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.53,
+        "probabilities": {
+          "NONE": 0.08,
+          "CONTINUOUS": 0.68,
+          "PERIODIC": 0.23
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0122": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "EXCHANGE": 1,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.71,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.05,
+          "4": 0.18,
+          "5": 0.67,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.25,
+          "CONTINUOUS": 0.68,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0123": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.23,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.06,
+          "BRIDGE": 0.1,
+          "MARKET_MAKER": 0.32,
+          "RETAIL": 0.11,
+          "EXCHANGE": 0.37,
+          "MEV_BOT": 0.04
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.62,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.07,
+          "4": 0.21,
+          "5": 0.65,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.42,
+        "probabilities": {
+          "PERIODIC": 0.31,
+          "NONE": 0.08,
+          "CONTINUOUS": 0.61
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0124": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.43,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.16,
+          "3": 0.1,
+          "4": 0.24,
+          "5": 0.3,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "CONTINUOUS": 0.67,
+          "PERIODIC": 0.25,
+          "NONE": 0.08
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0125": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.7,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0.01,
+          "SCAM_COLLECTOR": 0.23,
+          "MEV_BOT": 0,
+          "RETAIL": 0.75,
+          "BRIDGE": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.99,
+        "confidence": 0.4,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.4,
+          "2": 0.3,
+          "3": 0.15,
+          "4": 0.11,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.61,
+        "probabilities": {
+          "CONTINUOUS": 0.13,
+          "NONE": 0.13,
+          "PERIODIC": 0.74
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0126": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "MARKET_MAKER": 0,
+          "MEV_BOT": 0,
+          "EXCHANGE": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.55,
+        "confidence": 0.11,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.13,
+          "2": 0.14,
+          "3": 0.09,
+          "4": 0.24,
+          "5": 0.33,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.41,
+        "probabilities": {
+          "CONTINUOUS": 0.61,
+          "NONE": 0.11,
+          "PERIODIC": 0.28
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0127": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "RETAIL": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 1,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.74,
+        "confidence": 0.77,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.18,
+          "5": 0.69,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.61,
+        "probabilities": {
+          "CONTINUOUS": 0.74,
+          "PERIODIC": 0.21,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0128": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.75,
+        "probabilities": {
+          "MARKET_MAKER": 0.04,
+          "RETAIL": 0.79,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0.11,
+          "BRIDGE": 0.04,
+          "EXCHANGE": 0.02
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.87,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.45,
+          "2": 0.28,
+          "3": 0.14,
+          "4": 0.08,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.61,
+        "probabilities": {
+          "NONE": 0.15,
+          "PERIODIC": 0.73,
+          "CONTINUOUS": 0.12
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0129": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 1,
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.67,
+        "confidence": 0.74,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.05,
+          "4": 0.19,
+          "5": 0.67,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "NONE": 0.07,
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.7
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0130": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.98,
+        "probabilities": {
+          "EXCHANGE": 0.99,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0.01,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.61,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.07,
+          "4": 0.2,
+          "5": 0.64,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.48,
+        "probabilities": {
+          "PERIODIC": 0.28,
+          "CONTINUOUS": 0.66,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0131": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.34,
+        "probabilities": {
+          "MARKET_MAKER": 0.39,
+          "RETAIL": 0.06,
+          "MEV_BOT": 0.02,
+          "BRIDGE": 0.07,
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.45
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.69,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.22,
+          "5": 0.69,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.53,
+        "probabilities": {
+          "NONE": 0.06,
+          "PERIODIC": 0.25,
+          "CONTINUOUS": 0.69
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0132": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.46,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0.55,
+          "RETAIL": 0.45,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.61,
+        "confidence": 0.35,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.23,
+          "2": 0.27,
+          "3": 0.2,
+          "4": 0.22,
+          "5": 0.07,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.67,
+          "NONE": 0.08,
+          "CONTINUOUS": 0.25
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0133": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.35,
+        "confidence": 0,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.16,
+          "2": 0.15,
+          "3": 0.08,
+          "4": 0.23,
+          "5": 0.3,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.44,
+        "probabilities": {
+          "NONE": 0.11,
+          "PERIODIC": 0.27,
+          "CONTINUOUS": 0.62
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0134": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.76,
+        "confidence": 0.24,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.09,
+          "2": 0.12,
+          "3": 0.1,
+          "4": 0.25,
+          "5": 0.39,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.63,
+        "probabilities": {
+          "CONTINUOUS": 0.75,
+          "NONE": 0.06,
+          "PERIODIC": 0.19
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0135": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.89,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.04,
+          "MARKET_MAKER": 0.03,
+          "EXCHANGE": 0.02,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0.91
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.83,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.44,
+          "2": 0.31,
+          "3": 0.16,
+          "4": 0.06,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.61,
+        "probabilities": {
+          "PERIODIC": 0.74,
+          "CONTINUOUS": 0.12,
+          "NONE": 0.14
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "WPF-0136": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.45,
+        "probabilities": {
+          "MEV_BOT": 0.02,
+          "MARKET_MAKER": 0.54,
+          "EXCHANGE": 0.3,
+          "SCAM_COLLECTOR": 0.02,
+          "BRIDGE": 0.05,
+          "RETAIL": 0.07
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.52,
+        "confidence": 0.69,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.08,
+          "4": 0.27,
+          "5": 0.61,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.41,
+        "probabilities": {
+          "CONTINUOUS": 0.61,
+          "PERIODIC": 0.32,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0137": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.43,
+        "confidence": 0.04,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.15,
+          "3": 0.1,
+          "4": 0.23,
+          "5": 0.31,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.55,
+        "probabilities": {
+          "CONTINUOUS": 0.7,
+          "NONE": 0.07,
+          "PERIODIC": 0.23
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0138": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.75,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.03,
+          "MARKET_MAKER": 0.11,
+          "RETAIL": 0.03,
+          "EXCHANGE": 0.79,
+          "BRIDGE": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.69,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.22,
+          "5": 0.7,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.54,
+        "probabilities": {
+          "NONE": 0.05,
+          "PERIODIC": 0.26,
+          "CONTINUOUS": 0.69
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0139": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.13,
+        "probabilities": {
+          "RETAIL": 0.15,
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.29000000000000004,
+          "MEV_BOT": 0.06,
+          "EXCHANGE": 0.27,
+          "BRIDGE": 0.22
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.5,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.08,
+          "4": 0.29,
+          "5": 0.59,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.41,
+        "probabilities": {
+          "CONTINUOUS": 0.61,
+          "NONE": 0.05,
+          "PERIODIC": 0.34
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0140": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 1,
+          "RETAIL": 0,
+          "EXCHANGE": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.43,
+        "confidence": 0.03,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.15,
+          "2": 0.14,
+          "3": 0.08,
+          "4": 0.23,
+          "5": 0.32,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.45,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "CONTINUOUS": 0.63,
+          "NONE": 0.11
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0141": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.64,
+        "probabilities": {
+          "EXCHANGE": 0.02,
+          "MEV_BOT": 0.71,
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0.07,
+          "RETAIL": 0,
+          "BRIDGE": 0.2
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.09,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.79,
+          "6": 0.16
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.71,
+          "NONE": 0.08,
+          "PERIODIC": 0.21
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0142": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.7,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0.02,
+          "EXCHANGE": 0.02,
+          "RETAIL": 0.74,
+          "SCAM_COLLECTOR": 0.17,
+          "BRIDGE": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.91,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.44,
+          "2": 0.26,
+          "3": 0.14,
+          "4": 0.1,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.15,
+          "NONE": 0.14,
+          "PERIODIC": 0.71
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "WPF-0143": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.67,
+        "probabilities": {
+          "MARKET_MAKER": 0.07,
+          "RETAIL": 0,
+          "MEV_BOT": 0.73,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0.19,
+          "EXCHANGE": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.02,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.07,
+          "5": 0.81,
+          "6": 0.11
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "NONE": 0.07,
+          "PERIODIC": 0.21,
+          "CONTINUOUS": 0.72
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.5
+      }
+    },
+    "WPF-0144": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.73,
+        "probabilities": {
+          "BRIDGE": 0.78,
+          "MARKET_MAKER": 0.08,
+          "EXCHANGE": 0.1,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0,
+          "MEV_BOT": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.8,
+        "confidence": 0.84,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.18,
+          "5": 0.76,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "PERIODIC": 0.24,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0145": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.31,
+        "probabilities": {
+          "MEV_BOT": 0.03,
+          "EXCHANGE": 0.26,
+          "MARKET_MAKER": 0.44,
+          "SCAM_COLLECTOR": 0.06,
+          "RETAIL": 0.13,
+          "BRIDGE": 0.08
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.64,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.23,
+          "5": 0.67,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.41,
+        "probabilities": {
+          "PERIODIC": 0.32,
+          "CONTINUOUS": 0.61,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0146": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.81,
+        "probabilities": {
+          "MARKET_MAKER": 0.07,
+          "EXCHANGE": 0.84,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.03,
+          "RETAIL": 0.02,
+          "BRIDGE": 0.04
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.67,
+        "confidence": 0.78,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.23,
+          "5": 0.69,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "CONTINUOUS": 0.67,
+          "NONE": 0.06,
+          "PERIODIC": 0.27
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0147": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.71,
+        "probabilities": {
+          "MEV_BOT": 0.06,
+          "MARKET_MAKER": 0.12,
+          "EXCHANGE": 0.05,
+          "SCAM_COLLECTOR": 0.02,
+          "BRIDGE": 0.75,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.82,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.16,
+          "5": 0.79,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.6,
+        "probabilities": {
+          "CONTINUOUS": 0.74,
+          "PERIODIC": 0.22,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0148": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.61,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "EXCHANGE": 0.06,
+          "MARKET_MAKER": 0.03,
+          "RETAIL": 0,
+          "BRIDGE": 0.22,
+          "MEV_BOT": 0.6900000000000001
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.12,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.77,
+          "6": 0.18
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.73,
+        "probabilities": {
+          "PERIODIC": 0.14,
+          "NONE": 0.05,
+          "CONTINUOUS": 0.8099999999999999
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0149": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.93,
+        "probabilities": {
+          "BRIDGE": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0.02,
+          "EXCHANGE": 0.03,
+          "RETAIL": 0.94
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.62,
+        "confidence": 0.59,
+        "probabilities": {
+          "0": 0.04,
+          "1": 0.56,
+          "2": 0.22,
+          "3": 0.1,
+          "4": 0.06,
+          "5": 0.01,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.59,
+        "probabilities": {
+          "CONTINUOUS": 0.09,
+          "PERIODIC": 0.73,
+          "NONE": 0.18
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0150": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.41,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.34,
+          "BRIDGE": 0.51,
+          "MEV_BOT": 0.1,
+          "MARKET_MAKER": 0.04,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.91,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.11,
+          "5": 0.83,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.72,
+        "probabilities": {
+          "CONTINUOUS": 0.81,
+          "NONE": 0.04,
+          "PERIODIC": 0.15
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0151": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.83,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0.01,
+          "EXCHANGE": 0.01,
+          "BRIDGE": 0,
+          "SCAM_COLLECTOR": 0.12,
+          "RETAIL": 0.86
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.95,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.44,
+          "2": 0.26,
+          "3": 0.13,
+          "4": 0.11,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.59,
+        "probabilities": {
+          "CONTINUOUS": 0.11,
+          "NONE": 0.16,
+          "PERIODIC": 0.73
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0152": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.97,
+        "probabilities": {
+          "MARKET_MAKER": 0,
+          "RETAIL": 0.99,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "BRIDGE": 0,
+          "EXCHANGE": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.92,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.46,
+          "2": 0.26,
+          "3": 0.14,
+          "4": 0.09,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.57,
+        "probabilities": {
+          "PERIODIC": 0.71,
+          "CONTINUOUS": 0.16,
+          "NONE": 0.13
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0153": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.62,
+        "probabilities": {
+          "EXCHANGE": 0.68,
+          "BRIDGE": 0.05,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.05,
+          "MARKET_MAKER": 0.15,
+          "MEV_BOT": 0.06
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.58,
+        "confidence": 0.73,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.26,
+          "5": 0.64,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.49,
+        "probabilities": {
+          "NONE": 0.06,
+          "PERIODIC": 0.28,
+          "CONTINUOUS": 0.66
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0154": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.29,
+        "probabilities": {
+          "RETAIL": 0.04,
+          "MARKET_MAKER": 0.41,
+          "EXCHANGE": 0.32,
+          "SCAM_COLLECTOR": 0.01,
+          "BRIDGE": 0.2,
+          "MEV_BOT": 0.02
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.64,
+        "confidence": 0.75,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.22,
+          "5": 0.68,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.35,
+        "probabilities": {
+          "CONTINUOUS": 0.57,
+          "PERIODIC": 0.34,
+          "NONE": 0.09
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0155": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.86,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0.060000000000000005,
+          "EXCHANGE": 0.89,
+          "BRIDGE": 0.01,
+          "MEV_BOT": 0.01,
+          "RETAIL": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.56,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.08,
+          "4": 0.26,
+          "5": 0.63,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.53,
+        "probabilities": {
+          "CONTINUOUS": 0.68,
+          "NONE": 0.05,
+          "PERIODIC": 0.27
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0156": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.54,
+        "probabilities": {
+          "MEV_BOT": 0.62,
+          "EXCHANGE": 0.01,
+          "MARKET_MAKER": 0.05,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "BRIDGE": 0.32
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.07,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.06,
+          "5": 0.81,
+          "6": 0.13
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.6,
+        "probabilities": {
+          "PERIODIC": 0.2,
+          "CONTINUOUS": 0.73,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0157": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 1,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.54,
+        "confidence": 0.66,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.07,
+          "4": 0.21,
+          "5": 0.61,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.36,
+        "probabilities": {
+          "NONE": 0.1,
+          "PERIODIC": 0.33,
+          "CONTINUOUS": 0.57
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0158": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.43,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.31,
+          "BRIDGE": 0.09,
+          "MEV_BOT": 0.04,
+          "RETAIL": 0.03,
+          "EXCHANGE": 0.52
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.74,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.04,
+          "4": 0.2,
+          "5": 0.73,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "NONE": 0.07,
+          "CONTINUOUS": 0.67
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0159": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.48,
+        "confidence": 0.07,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.15,
+          "3": 0.09,
+          "4": 0.21,
+          "5": 0.34,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "NONE": 0.09,
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.68
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0160": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.72,
+        "probabilities": {
+          "MEV_BOT": 0.06,
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.03,
+          "MARKET_MAKER": 0.13,
+          "BRIDGE": 0.77,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.9,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.12,
+          "5": 0.82,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "NONE": 0.05,
+          "CONTINUOUS": 0.72,
+          "PERIODIC": 0.23
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0161": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.3,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.09,
+          "EXCHANGE": 0.42,
+          "BRIDGE": 0.02,
+          "MEV_BOT": 0.04,
+          "MARKET_MAKER": 0.42
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.54,
+        "confidence": 0.7,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.09,
+          "4": 0.25,
+          "5": 0.62,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.53,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "CONTINUOUS": 0.69,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0162": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.87,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "EXCHANGE": 0.02,
+          "SCAM_COLLECTOR": 0.04,
+          "RETAIL": 0.89,
+          "MARKET_MAKER": 0.04,
+          "BRIDGE": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.85,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.47,
+          "2": 0.25,
+          "3": 0.13,
+          "4": 0.09,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.52,
+        "probabilities": {
+          "PERIODIC": 0.68,
+          "CONTINUOUS": 0.19,
+          "NONE": 0.13
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "WPF-0163": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 1,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.6,
+        "confidence": 0.69,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.06,
+          "4": 0.18,
+          "5": 0.64,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.4,
+        "probabilities": {
+          "CONTINUOUS": 0.6,
+          "PERIODIC": 0.31,
+          "NONE": 0.09
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0164": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.81,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "EXCHANGE": 0.07,
+          "MARKET_MAKER": 0.04,
+          "SCAM_COLLECTOR": 0.03,
+          "RETAIL": 0.84,
+          "BRIDGE": 0.02
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.29,
+        "confidence": 0.23,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.31,
+          "2": 0.29,
+          "3": 0.22,
+          "4": 0.13,
+          "5": 0.04,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.58,
+        "probabilities": {
+          "PERIODIC": 0.72,
+          "CONTINUOUS": 0.2,
+          "NONE": 0.08
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.36
+      }
+    },
+    "WPF-0165": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.89,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "EXCHANGE": 0.03,
+          "MARKET_MAKER": 0.04,
+          "SCAM_COLLECTOR": 0.02,
+          "RETAIL": 0.9,
+          "BRIDGE": 0.01
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 1.97,
+        "confidence": 0.41,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.4,
+          "2": 0.31,
+          "3": 0.17,
+          "4": 0.08,
+          "5": 0.02,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.57,
+        "probabilities": {
+          "PERIODIC": 0.71,
+          "CONTINUOUS": 0.16,
+          "NONE": 0.13
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.38
+      }
+    },
+    "WPF-0166": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.68,
+        "probabilities": {
+          "BRIDGE": 0.73,
+          "MARKET_MAKER": 0.17,
+          "EXCHANGE": 0.04,
+          "MEV_BOT": 0.04,
+          "SCAM_COLLECTOR": 0.02,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.08,
+          "5": 0.84,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.66,
+        "probabilities": {
+          "PERIODIC": 0.18,
+          "CONTINUOUS": 0.77,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "WPF-0167": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.9,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0.02,
+          "EXCHANGE": 0.01,
+          "BRIDGE": 0.01,
+          "SCAM_COLLECTOR": 0.05,
+          "RETAIL": 0.91
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.47,
+        "confidence": 0.13,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.29000000000000004,
+          "2": 0.25,
+          "3": 0.21,
+          "4": 0.17,
+          "5": 0.07,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.53,
+        "probabilities": {
+          "PERIODIC": 0.69,
+          "NONE": 0.1,
+          "CONTINUOUS": 0.21
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0168": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.25,
+        "probabilities": {
+          "MARKET_MAKER": 0.38,
+          "EXCHANGE": 0.27,
+          "SCAM_COLLECTOR": 0.04,
+          "MEV_BOT": 0.01,
+          "BRIDGE": 0.17,
+          "RETAIL": 0.13
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.51,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.09,
+          "4": 0.25,
+          "5": 0.6,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.46,
+        "probabilities": {
+          "PERIODIC": 0.29,
+          "CONTINUOUS": 0.64,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0169": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.67,
+        "probabilities": {
+          "BRIDGE": 0.73,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.04,
+          "MARKET_MAKER": 0.09,
+          "RETAIL": 0,
+          "EXCHANGE": 0.14
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.84,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.57,
+        "probabilities": {
+          "NONE": 0.05,
+          "PERIODIC": 0.24,
+          "CONTINUOUS": 0.71
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.48
+      }
+    },
+    "WPF-0170": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.44,
+        "probabilities": {
+          "MEV_BOT": 0.25,
+          "MARKET_MAKER": 0.17,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0,
+          "EXCHANGE": 0.03,
+          "BRIDGE": 0.54
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.95,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.83,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.73,
+        "probabilities": {
+          "PERIODIC": 0.14,
+          "CONTINUOUS": 0.82,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "WPF-0171": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.29,
+        "probabilities": {
+          "EXCHANGE": 0.28,
+          "SCAM_COLLECTOR": 0.03,
+          "MEV_BOT": 0.03,
+          "BRIDGE": 0.13,
+          "MARKET_MAKER": 0.42,
+          "RETAIL": 0.11
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.56,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.26,
+          "5": 0.63,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.47,
+        "probabilities": {
+          "PERIODIC": 0.3,
+          "NONE": 0.06,
+          "CONTINUOUS": 0.64
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0172": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.78,
+        "probabilities": {
+          "EXCHANGE": 0.15,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MARKET_MAKER": 0.02,
+          "RETAIL": 0.81,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.54,
+        "confidence": 0.37,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.25,
+          "2": 0.27,
+          "3": 0.22,
+          "4": 0.18,
+          "5": 0.07,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.51,
+        "probabilities": {
+          "CONTINUOUS": 0.24,
+          "NONE": 0.08,
+          "PERIODIC": 0.68
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "WPF-0173": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.58,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0.26,
+          "EXCHANGE": 0.02,
+          "MEV_BOT": 0.65,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0.07
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.12,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.78,
+          "6": 0.18
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.58,
+        "probabilities": {
+          "CONTINUOUS": 0.72,
+          "PERIODIC": 0.21,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "WPF-0174": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 1,
+          "BRIDGE": 0,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.72,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.19,
+          "5": 0.68,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.71,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0175": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.46,
+        "probabilities": {
+          "MARKET_MAKER": 0.55,
+          "EXCHANGE": 0.29,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0.05,
+          "MEV_BOT": 0.04,
+          "BRIDGE": 0.06
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.63,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.06,
+          "4": 0.25,
+          "5": 0.66,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.43,
+        "probabilities": {
+          "CONTINUOUS": 0.62,
+          "NONE": 0.08,
+          "PERIODIC": 0.3
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    },
+    "WPF-0176": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 0,
+          "EXCHANGE": 1,
+          "MARKET_MAKER": 0,
+          "BRIDGE": 0,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.78,
+        "confidence": 0.79,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.16,
+          "5": 0.72,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.59,
+        "probabilities": {
+          "NONE": 0.05,
+          "CONTINUOUS": 0.73,
+          "PERIODIC": 0.22
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0177": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.61,
+        "probabilities": {
+          "MARKET_MAKER": 0.08,
+          "SCAM_COLLECTOR": 0.01,
+          "BRIDGE": 0.21,
+          "RETAIL": 0,
+          "EXCHANGE": 0.02,
+          "MEV_BOT": 0.68
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.15,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.04,
+          "5": 0.75,
+          "6": 0.21
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "NONE": 0.09,
+          "PERIODIC": 0.24,
+          "CONTINUOUS": 0.67
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "WPF-0178": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.58,
+        "probabilities": {
+          "BRIDGE": 0.65,
+          "MARKET_MAKER": 0.19,
+          "EXCHANGE": 0.06,
+          "SCAM_COLLECTOR": 0.01,
+          "RETAIL": 0,
+          "MEV_BOT": 0.09
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.94,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.1,
+          "5": 0.82,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.65,
+        "probabilities": {
+          "CONTINUOUS": 0.77,
+          "PERIODIC": 0.19,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0179": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.71,
+        "probabilities": {
+          "EXCHANGE": 0.04,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "BRIDGE": 0.75,
+          "MEV_BOT": 0.07,
+          "MARKET_MAKER": 0.13
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.92,
+        "confidence": 0.89,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.11,
+          "5": 0.82,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.62,
+        "probabilities": {
+          "PERIODIC": 0.2,
+          "CONTINUOUS": 0.75,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0180": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "EXCHANGE": 1,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.72,
+        "confidence": 0.76,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.05,
+          "4": 0.18,
+          "5": 0.7,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.54,
+        "probabilities": {
+          "PERIODIC": 0.24,
+          "NONE": 0.07,
+          "CONTINUOUS": 0.69
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "WPF-0181": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.62,
+        "probabilities": {
+          "BRIDGE": 0.68,
+          "MARKET_MAKER": 0.18,
+          "EXCHANGE": 0.05,
+          "RETAIL": 0,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.08
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.83,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.68,
+        "probabilities": {
+          "NONE": 0.04,
+          "PERIODIC": 0.17,
+          "CONTINUOUS": 0.79
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0182": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.43,
+        "probabilities": {
+          "EXCHANGE": 0.53,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.08,
+          "BRIDGE": 0.06,
+          "MARKET_MAKER": 0.27,
+          "RETAIL": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.73,
+        "confidence": 0.81,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.04,
+          "4": 0.21,
+          "5": 0.72,
+          "6": 0.03
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.26,
+          "NONE": 0.06,
+          "CONTINUOUS": 0.68
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0183": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.69,
+        "probabilities": {
+          "BRIDGE": 0.13,
+          "EXCHANGE": 0.08,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0.74,
+          "MARKET_MAKER": 0.05,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.07,
+        "confidence": 0.88,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.05,
+          "5": 0.8,
+          "6": 0.14
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.66,
+        "probabilities": {
+          "PERIODIC": 0.17,
+          "CONTINUOUS": 0.77,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0184": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.88,
+        "probabilities": {
+          "MARKET_MAKER": 0.01,
+          "SCAM_COLLECTOR": 0.08,
+          "MEV_BOT": 0,
+          "RETAIL": 0.9,
+          "EXCHANGE": 0.01,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.14,
+        "confidence": 0.32,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.36,
+          "2": 0.3,
+          "3": 0.19,
+          "4": 0.11,
+          "5": 0.03,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.56,
+        "probabilities": {
+          "PERIODIC": 0.71,
+          "NONE": 0.09,
+          "CONTINUOUS": 0.2
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "WPF-0185": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.29,
+        "probabilities": {
+          "SCAM_COLLECTOR": 0.01,
+          "EXCHANGE": 0.16,
+          "RETAIL": 0.42,
+          "MEV_BOT": 0.11,
+          "BRIDGE": 0.09,
+          "MARKET_MAKER": 0.21
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.5,
+        "confidence": 0.68,
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.09,
+          "4": 0.25,
+          "5": 0.61,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.53,
+        "probabilities": {
+          "PERIODIC": 0.27,
+          "CONTINUOUS": 0.68,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0186": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "EXCHANGE": 0,
+          "SCAM_COLLECTOR": 1,
+          "MEV_BOT": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0,
+          "BRIDGE": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.04,
+        "confidence": 0.38,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.06,
+          "2": 0.09,
+          "3": 0.08,
+          "4": 0.25,
+          "5": 0.46,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "CONTINUOUS": 0.68,
+          "NONE": 0.09,
+          "PERIODIC": 0.23
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0187": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0,
+          "RETAIL": 0,
+          "MEV_BOT": 0,
+          "SCAM_COLLECTOR": 1
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.46,
+        "confidence": 0.05,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.14,
+          "2": 0.16,
+          "3": 0.08,
+          "4": 0.22,
+          "5": 0.33,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.52,
+        "probabilities": {
+          "NONE": 0.09,
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.68
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0188": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.87,
+        "probabilities": {
+          "RETAIL": 0.89,
+          "MARKET_MAKER": 0,
+          "EXCHANGE": 0.01,
+          "SCAM_COLLECTOR": 0.1,
+          "BRIDGE": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.28,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.3,
+          "2": 0.32,
+          "3": 0.18,
+          "4": 0.15,
+          "5": 0.04,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.57,
+        "probabilities": {
+          "CONTINUOUS": 0.17,
+          "PERIODIC": 0.72,
+          "NONE": 0.11
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0189": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "SCAM_COLLECTOR",
+        "confidence": 1,
+        "probabilities": {
+          "SCAM_COLLECTOR": 1,
+          "BRIDGE": 0,
+          "EXCHANGE": 0,
+          "MARKET_MAKER": 0,
+          "RETAIL": 0,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 3.62,
+        "confidence": 0.14,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.13,
+          "2": 0.13,
+          "3": 0.09,
+          "4": 0.22,
+          "5": 0.35,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.55,
+        "probabilities": {
+          "NONE": 0.09,
+          "CONTINUOUS": 0.7,
+          "PERIODIC": 0.21
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0190": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MARKET_MAKER",
+        "confidence": 0.39,
+        "probabilities": {
+          "BRIDGE": 0.05,
+          "MARKET_MAKER": 0.49,
+          "EXCHANGE": 0.35,
+          "RETAIL": 0.07,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.03
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.56,
+        "confidence": 0.72,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.07,
+          "4": 0.26,
+          "5": 0.64,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.48,
+        "probabilities": {
+          "NONE": 0.06,
+          "PERIODIC": 0.29,
+          "CONTINUOUS": 0.65
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.39
+      }
+    },
+    "WPF-0191": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.63,
+        "probabilities": {
+          "BRIDGE": 0.7,
+          "MEV_BOT": 0.04,
+          "EXCHANGE": 0.21,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "MARKET_MAKER": 0.05
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.96,
+        "confidence": 0.91,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.09,
+          "5": 0.84,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.65,
+        "probabilities": {
+          "CONTINUOUS": 0.77,
+          "PERIODIC": 0.19,
+          "NONE": 0.04
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0192": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.73,
+        "probabilities": {
+          "EXCHANGE": 0.02,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.78,
+          "MARKET_MAKER": 0.04,
+          "RETAIL": 0,
+          "BRIDGE": 0.15
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.05,
+        "confidence": 0.87,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.07,
+          "5": 0.78,
+          "6": 0.14
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "CONTINUOUS": 0.71,
+          "NONE": 0.07,
+          "PERIODIC": 0.22
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "WPF-0193": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.77,
+        "probabilities": {
+          "BRIDGE": 0.03,
+          "MARKET_MAKER": 0.1,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.02,
+          "EXCHANGE": 0.8,
+          "RETAIL": 0.04
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.54,
+        "confidence": 0.71,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.08,
+          "4": 0.27,
+          "5": 0.62,
+          "6": 0.02
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.27,
+          "CONTINUOUS": 0.67,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "WPF-0194": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.65,
+        "probabilities": {
+          "MARKET_MAKER": 0.04,
+          "EXCHANGE": 0.06,
+          "MEV_BOT": 0.71,
+          "SCAM_COLLECTOR": 0,
+          "RETAIL": 0,
+          "BRIDGE": 0.19
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.12,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.05,
+          "5": 0.75,
+          "6": 0.19
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.69,
+        "probabilities": {
+          "PERIODIC": 0.14,
+          "CONTINUOUS": 0.8,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0195": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "RETAIL",
+        "confidence": 0.69,
+        "probabilities": {
+          "RETAIL": 0.74,
+          "MARKET_MAKER": 0.11,
+          "EXCHANGE": 0.08,
+          "SCAM_COLLECTOR": 0.06,
+          "BRIDGE": 0.01,
+          "MEV_BOT": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 2.3,
+        "confidence": 0.22,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.32,
+          "2": 0.28,
+          "3": 0.18,
+          "4": 0.14,
+          "5": 0.06,
+          "6": 0
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "PERIODIC",
+        "confidence": 0.55,
+        "probabilities": {
+          "CONTINUOUS": 0.18,
+          "PERIODIC": 0.7,
+          "NONE": 0.12
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.37
+      }
+    },
+    "WPF-0196": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "BRIDGE",
+        "confidence": 0.77,
+        "probabilities": {
+          "MARKET_MAKER": 0.15,
+          "SCAM_COLLECTOR": 0.01,
+          "MEV_BOT": 0.02,
+          "EXCHANGE": 0.02,
+          "BRIDGE": 0.8,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.82,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.16,
+          "5": 0.78,
+          "6": 0.04
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.51,
+        "probabilities": {
+          "PERIODIC": 0.27,
+          "CONTINUOUS": 0.67,
+          "NONE": 0.06
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "WPF-0197": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.88,
+        "probabilities": {
+          "EXCHANGE": 0.9,
+          "MEV_BOT": 0.03,
+          "MARKET_MAKER": 0.03,
+          "RETAIL": 0,
+          "BRIDGE": 0.04,
+          "SCAM_COLLECTOR": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.84,
+        "confidence": 0.85,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.02,
+          "4": 0.16,
+          "5": 0.77,
+          "6": 0.05
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.63,
+        "probabilities": {
+          "CONTINUOUS": 0.75,
+          "PERIODIC": 0.2,
+          "NONE": 0.05
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.44
+      }
+    },
+    "WPF-0198": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "MEV_BOT",
+        "confidence": 0.41,
+        "probabilities": {
+          "BRIDGE": 0.31,
+          "RETAIL": 0,
+          "EXCHANGE": 0.14,
+          "SCAM_COLLECTOR": 0,
+          "MARKET_MAKER": 0.03,
+          "MEV_BOT": 0.52
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 5.16,
+        "confidence": 0.86,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.03,
+          "5": 0.77,
+          "6": 0.2
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.6,
+        "probabilities": {
+          "CONTINUOUS": 0.74,
+          "PERIODIC": 0.18,
+          "NONE": 0.08
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "WPF-0199": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.34,
+        "probabilities": {
+          "MEV_BOT": 0.08,
+          "MARKET_MAKER": 0.04,
+          "EXCHANGE": 0.45,
+          "SCAM_COLLECTOR": 0,
+          "BRIDGE": 0.43,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.94,
+        "confidence": 0.9,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.1,
+          "5": 0.83,
+          "6": 0.06
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.76,
+        "probabilities": {
+          "CONTINUOUS": 0.85,
+          "PERIODIC": 0.12,
+          "NONE": 0.03
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "WPF-0200": {
+      "wallet_type": {
+        "type": "choice",
+        "choice": "EXCHANGE",
+        "confidence": 0.99,
+        "probabilities": {
+          "BRIDGE": 0,
+          "MARKET_MAKER": 0,
+          "SCAM_COLLECTOR": 0,
+          "MEV_BOT": 0,
+          "EXCHANGE": 1,
+          "RETAIL": 0
+        }
+      },
+      "automation": {
+        "type": "score",
+        "score": 4.55,
+        "confidence": 0.65,
+        "probabilities": {
+          "0": 0,
+          "1": 0.02,
+          "2": 0.03,
+          "3": 0.08,
+          "4": 0.2,
+          "5": 0.6,
+          "6": 0.07
+        }
+      },
+      "monitoring_level": {
+        "type": "choice",
+        "choice": "CONTINUOUS",
+        "confidence": 0.56,
+        "probabilities": {
+          "PERIODIC": 0.23,
+          "CONTINUOUS": 0.7,
+          "NONE": 0.07
+        }
+      },
+      "type_is_clear": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    }
+  }
+}

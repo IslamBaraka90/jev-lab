@@ -18,18 +18,31 @@ export const GENERATORS = {
   'three-way-match': () => import('./three-way-match.js'),
   'close-blockers': () => import('./close-blockers.js'),
   'order-risk': () => import('./order-risk.js'),
+  'cod-abuse': () => import('./cod-abuse.js'),
   'dispute-routing': () => import('./dispute-routing.js'),
+  'chargeback-evidence': () => import('./chargeback-evidence.js'),
   'merchant-onboarding': () => import('./merchant-onboarding.js'),
+  'delivery-exceptions': () => import('./delivery-exceptions.js'),
   'card-fraud-triage': () => import('./card-fraud-triage.js'),
+  'account-takeover': () => import('./account-takeover.js'),
   'aml-alert-triage': () => import('./aml-alert-triage.js'),
+  'sanctions-name-match': () => import('./sanctions-name-match.js'),
+  'insider-surveillance': () => import('./insider-surveillance.js'),
   'mule-network': () => import('./mule-network.js'),
   'wallet-risk': () => import('./wallet-risk.js'),
+  'wallet-profiling': () => import('./wallet-profiling.js'),
   'mixer-tracing': () => import('./mixer-tracing.js'),
+  'token-screening': () => import('./token-screening.js'),
   'sybil-clusters': () => import('./sybil-clusters.js'),
   'portfolio-health': () => import('./portfolio-health.js'),
   'rebalance-review': () => import('./rebalance-review.js'),
   'mandate-compliance': () => import('./mandate-compliance.js'),
+  'portfolio-compare': () => import('./portfolio-compare.js'),
+  'factor-exposure': () => import('./factor-exposure.js'),
+  'income-planning': () => import('./income-planning.js'),
   'post-trade-review': () => import('./post-trade-review.js'),
+  'trade-feature-analysis': () => import('./trade-feature-analysis.js'),
+  'trader-behaviour': () => import('./trader-behaviour.js'),
   'execution-quality': () => import('./execution-quality.js'),
   'journal-vs-reality': () => import('./journal-vs-reality.js'),
   'goal-screening': () => import('./goal-screening.js'),
@@ -47,7 +60,7 @@ export async function generate(slug) {
   if (!generator) throw new Error(`No generator for "${slug}". Known: ${Object.keys(GENERATORS).join(', ')}`);
 
   const { generate: build, SEED } = await generator();
-  const { dataset, labels } = build(SEED);
+  const { dataset, labels, artifacts = [] } = build(SEED);
   assertDataset(dataset, `${slug} dataset`);
   if (dataset.id !== slug) throw new Error(`${slug} generator produced id "${dataset.id}"`);
 
@@ -63,6 +76,14 @@ export async function generate(slug) {
     labelCount = Array.isArray(labels) ? labels.length : Object.keys(labels).length;
   }
 
+  for (const artifact of artifacts) {
+    const file = path.resolve(repoRoot, artifact.path);
+    const relative = path.relative(repoRoot, file);
+    if (relative.startsWith('..') || path.isAbsolute(relative)) throw new Error(`${slug} artifact escapes the repository: ${artifact.path}`);
+    await mkdir(path.dirname(file), { recursive: true });
+    await writeFile(file, asJson(artifact.data));
+  }
+
   return { slug, items: dataset.items.length, labels: labelCount, dataFile: path.relative(repoRoot, dataFile) };
 }
 
@@ -71,7 +92,7 @@ async function main() {
   const slugs = wanted.length ? wanted : Object.keys(GENERATORS);
   for (const slug of slugs) {
     const result = await generate(slug);
-    console.log(`${result.slug}: ${result.items} items, ${result.labels} labels → ${result.dataFile}`);
+    console.log(`${result.slug}: ${result.items} items, ${result.labels} labels â†’ ${result.dataFile}`);
   }
 }
 

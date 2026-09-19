@@ -1,0 +1,2102 @@
+[
+  {
+    "tradeId": "TF-001",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-002",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-003",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-004",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-005",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-006",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-007",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-008",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-009",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-010",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-011",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-012",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-013",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-014",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-015",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-016",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-017",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-018",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-019",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-020",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-021",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-022",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-023",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-024",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-025",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-026",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-027",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-028",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-029",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-030",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-031",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-032",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-033",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-034",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-035",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-036",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-037",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-038",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-039",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-040",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-041",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-042",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-043",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-044",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-045",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-046",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-047",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-048",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-049",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-050",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-051",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-052",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-053",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-054",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-055",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-056",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-057",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-058",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-059",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-060",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-061",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-062",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-063",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-064",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-065",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-066",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-067",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-068",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-069",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-070",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-071",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-072",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-073",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-074",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-075",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-076",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-077",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-078",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-079",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-080",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-081",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-082",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-083",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-084",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-085",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-086",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-087",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-088",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-089",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-090",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-091",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-092",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-093",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-094",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-095",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-096",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-097",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-098",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-099",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-100",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-101",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-102",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-103",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-104",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-105",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-106",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-107",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-108",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-109",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-110",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-111",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-112",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-113",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-114",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-115",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-116",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-117",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-118",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-119",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-120",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-121",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-122",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-123",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-124",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-125",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-126",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-127",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-128",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-129",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-130",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-131",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-132",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-133",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-134",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-135",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-136",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-137",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-138",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-139",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-140",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-141",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-142",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-143",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-144",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-145",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-146",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-147",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-148",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-149",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-150",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-151",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-152",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-153",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-154",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-155",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-156",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-157",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-158",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-159",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-160",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-161",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-162",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-163",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-164",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-165",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-166",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-167",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-168",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-169",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-170",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-171",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-172",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-173",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-174",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-175",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-176",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-177",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-178",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-179",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-180",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-181",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-182",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-183",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-184",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-185",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-186",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-187",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-188",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-189",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-190",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-191",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-192",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-193",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-194",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-195",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-196",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-197",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-198",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-199",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-200",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-201",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-202",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-203",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-204",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-205",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-206",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-207",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-208",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-209",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-210",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-211",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-212",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-213",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-214",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-215",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-216",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-217",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-218",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-219",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-220",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-221",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-222",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-223",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-224",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-225",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-226",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-227",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-228",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-229",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-230",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-231",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-232",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-233",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-234",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-235",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-236",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-237",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-238",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-239",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-240",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-241",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-242",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-243",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-244",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-245",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-246",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-247",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-248",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-249",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-250",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-251",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-252",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-253",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-254",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-255",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-256",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-257",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-258",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-259",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-260",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-261",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-262",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-263",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-264",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-265",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-266",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-267",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-268",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-269",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-270",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-271",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-272",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-273",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-274",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-275",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-276",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-277",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-278",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-279",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-280",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-281",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-282",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-283",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-284",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-285",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-286",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-287",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-288",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-289",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-290",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-291",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-292",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-293",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-294",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-295",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": true
+  },
+  {
+    "tradeId": "TF-296",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-297",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-298",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-299",
+    "outcome": "WIN",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": false,
+    "topThirdClose": false
+  },
+  {
+    "tradeId": "TF-300",
+    "outcome": "LOSS",
+    "plantedEdgeFeature": "ENTRY_DISTANCE_AND_TOP_THIRD",
+    "extendedEntry": true,
+    "topThirdClose": false
+  }
+]

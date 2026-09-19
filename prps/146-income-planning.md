@@ -44,9 +44,9 @@ Standard demo folder plus `scripts/generate/income-planning.js` and the `curve` 
 
 Template list, plus:
 
-- [ ] Worst-month answers are graded exactly against the labels.
-- [ ] Timing problems are distinguishable from shortfalls in the report, not merged.
-- [ ] The calendar chart shows both series and the gap, with a text alternative.
+- [x] Worst-month answers are graded exactly against the labels.
+- [x] Timing problems are distinguishable from shortfalls in the report, not merged.
+- [x] The calendar chart shows both series and the gap, with a text alternative.
 
 ## Video beats
 

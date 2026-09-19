@@ -17,7 +17,7 @@ Spot the customers who order on delivery and never take the parcel, before the n
 
 - `demos/cod-abuse/data.json` — 180 customers with 4 to 30 orders each, over 18 months. Per order: date, value, payment method, delivery outcome, courier attempts, reason code, address used, refund issued.
 - Planted: 14 serial refusers (high refusal rate on cash on delivery), 9 serial returners (accept then return inside the window), 7 address hoppers (same phone, many addresses), 6 promo abusers (first-order discount across accounts), and 10 innocents with one bad streak caused by a wrong address or a courier outage.
-- Labels: `{ customerId, pattern }`.
+- Labels: `{ customerId, pattern, restriction, kind, intent, courierAtFault }`.
 
 ## State
 
@@ -45,9 +45,9 @@ Standard demo folder plus `scripts/generate/cod-abuse.js`.
 
 Template list, plus:
 
-- [ ] The courier-outage week is in the data and the state, so the model can excuse it.
-- [ ] Restriction decisions are graded separately from pattern accuracy.
-- [ ] Money saved and money restricted are both shown; neither appears alone.
+- [x] The courier-outage week is in the data and the state, so the model can excuse it.
+- [x] Restriction decisions are graded separately from pattern accuracy.
+- [x] Money saved and money restricted are both shown; neither appears alone.
 
 ## Video beats
 
@@ -58,3 +58,7 @@ Template list, plus:
 ## Notes
 
 This is the example that makes non-fintech e-commerce people care; give it a clear before-and-after on the cost line.
+
+Implemented and recorded on 2026-09-19 with `jev-1.13.0`: 180 of 180 customer responses cached,
+96.1% pattern accuracy and 95.6% restriction accuracy. See `demos/cod-abuse/notes.md` for the full
+recorded-run audit and preserved error analysis.

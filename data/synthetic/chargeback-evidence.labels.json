@@ -1,0 +1,1082 @@
+[
+  {
+    "packetId": "CB-0001",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0002",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0003",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0004",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0005",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0006",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": true,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0007",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0008",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0009",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0010",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0011",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0012",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0013",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0014",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0015",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0016",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0017",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0018",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0019",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0020",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0021",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0022",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": true,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0023",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0024",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0025",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0026",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0027",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0028",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0029",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0030",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0031",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0032",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0033",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0034",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0035",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0036",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0037",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0038",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0039",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0040",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0041",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0042",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": true,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0043",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0044",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0045",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0046",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0047",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0048",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0049",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0050",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0051",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0052",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0053",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0054",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0055",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0056",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0057",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0058",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0059",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0060",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0061",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0062",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0063",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0064",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0065",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0066",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0067",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0068",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0069",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0070",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0071",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0072",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0073",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0074",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0075",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0076",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0077",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0078",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0079",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0080",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0081",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0082",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0083",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0084",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0085",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0086",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0087",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0088",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0089",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": true,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0090",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0091",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0092",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0093",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0094",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0095",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0096",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0097",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0098",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0099",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0100",
+    "outcome": "LOSS",
+    "missingDocument": "AVS_CVV",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0101",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0102",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0103",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0104",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0105",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0106",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0107",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0108",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0109",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0110",
+    "outcome": "LOSS",
+    "missingDocument": "TERMS_ACCEPTANCE",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0111",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0112",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0113",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": true,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0114",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "mixed",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0115",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0116",
+    "outcome": "WIN",
+    "missingDocument": "NONE",
+    "nextStep": "SUBMIT",
+    "deadlineRisk": false,
+    "kind": "strong",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0117",
+    "outcome": "LOSS",
+    "missingDocument": "REFUND_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  },
+  {
+    "packetId": "CB-0118",
+    "outcome": "LOSS",
+    "missingDocument": "COMMS_LOG",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0119",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "ACCEPT_LOSS",
+    "deadlineRisk": false,
+    "kind": "hopeless",
+    "flipsWithDocument": false
+  },
+  {
+    "packetId": "CB-0120",
+    "outcome": "LOSS",
+    "missingDocument": "DELIVERY_PROOF",
+    "nextStep": "GATHER_MORE",
+    "deadlineRisk": false,
+    "kind": "one-document-away",
+    "flipsWithDocument": true
+  }
+]

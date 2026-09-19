@@ -1,0 +1,2602 @@
+[
+  {
+    "sessionId": "SES-0001",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0002",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0003",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0004",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0005",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0006",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0007",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0008",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0009",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0010",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0011",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0012",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0013",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0014",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0015",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0016",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0017",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0018",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0019",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0020",
+    "takeover": false,
+    "shape": "TRAVEL",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0021",
+    "takeover": false,
+    "shape": "NEW_PHONE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0022",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0023",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0024",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0025",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0026",
+    "takeover": false,
+    "shape": "EMERGENCY_TRANSFER",
+    "strongestSignal": "BENEFICIARY_CHANGE",
+    "action": "STEP_UP",
+    "stepUpMethod": "CALL_BACK",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0027",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0028",
+    "takeover": true,
+    "shape": "INSIDER_FAMILIAR_DEVICE",
+    "strongestSignal": "BEHAVIOUR_SHIFT",
+    "action": "FREEZE_ACCOUNT",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0029",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0030",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0031",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0032",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0033",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0034",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0035",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0036",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0037",
+    "takeover": true,
+    "shape": "CREDENTIAL_STUFFING",
+    "strongestSignal": "CREDENTIAL_RESET_CHAIN",
+    "action": "BLOCK_SESSION",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0038",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0039",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0040",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0041",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0042",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0043",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0044",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0045",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0046",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0047",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0048",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0049",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0050",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0051",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0052",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0053",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0054",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0055",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0056",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0057",
+    "takeover": false,
+    "shape": "EMERGENCY_TRANSFER",
+    "strongestSignal": "BENEFICIARY_CHANGE",
+    "action": "STEP_UP",
+    "stepUpMethod": "CALL_BACK",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0058",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0059",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0060",
+    "takeover": false,
+    "shape": "SHARED_FAMILY_DEVICE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0061",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0062",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0063",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0064",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0065",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0066",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0067",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0068",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0069",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0070",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0071",
+    "takeover": false,
+    "shape": "SHARED_FAMILY_DEVICE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0072",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0073",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0074",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0075",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0076",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0077",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0078",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0079",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0080",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0081",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0082",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0083",
+    "takeover": true,
+    "shape": "SIM_SWAP",
+    "strongestSignal": "CREDENTIAL_RESET_CHAIN",
+    "action": "FREEZE_ACCOUNT",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0084",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0085",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0086",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0087",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0088",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0089",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0090",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0091",
+    "takeover": false,
+    "shape": "NEW_PHONE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0092",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0093",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0094",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0095",
+    "takeover": false,
+    "shape": "EMERGENCY_TRANSFER",
+    "strongestSignal": "BENEFICIARY_CHANGE",
+    "action": "STEP_UP",
+    "stepUpMethod": "CALL_BACK",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0096",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0097",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0098",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0099",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0100",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0101",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0102",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0103",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0104",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0105",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0106",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0107",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0108",
+    "takeover": true,
+    "shape": "INSIDER_FAMILIAR_DEVICE",
+    "strongestSignal": "BEHAVIOUR_SHIFT",
+    "action": "FREEZE_ACCOUNT",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0109",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0110",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0111",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0112",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0113",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0114",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0115",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0116",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0117",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0118",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0119",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0120",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0121",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0122",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0123",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0124",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0125",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0126",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0127",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0128",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0129",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0130",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0131",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0132",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0133",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0134",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0135",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0136",
+    "takeover": false,
+    "shape": "SHARED_FAMILY_DEVICE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0137",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0138",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0139",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0140",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0141",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0142",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0143",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0144",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0145",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0146",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0147",
+    "takeover": true,
+    "shape": "SESSION_HIJACK",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "BLOCK_SESSION",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0148",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0149",
+    "takeover": false,
+    "shape": "SHARED_FAMILY_DEVICE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0150",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0151",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0152",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0153",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0154",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0155",
+    "takeover": true,
+    "shape": "SIM_SWAP",
+    "strongestSignal": "CREDENTIAL_RESET_CHAIN",
+    "action": "FREEZE_ACCOUNT",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0156",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0157",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0158",
+    "takeover": false,
+    "shape": "NEW_PHONE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0159",
+    "takeover": true,
+    "shape": "CREDENTIAL_STUFFING",
+    "strongestSignal": "BENEFICIARY_CHANGE",
+    "action": "BLOCK_SESSION",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0160",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0161",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0162",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0163",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0164",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0165",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0166",
+    "takeover": true,
+    "shape": "SESSION_HIJACK",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "BLOCK_SESSION",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0167",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0168",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0169",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0170",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0171",
+    "takeover": false,
+    "shape": "EMERGENCY_TRANSFER",
+    "strongestSignal": "BENEFICIARY_CHANGE",
+    "action": "STEP_UP",
+    "stepUpMethod": "CALL_BACK",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0172",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0173",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0174",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0175",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0176",
+    "takeover": true,
+    "shape": "SIM_SWAP",
+    "strongestSignal": "CREDENTIAL_RESET_CHAIN",
+    "action": "FREEZE_ACCOUNT",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0177",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0178",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0179",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0180",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0181",
+    "takeover": true,
+    "shape": "SIM_SWAP",
+    "strongestSignal": "CREDENTIAL_RESET_CHAIN",
+    "action": "FREEZE_ACCOUNT",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0182",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0183",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0184",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0185",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0186",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0187",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0188",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0189",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0190",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0191",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0192",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0193",
+    "takeover": true,
+    "shape": "CREDENTIAL_STUFFING",
+    "strongestSignal": "CREDENTIAL_RESET_CHAIN",
+    "action": "BLOCK_SESSION",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0194",
+    "takeover": false,
+    "shape": "NEW_PHONE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0195",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0196",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0197",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0198",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0199",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0200",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0201",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0202",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0203",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0204",
+    "takeover": false,
+    "shape": "TRAVEL",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0205",
+    "takeover": true,
+    "shape": "SESSION_HIJACK",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "BLOCK_SESSION",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0206",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0207",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0208",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0209",
+    "takeover": true,
+    "shape": "CREDENTIAL_STUFFING",
+    "strongestSignal": "BENEFICIARY_CHANGE",
+    "action": "BLOCK_SESSION",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0210",
+    "takeover": true,
+    "shape": "INSIDER_FAMILIAR_DEVICE",
+    "strongestSignal": "BEHAVIOUR_SHIFT",
+    "action": "FREEZE_ACCOUNT",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": true,
+    "kind": "takeover"
+  },
+  {
+    "sessionId": "SES-0211",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0212",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0213",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0214",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0215",
+    "takeover": false,
+    "shape": "EMERGENCY_TRANSFER",
+    "strongestSignal": "BENEFICIARY_CHANGE",
+    "action": "STEP_UP",
+    "stepUpMethod": "CALL_BACK",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0216",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0217",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0218",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0219",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0220",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0221",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0222",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0223",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0224",
+    "takeover": false,
+    "shape": "TRAVEL",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0225",
+    "takeover": false,
+    "shape": "SHARED_FAMILY_DEVICE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0226",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0227",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0228",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0229",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0230",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0231",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0232",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0233",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0234",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0235",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0236",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0237",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0238",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0239",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0240",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0241",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0242",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0243",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0244",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0245",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0246",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0247",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0248",
+    "takeover": false,
+    "shape": "TRAVEL",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0249",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0250",
+    "takeover": false,
+    "shape": "TRAVEL",
+    "strongestSignal": "IMPOSSIBLE_TRAVEL",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0251",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0252",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0253",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0254",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0255",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0256",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0257",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0258",
+    "takeover": false,
+    "shape": "NEW_PHONE",
+    "strongestSignal": "NEW_DEVICE",
+    "action": "STEP_UP",
+    "stepUpMethod": "PUSH_APPROVAL",
+    "frictionJustified": true,
+    "kind": "innocent-lookalike"
+  },
+  {
+    "sessionId": "SES-0259",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  },
+  {
+    "sessionId": "SES-0260",
+    "takeover": false,
+    "shape": "NORMAL",
+    "strongestSignal": "NONE",
+    "action": "ALLOW",
+    "stepUpMethod": "NOT_NEEDED",
+    "frictionJustified": false,
+    "kind": "normal"
+  }
+]

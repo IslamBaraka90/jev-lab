@@ -40,5 +40,6 @@ export function assertDataset(dataset, where = 'dataset') {
 export function datasetSummary(dataset) {
   const count = `${dataset.items.length} item${dataset.items.length === 1 ? '' : 's'}`;
   if (dataset.class === 'cached-real') return `Cached · ${dataset.source} · fetched ${dataset.generatedAt} · ${count}`;
+  if (dataset.class === 'mixed') return `Mixed · cached-real and synthetic · seed ${dataset.seed} · generated ${dataset.generatedAt} · ${count}`;
   return `Synthetic · seed ${dataset.seed} · generated ${dataset.generatedAt} · ${count}`;
 }

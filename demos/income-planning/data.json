@@ -1,0 +1,5905 @@
+{
+  "id": "income-planning",
+  "class": "synthetic",
+  "generatedAt": "2026-09-19",
+  "seed": 1146,
+  "source": "scripts/generate/income-planning.js",
+  "context": {
+    "currency": "USD",
+    "horizon": "next twelve calendar months",
+    "interpretation": "A shortfall means annual resources are insufficient. Timing means annual income covers commitments but projected cash still falls below zero before income arrives. A negative monthly income-minus-commitment row is not an actionable gap when existing cash keeps projected cash non-negative. For a shortfall or timing problem, worst month means the most negative monthly_gap_usd, not a later month with the lowest accumulated cash. Cash drag means idle cash exceeds six average months of commitments. Cash-drag and no-problem accounts use no worst month.",
+    "researchOnly": "Synthetic teaching scenario only. This is not investment, tax or cash-management advice."
+  },
+  "items": [
+    {
+      "id": "IP-01",
+      "owner": "Household 01",
+      "startingCash": 4758,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1084,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3048,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5418,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3278,
+        "special": [
+          {
+            "month": "JAN",
+            "amount": 26899,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 36036,
+      "annualCommitments": 66235,
+      "averageMonthlyCommitment": 5519.58,
+      "cashMonthsAtStart": 0.9,
+      "minimumProjectedCash": -31713,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1084,
+          "commitment": 30177,
+          "gap": -29093,
+          "projectedCash": -24335
+        },
+        {
+          "month": "FEB",
+          "income": 1084,
+          "commitment": 3278,
+          "gap": -2194,
+          "projectedCash": -26529
+        },
+        {
+          "month": "MAR",
+          "income": 4132,
+          "commitment": 3278,
+          "gap": 854,
+          "projectedCash": -25675
+        },
+        {
+          "month": "APR",
+          "income": 1084,
+          "commitment": 3278,
+          "gap": -2194,
+          "projectedCash": -27869
+        },
+        {
+          "month": "MAY",
+          "income": 1084,
+          "commitment": 3278,
+          "gap": -2194,
+          "projectedCash": -30063
+        },
+        {
+          "month": "JUN",
+          "income": 9550,
+          "commitment": 3278,
+          "gap": 6272,
+          "projectedCash": -23791
+        },
+        {
+          "month": "JUL",
+          "income": 1084,
+          "commitment": 3278,
+          "gap": -2194,
+          "projectedCash": -25985
+        },
+        {
+          "month": "AUG",
+          "income": 1084,
+          "commitment": 3278,
+          "gap": -2194,
+          "projectedCash": -28179
+        },
+        {
+          "month": "SEP",
+          "income": 4132,
+          "commitment": 3278,
+          "gap": 854,
+          "projectedCash": -27325
+        },
+        {
+          "month": "OCT",
+          "income": 1084,
+          "commitment": 3278,
+          "gap": -2194,
+          "projectedCash": -29519
+        },
+        {
+          "month": "NOV",
+          "income": 1084,
+          "commitment": 3278,
+          "gap": -2194,
+          "projectedCash": -31713
+        },
+        {
+          "month": "DEC",
+          "income": 9550,
+          "commitment": 3278,
+          "gap": 6272,
+          "projectedCash": -25441
+        }
+      ]
+    },
+    {
+      "id": "IP-02",
+      "owner": "Household 02",
+      "startingCash": 3193,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 980,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3079,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5061,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2888,
+        "special": [
+          {
+            "month": "MAR",
+            "amount": 26378,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 34198,
+      "annualCommitments": 61034,
+      "averageMonthlyCommitment": 5086.17,
+      "cashMonthsAtStart": 0.6,
+      "minimumProjectedCash": -29875,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": 1285
+        },
+        {
+          "month": "FEB",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": -623
+        },
+        {
+          "month": "MAR",
+          "income": 4059,
+          "commitment": 29266,
+          "gap": -25207,
+          "projectedCash": -25830
+        },
+        {
+          "month": "APR",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": -27738
+        },
+        {
+          "month": "MAY",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": -29646
+        },
+        {
+          "month": "JUN",
+          "income": 9120,
+          "commitment": 2888,
+          "gap": 6232,
+          "projectedCash": -23414
+        },
+        {
+          "month": "JUL",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": -25322
+        },
+        {
+          "month": "AUG",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": -27230
+        },
+        {
+          "month": "SEP",
+          "income": 4059,
+          "commitment": 2888,
+          "gap": 1171,
+          "projectedCash": -26059
+        },
+        {
+          "month": "OCT",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": -27967
+        },
+        {
+          "month": "NOV",
+          "income": 980,
+          "commitment": 2888,
+          "gap": -1908,
+          "projectedCash": -29875
+        },
+        {
+          "month": "DEC",
+          "income": 9120,
+          "commitment": 2888,
+          "gap": 6232,
+          "projectedCash": -23643
+        }
+      ]
+    },
+    {
+      "id": "IP-03",
+      "owner": "Household 03",
+      "startingCash": 2078,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1114,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2981,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5313,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2857,
+        "special": [
+          {
+            "month": "MAY",
+            "amount": 25116,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 35918,
+      "annualCommitments": 59400,
+      "averageMonthlyCommitment": 4950,
+      "cashMonthsAtStart": 0.4,
+      "minimumProjectedCash": -28772,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1114,
+          "commitment": 2857,
+          "gap": -1743,
+          "projectedCash": 335
+        },
+        {
+          "month": "FEB",
+          "income": 1114,
+          "commitment": 2857,
+          "gap": -1743,
+          "projectedCash": -1408
+        },
+        {
+          "month": "MAR",
+          "income": 4095,
+          "commitment": 2857,
+          "gap": 1238,
+          "projectedCash": -170
+        },
+        {
+          "month": "APR",
+          "income": 1114,
+          "commitment": 2857,
+          "gap": -1743,
+          "projectedCash": -1913
+        },
+        {
+          "month": "MAY",
+          "income": 1114,
+          "commitment": 27973,
+          "gap": -26859,
+          "projectedCash": -28772
+        },
+        {
+          "month": "JUN",
+          "income": 9408,
+          "commitment": 2857,
+          "gap": 6551,
+          "projectedCash": -22221
+        },
+        {
+          "month": "JUL",
+          "income": 1114,
+          "commitment": 2857,
+          "gap": -1743,
+          "projectedCash": -23964
+        },
+        {
+          "month": "AUG",
+          "income": 1114,
+          "commitment": 2857,
+          "gap": -1743,
+          "projectedCash": -25707
+        },
+        {
+          "month": "SEP",
+          "income": 4095,
+          "commitment": 2857,
+          "gap": 1238,
+          "projectedCash": -24469
+        },
+        {
+          "month": "OCT",
+          "income": 1114,
+          "commitment": 2857,
+          "gap": -1743,
+          "projectedCash": -26212
+        },
+        {
+          "month": "NOV",
+          "income": 1114,
+          "commitment": 2857,
+          "gap": -1743,
+          "projectedCash": -27955
+        },
+        {
+          "month": "DEC",
+          "income": 9408,
+          "commitment": 2857,
+          "gap": 6551,
+          "projectedCash": -21404
+        }
+      ]
+    },
+    {
+      "id": "IP-04",
+      "owner": "Household 04",
+      "startingCash": 3530,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1083,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2940,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5378,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3231,
+        "special": [
+          {
+            "month": "JUL",
+            "amount": 25847,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 35512,
+      "annualCommitments": 64619,
+      "averageMonthlyCommitment": 5384.92,
+      "cashMonthsAtStart": 0.7,
+      "minimumProjectedCash": -31747,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1083,
+          "commitment": 3231,
+          "gap": -2148,
+          "projectedCash": 1382
+        },
+        {
+          "month": "FEB",
+          "income": 1083,
+          "commitment": 3231,
+          "gap": -2148,
+          "projectedCash": -766
+        },
+        {
+          "month": "MAR",
+          "income": 4023,
+          "commitment": 3231,
+          "gap": 792,
+          "projectedCash": 26
+        },
+        {
+          "month": "APR",
+          "income": 1083,
+          "commitment": 3231,
+          "gap": -2148,
+          "projectedCash": -2122
+        },
+        {
+          "month": "MAY",
+          "income": 1083,
+          "commitment": 3231,
+          "gap": -2148,
+          "projectedCash": -4270
+        },
+        {
+          "month": "JUN",
+          "income": 9401,
+          "commitment": 3231,
+          "gap": 6170,
+          "projectedCash": 1900
+        },
+        {
+          "month": "JUL",
+          "income": 1083,
+          "commitment": 29078,
+          "gap": -27995,
+          "projectedCash": -26095
+        },
+        {
+          "month": "AUG",
+          "income": 1083,
+          "commitment": 3231,
+          "gap": -2148,
+          "projectedCash": -28243
+        },
+        {
+          "month": "SEP",
+          "income": 4023,
+          "commitment": 3231,
+          "gap": 792,
+          "projectedCash": -27451
+        },
+        {
+          "month": "OCT",
+          "income": 1083,
+          "commitment": 3231,
+          "gap": -2148,
+          "projectedCash": -29599
+        },
+        {
+          "month": "NOV",
+          "income": 1083,
+          "commitment": 3231,
+          "gap": -2148,
+          "projectedCash": -31747
+        },
+        {
+          "month": "DEC",
+          "income": 9401,
+          "commitment": 3231,
+          "gap": 6170,
+          "projectedCash": -25577
+        }
+      ]
+    },
+    {
+      "id": "IP-05",
+      "owner": "Household 05",
+      "startingCash": 2839,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1060,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2865,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6011,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2703,
+        "special": [
+          {
+            "month": "SEP",
+            "amount": 29257,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 36202,
+      "annualCommitments": 61693,
+      "averageMonthlyCommitment": 5141.08,
+      "cashMonthsAtStart": 0.6,
+      "minimumProjectedCash": -29885,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": 1196
+        },
+        {
+          "month": "FEB",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": -447
+        },
+        {
+          "month": "MAR",
+          "income": 3925,
+          "commitment": 2703,
+          "gap": 1222,
+          "projectedCash": 775
+        },
+        {
+          "month": "APR",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": -868
+        },
+        {
+          "month": "MAY",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": -2511
+        },
+        {
+          "month": "JUN",
+          "income": 9936,
+          "commitment": 2703,
+          "gap": 7233,
+          "projectedCash": 4722
+        },
+        {
+          "month": "JUL",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": 3079
+        },
+        {
+          "month": "AUG",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": 1436
+        },
+        {
+          "month": "SEP",
+          "income": 3925,
+          "commitment": 31960,
+          "gap": -28035,
+          "projectedCash": -26599
+        },
+        {
+          "month": "OCT",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": -28242
+        },
+        {
+          "month": "NOV",
+          "income": 1060,
+          "commitment": 2703,
+          "gap": -1643,
+          "projectedCash": -29885
+        },
+        {
+          "month": "DEC",
+          "income": 9936,
+          "commitment": 2703,
+          "gap": 7233,
+          "projectedCash": -22652
+        }
+      ]
+    },
+    {
+      "id": "IP-06",
+      "owner": "Household 06",
+      "startingCash": 4174,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1036,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2765,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5247,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2850,
+        "special": [
+          {
+            "month": "JAN",
+            "amount": 25611,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 33986,
+      "annualCommitments": 59811,
+      "averageMonthlyCommitment": 4984.25,
+      "cashMonthsAtStart": 0.8,
+      "minimumProjectedCash": -27849,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1036,
+          "commitment": 28461,
+          "gap": -27425,
+          "projectedCash": -23251
+        },
+        {
+          "month": "FEB",
+          "income": 1036,
+          "commitment": 2850,
+          "gap": -1814,
+          "projectedCash": -25065
+        },
+        {
+          "month": "MAR",
+          "income": 3801,
+          "commitment": 2850,
+          "gap": 951,
+          "projectedCash": -24114
+        },
+        {
+          "month": "APR",
+          "income": 1036,
+          "commitment": 2850,
+          "gap": -1814,
+          "projectedCash": -25928
+        },
+        {
+          "month": "MAY",
+          "income": 1036,
+          "commitment": 2850,
+          "gap": -1814,
+          "projectedCash": -27742
+        },
+        {
+          "month": "JUN",
+          "income": 9048,
+          "commitment": 2850,
+          "gap": 6198,
+          "projectedCash": -21544
+        },
+        {
+          "month": "JUL",
+          "income": 1036,
+          "commitment": 2850,
+          "gap": -1814,
+          "projectedCash": -23358
+        },
+        {
+          "month": "AUG",
+          "income": 1036,
+          "commitment": 2850,
+          "gap": -1814,
+          "projectedCash": -25172
+        },
+        {
+          "month": "SEP",
+          "income": 3801,
+          "commitment": 2850,
+          "gap": 951,
+          "projectedCash": -24221
+        },
+        {
+          "month": "OCT",
+          "income": 1036,
+          "commitment": 2850,
+          "gap": -1814,
+          "projectedCash": -26035
+        },
+        {
+          "month": "NOV",
+          "income": 1036,
+          "commitment": 2850,
+          "gap": -1814,
+          "projectedCash": -27849
+        },
+        {
+          "month": "DEC",
+          "income": 9048,
+          "commitment": 2850,
+          "gap": 6198,
+          "projectedCash": -21651
+        }
+      ]
+    },
+    {
+      "id": "IP-07",
+      "owner": "Household 07",
+      "startingCash": 3392,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1095,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3262,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5628,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3149,
+        "special": [
+          {
+            "month": "MAR",
+            "amount": 29142,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 37444,
+      "annualCommitments": 66930,
+      "averageMonthlyCommitment": 5577.5,
+      "cashMonthsAtStart": 0.6,
+      "minimumProjectedCash": -32930,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": 1338
+        },
+        {
+          "month": "FEB",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": -716
+        },
+        {
+          "month": "MAR",
+          "income": 4357,
+          "commitment": 32291,
+          "gap": -27934,
+          "projectedCash": -28650
+        },
+        {
+          "month": "APR",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": -30704
+        },
+        {
+          "month": "MAY",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": -32758
+        },
+        {
+          "month": "JUN",
+          "income": 9985,
+          "commitment": 3149,
+          "gap": 6836,
+          "projectedCash": -25922
+        },
+        {
+          "month": "JUL",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": -27976
+        },
+        {
+          "month": "AUG",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": -30030
+        },
+        {
+          "month": "SEP",
+          "income": 4357,
+          "commitment": 3149,
+          "gap": 1208,
+          "projectedCash": -28822
+        },
+        {
+          "month": "OCT",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": -30876
+        },
+        {
+          "month": "NOV",
+          "income": 1095,
+          "commitment": 3149,
+          "gap": -2054,
+          "projectedCash": -32930
+        },
+        {
+          "month": "DEC",
+          "income": 9985,
+          "commitment": 3149,
+          "gap": 6836,
+          "projectedCash": -26094
+        }
+      ]
+    },
+    {
+      "id": "IP-08",
+      "owner": "Household 08",
+      "startingCash": 2366,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 966,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2618,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5175,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3128,
+        "special": [
+          {
+            "month": "MAY",
+            "amount": 29861,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 32414,
+      "annualCommitments": 67397,
+      "averageMonthlyCommitment": 5616.42,
+      "cashMonthsAtStart": 0.4,
+      "minimumProjectedCash": -38248,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 966,
+          "commitment": 3128,
+          "gap": -2162,
+          "projectedCash": 204
+        },
+        {
+          "month": "FEB",
+          "income": 966,
+          "commitment": 3128,
+          "gap": -2162,
+          "projectedCash": -1958
+        },
+        {
+          "month": "MAR",
+          "income": 3584,
+          "commitment": 3128,
+          "gap": 456,
+          "projectedCash": -1502
+        },
+        {
+          "month": "APR",
+          "income": 966,
+          "commitment": 3128,
+          "gap": -2162,
+          "projectedCash": -3664
+        },
+        {
+          "month": "MAY",
+          "income": 966,
+          "commitment": 32989,
+          "gap": -32023,
+          "projectedCash": -35687
+        },
+        {
+          "month": "JUN",
+          "income": 8759,
+          "commitment": 3128,
+          "gap": 5631,
+          "projectedCash": -30056
+        },
+        {
+          "month": "JUL",
+          "income": 966,
+          "commitment": 3128,
+          "gap": -2162,
+          "projectedCash": -32218
+        },
+        {
+          "month": "AUG",
+          "income": 966,
+          "commitment": 3128,
+          "gap": -2162,
+          "projectedCash": -34380
+        },
+        {
+          "month": "SEP",
+          "income": 3584,
+          "commitment": 3128,
+          "gap": 456,
+          "projectedCash": -33924
+        },
+        {
+          "month": "OCT",
+          "income": 966,
+          "commitment": 3128,
+          "gap": -2162,
+          "projectedCash": -36086
+        },
+        {
+          "month": "NOV",
+          "income": 966,
+          "commitment": 3128,
+          "gap": -2162,
+          "projectedCash": -38248
+        },
+        {
+          "month": "DEC",
+          "income": 8759,
+          "commitment": 3128,
+          "gap": 5631,
+          "projectedCash": -32617
+        }
+      ]
+    },
+    {
+      "id": "IP-09",
+      "owner": "Household 09",
+      "startingCash": 2662,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 935,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2741,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 4810,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2722,
+        "special": [
+          {
+            "month": "JUL",
+            "amount": 27799,
+            "purpose": "property instalment and tax payment"
+          }
+        ]
+      },
+      "annualIncome": 31804,
+      "annualCommitments": 60463,
+      "averageMonthlyCommitment": 5038.58,
+      "cashMonthsAtStart": 0.5,
+      "minimumProjectedCash": -31761,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 935,
+          "commitment": 2722,
+          "gap": -1787,
+          "projectedCash": 875
+        },
+        {
+          "month": "FEB",
+          "income": 935,
+          "commitment": 2722,
+          "gap": -1787,
+          "projectedCash": -912
+        },
+        {
+          "month": "MAR",
+          "income": 3676,
+          "commitment": 2722,
+          "gap": 954,
+          "projectedCash": 42
+        },
+        {
+          "month": "APR",
+          "income": 935,
+          "commitment": 2722,
+          "gap": -1787,
+          "projectedCash": -1745
+        },
+        {
+          "month": "MAY",
+          "income": 935,
+          "commitment": 2722,
+          "gap": -1787,
+          "projectedCash": -3532
+        },
+        {
+          "month": "JUN",
+          "income": 8486,
+          "commitment": 2722,
+          "gap": 5764,
+          "projectedCash": 2232
+        },
+        {
+          "month": "JUL",
+          "income": 935,
+          "commitment": 30521,
+          "gap": -29586,
+          "projectedCash": -27354
+        },
+        {
+          "month": "AUG",
+          "income": 935,
+          "commitment": 2722,
+          "gap": -1787,
+          "projectedCash": -29141
+        },
+        {
+          "month": "SEP",
+          "income": 3676,
+          "commitment": 2722,
+          "gap": 954,
+          "projectedCash": -28187
+        },
+        {
+          "month": "OCT",
+          "income": 935,
+          "commitment": 2722,
+          "gap": -1787,
+          "projectedCash": -29974
+        },
+        {
+          "month": "NOV",
+          "income": 935,
+          "commitment": 2722,
+          "gap": -1787,
+          "projectedCash": -31761
+        },
+        {
+          "month": "DEC",
+          "income": 8486,
+          "commitment": 2722,
+          "gap": 5764,
+          "projectedCash": -25997
+        }
+      ]
+    },
+    {
+      "id": "IP-10",
+      "owner": "Household 10",
+      "startingCash": 3813,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1826,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 6232,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 11731,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3204,
+        "special": [
+          {
+            "month": "FEB",
+            "amount": 23312,
+            "purpose": "school fee due before the large coupon"
+          }
+        ]
+      },
+      "annualIncome": 70302,
+      "annualCommitments": 61760,
+      "averageMonthlyCommitment": 5146.67,
+      "cashMonthsAtStart": 0.7,
+      "minimumProjectedCash": -22255,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1826,
+          "commitment": 3204,
+          "gap": -1378,
+          "projectedCash": 2435
+        },
+        {
+          "month": "FEB",
+          "income": 1826,
+          "commitment": 26516,
+          "gap": -24690,
+          "projectedCash": -22255
+        },
+        {
+          "month": "MAR",
+          "income": 8058,
+          "commitment": 3204,
+          "gap": 4854,
+          "projectedCash": -17401
+        },
+        {
+          "month": "APR",
+          "income": 1826,
+          "commitment": 3204,
+          "gap": -1378,
+          "projectedCash": -18779
+        },
+        {
+          "month": "MAY",
+          "income": 1826,
+          "commitment": 3204,
+          "gap": -1378,
+          "projectedCash": -20157
+        },
+        {
+          "month": "JUN",
+          "income": 19789,
+          "commitment": 3204,
+          "gap": 16585,
+          "projectedCash": -3572
+        },
+        {
+          "month": "JUL",
+          "income": 1826,
+          "commitment": 3204,
+          "gap": -1378,
+          "projectedCash": -4950
+        },
+        {
+          "month": "AUG",
+          "income": 1826,
+          "commitment": 3204,
+          "gap": -1378,
+          "projectedCash": -6328
+        },
+        {
+          "month": "SEP",
+          "income": 8058,
+          "commitment": 3204,
+          "gap": 4854,
+          "projectedCash": -1474
+        },
+        {
+          "month": "OCT",
+          "income": 1826,
+          "commitment": 3204,
+          "gap": -1378,
+          "projectedCash": -2852
+        },
+        {
+          "month": "NOV",
+          "income": 1826,
+          "commitment": 3204,
+          "gap": -1378,
+          "projectedCash": -4230
+        },
+        {
+          "month": "DEC",
+          "income": 19789,
+          "commitment": 3204,
+          "gap": 16585,
+          "projectedCash": 12355
+        }
+      ]
+    },
+    {
+      "id": "IP-11",
+      "owner": "Household 11",
+      "startingCash": 3098,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1644,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 5111,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 10669,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2767,
+        "special": [
+          {
+            "month": "APR",
+            "amount": 23116,
+            "purpose": "school fee due before the large coupon"
+          }
+        ]
+      },
+      "annualIncome": 61510,
+      "annualCommitments": 56320,
+      "averageMonthlyCommitment": 4693.33,
+      "cashMonthsAtStart": 0.7,
+      "minimumProjectedCash": -20522,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1644,
+          "commitment": 2767,
+          "gap": -1123,
+          "projectedCash": 1975
+        },
+        {
+          "month": "FEB",
+          "income": 1644,
+          "commitment": 2767,
+          "gap": -1123,
+          "projectedCash": 852
+        },
+        {
+          "month": "MAR",
+          "income": 6755,
+          "commitment": 2767,
+          "gap": 3988,
+          "projectedCash": 4840
+        },
+        {
+          "month": "APR",
+          "income": 1644,
+          "commitment": 25883,
+          "gap": -24239,
+          "projectedCash": -19399
+        },
+        {
+          "month": "MAY",
+          "income": 1644,
+          "commitment": 2767,
+          "gap": -1123,
+          "projectedCash": -20522
+        },
+        {
+          "month": "JUN",
+          "income": 17424,
+          "commitment": 2767,
+          "gap": 14657,
+          "projectedCash": -5865
+        },
+        {
+          "month": "JUL",
+          "income": 1644,
+          "commitment": 2767,
+          "gap": -1123,
+          "projectedCash": -6988
+        },
+        {
+          "month": "AUG",
+          "income": 1644,
+          "commitment": 2767,
+          "gap": -1123,
+          "projectedCash": -8111
+        },
+        {
+          "month": "SEP",
+          "income": 6755,
+          "commitment": 2767,
+          "gap": 3988,
+          "projectedCash": -4123
+        },
+        {
+          "month": "OCT",
+          "income": 1644,
+          "commitment": 2767,
+          "gap": -1123,
+          "projectedCash": -5246
+        },
+        {
+          "month": "NOV",
+          "income": 1644,
+          "commitment": 2767,
+          "gap": -1123,
+          "projectedCash": -6369
+        },
+        {
+          "month": "DEC",
+          "income": 17424,
+          "commitment": 2767,
+          "gap": 14657,
+          "projectedCash": 8288
+        }
+      ]
+    },
+    {
+      "id": "IP-12",
+      "owner": "Household 12",
+      "startingCash": 3711,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 2031,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 5639,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 10059,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2761,
+        "special": [
+          {
+            "month": "JUN",
+            "amount": 23052,
+            "purpose": "school fee due before the large coupon"
+          }
+        ]
+      },
+      "annualIncome": 67046,
+      "annualCommitments": 56184,
+      "averageMonthlyCommitment": 4682,
+      "cashMonthsAtStart": 0.8,
+      "minimumProjectedCash": -3844,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": 2981
+        },
+        {
+          "month": "FEB",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": 2251
+        },
+        {
+          "month": "MAR",
+          "income": 7670,
+          "commitment": 2761,
+          "gap": 4909,
+          "projectedCash": 7160
+        },
+        {
+          "month": "APR",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": 6430
+        },
+        {
+          "month": "MAY",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": 5700
+        },
+        {
+          "month": "JUN",
+          "income": 17729,
+          "commitment": 25813,
+          "gap": -8084,
+          "projectedCash": -2384
+        },
+        {
+          "month": "JUL",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": -3114
+        },
+        {
+          "month": "AUG",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": -3844
+        },
+        {
+          "month": "SEP",
+          "income": 7670,
+          "commitment": 2761,
+          "gap": 4909,
+          "projectedCash": 1065
+        },
+        {
+          "month": "OCT",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": 335
+        },
+        {
+          "month": "NOV",
+          "income": 2031,
+          "commitment": 2761,
+          "gap": -730,
+          "projectedCash": -395
+        },
+        {
+          "month": "DEC",
+          "income": 17729,
+          "commitment": 2761,
+          "gap": 14968,
+          "projectedCash": 14573
+        }
+      ]
+    },
+    {
+      "id": "IP-13",
+      "owner": "Household 13",
+      "startingCash": 3419,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1784,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 5590,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 10289,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3245,
+        "special": [
+          {
+            "month": "AUG",
+            "amount": 24406,
+            "purpose": "school fee due before the large coupon"
+          }
+        ]
+      },
+      "annualIncome": 64346,
+      "annualCommitments": 63346,
+      "averageMonthlyCommitment": 5278.83,
+      "cashMonthsAtStart": 0.6,
+      "minimumProjectedCash": -11206,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1784,
+          "commitment": 3245,
+          "gap": -1461,
+          "projectedCash": 1958
+        },
+        {
+          "month": "FEB",
+          "income": 1784,
+          "commitment": 3245,
+          "gap": -1461,
+          "projectedCash": 497
+        },
+        {
+          "month": "MAR",
+          "income": 7374,
+          "commitment": 3245,
+          "gap": 4129,
+          "projectedCash": 4626
+        },
+        {
+          "month": "APR",
+          "income": 1784,
+          "commitment": 3245,
+          "gap": -1461,
+          "projectedCash": 3165
+        },
+        {
+          "month": "MAY",
+          "income": 1784,
+          "commitment": 3245,
+          "gap": -1461,
+          "projectedCash": 1704
+        },
+        {
+          "month": "JUN",
+          "income": 17663,
+          "commitment": 3245,
+          "gap": 14418,
+          "projectedCash": 16122
+        },
+        {
+          "month": "JUL",
+          "income": 1784,
+          "commitment": 3245,
+          "gap": -1461,
+          "projectedCash": 14661
+        },
+        {
+          "month": "AUG",
+          "income": 1784,
+          "commitment": 27651,
+          "gap": -25867,
+          "projectedCash": -11206
+        },
+        {
+          "month": "SEP",
+          "income": 7374,
+          "commitment": 3245,
+          "gap": 4129,
+          "projectedCash": -7077
+        },
+        {
+          "month": "OCT",
+          "income": 1784,
+          "commitment": 3245,
+          "gap": -1461,
+          "projectedCash": -8538
+        },
+        {
+          "month": "NOV",
+          "income": 1784,
+          "commitment": 3245,
+          "gap": -1461,
+          "projectedCash": -9999
+        },
+        {
+          "month": "DEC",
+          "income": 17663,
+          "commitment": 3245,
+          "gap": 14418,
+          "projectedCash": 4419
+        }
+      ]
+    },
+    {
+      "id": "IP-14",
+      "owner": "Household 14",
+      "startingCash": 3786,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1959,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 6255,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 9513,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2748,
+        "special": [
+          {
+            "month": "OCT",
+            "amount": 23821,
+            "purpose": "school fee due before the large coupon"
+          }
+        ]
+      },
+      "annualIncome": 67554,
+      "annualCommitments": 56797,
+      "averageMonthlyCommitment": 4733.08,
+      "cashMonthsAtStart": 0.8,
+      "minimumProjectedCash": -436,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1959,
+          "commitment": 2748,
+          "gap": -789,
+          "projectedCash": 2997
+        },
+        {
+          "month": "FEB",
+          "income": 1959,
+          "commitment": 2748,
+          "gap": -789,
+          "projectedCash": 2208
+        },
+        {
+          "month": "MAR",
+          "income": 8214,
+          "commitment": 2748,
+          "gap": 5466,
+          "projectedCash": 7674
+        },
+        {
+          "month": "APR",
+          "income": 1959,
+          "commitment": 2748,
+          "gap": -789,
+          "projectedCash": 6885
+        },
+        {
+          "month": "MAY",
+          "income": 1959,
+          "commitment": 2748,
+          "gap": -789,
+          "projectedCash": 6096
+        },
+        {
+          "month": "JUN",
+          "income": 17727,
+          "commitment": 2748,
+          "gap": 14979,
+          "projectedCash": 21075
+        },
+        {
+          "month": "JUL",
+          "income": 1959,
+          "commitment": 2748,
+          "gap": -789,
+          "projectedCash": 20286
+        },
+        {
+          "month": "AUG",
+          "income": 1959,
+          "commitment": 2748,
+          "gap": -789,
+          "projectedCash": 19497
+        },
+        {
+          "month": "SEP",
+          "income": 8214,
+          "commitment": 2748,
+          "gap": 5466,
+          "projectedCash": 24963
+        },
+        {
+          "month": "OCT",
+          "income": 1959,
+          "commitment": 26569,
+          "gap": -24610,
+          "projectedCash": 353
+        },
+        {
+          "month": "NOV",
+          "income": 1959,
+          "commitment": 2748,
+          "gap": -789,
+          "projectedCash": -436
+        },
+        {
+          "month": "DEC",
+          "income": 17727,
+          "commitment": 2748,
+          "gap": 14979,
+          "projectedCash": 14543
+        }
+      ]
+    },
+    {
+      "id": "IP-15",
+      "owner": "Household 15",
+      "startingCash": 3700,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1780,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 5812,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 10754,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3266,
+        "special": [
+          {
+            "month": "FEB",
+            "amount": 22367,
+            "purpose": "school fee due before the large coupon"
+          }
+        ]
+      },
+      "annualIncome": 66116,
+      "annualCommitments": 61559,
+      "averageMonthlyCommitment": 5129.92,
+      "cashMonthsAtStart": 0.7,
+      "minimumProjectedCash": -21639,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1780,
+          "commitment": 3266,
+          "gap": -1486,
+          "projectedCash": 2214
+        },
+        {
+          "month": "FEB",
+          "income": 1780,
+          "commitment": 25633,
+          "gap": -23853,
+          "projectedCash": -21639
+        },
+        {
+          "month": "MAR",
+          "income": 7592,
+          "commitment": 3266,
+          "gap": 4326,
+          "projectedCash": -17313
+        },
+        {
+          "month": "APR",
+          "income": 1780,
+          "commitment": 3266,
+          "gap": -1486,
+          "projectedCash": -18799
+        },
+        {
+          "month": "MAY",
+          "income": 1780,
+          "commitment": 3266,
+          "gap": -1486,
+          "projectedCash": -20285
+        },
+        {
+          "month": "JUN",
+          "income": 18346,
+          "commitment": 3266,
+          "gap": 15080,
+          "projectedCash": -5205
+        },
+        {
+          "month": "JUL",
+          "income": 1780,
+          "commitment": 3266,
+          "gap": -1486,
+          "projectedCash": -6691
+        },
+        {
+          "month": "AUG",
+          "income": 1780,
+          "commitment": 3266,
+          "gap": -1486,
+          "projectedCash": -8177
+        },
+        {
+          "month": "SEP",
+          "income": 7592,
+          "commitment": 3266,
+          "gap": 4326,
+          "projectedCash": -3851
+        },
+        {
+          "month": "OCT",
+          "income": 1780,
+          "commitment": 3266,
+          "gap": -1486,
+          "projectedCash": -5337
+        },
+        {
+          "month": "NOV",
+          "income": 1780,
+          "commitment": 3266,
+          "gap": -1486,
+          "projectedCash": -6823
+        },
+        {
+          "month": "DEC",
+          "income": 18346,
+          "commitment": 3266,
+          "gap": 15080,
+          "projectedCash": 8257
+        }
+      ]
+    },
+    {
+      "id": "IP-16",
+      "owner": "Household 16",
+      "startingCash": 155890,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1314,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3213,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 7079,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3118,
+        "special": []
+      },
+      "annualIncome": 42778,
+      "annualCommitments": 37416,
+      "averageMonthlyCommitment": 3118,
+      "cashMonthsAtStart": 50,
+      "minimumProjectedCash": 150083,
+      "saleRule": "Do not sell; invest only cash not needed within six months.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 154086
+        },
+        {
+          "month": "FEB",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 152282
+        },
+        {
+          "month": "MAR",
+          "income": 4527,
+          "commitment": 3118,
+          "gap": 1409,
+          "projectedCash": 153691
+        },
+        {
+          "month": "APR",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 151887
+        },
+        {
+          "month": "MAY",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 150083
+        },
+        {
+          "month": "JUN",
+          "income": 11606,
+          "commitment": 3118,
+          "gap": 8488,
+          "projectedCash": 158571
+        },
+        {
+          "month": "JUL",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 156767
+        },
+        {
+          "month": "AUG",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 154963
+        },
+        {
+          "month": "SEP",
+          "income": 4527,
+          "commitment": 3118,
+          "gap": 1409,
+          "projectedCash": 156372
+        },
+        {
+          "month": "OCT",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 154568
+        },
+        {
+          "month": "NOV",
+          "income": 1314,
+          "commitment": 3118,
+          "gap": -1804,
+          "projectedCash": 152764
+        },
+        {
+          "month": "DEC",
+          "income": 11606,
+          "commitment": 3118,
+          "gap": 8488,
+          "projectedCash": 161252
+        }
+      ]
+    },
+    {
+      "id": "IP-17",
+      "owner": "Household 17",
+      "startingCash": 129139,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1316,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 4048,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 7483,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 3251,
+        "special": []
+      },
+      "annualIncome": 46950,
+      "annualCommitments": 39012,
+      "averageMonthlyCommitment": 3251,
+      "cashMonthsAtStart": 39.7,
+      "minimumProjectedCash": 123512,
+      "saleRule": "Do not sell; invest only cash not needed within six months.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 127204
+        },
+        {
+          "month": "FEB",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 125269
+        },
+        {
+          "month": "MAR",
+          "income": 5364,
+          "commitment": 3251,
+          "gap": 2113,
+          "projectedCash": 127382
+        },
+        {
+          "month": "APR",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 125447
+        },
+        {
+          "month": "MAY",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 123512
+        },
+        {
+          "month": "JUN",
+          "income": 12847,
+          "commitment": 3251,
+          "gap": 9596,
+          "projectedCash": 133108
+        },
+        {
+          "month": "JUL",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 131173
+        },
+        {
+          "month": "AUG",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 129238
+        },
+        {
+          "month": "SEP",
+          "income": 5364,
+          "commitment": 3251,
+          "gap": 2113,
+          "projectedCash": 131351
+        },
+        {
+          "month": "OCT",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 129416
+        },
+        {
+          "month": "NOV",
+          "income": 1316,
+          "commitment": 3251,
+          "gap": -1935,
+          "projectedCash": 127481
+        },
+        {
+          "month": "DEC",
+          "income": 12847,
+          "commitment": 3251,
+          "gap": 9596,
+          "projectedCash": 137077
+        }
+      ]
+    },
+    {
+      "id": "IP-18",
+      "owner": "Household 18",
+      "startingCash": 160478,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1278,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3688,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6781,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2759,
+        "special": []
+      },
+      "annualIncome": 43650,
+      "annualCommitments": 33108,
+      "averageMonthlyCommitment": 2759,
+      "cashMonthsAtStart": 58.2,
+      "minimumProjectedCash": 156761,
+      "saleRule": "Do not sell; invest only cash not needed within six months.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 158997
+        },
+        {
+          "month": "FEB",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 157516
+        },
+        {
+          "month": "MAR",
+          "income": 4966,
+          "commitment": 2759,
+          "gap": 2207,
+          "projectedCash": 159723
+        },
+        {
+          "month": "APR",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 158242
+        },
+        {
+          "month": "MAY",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 156761
+        },
+        {
+          "month": "JUN",
+          "income": 11747,
+          "commitment": 2759,
+          "gap": 8988,
+          "projectedCash": 165749
+        },
+        {
+          "month": "JUL",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 164268
+        },
+        {
+          "month": "AUG",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 162787
+        },
+        {
+          "month": "SEP",
+          "income": 4966,
+          "commitment": 2759,
+          "gap": 2207,
+          "projectedCash": 164994
+        },
+        {
+          "month": "OCT",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 163513
+        },
+        {
+          "month": "NOV",
+          "income": 1278,
+          "commitment": 2759,
+          "gap": -1481,
+          "projectedCash": 162032
+        },
+        {
+          "month": "DEC",
+          "income": 11747,
+          "commitment": 2759,
+          "gap": 8988,
+          "projectedCash": 171020
+        }
+      ]
+    },
+    {
+      "id": "IP-19",
+      "owner": "Household 19",
+      "startingCash": 136310,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1366,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3206,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 7156,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2931,
+        "special": []
+      },
+      "annualIncome": 43528,
+      "annualCommitments": 35172,
+      "averageMonthlyCommitment": 2931,
+      "cashMonthsAtStart": 46.5,
+      "minimumProjectedCash": 131691,
+      "saleRule": "Do not sell; invest only cash not needed within six months.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 134745
+        },
+        {
+          "month": "FEB",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 133180
+        },
+        {
+          "month": "MAR",
+          "income": 4572,
+          "commitment": 2931,
+          "gap": 1641,
+          "projectedCash": 134821
+        },
+        {
+          "month": "APR",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 133256
+        },
+        {
+          "month": "MAY",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 131691
+        },
+        {
+          "month": "JUN",
+          "income": 11728,
+          "commitment": 2931,
+          "gap": 8797,
+          "projectedCash": 140488
+        },
+        {
+          "month": "JUL",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 138923
+        },
+        {
+          "month": "AUG",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 137358
+        },
+        {
+          "month": "SEP",
+          "income": 4572,
+          "commitment": 2931,
+          "gap": 1641,
+          "projectedCash": 138999
+        },
+        {
+          "month": "OCT",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 137434
+        },
+        {
+          "month": "NOV",
+          "income": 1366,
+          "commitment": 2931,
+          "gap": -1565,
+          "projectedCash": 135869
+        },
+        {
+          "month": "DEC",
+          "income": 11728,
+          "commitment": 2931,
+          "gap": 8797,
+          "projectedCash": 144666
+        }
+      ]
+    },
+    {
+      "id": "IP-20",
+      "owner": "Household 20",
+      "startingCash": 135871,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1128,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3180,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6825,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2819,
+        "special": []
+      },
+      "annualIncome": 39906,
+      "annualCommitments": 33828,
+      "averageMonthlyCommitment": 2819,
+      "cashMonthsAtStart": 48.2,
+      "minimumProjectedCash": 130596,
+      "saleRule": "Do not sell; invest only cash not needed within six months.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 134180
+        },
+        {
+          "month": "FEB",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 132489
+        },
+        {
+          "month": "MAR",
+          "income": 4308,
+          "commitment": 2819,
+          "gap": 1489,
+          "projectedCash": 133978
+        },
+        {
+          "month": "APR",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 132287
+        },
+        {
+          "month": "MAY",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 130596
+        },
+        {
+          "month": "JUN",
+          "income": 11133,
+          "commitment": 2819,
+          "gap": 8314,
+          "projectedCash": 138910
+        },
+        {
+          "month": "JUL",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 137219
+        },
+        {
+          "month": "AUG",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 135528
+        },
+        {
+          "month": "SEP",
+          "income": 4308,
+          "commitment": 2819,
+          "gap": 1489,
+          "projectedCash": 137017
+        },
+        {
+          "month": "OCT",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 135326
+        },
+        {
+          "month": "NOV",
+          "income": 1128,
+          "commitment": 2819,
+          "gap": -1691,
+          "projectedCash": 133635
+        },
+        {
+          "month": "DEC",
+          "income": 11133,
+          "commitment": 2819,
+          "gap": 8314,
+          "projectedCash": 141949
+        }
+      ]
+    },
+    {
+      "id": "IP-21",
+      "owner": "Household 21",
+      "startingCash": 7937,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 948,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3273,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5397,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2013,
+        "special": []
+      },
+      "annualIncome": 35262,
+      "annualCommitments": 24156,
+      "averageMonthlyCommitment": 2013,
+      "cashMonthsAtStart": 3.9,
+      "minimumProjectedCash": 5807,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 6872
+        },
+        {
+          "month": "FEB",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 5807
+        },
+        {
+          "month": "MAR",
+          "income": 4221,
+          "commitment": 2013,
+          "gap": 2208,
+          "projectedCash": 8015
+        },
+        {
+          "month": "APR",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 6950
+        },
+        {
+          "month": "MAY",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 5885
+        },
+        {
+          "month": "JUN",
+          "income": 9618,
+          "commitment": 2013,
+          "gap": 7605,
+          "projectedCash": 13490
+        },
+        {
+          "month": "JUL",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 12425
+        },
+        {
+          "month": "AUG",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 11360
+        },
+        {
+          "month": "SEP",
+          "income": 4221,
+          "commitment": 2013,
+          "gap": 2208,
+          "projectedCash": 13568
+        },
+        {
+          "month": "OCT",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 12503
+        },
+        {
+          "month": "NOV",
+          "income": 948,
+          "commitment": 2013,
+          "gap": -1065,
+          "projectedCash": 11438
+        },
+        {
+          "month": "DEC",
+          "income": 9618,
+          "commitment": 2013,
+          "gap": 7605,
+          "projectedCash": 19043
+        }
+      ]
+    },
+    {
+      "id": "IP-22",
+      "owner": "Household 22",
+      "startingCash": 7915,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1065,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3373,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6511,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1965,
+        "special": []
+      },
+      "annualIncome": 39294,
+      "annualCommitments": 23580,
+      "averageMonthlyCommitment": 1965,
+      "cashMonthsAtStart": 4,
+      "minimumProjectedCash": 6115,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 7015
+        },
+        {
+          "month": "FEB",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 6115
+        },
+        {
+          "month": "MAR",
+          "income": 4438,
+          "commitment": 1965,
+          "gap": 2473,
+          "projectedCash": 8588
+        },
+        {
+          "month": "APR",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 7688
+        },
+        {
+          "month": "MAY",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 6788
+        },
+        {
+          "month": "JUN",
+          "income": 10949,
+          "commitment": 1965,
+          "gap": 8984,
+          "projectedCash": 15772
+        },
+        {
+          "month": "JUL",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 14872
+        },
+        {
+          "month": "AUG",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 13972
+        },
+        {
+          "month": "SEP",
+          "income": 4438,
+          "commitment": 1965,
+          "gap": 2473,
+          "projectedCash": 16445
+        },
+        {
+          "month": "OCT",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 15545
+        },
+        {
+          "month": "NOV",
+          "income": 1065,
+          "commitment": 1965,
+          "gap": -900,
+          "projectedCash": 14645
+        },
+        {
+          "month": "DEC",
+          "income": 10949,
+          "commitment": 1965,
+          "gap": 8984,
+          "projectedCash": 23629
+        }
+      ]
+    },
+    {
+      "id": "IP-23",
+      "owner": "Household 23",
+      "startingCash": 6472,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1064,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3286,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5466,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1668,
+        "special": []
+      },
+      "annualIncome": 36844,
+      "annualCommitments": 20016,
+      "averageMonthlyCommitment": 1668,
+      "cashMonthsAtStart": 3.9,
+      "minimumProjectedCash": 5264,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 5868
+        },
+        {
+          "month": "FEB",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 5264
+        },
+        {
+          "month": "MAR",
+          "income": 4350,
+          "commitment": 1668,
+          "gap": 2682,
+          "projectedCash": 7946
+        },
+        {
+          "month": "APR",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 7342
+        },
+        {
+          "month": "MAY",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 6738
+        },
+        {
+          "month": "JUN",
+          "income": 9816,
+          "commitment": 1668,
+          "gap": 8148,
+          "projectedCash": 14886
+        },
+        {
+          "month": "JUL",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 14282
+        },
+        {
+          "month": "AUG",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 13678
+        },
+        {
+          "month": "SEP",
+          "income": 4350,
+          "commitment": 1668,
+          "gap": 2682,
+          "projectedCash": 16360
+        },
+        {
+          "month": "OCT",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 15756
+        },
+        {
+          "month": "NOV",
+          "income": 1064,
+          "commitment": 1668,
+          "gap": -604,
+          "projectedCash": 15152
+        },
+        {
+          "month": "DEC",
+          "income": 9816,
+          "commitment": 1668,
+          "gap": 8148,
+          "projectedCash": 23300
+        }
+      ]
+    },
+    {
+      "id": "IP-24",
+      "owner": "Household 24",
+      "startingCash": 6877,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1231,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3255,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6383,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1798,
+        "special": []
+      },
+      "annualIncome": 40558,
+      "annualCommitments": 21576,
+      "averageMonthlyCommitment": 1798,
+      "cashMonthsAtStart": 3.8,
+      "minimumProjectedCash": 5743,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 6310
+        },
+        {
+          "month": "FEB",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 5743
+        },
+        {
+          "month": "MAR",
+          "income": 4486,
+          "commitment": 1798,
+          "gap": 2688,
+          "projectedCash": 8431
+        },
+        {
+          "month": "APR",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 7864
+        },
+        {
+          "month": "MAY",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 7297
+        },
+        {
+          "month": "JUN",
+          "income": 10869,
+          "commitment": 1798,
+          "gap": 9071,
+          "projectedCash": 16368
+        },
+        {
+          "month": "JUL",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 15801
+        },
+        {
+          "month": "AUG",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 15234
+        },
+        {
+          "month": "SEP",
+          "income": 4486,
+          "commitment": 1798,
+          "gap": 2688,
+          "projectedCash": 17922
+        },
+        {
+          "month": "OCT",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 17355
+        },
+        {
+          "month": "NOV",
+          "income": 1231,
+          "commitment": 1798,
+          "gap": -567,
+          "projectedCash": 16788
+        },
+        {
+          "month": "DEC",
+          "income": 10869,
+          "commitment": 1798,
+          "gap": 9071,
+          "projectedCash": 25859
+        }
+      ]
+    },
+    {
+      "id": "IP-25",
+      "owner": "Household 25",
+      "startingCash": 6746,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 953,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2943,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6131,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1997,
+        "special": []
+      },
+      "annualIncome": 35470,
+      "annualCommitments": 23964,
+      "averageMonthlyCommitment": 1997,
+      "cashMonthsAtStart": 3.4,
+      "minimumProjectedCash": 4469,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 5702
+        },
+        {
+          "month": "FEB",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 4658
+        },
+        {
+          "month": "MAR",
+          "income": 3896,
+          "commitment": 1997,
+          "gap": 1899,
+          "projectedCash": 6557
+        },
+        {
+          "month": "APR",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 5513
+        },
+        {
+          "month": "MAY",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 4469
+        },
+        {
+          "month": "JUN",
+          "income": 10027,
+          "commitment": 1997,
+          "gap": 8030,
+          "projectedCash": 12499
+        },
+        {
+          "month": "JUL",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 11455
+        },
+        {
+          "month": "AUG",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 10411
+        },
+        {
+          "month": "SEP",
+          "income": 3896,
+          "commitment": 1997,
+          "gap": 1899,
+          "projectedCash": 12310
+        },
+        {
+          "month": "OCT",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 11266
+        },
+        {
+          "month": "NOV",
+          "income": 953,
+          "commitment": 1997,
+          "gap": -1044,
+          "projectedCash": 10222
+        },
+        {
+          "month": "DEC",
+          "income": 10027,
+          "commitment": 1997,
+          "gap": 8030,
+          "projectedCash": 18252
+        }
+      ]
+    },
+    {
+      "id": "IP-26",
+      "owner": "Household 26",
+      "startingCash": 8744,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1183,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3016,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6778,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1826,
+        "special": []
+      },
+      "annualIncome": 39816,
+      "annualCommitments": 21912,
+      "averageMonthlyCommitment": 1826,
+      "cashMonthsAtStart": 4.8,
+      "minimumProjectedCash": 7458,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 8101
+        },
+        {
+          "month": "FEB",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 7458
+        },
+        {
+          "month": "MAR",
+          "income": 4199,
+          "commitment": 1826,
+          "gap": 2373,
+          "projectedCash": 9831
+        },
+        {
+          "month": "APR",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 9188
+        },
+        {
+          "month": "MAY",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 8545
+        },
+        {
+          "month": "JUN",
+          "income": 10977,
+          "commitment": 1826,
+          "gap": 9151,
+          "projectedCash": 17696
+        },
+        {
+          "month": "JUL",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 17053
+        },
+        {
+          "month": "AUG",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 16410
+        },
+        {
+          "month": "SEP",
+          "income": 4199,
+          "commitment": 1826,
+          "gap": 2373,
+          "projectedCash": 18783
+        },
+        {
+          "month": "OCT",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 18140
+        },
+        {
+          "month": "NOV",
+          "income": 1183,
+          "commitment": 1826,
+          "gap": -643,
+          "projectedCash": 17497
+        },
+        {
+          "month": "DEC",
+          "income": 10977,
+          "commitment": 1826,
+          "gap": 9151,
+          "projectedCash": 26648
+        }
+      ]
+    },
+    {
+      "id": "IP-27",
+      "owner": "Household 27",
+      "startingCash": 8700,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 963,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2798,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6079,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1625,
+        "special": []
+      },
+      "annualIncome": 34906,
+      "annualCommitments": 19500,
+      "averageMonthlyCommitment": 1625,
+      "cashMonthsAtStart": 5.4,
+      "minimumProjectedCash": 7376,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 8038
+        },
+        {
+          "month": "FEB",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 7376
+        },
+        {
+          "month": "MAR",
+          "income": 3761,
+          "commitment": 1625,
+          "gap": 2136,
+          "projectedCash": 9512
+        },
+        {
+          "month": "APR",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 8850
+        },
+        {
+          "month": "MAY",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 8188
+        },
+        {
+          "month": "JUN",
+          "income": 9840,
+          "commitment": 1625,
+          "gap": 8215,
+          "projectedCash": 16403
+        },
+        {
+          "month": "JUL",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 15741
+        },
+        {
+          "month": "AUG",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 15079
+        },
+        {
+          "month": "SEP",
+          "income": 3761,
+          "commitment": 1625,
+          "gap": 2136,
+          "projectedCash": 17215
+        },
+        {
+          "month": "OCT",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 16553
+        },
+        {
+          "month": "NOV",
+          "income": 963,
+          "commitment": 1625,
+          "gap": -662,
+          "projectedCash": 15891
+        },
+        {
+          "month": "DEC",
+          "income": 9840,
+          "commitment": 1625,
+          "gap": 8215,
+          "projectedCash": 24106
+        }
+      ]
+    },
+    {
+      "id": "IP-28",
+      "owner": "Household 28",
+      "startingCash": 8579,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 950,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3100,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5361,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1743,
+        "special": []
+      },
+      "annualIncome": 34522,
+      "annualCommitments": 20916,
+      "averageMonthlyCommitment": 1743,
+      "cashMonthsAtStart": 4.9,
+      "minimumProjectedCash": 6993,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 7786
+        },
+        {
+          "month": "FEB",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 6993
+        },
+        {
+          "month": "MAR",
+          "income": 4050,
+          "commitment": 1743,
+          "gap": 2307,
+          "projectedCash": 9300
+        },
+        {
+          "month": "APR",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 8507
+        },
+        {
+          "month": "MAY",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 7714
+        },
+        {
+          "month": "JUN",
+          "income": 9411,
+          "commitment": 1743,
+          "gap": 7668,
+          "projectedCash": 15382
+        },
+        {
+          "month": "JUL",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 14589
+        },
+        {
+          "month": "AUG",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 13796
+        },
+        {
+          "month": "SEP",
+          "income": 4050,
+          "commitment": 1743,
+          "gap": 2307,
+          "projectedCash": 16103
+        },
+        {
+          "month": "OCT",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 15310
+        },
+        {
+          "month": "NOV",
+          "income": 950,
+          "commitment": 1743,
+          "gap": -793,
+          "projectedCash": 14517
+        },
+        {
+          "month": "DEC",
+          "income": 9411,
+          "commitment": 1743,
+          "gap": 7668,
+          "projectedCash": 22185
+        }
+      ]
+    },
+    {
+      "id": "IP-29",
+      "owner": "Household 29",
+      "startingCash": 6705,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1130,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2819,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6774,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1971,
+        "special": []
+      },
+      "annualIncome": 38384,
+      "annualCommitments": 23652,
+      "averageMonthlyCommitment": 1971,
+      "cashMonthsAtStart": 3.4,
+      "minimumProjectedCash": 5023,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 5864
+        },
+        {
+          "month": "FEB",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 5023
+        },
+        {
+          "month": "MAR",
+          "income": 3949,
+          "commitment": 1971,
+          "gap": 1978,
+          "projectedCash": 7001
+        },
+        {
+          "month": "APR",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 6160
+        },
+        {
+          "month": "MAY",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 5319
+        },
+        {
+          "month": "JUN",
+          "income": 10723,
+          "commitment": 1971,
+          "gap": 8752,
+          "projectedCash": 14071
+        },
+        {
+          "month": "JUL",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 13230
+        },
+        {
+          "month": "AUG",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 12389
+        },
+        {
+          "month": "SEP",
+          "income": 3949,
+          "commitment": 1971,
+          "gap": 1978,
+          "projectedCash": 14367
+        },
+        {
+          "month": "OCT",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 13526
+        },
+        {
+          "month": "NOV",
+          "income": 1130,
+          "commitment": 1971,
+          "gap": -841,
+          "projectedCash": 12685
+        },
+        {
+          "month": "DEC",
+          "income": 10723,
+          "commitment": 1971,
+          "gap": 8752,
+          "projectedCash": 21437
+        }
+      ]
+    },
+    {
+      "id": "IP-30",
+      "owner": "Household 30",
+      "startingCash": 7130,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1147,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3389,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6788,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1692,
+        "special": []
+      },
+      "annualIncome": 40896,
+      "annualCommitments": 20304,
+      "averageMonthlyCommitment": 1692,
+      "cashMonthsAtStart": 4.2,
+      "minimumProjectedCash": 6040,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 6585
+        },
+        {
+          "month": "FEB",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 6040
+        },
+        {
+          "month": "MAR",
+          "income": 4536,
+          "commitment": 1692,
+          "gap": 2844,
+          "projectedCash": 8884
+        },
+        {
+          "month": "APR",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 8339
+        },
+        {
+          "month": "MAY",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 7794
+        },
+        {
+          "month": "JUN",
+          "income": 11324,
+          "commitment": 1692,
+          "gap": 9632,
+          "projectedCash": 17426
+        },
+        {
+          "month": "JUL",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 16881
+        },
+        {
+          "month": "AUG",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 16336
+        },
+        {
+          "month": "SEP",
+          "income": 4536,
+          "commitment": 1692,
+          "gap": 2844,
+          "projectedCash": 19180
+        },
+        {
+          "month": "OCT",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 18635
+        },
+        {
+          "month": "NOV",
+          "income": 1147,
+          "commitment": 1692,
+          "gap": -545,
+          "projectedCash": 18090
+        },
+        {
+          "month": "DEC",
+          "income": 11324,
+          "commitment": 1692,
+          "gap": 9632,
+          "projectedCash": 27722
+        }
+      ]
+    },
+    {
+      "id": "IP-31",
+      "owner": "Household 31",
+      "startingCash": 7702,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1233,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3386,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5330,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1778,
+        "special": []
+      },
+      "annualIncome": 39000,
+      "annualCommitments": 21336,
+      "averageMonthlyCommitment": 1778,
+      "cashMonthsAtStart": 4.3,
+      "minimumProjectedCash": 6612,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 7157
+        },
+        {
+          "month": "FEB",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 6612
+        },
+        {
+          "month": "MAR",
+          "income": 4619,
+          "commitment": 1778,
+          "gap": 2841,
+          "projectedCash": 9453
+        },
+        {
+          "month": "APR",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 8908
+        },
+        {
+          "month": "MAY",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 8363
+        },
+        {
+          "month": "JUN",
+          "income": 9949,
+          "commitment": 1778,
+          "gap": 8171,
+          "projectedCash": 16534
+        },
+        {
+          "month": "JUL",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 15989
+        },
+        {
+          "month": "AUG",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 15444
+        },
+        {
+          "month": "SEP",
+          "income": 4619,
+          "commitment": 1778,
+          "gap": 2841,
+          "projectedCash": 18285
+        },
+        {
+          "month": "OCT",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 17740
+        },
+        {
+          "month": "NOV",
+          "income": 1233,
+          "commitment": 1778,
+          "gap": -545,
+          "projectedCash": 17195
+        },
+        {
+          "month": "DEC",
+          "income": 9949,
+          "commitment": 1778,
+          "gap": 8171,
+          "projectedCash": 25366
+        }
+      ]
+    },
+    {
+      "id": "IP-32",
+      "owner": "Household 32",
+      "startingCash": 7854,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1232,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3159,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6007,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 2028,
+        "special": []
+      },
+      "annualIncome": 39434,
+      "annualCommitments": 24336,
+      "averageMonthlyCommitment": 2028,
+      "cashMonthsAtStart": 3.9,
+      "minimumProjectedCash": 6262,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 7058
+        },
+        {
+          "month": "FEB",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 6262
+        },
+        {
+          "month": "MAR",
+          "income": 4391,
+          "commitment": 2028,
+          "gap": 2363,
+          "projectedCash": 8625
+        },
+        {
+          "month": "APR",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 7829
+        },
+        {
+          "month": "MAY",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 7033
+        },
+        {
+          "month": "JUN",
+          "income": 10398,
+          "commitment": 2028,
+          "gap": 8370,
+          "projectedCash": 15403
+        },
+        {
+          "month": "JUL",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 14607
+        },
+        {
+          "month": "AUG",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 13811
+        },
+        {
+          "month": "SEP",
+          "income": 4391,
+          "commitment": 2028,
+          "gap": 2363,
+          "projectedCash": 16174
+        },
+        {
+          "month": "OCT",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 15378
+        },
+        {
+          "month": "NOV",
+          "income": 1232,
+          "commitment": 2028,
+          "gap": -796,
+          "projectedCash": 14582
+        },
+        {
+          "month": "DEC",
+          "income": 10398,
+          "commitment": 2028,
+          "gap": 8370,
+          "projectedCash": 22952
+        }
+      ]
+    },
+    {
+      "id": "IP-33",
+      "owner": "Household 33",
+      "startingCash": 6521,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1214,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3127,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6207,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1657,
+        "special": []
+      },
+      "annualIncome": 39490,
+      "annualCommitments": 19884,
+      "averageMonthlyCommitment": 1657,
+      "cashMonthsAtStart": 3.9,
+      "minimumProjectedCash": 5635,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 6078
+        },
+        {
+          "month": "FEB",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 5635
+        },
+        {
+          "month": "MAR",
+          "income": 4341,
+          "commitment": 1657,
+          "gap": 2684,
+          "projectedCash": 8319
+        },
+        {
+          "month": "APR",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 7876
+        },
+        {
+          "month": "MAY",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 7433
+        },
+        {
+          "month": "JUN",
+          "income": 10548,
+          "commitment": 1657,
+          "gap": 8891,
+          "projectedCash": 16324
+        },
+        {
+          "month": "JUL",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 15881
+        },
+        {
+          "month": "AUG",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 15438
+        },
+        {
+          "month": "SEP",
+          "income": 4341,
+          "commitment": 1657,
+          "gap": 2684,
+          "projectedCash": 18122
+        },
+        {
+          "month": "OCT",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 17679
+        },
+        {
+          "month": "NOV",
+          "income": 1214,
+          "commitment": 1657,
+          "gap": -443,
+          "projectedCash": 17236
+        },
+        {
+          "month": "DEC",
+          "income": 10548,
+          "commitment": 1657,
+          "gap": 8891,
+          "projectedCash": 26127
+        }
+      ]
+    },
+    {
+      "id": "IP-34",
+      "owner": "Household 34",
+      "startingCash": 6670,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 972,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3505,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6358,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1806,
+        "special": []
+      },
+      "annualIncome": 38400,
+      "annualCommitments": 21672,
+      "averageMonthlyCommitment": 1806,
+      "cashMonthsAtStart": 3.7,
+      "minimumProjectedCash": 5002,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 5836
+        },
+        {
+          "month": "FEB",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 5002
+        },
+        {
+          "month": "MAR",
+          "income": 4477,
+          "commitment": 1806,
+          "gap": 2671,
+          "projectedCash": 7673
+        },
+        {
+          "month": "APR",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 6839
+        },
+        {
+          "month": "MAY",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 6005
+        },
+        {
+          "month": "JUN",
+          "income": 10835,
+          "commitment": 1806,
+          "gap": 9029,
+          "projectedCash": 15034
+        },
+        {
+          "month": "JUL",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 14200
+        },
+        {
+          "month": "AUG",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 13366
+        },
+        {
+          "month": "SEP",
+          "income": 4477,
+          "commitment": 1806,
+          "gap": 2671,
+          "projectedCash": 16037
+        },
+        {
+          "month": "OCT",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 15203
+        },
+        {
+          "month": "NOV",
+          "income": 972,
+          "commitment": 1806,
+          "gap": -834,
+          "projectedCash": 14369
+        },
+        {
+          "month": "DEC",
+          "income": 10835,
+          "commitment": 1806,
+          "gap": 9029,
+          "projectedCash": 23398
+        }
+      ]
+    },
+    {
+      "id": "IP-35",
+      "owner": "Household 35",
+      "startingCash": 7301,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1255,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3535,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 5700,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1830,
+        "special": []
+      },
+      "annualIncome": 40600,
+      "annualCommitments": 21960,
+      "averageMonthlyCommitment": 1830,
+      "cashMonthsAtStart": 4,
+      "minimumProjectedCash": 6151,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 6726
+        },
+        {
+          "month": "FEB",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 6151
+        },
+        {
+          "month": "MAR",
+          "income": 4790,
+          "commitment": 1830,
+          "gap": 2960,
+          "projectedCash": 9111
+        },
+        {
+          "month": "APR",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 8536
+        },
+        {
+          "month": "MAY",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 7961
+        },
+        {
+          "month": "JUN",
+          "income": 10490,
+          "commitment": 1830,
+          "gap": 8660,
+          "projectedCash": 16621
+        },
+        {
+          "month": "JUL",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 16046
+        },
+        {
+          "month": "AUG",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 15471
+        },
+        {
+          "month": "SEP",
+          "income": 4790,
+          "commitment": 1830,
+          "gap": 2960,
+          "projectedCash": 18431
+        },
+        {
+          "month": "OCT",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 17856
+        },
+        {
+          "month": "NOV",
+          "income": 1255,
+          "commitment": 1830,
+          "gap": -575,
+          "projectedCash": 17281
+        },
+        {
+          "month": "DEC",
+          "income": 10490,
+          "commitment": 1830,
+          "gap": 8660,
+          "projectedCash": 25941
+        }
+      ]
+    },
+    {
+      "id": "IP-36",
+      "owner": "Household 36",
+      "startingCash": 7314,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1235,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 2757,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6029,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1798,
+        "special": []
+      },
+      "annualIncome": 37906,
+      "annualCommitments": 21576,
+      "averageMonthlyCommitment": 1798,
+      "cashMonthsAtStart": 4.1,
+      "minimumProjectedCash": 6188,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 6751
+        },
+        {
+          "month": "FEB",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 6188
+        },
+        {
+          "month": "MAR",
+          "income": 3992,
+          "commitment": 1798,
+          "gap": 2194,
+          "projectedCash": 8382
+        },
+        {
+          "month": "APR",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 7819
+        },
+        {
+          "month": "MAY",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 7256
+        },
+        {
+          "month": "JUN",
+          "income": 10021,
+          "commitment": 1798,
+          "gap": 8223,
+          "projectedCash": 15479
+        },
+        {
+          "month": "JUL",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 14916
+        },
+        {
+          "month": "AUG",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 14353
+        },
+        {
+          "month": "SEP",
+          "income": 3992,
+          "commitment": 1798,
+          "gap": 2194,
+          "projectedCash": 16547
+        },
+        {
+          "month": "OCT",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 15984
+        },
+        {
+          "month": "NOV",
+          "income": 1235,
+          "commitment": 1798,
+          "gap": -563,
+          "projectedCash": 15421
+        },
+        {
+          "month": "DEC",
+          "income": 10021,
+          "commitment": 1798,
+          "gap": 8223,
+          "projectedCash": 23644
+        }
+      ]
+    },
+    {
+      "id": "IP-37",
+      "owner": "Household 37",
+      "startingCash": 6359,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1263,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3539,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6020,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1770,
+        "special": []
+      },
+      "annualIncome": 41352,
+      "annualCommitments": 21240,
+      "averageMonthlyCommitment": 1770,
+      "cashMonthsAtStart": 3.6,
+      "minimumProjectedCash": 5345,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 5852
+        },
+        {
+          "month": "FEB",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 5345
+        },
+        {
+          "month": "MAR",
+          "income": 4802,
+          "commitment": 1770,
+          "gap": 3032,
+          "projectedCash": 8377
+        },
+        {
+          "month": "APR",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 7870
+        },
+        {
+          "month": "MAY",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 7363
+        },
+        {
+          "month": "JUN",
+          "income": 10822,
+          "commitment": 1770,
+          "gap": 9052,
+          "projectedCash": 16415
+        },
+        {
+          "month": "JUL",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 15908
+        },
+        {
+          "month": "AUG",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 15401
+        },
+        {
+          "month": "SEP",
+          "income": 4802,
+          "commitment": 1770,
+          "gap": 3032,
+          "projectedCash": 18433
+        },
+        {
+          "month": "OCT",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 17926
+        },
+        {
+          "month": "NOV",
+          "income": 1263,
+          "commitment": 1770,
+          "gap": -507,
+          "projectedCash": 17419
+        },
+        {
+          "month": "DEC",
+          "income": 10822,
+          "commitment": 1770,
+          "gap": 9052,
+          "projectedCash": 26471
+        }
+      ]
+    },
+    {
+      "id": "IP-38",
+      "owner": "Household 38",
+      "startingCash": 7617,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1121,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3311,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6460,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1798,
+        "special": []
+      },
+      "annualIncome": 39616,
+      "annualCommitments": 21576,
+      "averageMonthlyCommitment": 1798,
+      "cashMonthsAtStart": 4.2,
+      "minimumProjectedCash": 6263,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 6940
+        },
+        {
+          "month": "FEB",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 6263
+        },
+        {
+          "month": "MAR",
+          "income": 4432,
+          "commitment": 1798,
+          "gap": 2634,
+          "projectedCash": 8897
+        },
+        {
+          "month": "APR",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 8220
+        },
+        {
+          "month": "MAY",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 7543
+        },
+        {
+          "month": "JUN",
+          "income": 10892,
+          "commitment": 1798,
+          "gap": 9094,
+          "projectedCash": 16637
+        },
+        {
+          "month": "JUL",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 15960
+        },
+        {
+          "month": "AUG",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 15283
+        },
+        {
+          "month": "SEP",
+          "income": 4432,
+          "commitment": 1798,
+          "gap": 2634,
+          "projectedCash": 17917
+        },
+        {
+          "month": "OCT",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 17240
+        },
+        {
+          "month": "NOV",
+          "income": 1121,
+          "commitment": 1798,
+          "gap": -677,
+          "projectedCash": 16563
+        },
+        {
+          "month": "DEC",
+          "income": 10892,
+          "commitment": 1798,
+          "gap": 9094,
+          "projectedCash": 25657
+        }
+      ]
+    },
+    {
+      "id": "IP-39",
+      "owner": "Household 39",
+      "startingCash": 8878,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1143,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3612,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6648,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1966,
+        "special": []
+      },
+      "annualIncome": 41460,
+      "annualCommitments": 23592,
+      "averageMonthlyCommitment": 1966,
+      "cashMonthsAtStart": 4.5,
+      "minimumProjectedCash": 7232,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 8055
+        },
+        {
+          "month": "FEB",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 7232
+        },
+        {
+          "month": "MAR",
+          "income": 4755,
+          "commitment": 1966,
+          "gap": 2789,
+          "projectedCash": 10021
+        },
+        {
+          "month": "APR",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 9198
+        },
+        {
+          "month": "MAY",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 8375
+        },
+        {
+          "month": "JUN",
+          "income": 11403,
+          "commitment": 1966,
+          "gap": 9437,
+          "projectedCash": 17812
+        },
+        {
+          "month": "JUL",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 16989
+        },
+        {
+          "month": "AUG",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 16166
+        },
+        {
+          "month": "SEP",
+          "income": 4755,
+          "commitment": 1966,
+          "gap": 2789,
+          "projectedCash": 18955
+        },
+        {
+          "month": "OCT",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 18132
+        },
+        {
+          "month": "NOV",
+          "income": 1143,
+          "commitment": 1966,
+          "gap": -823,
+          "projectedCash": 17309
+        },
+        {
+          "month": "DEC",
+          "income": 11403,
+          "commitment": 1966,
+          "gap": 9437,
+          "projectedCash": 26746
+        }
+      ]
+    },
+    {
+      "id": "IP-40",
+      "owner": "Household 40",
+      "startingCash": 8541,
+      "holdings": [
+        {
+          "symbol": "MONTHLY-INCOME-FUND",
+          "kind": "monthly fund",
+          "schedule": [
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEC"
+          ],
+          "amountPerPayment": 1218,
+          "reliability": "declared monthly distribution; amount may vary"
+        },
+        {
+          "symbol": "DIVIDEND-EQUITY-BASKET",
+          "kind": "quarterly equity dividends",
+          "schedule": [
+            "MAR",
+            "JUN",
+            "SEP",
+            "DEC"
+          ],
+          "amountPerPayment": 3402,
+          "reliability": "declared quarterly dividend; amount estimated"
+        },
+        {
+          "symbol": "INVESTMENT-GRADE-BOND",
+          "kind": "semi-annual coupon",
+          "schedule": [
+            "JUN",
+            "DEC"
+          ],
+          "amountPerPayment": 6256,
+          "reliability": "contractual coupon; date declared"
+        }
+      ],
+      "commitments": {
+        "regularMonthlyWithdrawal": 1966,
+        "special": []
+      },
+      "annualIncome": 40736,
+      "annualCommitments": 23592,
+      "averageMonthlyCommitment": 1966,
+      "cashMonthsAtStart": 4.3,
+      "minimumProjectedCash": 7045,
+      "saleRule": "Selling is allowed only to meet a dated commitment that income and cash cannot cover.",
+      "calendar": [
+        {
+          "month": "JAN",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 7793
+        },
+        {
+          "month": "FEB",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 7045
+        },
+        {
+          "month": "MAR",
+          "income": 4620,
+          "commitment": 1966,
+          "gap": 2654,
+          "projectedCash": 9699
+        },
+        {
+          "month": "APR",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 8951
+        },
+        {
+          "month": "MAY",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 8203
+        },
+        {
+          "month": "JUN",
+          "income": 10876,
+          "commitment": 1966,
+          "gap": 8910,
+          "projectedCash": 17113
+        },
+        {
+          "month": "JUL",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 16365
+        },
+        {
+          "month": "AUG",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 15617
+        },
+        {
+          "month": "SEP",
+          "income": 4620,
+          "commitment": 1966,
+          "gap": 2654,
+          "projectedCash": 18271
+        },
+        {
+          "month": "OCT",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 17523
+        },
+        {
+          "month": "NOV",
+          "income": 1218,
+          "commitment": 1966,
+          "gap": -748,
+          "projectedCash": 16775
+        },
+        {
+          "month": "DEC",
+          "income": 10876,
+          "commitment": 1966,
+          "gap": 8910,
+          "projectedCash": 25685
+        }
+      ]
+    }
+  ]
+}

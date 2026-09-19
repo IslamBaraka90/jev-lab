@@ -45,9 +45,9 @@ Standard demo folder plus `scripts/generate/token-screening.js`.
 
 Template list, plus:
 
-- [ ] Failed sell attempts are present in the data and are the only reliable honeypot signal.
-- [ ] Vesting-contract concentration is distinguishable from creator concentration in the state.
-- [ ] The report separates recall on honeypots from overall accuracy.
+- [x] Failed sell attempts are present in the data and are the only reliable honeypot signal.
+- [x] Vesting-contract concentration is distinguishable from creator concentration in the state.
+- [x] The report separates recall on honeypots from overall accuracy.
 
 ## Video beats
 

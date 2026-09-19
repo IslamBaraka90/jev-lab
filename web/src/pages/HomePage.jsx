@@ -14,20 +14,19 @@ const WAYS_IN = [
 export function HomePage() {
   const counts = catalogCounts();
   const planned = domains().reduce((total, domain) => total + domain.planned, 0);
-  // Newest first, so a demo finished today is on the front page the moment it is registered. Capped at
-  // nine, because the front page is a taste of the catalog and the catalog is the catalog.
-  const all = cards();
-  const latest = [...all].reverse().slice(0, 9);
+  // Newest first: with forty demos in the registry, the work finished today would otherwise be at the
+  // bottom of the page. Nothing is hidden — the whole catalog is here, just the other way up.
+  const allCards = [...cards()].reverse();
 
   return (
     <div className="stack home">
       <section className="home-hero">
-        <span className="eyebrow">TypeSafe Jev · structured answers on financial data</span>
+        <span className="eyebrow">TypeSafe Jev Â· structured answers on financial data</span>
         <h1>Ask a model fifteen questions about one ledger line, and check every answer.</h1>
         <p className="reading">
           Jev returns typed answers: probabilities for every option, a position on a rubric, a probability of yes. This site
-          runs those answers over real financial work — books, orders, fraud, wallets, portfolios, trades, filings and
-          strategies — and grades them against data where the right answer is known.
+          runs those answers over real financial work â€” books, orders, fraud, wallets, portfolios, trades, filings and
+          strategies â€” and grades them against data where the right answer is known.
         </p>
         <div className="row">
           <Link to="/demos" className="button primary">
@@ -69,19 +68,14 @@ export function HomePage() {
         </div>
       </section>
 
-      {latest.length > 0 && (
-        <section className="stack" aria-labelledby="featured-title">
+      {allCards.length > 0 && (
+        <section className="stack" aria-labelledby="all-demos-title">
           <div className="section-title">
-            <h2 id="featured-title">The demos so far</h2>
-            <span className="meta">
-              Newest first
-              {all.length > latest.length && <> · showing {latest.length} of {all.length}</>}
-              {' · '}
-              <Link to="/demos">browse all {all.length}</Link>
-            </span>
+            <h2 id="all-demos-title">All demos</h2>
+            <span className="meta">Newest first · {allCards.length} in the catalog</span>
           </div>
           <ul className="demo-grid">
-            {latest.map((card) => (
+            {allCards.map((card) => (
               <DemoCard key={card.id} card={card} />
             ))}
           </ul>
@@ -98,7 +92,7 @@ export function HomePage() {
                 <span className="meta">{domain.blurb}</span>
               </Link>
               <span className="meta num">
-                {cards().filter((card) => card.domain === domain.id).length} of {domain.planned}
+                {allCards.filter((card) => card.domain === domain.id).length} of {domain.planned}
               </span>
             </li>
           ))}

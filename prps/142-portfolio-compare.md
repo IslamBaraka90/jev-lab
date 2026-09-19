@@ -45,9 +45,9 @@ Standard demo folder plus `scripts/generate/portfolio-compare.js`; reuses the la
 
 Template list, plus:
 
-- [ ] "Too close" counts as correct on the four close calls and wrong on the twelve decisive ones.
-- [ ] The goal's constraints are explicit in the state, so a breach is checkable.
-- [ ] The two columns stay aligned row by row at 1080p.
+- [x] "Too close" counts as correct on the four close calls and wrong on the twelve decisive ones.
+- [x] The goal's constraints are explicit in the state, so a breach is checkable.
+- [x] The two columns stay aligned row by row at 1080p.
 
 ## Video beats
 

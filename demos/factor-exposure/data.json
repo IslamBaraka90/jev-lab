@@ -1,0 +1,3303 @@
+{
+  "id": "factor-exposure",
+  "class": "mixed",
+  "generatedAt": "2026-09-19",
+  "seed": 1144,
+  "source": "scripts/generate/factor-exposure.js",
+  "context": {
+    "pricesAsOf": "2026-09-18",
+    "note": "Prices, volumes and fundamentals are real, cached once from Yahoo Finance and committed. Nothing is fetched at build time or in the browser, and none of this is investment advice.",
+    "factorNote": "These are plain-language teaching buckets, not a licensed factor model or investment advice.",
+    "coMovementMethod": "Weighted average of each holding’s 252-trading-day return correlation with the named representative basket.",
+    "representatives": {
+      "MOMENTUM": [
+        "NVDA",
+        "MSFT",
+        "AAPL"
+      ],
+      "VALUE": [
+        "JPM",
+        "BAC",
+        "XOM"
+      ],
+      "QUALITY": [
+        "JNJ",
+        "PG",
+        "KO"
+      ],
+      "SIZE": [
+        "SPY",
+        "WMT",
+        "MSFT"
+      ],
+      "RATES": [
+        "JPM",
+        "BAC",
+        "GLD"
+      ],
+      "ENERGY": [
+        "XOM",
+        "CVX",
+        "XLE"
+      ],
+      "FX": [
+        "GLD",
+        "XOM",
+        "SPY"
+      ]
+    },
+    "factorDefinitions": {
+      "MOMENTUM": "A portfolio dominated by recent winners and their shared price behaviour.",
+      "VALUE": "A portfolio dominated by banks, mature cash-generative companies and other cheaply priced cyclicals.",
+      "QUALITY": "A portfolio dominated by durable, defensive businesses with comparatively steady price behaviour.",
+      "SIZE": "A portfolio whose diversification is overwhelmed by the same mega-cap segment.",
+      "RATES": "A portfolio dominated by banks, gold and other holdings whose common macro sensitivity is interest rates.",
+      "ENERGY": "A portfolio dominated by producers and the broad energy-sector fund.",
+      "FX": "A portfolio dominated by revenue earned outside the owner’s home economy or by a currency mismatch."
+    }
+  },
+  "items": [
+    {
+      "id": "FE-01",
+      "ownerBelief": "A diversified growth portfolio, not a momentum trade.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 32.3,
+          "revenueFromUsPercent": 45,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "correlations": {
+            "MOMENTUM": 0.451,
+            "VALUE": 0.023,
+            "QUALITY": -0.253,
+            "SIZE": 0.24,
+            "RATES": 0.179,
+            "ENERGY": -0.198,
+            "FX": 0.232
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 22.9,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 21.7,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 18.1,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Technology": 76.9,
+        "Other": 18.1
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 49.1,
+      "coMovement": {
+        "MOMENTUM": 0.423,
+        "VALUE": 0.071,
+        "QUALITY": -0.109,
+        "SIZE": 0.296,
+        "RATES": 0.186,
+        "ENERGY": -0.154,
+        "FX": 0.19
+      }
+    },
+    {
+      "id": "FE-02",
+      "ownerBelief": "Broad US leaders with no single style bet.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 33,
+          "revenueFromUsPercent": 45,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "correlations": {
+            "MOMENTUM": 0.451,
+            "VALUE": 0.023,
+            "QUALITY": -0.253,
+            "SIZE": 0.24,
+            "RATES": 0.179,
+            "ENERGY": -0.198,
+            "FX": 0.232
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 23.4,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 21.1,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 17.5,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Technology": 77.5,
+        "Other": 17.5
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 49.1,
+      "coMovement": {
+        "MOMENTUM": 0.424,
+        "VALUE": 0.07,
+        "QUALITY": -0.112,
+        "SIZE": 0.296,
+        "RATES": 0.184,
+        "ENERGY": -0.154,
+        "FX": 0.189
+      }
+    },
+    {
+      "id": "FE-03",
+      "ownerBelief": "A deliberate momentum allocation.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 31.9,
+          "revenueFromUsPercent": 45,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "correlations": {
+            "MOMENTUM": 0.451,
+            "VALUE": 0.023,
+            "QUALITY": -0.253,
+            "SIZE": 0.24,
+            "RATES": 0.179,
+            "ENERGY": -0.198,
+            "FX": 0.232
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 24,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 21.5,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 17.6,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Technology": 77.4,
+        "Other": 17.6
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 49.1,
+      "coMovement": {
+        "MOMENTUM": 0.424,
+        "VALUE": 0.07,
+        "QUALITY": -0.109,
+        "SIZE": 0.297,
+        "RATES": 0.184,
+        "ENERGY": -0.153,
+        "FX": 0.188
+      }
+    },
+    {
+      "id": "FE-04",
+      "ownerBelief": "Technology exposure diversified across business models.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 32.5,
+          "revenueFromUsPercent": 45,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "correlations": {
+            "MOMENTUM": 0.451,
+            "VALUE": 0.023,
+            "QUALITY": -0.253,
+            "SIZE": 0.24,
+            "RATES": 0.179,
+            "ENERGY": -0.198,
+            "FX": 0.232
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 24.6,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 20.4,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 17.5,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Technology": 77.5,
+        "Other": 17.5
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 49.1,
+      "coMovement": {
+        "MOMENTUM": 0.424,
+        "VALUE": 0.069,
+        "QUALITY": -0.113,
+        "SIZE": 0.298,
+        "RATES": 0.183,
+        "ENERGY": -0.154,
+        "FX": 0.189
+      }
+    },
+    {
+      "id": "FE-05",
+      "ownerBelief": "A high-conviction momentum sleeve.",
+      "homeCurrency": "USD",
+      "cashPercent": 5.1,
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 32.3,
+          "revenueFromUsPercent": 45,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "correlations": {
+            "MOMENTUM": 0.451,
+            "VALUE": 0.023,
+            "QUALITY": -0.253,
+            "SIZE": 0.24,
+            "RATES": 0.179,
+            "ENERGY": -0.198,
+            "FX": 0.232
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 23.7,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 21.7,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 17.2,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Technology": 77.7,
+        "Other": 17.2
+      },
+      "currencyWeights": {
+        "USD": 94.9
+      },
+      "foreignRevenuePercent": 49.1,
+      "coMovement": {
+        "MOMENTUM": 0.423,
+        "VALUE": 0.07,
+        "QUALITY": -0.109,
+        "SIZE": 0.295,
+        "RATES": 0.183,
+        "ENERGY": -0.153,
+        "FX": 0.188
+      }
+    },
+    {
+      "id": "FE-06",
+      "ownerBelief": "A broad value portfolio with limited commodity exposure.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 27.4,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 26.3,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 21.8,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 19.5,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 53.7,
+        "Energy": 41.3
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 30.5,
+      "coMovement": {
+        "MOMENTUM": 0.019,
+        "VALUE": 0.412,
+        "QUALITY": 0.017,
+        "SIZE": 0.055,
+        "RATES": 0.314,
+        "ENERGY": 0.355,
+        "FX": 0.175
+      }
+    },
+    {
+      "id": "FE-07",
+      "ownerBelief": "Cheap financials, but not a rates bet.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 28.1,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 27.8,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 20.6,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 18.5,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 55.9,
+        "Energy": 39.1
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 29.6,
+      "coMovement": {
+        "MOMENTUM": 0.025,
+        "VALUE": 0.418,
+        "QUALITY": 0.016,
+        "SIZE": 0.061,
+        "RATES": 0.329,
+        "ENERGY": 0.334,
+        "FX": 0.175
+      }
+    },
+    {
+      "id": "FE-08",
+      "ownerBelief": "A deliberate value allocation.",
+      "homeCurrency": "USD",
+      "cashPercent": 5.1,
+      "holdings": [
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 28.6,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 25.8,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 20.8,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 19.7,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 54.4,
+        "Energy": 40.5
+      },
+      "currencyWeights": {
+        "USD": 94.9
+      },
+      "foreignRevenuePercent": 29.9,
+      "coMovement": {
+        "MOMENTUM": 0.021,
+        "VALUE": 0.414,
+        "QUALITY": 0.016,
+        "SIZE": 0.058,
+        "RATES": 0.319,
+        "ENERGY": 0.348,
+        "FX": 0.174
+      }
+    },
+    {
+      "id": "FE-09",
+      "ownerBelief": "Diversified value across unrelated industries.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 28.7,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 26.5,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 21.6,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 18.2,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 55.2,
+        "Energy": 39.8
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 29.8,
+      "coMovement": {
+        "MOMENTUM": 0.023,
+        "VALUE": 0.417,
+        "QUALITY": 0.016,
+        "SIZE": 0.06,
+        "RATES": 0.324,
+        "ENERGY": 0.341,
+        "FX": 0.175
+      }
+    },
+    {
+      "id": "FE-10",
+      "ownerBelief": "A deliberate quality allocation.",
+      "homeCurrency": "USD",
+      "cashPercent": 4.9,
+      "holdings": [
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 26.2,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 23.8,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 21.5,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "PEP",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 18.3,
+          "revenueFromUsPercent": 56,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.035,
+            "QUALITY": 0.489,
+            "SIZE": 0.035,
+            "RATES": 0.005,
+            "ENERGY": 0.085,
+            "FX": -0.001
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 5.3,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Healthcare": 26.2,
+        "Consumer Defensive": 63.6,
+        "Technology": 5.3
+      },
+      "currencyWeights": {
+        "USD": 95.1
+      },
+      "foreignRevenuePercent": 50.1,
+      "coMovement": {
+        "MOMENTUM": -0.057,
+        "VALUE": 0.022,
+        "QUALITY": 0.528,
+        "SIZE": 0.043,
+        "RATES": 0.006,
+        "ENERGY": 0.037,
+        "FX": -0.002
+      }
+    },
+    {
+      "id": "FE-11",
+      "ownerBelief": "Defensive income with no size tilt.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 27.9,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 23.7,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 21.6,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "PEP",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 16.6,
+          "revenueFromUsPercent": 56,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.035,
+            "QUALITY": 0.489,
+            "SIZE": 0.035,
+            "RATES": 0.005,
+            "ENERGY": 0.085,
+            "FX": -0.001
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 5.2,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Healthcare": 27.9,
+        "Consumer Defensive": 61.9,
+        "Technology": 5.2
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 50.1,
+      "coMovement": {
+        "MOMENTUM": -0.058,
+        "VALUE": 0.023,
+        "QUALITY": 0.53,
+        "SIZE": 0.042,
+        "RATES": 0.006,
+        "ENERGY": 0.037,
+        "FX": -0.002
+      }
+    },
+    {
+      "id": "FE-12",
+      "ownerBelief": "Durable businesses selected for quality.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 26.3,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 24.7,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.5,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "PEP",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 17.6,
+          "revenueFromUsPercent": 56,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.035,
+            "QUALITY": 0.489,
+            "SIZE": 0.035,
+            "RATES": 0.005,
+            "ENERGY": 0.085,
+            "FX": -0.001
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 3.9,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Healthcare": 26.3,
+        "Consumer Defensive": 64.8,
+        "Technology": 3.9
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 50.2,
+      "coMovement": {
+        "MOMENTUM": -0.064,
+        "VALUE": 0.022,
+        "QUALITY": 0.539,
+        "SIZE": 0.038,
+        "RATES": 0.004,
+        "ENERGY": 0.038,
+        "FX": -0.004
+      }
+    },
+    {
+      "id": "FE-13",
+      "ownerBelief": "A sector-balanced defensive book.",
+      "homeCurrency": "USD",
+      "cashPercent": 5.1,
+      "holdings": [
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 25.8,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 24.3,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.8,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "PEP",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 16.4,
+          "revenueFromUsPercent": 56,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.035,
+            "QUALITY": 0.489,
+            "SIZE": 0.035,
+            "RATES": 0.005,
+            "ENERGY": 0.085,
+            "FX": -0.001
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 5.6,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Healthcare": 25.8,
+        "Consumer Defensive": 63.5,
+        "Technology": 5.6
+      },
+      "currencyWeights": {
+        "USD": 94.9
+      },
+      "foreignRevenuePercent": 50.2,
+      "coMovement": {
+        "MOMENTUM": -0.055,
+        "VALUE": 0.021,
+        "QUALITY": 0.527,
+        "SIZE": 0.044,
+        "RATES": 0.005,
+        "ENERGY": 0.035,
+        "FX": -0.003
+      }
+    },
+    {
+      "id": "FE-14",
+      "ownerBelief": "A broad market portfolio with no mega-cap bias.",
+      "homeCurrency": "USD",
+      "cashPercent": 4.9,
+      "holdings": [
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 30.8,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        },
+        {
+          "symbol": "WMT",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.2,
+          "revenueFromUsPercent": 76,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "correlations": {
+            "MOMENTUM": -0.073,
+            "VALUE": 0.035,
+            "QUALITY": 0.315,
+            "SIZE": 0.284,
+            "RATES": 0.009,
+            "ENERGY": 0.065,
+            "FX": 0.015
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 20.2,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 14.7,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 7.2,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Other": 30.8,
+        "Consumer Defensive": 22.2,
+        "Technology": 34.9,
+        "Financial Services": 7.2
+      },
+      "currencyWeights": {
+        "USD": 95.1
+      },
+      "foreignRevenuePercent": 37.8,
+      "coMovement": {
+        "MOMENTUM": 0.288,
+        "VALUE": 0.13,
+        "QUALITY": 0.025,
+        "SIZE": 0.326,
+        "RATES": 0.214,
+        "ENERGY": -0.097,
+        "FX": 0.166
+      }
+    },
+    {
+      "id": "FE-15",
+      "ownerBelief": "A deliberate large-company allocation.",
+      "homeCurrency": "USD",
+      "cashPercent": 4.9,
+      "holdings": [
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 30.1,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        },
+        {
+          "symbol": "WMT",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 23,
+          "revenueFromUsPercent": 76,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "correlations": {
+            "MOMENTUM": -0.073,
+            "VALUE": 0.035,
+            "QUALITY": 0.315,
+            "SIZE": 0.284,
+            "RATES": 0.009,
+            "ENERGY": 0.065,
+            "FX": 0.015
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 19.7,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 15,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 7.3,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Other": 30.1,
+        "Consumer Defensive": 23,
+        "Technology": 34.7,
+        "Financial Services": 7.3
+      },
+      "currencyWeights": {
+        "USD": 95.1
+      },
+      "foreignRevenuePercent": 37.7,
+      "coMovement": {
+        "MOMENTUM": 0.284,
+        "VALUE": 0.13,
+        "QUALITY": 0.029,
+        "SIZE": 0.324,
+        "RATES": 0.212,
+        "ENERGY": -0.095,
+        "FX": 0.164
+      }
+    },
+    {
+      "id": "FE-16",
+      "ownerBelief": "Diversified US equities of every size.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 29.4,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        },
+        {
+          "symbol": "WMT",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 21.5,
+          "revenueFromUsPercent": 76,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "correlations": {
+            "MOMENTUM": -0.073,
+            "VALUE": 0.035,
+            "QUALITY": 0.315,
+            "SIZE": 0.284,
+            "RATES": 0.009,
+            "ENERGY": 0.065,
+            "FX": 0.015
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 20.9,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 15.8,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 7.4,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Other": 29.4,
+        "Consumer Defensive": 21.5,
+        "Technology": 36.7,
+        "Financial Services": 7.4
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 38.2,
+      "coMovement": {
+        "MOMENTUM": 0.291,
+        "VALUE": 0.129,
+        "QUALITY": 0.024,
+        "SIZE": 0.323,
+        "RATES": 0.212,
+        "ENERGY": -0.097,
+        "FX": 0.164
+      }
+    },
+    {
+      "id": "FE-17",
+      "ownerBelief": "A deliberate mega-cap allocation.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 29.9,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        },
+        {
+          "symbol": "WMT",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.7,
+          "revenueFromUsPercent": 76,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "correlations": {
+            "MOMENTUM": -0.073,
+            "VALUE": 0.035,
+            "QUALITY": 0.315,
+            "SIZE": 0.284,
+            "RATES": 0.009,
+            "ENERGY": 0.065,
+            "FX": 0.015
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 19.6,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "correlations": {
+            "MOMENTUM": 0.459,
+            "VALUE": 0.015,
+            "QUALITY": -0.148,
+            "SIZE": 0.421,
+            "RATES": 0.086,
+            "ENERGY": -0.102,
+            "FX": 0.115
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 14.4,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 8.4,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Other": 29.9,
+        "Consumer Defensive": 22.7,
+        "Technology": 34,
+        "Financial Services": 8.4
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 37.4,
+      "coMovement": {
+        "MOMENTUM": 0.282,
+        "VALUE": 0.135,
+        "QUALITY": 0.028,
+        "SIZE": 0.323,
+        "RATES": 0.217,
+        "ENERGY": -0.095,
+        "FX": 0.164
+      }
+    },
+    {
+      "id": "FE-18",
+      "ownerBelief": "An income book whose returns should not depend on rates.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 29.7,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 26.8,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "GLD",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 20.8,
+          "revenueFromUsPercent": 50,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "correlations": {
+            "MOMENTUM": 0.138,
+            "VALUE": 0.093,
+            "QUALITY": -0.002,
+            "SIZE": 0.141,
+            "RATES": 0.434,
+            "ENERGY": -0.062,
+            "FX": 0.437
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 11.1,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 6.6,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 56.5,
+        "Other": 27.4,
+        "Healthcare": 11.1
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 27.1,
+      "coMovement": {
+        "MOMENTUM": 0.127,
+        "VALUE": 0.355,
+        "QUALITY": 0.056,
+        "SIZE": 0.16,
+        "RATES": 0.479,
+        "ENERGY": -0.041,
+        "FX": 0.216
+      }
+    },
+    {
+      "id": "FE-19",
+      "ownerBelief": "Diversified financial exposure rather than a macro bet.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 28.5,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 27.2,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "GLD",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 19.2,
+          "revenueFromUsPercent": 50,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "correlations": {
+            "MOMENTUM": 0.138,
+            "VALUE": 0.093,
+            "QUALITY": -0.002,
+            "SIZE": 0.141,
+            "RATES": 0.434,
+            "ENERGY": -0.062,
+            "FX": 0.437
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 13.2,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 6.9,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 55.7,
+        "Other": 26.1,
+        "Healthcare": 13.2
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 27.2,
+      "coMovement": {
+        "MOMENTUM": 0.122,
+        "VALUE": 0.351,
+        "QUALITY": 0.068,
+        "SIZE": 0.157,
+        "RATES": 0.468,
+        "ENERGY": -0.039,
+        "FX": 0.209
+      }
+    },
+    {
+      "id": "FE-20",
+      "ownerBelief": "A deliberate rates-sensitive allocation.",
+      "homeCurrency": "USD",
+      "cashPercent": 5.1,
+      "holdings": [
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 29.7,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 27.4,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "GLD",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 19.4,
+          "revenueFromUsPercent": 50,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "correlations": {
+            "MOMENTUM": 0.138,
+            "VALUE": 0.093,
+            "QUALITY": -0.002,
+            "SIZE": 0.141,
+            "RATES": 0.434,
+            "ENERGY": -0.062,
+            "FX": 0.437
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 11.9,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 6.5,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 57.1,
+        "Other": 25.9,
+        "Healthcare": 11.9
+      },
+      "currencyWeights": {
+        "USD": 94.9
+      },
+      "foreignRevenuePercent": 26.8,
+      "coMovement": {
+        "MOMENTUM": 0.124,
+        "VALUE": 0.357,
+        "QUALITY": 0.061,
+        "SIZE": 0.158,
+        "RATES": 0.476,
+        "ENERGY": -0.04,
+        "FX": 0.21
+      }
+    },
+    {
+      "id": "FE-21",
+      "ownerBelief": "Capital preservation with no value tilt.",
+      "homeCurrency": "USD",
+      "cashPercent": 4.9,
+      "holdings": [
+        {
+          "symbol": "JPM",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 29.3,
+          "revenueFromUsPercent": 77,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "correlations": {
+            "MOMENTUM": 0.133,
+            "VALUE": 0.557,
+            "QUALITY": -0.004,
+            "SIZE": 0.168,
+            "RATES": 0.641,
+            "ENERGY": -0.045,
+            "FX": 0.186
+          }
+        },
+        {
+          "symbol": "BAC",
+          "sector": "Financial Services",
+          "currency": "USD",
+          "weightPercent": 26.2,
+          "revenueFromUsPercent": 94,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "correlations": {
+            "MOMENTUM": 0.156,
+            "VALUE": 0.561,
+            "QUALITY": -0.005,
+            "SIZE": 0.191,
+            "RATES": 0.622,
+            "ENERGY": -0.038,
+            "FX": 0.163
+          }
+        },
+        {
+          "symbol": "GLD",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 19.7,
+          "revenueFromUsPercent": 50,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "correlations": {
+            "MOMENTUM": 0.138,
+            "VALUE": 0.093,
+            "QUALITY": -0.002,
+            "SIZE": 0.141,
+            "RATES": 0.434,
+            "ENERGY": -0.062,
+            "FX": 0.437
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 12.4,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 7.5,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Financial Services": 55.5,
+        "Other": 27.2,
+        "Healthcare": 12.4
+      },
+      "currencyWeights": {
+        "USD": 95.1
+      },
+      "foreignRevenuePercent": 27.4,
+      "coMovement": {
+        "MOMENTUM": 0.126,
+        "VALUE": 0.351,
+        "QUALITY": 0.063,
+        "SIZE": 0.16,
+        "RATES": 0.472,
+        "ENERGY": -0.041,
+        "FX": 0.213
+      }
+    },
+    {
+      "id": "FE-22",
+      "ownerBelief": "An inflation hedge diversified beyond energy.",
+      "homeCurrency": "USD",
+      "cashPercent": 4.9,
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 30,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 26.9,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        },
+        {
+          "symbol": "XLE",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 25.1,
+          "revenueFromUsPercent": 55,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "correlations": {
+            "MOMENTUM": -0.132,
+            "VALUE": 0.29,
+            "QUALITY": 0.021,
+            "SIZE": -0.069,
+            "RATES": -0.023,
+            "ENERGY": 0.935,
+            "FX": 0.23
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 13.1,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Energy": 56.9,
+        "Other": 38.2
+      },
+      "currencyWeights": {
+        "USD": 95.1
+      },
+      "foreignRevenuePercent": 47.8,
+      "coMovement": {
+        "MOMENTUM": -0.054,
+        "VALUE": 0.254,
+        "QUALITY": 0.018,
+        "SIZE": -0.015,
+        "RATES": 0.013,
+        "ENERGY": 0.725,
+        "FX": 0.217
+      }
+    },
+    {
+      "id": "FE-23",
+      "ownerBelief": "A real-assets book rather than one sector.",
+      "homeCurrency": "USD",
+      "cashPercent": 5.1,
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 29.8,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 26.9,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        },
+        {
+          "symbol": "XLE",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 24.9,
+          "revenueFromUsPercent": 55,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "correlations": {
+            "MOMENTUM": -0.132,
+            "VALUE": 0.29,
+            "QUALITY": 0.021,
+            "SIZE": -0.069,
+            "RATES": -0.023,
+            "ENERGY": 0.935,
+            "FX": 0.23
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 13.3,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Energy": 56.7,
+        "Other": 38.2
+      },
+      "currencyWeights": {
+        "USD": 94.9
+      },
+      "foreignRevenuePercent": 47.6,
+      "coMovement": {
+        "MOMENTUM": -0.052,
+        "VALUE": 0.253,
+        "QUALITY": 0.017,
+        "SIZE": -0.014,
+        "RATES": 0.014,
+        "ENERGY": 0.72,
+        "FX": 0.217
+      }
+    },
+    {
+      "id": "FE-24",
+      "ownerBelief": "A deliberate energy allocation.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 29.1,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 26.5,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        },
+        {
+          "symbol": "XLE",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 26.2,
+          "revenueFromUsPercent": 55,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "correlations": {
+            "MOMENTUM": -0.132,
+            "VALUE": 0.29,
+            "QUALITY": 0.021,
+            "SIZE": -0.069,
+            "RATES": -0.023,
+            "ENERGY": 0.935,
+            "FX": 0.23
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 13.2,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Energy": 55.6,
+        "Other": 39.4
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 47.6,
+      "coMovement": {
+        "MOMENTUM": -0.053,
+        "VALUE": 0.254,
+        "QUALITY": 0.017,
+        "SIZE": -0.014,
+        "RATES": 0.014,
+        "ENERGY": 0.723,
+        "FX": 0.218
+      }
+    },
+    {
+      "id": "FE-25",
+      "ownerBelief": "Diversified value with a small commodity sleeve.",
+      "homeCurrency": "USD",
+      "cashPercent": 4.9,
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 30.7,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "CVX",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 26.4,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "correlations": {
+            "MOMENTUM": -0.143,
+            "VALUE": 0.251,
+            "QUALITY": 0.023,
+            "SIZE": -0.095,
+            "RATES": -0.069,
+            "ENERGY": 0.914,
+            "FX": 0.155
+          }
+        },
+        {
+          "symbol": "XLE",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 24.5,
+          "revenueFromUsPercent": 55,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "correlations": {
+            "MOMENTUM": -0.132,
+            "VALUE": 0.29,
+            "QUALITY": 0.021,
+            "SIZE": -0.069,
+            "RATES": -0.023,
+            "ENERGY": 0.935,
+            "FX": 0.23
+          }
+        },
+        {
+          "symbol": "SPY",
+          "sector": "Other",
+          "currency": "USD",
+          "weightPercent": 13.5,
+          "revenueFromUsPercent": 61,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "correlations": {
+            "MOMENTUM": 0.461,
+            "VALUE": 0.205,
+            "QUALITY": -0.106,
+            "SIZE": 0.451,
+            "RATES": 0.405,
+            "ENERGY": -0.23,
+            "FX": 0.358
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Energy": 57.1,
+        "Other": 38
+      },
+      "currencyWeights": {
+        "USD": 95.1
+      },
+      "foreignRevenuePercent": 47.8,
+      "coMovement": {
+        "MOMENTUM": -0.051,
+        "VALUE": 0.254,
+        "QUALITY": 0.017,
+        "SIZE": -0.013,
+        "RATES": 0.015,
+        "ENERGY": 0.72,
+        "FX": 0.218
+      }
+    },
+    {
+      "id": "FE-26",
+      "ownerBelief": "A domestic US portfolio with little overseas sensitivity.",
+      "homeCurrency": "USD",
+      "cashPercent": 4.9,
+      "holdings": [
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.8,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 20.9,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 19.1,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 17.1,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 15.2,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Consumer Defensive": 39.9,
+        "Technology": 20.9,
+        "Energy": 19.1,
+        "Healthcare": 15.2
+      },
+      "currencyWeights": {
+        "USD": 95.1
+      },
+      "foreignRevenuePercent": 54,
+      "coMovement": {
+        "MOMENTUM": 0.008,
+        "VALUE": 0.086,
+        "QUALITY": 0.384,
+        "SIZE": 0.03,
+        "RATES": 0.016,
+        "ENERGY": 0.172,
+        "FX": 0.057
+      }
+    },
+    {
+      "id": "FE-27",
+      "ownerBelief": "A deliberate global-revenue allocation.",
+      "homeCurrency": "EUR",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.3,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 19.7,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 19.1,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 18,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 15.9,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Consumer Defensive": 40.3,
+        "Technology": 19.7,
+        "Energy": 19.1,
+        "Healthcare": 15.9
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 53.8,
+      "coMovement": {
+        "MOMENTUM": 0.002,
+        "VALUE": 0.085,
+        "QUALITY": 0.389,
+        "SIZE": 0.028,
+        "RATES": 0.015,
+        "ENERGY": 0.173,
+        "FX": 0.057
+      }
+    },
+    {
+      "id": "FE-28",
+      "ownerBelief": "US listings mean US economic exposure.",
+      "homeCurrency": "USD",
+      "cashPercent": 5.1,
+      "holdings": [
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.8,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 19.2,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 18.9,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 17.3,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 16.7,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Consumer Defensive": 40.1,
+        "Technology": 19.2,
+        "Energy": 18.9,
+        "Healthcare": 16.7
+      },
+      "currencyWeights": {
+        "USD": 94.9
+      },
+      "foreignRevenuePercent": 53.7,
+      "coMovement": {
+        "MOMENTUM": 0,
+        "VALUE": 0.084,
+        "QUALITY": 0.392,
+        "SIZE": 0.027,
+        "RATES": 0.014,
+        "ENERGY": 0.173,
+        "FX": 0.055
+      }
+    },
+    {
+      "id": "FE-29",
+      "ownerBelief": "A deliberate foreign-revenue allocation.",
+      "homeCurrency": "EUR",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 21.6,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 19.9,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 19.5,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 18.9,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 15.1,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Consumer Defensive": 40.5,
+        "Technology": 19.9,
+        "Energy": 19.5,
+        "Healthcare": 15.1
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 53.8,
+      "coMovement": {
+        "MOMENTUM": 0.003,
+        "VALUE": 0.086,
+        "QUALITY": 0.386,
+        "SIZE": 0.029,
+        "RATES": 0.016,
+        "ENERGY": 0.175,
+        "FX": 0.058
+      }
+    },
+    {
+      "id": "FE-30",
+      "ownerBelief": "A domestic portfolio that should track US demand.",
+      "homeCurrency": "USD",
+      "cashPercent": 5,
+      "holdings": [
+        {
+          "symbol": "KO",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 22.6,
+          "revenueFromUsPercent": 38,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "correlations": {
+            "MOMENTUM": -0.085,
+            "VALUE": -0.014,
+            "QUALITY": 0.64,
+            "SIZE": 0.012,
+            "RATES": -0.095,
+            "ENERGY": 0.081,
+            "FX": -0.056
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "sector": "Technology",
+          "currency": "USD",
+          "weightPercent": 19.9,
+          "revenueFromUsPercent": 42,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "correlations": {
+            "MOMENTUM": 0.411,
+            "VALUE": 0.108,
+            "QUALITY": 0.119,
+            "SIZE": 0.185,
+            "RATES": 0.162,
+            "ENERGY": -0.117,
+            "FX": 0.11
+          }
+        },
+        {
+          "symbol": "XOM",
+          "sector": "Energy",
+          "currency": "USD",
+          "weightPercent": 19.1,
+          "revenueFromUsPercent": 43,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "correlations": {
+            "MOMENTUM": -0.142,
+            "VALUE": 0.289,
+            "QUALITY": 0.067,
+            "SIZE": -0.104,
+            "RATES": -0.053,
+            "ENERGY": 0.914,
+            "FX": 0.237
+          }
+        },
+        {
+          "symbol": "PG",
+          "sector": "Consumer Defensive",
+          "currency": "USD",
+          "weightPercent": 16.7,
+          "revenueFromUsPercent": 47,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "correlations": {
+            "MOMENTUM": -0.072,
+            "VALUE": 0.016,
+            "QUALITY": 0.64,
+            "SIZE": 0.056,
+            "RATES": 0.044,
+            "ENERGY": -0.064,
+            "FX": -0.007
+          }
+        },
+        {
+          "symbol": "JNJ",
+          "sector": "Healthcare",
+          "currency": "USD",
+          "weightPercent": 16.7,
+          "revenueFromUsPercent": 49,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "correlations": {
+            "MOMENTUM": -0.124,
+            "VALUE": 0.055,
+            "QUALITY": 0.596,
+            "SIZE": -0.006,
+            "RATES": 0.04,
+            "ENERGY": 0.094,
+            "FX": 0.021
+          }
+        }
+      ],
+      "sectorWeights": {
+        "Consumer Defensive": 39.3,
+        "Technology": 19.9,
+        "Energy": 19.1,
+        "Healthcare": 16.7
+      },
+      "currencyWeights": {
+        "USD": 95
+      },
+      "foreignRevenuePercent": 53.8,
+      "coMovement": {
+        "MOMENTUM": 0.003,
+        "VALUE": 0.085,
+        "QUALITY": 0.388,
+        "SIZE": 0.028,
+        "RATES": 0.015,
+        "ENERGY": 0.175,
+        "FX": 0.057
+      }
+    }
+  ]
+}

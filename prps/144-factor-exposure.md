@@ -45,9 +45,9 @@ Standard demo folder plus `scripts/generate/factor-exposure.js`.
 
 Template list, plus:
 
-- [ ] Co-movement in the state comes from real price history, not a made-up correlation matrix.
-- [ ] Both factor answers are graded, and the unintended one is reported separately.
-- [ ] "Belief matches holdings" is shown as its own accuracy line.
+- [x] Co-movement in the state comes from real price history, not a made-up correlation matrix.
+- [x] Both factor answers are graded, and the unintended one is reported separately.
+- [x] "Belief matches holdings" is shown as its own accuracy line.
 
 ## Video beats
 

@@ -143,6 +143,8 @@ export function DemoRuntime({ demo }) {
     <div className={`demo-runtime${present ? ' presenting' : ''}`}>
       {!present && <DataBanner demo={demo} live={live} />}
 
+      {!present && demo.caveat && <p className="callout warning demo-caveat">{demo.caveat}</p>}
+
       {pending && (
         <p className="callout warning pending-recording">
           <strong>No recorded answers yet.</strong> The dataset, the questions and the report are built; the answers are
@@ -198,7 +200,7 @@ export function DemoRuntime({ demo }) {
               </ol>
             </header>
 
-            {item && <ItemView view={demo.view} item={item} context={state.context} demo={demo} />}
+            {item && <ItemView view={demo.view} item={item} context={state.context} demo={demo} result={result} />}
           </section>
 
           <section className="panel playback" aria-label="Run controls">

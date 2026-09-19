@@ -1,0 +1,1598 @@
+{
+  "demo": "factor-exposure",
+  "model": "jev-1.13.0",
+  "recordedAt": "2026-09-19",
+  "source": "scripts/record-demo.js",
+  "answers": {
+    "FE-01": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 1,
+        "probabilities": {
+          "FX": 0,
+          "RATES": 0,
+          "MOMENTUM": 1,
+          "VALUE": 0,
+          "SIZE": 0,
+          "QUALITY": 0,
+          "ENERGY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.04,
+          "VALUE": 0,
+          "QUALITY": 0,
+          "RATES": 0.02,
+          "FX": 0.1,
+          "MOMENTUM": 0.01,
+          "SIZE": 0.83,
+          "ENERGY": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.51,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.18,
+          "4": 0.36,
+          "5": 0.16,
+          "6": 0.29
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.19
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.52
+      }
+    },
+    "FE-02": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 1,
+        "probabilities": {
+          "ENERGY": 0,
+          "RATES": 0,
+          "SIZE": 0,
+          "FX": 0,
+          "MOMENTUM": 1,
+          "VALUE": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.7,
+        "probabilities": {
+          "ENERGY": 0,
+          "NONE": 0.03,
+          "SIZE": 0.74,
+          "VALUE": 0,
+          "RATES": 0.02,
+          "QUALITY": 0,
+          "MOMENTUM": 0.01,
+          "FX": 0.2
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.58,
+        "confidence": 0.46,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.14,
+          "4": 0.37,
+          "5": 0.21,
+          "6": 0.27
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.13
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.49
+      }
+    },
+    "FE-03": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 1,
+        "probabilities": {
+          "VALUE": 0,
+          "ENERGY": 0,
+          "RATES": 0,
+          "MOMENTUM": 1,
+          "FX": 0,
+          "SIZE": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.83,
+        "probabilities": {
+          "ENERGY": 0,
+          "RATES": 0.02,
+          "NONE": 0.02,
+          "SIZE": 0.86,
+          "VALUE": 0,
+          "FX": 0.1,
+          "MOMENTUM": 0,
+          "QUALITY": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.53,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.2,
+          "4": 0.34,
+          "5": 0.15,
+          "6": 0.3
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "FE-04": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 1,
+        "probabilities": {
+          "RATES": 0,
+          "ENERGY": 0,
+          "MOMENTUM": 1,
+          "VALUE": 0,
+          "SIZE": 0,
+          "FX": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.72,
+        "probabilities": {
+          "RATES": 0.04,
+          "ENERGY": 0,
+          "FX": 0.15,
+          "MOMENTUM": 0.01,
+          "NONE": 0.04,
+          "QUALITY": 0,
+          "VALUE": 0,
+          "SIZE": 0.76
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.97,
+        "confidence": 0.4,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.11,
+          "4": 0.22,
+          "5": 0.18,
+          "6": 0.48
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "FE-05": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 1,
+        "probabilities": {
+          "QUALITY": 0,
+          "FX": 0,
+          "SIZE": 0,
+          "MOMENTUM": 1,
+          "VALUE": 0,
+          "RATES": 0,
+          "ENERGY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.84,
+        "probabilities": {
+          "QUALITY": 0,
+          "MOMENTUM": 0,
+          "FX": 0.1,
+          "RATES": 0.01,
+          "NONE": 0.02,
+          "SIZE": 0.87,
+          "VALUE": 0,
+          "ENERGY": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.16,
+        "confidence": 0.29,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.34,
+          "4": 0.32,
+          "5": 0.1,
+          "6": 0.22
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.41
+      }
+    },
+    "FE-06": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.99,
+        "probabilities": {
+          "SIZE": 0,
+          "ENERGY": 0.01,
+          "VALUE": 0.99,
+          "FX": 0,
+          "RATES": 0,
+          "MOMENTUM": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.93,
+        "probabilities": {
+          "MOMENTUM": 0,
+          "FX": 0,
+          "VALUE": 0,
+          "NONE": 0.01,
+          "ENERGY": 0.94,
+          "RATES": 0.05,
+          "SIZE": 0,
+          "QUALITY": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.41,
+        "confidence": 0.52,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.18,
+          "4": 0.43,
+          "5": 0.15,
+          "6": 0.23
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.17
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.22
+      }
+    },
+    "FE-07": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUALITY": 0,
+          "SIZE": 0,
+          "RATES": 0,
+          "MOMENTUM": 0,
+          "ENERGY": 0,
+          "FX": 0,
+          "VALUE": 1
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.84,
+        "probabilities": {
+          "VALUE": 0,
+          "FX": 0,
+          "MOMENTUM": 0,
+          "ENERGY": 0.87,
+          "QUALITY": 0,
+          "RATES": 0.13,
+          "NONE": 0,
+          "SIZE": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.19,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.23,
+          "4": 0.45,
+          "5": 0.13,
+          "6": 0.17
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.39
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.17
+      }
+    },
+    "FE-08": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUALITY": 0,
+          "VALUE": 0.99,
+          "RATES": 0,
+          "MOMENTUM": 0,
+          "ENERGY": 0.01,
+          "FX": 0,
+          "SIZE": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.93,
+        "probabilities": {
+          "VALUE": 0,
+          "FX": 0,
+          "MOMENTUM": 0,
+          "ENERGY": 0.94,
+          "QUALITY": 0,
+          "RATES": 0.05,
+          "NONE": 0.01,
+          "SIZE": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.62,
+        "confidence": 0.42,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.15,
+          "4": 0.36,
+          "5": 0.15,
+          "6": 0.33
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.23
+      }
+    },
+    "FE-09": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.99,
+        "probabilities": {
+          "QUALITY": 0,
+          "ENERGY": 0.01,
+          "FX": 0,
+          "VALUE": 0.99,
+          "SIZE": 0,
+          "RATES": 0,
+          "MOMENTUM": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.91,
+        "probabilities": {
+          "QUALITY": 0,
+          "FX": 0,
+          "SIZE": 0,
+          "RATES": 0.07,
+          "MOMENTUM": 0,
+          "NONE": 0,
+          "ENERGY": 0.93,
+          "VALUE": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.61,
+        "confidence": 0.45,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.14,
+          "4": 0.37,
+          "5": 0.18,
+          "6": 0.3
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.27
+      }
+    },
+    "FE-10": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 1,
+        "probabilities": {
+          "QUALITY": 1,
+          "MOMENTUM": 0,
+          "FX": 0,
+          "RATES": 0,
+          "SIZE": 0,
+          "ENERGY": 0,
+          "VALUE": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.31,
+        "probabilities": {
+          "FX": 0.11,
+          "MOMENTUM": 0.06,
+          "RATES": 0,
+          "VALUE": 0.01,
+          "NONE": 0.41000000000000003,
+          "SIZE": 0.36,
+          "QUALITY": 0,
+          "ENERGY": 0.05
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.49,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.19,
+          "4": 0.39,
+          "5": 0.15,
+          "6": 0.27
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.78
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.7
+      }
+    },
+    "FE-11": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 1,
+        "probabilities": {
+          "QUALITY": 1,
+          "FX": 0,
+          "RATES": 0,
+          "VALUE": 0,
+          "ENERGY": 0,
+          "SIZE": 0,
+          "MOMENTUM": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.35,
+        "probabilities": {
+          "QUALITY": 0,
+          "FX": 0.14,
+          "RATES": 0.01,
+          "MOMENTUM": 0.05,
+          "VALUE": 0.01,
+          "SIZE": 0.32,
+          "ENERGY": 0.04,
+          "NONE": 0.43
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.2,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.27,
+          "4": 0.42,
+          "5": 0.11,
+          "6": 0.19
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.67
+      }
+    },
+    "FE-12": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 1,
+        "probabilities": {
+          "ENERGY": 0,
+          "MOMENTUM": 0,
+          "FX": 0,
+          "RATES": 0,
+          "SIZE": 0,
+          "QUALITY": 1,
+          "VALUE": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.34,
+        "probabilities": {
+          "MOMENTUM": 0.06,
+          "FX": 0.18,
+          "RATES": 0,
+          "VALUE": 0,
+          "NONE": 0.42,
+          "SIZE": 0.33,
+          "QUALITY": 0,
+          "ENERGY": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.57,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.18,
+          "4": 0.37,
+          "5": 0.13,
+          "6": 0.32
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.81
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "FE-13": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "QUALITY": 1,
+          "MOMENTUM": 0,
+          "FX": 0,
+          "VALUE": 0,
+          "RATES": 0,
+          "ENERGY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.37,
+        "probabilities": {
+          "SIZE": 0.45,
+          "QUALITY": 0,
+          "RATES": 0,
+          "ENERGY": 0.02,
+          "MOMENTUM": 0.07,
+          "FX": 0.07,
+          "VALUE": 0,
+          "NONE": 0.39
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.42,
+        "confidence": 0.49,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.21,
+          "4": 0.39,
+          "5": 0.13,
+          "6": 0.26
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.63
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.69
+      }
+    },
+    "FE-14": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "MOMENTUM": 0,
+          "ENERGY": 0,
+          "QUALITY": 0,
+          "RATES": 0,
+          "VALUE": 0,
+          "FX": 0,
+          "SIZE": 1
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 0.95,
+        "probabilities": {
+          "MOMENTUM": 0.95,
+          "ENERGY": 0,
+          "QUALITY": 0,
+          "VALUE": 0,
+          "FX": 0.01,
+          "NONE": 0.01,
+          "RATES": 0.02,
+          "SIZE": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 3.7,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.03,
+          "3": 0.45,
+          "4": 0.35,
+          "5": 0.09,
+          "6": 0.07
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.15
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    },
+    "FE-15": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATES": 0,
+          "ENERGY": 0,
+          "MOMENTUM": 0,
+          "VALUE": 0,
+          "SIZE": 1,
+          "FX": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 0.93,
+        "probabilities": {
+          "RATES": 0.02,
+          "ENERGY": 0,
+          "FX": 0.02,
+          "MOMENTUM": 0.94,
+          "NONE": 0.01,
+          "QUALITY": 0,
+          "VALUE": 0,
+          "SIZE": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 3.66,
+        "confidence": 0.54,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.03,
+          "3": 0.45,
+          "4": 0.36,
+          "5": 0.08,
+          "6": 0.07
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.6
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    },
+    "FE-16": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATES": 0,
+          "ENERGY": 0,
+          "MOMENTUM": 0.01,
+          "VALUE": 0,
+          "SIZE": 0.99,
+          "FX": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 0.94,
+        "probabilities": {
+          "RATES": 0.02,
+          "ENERGY": 0,
+          "FX": 0.01,
+          "MOMENTUM": 0.96,
+          "NONE": 0,
+          "QUALITY": 0,
+          "VALUE": 0,
+          "SIZE": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 3.77,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.38,
+          "4": 0.43,
+          "5": 0.09,
+          "6": 0.07
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.2
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.29
+      }
+    },
+    "FE-17": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "SIZE",
+        "confidence": 1,
+        "probabilities": {
+          "RATES": 0,
+          "MOMENTUM": 0,
+          "SIZE": 1,
+          "VALUE": 0,
+          "FX": 0,
+          "ENERGY": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "MOMENTUM",
+        "confidence": 0.94,
+        "probabilities": {
+          "SIZE": 0,
+          "FX": 0.01,
+          "MOMENTUM": 0.95,
+          "QUALITY": 0,
+          "VALUE": 0,
+          "RATES": 0.03,
+          "ENERGY": 0,
+          "NONE": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 3.81,
+        "confidence": 0.47,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.03,
+          "3": 0.4,
+          "4": 0.37,
+          "5": 0.1,
+          "6": 0.09
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.58
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.32
+      }
+    },
+    "FE-18": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "RATES",
+        "confidence": 1,
+        "probabilities": {
+          "VALUE": 0,
+          "ENERGY": 0,
+          "FX": 0,
+          "MOMENTUM": 0,
+          "RATES": 1,
+          "SIZE": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.74,
+        "probabilities": {
+          "ENERGY": 0,
+          "RATES": 0,
+          "NONE": 0.01,
+          "SIZE": 0,
+          "VALUE": 0.78,
+          "FX": 0.21,
+          "MOMENTUM": 0,
+          "QUALITY": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 5.11,
+        "confidence": 0.48,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.03,
+          "4": 0.25,
+          "5": 0.28,
+          "6": 0.44
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "FE-19": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "RATES",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "ENERGY": 0,
+          "FX": 0,
+          "RATES": 1,
+          "QUALITY": 0,
+          "MOMENTUM": 0,
+          "VALUE": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.77,
+        "probabilities": {
+          "SIZE": 0,
+          "ENERGY": 0,
+          "RATES": 0,
+          "QUALITY": 0,
+          "MOMENTUM": 0,
+          "VALUE": 0.81,
+          "FX": 0.17,
+          "NONE": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.49,
+        "confidence": 0.55,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.13,
+          "4": 0.44,
+          "5": 0.23,
+          "6": 0.2
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.18
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.53
+      }
+    },
+    "FE-20": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "RATES",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "RATES": 1,
+          "MOMENTUM": 0,
+          "ENERGY": 0,
+          "VALUE": 0,
+          "FX": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.75,
+        "probabilities": {
+          "SIZE": 0,
+          "RATES": 0,
+          "ENERGY": 0,
+          "VALUE": 0.78,
+          "MOMENTUM": 0,
+          "QUALITY": 0.01,
+          "FX": 0.2,
+          "NONE": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.68,
+        "confidence": 0.44,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.12,
+          "4": 0.37,
+          "5": 0.21,
+          "6": 0.3
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.43
+      }
+    },
+    "FE-21": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "RATES",
+        "confidence": 1,
+        "probabilities": {
+          "SIZE": 0,
+          "ENERGY": 0,
+          "RATES": 1,
+          "FX": 0,
+          "VALUE": 0,
+          "MOMENTUM": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.81,
+        "probabilities": {
+          "SIZE": 0,
+          "ENERGY": 0,
+          "RATES": 0.01,
+          "VALUE": 0.85,
+          "MOMENTUM": 0,
+          "QUALITY": 0,
+          "FX": 0.13,
+          "NONE": 0.01
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.69,
+        "confidence": 0.48,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.08,
+          "4": 0.39,
+          "5": 0.28,
+          "6": 0.25
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.11
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.46
+      }
+    },
+    "FE-22": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 1,
+        "probabilities": {
+          "ENERGY": 1,
+          "VALUE": 0,
+          "SIZE": 0,
+          "QUALITY": 0,
+          "MOMENTUM": 0,
+          "FX": 0,
+          "RATES": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.58,
+        "probabilities": {
+          "ENERGY": 0,
+          "NONE": 0.02,
+          "SIZE": 0,
+          "VALUE": 0.64,
+          "QUALITY": 0,
+          "RATES": 0,
+          "MOMENTUM": 0,
+          "FX": 0.34
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 5.92,
+        "confidence": 0.96,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0.06,
+          "6": 0.9400000000000001
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.2
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.82
+      }
+    },
+    "FE-23": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 1,
+        "probabilities": {
+          "RATES": 0,
+          "VALUE": 0,
+          "SIZE": 0,
+          "QUALITY": 0,
+          "ENERGY": 1,
+          "MOMENTUM": 0,
+          "FX": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.49,
+        "probabilities": {
+          "QUALITY": 0,
+          "SIZE": 0,
+          "FX": 0.42,
+          "NONE": 0.02,
+          "RATES": 0,
+          "VALUE": 0.56,
+          "ENERGY": 0,
+          "MOMENTUM": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 5.91,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0.07,
+          "6": 0.93
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.28
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.8
+      }
+    },
+    "FE-24": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 1,
+        "probabilities": {
+          "FX": 0,
+          "MOMENTUM": 0,
+          "RATES": 0,
+          "VALUE": 0,
+          "QUALITY": 0,
+          "SIZE": 0,
+          "ENERGY": 1
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.65,
+        "probabilities": {
+          "SIZE": 0,
+          "ENERGY": 0,
+          "FX": 0.29,
+          "MOMENTUM": 0,
+          "RATES": 0,
+          "NONE": 0.01,
+          "QUALITY": 0,
+          "VALUE": 0.7
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 5.92,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0.07,
+          "6": 0.93
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.5
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.77
+      }
+    },
+    "FE-25": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 1,
+        "probabilities": {
+          "VALUE": 0,
+          "ENERGY": 1,
+          "RATES": 0,
+          "MOMENTUM": 0,
+          "FX": 0,
+          "SIZE": 0,
+          "QUALITY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "VALUE",
+        "confidence": 0.45,
+        "probabilities": {
+          "ENERGY": 0,
+          "RATES": 0,
+          "NONE": 0.03,
+          "SIZE": 0,
+          "VALUE": 0.53,
+          "FX": 0.44,
+          "MOMENTUM": 0,
+          "QUALITY": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 5.92,
+        "confidence": 0.95,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0.07,
+          "6": 0.93
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.08
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.81
+      }
+    },
+    "FE-26": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "FX": 0,
+          "VALUE": 0,
+          "ENERGY": 0,
+          "RATES": 0,
+          "MOMENTUM": 0,
+          "SIZE": 0,
+          "QUALITY": 1
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.87,
+        "probabilities": {
+          "RATES": 0,
+          "ENERGY": 0.89,
+          "VALUE": 0,
+          "MOMENTUM": 0,
+          "SIZE": 0,
+          "FX": 0.08,
+          "NONE": 0.01,
+          "QUALITY": 0.02
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.01,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.3,
+          "4": 0.45,
+          "5": 0.1,
+          "6": 0.13
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.19
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.45
+      }
+    },
+    "FE-27": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 1,
+        "probabilities": {
+          "RATES": 0,
+          "VALUE": 0,
+          "QUALITY": 1,
+          "SIZE": 0,
+          "ENERGY": 0,
+          "FX": 0,
+          "MOMENTUM": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.84,
+        "probabilities": {
+          "SIZE": 0,
+          "QUALITY": 0.04,
+          "FX": 0.07,
+          "RATES": 0,
+          "NONE": 0.03,
+          "VALUE": 0,
+          "ENERGY": 0.86,
+          "MOMENTUM": 0
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4,
+        "confidence": 0.5,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.03,
+          "3": 0.34,
+          "4": 0.36,
+          "5": 0.1,
+          "6": 0.17
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.2
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.47
+      }
+    },
+    "FE-28": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "VALUE": 0,
+          "RATES": 0,
+          "QUALITY": 1,
+          "FX": 0,
+          "ENERGY": 0,
+          "MOMENTUM": 0,
+          "SIZE": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.89,
+        "probabilities": {
+          "SIZE": 0,
+          "QUALITY": 0.02,
+          "MOMENTUM": 0,
+          "NONE": 0.01,
+          "RATES": 0,
+          "VALUE": 0,
+          "FX": 0.07,
+          "ENERGY": 0.9
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.18,
+        "confidence": 0.58,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.23,
+          "4": 0.48,
+          "5": 0.11,
+          "6": 0.17
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.21
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    },
+    "FE-29": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "RATES": 0,
+          "ENERGY": 0,
+          "SIZE": 0,
+          "VALUE": 0,
+          "MOMENTUM": 0,
+          "QUALITY": 0.99,
+          "FX": 0.01
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.7,
+        "probabilities": {
+          "NONE": 0.02,
+          "ENERGY": 0.74,
+          "SIZE": 0,
+          "MOMENTUM": 0,
+          "VALUE": 0,
+          "RATES": 0,
+          "QUALITY": 0.2,
+          "FX": 0.04
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.21,
+        "confidence": 0.43,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.01,
+          "2": 0.03,
+          "3": 0.27,
+          "4": 0.33,
+          "5": 0.1,
+          "6": 0.25
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.31
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.4
+      }
+    },
+    "FE-30": {
+      "dominant_factor": {
+        "type": "choice",
+        "choice": "QUALITY",
+        "confidence": 0.99,
+        "probabilities": {
+          "VALUE": 0,
+          "RATES": 0,
+          "QUALITY": 1,
+          "FX": 0,
+          "SIZE": 0,
+          "MOMENTUM": 0,
+          "ENERGY": 0
+        }
+      },
+      "unintended_exposure": {
+        "type": "choice",
+        "choice": "ENERGY",
+        "confidence": 0.89,
+        "probabilities": {
+          "SIZE": 0,
+          "QUALITY": 0.01,
+          "MOMENTUM": 0,
+          "NONE": 0.01,
+          "RATES": 0,
+          "VALUE": 0,
+          "FX": 0.07,
+          "ENERGY": 0.91
+        }
+      },
+      "exposure_strength": {
+        "type": "score",
+        "score": 4.04,
+        "confidence": 0.53,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.02,
+          "3": 0.32,
+          "4": 0.4,
+          "5": 0.1,
+          "6": 0.16
+        }
+      },
+      "belief_matches_holdings": {
+        "type": "noul",
+        "noul": 0.25
+      },
+      "single_factor_portfolio": {
+        "type": "noul",
+        "noul": 0.42
+      }
+    }
+  }
+}

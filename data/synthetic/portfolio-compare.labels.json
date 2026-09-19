@@ -1,0 +1,128 @@
+[
+  {
+    "pairId": "PC-01",
+    "betterFit": "PORTFOLIO_A",
+    "reason": "INCOME",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-02",
+    "betterFit": "PORTFOLIO_A",
+    "reason": "DRAWDOWN_RISK",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-03",
+    "betterFit": "PORTFOLIO_A",
+    "reason": "SECTOR_MIX",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-04",
+    "betterFit": "PORTFOLIO_A",
+    "reason": "SECTOR_MIX",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-05",
+    "betterFit": "PORTFOLIO_A",
+    "reason": "DRAWDOWN_RISK",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-06",
+    "betterFit": "PORTFOLIO_A",
+    "reason": "CURRENCY",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-07",
+    "betterFit": "PORTFOLIO_B",
+    "reason": "INCOME",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-08",
+    "betterFit": "PORTFOLIO_B",
+    "reason": "DRAWDOWN_RISK",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-09",
+    "betterFit": "PORTFOLIO_B",
+    "reason": "CONCENTRATION",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-10",
+    "betterFit": "PORTFOLIO_B",
+    "reason": "SECTOR_MIX",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-11",
+    "betterFit": "PORTFOLIO_B",
+    "reason": "CURRENCY",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-12",
+    "betterFit": "PORTFOLIO_B",
+    "reason": "LIQUIDITY",
+    "kind": "decisive",
+    "trap": false
+  },
+  {
+    "pairId": "PC-13",
+    "betterFit": "TOO_CLOSE",
+    "reason": "INCOME",
+    "kind": "close",
+    "trap": false
+  },
+  {
+    "pairId": "PC-14",
+    "betterFit": "TOO_CLOSE",
+    "reason": "SECTOR_MIX",
+    "kind": "close",
+    "trap": false
+  },
+  {
+    "pairId": "PC-15",
+    "betterFit": "TOO_CLOSE",
+    "reason": "DRAWDOWN_RISK",
+    "kind": "close",
+    "trap": false
+  },
+  {
+    "pairId": "PC-16",
+    "betterFit": "TOO_CLOSE",
+    "reason": "SECTOR_MIX",
+    "kind": "close",
+    "trap": false
+  },
+  {
+    "pairId": "PC-17",
+    "betterFit": "PORTFOLIO_B",
+    "reason": "DRAWDOWN_RISK",
+    "kind": "trap",
+    "trap": true
+  },
+  {
+    "pairId": "PC-18",
+    "betterFit": "PORTFOLIO_A",
+    "reason": "DRAWDOWN_RISK",
+    "kind": "trap",
+    "trap": true
+  }
+]

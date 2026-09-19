@@ -50,9 +50,9 @@ Standard demo folder plus `scripts/generate/wallet-profiling.js`.
 
 Template list, plus:
 
-- [ ] The confusion matrix is clickable into the wallets behind each cell.
-- [ ] Ambiguous wallets are graded separately and not counted as errors when the model says the type is unclear.
-- [ ] The fingerprint chart is generated from the data, not drawn by hand.
+- [x] The confusion matrix is clickable into the wallets behind each cell.
+- [x] Ambiguous wallets are graded separately and not counted as errors when the model says the type is unclear.
+- [x] The fingerprint chart is generated from the data, not drawn by hand.
 
 ## Video beats
 
