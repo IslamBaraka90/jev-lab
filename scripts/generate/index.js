@@ -17,6 +17,7 @@ export const GENERATORS = {
   'expense-posting': () => import('./expense-posting.js'),
   'three-way-match': () => import('./three-way-match.js'),
   'close-blockers': () => import('./close-blockers.js'),
+  'order-risk': () => import('./order-risk.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
