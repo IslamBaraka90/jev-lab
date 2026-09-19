@@ -31,6 +31,7 @@ import portfolioCompare from './portfolio-compare/demo.js';
 import postTradeReview from './post-trade-review/demo.js';
 import executionQuality from './execution-quality/demo.js';
 import journalVsReality from './journal-vs-reality/demo.js';
+import goalScreening from './goal-screening/demo.js';
 
 /** The nine blocks the demos group into, in catalog order. */
 export const DOMAINS = [
@@ -78,6 +79,7 @@ export const DEMOS = [
   postTradeReview,
   executionQuality,
   journalVsReality,
+  goalScreening,
 ];
 
 /** Everything the runtime can load, including the hidden example used by the tests. */
