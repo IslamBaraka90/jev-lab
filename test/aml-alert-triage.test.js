@@ -81,10 +81,22 @@ test('a perfect run cuts the queue to the twelve and says so with the catch rate
 
   assert.equal(kpi(report, 'Queue after triage').value, '12 of 300');
   assert.match(kpi(report, 'Queue after triage').context, /96% cut, keeping 12 of the 12/);
-  assert.equal(kpi(report, 'Worth working, kept').value, '12 of 12');
+  assert.equal(kpi(report, 'Worth working, escalated').value, '12 of 12');
   assert.equal(kpi(report, 'Explained spikes closed').value, '30 of 30');
   assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0]);
   assert.ok(report.note.includes('Illustrative synthetic data'), 'the caveat travels with the report');
+});
+
+test('a monitor is not a triage either: it is reported as its own lane', async () => {
+  const { results } = await runDemo(demo, {
+    dataset,
+    ask: () => ({ answers: answerFor({ typology: 'NONE', disposition: 'MONITOR', suspicion: 2 }) }),
+  });
+  const report = demo.report(results, { ...context, labels });
+
+  assert.equal(kpi(report, 'Queue after triage').value, '0 of 300', 'monitoring is not working an alert');
+  assert.equal(kpi(report, 'Left under watch').value, 300);
+  assert.match(kpi(report, 'Left under watch').context, /12 of the ones worth working sit here/);
 });
 
 test('keeping everything is not a triage, and the report says that in the same breath', async () => {
@@ -107,8 +119,8 @@ test('closing everything loses all twelve, and the finding names them', async ()
   });
   const report = demo.report(results, { ...context, labels });
 
-  assert.equal(kpi(report, 'Worth working, kept').value, '0 of 12');
-  assert.ok(report.findings.some((line) => /were closed/.test(line)));
+  assert.equal(kpi(report, 'Worth working, escalated').value, '0 of 12');
+  assert.ok(report.findings.some((line) => /were not escalated/.test(line)));
   assert.equal(report.curve.points[0].reviewed, 300, 'everything is above a suspicion of zero');
 });
 
