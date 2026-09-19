@@ -43,8 +43,13 @@ for (const symbol of symbols) {
   if (what.includes('fundamentals')) {
     try {
       const summary = await yahooFinance.quoteSummary(symbol, { modules: FUNDAMENTAL_MODULES });
+      // The statement submodules above have returned almost nothing since late 2024, so the balance
+      // sheet and cash flow come from the time series endpoint and are merged in by fiscal year.
+      const series = await yahooFinance
+        .fundamentalsTimeSeries(symbol, { period1: from, type: 'annual', module: 'all' })
+        .catch(() => []);
       const file = marketFile('fundamentals', `${symbol}.json`);
-      await write(file, compactFundamentals(symbol, summary));
+      await write(file, compactFundamentals(symbol, summary, series));
       record(file, { source: 'Yahoo Finance quoteSummary', symbol, rows: summary.incomeStatementHistory?.incomeStatementHistory?.length ?? 0 });
       console.log(`${symbol}: fundamentals`);
     } catch (error) {
@@ -68,11 +73,11 @@ function record(file, entry) {
 }
 
 /** Keeps the statement lines the demos read, and drops the rest of Yahoo's payload. */
-function compactFundamentals(symbol, summary) {
-  const income = summary.incomeStatementHistory?.incomeStatementHistory ?? [];
-  const balance = summary.balanceSheetHistory?.balanceSheetStatements ?? [];
-  const cashflow = summary.cashflowStatementHistory?.cashflowStatements ?? [];
+function compactFundamentals(symbol, summary, series = []) {
   const day = (value) => (value ? new Date(value).toISOString().slice(0, 10) : null);
+  const years = [...series].sort((left, right) => String(right.date).localeCompare(String(left.date)));
+  const income = summary.incomeStatementHistory?.incomeStatementHistory ?? [];
+  const pick = (row, ...names) => names.map((name) => row?.[name]).find((value) => typeof value === 'number') ?? null;
 
   return {
     symbol,
@@ -81,23 +86,25 @@ function compactFundamentals(symbol, summary) {
     marketCap: summary.defaultKeyStatistics?.marketCap ?? summary.financialData?.marketCap ?? null,
     sharesOutstanding: summary.defaultKeyStatistics?.sharesOutstanding ?? null,
     currency: summary.financialData?.financialCurrency ?? null,
-    annual: income.map((statement, index) => ({
-      fiscalYearEnd: day(statement.endDate),
-      revenue: statement.totalRevenue ?? null,
-      grossProfit: statement.grossProfit ?? null,
-      operatingIncome: statement.operatingIncome ?? null,
-      netIncome: statement.netIncome ?? null,
-      totalAssets: balance[index]?.totalAssets ?? null,
-      totalLiabilities: balance[index]?.totalLiab ?? null,
-      cash: balance[index]?.cash ?? null,
-      shortTermInvestments: balance[index]?.shortTermInvestments ?? null,
-      receivables: balance[index]?.netReceivables ?? null,
-      inventory: balance[index]?.inventory ?? null,
-      longTermDebt: balance[index]?.longTermDebt ?? null,
-      shortTermDebt: balance[index]?.shortLongTermDebt ?? null,
-      operatingCashFlow: cashflow[index]?.totalCashFromOperatingActivities ?? null,
-      capitalExpenditure: cashflow[index]?.capitalExpenditures ?? null,
-      dividendsPaid: cashflow[index]?.dividendsPaid ?? null,
+    annual: (years.length ? years : income).map((row, index) => ({
+      fiscalYearEnd: day(row.date ?? income[index]?.endDate),
+      revenue: pick(row, 'totalRevenue', 'operatingRevenue') ?? income[index]?.totalRevenue ?? null,
+      grossProfit: pick(row, 'grossProfit') ?? income[index]?.grossProfit ?? null,
+      operatingIncome: pick(row, 'operatingIncome', 'ebit') ?? income[index]?.operatingIncome ?? null,
+      netIncome: pick(row, 'netIncome', 'netIncomeCommonStockholders') ?? income[index]?.netIncome ?? null,
+      interestExpense: pick(row, 'interestExpense'),
+      interestIncome: pick(row, 'interestIncome'),
+      totalAssets: pick(row, 'totalAssets'),
+      totalLiabilities: pick(row, 'totalLiabilitiesNetMinorityInterest'),
+      totalDebt: pick(row, 'totalDebt'),
+      cash: pick(row, 'cashCashEquivalentsAndShortTermInvestments', 'cashAndCashEquivalents'),
+      receivables: pick(row, 'accountsReceivable', 'receivables'),
+      inventory: pick(row, 'inventory'),
+      equity: pick(row, 'stockholdersEquity', 'totalEquityGrossMinorityInterest'),
+      operatingCashFlow: pick(row, 'operatingCashFlow'),
+      capitalExpenditure: pick(row, 'capitalExpenditure'),
+      freeCashFlow: pick(row, 'freeCashFlow'),
+      dividendsPaid: pick(row, 'cashDividendsPaid', 'commonStockDividendPaid'),
     })),
   };
 }
