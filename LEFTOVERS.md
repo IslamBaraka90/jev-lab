@@ -118,3 +118,25 @@ One-line fix in `web/src/demo/widgets.jsx`, shared file, so it waits for a quiet
 - **Live mode has never been exercised by anyone but me.** It is opt-in per demo with a confirmation
   dialog that states the request count, and the static server refuses `/api/*` so browser checks stay
   free. Before the site goes public, decide whether live mode ships at all.
+
+## Closed since this list was written
+
+- **The cached `annual` statement arrays were not in year order.** `scripts/fetch-market.js` sorted
+  `Date` objects as strings, so a January filer's newest year was not first and every generator
+  reading `annual[0]` got an arbitrary year. Fixed in `scripts/generate/lib/market.js` (sorted on
+  load) and in the fetcher. Demo 161 was rebuilt and re-recorded on the corrected years.
+- **`register.mjs` emitted `import undefined`** when called without a variable name, which is legal
+  JavaScript exactly once per file. Two demos were registered that way before it was noticed.
+
+## Still open after the odd-numbered block
+
+- **Demo 181 has 71 crossovers, not the ~240 the brief assumed.** The cached history is six years;
+  the brief assumed ten. Fetching more history would close it. See `demos/golden-cross-review/notes.md`.
+- **Demo 183's strategy families are unbalanced.** The range break is three quarters of the book's
+  trades, so the gate's answer for one family decides nearly everything. A balanced book would be a
+  fairer test of the gate and is the single most useful thing to change there.
+- **`VITE_REPO_URL` is still unset** — every demo page links "Run it yourself" to
+  `github.com/set-VITE_REPO_URL`.
+- **The `investigate`-style questions need bars in their criteria.** Demo 165 showed a yes/no with no
+  stated threshold returns yes for everything; adding the standard to the state moved it from 73 of
+  73 to 51 of 73. The same wording appears in other demos and is worth a pass.
