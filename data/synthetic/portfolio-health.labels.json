@@ -1,0 +1,98 @@
+[
+  {
+    "plantedRisk": "CONCENTRATION",
+    "portfolioId": "PF-22"
+  },
+  {
+    "plantedRisk": "CONCENTRATION",
+    "portfolioId": "PF-07"
+  },
+  {
+    "plantedRisk": "CONCENTRATION",
+    "portfolioId": "PF-05"
+  },
+  {
+    "plantedRisk": "CONCENTRATION",
+    "portfolioId": "PF-09"
+  },
+  {
+    "plantedRisk": "CONCENTRATION",
+    "portfolioId": "PF-14"
+  },
+  {
+    "plantedRisk": "CORRELATION",
+    "portfolioId": "PF-02"
+  },
+  {
+    "plantedRisk": "CORRELATION",
+    "portfolioId": "PF-11"
+  },
+  {
+    "plantedRisk": "CORRELATION",
+    "portfolioId": "PF-24"
+  },
+  {
+    "plantedRisk": "CORRELATION",
+    "portfolioId": "PF-10"
+  },
+  {
+    "plantedRisk": "LIQUIDITY",
+    "portfolioId": "PF-19"
+  },
+  {
+    "plantedRisk": "LIQUIDITY",
+    "portfolioId": "PF-03"
+  },
+  {
+    "plantedRisk": "LIQUIDITY",
+    "portfolioId": "PF-06"
+  },
+  {
+    "plantedRisk": "CURRENCY",
+    "portfolioId": "PF-13"
+  },
+  {
+    "plantedRisk": "CURRENCY",
+    "portfolioId": "PF-08"
+  },
+  {
+    "plantedRisk": "CURRENCY",
+    "portfolioId": "PF-01"
+  },
+  {
+    "plantedRisk": "CURRENCY",
+    "portfolioId": "PF-21"
+  },
+  {
+    "plantedRisk": "DRIFT",
+    "portfolioId": "PF-23"
+  },
+  {
+    "plantedRisk": "DRIFT",
+    "portfolioId": "PF-17"
+  },
+  {
+    "plantedRisk": "DRIFT",
+    "portfolioId": "PF-15"
+  },
+  {
+    "plantedRisk": "NONE",
+    "portfolioId": "PF-16"
+  },
+  {
+    "plantedRisk": "NONE",
+    "portfolioId": "PF-12"
+  },
+  {
+    "plantedRisk": "NONE",
+    "portfolioId": "PF-18"
+  },
+  {
+    "plantedRisk": "NONE",
+    "portfolioId": "PF-20"
+  },
+  {
+    "plantedRisk": "NONE",
+    "portfolioId": "PF-04"
+  }
+]

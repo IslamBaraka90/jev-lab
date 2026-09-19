@@ -1,0 +1,3029 @@
+{
+  "id": "portfolio-health",
+  "class": "mixed",
+  "generatedAt": "2026-09-19",
+  "seed": 1141,
+  "source": "scripts/generate/portfolio-health.js",
+  "context": {
+    "adviser": "Ravenhill Advisers",
+    "currency": "USD",
+    "pricesAsOf": "2026-09-18",
+    "howToRead": {
+      "concentration": "A single holding above a quarter of the portfolio is worth a sentence, whatever it is.",
+      "liquidity": "A position worth more than one day of its own average volume cannot be sold in a hurry.",
+      "drift": "Weights are compared with the plan the client agreed, not with anybody else’s.",
+      "correlation": "Correlations are twelve-month daily, computed from the cached prices."
+    },
+    "note": "Prices, volumes and fundamentals are real, cached once from Yahoo Finance and committed. Nothing is fetched at build time or in the browser, and none of this is investment advice."
+  },
+  "items": [
+    {
+      "id": "PF-01",
+      "client": "Amina Aziz",
+      "clientSpendsIn": "AED",
+      "objective": "Balanced. Grow ahead of inflation without a year that frightens anybody.",
+      "objectiveId": "balanced",
+      "targetAllocation": {
+        "equity": 65,
+        "defensive": 25,
+        "cash": 10
+      },
+      "totalValueUsd": 415622500,
+      "cashPercent": 9.2,
+      "holdingCount": 7,
+      "currentAllocation": {
+        "equity": 64.4,
+        "defensive": 26.6,
+        "cash": 9.2
+      },
+      "largestHoldingPercent": 17.5,
+      "heldOutsideTheClientsCurrencyPercent": 91,
+      "adviserNote": "The client earns, spends and retires in their own currency. Everything here is priced in dollars and nothing hedges it.",
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 9.6,
+          "valueUsd": 39840000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.016
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.5,
+          "valueUsd": 72625000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.003
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 11.8,
+          "valueUsd": 48970000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.2,
+          "valueUsd": 71380000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.026
+        },
+        {
+          "symbol": "WMT",
+          "name": "Discount Stores",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 8.3,
+          "valueUsd": 34445000,
+          "price": 106.73,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "worstFallPercent": -23.52,
+          "daysOfAverageVolume": 0.013
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Drug Manufacturers - General",
+          "sector": "Healthcare",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 13.3,
+          "valueUsd": 55195000,
+          "price": 269.99,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "worstFallPercent": -10.96,
+          "daysOfAverageVolume": 0.028
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 13.3,
+          "valueUsd": 55195000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.038
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "SPY/JPM",
+          "correlation": 0.451
+        },
+        {
+          "pair": "JNJ/KO",
+          "correlation": 0.395
+        }
+      ]
+    },
+    {
+      "id": "PF-02",
+      "client": "Hana Kassem",
+      "clientSpendsIn": "USD",
+      "objective": "Balanced. Grow ahead of inflation without a year that frightens anybody.",
+      "objectiveId": "balanced",
+      "targetAllocation": {
+        "equity": 65,
+        "defensive": 25,
+        "cash": 10
+      },
+      "totalValueUsd": 184889000,
+      "cashPercent": 9.9,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 63.9,
+        "defensive": 26.1,
+        "cash": 9.9
+      },
+      "largestHoldingPercent": 26.1,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Looks diversified on a pie chart. The large positions are the same story told three ways.",
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12.6,
+          "valueUsd": 23310000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.01
+        },
+        {
+          "symbol": "CVX",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.4,
+          "valueUsd": 26640000,
+          "price": 209.51,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "worstFallPercent": -21.53,
+          "daysOfAverageVolume": 0.014
+        },
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 15.6,
+          "valueUsd": 28860000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.015
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Consumer Electronics",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12,
+          "valueUsd": 22200000,
+          "price": 336.13,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "worstFallPercent": -13.82,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 9.3,
+          "valueUsd": 17205000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.006
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 26.1,
+          "valueUsd": 48285000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.033
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "XOM/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "CVX/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "XOM/CVX",
+          "correlation": 0.839
+        }
+      ]
+    },
+    {
+      "id": "PF-03",
+      "client": "Tarek Sabri",
+      "clientSpendsIn": "USD",
+      "objective": "Balanced. Grow ahead of inflation without a year that frightens anybody.",
+      "objectiveId": "balanced",
+      "targetAllocation": {
+        "equity": 65,
+        "defensive": 25,
+        "cash": 10
+      },
+      "totalValueUsd": 4113354000,
+      "cashPercent": 10.6,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 66.1,
+        "defensive": 23.3,
+        "cash": 10.6
+      },
+      "largestHoldingPercent": 22.1,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "The position was built slowly over a year and nobody has tried to sell it since.",
+      "holdings": [
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 22.1,
+          "valueUsd": 909415000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.487
+        },
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 13.6,
+          "valueUsd": 559640000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.517
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Software - Infrastructure",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.6,
+          "valueUsd": 600790000,
+          "price": 493.78,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "worstFallPercent": -34.91,
+          "daysOfAverageVolume": 0.036
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 15.8,
+          "valueUsd": 650170000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.019
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 12,
+          "valueUsd": 493800000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.135
+        },
+        {
+          "symbol": "PG",
+          "name": "Household & Personal Products",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 11.3,
+          "valueUsd": 464995000,
+          "price": 146.39,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "worstFallPercent": -16.15,
+          "daysOfAverageVolume": 0.351
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "PEP/PG",
+          "correlation": 0.496
+        },
+        {
+          "pair": "MSFT/SPY",
+          "correlation": 0.382
+        },
+        {
+          "pair": "SPY/GLD",
+          "correlation": 0.337
+        }
+      ]
+    },
+    {
+      "id": "PF-04",
+      "client": "Nabil Nasser",
+      "clientSpendsIn": "USD",
+      "objective": "Balanced. Grow ahead of inflation without a year that frightens anybody.",
+      "objectiveId": "balanced",
+      "targetAllocation": {
+        "equity": 65,
+        "defensive": 25,
+        "cash": 10
+      },
+      "totalValueUsd": 189056700,
+      "cashPercent": 10.4,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 63.4,
+        "defensive": 26.2,
+        "cash": 10.4
+      },
+      "largestHoldingPercent": 20.2,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Reviewed in June, rebalanced in July, nothing outstanding.",
+      "holdings": [
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 9.9,
+          "valueUsd": 18711000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.017
+        },
+        {
+          "symbol": "WMT",
+          "name": "Discount Stores",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 16.6,
+          "valueUsd": 31374000,
+          "price": 106.73,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "worstFallPercent": -23.52,
+          "daysOfAverageVolume": 0.012
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 16.7,
+          "valueUsd": 31563000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.011
+        },
+        {
+          "symbol": "CVX",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 20.2,
+          "valueUsd": 38178000,
+          "price": 209.51,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "worstFallPercent": -21.53,
+          "daysOfAverageVolume": 0.021
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 13.1,
+          "valueUsd": 24759000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.017
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 13.1,
+          "valueUsd": 24759000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.007
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "PEP/KO",
+          "correlation": 0.564
+        },
+        {
+          "pair": "PEP/WMT",
+          "correlation": 0.314
+        },
+        {
+          "pair": "WMT/KO",
+          "correlation": 0.297
+        }
+      ]
+    },
+    {
+      "id": "PF-05",
+      "client": "Adel Fahmy",
+      "clientSpendsIn": "USD",
+      "objective": "Balanced. Grow ahead of inflation without a year that frightens anybody.",
+      "objectiveId": "balanced",
+      "targetAllocation": {
+        "equity": 65,
+        "defensive": 25,
+        "cash": 10
+      },
+      "totalValueUsd": 388844400,
+      "cashPercent": 11.2,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 62.8,
+        "defensive": 26,
+        "cash": 11.2
+      },
+      "largestHoldingPercent": 47.9,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Client asked to keep the winner rather than trim it. Nothing has been sold in two years.",
+      "holdings": [
+        {
+          "symbol": "AAPL",
+          "name": "Consumer Electronics",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 47.9,
+          "valueUsd": 186331000,
+          "price": 336.13,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "worstFallPercent": -13.82,
+          "daysOfAverageVolume": 0.01
+        },
+        {
+          "symbol": "CVX",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 6.2,
+          "valueUsd": 24118000,
+          "price": 209.51,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "worstFallPercent": -21.53,
+          "daysOfAverageVolume": 0.013
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 3.8,
+          "valueUsd": 14782000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.005
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 4.9,
+          "valueUsd": 19061000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 17.6,
+          "valueUsd": 68464000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.047
+        },
+        {
+          "symbol": "PG",
+          "name": "Household & Personal Products",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 8.4,
+          "valueUsd": 32676000,
+          "price": 146.39,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "worstFallPercent": -16.15,
+          "daysOfAverageVolume": 0.025
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "KO/PG",
+          "correlation": 0.526
+        },
+        {
+          "pair": "AAPL/JPM",
+          "correlation": 0.171
+        },
+        {
+          "pair": "JPM/NVDA",
+          "correlation": 0.159
+        }
+      ]
+    },
+    {
+      "id": "PF-06",
+      "client": "Tarek Rizk",
+      "clientSpendsIn": "USD",
+      "objective": "Balanced. Grow ahead of inflation without a year that frightens anybody.",
+      "objectiveId": "balanced",
+      "targetAllocation": {
+        "equity": 65,
+        "defensive": 25,
+        "cash": 10
+      },
+      "totalValueUsd": 5814324800,
+      "cashPercent": 8.6,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 66,
+        "defensive": 25.4,
+        "cash": 8.6
+      },
+      "largestHoldingPercent": 23.3,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "The position was built slowly over a year and nobody has tried to sell it since.",
+      "holdings": [
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 23.3,
+          "valueUsd": 1354196000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.725
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.9,
+          "valueUsd": 1040348000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.036
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12.5,
+          "valueUsd": 726500000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12.3,
+          "valueUsd": 714876000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.26
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 14.3,
+          "valueUsd": 831116000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.227
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 11.1,
+          "valueUsd": 645132000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.439
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/GLD",
+          "correlation": 0.256
+        },
+        {
+          "pair": "JPM/GLD",
+          "correlation": 0.18
+        },
+        {
+          "pair": "NVDA/JPM",
+          "correlation": 0.159
+        }
+      ]
+    },
+    {
+      "id": "PF-07",
+      "client": "Rami Moussa",
+      "clientSpendsIn": "USD",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 572656200,
+      "cashPercent": 5.2,
+      "holdingCount": 7,
+      "currentAllocation": {
+        "equity": 83.7,
+        "defensive": 11,
+        "cash": 5.2
+      },
+      "largestHoldingPercent": 42.9,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Client asked to keep the winner rather than trim it. Nothing has been sold in two years.",
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 42.9,
+          "valueUsd": 245817000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.101
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 8.3,
+          "valueUsd": 47559000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.002
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.6,
+          "valueUsd": 83658000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.03
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 6.9,
+          "valueUsd": 39537000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 11,
+          "valueUsd": 63030000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.058
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 6.1,
+          "valueUsd": 34953000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.024
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Drug Manufacturers - General",
+          "sector": "Healthcare",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 4.9,
+          "valueUsd": 28077000,
+          "price": 269.99,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "worstFallPercent": -10.96,
+          "daysOfAverageVolume": 0.014
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "PEP/KO",
+          "correlation": 0.564
+        },
+        {
+          "pair": "JPM/SPY",
+          "correlation": 0.451
+        }
+      ]
+    },
+    {
+      "id": "PF-08",
+      "client": "Lina Kassem",
+      "clientSpendsIn": "GBP",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 434260400,
+      "cashPercent": 6.4,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 83.7,
+        "defensive": 10,
+        "cash": 6.4
+      },
+      "largestHoldingPercent": 25.4,
+      "heldOutsideTheClientsCurrencyPercent": 93.7,
+      "adviserNote": "The client earns, spends and retires in their own currency. Everything here is priced in dollars and nothing hedges it.",
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 19.9,
+          "valueUsd": 86366000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.036
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 25.4,
+          "valueUsd": 110236000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.004
+        },
+        {
+          "symbol": "BAC",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.4,
+          "valueUsd": 62496000,
+          "price": 57.73,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "worstFallPercent": -18.39,
+          "daysOfAverageVolume": 0.033
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 24,
+          "valueUsd": 104160000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.003
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 3.8,
+          "valueUsd": 16492000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.005
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 6.2,
+          "valueUsd": 26908000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.018
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "BAC/SPY",
+          "correlation": 0.427
+        },
+        {
+          "pair": "SPY/GLD",
+          "correlation": 0.337
+        }
+      ]
+    },
+    {
+      "id": "PF-09",
+      "client": "Rania Darwish",
+      "clientSpendsIn": "USD",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 237142200,
+      "cashPercent": 4.4,
+      "holdingCount": 7,
+      "currentAllocation": {
+        "equity": 84.5,
+        "defensive": 11.2,
+        "cash": 4.4
+      },
+      "largestHoldingPercent": 47.3,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Client asked to keep the winner rather than trim it. Nothing has been sold in two years.",
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 47.3,
+          "valueUsd": 112101000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.004
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 7.7,
+          "valueUsd": 18249000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "BAC",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 11.6,
+          "valueUsd": 27492000,
+          "price": 57.73,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "worstFallPercent": -18.39,
+          "daysOfAverageVolume": 0.014
+        },
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 8.6,
+          "valueUsd": 20382000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.008
+        },
+        {
+          "symbol": "WMT",
+          "name": "Discount Stores",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 9.3,
+          "valueUsd": 22041000,
+          "price": 106.73,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "worstFallPercent": -23.52,
+          "daysOfAverageVolume": 0.008
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 4.7,
+          "valueUsd": 11139000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.008
+        },
+        {
+          "symbol": "PG",
+          "name": "Household & Personal Products",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 6.5,
+          "valueUsd": 15405000,
+          "price": 146.39,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "worstFallPercent": -16.15,
+          "daysOfAverageVolume": 0.012
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "KO/PG",
+          "correlation": 0.526
+        },
+        {
+          "pair": "WMT/PG",
+          "correlation": 0.318
+        },
+        {
+          "pair": "WMT/KO",
+          "correlation": 0.297
+        }
+      ]
+    },
+    {
+      "id": "PF-10",
+      "client": "Zeina Tawfik",
+      "clientSpendsIn": "USD",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 274862500,
+      "cashPercent": 4.4,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 86.3,
+        "defensive": 9.3,
+        "cash": 4.4
+      },
+      "largestHoldingPercent": 21,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Looks diversified on a pie chart. The large positions are the same story told three ways.",
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12.3,
+          "valueUsd": 33825000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.014
+        },
+        {
+          "symbol": "CVX",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 16.3,
+          "valueUsd": 44825000,
+          "price": 209.51,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "worstFallPercent": -21.53,
+          "daysOfAverageVolume": 0.024
+        },
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 16.5,
+          "valueUsd": 45375000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.024
+        },
+        {
+          "symbol": "BAC",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 20.2,
+          "valueUsd": 55550000,
+          "price": 57.73,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "worstFallPercent": -18.39,
+          "daysOfAverageVolume": 0.029
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 21,
+          "valueUsd": 57750000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Drug Manufacturers - General",
+          "sector": "Healthcare",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 9.3,
+          "valueUsd": 25575000,
+          "price": 269.99,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "worstFallPercent": -10.96,
+          "daysOfAverageVolume": 0.013
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "XOM/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "CVX/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "XOM/CVX",
+          "correlation": 0.839
+        }
+      ]
+    },
+    {
+      "id": "PF-11",
+      "client": "Sami Barakat",
+      "clientSpendsIn": "USD",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 599599000,
+      "cashPercent": 4.2,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 84,
+        "defensive": 11.9,
+        "cash": 4.2
+      },
+      "largestHoldingPercent": 25,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Looks diversified on a pie chart. The large positions are the same story told three ways.",
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 13.1,
+          "valueUsd": 78469000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.032
+        },
+        {
+          "symbol": "CVX",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.3,
+          "valueUsd": 85657000,
+          "price": 209.51,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "worstFallPercent": -21.53,
+          "daysOfAverageVolume": 0.046
+        },
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 15.6,
+          "valueUsd": 93444000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.05
+        },
+        {
+          "symbol": "BAC",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 25,
+          "valueUsd": 149750000,
+          "price": 57.73,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "worstFallPercent": -18.39,
+          "daysOfAverageVolume": 0.079
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 16,
+          "valueUsd": 95840000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 11.9,
+          "valueUsd": 71281000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.048
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "XOM/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "CVX/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "XOM/CVX",
+          "correlation": 0.839
+        }
+      ]
+    },
+    {
+      "id": "PF-12",
+      "client": "Rania Ghanem",
+      "clientSpendsIn": "USD",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 611061100,
+      "cashPercent": 4.2,
+      "holdingCount": 7,
+      "currentAllocation": {
+        "equity": 87,
+        "defensive": 8.8,
+        "cash": 4.2
+      },
+      "largestHoldingPercent": 23,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Reviewed in June, rebalanced in July, nothing outstanding.",
+      "holdings": [
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.2,
+          "valueUsd": 105092000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.038
+        },
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.4,
+          "valueUsd": 106314000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.098
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.4,
+          "valueUsd": 106314000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 23,
+          "valueUsd": 140530000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.005
+        },
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12,
+          "valueUsd": 73320000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.039
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Drug Manufacturers - General",
+          "sector": "Healthcare",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 3.6,
+          "valueUsd": 21996000,
+          "price": 269.99,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "worstFallPercent": -10.96,
+          "daysOfAverageVolume": 0.011
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 5.2,
+          "valueUsd": 31772000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.022
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "PEP/KO",
+          "correlation": 0.564
+        },
+        {
+          "pair": "PEP/JNJ",
+          "correlation": 0.406
+        },
+        {
+          "pair": "JNJ/KO",
+          "correlation": 0.395
+        }
+      ]
+    },
+    {
+      "id": "PF-13",
+      "client": "Omar Rizk",
+      "clientSpendsIn": "EUR",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 773845200,
+      "cashPercent": 4.5,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 87,
+        "defensive": 8.5,
+        "cash": 4.5
+      },
+      "largestHoldingPercent": 27.7,
+      "heldOutsideTheClientsCurrencyPercent": 95.5,
+      "adviserNote": "The client earns, spends and retires in their own currency. Everything here is priced in dollars and nothing hedges it.",
+      "holdings": [
+        {
+          "symbol": "AAPL",
+          "name": "Consumer Electronics",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 15.7,
+          "valueUsd": 121518000,
+          "price": 336.13,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "worstFallPercent": -13.82,
+          "daysOfAverageVolume": 0.007
+        },
+        {
+          "symbol": "BAC",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 27.7,
+          "valueUsd": 214398000,
+          "price": 57.73,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "worstFallPercent": -18.39,
+          "daysOfAverageVolume": 0.112
+        },
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 21.7,
+          "valueUsd": 167958000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.069
+        },
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 21.9,
+          "valueUsd": 169506000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.156
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 4.1,
+          "valueUsd": 31734000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.009
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 4.4,
+          "valueUsd": 34056000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.023
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "PEP/KO",
+          "correlation": 0.564
+        },
+        {
+          "pair": "AAPL/BAC",
+          "correlation": 0.244
+        },
+        {
+          "pair": "AAPL/PEP",
+          "correlation": 0.147
+        }
+      ]
+    },
+    {
+      "id": "PF-14",
+      "client": "Karim Nasser",
+      "clientSpendsIn": "USD",
+      "objective": "Long-term growth. Volatility is acceptable; permanent loss is not.",
+      "objectiveId": "growth",
+      "targetAllocation": {
+        "equity": 85,
+        "defensive": 10,
+        "cash": 5
+      },
+      "totalValueUsd": 404121200,
+      "cashPercent": 4.4,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 85.1,
+        "defensive": 10.5,
+        "cash": 4.4
+      },
+      "largestHoldingPercent": 38.9,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Client asked to keep the winner rather than trim it. Nothing has been sold in two years.",
+      "holdings": [
+        {
+          "symbol": "AAPL",
+          "name": "Consumer Electronics",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 38.9,
+          "valueUsd": 157156000,
+          "price": 336.13,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "worstFallPercent": -13.82,
+          "daysOfAverageVolume": 0.009
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Software - Infrastructure",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 15.8,
+          "valueUsd": 63832000,
+          "price": 493.78,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "worstFallPercent": -34.91,
+          "daysOfAverageVolume": 0.004
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 16.6,
+          "valueUsd": 67064000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 13.8,
+          "valueUsd": 55752000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.03
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 6.8,
+          "valueUsd": 27472000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.008
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 3.7,
+          "valueUsd": 14948000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.01
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "AAPL/KO",
+          "correlation": 0.134
+        },
+        {
+          "pair": "AAPL/MSFT",
+          "correlation": 0.128
+        },
+        {
+          "pair": "BTC-USD/XLE",
+          "correlation": 0.124
+        }
+      ]
+    },
+    {
+      "id": "PF-15",
+      "client": "Zeina Sabri",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 882352800,
+      "cashPercent": 3.5,
+      "holdingCount": 5,
+      "currentAllocation": {
+        "equity": 86.7,
+        "defensive": 9.8,
+        "cash": 3.5
+      },
+      "largestHoldingPercent": 27.1,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Agreed as income three years ago. Nobody has rebalanced since the technology holdings ran.",
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.7,
+          "valueUsd": 156114000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.005
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Software - Infrastructure",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 15.6,
+          "valueUsd": 137592000,
+          "price": 493.78,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "worstFallPercent": -34.91,
+          "daysOfAverageVolume": 0.008
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 27.1,
+          "valueUsd": 239022000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.007
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 26.3,
+          "valueUsd": 231966000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 9.8,
+          "valueUsd": 86436000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.024
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "MSFT/SPY",
+          "correlation": 0.382
+        },
+        {
+          "pair": "SPY/GLD",
+          "correlation": 0.337
+        }
+      ]
+    },
+    {
+      "id": "PF-16",
+      "client": "Salma Aziz",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 240168000,
+      "cashPercent": 9.5,
+      "holdingCount": 7,
+      "currentAllocation": {
+        "equity": 55.8,
+        "defensive": 34.8,
+        "cash": 9.5
+      },
+      "largestHoldingPercent": 20.4,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Reviewed in June, rebalanced in July, nothing outstanding.",
+      "holdings": [
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12.5,
+          "valueUsd": 30000000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.011
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 11.4,
+          "valueUsd": 27360000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Consumer Electronics",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 7.7,
+          "valueUsd": 18480000,
+          "price": 336.13,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "worstFallPercent": -13.82,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.9,
+          "valueUsd": 35760000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.015
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 9.3,
+          "valueUsd": 22320000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Drug Manufacturers - General",
+          "sector": "Healthcare",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 20.4,
+          "valueUsd": 48960000,
+          "price": 269.99,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "worstFallPercent": -10.96,
+          "daysOfAverageVolume": 0.025
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 14.4,
+          "valueUsd": 34560000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.024
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "JPM/SPY",
+          "correlation": 0.451
+        },
+        {
+          "pair": "JNJ/KO",
+          "correlation": 0.395
+        },
+        {
+          "pair": "SPY/AAPL",
+          "correlation": 0.35
+        }
+      ]
+    },
+    {
+      "id": "PF-17",
+      "client": "Hadi Mansour",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 302000000,
+      "cashPercent": 3.2,
+      "holdingCount": 5,
+      "currentAllocation": {
+        "equity": 87.6,
+        "defensive": 9.2,
+        "cash": 3.2
+      },
+      "largestHoldingPercent": 28.2,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Agreed as income three years ago. Nobody has rebalanced since the technology holdings ran.",
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 20.5,
+          "valueUsd": 61910000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.002
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Consumer Electronics",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 28.2,
+          "valueUsd": 85164000,
+          "price": 336.13,
+          "twelveMonthReturnPercent": 40.65,
+          "volatilityPercent": 25.07,
+          "worstFallPercent": -13.82,
+          "daysOfAverageVolume": 0.005
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 21.2,
+          "valueUsd": 64024000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 17.7,
+          "valueUsd": 53454000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.002
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 9.2,
+          "valueUsd": 27784000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.019
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "AAPL/SPY",
+          "correlation": 0.35
+        },
+        {
+          "pair": "AAPL/KO",
+          "correlation": 0.134
+        }
+      ]
+    },
+    {
+      "id": "PF-18",
+      "client": "Nabil Khoury",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 627874400,
+      "cashPercent": 11,
+      "holdingCount": 7,
+      "currentAllocation": {
+        "equity": 54.9,
+        "defensive": 34.1,
+        "cash": 11
+      },
+      "largestHoldingPercent": 17.7,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Reviewed in June, rebalanced in July, nothing outstanding.",
+      "holdings": [
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 10.1,
+          "valueUsd": 63428000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.002
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12.4,
+          "valueUsd": 77872000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.003
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 10.4,
+          "valueUsd": 65312000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 7.1,
+          "valueUsd": 44588000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.016
+        },
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.9,
+          "valueUsd": 93572000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.086
+        },
+        {
+          "symbol": "PG",
+          "name": "Household & Personal Products",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 16.4,
+          "valueUsd": 102992000,
+          "price": 146.39,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "worstFallPercent": -16.15,
+          "daysOfAverageVolume": 0.078
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 17.7,
+          "valueUsd": 111156000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.076
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "SPY/NVDA",
+          "correlation": 0.65
+        },
+        {
+          "pair": "PEP/KO",
+          "correlation": 0.564
+        },
+        {
+          "pair": "PG/KO",
+          "correlation": 0.526
+        }
+      ]
+    },
+    {
+      "id": "PF-19",
+      "client": "Tarek Selim",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 3286743300,
+      "cashPercent": 9.3,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 57.4,
+        "defensive": 33.1,
+        "cash": 9.3
+      },
+      "largestHoldingPercent": 20.3,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "The position was built slowly over a year and nobody has tried to sell it since.",
+      "holdings": [
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 20.3,
+          "valueUsd": 668479000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.617
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 13.7,
+          "valueUsd": 451141000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.013
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Software - Infrastructure",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.8,
+          "valueUsd": 487364000,
+          "price": 493.78,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "worstFallPercent": -34.91,
+          "daysOfAverageVolume": 0.029
+        },
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 8.6,
+          "valueUsd": 283198000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.152
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Drug Manufacturers - General",
+          "sector": "Healthcare",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 16,
+          "valueUsd": 526880000,
+          "price": 269.99,
+          "twelveMonthReturnPercent": 52.36,
+          "volatilityPercent": 19.09,
+          "worstFallPercent": -10.96,
+          "daysOfAverageVolume": 0.264
+        },
+        {
+          "symbol": "PG",
+          "name": "Household & Personal Products",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 17.1,
+          "valueUsd": 563103000,
+          "price": 146.39,
+          "twelveMonthReturnPercent": -8.69,
+          "volatilityPercent": 19.56,
+          "worstFallPercent": -16.15,
+          "daysOfAverageVolume": 0.425
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "PEP/PG",
+          "correlation": 0.496
+        },
+        {
+          "pair": "PEP/JNJ",
+          "correlation": 0.406
+        },
+        {
+          "pair": "JNJ/PG",
+          "correlation": 0.394
+        }
+      ]
+    },
+    {
+      "id": "PF-20",
+      "client": "Omar Farouk",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 601819400,
+      "cashPercent": 9.3,
+      "holdingCount": 7,
+      "currentAllocation": {
+        "equity": 55.4,
+        "defensive": 35.3,
+        "cash": 9.3
+      },
+      "largestHoldingPercent": 18.2,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Reviewed in June, rebalanced in July, nothing outstanding.",
+      "holdings": [
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 14.9,
+          "valueUsd": 89698000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.083
+        },
+        {
+          "symbol": "CVX",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 7.9,
+          "valueUsd": 47558000,
+          "price": 209.51,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "worstFallPercent": -21.53,
+          "daysOfAverageVolume": 0.026
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 8.9,
+          "valueUsd": 53578000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.002
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 8.3,
+          "valueUsd": 49966000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 15.4,
+          "valueUsd": 92708000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.034
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 17.1,
+          "valueUsd": 102942000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.028
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 18.2,
+          "valueUsd": 109564000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.075
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "PEP/KO",
+          "correlation": 0.564
+        },
+        {
+          "pair": "SPY/JPM",
+          "correlation": 0.451
+        }
+      ]
+    },
+    {
+      "id": "PF-21",
+      "client": "Dina Selim",
+      "clientSpendsIn": "EUR",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 174930000,
+      "cashPercent": 9.5,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 54.1,
+        "defensive": 36.4,
+        "cash": 9.5
+      },
+      "largestHoldingPercent": 19.5,
+      "heldOutsideTheClientsCurrencyPercent": 90.5,
+      "adviserNote": "The client earns, spends and retires in their own currency. Everything here is priced in dollars and nothing hedges it.",
+      "holdings": [
+        {
+          "symbol": "BAC",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 16.5,
+          "valueUsd": 28875000,
+          "price": 57.73,
+          "twelveMonthReturnPercent": 12.32,
+          "volatilityPercent": 22.08,
+          "worstFallPercent": -18.39,
+          "daysOfAverageVolume": 0.015
+        },
+        {
+          "symbol": "PEP",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 11.2,
+          "valueUsd": 19600000,
+          "price": 129.75,
+          "twelveMonthReturnPercent": -8.13,
+          "volatilityPercent": 21.1,
+          "worstFallPercent": -23.9,
+          "daysOfAverageVolume": 0.018
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Software - Infrastructure",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 13.7,
+          "valueUsd": 23975000,
+          "price": 493.78,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "worstFallPercent": -34.91,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 12.7,
+          "valueUsd": 22225000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.009
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 16.9,
+          "valueUsd": 29575000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.008
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 19.5,
+          "valueUsd": 34125000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.023
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "PEP/KO",
+          "correlation": 0.564
+        },
+        {
+          "pair": "BAC/GLD",
+          "correlation": 0.123
+        },
+        {
+          "pair": "XOM/KO",
+          "correlation": 0.122
+        }
+      ]
+    },
+    {
+      "id": "PF-22",
+      "client": "Salma Rizk",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 668331000,
+      "cashPercent": 9.9,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 54.4,
+        "defensive": 35.6,
+        "cash": 9.9
+      },
+      "largestHoldingPercent": 39,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Client asked to keep the winner rather than trim it. Nothing has been sold in two years.",
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 39,
+          "valueUsd": 260910000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.009
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Software - Infrastructure",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 3.7,
+          "valueUsd": 24753000,
+          "price": 493.78,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "worstFallPercent": -34.91,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 5,
+          "valueUsd": 33450000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "WMT",
+          "name": "Discount Stores",
+          "sector": "Consumer Defensive",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 6.7,
+          "valueUsd": 44823000,
+          "price": 106.73,
+          "twelveMonthReturnPercent": 2.36,
+          "volatilityPercent": 26.01,
+          "worstFallPercent": -23.52,
+          "daysOfAverageVolume": 0.017
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 19.1,
+          "valueUsd": 127779000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.087
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 16.5,
+          "valueUsd": 110385000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.03
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "MSFT/SPY",
+          "correlation": 0.382
+        },
+        {
+          "pair": "SPY/GLD",
+          "correlation": 0.337
+        }
+      ]
+    },
+    {
+      "id": "PF-23",
+      "client": "Omar Moussa",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 251025100,
+      "cashPercent": 4.3,
+      "holdingCount": 5,
+      "currentAllocation": {
+        "equity": 86.9,
+        "defensive": 8.8,
+        "cash": 4.3
+      },
+      "largestHoldingPercent": 26.3,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Agreed as income three years ago. Nobody has rebalanced since the technology holdings ran.",
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 18,
+          "valueUsd": 45180000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.002
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Software - Infrastructure",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 26.3,
+          "valueUsd": 66013000,
+          "price": 493.78,
+          "twelveMonthReturnPercent": -3.18,
+          "volatilityPercent": 32.16,
+          "worstFallPercent": -34.91,
+          "daysOfAverageVolume": 0.004
+        },
+        {
+          "symbol": "SPY",
+          "name": "SPY",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 21.3,
+          "valueUsd": 53463000,
+          "price": 761.69,
+          "twelveMonthReturnPercent": 15.55,
+          "volatilityPercent": 12.89,
+          "worstFallPercent": -9.13,
+          "daysOfAverageVolume": 0.002
+        },
+        {
+          "symbol": "JPM",
+          "name": "Banks - Diversified",
+          "sector": "Financial Services",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 21.3,
+          "valueUsd": 53463000,
+          "price": 349.67,
+          "twelveMonthReturnPercent": 12.16,
+          "volatilityPercent": 22.1,
+          "worstFallPercent": -15.47,
+          "daysOfAverageVolume": 0.019
+        },
+        {
+          "symbol": "GLD",
+          "name": "GLD",
+          "sector": "Other",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 8.8,
+          "valueUsd": 22088000,
+          "price": 401.17,
+          "twelveMonthReturnPercent": 19.05,
+          "volatilityPercent": 29.56,
+          "worstFallPercent": -26.4,
+          "daysOfAverageVolume": 0.006
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "NVDA/SPY",
+          "correlation": 0.65
+        },
+        {
+          "pair": "SPY/JPM",
+          "correlation": 0.451
+        },
+        {
+          "pair": "MSFT/SPY",
+          "correlation": 0.382
+        }
+      ]
+    },
+    {
+      "id": "PF-24",
+      "client": "Adel Kassem",
+      "clientSpendsIn": "USD",
+      "objective": "Income with capital preserved. Steady dividends, nothing that swings hard.",
+      "objectiveId": "income",
+      "targetAllocation": {
+        "equity": 55,
+        "defensive": 35,
+        "cash": 10
+      },
+      "totalValueUsd": 479000000,
+      "cashPercent": 10,
+      "holdingCount": 6,
+      "currentAllocation": {
+        "equity": 55.7,
+        "defensive": 34.3,
+        "cash": 10
+      },
+      "largestHoldingPercent": 34.3,
+      "heldOutsideTheClientsCurrencyPercent": 0,
+      "adviserNote": "Looks diversified on a pie chart. The large positions are the same story told three ways.",
+      "holdings": [
+        {
+          "symbol": "XOM",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 10.7,
+          "valueUsd": 51253000,
+          "price": 163.54,
+          "twelveMonthReturnPercent": 41.85,
+          "volatilityPercent": 25.9,
+          "worstFallPercent": -20.65,
+          "daysOfAverageVolume": 0.021
+        },
+        {
+          "symbol": "CVX",
+          "name": "Oil & Gas Integrated",
+          "sector": "Energy",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 11.2,
+          "valueUsd": 53648000,
+          "price": 209.51,
+          "twelveMonthReturnPercent": 30.87,
+          "volatilityPercent": 23.77,
+          "worstFallPercent": -21.53,
+          "daysOfAverageVolume": 0.029
+        },
+        {
+          "symbol": "XLE",
+          "name": "XLE",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 11.6,
+          "valueUsd": 55564000,
+          "price": 64.31,
+          "twelveMonthReturnPercent": 42.94,
+          "volatilityPercent": 21.84,
+          "worstFallPercent": -15.59,
+          "daysOfAverageVolume": 0.03
+        },
+        {
+          "symbol": "BTC-USD",
+          "name": "BTC-USD",
+          "sector": "Other",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 13.5,
+          "valueUsd": 64665000,
+          "price": 80901.46,
+          "twelveMonthReturnPercent": -10.62,
+          "volatilityPercent": 39.21,
+          "worstFallPercent": -39.59,
+          "daysOfAverageVolume": null
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Semiconductors",
+          "sector": "Technology",
+          "assetClass": "equity",
+          "currency": "USD",
+          "weightPercent": 8.7,
+          "valueUsd": 41673000,
+          "price": 222.27,
+          "twelveMonthReturnPercent": 30.52,
+          "volatilityPercent": 37.97,
+          "worstFallPercent": -20.22,
+          "daysOfAverageVolume": 0.001
+        },
+        {
+          "symbol": "KO",
+          "name": "Beverages - Non-Alcoholic",
+          "sector": "Consumer Defensive",
+          "assetClass": "defensive",
+          "currency": "USD",
+          "weightPercent": 34.3,
+          "valueUsd": 164297000,
+          "price": 88.25,
+          "twelveMonthReturnPercent": 31.64,
+          "volatilityPercent": 18.72,
+          "worstFallPercent": -8.5,
+          "daysOfAverageVolume": 0.112
+        }
+      ],
+      "pairCorrelations": [
+        {
+          "pair": "XOM/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "CVX/XLE",
+          "correlation": 0.902
+        },
+        {
+          "pair": "XOM/CVX",
+          "correlation": 0.839
+        }
+      ]
+    }
+  ]
+}
