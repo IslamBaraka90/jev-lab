@@ -30,6 +30,7 @@ export const GENERATORS = {
   'rebalance-review': () => import('./rebalance-review.js'),
   'mandate-compliance': () => import('./mandate-compliance.js'),
   'post-trade-review': () => import('./post-trade-review.js'),
+  'execution-quality': () => import('./execution-quality.js'),
 };
 
 const asJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
