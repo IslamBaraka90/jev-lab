@@ -1,9 +1,12 @@
 import { DemoCard } from '../components/DemoCard.jsx';
+import scoreboard from '../generated/scoreboard.json';
 import { Icon } from '../components/Icon.jsx';
 import { EmptyState } from '../components/ui.jsx';
 import { DOMAIN_BY_ID } from '../../../demos/index.js';
 import { cards } from '../lib/catalog.js';
 import { Link } from '../lib/router.jsx';
+
+const SCORES = new Map(scoreboard.rows.map((row) => [row.id, row]));
 
 /** One block of the series: what it proves, and its demos in the order they should be watched. */
 export function DomainPage({ id }) {
@@ -38,7 +41,7 @@ export function DomainPage({ id }) {
       {list.length > 0 ? (
         <ul className="demo-grid">
           {list.map((card) => (
-            <DemoCard key={card.id} card={card} />
+            <DemoCard key={card.id} card={card} score={SCORES.get(card.id)} />
           ))}
         </ul>
       ) : (

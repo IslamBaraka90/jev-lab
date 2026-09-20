@@ -10,6 +10,7 @@ import { DOMAIN_BY_ID, findDemo } from '../../demos/index.js';
 const CatalogPage = lazy(() => import('./pages/CatalogPage.jsx').then((module) => ({ default: module.CatalogPage })));
 const DemoPage = lazy(() => import('./pages/DemoPage.jsx').then((module) => ({ default: module.DemoPage })));
 const DomainPage = lazy(() => import('./pages/DomainPage.jsx').then((module) => ({ default: module.DomainPage })));
+const BenchmarkPage = lazy(() => import('./pages/BenchmarkPage.jsx').then((module) => ({ default: module.BenchmarkPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage.jsx').then((module) => ({ default: module.AboutPage })));
 const LabArea = lazy(() => import('./areas/LabArea.jsx'));
 
@@ -44,6 +45,7 @@ export function App() {
         {route.page === 'catalog' && <CatalogPage />}
         {route.page === 'demo' && <DemoPage key={route.id} id={route.id} />}
         {route.page === 'domain' && <DomainPage key={route.id} id={route.id} />}
+        {route.page === 'benchmark' && <BenchmarkPage />}
         {route.page === 'about' && <AboutPage />}
         {route.page === 'missing' && (
           <EmptyState title="This page does not exist" action={<Link to="/demos" className="button primary">Go to the demos</Link>}>
@@ -62,6 +64,7 @@ export function matchRoute(pathname) {
 
   if (clean === '/') return { page: 'home', section: 'home', title: null };
   if (clean === '/demos') return { page: 'catalog', section: 'demos', title: 'Demos' };
+  if (clean === '/benchmark') return { page: 'benchmark', section: 'benchmark', title: 'Benchmark' };
   if (clean === '/about') return { page: 'about', section: 'about', title: 'About' };
 
   const demo = clean.match(/^\/demos\/([^/]+)$/);

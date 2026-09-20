@@ -10,3 +10,6 @@ screenshots/
 
 # Everything the deployed site needs is tracked on purpose: demos/**/data.json,
 # demos/**/fixtures.json, data/market/** and data/synthetic/** are committed.
+
+# Answers of replaced runs, kept locally for item-by-item comparison. The numbers live in benchmarks/history.json.
+benchmarks/runs/

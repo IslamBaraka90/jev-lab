@@ -26,10 +26,11 @@
     "generate": "node scripts/generate/index.js",
     "fetch:market": "node scripts/fetch-market.js",
     "record": "node scripts/record-demo.js",
-    "prebuild": "node scripts/build-code-index.js",
+    "prebuild": "node scripts/build-code-index.js && node scripts/score.js",
     "build:code-index": "node scripts/build-code-index.js",
-    "check": "node scripts/check-budgets.js && node --test",
-    "serve:static": "node scripts/serve-static.js"
+    "check": "node scripts/check-budgets.js && node scripts/score.js --check && node --test",
+    "serve:static": "node scripts/serve-static.js",
+    "score": "node scripts/score.js"
   },
   "engines": {
     "node": ">=22.12"

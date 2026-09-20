@@ -1,0 +1,215 @@
+/* The suite scoreboard. */
+
+.bench-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s16);
+}
+
+.bench-summary article {
+  display: grid;
+  gap: 4px;
+  padding: var(--s20) var(--s24);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--surface2), var(--surface));
+}
+
+.bench-summary strong {
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.bench-summary .bench-model {
+  font-size: 22px;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.bench-tools {
+  gap: var(--s16);
+  align-items: flex-end;
+}
+
+.bench-tools p {
+  margin: 0;
+  max-width: 80ch;
+}
+
+.bench-group {
+  --domain: var(--control);
+  padding: 0;
+  overflow: hidden;
+  border-top: 3px solid var(--domain);
+}
+
+.bench-group.domain-books { --domain: var(--domain-books); }
+.bench-group.domain-orders { --domain: var(--domain-orders); }
+.bench-group.domain-fraud { --domain: var(--domain-fraud); }
+.bench-group.domain-crypto { --domain: var(--domain-crypto); }
+.bench-group.domain-portfolio { --domain: var(--domain-portfolio); }
+.bench-group.domain-trades { --domain: var(--domain-trades); }
+.bench-group.domain-screening { --domain: var(--domain-screening); }
+.bench-group.domain-news { --domain: var(--domain-news); }
+.bench-group.domain-strategy { --domain: var(--domain-strategy); }
+
+.bench-group-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px var(--s16);
+  padding: var(--s16) var(--s24) var(--s8);
+}
+
+.bench-group-head h2 {
+  font-size: var(--h3);
+}
+
+.bench-table {
+  min-width: 980px;
+}
+
+.bench-table th,
+.bench-table td {
+  padding: var(--s12) var(--s16);
+  vertical-align: middle;
+}
+
+.bench-table thead th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.bench-table tbody th {
+  width: 30%;
+  font-weight: 650;
+}
+
+.bench-demo {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s12);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.bench-demo:hover {
+  color: var(--link);
+}
+
+.bench-number {
+  flex: none;
+  margin-top: 2px;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--domain) 22%, transparent);
+  color: var(--domain);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bench-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.bench-gate {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 6px;
+  border-radius: 999px;
+}
+
+.bench-gate.pass {
+  background: var(--positiveBg);
+  color: var(--positive);
+}
+
+.bench-gate.fail {
+  background: var(--dangerBg);
+  color: var(--danger);
+}
+
+.bench-headline {
+  display: block;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.bench-agreement {
+  display: grid;
+  gap: 4px;
+  min-width: 170px;
+}
+
+.bench-track {
+  position: relative;
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface2);
+  overflow: hidden;
+}
+
+.bench-fill,
+.bench-interval {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bench-fill {
+  background: var(--domain, var(--accent));
+  border-radius: 999px;
+}
+
+.bench-interval {
+  z-index: 1;
+  background: color-mix(in srgb, var(--text) 28%, transparent);
+}
+
+.bench-lift {
+  display: grid;
+  gap: 2px;
+}
+
+.bench-lift .num {
+  font-weight: 700;
+}
+
+.bench-lift.up .num {
+  color: var(--positive);
+}
+
+.bench-lift.down .num {
+  color: var(--danger);
+}
+
+.bench-lift .meta {
+  font-size: 12px;
+  max-width: 26ch;
+}
+
+.bench-steps {
+  display: grid;
+  gap: var(--s8);
+  margin: 0;
+  padding-left: var(--s20);
+  color: var(--muted);
+  max-width: 96ch;
+}
+
+.bench-how h2 {
+  font-size: var(--h3);
+}

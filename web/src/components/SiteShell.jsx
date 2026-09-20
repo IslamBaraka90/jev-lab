@@ -7,6 +7,7 @@ import { Link, navigate, useLocation } from '../lib/router.jsx';
 
 const NAV = [
   { to: '/demos', label: 'Demos', section: 'demos' },
+  { to: '/benchmark', label: 'Benchmark', section: 'benchmark' },
   { to: '/lab', label: 'Lab', section: 'lab' },
   { to: '/about', label: 'About', section: 'about' },
 ];
@@ -22,7 +23,7 @@ export function SiteShell({ section, title, children }) {
     document.title = title ? `${title} · Jev Lab` : 'Jev Lab';
   }, [title]);
 
-  // "/" focuses search, "g" then d/l/h jumps between sections.
+  // "/" focuses search, "g" then d/b/l/h jumps between sections.
   useEffect(() => {
     let pending = null;
     const onKey = (event) => {
@@ -43,6 +44,7 @@ export function SiteShell({ section, title, children }) {
         clearTimeout(pending);
         pending = null;
         if (event.key === 'd') navigate('/demos');
+        if (event.key === 'b') navigate('/benchmark');
         if (event.key === 'l') navigate('/lab');
         if (event.key === 'h') navigate('/');
       }

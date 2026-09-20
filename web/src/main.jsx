@@ -11,6 +11,8 @@ import './styles/site.css';
 import './styles/demo.css';
 import './styles/runtime.css';
 import './styles/presenter.css';
+import './styles/benchmark.css';
+import './styles/home.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
