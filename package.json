@@ -27,6 +27,7 @@
     "fetch:market": "node scripts/fetch-market.js",
     "record": "node scripts/record-demo.js",
     "prebuild": "node scripts/build-code-index.js && node scripts/score.js",
+    "postbuild": "node scripts/prerender.js",
     "build:code-index": "node scripts/build-code-index.js",
     "check": "node scripts/check-budgets.js && node scripts/score.js --check && node --test",
     "serve:static": "node scripts/serve-static.js",

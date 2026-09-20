@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Segoe UI, Inter, system-ui, sans-serif">
+  <defs>
+    <radialGradient id="a" cx="78%" cy="-12%" r="72%">
+      <stop offset="0%" stop-color="#5884FF" stop-opacity="0.34"/><stop offset="100%" stop-color="#5884FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b" cx="6%" cy="106%" r="62%">
+      <stop offset="0%" stop-color="#E9488A" stop-opacity="0.22"/><stop offset="100%" stop-color="#E9488A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1330"/>
+  <rect width="1200" height="630" fill="url(#a)"/>
+  <rect width="1200" height="630" fill="url(#b)"/>
+
+  <g transform="translate(76,58)">
+    <rect width="52" height="52" rx="12" fill="#101A3E"/>
+    <g fill="none" stroke="#FAF7F3" stroke-width="3.4">
+      <path d="M31.1,6.4 A19.8,19.8 0 0 1 31.1,45.6"/>
+      <path d="M22.9,45.6 A19.8,19.8 0 0 1 22.9,6.4"/>
+    </g>
+    <text x="70" y="34" fill="#C9D2F0" font-size="25" font-weight="600" letter-spacing="1.2">THE FINTECH BUILDER</text>
+  </g>
+
+  <g fill="#FAF7F3" font-size="76" font-weight="800" letter-spacing="-1.8">
+    <text x="76" y="288">Fifty finance jobs.</text>
+    <text x="76" y="372">One model.</text>
+    <text x="76" y="456" fill="#8FB0FF">Every answer graded.</text>
+  </g>
+
+  <text x="76" y="512" fill="#C9D2F0" font-size="27">Typed, structured LLM answers on ledgers, fraud, portfolios and trades.</text>
+
+  <g transform="translate(76,556)">
+    <text x="0" y="34" fill="#FAF7F3" font-size="40" font-weight="800">50</text>
+    <text x="62" y="34" fill="#9BA8CE" font-size="18" letter-spacing="1.4">DEMOS</text>
+    <text x="172" y="34" fill="#FAF7F3" font-size="40" font-weight="800">9</text>
+    <text x="206" y="34" fill="#9BA8CE" font-size="18" letter-spacing="1.4">DOMAINS</text>
+    <text x="340" y="34" fill="#FAF7F3" font-size="40" font-weight="800">241</text>
+    <text x="426" y="34" fill="#9BA8CE" font-size="18" letter-spacing="1.4">QUESTIONS</text>
+  </g>
+  <text x="1124" y="596" fill="#9BA8CE" font-size="22" text-anchor="end">jev.thefintechbuilder.com</text>
+</svg>
