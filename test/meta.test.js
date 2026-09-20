@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import { DEMOS } from '../demos/index.js';
 import { DOMAINS } from '../demos/domains.js';
@@ -64,4 +65,18 @@ test('an address that does not exist is not offered to search engines', () => {
 test('the lab is not in the sitemap', () => {
   const paths = siteRoutes().map((route) => route.path);
   for (const path of paths) assert.equal(path.startsWith('/lab'), false, `${path} should not be published`);
+});
+
+// The prerendered files are the artefact that actually ships. A second canonical or title in the
+// head is invisible in the browser and tells a crawler the opposite of what the page means.
+test('each built page declares each head tag exactly once', { skip: !existsSync('web/dist/index.html') }, () => {
+  const pages = ['index.html', 'demos/index.html', 'about/index.html', ...DEMOS.slice(0, 5).map((demo) => `demos/${demo.id}/index.html`)];
+
+  for (const page of pages) {
+    const html = readFileSync(`web/dist/${page}`, 'utf8');
+    for (const [pattern, what] of [[/<title>/g, 'title'], [/rel="canonical"/g, 'canonical'], [/name="description"/g, 'description'], [/property="og:title"/g, 'og:title'], [/name="robots"/g, 'robots']]) {
+      assert.equal(html.match(pattern)?.length ?? 0, 1, `${page} has ${html.match(pattern)?.length ?? 0} of ${what}`);
+    }
+    assert.match(html, /<link rel="canonical" href="[^"]+" \/>/);
+  }
 });

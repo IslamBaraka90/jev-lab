@@ -47,6 +47,9 @@ function pageHtml(shell, meta) {
     .replace(/\s*<meta name="description"[^>]*>/g, '')
     .replace(/\s*<meta property="og:[^"]*"[^>]*>/g, '')
     .replace(/\s*<meta name="twitter:[^"]*"[^>]*>/g, '')
+    .replace(/\s*<link rel="canonical"[^>]*>/g, '')
+    .replace(/\s*<meta name="robots"[^>]*>/g, '')
+    .replace(/\s*<meta name="keywords"[^>]*>/g, '')
     .replace('</head>', `  ${tags.join('\n    ')}\n  </head>`);
 }
 
