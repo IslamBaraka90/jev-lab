@@ -74,10 +74,10 @@ test('a perfect run takes no high-risk money and refuses nothing ordinary', asyn
   const report = demo.report(results, { ...context, labels });
 
   assert.equal(kpi(report, 'High-risk money refused or held').value, '18 of 18');
-  assert.equal(kpi(report, 'Band agrees with the label').value, '100%');
+  assert.equal(kpi(report, 'Decision fits the wallet').value, '240 of 240');
   assert.match(kpi(report, 'A bar that splits the file').value, /of 6$/, 'a perfect run separates cleanly');
   assert.equal(kpi(report, 'Driver named on the high-risk wallets').value, '18 of 18');
-  assert.equal(kpi(report, 'Ordinary wallets refused').value, '0 of 200');
+  assert.equal(kpi(report, 'Ordinary deposits held or refused').value, '0 of 200');
   assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0]);
   assert.deepEqual(report.findings, []);
 });
@@ -94,7 +94,7 @@ test('refusing the biggest wallets is reported in dollars', async () => {
 
   assert.ok(report.checks.find((check) => check.id === 'decoys').count >= 8, 'the market makers and relayers go first');
   assert.ok(report.findings.some((line) => /Size is not exposure/.test(line)));
-  assert.match(kpi(report, 'Ordinary wallets refused').context, /\$[\d,]+ of ordinary deposits turned away/);
+  assert.match(kpi(report, 'Ordinary deposits held or refused').context, /\$[\d,]+ of ordinary deposits turned away/);
 });
 
 test('accepting everything is priced in the money it lets through', async () => {
@@ -130,5 +130,5 @@ test('the grade bar holds fewer wallets and a denser set of them', async () => {
     assert.ok(curve.points[index].reviewed <= curve.points[index - 1].reviewed);
   }
   assert.equal(curve.points[4].rate, 1, 'at a grade of four only the high-risk wallets are left');
-  assert.equal(matrix.rows.length, 3);
+  assert.equal(matrix.rows.length, 2, 'stopped or taken, against what the label called for');
 });

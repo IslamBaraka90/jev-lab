@@ -82,8 +82,8 @@ test('a perfect run reports every breach and nothing else', async () => {
   const report = demo.report(results, { ...context, labels });
 
   assert.equal(kpi(report, 'Breaches found').value, '26 of 26');
-  assert.equal(kpi(report, 'Checks called a breach wrongly').value, '0 of 214');
-  assert.equal(kpi(report, 'Rule kind named').value, '26 of 26');
+  assert.equal(kpi(report, 'Settled checks right').value, '232 of 232');
+  assert.equal(kpi(report, 'Checks called a breach wrongly').value, '0 of 206', 'the eight arguable checks are not scored');
   assert.equal(kpi(report, 'Reading-dependent checks flagged').value, '8 of 8');
   assert.equal(kpi(report, 'Report a compliance officer reads').value, '26 lines');
 });
@@ -121,6 +121,6 @@ test('severity sorts the report a compliance officer would read', async () => {
 
   assert.equal(curve.of, 26);
   assert.equal(curve.points[4].caught, 26);
-  assert.equal(matrix.rows.length, 6);
+  assert.equal(matrix.rows.length, 2, 'breach against met, the thing the headline grades');
   assert.equal(topItems.length, 10);
 });

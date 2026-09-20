@@ -76,11 +76,15 @@ test('wrong document names do not reduce a correct outcome score', async () => {
   assert.notEqual(report.kpis.find((kpi) => kpi.label === 'Missing-document accuracy').value, '100%');
 });
 
-test('reliability curve bins every packet once and reports observed wins', async () => {
+test('the score table bins every packet once, and the win-cut curve is cumulative', async () => {
   const { results } = await runDemo(demo, { dataset, ask: perfect });
-  const { curve } = demo.report(results, { ...context, labels });
-  assert.equal(curve.points.reduce((sum, point) => sum + point.reviewed, 0), 120);
-  assert.equal(curve.points.reduce((sum, point) => sum + point.caught, 0), labels.filter((label) => label.outcome === 'WIN').length);
+  const { curve, winRateByScore } = demo.report(results, { ...context, labels });
+  assert.equal(winRateByScore.reduce((sum, row) => sum + row.packets, 0), 120);
+  assert.equal(winRateByScore.reduce((sum, row) => sum + row.labelledWins, 0), labels.filter((label) => label.outcome === 'WIN').length);
+  assert.equal(curve.points[0].reviewed, 120, 'every packet clears a bar of zero');
+  for (let index = 1; index < curve.points.length; index++) {
+    assert.ok(curve.points[index].reviewed <= curve.points[index - 1].reviewed, 'a higher bar calls fewer wins, so the line never doubles back');
+  }
 });
 
 test('deadline risk is derived consistently from the visible dates', () => {

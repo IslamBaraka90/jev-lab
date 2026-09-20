@@ -111,11 +111,11 @@ test('refusing everything is reported as the cost of a rebalance that never happ
   assert.ok(report.findings.some((line) => /drift policy with extra steps/.test(line)));
 });
 
-test('execution risk sorts the trades that have something wrong towards the top', async () => {
+test('the distance from approve sorts the trades that have something wrong towards the top', async () => {
   const { results } = await runDemo(demo, { dataset, ask: perfect });
   const { curve, matrix } = demo.report(results, { ...context, labels });
 
   assert.equal(curve.of, 47);
-  assert.equal(curve.points[4].rate, 1, 'at four of six only the problem trades are left');
-  assert.equal(matrix.rows.length, 6);
+  assert.equal(curve.points[4].rate, 1, 'at a bar of 75% only the problem trades are left');
+  assert.equal(matrix.rows.length, 4, 'one row per verdict, the thing the headline grades');
 });

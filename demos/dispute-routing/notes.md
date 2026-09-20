@@ -57,9 +57,12 @@ thirteen minutes.
   and the body that comes out carries `amount: 0`. Each answer is well-formed on its own; together they
   contradict each other. A backend receiving that call does nothing, and the dispute sits open.
 - **68 calls took the right action with a different band**, and 61 of those change what the customer is
-  actually paid — nearly all in the same direction: shipping added back on duplicate charges and
-  not-as-described claims, where the policy only returns shipping when the shop is at fault. The model
-  is consistently more generous than the policy, which is at least a predictable failure.
+  actually paid. The commonest swap is shipping added back on duplicate charges and not-as-described
+  claims, where the policy only returns shipping when the shop is at fault — but that is the small
+  error in money: £212 paid over the policy across the whole run. The large one runs the other way.
+  Twenty customers the policy refunds got a refund call with no money in it, and the calls come to
+  £2,477 less than the policy's own amounts. The failure is answers that disagree with each other, not
+  generosity.
 - **Where it hesitated, it hesitated safely.** Ten of the 22 wrong actions are the same swap: asking for
   evidence where the policy already allowed a refund. That costs a day, not money.
 - **Automation is defensible at 4 of 6.** 97 calls clear that bar and the action is right on every one

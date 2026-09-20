@@ -2,6 +2,7 @@
 // rebalancer knows the target weights and nothing else — not the tax lots, not the other accounts, not
 // the note in the mandate — so the job is to catch the trades that are right on paper and wrong here.
 
+import { matrixStats } from '../lib/metrics.js';
 import { choice, noul, score } from '../lib/questions.js';
 
 const VERDICTS = ['APPROVE', 'RESIZE', 'DEFER', 'REJECT'];
@@ -12,6 +13,9 @@ const readable = (value) => value.toLowerCase().replaceAll('_', ' ');
 const sentence = (value) => readable(value).replace(/^./, (letter) => letter.toUpperCase());
 const money = (value) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0, notation: 'compact' }).format(value ?? 0);
 const sum = (results) => results.reduce((total, result) => total + result.item.valueUsd, 0);
+
+// What the desk does with each kind of problem: the convention the labels follow.
+const DESK_VERDICT = { LIQUIDITY: 'RESIZE', TAX_LOT: 'DEFER', CROSSING: 'REJECT', TOO_SMALL: 'REJECT', MANDATE_CONFLICT: 'DEFER', NONE: 'APPROVE' };
 
 const share = (part, whole) => {
   if (!whole) return '–';
@@ -98,6 +102,7 @@ function evaluate(answers, item) {
     goes,
     orderValue: goes ? Math.round(item.valueUsd * fraction) : 0,
     confidence: answers.verdict.confidence,
+    stopScore: 1 - (answers.verdict.probabilities?.APPROVE ?? 0),
     label: `${item.id} · ${item.side.toLowerCase()} ${item.symbol} · ${readable(verdict)}${goes && band !== 'AS_PROPOSED' ? ` (${readable(band)})` : ''}`,
   };
 }
@@ -112,34 +117,80 @@ function report(results, context = {}) {
   const problems = graded.filter((result) => byItem.get(result.item.id).issue !== 'NONE');
   const clean = graded.filter((result) => byItem.get(result.item.id).issue === 'NONE');
   const caught = problems.filter((result) => result.evaluation.verdict !== 'APPROVE');
+  const matrix = confusion(graded, byItem);
+  const stats = matrixStats(matrix);
 
   return {
     note: `Two hundred proposed trades across six accounts, ${problems.length} of them carrying something the rebalancer could not see. ${context.note ?? ''}`,
-    findings: findings(graded, byItem, clean),
+    findings: findings(graded, byItem, clean, stats),
     kpis: kpis({ graded, problems, clean, caught, byItem }),
     distribution: distribution(results),
-    matrix: confusion(graded, byItem),
+    distributionTitle: 'Verdicts given',
+    baselines: baselines(graded, byItem, stats),
+    metrics: metrics(graded, problems, caught, stats),
+    matrix,
     curve: coverage(graded, byItem, problems),
     checks: checks(graded, byItem, labels),
     topItems: topItems(results, byItem),
+    topItemsTitle: 'Largest trades kept out of the order list',
   };
 }
 // #endregion
 
 function kpis({ graded, problems, clean, caught, byItem }) {
+  const agrees = (result) => result.evaluation.verdict === byItem.get(result.item.id).verdict;
   const issueRight = problems.filter((result) => result.evaluation.issue === byItem.get(result.item.id).issue);
-  const verdictRight = graded.filter((result) => result.evaluation.verdict === byItem.get(result.item.id).verdict);
+  const verdictRight = graded.filter(agrees);
+  const problemVerdictRight = problems.filter(agrees);
   const blockedClean = clean.filter((result) => !result.evaluation.goes);
+  const resizedClean = clean.filter((result) => result.evaluation.verdict === 'RESIZE');
   const order = graded.filter((result) => result.evaluation.goes);
   const badInTheOrder = order.filter((result) => byItem.get(result.item.id).issue !== 'NONE' && byItem.get(result.item.id).verdict === 'REJECT');
+  const tooCautious = blockedClean.length + resizedClean.length > clean.length / 10;
 
   return [
-    { label: 'Problem trades stopped', value: `${caught.length} of ${problems.length}`, context: 'not approved as they stood', tone: caught.length === problems.length ? 'good' : 'warn' },
+    { label: 'Verdict agrees', value: share(verdictRight.length, graded.length), context: `${verdictRight.length} of ${graded.length} trades, all four verdicts · ${problemVerdictRight.length} of ${problems.length} on the problem trades`, tone: verdictRight.length === graded.length ? 'good' : 'warn' },
+    { label: 'Problem trades stopped', value: `${caught.length} of ${problems.length}`, context: 'not approved as they stood, whatever was done with them instead', tone: caught.length === problems.length ? 'good' : 'warn' },
     { label: 'Problem named exactly', value: `${issueRight.length} of ${problems.length}`, context: 'liquidity, tax lot, crossing, too small or mandate' },
-    { label: 'Verdict agrees', value: share(verdictRight.length, graded.length), context: `${verdictRight.length} of ${graded.length} trades, all four verdicts` },
-    { label: 'Good trades stopped', value: `${blockedClean.length} of ${clean.length}`, context: `${money(sum(blockedClean))} of ordinary rebalancing held up`, tone: blockedClean.length > clean.length / 10 ? 'warn' : 'good' },
-    { label: 'Order list', value: money(order.reduce((total, result) => total + result.evaluation.orderValue, 0)), context: `${order.length} trades${badInTheOrder.length ? ` · ${badInTheOrder.length} that should not be there` : ' · nothing in it that should be rejected'}`, tone: badInTheOrder.length ? 'warn' : 'good' },
+    { label: 'Good trades stopped', value: `${blockedClean.length} of ${clean.length}`, context: `${money(sum(blockedClean))} held up · ${resizedClean.length} more marked resize, worth ${money(sum(resizedClean))}`, tone: tooCautious ? 'warn' : 'good' },
+    { label: 'Order list', value: money(order.reduce((total, result) => total + result.evaluation.orderValue, 0)), context: `${order.length} trades, of ${money(sum(graded))} proposed${badInTheOrder.length ? ` · ${badInTheOrder.length} that should not be there` : ' · nothing in it that should be rejected'}`, tone: badInTheOrder.length ? 'warn' : 'good' },
   ];
+}
+
+// The rule: the desk's five written rules as five ifs, each with the verdict the desk attaches to it.
+function ruleIssue(trade) {
+  const other = trade.sameNameOtherAccountToday;
+  const lossLotInsideThirtyDays = (trade.recentTradesInThisName ?? []).some((lot) => lot.side === 'BUY' && lot.daysAgo < 30 && /at a loss/.test(lot.note ?? ''));
+  if (trade.shareOfAverageVolumePercent > 20) return 'LIQUIDITY';
+  if (trade.valueUsd < 250_000) return 'TOO_SMALL';
+  if (other?.sameDay && other.side !== trade.side) return 'CROSSING';
+  if (trade.accountTaxable && trade.side === 'SELL' && lossLotInsideThirtyDays) return 'TAX_LOT';
+  if (trade.side === 'SELL' && /do not trim/.test(trade.mandateNote ?? '')) return 'MANDATE_CONFLICT';
+  return 'NONE';
+}
+
+function baselines(graded, byItem, stats) {
+  const total = graded.length;
+  if (!total) return [];
+  const modelRight = graded.filter((result) => result.evaluation.verdict === byItem.get(result.item.id).verdict).length;
+  const ruleRight = graded.filter((result) => DESK_VERDICT[ruleIssue(result.item)] === byItem.get(result.item.id).verdict).length;
+  const majority = Math.round((stats?.majorityBaseline ?? 0) * total);
+  return [
+    { label: 'Jev', detail: 'exact verdict, from the rules as written in the state', value: modelRight / total, display: `${modelRight} of ${total}`, model: true },
+    { label: 'Rule: the five desk rules as five ifs', detail: 'over 20% of daily volume, under $250k, opposite side in another account, loss lot inside 30 days, do-not-trim note', value: ruleRight / total, display: `${ruleRight} of ${total}` },
+    { label: 'Always the commonest verdict', detail: readable(stats?.majorityClass ?? 'approve'), value: majority / total, display: `${majority} of ${total}` },
+  ];
+}
+
+function metrics(graded, problems, caught, stats) {
+  const stopped = graded.filter((result) => result.evaluation.verdict !== 'APPROVE');
+  return {
+    headline: { label: 'Verdict agrees', value: stats?.accuracy ?? 0, n: graded.length },
+    accuracy: stats?.accuracy ?? null,
+    macroF1: stats?.macroF1 ?? null,
+    recall: problems.length ? caught.length / problems.length : null,
+    precision: stopped.length ? caught.length / stopped.length : null,
+  };
 }
 
 function checks(graded, byItem, labels) {
@@ -168,30 +219,53 @@ function distribution(results) {
 
 function confusion(graded, byItem) {
   return {
-    title: 'Problem named against the problem the trade carries',
-    columns: ISSUES.map(sentence),
-    rows: ISSUES.map((actual) => ({
+    title: 'Verdict given against the verdict the desk would give',
+    rowLabel: 'the verdict the desk would give',
+    columnLabel: 'the verdict the model gave',
+    columns: VERDICTS.map(sentence),
+    rows: VERDICTS.map((actual) => ({
       label: sentence(actual),
-      cells: ISSUES.map((predicted) => ({
+      cells: VERDICTS.map((predicted) => ({
         predicted,
-        count: graded.filter((result) => byItem.get(result.item.id).issue === actual && result.evaluation.issue === predicted).length,
+        count: graded.filter((result) => byItem.get(result.item.id).verdict === actual && result.evaluation.verdict === predicted).length,
         diagonal: actual === predicted,
       })),
     })),
   };
 }
 
+// Ranked by how far the model was from approving, not by execution risk: a tax lot or a crossing is
+// not hard to execute, so execution risk was never going to find it.
+const STOP_BARS = [0, 0.1, 0.25, 0.5, 0.75, 0.9, 0.99];
+
 function coverage(graded, byItem, problems) {
-  const points = Array.from({ length: 7 }, (_, bar) => {
-    const held = graded.filter((result) => result.evaluation.executionRisk >= bar);
+  const points = STOP_BARS.map((bar) => {
+    const held = graded.filter((result) => result.evaluation.stopScore >= bar);
     const real = held.filter((result) => byItem.get(result.item.id).issue !== 'NONE');
-    return { threshold: Number((bar / 6).toFixed(3)), reviewed: held.length, caught: real.length, rate: held.length ? Number((real.length / held.length).toFixed(3)) : null };
+    return { threshold: bar, reviewed: held.length, caught: real.length, rate: held.length ? Number((real.length / held.length).toFixed(3)) : null };
   });
-  return { title: 'Execution risk against the trades that really have a problem', xLabel: 'Trades at this execution risk or above', yLabel: 'Trades with something wrong among them', rateLabel: 'Share of those that do', of: problems.length, points };
+  return { title: 'How sure it must be that a trade should not simply go', xLabel: 'Trades held back at this bar', yLabel: 'Trades with something wrong among them', rateLabel: 'Share of those held that have a problem', of: problems.length, points, defaultIndex: 3 };
 }
 
-function findings(graded, byItem, clean) {
+function findings(graded, byItem, clean, stats) {
   const lines = [];
+  const agrees = (result) => result.evaluation.verdict === byItem.get(result.item.id).verdict;
+  const problems = graded.filter((result) => byItem.get(result.item.id).issue !== 'NONE');
+  const stoppedProblems = problems.filter((result) => result.evaluation.verdict !== 'APPROVE');
+  const wrongWay = stoppedProblems.filter((result) => !agrees(result));
+  if (wrongWay.length >= 3) lines.push(`${stoppedProblems.length} of the ${problems.length} problem trades were stopped, but only ${problems.filter(agrees).length} got the verdict the desk would give. ${commonestSwap(wrongWay, byItem)} It saw that something was wrong more reliably than it knew what to do about it.`);
+
+  const modelRight = graded.filter(agrees).length;
+  const ruleRight = graded.filter((result) => DESK_VERDICT[ruleIssue(result.item)] === byItem.get(result.item.id).verdict).length;
+  const majority = Math.round((stats?.majorityBaseline ?? 0) * graded.length);
+  if (ruleRight > modelRight) lines.push(`Five ifs over the same fields give the desk's verdict on ${ruleRight} of ${graded.length} trades, against ${modelRight} for the model${majority > modelRight ? `; approving everything scores ${majority}, because most trades are ordinary` : ''}. Every planted problem breaks a rule written in the state, so this file rewards reading the rules, not judgement.`);
+
+  const signOff = graded.filter((result) => result.evaluation.needsSignOff);
+  if (graded.length >= 20 && signOff.length === graded.length) lines.push(`The sign-off question was answered yes on all ${graded.length} trades, clean ones included. It separates nothing and is not graded.`);
+
+  const fullSizeResizes = graded.filter((result) => result.evaluation.verdict === 'RESIZE' && result.evaluation.band === 'AS_PROPOSED');
+  if (fullSizeResizes.length >= 5) lines.push(`${fullSizeResizes.length} trades were marked resize and then given their full size, so the verdict and the size band contradict each other; they count in the order list at full value.`);
+
   const approved = graded.filter((result) => byItem.get(result.item.id).issue !== 'NONE' && result.evaluation.verdict === 'APPROVE');
   if (approved.length) {
     const kinds = [...new Set(approved.map((result) => readable(byItem.get(result.item.id).issue)))];
@@ -205,9 +279,23 @@ function findings(graded, byItem, clean) {
   if (blocked.length >= 5) lines.push(`${blocked.length} ordinary trades were held or refused, worth ${money(sum(blocked))}. A rebalance that never executes is a drift policy with extra steps.`);
 
   const liquidity = graded.filter((result) => byItem.get(result.item.id).issue === 'LIQUIDITY');
-  const splitProperly = liquidity.filter((result) => result.evaluation.band === 'SPLIT_OVER_DAYS' || result.evaluation.band === 'QUARTER');
-  if (liquidity.length) lines.push(`${splitProperly.length} of the ${liquidity.length} oversized trades were given a smaller size rather than only a verdict, which is the difference between a review and an order list.`);
+  // A smaller size only counts when the trade still goes: a split attached to a rejection sends nothing.
+  const splitProperly = liquidity.filter((result) => result.evaluation.verdict === 'RESIZE' && result.evaluation.band !== 'AS_PROPOSED');
+  const refused = liquidity.filter((result) => !result.evaluation.goes);
+  if (liquidity.length) lines.push(`${splitProperly.length} of the ${liquidity.length} oversized trades were given a smaller size rather than only a verdict, which is the difference between a review and an order list${refused.length ? `; the other ${refused.length} were refused outright` : ''}.`);
   return lines;
+}
+
+/** The most frequent wrong verdict among stopped problem trades, as a sentence. */
+function commonestSwap(wrongWay, byItem) {
+  const counts = new Map();
+  for (const result of wrongWay) {
+    const key = `${byItem.get(result.item.id).verdict}|${result.evaluation.verdict}`;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  const [[key, count]] = [...counts].sort((left, right) => right[1] - left[1]);
+  const [wanted, given] = key.split('|');
+  return `The commonest swap: ${count} trades the desk would ${readable(wanted)} were given ${readable(given)}.`;
 }
 
 function topItems(results, byItem) {
@@ -217,9 +305,51 @@ function topItems(results, byItem) {
     .slice(0, 10)
     .map((result) => ({
       id: result.item.id,
-      label: `${result.evaluation.label}${byItem.get(result.item.id)?.issue === result.evaluation.issue ? ' · agrees' : ''}`,
+      label: `${result.evaluation.label}${byItem.get(result.item.id)?.verdict === result.evaluation.verdict ? ' · agrees' : ''}`,
       value: money(result.item.valueUsd),
     }));
+}
+
+const PLANTED_NOTES = {
+  LIQUIDITY: 'Planted as too large for the market: well over a fifth of the instrument’s daily volume. The desk resizes these.',
+  TAX_LOT: 'Planted as a tax-lot problem: a taxable account selling a lot bought at a loss inside thirty days. The desk defers these.',
+  CROSSING: 'Planted as a crossing: another account trades the same name the other way today. The desk nets these rather than sending them.',
+  TOO_SMALL: 'Planted as too small: under $250,000, where the spread costs more than the drift. The desk rejects these.',
+  MANDATE_CONFLICT: 'Planted as a mandate conflict: it trims the energy overweight the mandate asked for. The desk defers these to the December review.',
+  NONE: 'An ordinary trade: a weight moving toward its target in a size the market can take.',
+};
+
+const level = (question, value) => `${question.criteria[Math.round(value)] ?? '–'} · ${value.toFixed(1)} of ${question.criteria.length - 1}`;
+
+/** Right means the exact verdict the desk would give, which is what "Verdict agrees" counts. */
+function judge(result, label) {
+  if (!label) return null;
+  return {
+    agree: result.evaluation.verdict === label.verdict,
+    expected: label.verdict,
+    got: result.evaluation.verdict,
+    note: PLANTED_NOTES[label.issue],
+    confidence: result.answers.verdict.confidence,
+  };
+}
+
+function verdict(result) {
+  const { evaluation, answers, item } = result;
+  const sized = evaluation.verdict === 'RESIZE' && evaluation.band !== 'AS_PROPOSED';
+  const volumeShare = item.shareOfAverageVolumePercent;
+  return {
+    eyebrow: `${sentence(item.side)} ${item.symbol} · ${money(item.valueUsd)}`,
+    headline: `${sentence(evaluation.verdict)}${sized ? ` · ${readable(evaluation.band)}` : ''}`,
+    detail: evaluation.verdict === 'RESIZE' && !sized ? 'Marked resize but given its full size: the two answers contradict each other.' : undefined,
+    facts: [
+      { label: 'Problem named', value: sentence(evaluation.issue), tone: evaluation.issue === 'NONE' ? 'good' : 'warn' },
+      { label: 'Goes into the order list', value: evaluation.goes ? `${money(evaluation.orderValue)} of ${money(item.valueUsd)}` : `Nothing · ${money(item.valueUsd)} held`, tone: evaluation.goes ? 'good' : 'warn' },
+      { label: 'Share of daily volume', value: `${volumeShare}% against a 20% rule`, tone: volumeShare > 20 ? 'bad' : 'good' },
+      { label: 'Hard to execute', value: level(questions.execution_risk, evaluation.executionRisk), tone: evaluation.executionRisk >= 4 ? 'warn' : undefined },
+      { label: 'Confidence in the verdict', value: `${Math.round(evaluation.confidence * 100)}%`, tone: evaluation.confidence < 0.5 ? 'warn' : 'good' },
+      { label: 'Manager sign-off', value: `${evaluation.needsSignOff ? 'Yes' : 'No'} · ${Math.round(Math.max(answers.needs_pm_sign_off.noul, 1 - answers.needs_pm_sign_off.noul) * 100)}%` },
+    ],
+  };
 }
 
 export default {
@@ -239,6 +369,50 @@ export default {
   questions,
   evaluate,
   report,
+  caveat: 'Every planted problem breaks a rule written out in the state, so five ifs match the desk on 199 of 200 trades; several planted trades also move away from their target, which a real rebalancer would never propose.',
+  stage: {
+    hide: ['accountTaxable', 'price', 'averageDailyVolume', 'shares'],
+    labels: {
+      accountId: 'Account',
+      valueUsd: 'Trade value',
+      currentWeightPercent: 'Weight now (%)',
+      targetWeightPercent: 'Target weight (%)',
+      weightAfterPercent: 'Weight after this trade (%)',
+      shareOfAverageVolumePercent: 'Share of average daily volume (%)',
+      recentTradesInThisName: 'Earlier trades in this name',
+      sameNameOtherAccountToday: 'Same name in another account today',
+      mandateNote: 'What the mandate says',
+      daysAgo: 'Days ago',
+    },
+    highlight: ['shareOfAverageVolumePercent', 'valueUsd', 'weightAfterPercent'],
+  },
+  grade: { labelId: (label) => label.tradeId, judge },
+  verdict,
+  present: {
+    number: 143,
+    problem: {
+      headline: 'A rebalancer knows the target weights and nothing else: not the tax lots, not the other accounts, not the mandate.',
+      stat: '200',
+      statLabel: 'proposed trades, 47 of them right on paper and wrong here',
+    },
+    hero: {
+      item: 'TR-0154',
+      caption: 'Buy $592M of PEP: 54.6% of a day’s volume against a rule of one fifth. The trade is right and the size is not.',
+    },
+    answers: {
+      caption: 'Resize, split over days, problem named as liquidity. The confidence is only 35%: reject was the close second at 48%.',
+      reveal: ['verdict', 'size_band', 'issue'],
+    },
+    miss: {
+      item: 'TR-0015',
+      caption: 'A taxable account selling KO at a loss 18 days after buying it. The problem is named exactly, but the desk would defer it and the model rejected it.',
+    },
+    proof: {
+      kpis: ['Verdict agrees', 'Problem trades stopped', 'Good trades stopped'],
+      chart: 'matrix',
+      closing: '47 of 47 problem trades stopped, but only 16 with the verdict the desk would give; five ifs over the same fields match the desk on 199 of 200.',
+    },
+  },
   explain: {
     data: 'scripts/generate/rebalance-review.js#demo:data',
     state: 'demos/rebalance-review/demo.js#demo:state',

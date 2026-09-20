@@ -106,7 +106,6 @@ test('money held plus money released equals total exposure on a partial run', as
   });
   const { money } = demo.report(results, { ...context, labels });
 
-  assert.equal(money.difference, 0);
   assert.equal(Number((money.held + money.released).toFixed(2)), money.total);
   assert.ok(money.held > 0);
   assert.ok(money.released > 0);

@@ -11,5 +11,5 @@
 - Model: `jev-1.13.0`; all 240 setups cached on 2026-09-19.
 - Usage: 677,827 input tokens and 37,005 output tokens.
 - Jev confirmed mechanical qualification on 240/240 and named all 110 recorded entries `NOT_SKIPPED`.
-- It honoured 21/30 good-reason skips; the report exposes the other nine disagreements.
-- The real ten-session bars produce $23,260 of positive opportunity cost across 100 avoidable misses and a $5,432 net outcome across 110 taken setups.
+- It honoured 21/30 good-reason skips; the report exposes the other nine disagreements. All nine are gap skips whose gaps (1.73% to 2.42%) sit below the 2.5% the written policy names, so by that policy the model is right on all 130 skips.
+- The real ten-session bars produce a $10,732 net outcome across 100 avoidable misses ($23,260 gained on 60 of them, $12,528 lost on the other 40) and a $5,432 net outcome across 110 taken setups.

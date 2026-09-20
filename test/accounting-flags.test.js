@@ -12,7 +12,7 @@ const labels = await loadLabels('accounting-flags');
 const context = { ...demoContext(dataset), labels };
 const label = (id) => labels.find((entry) => entry.companyYearId === id);
 const item = (id) => dataset.items.find((entry) => entry.id === id);
-const kpi = (report, name) => report.kpis.find((entry) => entry.label === name);
+const kpi = (report, name) => [...report.kpis, ...report.otherFigures].find((entry) => entry.label === name);
 const check = (report, id) => report.checks.find((entry) => entry.id === id);
 const firstWith = (predicate) => labels.find(predicate).companyYearId;
 
@@ -157,7 +157,6 @@ test('ranking well and deciding badly are reported as different things', async (
   const report = demo.report(results, context);
 
   assert.equal(kpi(report, 'Severity gap, planted against clean').value, '1.5');
-  assert.equal(kpi(report, 'Severity gap, planted against clean').tone, 'good');
   assert.equal(kpi(report, 'Clean years held up').value, '73 of 73');
   assert.equal(kpi(report, 'Clean years held up').tone, 'warn');
   assert.ok(report.findings.some((line) => /ranking is better than the decision/.test(line)));

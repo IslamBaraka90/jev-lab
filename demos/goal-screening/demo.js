@@ -4,17 +4,12 @@
 // disqualifier match a number on the page.
 
 import { choice, noul, score } from '../lib/questions.js';
+import { percent } from '../lib/metrics.js';
 
 const DISQUALIFIERS = ['LEVERAGE', 'LIQUIDITY', 'EARNINGS_QUALITY', 'VALUATION', 'VOLATILITY', 'NONE'];
 
 const readable = (value) => value.toLowerCase().replaceAll('_', ' ');
 const sentence = (value) => readable(value).replace(/^./, (letter) => letter.toUpperCase());
-
-const share = (part, whole) => {
-  if (!whole) return '–';
-  const value = (part / whole) * 100;
-  return `${Number.isInteger(value) ? value : value.toFixed(1)}%`;
-};
 
 // #region demo:state
 /** One company's own numbers, and the goal it is being read against. Nothing about the others. */
@@ -115,10 +110,14 @@ function report(results, context = {}) {
     findings: findings(graded, bySymbol),
     kpis: kpis(graded, bySymbol),
     distribution: distribution(graded),
+    distributionTitle: 'What ruled them out',
     matrix: goalMatrix(graded),
     curve: coverage(graded),
+    baselines: baselines(graded),
+    metrics: metrics(graded),
     checks: checks(graded),
     topItems: topItems(graded),
+    topItemsTitle: 'Best fits that were shortlisted',
   };
 }
 // #endregion
@@ -135,20 +134,59 @@ const SUPPORTED = {
   NONE: () => true,
 };
 
+/** The readings that name a reason the file can be checked against. NONE and VALUATION have no number to check. */
+const CHECKABLE = new Set(['LEVERAGE', 'LIQUIDITY', 'EARNINGS_QUALITY', 'VOLATILITY']);
+const namesReason = (result) => CHECKABLE.has(result.evaluation.disqualifier);
+const reasonSupported = (result) => SUPPORTED[result.evaluation.disqualifier](result.item);
+
+/** A shortlisted reading should name no disqualifier, and a reading with none should be shortlisted. */
+const selfConsistent = (result) => result.evaluation.shortlisted === (result.evaluation.disqualifier === 'NONE');
+
 function kpis(graded, bySymbol) {
   const moved = [...bySymbol.values()].filter((group) => spread(group.map((result) => result.evaluation.fit)) >= 1.5);
-  const supported = graded.filter((result) => SUPPORTED[result.evaluation.disqualifier](result.item));
+  const named = graded.filter(namesReason);
+  const supported = named.filter(reasonSupported);
   const noStatements = graded.filter((result) => result.item.statementYears === 0);
   const saidSo = noStatements.filter((result) => !result.evaluation.dataSufficient);
+  const withStatements = graded.filter((result) => result.item.statementYears > 0);
+  const saidNoAnyway = withStatements.filter((result) => !result.evaluation.dataSufficient);
   const shortlisted = graded.filter((result) => result.evaluation.shortlisted);
+  const consistent = graded.filter(selfConsistent);
+  // Saying "not enough" to most files that do have statements means the 24 of 24 proves little.
+  const saysNoToMost = saidNoAnyway.length > withStatements.length / 2;
 
   return [
-    { label: 'Companies read differently by goal', value: `${moved.length} of ${bySymbol.size}`, context: 'a fit score that moves by at least a point and a half across the six briefs', tone: moved.length === bySymbol.size ? 'good' : 'warn' },
-    { label: 'Disqualifiers the numbers support', value: share(supported.length, graded.length), context: `${supported.length} of ${graded.length} readings, checked against this company's own file` },
-    { label: 'Missing statements admitted', value: `${saidSo.length} of ${noStatements.length}`, context: 'funds and commodities with no statements at all', tone: saidSo.length === noStatements.length ? 'good' : 'warn' },
+    { label: 'Named disqualifiers the numbers support', value: `${supported.length} of ${named.length}`, context: `${percent(named.length ? supported.length / named.length : null)} of the readings that name a reason, against a deliberately strict bar; "none" is not counted as supported`, tone: supported.length >= named.length * 0.8 ? 'good' : 'warn' },
+    { label: 'Companies read differently by goal', value: `${moved.length} of ${bySymbol.size}`, context: 'a fit score that moves by at least a point and a half across the six briefs; briefs this far apart make it an easy bar', tone: moved.length === bySymbol.size ? undefined : 'warn' },
+    { label: 'Missing statements admitted', value: `${saidSo.length} of ${noStatements.length}`, context: `funds and commodities with no statements at all; ${saidNoAnyway.length} of ${withStatements.length} readings that do have statements also said not enough`, tone: saidSo.length < noStatements.length || saysNoToMost ? 'warn' : 'good' },
     { label: 'Shortlisted', value: `${shortlisted.length} of ${graded.length}`, context: `${new Set(shortlisted.map((result) => result.item.symbol)).size} different companies across the six goals` },
-    { label: 'Evidence claimed', value: `${average(graded.map((result) => result.evaluation.evidence)).toFixed(1)} of 6`, context: 'how strong the reading says its own evidence is' },
+    { label: 'Shortlist and reason agree', value: `${consistent.length} of ${graded.length}`, context: 'shortlisted with nothing ruling it out, or left off with a reason named', tone: consistent.length >= graded.length * 0.95 ? 'good' : 'warn' },
   ];
+}
+
+/** Always naming volatility, scored on the same readings with the same bars. */
+const alwaysVolatility = (item) => SUPPORTED.VOLATILITY(item);
+
+function baselines(graded) {
+  const named = graded.filter(namesReason);
+  if (!named.length) return undefined;
+  const supported = named.filter(reasonSupported);
+  const volatile = named.filter((result) => alwaysVolatility(result.item));
+  return [
+    { label: 'Jev', detail: 'the reason it named clears the bar in the file', value: supported.length / named.length, display: `${supported.length} of ${named.length}`, model: true },
+    { label: 'Always say volatility', detail: 'the commonest reason, given to the same readings', value: volatile.length / named.length, display: `${volatile.length} of ${named.length}` },
+  ];
+}
+
+function metrics(graded) {
+  const named = graded.filter(namesReason);
+  const supported = named.filter(reasonSupported);
+  const share = named.length ? supported.length / named.length : null;
+  return {
+    headline: { label: 'Named disqualifiers the numbers support', value: share ?? 0, n: named.length },
+    accuracy: share,
+    contradictionRate: graded.length ? graded.filter((result) => !selfConsistent(result)).length / graded.length : null,
+  };
 }
 
 const average = (values) => (values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0);
@@ -188,6 +226,8 @@ function goalMatrix(graded) {
   const symbols = [...new Set(graded.map((result) => result.item.symbol))];
   return {
     title: 'Shortlisted for each goal',
+    rowLabel: 'the company or fund',
+    columnLabel: 'the goal it was shortlisted for',
     columns: goals,
     rows: symbols.map((symbol) => ({
       label: symbol,
@@ -205,7 +245,17 @@ function coverage(graded) {
     const shortlisted = above.filter((result) => result.evaluation.shortlisted);
     return { threshold: Number((bar / 6).toFixed(3)), reviewed: above.length, caught: shortlisted.length, rate: above.length ? Number((shortlisted.length / above.length).toFixed(3)) : null };
   });
-  return { title: 'Fit score against what was actually shortlisted', xLabel: 'Readings at this fit or above', yLabel: 'Of those, the ones shortlisted', rateLabel: 'Share shortlisted', of: graded.filter((result) => result.evaluation.shortlisted).length, points };
+  return {
+    title: 'Fit score against what was actually shortlisted',
+    xLabel: 'Readings at this fit or above',
+    yLabel: 'Of those, the ones shortlisted',
+    rateLabel: 'Share shortlisted',
+    of: graded.filter((result) => result.evaluation.shortlisted).length,
+    thresholdFormat: 'level',
+    levels: 6,
+    defaultIndex: 3,
+    points,
+  };
 }
 
 function findings(graded, bySymbol) {
@@ -213,15 +263,34 @@ function findings(graded, bySymbol) {
   const flat = [...bySymbol.entries()].filter(([, group]) => spread(group.map((result) => result.evaluation.fit)) < 1);
   if (flat.length) lines.push(`${flat.length} companies scored within a point across all six goals: ${flat.map(([symbol]) => symbol).join(', ')}. A brief that does not change the answer has not been read.`);
 
-  const unsupported = graded.filter((result) => !SUPPORTED[result.evaluation.disqualifier](result.item));
+  const named = graded.filter(namesReason);
+  const unsupported = named.filter((result) => !reasonSupported(result));
   if (unsupported.length >= 3) {
     const kinds = [...new Set(unsupported.map((result) => readable(result.evaluation.disqualifier)))];
-    lines.push(`${unsupported.length} readings name a disqualifier the file does not support: ${kinds.join(', ')}. The reason has to be in the numbers, not in the reputation.`);
+    lines.push(`${unsupported.length} of ${named.length} readings that name a disqualifier name one the file does not support: ${kinds.join(', ')}. The reason has to be in the numbers, not in the reputation.`);
+  }
+
+  const volatile = named.filter((result) => alwaysVolatility(result.item));
+  if (named.length && volatile.length >= named.length - unsupported.length) {
+    lines.push(`Naming volatility every time would have cleared the bar on ${volatile.length} of those ${named.length} readings, against ${named.length - unsupported.length} for the model. The bar is one fixed number and the goals are not, so part of the shortfall is the bar.`);
   }
 
   const noStatements = graded.filter((result) => result.item.statementYears === 0);
   const confident = noStatements.filter((result) => result.evaluation.dataSufficient);
   if (noStatements.length) lines.push(`${confident.length} of ${noStatements.length} readings of instruments with no statements at all still said the data was sufficient.`);
+
+  const withStatements = graded.filter((result) => result.item.statementYears > 0);
+  const saidNoAnyway = withStatements.filter((result) => !result.evaluation.dataSufficient);
+  if (saidNoAnyway.length > withStatements.length / 2) {
+    lines.push(`${saidNoAnyway.length} of ${withStatements.length} readings with statements on file also said the data was not enough. A question answered no almost everywhere does not tell the two kinds of file apart.`);
+  }
+
+  const crossed = graded.filter((result) => !selfConsistent(result));
+  const listedAnyway = crossed.filter((result) => result.evaluation.shortlisted);
+  if (crossed.length) lines.push(`${listedAnyway.length} readings were shortlisted while naming a disqualifier, and ${crossed.length - listedAnyway.length} named none yet were left off the list.`);
+
+  const nearHalf = graded.filter((result) => Math.abs(result.answers.shortlist.noul - 0.5) <= 0.1);
+  if (nearHalf.length) lines.push(`${nearHalf.length} of ${graded.length} shortlist answers sit within ten points of the line, so that many could flip on a second run.`);
   return lines;
 }
 
@@ -233,6 +302,101 @@ function topItems(graded) {
     .map((result) => ({ id: result.item.id, label: result.evaluation.label, value: `${result.evaluation.fit.toFixed(1)} of 6` }));
 }
 
+// The number in the file that each checkable disqualifier is held against, as a person would read it.
+const EVIDENCE = {
+  LEVERAGE: (item) => `debt ${item.debtToAssetsPercent ?? '–'}% of assets against a 30% bar`,
+  VOLATILITY: (item) => `volatility ${item.volatilityPercent.toFixed(1)}% a year against a 25% bar`,
+  LIQUIDITY: (item) => `${item.averageDailyVolume.toLocaleString('en-US')} shares a day against a 3,000,000 bar`,
+  EARNINGS_QUALITY: () => 'operating cash flow against a bar of 5% of revenue',
+};
+
+const asPercent = (value) => `${Math.round(value * 100)}%`;
+
+/** A yes/no answer with the weight behind whichever side it landed on. */
+const yesNo = (value) => (value >= 0.5 ? `Yes · ${asPercent(value)}` : `No · ${asPercent(1 - value)}`);
+
+/** No labels. A reading that names a checkable reason is graded on whether the file supports it. */
+const grade = {
+  judge: (result) => {
+    if (!namesReason(result)) return null;
+    const { disqualifier } = result.evaluation;
+    const agree = reasonSupported(result);
+    return {
+      agree,
+      expected: agree ? sentence(disqualifier) : 'A reason the file supports',
+      got: sentence(disqualifier),
+      note: `Checked on the page, not against a label: ${EVIDENCE[disqualifier](result.item)}.`,
+      confidence: result.answers.disqualifier.confidence,
+    };
+  },
+};
+
+function verdict(result) {
+  const { item, answers, evaluation } = result;
+  const ruledOut = evaluation.disqualifier !== 'NONE';
+  const facts = [
+    { label: 'Ruled out by', value: ruledOut ? `${sentence(evaluation.disqualifier)} · ${asPercent(answers.disqualifier.confidence)}` : 'Nothing', tone: ruledOut ? 'bad' : 'good' },
+  ];
+  if (namesReason(result)) {
+    const supported = reasonSupported(result);
+    facts.push({ label: 'The file supports that reason', value: `${supported ? 'Yes' : 'No'} · ${EVIDENCE[evaluation.disqualifier](item)}`, tone: supported ? 'good' : 'warn' });
+  }
+  facts.push({ label: 'Shortlist answer', value: yesNo(answers.shortlist.noul), tone: selfConsistent(result) ? undefined : 'warn' });
+  facts.push({ label: 'Evidence claimed', value: `${answers.evidence_strength.legend?.[Math.round(evaluation.evidence)] ?? 'Score'} · ${evaluation.evidence.toFixed(1)} of 6` });
+  facts.push({ label: 'Statements enough to judge', value: yesNo(answers.data_sufficient.noul), tone: item.statementYears === 0 && evaluation.dataSufficient ? 'bad' : undefined });
+
+  const crossed = evaluation.shortlisted ? 'Shortlisted even though a disqualifier was named.' : 'Left off the list although nothing was said to rule it out.';
+  return {
+    eyebrow: `${item.symbol} read for "${item.goalId}"`,
+    headline: `${evaluation.shortlisted ? 'Shortlisted' : 'Not shortlisted'} · fit ${evaluation.fit.toFixed(1)} of 6`,
+    detail: selfConsistent(result) ? undefined : crossed,
+    facts,
+  };
+}
+
+const stage = {
+  hide: ['symbol', 'goalId', 'sharesOutstanding', 'statementYears'],
+  labels: {
+    goalBrief: 'The goal, as written',
+    revenueGrowthPercent: 'Revenue growth % a year, over the years on file',
+    debtToAssetsPercent: 'Debt as % of assets',
+    volatilityPercent: 'Volatility % a year',
+    worstFallPercent: 'Worst fall in three years %',
+    twelveMonthReturnPercent: 'Twelve-month return %',
+    threeYearReturnPercent: 'Three-year return %',
+    averageDailyVolume: 'Shares traded a day',
+    priceAsOf: 'Price as of',
+    annualStatements: 'Annual statements on file',
+  },
+  highlight: ['volatilityPercent', 'worstFallPercent', 'debtToAssetsPercent', 'dividendsPaid'],
+};
+
+const present = {
+  number: 161,
+  problem: {
+    headline: 'A goal arrives as a sentence. A screener wants numbers. Somebody has to read one against the other.',
+    stat: '96',
+    statLabel: 'readings: sixteen instruments against six briefs',
+  },
+  hero: {
+    item: 'NVDA-income-now',
+    caption: 'NVDA read for "I need income now": fit 1.4 of 6, ruled out by volatility. The file agrees: 38.0% a year against a 25% bar.',
+  },
+  answers: {
+    caption: 'Five typed answers: a fit score, the one thing that rules it out, a shortlist call, and how far the file can be trusted.',
+    reveal: ['fit_to_goal', 'disqualifier', 'shortlist', 'data_sufficient'],
+  },
+  miss: {
+    item: 'JPM-preserve',
+    caption: 'JPM for money that cannot be lost: volatility named at 22.1% a year. A fair call for that brief, and under the 25% bar, so it counts as unsupported.',
+  },
+  proof: {
+    kpis: ['Named disqualifiers the numbers support', 'Shortlist and reason agree', 'Shortlisted'],
+    chart: 'baselines',
+    closing: '26 of 56 stated reasons clear a strict numeric bar. That is the number the next version has to beat.',
+  },
+};
+
 export default {
   id: 'goal-screening',
   title: 'Screening for a goal',
@@ -242,6 +406,10 @@ export default {
   dataClass: 'cached-real',
   readMinutes: 4,
   view: 'table',
+  stage,
+  grade,
+  verdict,
+  present,
   itemLabel: (item) => `${item.symbol} · ${item.goalId}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

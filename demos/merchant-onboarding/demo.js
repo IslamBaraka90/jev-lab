@@ -10,6 +10,7 @@ const OUTCOMES = ['GOOD', 'CHARGEBACK_HEAVY', 'PROHIBITED', 'FRAUD'];
 
 /** What each reserve holds, as a share of one month's settlement. The rolling hold builds to a third. */
 const RESERVE_SHARE = { NONE: 0, FIVE_PERCENT: 0.05, TEN_PERCENT: 0.1, TWENTY_PERCENT: 0.2, ROLLING_HOLD: 0.3 };
+const DOUBT_LEVELS = ['None', 'Slight', 'Mild', 'Notable', 'Serious', 'Severe', 'Certain forgery'];
 
 const readable = (value) => value.toLowerCase().replaceAll('_', ' ');
 const sentence = (value) => readable(value).replace(/^./, (letter) => letter.toUpperCase());
@@ -126,14 +127,19 @@ function report(results, context = {}) {
   const goodDeclined = good.filter((result) => !result.evaluation.boarded);
 
   return {
-    note: `A hundred and forty applications. ${bad.length} of these merchants were a problem — ${labels.filter((label) => label.outcome === 'CHARGEBACK_HEAVY').length} went on to heavy chargebacks, ${labels.filter((label) => label.outcome === 'PROHIBITED').length} were never acceptable, ${labels.filter((label) => label.outcome === 'FRAUD').length} sent documents that do not hold up. ${context.note ?? ''}`,
-    findings: findings(graded, byItem, good),
+    note: `${results.length} applications. ${bad.length} of these merchants were a problem — ${labels.filter((label) => label.outcome === 'CHARGEBACK_HEAVY').length} went on to heavy chargebacks, ${labels.filter((label) => label.outcome === 'PROHIBITED').length} were never acceptable, ${labels.filter((label) => label.outcome === 'FRAUD').length} sent documents that do not hold up. ${context.note ?? ''}`,
+    findings: [...findings(graded, byItem, good), ...honestFindings(graded, byItem, good)],
     kpis: kpis({ good, goodDeclined, graded, byItem }),
+    distributionTitle: 'Risk tiers given',
     distribution: distribution(results),
+    baselines: baselines(graded, byItem),
     matrix: confusion(graded, byItem),
     curve: coverage(graded, byItem),
+    reserveAgainstLoss: reserveAgainstLoss(graded, byItem),
     checks: checks(graded, byItem, labels),
+    topItemsTitle: 'Largest reserves held',
     topItems: topItems(results, byItem),
+    metrics: metrics(graded, byItem),
   };
 }
 // #endregion
@@ -147,6 +153,8 @@ function exposure(graded, byItem) {
   return {
     under,
     shortfall: Math.round(total(under.map((result) => byItem.get(result.item.id).chargebacksLater - result.evaluation.reserveHeld))),
+    // Merchant by merchant: a surplus held on one cannot pay for the gap on another.
+    covered: Math.round(total(boarded.map((result) => Math.min(result.evaluation.reserveHeld, byItem.get(result.item.id).chargebacksLater)))),
     avoided: total(declined.map((result) => byItem.get(result.item.id).chargebacksLater)),
     faced: total(boarded.map((result) => byItem.get(result.item.id).chargebacksLater)),
     held: total(boarded.map((result) => result.evaluation.reserveHeld)),
@@ -159,8 +167,6 @@ function kpis({ good, goodDeclined, graded, byItem }) {
   const exposed = exposure(graded, byItem);
   const neverAcceptable = graded.filter((result) => ['PROHIBITED', 'FRAUD'].includes(byItem.get(result.item.id).outcome));
   const approvedAnyway = neverAcceptable.filter((result) => result.evaluation.approved);
-  const reviewed = graded.filter((result) => result.evaluation.reviewed);
-  const reviewedProblems = reviewed.filter((result) => byItem.get(result.item.id).outcome !== 'GOOD');
   const prohibited = graded.filter((result) => byItem.get(result.item.id).outcome === 'PROHIBITED');
   const prohibitedRight = prohibited.filter((result) => result.evaluation.prohibitedMatch && result.evaluation.tier === 'PROHIBITED');
   const wrongProhibited = good.filter((result) => result.evaluation.prohibitedMatch);
@@ -169,10 +175,88 @@ function kpis({ good, goodDeclined, graded, byItem }) {
     { label: 'Never-acceptable merchants approved', value: `${approvedAnyway.length} of ${neverAcceptable.length}`, context: 'the prohibited activities and the forged files, which no reserve makes acceptable', tone: approvedAnyway.length ? 'warn' : 'good' },
     { label: 'Good merchants declined', value: `${goodDeclined.length} of ${good.length}`, context: `${money(total(goodDeclined.map((result) => result.item.expectedMonthlyVolume)))} of monthly volume turned away`, tone: goodDeclined.length ? 'warn' : 'good' },
     { label: 'Prohibited called exactly', value: `${prohibitedRight.length} of ${prohibited.length}`, context: wrongProhibited.length ? `${wrongProhibited.length} good merchants also called prohibited` : 'and no good merchant called prohibited', tone: prohibitedRight.length === prohibited.length && !wrongProhibited.length ? 'good' : 'warn' },
-    { label: 'Reserve against what was not refused', value: exposed.faced ? share(exposed.held, exposed.faced) : '–', context: `${money(exposed.held)} held against ${money(exposed.faced)} of chargebacks on the ${exposed.boarded} that were not refused`, tone: exposed.held >= exposed.faced ? 'good' : 'warn' },
+    { label: 'Reserve against what was not refused', value: exposed.faced ? share(exposed.held, exposed.faced) : '–', context: `${money(exposed.held)} held against ${money(exposed.faced)} of chargebacks on the ${exposed.boarded} that were not refused, in total${exposed.under.length ? ` · merchant by merchant the holds cover ${share(exposed.covered, exposed.faced)} of it, because one surplus cannot pay another gap` : ''}`, tone: exposed.held >= exposed.faced && !exposed.under.length ? 'good' : 'warn' },
     { label: 'Under-reserved', value: `${exposed.under.length} of ${exposed.boarded}`, context: exposed.shortfall ? `${money(exposed.shortfall)} more went out than was held on those` : 'every one of them was covered', tone: exposed.under.length ? 'warn' : 'good' },
-    { label: 'Sent to an underwriter', value: reviewed.length, context: `${share(reviewed.length, graded.length)} of the applications · ${reviewedProblems.length} of them were the problem files` },
   ];
+}
+
+/** Right, file by file, as the checks count it: a good merchant boarded, a bad one refused, or one that went bad held for at least what it cost. */
+function handledRight(label, boarded, held) {
+  if (label.outcome === 'GOOD') return boarded;
+  if (label.outcome === 'CHARGEBACK_HEAVY') return !boarded || held >= label.chargebacksLater;
+  return !boarded;
+}
+
+/** The rule: refuse when the names differ and a document is not clear; hold a rolling reserve on a company under eighteen months promising delivery in fourteen days or more; board the rest with nothing held. */
+function ruleDecision(item) {
+  if (item.nameMismatch && item.documentsClear < item.documentsExpected) return { boarded: false, held: 0 };
+  const deliveryRisk = item.deliveryPromiseDays >= 14 && item.monthsRegistered < 18;
+  return { boarded: true, held: deliveryRisk ? Math.round(item.expectedMonthlyVolume * RESERVE_SHARE.ROLLING_HOLD) : 0 };
+}
+
+function countRight(graded, byItem, decide) {
+  return graded.filter((result) => {
+    const decision = decide(result);
+    return handledRight(byItem.get(result.item.id), decision.boarded, decision.held);
+  }).length;
+}
+
+const modelDecision = (result) => ({ boarded: result.evaluation.boarded, held: result.evaluation.reserveHeld });
+
+function baselines(graded, byItem) {
+  if (!graded.length) return undefined;
+  return [
+    { label: 'Jev', detail: 'files handled right: good boarded, unacceptable refused, later losses covered by the hold', value: countRight(graded, byItem, modelDecision) / graded.length, model: true },
+    { label: 'Rule: mismatched names, slow delivery', detail: 'three lines over five fields; it cannot read the website, so it boards every prohibited merchant', value: countRight(graded, byItem, (result) => ruleDecision(result.item)) / graded.length },
+    { label: 'Board everyone, hold nothing', detail: 'the commonest outcome is a good merchant', value: countRight(graded, byItem, () => ({ boarded: true, held: 0 })) / graded.length },
+  ];
+}
+
+function metrics(graded, byItem) {
+  if (!graded.length) return undefined;
+  const neverAcceptable = graded.filter((result) => ['PROHIBITED', 'FRAUD'].includes(byItem.get(result.item.id).outcome));
+  const problems = graded.filter((result) => byItem.get(result.item.id).outcome !== 'GOOD');
+  const notApproved = graded.filter((result) => !result.evaluation.approved);
+  const problemsNotApproved = problems.filter((result) => !result.evaluation.approved);
+  const exposed = exposure(graded, byItem);
+  const approvedWithHold = graded.filter((result) => result.evaluation.approved && result.evaluation.reserveHeld > 0);
+  return {
+    headline: { label: 'Never-acceptable merchants approved', value: neverAcceptable.length ? neverAcceptable.filter((result) => result.evaluation.approved).length / neverAcceptable.length : 0, n: neverAcceptable.length },
+    accuracy: countRight(graded, byItem, modelDecision) / graded.length,
+    precision: notApproved.length ? problemsNotApproved.length / notApproved.length : null,
+    recall: problems.length ? problemsNotApproved.length / problems.length : null,
+    lossCoveredShare: exposed.faced ? exposed.covered / exposed.faced : null,
+    contradictionRate: approvedWithHold.length / graded.length,
+    automationRate: graded.filter((result) => !result.evaluation.reviewed).length / graded.length,
+  };
+}
+
+/** One row per merchant that went bad: what was held against what it went on to cost. */
+function reserveAgainstLoss(graded, byItem) {
+  return graded
+    .filter((result) => byItem.get(result.item.id).outcome === 'CHARGEBACK_HEAVY')
+    .map((result) => {
+      const cost = Math.round(byItem.get(result.item.id).chargebacksLater);
+      return { id: result.item.id, merchant: result.item.tradingName, reserveHeld: result.evaluation.reserveHeld, chargebacksLaterCost: cost, shortfallAmount: Math.max(0, cost - result.evaluation.reserveHeld) };
+    })
+    .sort((left, right) => right.shortfallAmount - left.shortfallAmount);
+}
+
+function honestFindings(graded, byItem, good) {
+  const lines = [];
+  const exposed = exposure(graded, byItem);
+  if (exposed.under.length) lines.push(`Merchant by merchant the picture is less tidy than the total: ${exposed.boarded - exposed.under.length} of the ${exposed.boarded} that went bad were fully covered, and ${money(exposed.shortfall)} of the ${money(exposed.faced)} they cost (${share(exposed.shortfall, exposed.faced)}) was not held anywhere. A rolling hold is a fixed third of a month, so whether it covers a merchant is set by that constant, not by a priced answer.`);
+
+  const goodHeld = good.filter((result) => result.evaluation.reserveHeld > 0);
+  if (goodHeld.length) lines.push(`The caution has a cost too: ${money(total(goodHeld.map((result) => result.evaluation.reserveHeld)))} is held on ${goodHeld.length} merchants that turned out fine.`);
+
+  const reviewed = graded.filter((result) => result.evaluation.reviewed);
+  const reviewedGood = reviewed.filter((result) => byItem.get(result.item.id).outcome === 'GOOD');
+  if (reviewedGood.length > reviewed.length / 2) lines.push(`${reviewed.length} applications went to an underwriter and ${reviewedGood.length} of them were good merchants. Nothing here charges for a review, so sending a doubtful file to a person can never count against the run.`);
+
+  const approvedWithHold = graded.filter((result) => result.evaluation.approved && result.evaluation.reserveHeld > 0);
+  if (approvedWithHold.length) lines.push(`${approvedWithHold.length} applications were approved without a person and given a reserve in the same answer set: ${approvedWithHold.map((result) => result.item.id).join(', ')}.`);
+  return lines;
 }
 
 function checks(graded, byItem, labels) {
@@ -207,15 +291,19 @@ const DETAIL = {
   'looks risky, turned out fine': 'A bonded travel agent, a hardware wallet shop, a supplements seller making no claims, a dropshipper who ships in five days.',
 };
 
+const TIER_TONE = { LOW: 'good', MEDIUM: undefined, HIGH: 'warn', PROHIBITED: 'bad' };
+
 function distribution(results) {
   return TIERS
-    .map((tier) => ({ label: sentence(tier), count: results.filter((result) => result.evaluation.tier === tier).length, tone: tier === 'LOW' ? 'good' : 'warn' }))
+    .map((tier) => ({ label: sentence(tier), count: results.filter((result) => result.evaluation.tier === tier).length, tone: TIER_TONE[tier] }))
     .filter((entry) => entry.count);
 }
 
 function confusion(graded, byItem) {
   return {
     title: 'What happened to the application against how the merchant turned out',
+    rowLabel: 'how the merchant turned out',
+    columnLabel: 'what happened to the application',
     columns: DECISIONS.map(sentence),
     rows: OUTCOMES.map((outcome) => ({
       label: sentence(outcome),
@@ -235,7 +323,7 @@ function coverage(graded, byItem) {
     const real = doubted.filter((result) => byItem.get(result.item.id).outcome === 'FRAUD');
     return { threshold: Number((bar / 6).toFixed(3)), reviewed: doubted.length, caught: real.length, rate: doubted.length ? Number((real.length / doubted.length).toFixed(3)) : null };
   });
-  return { title: 'Document doubt against the files that really were forged', xLabel: 'Applications doubted at this level or above', yLabel: 'Forged files among them', rateLabel: 'Share of the doubted files that were forged', of: forged.length, points };
+  return { title: 'Document doubt against the files that really were forged', xLabel: 'Applications doubted at this level or above', yLabel: 'Forged files among them', rateLabel: 'Share of the doubted files that were forged', of: forged.length, thresholdFormat: 'level', levels: 6, defaultIndex: 3, points };
 }
 
 function findings(graded, byItem, good) {
@@ -266,10 +354,96 @@ function topItems(results, byItem) {
     .slice(0, 10)
     .map((result) => ({
       id: result.item.id,
-      label: `${result.item.tradingName} · ${result.item.category.toLowerCase()} · ${readable(result.evaluation.reserve)}${byItem.get(result.item.id)?.outcome === 'CHARGEBACK_HEAVY' ? ' · went bad' : ''}`,
+      label: `${result.item.id} · ${result.item.tradingName} · ${result.item.category.toLowerCase()} · ${readable(result.evaluation.reserve)}${byItem.get(result.item.id)?.outcome === 'CHARGEBACK_HEAVY' ? ' · went bad' : ''}`,
       value: money(result.evaluation.reserveHeld),
     }));
 }
+
+const percentOf = (value) => `${Math.round(value * 100)}%`;
+const levelOf = (value) => `${DOUBT_LEVELS[Math.round(value)]} · ${value.toFixed(1)} of 6`;
+
+function reserveText(evaluation, item, currency) {
+  if (!evaluation.boarded) return 'Nothing held: not boarded';
+  if (!evaluation.reserveHeld) return 'No reserve';
+  return `${sentence(evaluation.reserve)} · ${money(evaluation.reserveHeld, currency)} of ${money(item.expectedMonthlyVolume, currency)} a month`;
+}
+
+function verdict(result, context) {
+  const { evaluation, answers, item } = result;
+  const currency = context?.currency;
+  const held = evaluation.reserveHeld ? ` · ${money(evaluation.reserveHeld, currency)} held` : '';
+  const prohibited = answers.prohibited_match.noul;
+  const approvedWithHold = evaluation.approved && evaluation.reserveHeld > 0;
+  return {
+    eyebrow: 'What happens to this application',
+    headline: `${sentence(evaluation.decision)} · ${readable(evaluation.tier)}${evaluation.tier === 'PROHIBITED' ? '' : ' risk'}${held}`,
+    detail: evaluation.reviewed ? 'An underwriter asks questions before the merchant is boarded.' : evaluation.approved ? 'Boarded without a person on these terms.' : 'Refused; no reserve makes it acceptable.',
+    facts: [
+      { label: 'Risk tier', value: `${sentence(evaluation.tier)} · ${percentOf(answers.risk_tier.confidence)}`, tone: TIER_TONE[evaluation.tier] },
+      { label: 'Reserve', value: reserveText(evaluation, item, currency), tone: approvedWithHold ? 'warn' : undefined },
+      { label: 'Matches a prohibited activity', value: `${evaluation.prohibitedMatch ? 'Yes' : 'No'} · ${percentOf(Math.max(prohibited, 1 - prohibited))}`, tone: evaluation.prohibitedMatch ? 'bad' : 'good' },
+      { label: 'Doubt about the documents', value: levelOf(evaluation.documentDoubt), tone: evaluation.documentDoubt >= 3 ? 'bad' : evaluation.documentDoubt >= 2 ? 'warn' : 'good' },
+      { label: 'Confidence in the decision', value: percentOf(evaluation.confidence), tone: evaluation.confidence < 0.6 ? 'warn' : undefined },
+    ],
+  };
+}
+
+function gradeNote(result, label, currency) {
+  const { evaluation } = result;
+  if (label.outcome === 'CHARGEBACK_HEAVY') {
+    const cost = money(label.chargebacksLater, currency);
+    if (!evaluation.boarded) return `Went on to ${cost} of chargebacks; it was refused.`;
+    const gap = label.chargebacksLater - evaluation.reserveHeld;
+    return gap > 0 ? `Went on to ${cost} of chargebacks; the hold was ${money(gap, currency)} short.` : `Went on to ${cost} of chargebacks; the hold of ${money(evaluation.reserveHeld, currency)} covered it.`;
+  }
+  if (label.outcome === 'PROHIBITED') return 'Planted as an activity the acquirer does not accept.';
+  if (label.outcome === 'FRAUD') return `Planted with documents that do not hold up; document doubt was ${evaluation.documentDoubt.toFixed(1)} of 6.`;
+  if (label.kind === 'looks risky, turned out fine') return `Looks risky and turned out fine${evaluation.reserveHeld ? `; ${money(evaluation.reserveHeld, currency)} of its money is held` : ''}.`;
+  return undefined;
+}
+
+const expectedHandling = (label) => (label.outcome === 'GOOD' ? 'boarded' : label.outcome === 'CHARGEBACK_HEAVY' ? 'refused, or held for what it cost' : 'refused');
+
+const grade = {
+  labelId: (label) => label.applicationId,
+  // Right as the checks count it: good boarded, unacceptable refused, a later loss covered by the hold.
+  judge: (result, label, context) => {
+    if (!label) return null;
+    return {
+      agree: handledRight(label, result.evaluation.boarded, result.evaluation.reserveHeld),
+      expected: expectedHandling(label),
+      got: `${readable(result.evaluation.decision)}${result.evaluation.reserveHeld ? `, ${money(result.evaluation.reserveHeld, context?.currency)} held` : ''}`,
+      note: gradeNote(result, label, context?.currency),
+      confidence: result.answers.decision.confidence,
+    };
+  },
+};
+
+const present = {
+  number: 115,
+  problem: {
+    headline: 'Refusing every merchant that looks risky loses good business. The other tool is the reserve: how much of their money to hold.',
+    stat: '140',
+    statLabel: 'applications, 22 of them a problem later',
+  },
+  hero: {
+    item: 'APP-037',
+    caption: 'A five-month-old dropshipper promising delivery in 44 days, expecting £102,054 a month. Not refused: sent to review as high risk with £30,616 held. It went on to £27,555 of chargebacks.',
+  },
+  answers: {
+    caption: 'Five typed answers: the tier, a check against the prohibited list, doubt about the documents, the reserve and the decision.',
+    reveal: ['risk_tier', 'prohibited_match', 'document_doubt', 'reserve', 'decision'],
+  },
+  miss: {
+    item: 'APP-062',
+    caption: 'The same kind of file, £146,615 a month, and the same rolling hold: £43,984. It went on to £52,781 of chargebacks, so the hold was £8,797 short. Five of eleven were short like this.',
+  },
+  proof: {
+    kpis: ['Never-acceptable merchants approved', 'Good merchants declined', 'Under-reserved'],
+    chart: 'baselines',
+    closing: 'No unacceptable merchant approved and no good one refused; merchant by merchant, the holds covered 88.5% of the £414,610 the bad ones went on to cost.',
+  },
+};
 
 export default {
   id: 'merchant-onboarding',
@@ -288,6 +462,26 @@ export default {
   questions,
   evaluate,
   report,
+  stage: {
+    hide: ['documentsClear', 'documentsExpected'],
+    labels: {
+      submittedAt: 'Submitted',
+      nameMismatch: 'Legal and trading names differ',
+      monthsRegistered: 'Months registered',
+      expectedMonthlyVolume: 'Expected monthly volume',
+      averageTicket: 'Average ticket',
+      deliveryPromiseDays: 'Delivery promise (days)',
+      declaredChargebackRatePercent: 'Declared chargeback rate (%)',
+      websiteExcerpt: 'From the website',
+      refundPolicy: 'Refund policy',
+      note: 'Reviewer note',
+    },
+    highlight: ['deliveryPromiseDays', 'monthsRegistered', 'nameMismatch', 'expectedMonthlyVolume'],
+  },
+  grade,
+  verdict,
+  present,
+  caveat: 'The five forged files are the only ones whose document notes state the problem outright, and all eleven merchants that went bad are companies under eight months old promising delivery in 25 days or more, so parts of this run measure reading. The reserve also collapsed to two values, none or a rolling hold. A harder dataset is planned.',
   explain: {
     data: 'scripts/generate/merchant-onboarding.js#demo:data',
     state: 'demos/merchant-onboarding/demo.js#demo:state',

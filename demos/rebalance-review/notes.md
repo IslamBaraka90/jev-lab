@@ -27,14 +27,17 @@ planted problem breaks exactly one of them:
 
 - **All forty-seven problem trades were stopped, and all forty-seven were named exactly right** — five
   kinds, no confusion between them.
-- **All fourteen oversized trades came back with a smaller size**, not just a refusal. That is the
-  difference between a review and an order list: the trade still happens, in pieces the market can take.
-- **One ordinary trade was fully stopped**, $31m of rebalancing held up. Thirty-one more were resized
-  rather than approved, which is the one real cost in this run: the trades still go, smaller than they
-  needed to be.
+- **Nine of the fourteen oversized trades came back resized and split over days**, not just refused.
+  That is the difference between a review and an order list: the trade still happens, in pieces the
+  market can take. The other five were rejected with a split attached, so nothing goes.
+- **One ordinary trade was fully stopped**, $31m of rebalancing held up. Thirty more were marked resize
+  rather than approve, which is the one real cost in this run; twenty-six of those kept their full size,
+  so the verdict and the size band contradict each other.
 - **The order list came out at $13bn across 165 trades**, with one trade in it that should have been
   rejected.
-- Verdicts agree exactly 69% of the time; nearly all the disagreement is resize-where-approve-would-do.
+- Verdicts agree exactly 69% of the time. Half the disagreement is resize-where-approve-would-do; the
+  other half is on the problem trades, where the exact verdict matches on only 16 of 47 (defer and reject
+  are swapped most often).
 
 ## The honest caveat
 

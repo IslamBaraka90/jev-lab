@@ -11,7 +11,7 @@ farmer was careless about: two funded from a single address, two created within 
 two running the same actions in the same order, one paying a gas price shared to three decimals, and
 one withdrawing everything to the same endpoint.
 
-Against them: **twelve wallets funded from an exchange hot wallet**, which forty-three wallets in the
+Against them: **twelve wallets funded from an exchange hot wallet**, which thirty-six wallets in the
 file share, and **six people who did the same five things in the same order because a guide told them
 to**. Both are exactly the shape of a cluster and neither is one.
 
@@ -26,9 +26,9 @@ be inferred from the shape of the population, not read off a list.
 - **The linking signal was named correctly on all sixty-two farmed wallets** — the right one of five,
   every time. That is the part of this run worth keeping.
 - **Nothing was excluded.** Not one wallet, farmed or otherwise. Every allocation was paid: $186,373
-  across 150 wallets, $73,000 of it to the eight farmers.
+  across 150 wallets, $69,026 of it to the eight farmers.
 - **Eighty-one of the eighty-eight wallets with no cluster were given a linking signal anyway**, mostly
-  "funding source" — because forty-three wallets really do share the exchange hot wallet, and the state
+  "funding source" — because thirty-six wallets really do share the exchange hot wallet, and the state
   reports that count without saying it is unremarkable.
 - **The likelihood score does not separate the file**: farmed wallets score 3.32 to 4.31, independent
   ones 3.00 to 4.36. Unlike the tracing demo, there is no bar that works here.

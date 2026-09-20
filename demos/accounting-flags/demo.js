@@ -8,12 +8,12 @@
 // skills and a demo that adds them together is hiding which one failed.
 
 import { choice, noul, score } from '../lib/questions.js';
+import { matrixStats } from '../lib/metrics.js';
 
 const FLAGS = ['RECEIVABLES', 'INVENTORY', 'REVENUE_TIMING', 'CAPITALISED_COSTS', 'RELATED_PARTY', 'RESTATEMENT', 'NONE'];
 
 const readable = (value) => value.toLowerCase().replaceAll('_', ' ');
 const sentence = (value) => readable(value).replace(/^./, (letter) => letter.toUpperCase());
-const share = (part, whole) => (whole ? `${Math.round((part / whole) * 100)}%` : '–');
 
 // #region demo:state
 /** Three years as filed, the notes as written, and what normal looks like in this sector. */
@@ -92,15 +92,25 @@ function report(results, context = {}) {
   const clean = graded.filter((result) => byItem.get(result.item.id).flag === 'NONE');
   const decoys = graded.filter((result) => byItem.get(result.item.id).decoy);
 
+  const groups = { graded, planted, clean, decoys, byItem };
+  const matrix = confusion(graded, byItem);
+
   return {
     note: `A hundred and twenty company-years. ${planted.length} carry a planted pattern, ${decoys.length} of those have an innocent explanation in the notes, and ${clean.length} are clean. ${context.note ?? ''}`,
-    findings: findings({ graded, planted, clean, decoys, byItem }),
-    kpis: kpis({ graded, planted, clean, decoys, byItem }),
+    findings: findings(groups),
+    kpis: kpis(groups),
+    otherFigures: otherFigures(groups),
     distribution: distribution(results),
-    matrix: confusion(graded, byItem),
-    curve: coverage(graded, byItem, planted),
+    distributionTitle: 'Patterns named',
+    baselines: baselines(groups),
+    matrix,
+    curve: coverage(groups),
+    yearsByPatternProbability: probabilityCuts(groups),
+    decoysExplanationFoundAgainstHeld: decoyGrid(decoys),
+    metrics: metrics(groups, matrix),
     checks: checks(graded, byItem, labels),
     topItems: topItems(results, byItem),
+    topItemsTitle: 'Scored most serious',
   };
 }
 // #endregion
@@ -108,30 +118,148 @@ function report(results, context = {}) {
 const named = (result, byItem) => result.evaluation.flag === byItem.get(result.item.id).flag;
 const average = (values) => (values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0);
 
-function kpis({ graded, planted, clean, decoys, byItem }) {
+const unexplained = (planted, byItem) => planted.filter((result) => !byItem.get(result.item.id).decoy);
+
+/** How likely the answer made it that something is there: everything not given to "nothing to see". */
+const patternProbability = (result) => 1 - (result.answers.flag.probabilities?.NONE ?? 0);
+
+/** The chance a planted year is ranked above a clean one by `scoreOf`, ties counted as half. 0.5 is a coin. */
+function rankingAuc(positives, negatives, scoreOf) {
+  if (!positives.length || !negatives.length) return null;
+  let wins = 0;
+  for (const positive of positives) {
+    for (const negative of negatives) {
+      if (scoreOf(positive) > scoreOf(negative)) wins += 1;
+      else if (scoreOf(positive) === scoreOf(negative)) wins += 0.5;
+    }
+  }
+  return wins / (positives.length * negatives.length);
+}
+
+/** What holding every year answered at `bar` or above would cost and catch. */
+function heldAt(bar, { graded, planted, clean, byItem }) {
+  const held = graded.filter((result) => result.answers.investigate.noul >= bar);
+  const real = unexplained(planted, byItem);
+  return { held: held.length, real: held.filter((result) => real.includes(result)).length, clean: held.filter((result) => clean.includes(result)).length };
+}
+
+const STRICTER_BAR = 0.7;
+
+function kpis(groups) {
+  const { graded, planted, clean, decoys, byItem } = groups;
+  const exact = graded.filter((result) => named(result, byItem));
   const found = planted.filter((result) => named(result, byItem));
-  const falseAlarms = clean.filter((result) => result.evaluation.flag !== 'NONE');
   const read = decoys.filter((result) => result.evaluation.explained);
-  const excused = read.filter((result) => !result.evaluation.investigate);
-  const real = planted.filter((result) => !byItem.get(result.item.id).decoy);
-  const raised = real.filter((result) => result.evaluation.investigate);
-  const withSecond = graded.filter((result) => byItem.get(result.item.id).secondFlag !== 'NONE');
-  const secondFound = withSecond.filter((result) => result.evaluation.second === byItem.get(result.item.id).secondFlag);
-  const gap = average(real.map((result) => result.evaluation.severity)) - average(decoys.map((result) => result.evaluation.severity));
-  const ranking = average(real.map((result) => result.evaluation.severity)) - average(clean.map((result) => result.evaluation.severity));
+  const real = unexplained(planted, byItem);
   const held = clean.filter((result) => result.evaluation.investigate);
+  const raised = real.filter((result) => result.evaluation.investigate);
+  const stricter = heldAt(STRICTER_BAR, groups);
+  const auc = rankingAuc(planted, clean, patternProbability);
 
   return [
+    { label: 'Years read as planted', value: `${exact.length} of ${graded.length}`, context: `the planted pattern named, or "none" for a clean year; answering "none" every time scores ${clean.length}`, tone: exact.length > clean.length ? 'good' : 'warn' },
+    { label: 'Planted years ranked above clean', value: auc === null ? '–' : auc.toFixed(3), context: 'the chance a planted year is given more probability of a pattern than a clean one; 0.5 is a coin, 1 is perfect', tone: auc !== null && auc >= 0.9 ? 'good' : 'warn' },
+    { label: 'Clean years held up', value: `${held.length} of ${clean.length}`, context: `at the 50% line, with ${raised.length} of ${real.length} real patterns; at 70% it is ${stricter.clean} clean years and ${stricter.real} real patterns`, tone: held.length > clean.length / 4 ? 'warn' : 'good' },
     { label: 'Patterns named correctly', value: `${found.length} of ${planted.length}`, context: 'the planted pattern, named as the strongest one', tone: found.length >= planted.length * 0.8 ? 'good' : 'warn' },
-    { label: 'Clean years accused', value: `${falseAlarms.length} of ${clean.length}`, context: 'a pattern named where nothing was planted', tone: falseAlarms.length > clean.length / 10 ? 'warn' : 'good' },
-    { label: 'Clean years held up', value: `${held.length} of ${clean.length}`, context: 'sign-off stopped on a year with nothing planted in it', tone: held.length > clean.length / 4 ? 'warn' : 'good' },
-    { label: 'Severity gap, planted against clean', value: ranking.toFixed(1), context: 'how much more serious a planted year was scored than a clean one', tone: ranking > 1 ? 'good' : 'warn' },
     { label: 'Decoy explanation found', value: `${read.length} of ${decoys.length}`, context: 'the reason is in the notes, in prose, and it was read', tone: read.length >= decoys.length * 0.6 ? 'good' : 'warn' },
-    { label: 'Decoys let through', value: `${excused.length} of ${decoys.length}`, context: 'explanation found, and the year signed off without review' },
-    { label: 'Real patterns sent on', value: `${raised.length} of ${real.length}`, context: 'planted patterns with no explanation, raised for somebody to look at' },
-    { label: 'Second pattern found', value: `${secondFound.length} of ${withSecond.length}`, context: 'company-years carrying two planted patterns at once' },
-    { label: 'Severity gap, real against excused', value: gap.toFixed(1), context: 'how much more serious the unexplained ones were scored', tone: gap > 1 ? 'good' : 'warn' },
   ];
+}
+
+/** The figures that are worth having and not worth a headline tile. */
+function otherFigures({ graded, planted, clean, decoys, byItem }) {
+  const falseAlarms = clean.filter((result) => result.evaluation.flag !== 'NONE');
+  const excused = decoys.filter((result) => result.evaluation.explained && !result.evaluation.investigate);
+  const real = unexplained(planted, byItem);
+  const raised = real.filter((result) => result.evaluation.investigate);
+  const heldInAll = graded.filter((result) => result.evaluation.investigate);
+  const withSecond = graded.filter((result) => byItem.get(result.item.id).secondFlag !== 'NONE');
+  const secondFound = withSecond.filter((result) => result.evaluation.second === byItem.get(result.item.id).secondFlag);
+  const repeated = graded.filter((result) => result.evaluation.second === result.evaluation.flag && result.evaluation.flag !== 'NONE');
+  const gap = average(real.map((result) => result.evaluation.severity)) - average(decoys.map((result) => result.evaluation.severity));
+  const ranking = average(real.map((result) => result.evaluation.severity)) - average(clean.map((result) => result.evaluation.severity));
+
+  return [
+    { label: 'Clean years accused', value: `${falseAlarms.length} of ${clean.length}`, context: 'a pattern named where nothing was planted' },
+    { label: 'Real patterns sent on', value: `${raised.length} of ${real.length}`, context: `planted patterns with no explanation, held for review; ${heldInAll.length} years were held in all` },
+    { label: 'Decoys let through', value: `${excused.length} of ${decoys.length}`, context: 'explanation found, and the year signed off without review' },
+    { label: 'Second pattern found', value: `${secondFound.length} of ${withSecond.length}`, context: `company-years carrying two planted patterns; the second answer repeats the first in ${repeated.length} of ${graded.length} years` },
+    { label: 'Severity gap, planted against clean', value: ranking.toFixed(1), context: 'how much more serious a planted year was scored than a clean one' },
+    { label: 'Severity gap, real against excused', value: gap.toFixed(1), context: 'how much more serious the unexplained ones were scored' },
+  ];
+}
+
+const growth = (now, before) => (before ? (now - before) / Math.abs(before) : 0);
+
+/**
+ * Rule: a changed auditor is a restatement; cash under half of profit is revenue timing; then the first
+ * of inventory, receivables and capitalised costs to outgrow revenue by a wide margin; otherwise none.
+ */
+function ruleFlag(item) {
+  const prior = item.statements.at(-2);
+  const latest = item.statements.at(-1);
+  if (!prior || !latest) return 'NONE';
+  const revenue = growth(latest.revenue, prior.revenue);
+  if (item.auditorHistory.length > 1) return 'RESTATEMENT';
+  if (latest.operatingCashFlow < latest.netIncome * 0.5) return 'REVENUE_TIMING';
+  if (growth(latest.inventory, prior.inventory) - revenue > 0.3) return 'INVENTORY';
+  if (growth(latest.tradeReceivables, prior.tradeReceivables) - revenue > 0.5) return 'RECEIVABLES';
+  if (growth(latest.costsCapitalised, prior.costsCapitalised) > 1) return 'CAPITALISED_COSTS';
+  return 'NONE';
+}
+
+function baselines({ graded, clean, byItem }) {
+  if (!graded.length) return undefined;
+  const exact = graded.filter((result) => named(result, byItem));
+  const byRule = graded.filter((result) => ruleFlag(result.item) === byItem.get(result.item.id).flag);
+  const row = (count) => ({ value: count / graded.length, display: `${count} of ${graded.length}` });
+  return [
+    { label: 'Jev', detail: 'the pattern named matches the one planted, or "none" on a clean year', model: true, ...row(exact.length) },
+    { label: 'Rule: the line that outgrew revenue', detail: 'five comparisons over the statements and the auditor history; it never reads a note', ...row(byRule.length) },
+    { label: 'Always say nothing to see', detail: 'the commonest label', ...row(clean.length) },
+  ];
+}
+
+function metrics(groups, matrix) {
+  const { graded, planted, clean, byItem } = groups;
+  if (!graded.length) return undefined;
+  const stats = matrixStats(matrix);
+  const exact = graded.filter((result) => named(result, byItem)).length;
+  const real = unexplained(planted, byItem);
+  const atHalf = heldAt(0.5, groups);
+  return {
+    headline: { label: 'Years read as planted', value: exact / graded.length, n: graded.length },
+    accuracy: exact / graded.length,
+    macroF1: stats?.macroF1 ?? null,
+    rankingAuc: rankingAuc(planted, clean, patternProbability),
+    precision: atHalf.held ? atHalf.real / atHalf.held : null,
+    recall: real.length ? atHalf.real / real.length : null,
+  };
+}
+
+/** The ranking the flag answer already carries, cut at a few probabilities. */
+function probabilityCuts({ graded, planted, clean }) {
+  if (!graded.length) return undefined;
+  return [0.5, 0.7, 0.9, 0.95, 0.99].map((bar) => {
+    const selected = graded.filter((result) => patternProbability(result) >= bar);
+    return {
+      probabilityOfAPattern: `${Math.round(bar * 100)}% or more`,
+      yearsSelected: selected.length,
+      cleanAmongThem: selected.filter((result) => clean.includes(result)).length,
+      plantedAmongThem: selected.filter((result) => planted.includes(result)).length,
+    };
+  });
+}
+
+/** Two questions about each decoy, shown together so neither count hides the other. */
+function decoyGrid(decoys) {
+  if (!decoys.length) return undefined;
+  const count = (explained, held) => decoys.filter((result) => result.evaluation.explained === explained && result.evaluation.investigate === held).length;
+  return {
+    explanationFoundAndSignedOff: count(true, false),
+    explanationFoundAndHeldAnyway: count(true, true),
+    explanationMissedAndSignedOff: count(false, false),
+    explanationMissedAndHeld: count(false, true),
+  };
 }
 
 function checks(graded, byItem, labels) {
@@ -164,28 +292,39 @@ function distribution(results) {
 function confusion(graded, byItem) {
   return {
     title: 'Pattern named against the pattern planted',
+    rowLabel: 'the pattern planted',
+    columnLabel: 'the pattern the model named',
     columns: FLAGS.map(sentence),
     rows: FLAGS.map((actual) => ({
       label: sentence(actual),
-      cells: FLAGS.map((predicted) => ({
-        predicted,
-        count: graded.filter((result) => byItem.get(result.item.id).flag === actual && result.evaluation.flag === predicted).length,
-        diagonal: actual === predicted,
-      })),
+      cells: FLAGS.map((predicted) => {
+        const cell = graded.filter((result) => byItem.get(result.item.id).flag === actual && result.evaluation.flag === predicted);
+        return { predicted, count: cell.length, diagonal: actual === predicted, items: cell.slice(0, 20).map((result) => result.item.id) };
+      }),
     })),
   };
 }
 
-function coverage(graded, byItem, planted) {
-  const points = Array.from({ length: 7 }, (_, bar) => {
-    const reviewed = graded.filter((result) => result.evaluation.severity >= bar);
-    const real = reviewed.filter((result) => byItem.get(result.item.id).flag !== 'NONE' && !byItem.get(result.item.id).decoy);
-    return { threshold: Number((bar / 6).toFixed(3)), reviewed: reviewed.length, caught: real.length, rate: reviewed.length ? Number((real.length / reviewed.length).toFixed(3)) : null };
+/** Where to cut the hold-for-review answer. The ceiling is the unexplained patterns, which are what a hold is for. */
+function coverage(groups) {
+  const real = unexplained(groups.planted, groups.byItem);
+  const points = [0.5, 0.6, 0.7, 0.8, 0.9].map((threshold) => {
+    const at = heldAt(threshold, groups);
+    return { threshold, reviewed: at.held, caught: at.real, rate: at.held ? Number((at.real / at.held).toFixed(3)) : null };
   });
-  return { title: 'Reading the most serious years first', xLabel: 'Company-years at this severity or above', yLabel: 'Years with an unexplained pattern', rateLabel: 'Share of them that do', of: planted.length, points };
+  return {
+    title: 'Holding years for review, by how sure the answer has to be',
+    xLabel: 'Company-years held for review',
+    yLabel: 'Years with an unexplained pattern',
+    rateLabel: 'Share of held years that have one',
+    of: real.length,
+    defaultIndex: 2,
+    points,
+  };
 }
 
-function findings({ graded, planted, clean, decoys, byItem }) {
+function findings(groups) {
+  const { graded, planted, clean, decoys, byItem } = groups;
   const lines = [];
   const missed = planted.filter((result) => result.evaluation.flag === 'NONE');
   if (missed.length) {
@@ -209,8 +348,30 @@ function findings({ graded, planted, clean, decoys, byItem }) {
   const gap = average(planted.filter((result) => !byItem.get(result.item.id).decoy).map((result) => result.evaluation.severity)) - average(clean.map((result) => result.evaluation.severity));
   if (accused.length >= 5) {
     lines.push(`${accused.length} of ${clean.length} clean years were held up for review. That is the cost side of this, and it is paid in hours.`);
-    if (gap > 0.8) lines.push(`The ranking is better than the decision: a planted year scores ${gap.toFixed(1)} points more serious than a clean one, so sorting by severity works even where the yes-or-no does not. Read the curve above rather than the accusation count.`);
+    if (gap > 0.8) lines.push(`The ranking is better than the decision: a planted year scores ${gap.toFixed(1)} points more serious than a clean one, so sorting by severity works even where the yes-or-no does not. Move the bar on the curve below rather than reading the count at 50%.`);
   }
+
+  const atHalf = heldAt(0.5, groups);
+  const stricter = heldAt(STRICTER_BAR, groups);
+  const real = unexplained(planted, byItem);
+  if (stricter.clean < atHalf.clean && stricter.real > 0) {
+    lines.push(`Holding only the years answered at 70% or more means ${stricter.held} reviews instead of ${atHalf.held}, ${stricter.clean} clean years held instead of ${atHalf.clean}, and ${stricter.real} of ${real.length} real patterns still caught. The answer carries the information; the 50% line is the wrong place to cut it.`);
+  }
+
+  const auc = rankingAuc(planted, clean, patternProbability);
+  const sure = probabilityCuts(groups)?.find((cut) => cut.probabilityOfAPattern.startsWith('95'));
+  if (auc !== null && auc >= 0.9 && sure?.yearsSelected) {
+    lines.push(`The named pattern looks like a failure and the probabilities behind it do not: ranked by the probability of any pattern, a planted year comes ahead of a clean one ${(auc * 100).toFixed(1)}% of the time, and the ${sure.yearsSelected} years at 95% or more include ${sure.plantedAmongThem} planted ones. These cuts were chosen on the same years they are scored on.`);
+  }
+
+  if (graded.length) {
+    const exact = graded.filter((result) => named(result, byItem)).length;
+    const byRule = graded.filter((result) => ruleFlag(result.item) === byItem.get(result.item.id).flag).length;
+    if (byRule > exact) lines.push(`A rule beats the model at naming: ${byRule} of ${graded.length} against ${exact}, and answering "none" every time scores ${clean.length}. Each planted pattern moves one line far outside anything a clean year does, so five comparisons find most of them. The rule cannot read a note, which is the part of this job that needs a reader.`);
+  }
+
+  const repeated = graded.filter((result) => result.evaluation.second === result.evaluation.flag && result.evaluation.flag !== 'NONE');
+  if (repeated.length > graded.length / 2) lines.push(`The second-pattern answer repeats the first in ${repeated.length} of ${graded.length} years. The question invites it, so "second pattern found" says little in this run.`);
   return lines;
 }
 
@@ -225,6 +386,94 @@ function topItems(results, byItem) {
     }));
 }
 
+const asPercent = (value) => `${Math.round(value * 100)}%`;
+const yesNo = (value) => (value >= 0.5 ? `Yes · ${asPercent(value)}` : `No · ${asPercent(1 - value)}`);
+
+function plantedNote(label) {
+  if (label.flag === 'NONE') return 'Nothing was planted in this year.';
+  const second = label.secondFlag !== 'NONE' ? `, with ${readable(label.secondFlag)} underneath` : '';
+  if (label.decoy) return `Planted as ${readable(label.flag)} with an innocent explanation in the notes: the numbers show the pattern and only the note excuses it.`;
+  return `Planted as ${readable(label.flag)}${second}, seriousness ${label.seriousness} of 5.`;
+}
+
+/** Right means the pattern named is the one planted, or "none" on a clean year: the report's first number. */
+const grade = {
+  labelId: (label) => label.companyYearId,
+  judge: (result, label) => {
+    if (!label) return null;
+    return {
+      agree: result.evaluation.flag === label.flag,
+      expected: label.flag,
+      got: result.evaluation.flag,
+      note: plantedNote(label),
+      confidence: result.answers.flag.confidence,
+    };
+  },
+};
+
+function verdict(result) {
+  const { answers, evaluation } = result;
+  const nothing = evaluation.flag === 'NONE';
+  const foundAndHeld = evaluation.explained && evaluation.investigate;
+  const second = evaluation.second === 'NONE' ? 'None' : evaluation.second === evaluation.flag ? 'Repeats the first' : sentence(evaluation.second);
+
+  return {
+    eyebrow: 'What happens to this year',
+    headline: `${evaluation.investigate ? 'Held for review' : 'Signed off'} · ${nothing ? 'nothing to see' : readable(evaluation.flag)}`,
+    detail: foundAndHeld ? 'The note that explains the pattern was found, and the year was held anyway.' : undefined,
+    facts: [
+      { label: 'Strongest pattern', value: `${nothing ? 'None' : sentence(evaluation.flag)} · ${asPercent(evaluation.confidence)}`, tone: nothing ? 'good' : 'warn' },
+      { label: 'Probability of any pattern', value: asPercent(patternProbability(result)) },
+      { label: 'How serious', value: `${answers.severity.legend?.[Math.round(evaluation.severity)] ?? 'Score'} · ${evaluation.severity.toFixed(1)} of 6`, tone: evaluation.severity >= 4 ? 'bad' : undefined },
+      { label: 'The notes explain it', value: yesNo(answers.business_explanation_exists.noul), tone: evaluation.explained ? 'good' : undefined },
+      { label: 'Hold the sign-off', value: yesNo(answers.investigate.noul), tone: evaluation.investigate ? 'warn' : 'good' },
+      { label: 'Second pattern', value: second },
+    ],
+  };
+}
+
+const stage = {
+  hide: ['sectorId', 'yearsOnFile'],
+  labels: {
+    fiscalYearEnd: 'Year end',
+    statements: 'Three years as filed',
+    notes: 'Notes to the accounts',
+    auditorHistory: 'Auditor history',
+    costOfSales: 'Cost of sales',
+    costsCapitalised: 'Costs capitalised',
+    tradeReceivables: 'Trade receivables',
+    tradePayables: 'Trade payables',
+    operatingCashFlow: 'Operating cash flow',
+  },
+  highlight: ['tradeReceivables', 'inventory', 'costsCapitalised', 'operatingCashFlow'],
+};
+
+const present = {
+  number: 165,
+  problem: {
+    headline: 'A reviewer signs off company-years one at a time. Most are fine, a few are not, and some that look wrong are explained in a note.',
+    stat: '120',
+    statLabel: 'company-years: 47 with a planted pattern, 10 of those explained',
+  },
+  hero: {
+    item: 'AF-0027',
+    caption: 'Beacon Holdings: inventory up 55% in a year when revenue fell 7%. Named as an inventory build, scored 4.5 of 6 and held for review at 91%.',
+  },
+  answers: {
+    caption: 'The pattern, how serious it is, whether a note explains it, and whether to hold the sign-off. Each comes back with a probability.',
+    reveal: ['flag', 'severity', 'business_explanation_exists', 'investigate'],
+  },
+  miss: {
+    item: 'AF-0085',
+    caption: 'Marlow Resources changed auditor and restated an earlier year. The model named capitalised costs at 93%: the restatement is only in the notes and the auditor history.',
+  },
+  proof: {
+    kpis: ['Years read as planted', 'Planted years ranked above clean', 'Clean years held up'],
+    chart: 'curve',
+    closing: 'Hold the years answered at 70% or more: 52 of 120 reviewed, 34 of 37 real patterns caught, 9 clean years held instead of 51.',
+  },
+};
+
 export default {
   id: 'accounting-flags',
   title: 'Accounting red flags',
@@ -234,6 +483,11 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'table',
+  caveat: 'Every planted pattern here moves one line far outside anything a clean year does, so a five-comparison rule names 111 of 120; the run says more about where to set the bar than about reading, and a subtler dataset is planned.',
+  stage,
+  grade,
+  verdict,
+  present,
   itemLabel: (item) => `${item.id} · ${item.company} · ${item.sector}`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

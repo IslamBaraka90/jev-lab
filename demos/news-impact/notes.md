@@ -52,13 +52,17 @@ anybody reading it. Any demo that showed a model picking the real ones out of id
 be showing a leak.
 
 **It knows when not to answer.** 178 of 300 headlines got no directional read at all. On the 61 where
-it did commit, it was right 52 times — 85 per cent. An earlier version of this report counted every
+it did commit, it was right 52 times — 85 per cent. That is not a forecast: the headlines in front of
+a real move were written to point the way the price went, so the number mostly repeats the reading of
+the words. Against the direction each template was written with, 294 of 300 were read as written, and
+two lists of verbs get all 300. An earlier version of this report counted every
 neutral answer as a wrong direction and reported 31 per cent, which said more about the measure than
 the model. Declining to call a direction is now reported separately from calling one wrongly.
 
-**The chart is read.** 63 of the 97 headlines whose price had already moved three per cent in the week
-before were called already priced. That question is answerable from the bars and nothing else, and it
-is the one place the chart clearly did work.
+**The chart is not read.** 63 of the 97 headlines whose price had already moved three per cent in the
+week before were called already priced, but so were 149 of the 203 whose price had not: 65 per cent
+against 73. An earlier version of these notes reported the first number alone and called it the chart
+doing its work. Most of those answers sit within a few points of a coin flip.
 
 **It almost never says trade.** Seven of three hundred. Three of those seven were followed by a move
 over four per cent, a 43 per cent hit rate against 29 per cent for acting on everything. Seven is too

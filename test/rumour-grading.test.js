@@ -12,7 +12,8 @@ const labels = await loadLabels('rumour-grading');
 const context = { ...demoContext(dataset), labels };
 const label = (id) => labels.find((entry) => entry.claimId === id);
 const item = (id) => dataset.items.find((entry) => entry.id === id);
-const kpi = (report, name) => report.kpis.find((entry) => entry.label === name);
+// The figures that do not fit the KPI strip sit under it, in the same shape.
+const kpi = (report, name) => [...report.kpis, ...report.alsoMeasured].find((entry) => entry.label === name);
 const check = (report, id) => report.checks.find((entry) => entry.id === id);
 
 const answerFor = ({ reliability = 3, corroborated = false, coordinated = false, checkable = false, disposition = 'WATCH' }) => ({

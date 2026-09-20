@@ -16,7 +16,7 @@ its results or on its description.
 | Correlated pairs called out (0.6+, graded 4 of 6+) | 2 of 8 |
 | Uncorrelated pairs accused (under 0.2) | 0 of 47 |
 | Stress-only pairs caught | **0 of 3** |
-| Different instruments hiding a high correlation | 5 of 7 missed |
+| Different instruments hiding a high correlation | 5 of 5 missed |
 | Effective number of bets | **3.92 of 12** |
 
 ## Sure when it speaks, and it rarely speaks
@@ -54,9 +54,9 @@ the reading which catches everything else does not catch these.
 
 ## Different instruments hid the correlation
 
-Seven pairs correlate above 0.7 while trading different instruments — index futures against large-cap
-equities, government bonds against currencies. **Five of the seven were graded below four of six on
-overlap.** Two strategies described in different words, trading different books, with a 0.8
+Seven pairs correlate above 0.7. Two trade the same instruments and were both graded four of six or
+higher. Five trade different instruments — index futures against large-cap equities, government bonds
+against currencies. **All five were graded below four of six on overlap.** Two strategies described in different words, trading different books, with a 0.8
 correlation between their results, read as largely separate things.
 
 That is the single most useful line in this demo, and it is the closing argument for the whole set:

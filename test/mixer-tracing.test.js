@@ -97,7 +97,7 @@ test('a perfect run finds the taint, applies the exchange rule, and clears the r
 
   assert.equal(kpi(report, 'Tainted funds found').value, '34 of 34');
   assert.equal(kpi(report, 'Clean traces called tainted').value, '0 of 56');
-  assert.equal(kpi(report, 'Hops back, exactly right').value, '100%');
+  assert.equal(report.metrics.hopsExact, 1, 'every distance named exactly');
   assert.equal(kpi(report, 'The exchange rule applied').value, '9 of 9');
   assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0]);
 });

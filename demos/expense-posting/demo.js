@@ -2,6 +2,7 @@
 // can defend. The intended account is planted outside this folder and used only to grade the run.
 
 import { choice, noul, score } from '../lib/questions.js';
+import { matrixStats } from '../lib/metrics.js';
 
 const AUTO_THRESHOLD = 0.7;
 const money = (item) => `${item.amount < 0 ? '−' : ''}${Math.abs(item.amount).toLocaleString('en-US', { minimumFractionDigits: 2 })} ${item.currency}`;
@@ -115,42 +116,98 @@ function report(results, { labels = [], accounts = [] } = {}) {
   const graded = results.filter((result) => intended.has(result.item.id));
   const correct = (result) => intended.get(result.item.id).account === result.evaluation.account;
   const auto = graded.filter((result) => result.evaluation.autoPost);
+  const matrix = confusion(graded, intended, accounts);
+  const comparison = alternatives(graded, intended, correct, accounts);
 
   return {
     note: `Graded against the account each expense was meant for. At ${Math.round(AUTO_THRESHOLD * 100)}% confidence, ${auto.length} of ${graded.length} post without a person.`,
-    findings: confusions(graded, intended, accounts),
+    findings: [...confusions(graded, intended, accounts), ...comparison.findings],
     kpis: headline(graded, auto, correct),
+    baselines: comparison.baselines,
+    metrics: metrics(graded, auto, correct, matrix),
     distribution: chosenAccounts(graded, accounts),
-    matrix: confusion(graded, intended, accounts),
+    distributionTitle: 'Accounts posted to',
+    matrix,
     curve: coverage(graded, intended),
     checks: KINDS.map((kind) => difficulty(kind, graded, intended, correct)),
+    topItemsTitle: 'Least clear charges',
     topItems: leastClear(graded),
   };
 }
 // #endregion
 
-/** The four numbers at the top: how much was posted, how much was right, and what that costs. */
+// 399 of 400 is not 100%. A rate only shows as a whole number when it really is one.
+const share = (part, whole) => {
+  if (!whole) return '–';
+  const percent = (part / whole) * 100;
+  return `${Number.isInteger(percent) ? percent : percent.toFixed(1)}%`;
+};
+const ratio = (part, whole) => (whole ? part / whole : 0);
+const gross = (results) => results.reduce((sum, result) => sum + Math.abs(result.item.amount), 0);
+const wholeAmount = (value, currency) => `${Math.round(value).toLocaleString('en-US')} ${currency}`;
+
+/** The numbers at the top: how much was right, how much went through alone, and what was held back. */
 function headline(graded, auto, correct) {
   const right = graded.filter(correct);
   const autoRight = auto.filter(correct);
-  // 399 of 400 is not 100%. A rate only shows as a whole number when it really is one.
-  const share = (part, whole) => {
-    if (!whole) return '–';
-    const percent = (part / whole) * 100;
-    return `${Number.isInteger(percent) ? percent : percent.toFixed(1)}%`;
-  };
+  const held = graded.filter((result) => !result.evaluation.autoPost);
+  const heldWrong = held.filter((result) => !correct(result));
+  const currency = graded[0]?.item.currency ?? '';
 
   return [
-    { label: 'Expenses posted', value: graded.length },
     { label: 'Accuracy', value: share(right.length, graded.length), context: `${right.length} of ${graded.length} in the intended account` },
-    { label: 'Posted automatically', value: share(auto.length, graded.length), context: `${auto.length} at ${Math.round(AUTO_THRESHOLD * 100)}% confidence or more` },
+    { label: 'Posted automatically', value: share(auto.length, graded.length), context: `${auto.length} at ${Math.round(AUTO_THRESHOLD * 100)}% confidence or more, ${wholeAmount(gross(auto), currency)} of ${wholeAmount(gross(graded), currency)} by value` },
     {
       label: 'Accuracy when automatic',
       value: share(autoRight.length, auto.length),
       tone: autoRight.length === auto.length ? 'good' : 'warn',
       context: `${auto.length - autoRight.length} wrong postings would go through`,
     },
+    { label: 'Held for a person', value: held.length, context: `${heldWrong.length} of them would have been posted to the wrong account` },
+    { label: 'Expenses posted', value: graded.length },
   ];
+}
+
+function metrics(graded, auto, correct, matrix) {
+  const right = graded.filter(correct);
+  return {
+    headline: { label: 'Accuracy', value: ratio(right.length, graded.length), n: graded.length },
+    accuracy: ratio(right.length, graded.length),
+    macroF1: matrixStats(matrix)?.macroF1 ?? null,
+    automationRate: ratio(auto.length, graded.length),
+    automationPrecision: auto.length ? auto.filter(correct).length / auto.length : null,
+  };
+}
+
+/** The rules baseline: post to whatever account this vendor's most recent earlier charge went to. */
+function lastAccount(item) {
+  const earlier = [...item.priorPostings].sort((left, right) => left.date.localeCompare(right.date));
+  return earlier.at(-1)?.account ?? null;
+}
+
+/** The model beside the lookup and beside one account for everything. A first-time vendor beats the lookup. */
+function alternatives(graded, intended, correct, accounts) {
+  const withHistory = graded.filter((result) => result.item.priorPostings.length > 0);
+  const lookupRight = withHistory.filter((result) => lastAccount(result.item) === intended.get(result.item.id).account);
+  const modelRight = graded.filter(correct);
+
+  const counts = new Map();
+  for (const result of graded) {
+    const account = intended.get(result.item.id).account;
+    counts.set(account, (counts.get(account) ?? 0) + 1);
+  }
+  const [commonest, commonestCount] = [...counts].sort((left, right) => right[1] - left[1])[0] ?? [null, 0];
+  const name = accounts.find((account) => account.code === commonest)?.name ?? commonest ?? 'none';
+
+  const baselines = [
+    { label: 'Jev', detail: 'posted to the intended account', value: ratio(modelRight.length, graded.length), model: true },
+    { label: "Rule: copy the vendor's last account", detail: `${lookupRight.length} of the ${withHistory.length} charges with a history, and none of the ${graded.length - withHistory.length} from a first-time vendor`, value: ratio(lookupRight.length, graded.length) },
+    { label: 'Always the commonest account', detail: name.toLowerCase(), value: ratio(commonestCount, graded.length) },
+  ];
+  const findings = lookupRight.length > modelRight.length
+    ? [`Copying the vendor's last account forward is right on ${lookupRight.length} of ${graded.length}, which beats the model's ${modelRight.length}. The vendor history in the state is doing the work.`]
+    : [];
+  return { baselines, findings };
 }
 
 /** Accuracy split by how hard the expense was: clear, ambiguous, memo-free, refund. */
@@ -203,6 +260,8 @@ function confusion(graded, intended, accounts) {
   const short = (code) => (accounts.find((account) => account.code === code)?.name ?? code).split(' ')[0];
   return {
     title: 'Intended account against the one chosen',
+    rowLabel: 'the account each charge was meant for',
+    columnLabel: 'the account the model posted it to',
     columns: ACCOUNT_CODES.map(short),
     rows: ACCOUNT_CODES.map((actual) => ({
       label: short(actual),
@@ -217,18 +276,69 @@ function confusion(graded, intended, accounts) {
 
 /** Automation against correctness: how much goes through, and how much of that is right. */
 function coverage(graded, intended) {
-  const points = [];
-  for (let threshold = 0; threshold <= 0.9; threshold += 0.1) {
+  // Tenths are built from whole numbers, so the 70% bar is exactly the 0.7 that evaluate() uses.
+  const points = Array.from({ length: 10 }, (_, step) => {
+    const threshold = step / 10;
     const auto = graded.filter((result) => result.evaluation.confidence >= threshold);
     const right = auto.filter((result) => intended.get(result.item.id).account === result.evaluation.account);
-    points.push({
-      threshold: Number(threshold.toFixed(1)),
-      reviewed: auto.length,
-      caught: right.length,
-      rate: auto.length ? right.length / auto.length : null,
-    });
-  }
-  return { title: 'Confidence threshold', xLabel: 'Expenses posted automatically', yLabel: 'Correct among them', rateLabel: 'Accuracy', of: graded.length, points };
+    return { threshold, reviewed: auto.length, caught: right.length, rate: auto.length ? right.length / auto.length : null };
+  });
+  return { title: 'Confidence threshold', xLabel: 'Expenses posted automatically', yLabel: 'Correct among them', rateLabel: 'Accuracy', of: graded.length, defaultIndex: Math.round(AUTO_THRESHOLD * 10), points };
+}
+
+const CLARITY_LEVELS = ['Unreadable', 'Very unclear', 'Unclear', 'Workable', 'Clear', 'Very clear', 'Unambiguous'];
+const VAT_TREATMENTS = { STANDARD: 'Standard-rated', ZERO_RATED: 'Zero-rated', EXEMPT: 'Exempt', OUT_OF_SCOPE: 'Out of scope' };
+const percentOf = (value) => `${Math.round(value * 100)}%`;
+
+const GRADE_NOTES = {
+  ambiguous: 'This vendor sells into two accounts, so the memo has to decide.',
+  'no-memo': 'The charge arrived with no description: only the vendor and its history say where it belongs.',
+  refund: 'A refund, which belongs in the account the original charge went to.',
+};
+
+/** Right means the intended account, the same test the report's accuracy uses. */
+function judge(result, label) {
+  if (!label) return null;
+  return {
+    agree: label.account === result.evaluation.account,
+    expected: label.account,
+    got: result.evaluation.account,
+    note: GRADE_NOTES[label.kind],
+    confidence: result.evaluation.confidence,
+  };
+}
+
+/** The second most likely account, which is what a reviewer wants to see on a held charge. */
+function runnerUp(answer, context) {
+  const [option, probability] = Object.entries(answer.probabilities ?? {})
+    .filter(([key]) => key !== answer.choice)
+    .sort((left, right) => right[1] - left[1])[0] ?? [];
+  if (!option || probability < 0.05) return null;
+  const code = option.replace('ACCOUNT_', '');
+  return `${code} ${accountName(context, code)} · ${percentOf(probability)}`;
+}
+
+/** The decision card: the posting, and whether it goes through without a person. */
+function verdict(result, context) {
+  const { evaluation, item, answers } = result;
+  const second = runnerUp(answers.account, context);
+  const needsReceipt = Math.abs(item.amount) > context.receiptThreshold;
+  const facts = [
+    { label: 'Account', value: `${evaluation.account} ${evaluation.accountName} · ${percentOf(evaluation.confidence)}`, tone: evaluation.autoPost ? 'good' : 'warn' },
+    { label: 'How clear the charge is', value: `${CLARITY_LEVELS[Math.round(evaluation.clarity)]} · ${evaluation.clarity.toFixed(1)} of 6`, tone: evaluation.clarity < 3 ? 'warn' : undefined },
+    { label: 'Receipt needed', value: `${evaluation.receiptRequired ? 'Yes' : 'No'} · ${percentOf(answers.receipt_required.noul)}`, tone: evaluation.receiptRequired === needsReceipt ? undefined : 'bad' },
+    { label: 'VAT', value: `${VAT_TREATMENTS[evaluation.vat]} · ${percentOf(answers.vat_treatment.confidence)}` },
+  ];
+  if (second) facts.splice(1, 0, { label: 'Runner-up', value: second });
+
+  return {
+    eyebrow: 'The posting this charge becomes',
+    headline: `${evaluation.autoPost ? 'Post' : 'Hold for review'} · ${money(item)} → ${evaluation.account} ${evaluation.accountName}`,
+    detail: evaluation.autoPost
+      ? `Confidence is at or above the ${percentOf(AUTO_THRESHOLD)} bar, so it posts without a person.`
+      : `Confidence is below the ${percentOf(AUTO_THRESHOLD)} bar, so a person chooses the account.`,
+    facts,
+  };
 }
 
 export default {
@@ -248,6 +358,42 @@ export default {
   questions,
   evaluate,
   report,
+  caveat: 'Most charges here come from a vendor that only ever posts to one account, and the state shows where that vendor went before, so this run mostly measures lookup; a harder dataset with misleading histories is planned.',
+  stage: {
+    hide: ['reference', 'currency', 'isRefund'],
+    labels: { priorPostings: 'This vendor before', paymentMethod: 'Paid by', description: 'Memo on the charge' },
+    highlight: ['vendor', 'description', 'amount'],
+  },
+  grade: {
+    labelId: (label) => label.expenseId,
+    judge,
+  },
+  verdict,
+  present: {
+    number: 103,
+    problem: {
+      headline: 'A quarter of card and bank charges, twelve accounts, and nobody has categorised any of them.',
+      stat: '400',
+      statLabel: 'uncategorised charges',
+    },
+    hero: {
+      item: 'E-0077',
+      caption: 'Copperline Media, 1,776.53 AED, no description at all. One earlier charge went to marketing, and the model posts it there while scoring the charge itself as unclear.',
+    },
+    answers: {
+      caption: 'The account comes with a confidence, and only postings at 70% or more go through without a person.',
+      reveal: ['account', 'posting_clarity', 'receipt_required'],
+    },
+    miss: {
+      item: 'E-0334',
+      caption: 'Packing tape and boxes, 50.00 AED. The label says office supplies; the model said shipping at 54%, under the bar, so a person sees it before it posts.',
+    },
+    proof: {
+      kpis: ['Accuracy', 'Posted automatically', 'Accuracy when automatic'],
+      chart: 'baselines',
+      closing: '399 of 400 in the right account, against 332 for copying the vendor forward; the one error was held back for a person.',
+    },
+  },
   explain: {
     data: 'scripts/generate/expense-posting.js#demo:data',
     state: 'demos/expense-posting/demo.js#demo:state',

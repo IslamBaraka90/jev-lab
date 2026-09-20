@@ -86,7 +86,7 @@ test('a perfect run excludes every cluster and no real user', async () => {
   assert.equal(kpi(report, 'Clusters excluded whole').value, '8 of 8');
   assert.equal(kpi(report, 'Farmed wallets excluded').value, '62 of 62');
   assert.equal(kpi(report, 'Real users excluded').value, '0 of 88');
-  assert.equal(kpi(report, 'Linking signal named').value, '62 of 62');
+  assert.equal(report.metrics.signalNamedRate, 1, 'the planted signal named on every farmed wallet');
   assert.equal(kpi(report, 'Signals claimed where there are none').value, '0 of 88');
   assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 });

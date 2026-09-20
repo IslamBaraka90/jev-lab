@@ -81,5 +81,5 @@ answers, which costs another full run.
 
 ## Review threshold
 
-Opening every line the model scores at 30 percent or more means reading 233 lines and catching all
+Opening every line the model scores at 30 percent or more means reading 246 lines and catching all
 eleven problems. At 50 percent it is 96 lines and nine problems. At 80 percent, 20 lines and four.

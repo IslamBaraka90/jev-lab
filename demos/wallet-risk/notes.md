@@ -27,9 +27,14 @@ last thirty days, and the deposit it is offering.
 
 - **No high-risk money was accepted.** All eighteen were refused or held, and **the driver was named
   exactly right on all eighteen** — mixer, sanctions or gambling, each to the right wallet.
-- **No ordinary wallet was refused**, and none of the fourteen large decoys either. Size was never
-  mistaken for exposure: the market makers and bridge relayers went straight through.
+- **No ordinary wallet was refused**, and none of the fourteen large decoys either. But a held deposit
+  is a cost too: **70 of the 200 ordinary deposits were held for review, $6.3m of clean money**, and
+  eleven of the fourteen decoys are among them ($4.6m) — two of the five market makers, all five
+  bridge relayers and all four dormant wallets. Only three market makers went straight through.
 - **$5.6m of deposits accepted across 131 wallets, none of them high risk.**
+- **A five-line rule over the hop count and the counterparty mix gets 237 of 240 decisions right**
+  against the model's 169. The labels follow those two fields, so this file cannot show the model
+  beating a rules engine; the report says so.
 
 ## The interesting part: the scale is used in its middle
 

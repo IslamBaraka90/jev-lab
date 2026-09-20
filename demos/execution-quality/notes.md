@@ -9,7 +9,7 @@ the size — and **no cost**. Working out what the fill cost is part of what is 
 `scripts/generate/execution-quality.js`, seed 1153. Forty fills went in on the open after the market
 reopened past the level; thirty-five were sent two to five bars after the signal; thirty went in at the
 open or the close; twenty-five were large orders; and a hundred and thirty are where a fill should be,
-inside a basis point of the intended price. The planted costs separate cleanly: clean fills cost 0 to 9
+inside ten basis points of the intended price. The planted costs separate cleanly: clean fills cost 0 to 9
 basis points, spread fills 15 to 50, and gaps 42 to 630.
 
 ## What the recorded run found
@@ -23,8 +23,11 @@ basis points, spread fills 15 to 50, and gaps 42 to 630.
 - **Chase was caught 35 of 35, spread 29 of 30.** Those two are legible in the record: bars between
   signal and fill, and the session.
 - **Gaps were caught 19 of 40 and size 4 of 25.** Most of the misses went to "chase".
-- **The fix matched the cause only 37 times of 130.** The cause is the diagnosis and the fix is the
-  part a desk acts on, and they came apart here more than anywhere else in this set.
+- **The fix matched the cause only 37 times of 130** against a key of one fix per cause. That key is
+  strict: an earlier order also fixes a market-on-open gap, and a limit order also fixes spread. Counting
+  any fix that suits the cause it is 105 of 130, and the 25 misses are the size fills.
+- **By money, 23% of the slippage was filed under the right cause.** $2.6m of the $2.8m paid sits in
+  the 25 size fills.
 
 ## The size cause is not in the data, and that is my fault
 

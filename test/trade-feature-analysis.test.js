@@ -58,6 +58,7 @@ test('outcomes are revealed only through the report labels', async () => {
   const { results } = await runDemo(demo, { dataset, ask: answer });
   assert.ok(results.every((result) => !JSON.stringify(result.state).includes(planted.get(result.item.id).outcome)));
   const report = demo.report(results, { ...context, labels });
-  assert.equal(report.matrix.rows.length, 4);
+  assert.equal(report.setupOutcomes.length, 4);
+  assert.equal(report.matrix.rows.length, 2);
   assert.equal(report.matrix.rows.reduce((sum, row) => sum + row.cells.reduce((cellSum, cell) => cellSum + cell.count, 0), 0), 300);
 });

@@ -26,12 +26,14 @@ companies actually filed.
   half across the six briefs — the brief is doing work, which is the whole premise.
 - **All twenty-four readings of instruments with no statements said the data was not sufficient.** GLD,
   SPY, XLE and BTC-USD have prices and no revenue, margins or cash flow, and not one reading pretended
-  otherwise. That is the single most reassuring number in this run.
+  otherwise. It is less reassuring than it looks: 54 of the 72 readings that do have four years of
+  statements also said the data was not sufficient, so the question says no to nearly everything.
 - **Thirty-seven of ninety-six readings were shortlisted**, across fourteen different companies.
 - **Evidence was claimed at 2.7 of 6 on average** — modest, which fits a file with four years of
   statements and no analyst coverage in it.
-- **Just under seven in ten disqualifiers are supported by the numbers** (66 of 96). The rest are almost all "volatility"
-  against my own threshold of 25% annualised.
+- **Twenty-six of the fifty-six readings that name a disqualifier are supported by the numbers.** The
+  earlier figure of 66 of 96 counted the forty "none" readings as supported, which they cannot fail to
+  be. The unsupported ones are almost all "volatility" against my own threshold of 25% annualised.
 
 ## The caveat on that last number
 

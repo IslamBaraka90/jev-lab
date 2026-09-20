@@ -35,8 +35,8 @@ seventeen minutes.
 - **The queue was cut by 73%, from 300 alerts to 80, keeping all twelve worth working.** Every one of
   the four typologies was named correctly on all twelve.
 - **Nothing worth working was closed or left under watch.** All twelve are in the escalated eighty.
-- **Twenty-one of the thirty explained spikes were closed.** The nine that stayed are the weddings and
-  two property sales — the cases where the explanation is a pattern of small credits from family names
+- **Twenty-one of the thirty explained spikes were closed.** The nine that stayed are the six weddings and
+  three property sales — the cases where the explanation is a pattern of small credits from family names
   rather than a single credit with a solicitor's reference on it.
 - **A hundred and eighty-two alerts were left under watch**, neither worked nor closed. That lane is
   free today and it is where the model put most of its doubt; an operation would need a rule for what
@@ -47,6 +47,6 @@ seventeen minutes.
 
 ## The honest caveat
 
-The false-positive cost here is 68 everyday alerts escalated alongside the twelve. At 80 alerts against
+The false-positive cost here is 68 alerts escalated alongside the twelve: 63 everyday ones and 5 explained spikes. At 80 alerts against
 a stated capacity of fifty a week, this is a workable queue rather than a solved one, and the 73% cut is
 the number to quote — never on its own, always with the catch rate beside it.

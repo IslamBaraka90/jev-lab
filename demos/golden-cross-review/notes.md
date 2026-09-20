@@ -30,15 +30,18 @@ manufactured ones.
 | Average trade, kept against all | +0.10% against +0.21% |
 | Filtering on the quality score instead | +22.21% over 44 trades, +0.50% each |
 
-## The filter lost money, and the score did not
+## The filter lost money, and the score only looked better
 
 **The take-or-leave answer made things worse.** Taking all seventy-one crosses returned 14.77 per
 cent. Taking the forty-nine it kept returned 4.74. Per trade that is +0.10% against +0.21% — the
 judgement halved the edge, and there was not much edge to halve.
 
-**The quality score, on the same answers, beat both.** The forty-four crosses graded three or better
-on the nought-to-six scale averaged +0.50% a trade, five times the average of the ones it chose to
-take. The information was in the score all along; the binary decision threw it away.
+**The quality score, on the same answers, came out ahead of both — because of Bitcoin.** The
+forty-four crosses graded three or better on the nought-to-six scale averaged +0.50% a trade, against
++0.10% for the ones it chose to take. But the five BTC-USD crosses add up to +41.75 points in a book
+that totals +14.77. Without them every cross averages −0.41%, the score filter −0.50% and the kept
+trades −0.84%: the score filter does nothing. One trade varies by about 7.1 points, so the average of
+seventy-one is only known to within 0.84, and every difference in the table above is inside that.
 
 Three is the midpoint of the scale, chosen because it is the midpoint and for no other reason.
 Thresholds fitted to the outcomes look far better than this — the twenty crosses graded 3.5 or above

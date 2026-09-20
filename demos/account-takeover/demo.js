@@ -95,15 +95,23 @@ function report(results, context = {}) {
   const friction = round(challenged.reduce((sum, result) => sum + result.evaluation.frictionCost, 0));
   const actionRight = graded.filter((result) => result.evaluation.action === intended.get(result.item.id).action);
 
+  const hard = graded.filter((result) => intended.get(result.item.id).kind !== 'normal');
+  const hardRight = hard.filter((result) => actionRight.includes(result));
+  const overEscalated = takeovers.filter((result) => heavierThanPolicy(result, intended));
+
   return {
     note: `${graded.length} sessions graded. Catch rate is always shown with legitimate-customer friction.`,
-    findings: repeatedMistake(graded, intended),
-    kpis: headline(graded, takeovers, genuine, caught, challenged, friction, actionRight),
+    findings: [...hardSliceFindings(graded, hard, hardRight, overEscalated, intended), ...repeatedMistake(graded, intended)],
+    kpis: headline(graded, takeovers, genuine, caught, challenged, friction, actionRight, hard, hardRight, overEscalated),
+    baselines: baselines(graded, intended, actionRight),
+    metrics: metrics(graded, takeovers, caught, challenged, actionRight),
     distribution: signalDistribution(graded),
+    distributionTitle: 'Strongest signal named',
     matrix: signalMatrix(graded, intended),
     curve: thresholdCurve(graded, intended, context.frictionWeights),
     checks: shapeChecks(graded, intended),
     topItems: highestRisk(graded),
+    topItemsTitle: 'Highest takeover likelihood',
     decoys: decoyOutcomes(graded, intended),
     friction: { points: friction, challengedLegitimate: challenged.length, legitimateSessions: genuine.length },
   };
@@ -120,13 +128,77 @@ function interventionFriction(action, method, weights) {
   return weights.callBack;
 }
 
-function headline(graded, takeovers, genuine, caught, challenged, friction, actionRight) {
+function headline(graded, takeovers, genuine, caught, challenged, friction, actionRight, hard, hardRight, overEscalated) {
+  const plain = graded.length - hard.length;
   return [
+    { label: 'Action accuracy', value: share(actionRight.length, graded.length), context: `${actionRight.length} of ${graded.length} least-disruptive actions · ${plain} of the sessions are plain ones nobody would challenge` },
+    { label: 'Right action, hard sessions', value: share(hardRight.length, hard.length), context: `${hardRight.length} of ${hard.length} takeovers and innocent lookalikes`, tone: hardRight.length === hard.length ? 'good' : hardRight.length * 2 >= hard.length ? 'warn' : 'bad' },
     { label: 'Takeovers caught', value: share(caught.length, takeovers.length), context: `${caught.length} of ${takeovers.length} · ${friction} legitimate friction points`, tone: caught.length === takeovers.length ? 'good' : 'warn' },
-    { label: 'Genuine sessions challenged', value: share(challenged.length, genuine.length), context: `${challenged.length} of ${genuine.length} · ${friction} friction points`, tone: challenged.length ? 'warn' : 'good' },
-    { label: 'Action accuracy', value: share(actionRight.length, graded.length), context: `${actionRight.length} of ${graded.length} least-disruptive actions` },
-    { label: 'Friction cost', value: `${friction} points`, context: 'Weighted only across legitimate sessions challenged', tone: friction ? 'warn' : 'good' },
+    { label: 'Genuine sessions challenged', value: share(challenged.length, genuine.length), context: `${challenged.length} of ${genuine.length}`, tone: challenged.length ? 'warn' : 'good' },
+    { label: 'Takeovers over-escalated', value: `${overEscalated.length} of ${takeovers.length}`, context: 'a heavier control than the policy asks for', tone: overEscalated.length ? 'warn' : 'good' },
   ];
+}
+
+/** True when the chosen control sits higher on the ladder than the least-disruptive one. */
+function heavierThanPolicy(result, intended) {
+  return ACTIONS.indexOf(result.evaluation.action) > ACTIONS.indexOf(intended.get(result.item.id).action);
+}
+
+const SENSITIVE_EVENTS = ['PASSWORD_RESET', 'CHANGE_EMAIL', 'CHANGE_PHONE', 'RAISE_LIMIT', 'ADD_BENEFICIARY', 'DEVICE_ENROLLED', 'SESSION_CONTEXT_CHANGE'];
+
+// The rule: block the session on any credential, limit, device or payee event; verify on a new device; otherwise allow.
+function ruleAction(item) {
+  if (item.timeline.some((event) => SENSITIVE_EVENTS.includes(event.type))) return 'BLOCK_SESSION';
+  return item.session.device.isNew ? 'STEP_UP' : 'ALLOW';
+}
+
+function baselines(graded, intended, actionRight) {
+  if (!graded.length) return undefined;
+  const ruleRight = graded.filter((result) => ruleAction(result.item) === intended.get(result.item.id).action);
+  const allowRight = graded.filter((result) => intended.get(result.item.id).action === 'ALLOW');
+  return [
+    { label: 'Jev', detail: 'least-disruptive action, all sessions', value: actionRight.length / graded.length, model: true },
+    { label: 'Rule: block on a sensitive event, verify a new device', detail: 'three lines over the timeline and the device flag', value: ruleRight.length / graded.length },
+    { label: 'Always allow', detail: 'the commonest action', value: allowRight.length / graded.length },
+  ];
+}
+
+function metrics(graded, takeovers, caught, challenged, actionRight) {
+  const stopped = caught.length + challenged.length;
+  const methodWithoutStepUp = graded.filter((result) => result.evaluation.action !== 'STEP_UP' && result.evaluation.stepUpMethod !== 'NOT_NEEDED');
+  return {
+    headline: { label: 'Action accuracy', value: graded.length ? actionRight.length / graded.length : 0, n: graded.length },
+    accuracy: graded.length ? actionRight.length / graded.length : null,
+    recall: takeovers.length ? caught.length / takeovers.length : null,
+    precision: stopped ? caught.length / stopped : null,
+    contradictionRate: graded.length ? methodWithoutStepUp.length / graded.length : null,
+  };
+}
+
+function hardSliceFindings(graded, hard, hardRight, overEscalated, intended) {
+  const lines = [];
+  if (hard.length && hardRight.length < hard.length) {
+    lines.push(`On the ${hard.length} sessions that are not plain, the least-disruptive action was chosen ${hardRight.length} times (${share(hardRight.length, hard.length)}). The overall accuracy is carried by the ${graded.length - hard.length} plain sessions.`);
+  }
+  if (overEscalated.length) lines.push(`${overEscalated.length} takeovers were given a heavier control than the policy asks for (${overEscalated.map((result) => result.item.id).join(', ')}). Friction is counted only on genuine customers, so that costs nothing in this report; at a bank each one is a call-centre case.`);
+
+  const heavyDecoys = graded.filter((result) => !intended.get(result.item.id).takeover && heavierThanPolicy(result, intended));
+  const byShape = new Map();
+  for (const result of heavyDecoys) {
+    const shape = readable(intended.get(result.item.id).shape);
+    byShape.set(shape, (byShape.get(shape) ?? 0) + 1);
+  }
+  if (heavyDecoys.length) lines.push(`${heavyDecoys.length} genuine customers got a heavier control than the policy asks for: ${[...byShape].map(([shape, count]) => `${count} × ${shape}`).join(', ')}.`);
+
+  const ruleRight = graded.filter((result) => ruleAction(result.item) === intended.get(result.item.id).action);
+  const modelRight = graded.filter((result) => result.evaluation.action === intended.get(result.item.id).action);
+  if (hard.length && ruleRight.length >= modelRight.length && modelRight.length < graded.length) {
+    lines.push(`A three-line rule over the timeline picks the policy action on ${ruleRight.length} of ${graded.length} sessions, ${ruleRight.length === modelRight.length ? 'the same as' : 'more than'} the model’s ${modelRight.length}.`);
+  }
+
+  const methodWithoutStepUp = graded.filter((result) => result.evaluation.action !== 'STEP_UP' && result.evaluation.stepUpMethod !== 'NOT_NEEDED');
+  if (methodWithoutStepUp.length >= 10) lines.push(`A verification method was named on ${methodWithoutStepUp.length} sessions where the action was not a step-up. The method is answered as a hypothetical and only means something beside a step-up.`);
+  return lines;
 }
 
 function signalDistribution(graded) {
@@ -136,6 +208,8 @@ function signalDistribution(graded) {
 function signalMatrix(graded, intended) {
   return {
     title: 'Planted strongest signal against the one named',
+    rowLabel: 'the signal that was planted',
+    columnLabel: 'the signal the model named',
     columns: SIGNALS.map(readable),
     rows: SIGNALS.map((actual) => ({ label: readable(actual), cells: SIGNALS.map((predicted) => ({ predicted, count: graded.filter((result) => intended.get(result.item.id).strongestSignal === actual && result.evaluation.strongestSignal === predicted).length, diagonal: actual === predicted })) })),
   };
@@ -150,7 +224,7 @@ function thresholdCurve(graded, intended, weights) {
     const frictionCost = round(legitimate.reduce((sum, result) => sum + interventionFriction('STEP_UP', result.evaluation.stepUpMethod, weights), 0));
     return { threshold: score / 6, reviewed: frictionCost, caught, rate: takeoverCount ? caught / takeoverCount : null, challenged: challenged.length, frictionCost };
   });
-  return { title: 'Likelihood threshold: catches beside friction', xLabel: 'Legitimate friction points', yLabel: 'Takeovers caught', rateLabel: 'Takeover catch rate', of: takeoverCount, points };
+  return { title: 'Likelihood threshold: catches beside friction', xLabel: 'Legitimate friction points', yLabel: 'Takeovers caught', rateLabel: 'Takeover catch rate', of: takeoverCount, points, thresholdFormat: 'level', levels: 6, defaultIndex: 3 };
 }
 
 function shapeChecks(graded, intended) {
@@ -166,7 +240,7 @@ function decoyOutcomes(graded, intended) {
 }
 
 function highestRisk(graded) {
-  return [...graded].sort((left, right) => right.evaluation.likelihood - left.evaluation.likelihood).slice(0, 10).map((result) => ({ id: result.item.id, label: `${result.item.account.customerName} · ${readable(result.evaluation.strongestSignal)}`, value: `${result.evaluation.likelihood.toFixed(1)}/6 · ${readable(result.evaluation.action)} · ${result.evaluation.frictionCost} points` }));
+  return [...graded].sort((left, right) => right.evaluation.likelihood - left.evaluation.likelihood).slice(0, 10).map((result) => ({ id: result.item.id, label: `${result.item.id} · ${result.item.account.customerName} · ${readable(result.evaluation.strongestSignal)}`, value: `${result.evaluation.likelihood.toFixed(1)} of 6 · ${readable(result.evaluation.action)}` }));
 }
 
 function repeatedMistake(graded, intended) {
@@ -182,6 +256,77 @@ function repeatedMistake(graded, intended) {
   return [`${count} of ${wrong.length} signal errors repeat one swap: ${readable(pair.split('→')[0])} called ${readable(pair.split('→')[1])}.`];
 }
 
+const levelName = (value) => questions.takeover_likelihood.criteria[Math.max(0, Math.min(6, Math.round(value)))];
+
+/** What a planted session was, in a sentence. Plain sessions carry no note. */
+function plantedNote(label) {
+  if (label.kind === 'takeover') return `Planted as a takeover: ${readable(label.shape)}.`;
+  if (label.kind === 'innocent-lookalike') return `Planted as an innocent lookalike: ${readable(label.shape)}.`;
+  return undefined;
+}
+
+// Right means the least-disruptive action the policy gives, which is what "Action accuracy" counts.
+const grade = {
+  labelId: (label) => label.sessionId,
+  judge: (result, label) => {
+    if (!label) return null;
+    return {
+      agree: result.evaluation.action === label.action,
+      expected: label.action,
+      got: result.evaluation.action,
+      note: plantedNote(label),
+      confidence: result.answers.action.confidence,
+    };
+  },
+};
+
+function verdict(result) {
+  const { answers, evaluation } = result;
+  const steppedUp = evaluation.action === 'STEP_UP';
+  const likelihood = evaluation.likelihood;
+  const facts = [
+    { label: 'Takeover likelihood', value: `${levelName(likelihood)} · ${likelihood.toFixed(1)} of 6`, tone: likelihood >= 3.5 ? 'bad' : likelihood >= 2.5 ? 'warn' : 'good' },
+    { label: 'Strongest signal', value: readable(evaluation.strongestSignal) },
+  ];
+  if (steppedUp) facts.push({ label: 'Verification method', value: readable(evaluation.stepUpMethod) });
+  if (evaluation.challenged) {
+    facts.push({ label: 'Friction if the customer is genuine', value: `${evaluation.frictionCost} ${evaluation.frictionCost === 1 ? 'point' : 'points'}`, tone: evaluation.frictionCost >= 8 ? 'warn' : undefined });
+  }
+  facts.push({ label: 'Confidence in the action', value: `${Math.round(answers.action.confidence * 100)}%` });
+
+  return {
+    eyebrow: 'What the bank does with this session',
+    headline: `${readable(evaluation.action).replace(/^./, (letter) => letter.toUpperCase())}${steppedUp ? ` · ${readable(evaluation.stepUpMethod)}` : ''}`,
+    facts,
+  };
+}
+
+const present = {
+  number: 122,
+  problem: {
+    headline: 'A stolen session and a customer on a new phone look alike for the first few seconds. The bank has to pick the lightest check that still stops the theft.',
+    stat: '260',
+    statLabel: 'sessions, 14 of them takeovers',
+  },
+  hero: {
+    item: 'SES-0083',
+    caption: 'An unknown device logs in, changes the phone number by SMS recovery, raises the limit from 5,000 to 30,000, adds a payee and sends $25,369.98, all in nine minutes. 5.7 of 6: freeze the account.',
+  },
+  answers: {
+    caption: 'The likelihood says how sure, the signal says why, and the action is the control the bank applies.',
+    reveal: ['takeover_likelihood', 'strongest_signal', 'action'],
+  },
+  miss: {
+    item: 'SES-0026',
+    caption: 'A $15,448.39 property deposit to a new payee, which the customer had told the bank was coming. The policy asks for a call-back, 3 friction points; the model ended the session, 8.',
+  },
+  proof: {
+    kpis: ['Takeovers caught', 'Right action, hard sessions', 'Takeovers over-escalated'],
+    chart: 'baselines',
+    closing: '14 of 14 takeovers caught, and the least-disruptive action on 12 of the 34 sessions that were not plain.',
+  },
+};
+
 export default {
   id: 'account-takeover',
   title: 'Account takeover',
@@ -190,6 +335,7 @@ export default {
   tags: ['fraud', 'accounts', 'sessions', 'authentication'],
   dataClass: 'synthetic',
   readMinutes: 5,
+  caveat: 'The 226 plain sessions are three-event logins on a known device and each attack follows one fixed template, so the likelihood score separates the classes perfectly and a three-line rule matches the model’s action accuracy; a harder dataset is planned.',
   view: 'timeline',
   itemLabel: (item) => `${item.id} · ${item.account.customerName} · ${item.session.network.country}`,
   data: () => import('./data.json'),
@@ -199,6 +345,9 @@ export default {
   questions,
   evaluate,
   report,
+  grade,
+  verdict,
+  present,
   explain: {
     data: 'scripts/generate/account-takeover.js#demo:data',
     state: 'demos/account-takeover/demo.js#demo:state',

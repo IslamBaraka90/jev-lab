@@ -97,19 +97,69 @@ function report(results, context = {}) {
   const graded = results.filter((result) => byItem.has(result.item.id));
   const farmed = graded.filter((result) => byItem.get(result.item.id).clusterId);
   const real = graded.filter((result) => !byItem.get(result.item.id).clusterId);
+  const right = graded.filter((result) => result.evaluation.excluded === isFarmed(byItem.get(result.item.id)));
+  const rows = baselines(graded, byItem, right);
 
   return {
     note: `A hundred and fifty wallets. ${farmed.length} of them are eight people, twelve share nothing but an exchange, and six did the same things because they read the same guide. ${context.note ?? ''}`,
-    findings: findings(graded, byItem, real),
-    kpis: kpis({ graded, farmed, real, byItem, currency: context.currency }),
+    findings: findings(graded, byItem, real, rows),
+    kpis: kpis({ graded, farmed, real, right, byItem, currency: context.currency }),
+    baselines: rows,
+    metrics: metrics(graded, farmed, real, right, byItem),
     distribution: distribution(results),
+    distributionTitle: 'Linking signal named, all 150 wallets',
     matrix: confusion(graded, byItem),
     curve: coverage(graded, byItem, farmed),
     checks: checks(graded, byItem, labels),
     topItems: topItems(results, byItem, context.currency),
+    topItemsTitle: 'Largest allocations withheld',
   };
 }
 // #endregion
+
+const isFarmed = (label) => Boolean(label.clusterId);
+const EXCHANGE_HUB = '0xDEMO_EXCHANGE_HOTWALLET';
+const RULE_BAR = 5;
+
+/** The five crowd counts for one wallet, with the labelled exchange hot wallet counted as nobody's link. */
+function crowdCounts(item) {
+  return {
+    FUNDING_SOURCE: item.fundingSource === EXCHANGE_HUB ? 1 : item.walletsWithTheSameFundingSource,
+    WITHDRAWAL_ENDPOINT: item.withdrawalEndpoint === EXCHANGE_HUB ? 1 : item.walletsWithTheSameWithdrawalEndpoint,
+    ACTION_SEQUENCE: item.walletsWithTheSameActionSequence,
+    CREATION_TIMING: item.walletsWithinTenMinutesOfCreation,
+    GAS_PATTERN: item.walletsWithTheSameGasPrice,
+  };
+}
+
+// The rule: exclude a wallet that shares any one trait with five or more wallets, ignoring the
+// exchange hot wallet the state itself labels.
+const ruleExcludes = (item) => Math.max(...Object.values(crowdCounts(item))) >= RULE_BAR;
+
+function baselines(graded, byItem, right) {
+  if (!graded.length) return [];
+  const ruleRight = graded.filter((result) => ruleExcludes(result.item) === isFarmed(byItem.get(result.item.id)));
+  const real = graded.filter((result) => !isFarmed(byItem.get(result.item.id)));
+  return [
+    { label: 'Jev', detail: 'farmed wallets excluded, real users allocated', value: right.length / graded.length, count: right.length, model: true },
+    { label: 'Rule: any trait shared with five or more wallets', detail: 'three lines of code over the five counts in the state, ignoring the labelled exchange', value: ruleRight.length / graded.length, count: ruleRight.length },
+    { label: 'Exclude nobody', detail: 'the commoner right answer in this file', value: real.length / graded.length, count: real.length },
+  ];
+}
+
+function metrics(graded, farmed, real, right, byItem) {
+  const excluded = graded.filter((result) => result.evaluation.excluded);
+  const signalRight = farmed.filter((result) => result.evaluation.signal === byItem.get(result.item.id).linkingSignal);
+  const rate = (part, whole) => (whole ? part / whole : null);
+  return {
+    headline: { label: 'Allocation decision right', value: rate(right.length, graded.length) ?? 0, n: graded.length },
+    accuracy: rate(right.length, graded.length),
+    precision: rate(excluded.filter((result) => isFarmed(byItem.get(result.item.id))).length, excluded.length),
+    recall: rate(farmed.filter((result) => result.evaluation.excluded).length, farmed.length),
+    signalNamedRate: rate(signalRight.length, farmed.length),
+    falseSignalRate: rate(real.filter((result) => result.evaluation.signal !== 'NONE').length, real.length),
+  };
+}
 
 /** How much of each planted cluster was excluded, cluster by cluster. */
 function clusters(graded, byItem) {
@@ -126,21 +176,22 @@ function clusters(graded, byItem) {
   return [...groups.values()].sort((left, right) => left.id.localeCompare(right.id));
 }
 
-function kpis({ graded, farmed, real, byItem, currency }) {
+function kpis({ graded, farmed, real, right, byItem, currency }) {
   const recovered = clusters(graded, byItem);
   const whole = recovered.filter((entry) => entry.found === entry.total);
   const excludedFarmed = farmed.filter((result) => result.evaluation.excluded);
   const excludedReal = real.filter((result) => result.evaluation.excluded);
   const signalRight = farmed.filter((result) => result.evaluation.signal === byItem.get(result.item.id).linkingSignal);
   const claimed = real.filter((result) => result.evaluation.signal !== 'NONE');
+  const nothingExcluded = graded.length > 0 && !graded.some((result) => result.evaluation.excluded);
+  const paidToFarmers = farmed.filter((result) => !result.evaluation.excluded);
 
   return [
+    { label: 'Allocation decision right', value: `${right.length} of ${graded.length}`, context: nothingExcluded ? 'no wallet was excluded at all, so this is exactly what excluding nobody scores' : 'farmed wallets excluded and real users allocated', tone: right.length >= graded.length * 0.9 ? 'good' : 'warn' },
     { label: 'Clusters excluded whole', value: `${whole.length} of ${recovered.length}`, context: recovered.map((entry) => `${entry.id}: ${entry.found}/${entry.total}`).join(' · '), tone: whole.length === recovered.length ? 'good' : 'warn' },
-    { label: 'Farmed wallets excluded', value: `${excludedFarmed.length} of ${farmed.length}`, context: `${money(allocation(excludedFarmed), currency)} of allocation saved` },
-    { label: 'Real users excluded', value: `${excludedReal.length} of ${real.length}`, context: `${money(allocation(excludedReal), currency)} taken from people who earned it`, tone: excludedReal.length ? 'warn' : 'good' },
-    { label: 'Linking signal named', value: `${signalRight.length} of ${farmed.length}`, context: 'the trait the farmer was actually careless about' },
-    { label: 'Signals claimed where there are none', value: `${claimed.length} of ${real.length}`, context: 'wallets with no cluster that were still given a link', tone: claimed.length > real.length / 4 ? 'warn' : 'good' },
-    { label: 'Allocation paid out', value: money(allocation(graded.filter((result) => !result.evaluation.excluded)), currency), context: `${graded.filter((result) => !result.evaluation.excluded).length} wallets, ${farmed.length - excludedFarmed.length} of them farmed` },
+    { label: 'Farmed wallets excluded', value: `${excludedFarmed.length} of ${farmed.length}`, context: `${money(allocation(excludedFarmed), currency)} of allocation saved, ${money(allocation(paidToFarmers), currency)} paid to farmers`, tone: excludedFarmed.length === farmed.length ? 'good' : 'warn' },
+    { label: 'Real users excluded', value: `${excludedReal.length} of ${real.length}`, context: `${money(allocation(excludedReal), currency)} taken from people who earned it${nothingExcluded ? '; nobody was excluded, so this says nothing about care' : ''}`, tone: excludedReal.length ? 'warn' : nothingExcluded ? undefined : 'good' },
+    { label: 'Signals claimed where there are none', value: `${claimed.length} of ${real.length}`, context: `wallets with no cluster that were still given a link; on the farmed wallets the planted signal was named ${signalRight.length} of ${farmed.length} times, which the largest count in the state also gives`, tone: claimed.length > real.length / 4 ? 'warn' : 'good' },
   ];
 }
 
@@ -172,6 +223,8 @@ function distribution(results) {
 function confusion(graded, byItem) {
   return {
     title: 'Linking signal named against the one the farmer left',
+    rowLabel: 'the trait the farmer left (none for a real user)',
+    columnLabel: 'the signal the model named',
     columns: SIGNALS.map(sentence),
     rows: SIGNALS.map((actual) => ({
       label: sentence(actual),
@@ -190,11 +243,27 @@ function coverage(graded, byItem, farmed) {
     const right = cut.filter((result) => byItem.get(result.item.id).clusterId);
     return { threshold: Number((bar / 6).toFixed(3)), reviewed: cut.length, caught: right.length, rate: cut.length ? Number((right.length / cut.length).toFixed(3)) : null };
   });
-  return { title: 'Where the bar goes: allocation saved against users turned away', xLabel: 'Wallets excluded at this likelihood or above', yLabel: 'Farmed wallets among them', rateLabel: 'Share of the excluded that are farmed', of: farmed.length, points };
+  return { title: 'Where the bar goes: allocation saved against users turned away', xLabel: 'Wallets excluded at this likelihood or above', yLabel: 'Farmed wallets among them', rateLabel: 'Share of the excluded that are farmed', of: farmed.length, thresholdFormat: 'level', levels: 6, defaultIndex: 4, points };
 }
 
-function findings(graded, byItem, real) {
+function findings(graded, byItem, real, rows = []) {
   const lines = [];
+  const farmed = graded.filter((result) => isFarmed(byItem.get(result.item.id)));
+  if (graded.length && !graded.some((result) => result.evaluation.excluded)) {
+    const answers = graded.map((result) => result.answers?.exclude_from_allocation?.noul).filter(Number.isFinite);
+    const range = answers.length ? ` The exclusion answer ran from ${Math.round(Math.min(...answers) * 100)}% to ${Math.round(Math.max(...answers) * 100)}% and never crossed 50%.` : '';
+    lines.push(`Nothing was excluded: all ${graded.length} wallets were allocated and ${money(allocation(farmed))} went to the ${new Set(farmed.map((result) => byItem.get(result.item.id).clusterId)).size} farmers.${range} With one answer for every wallet, precision and recall say nothing here.`);
+  }
+
+  const [model, rule] = rows;
+  if (model && rule && rule.count > model.count) {
+    const ruleReal = real.filter((result) => ruleExcludes(result.item));
+    lines.push(`A three-line rule over the five counts in the state gets ${rule.count} of ${graded.length} decisions right; the model gets ${model.count}. The rule excludes every farmed wallet and ${ruleReal.length} real ${ruleReal.length === 1 ? 'user' : 'users'}, the ones who followed the same guide, which is where a model could still earn its place.`);
+  }
+
+  const cashOuts = real.filter((result) => result.item.withdrawalEndpoint === EXCHANGE_HUB);
+  const cashOutsLinked = cashOuts.filter((result) => result.evaluation.signal === 'WITHDRAWAL_ENDPOINT');
+  if (cashOutsLinked.length >= 2) lines.push(`${cashOuts.length} real users withdraw to the exchange hot wallet, and ${cashOutsLinked.length} of them were given "withdrawal endpoint" as a linking signal. Cashing out to an exchange is not a cluster.`);
   const excludedReal = real.filter((result) => result.evaluation.excluded);
   if (excludedReal.length) {
     const kinds = [...new Set(excludedReal.map((result) => byItem.get(result.item.id).kind))];
@@ -222,6 +291,52 @@ function topItems(results, byItem, currency) {
     }));
 }
 
+const LIKELIHOOD_WORDS = ['None', 'Very low', 'Low', 'Moderate', 'High', 'Very high', 'Certain'];
+const COUNT_FIELD = {
+  FUNDING_SOURCE: 'walletsWithTheSameFundingSource',
+  WITHDRAWAL_ENDPOINT: 'walletsWithTheSameWithdrawalEndpoint',
+  ACTION_SEQUENCE: 'walletsWithTheSameActionSequence',
+  CREATION_TIMING: 'walletsWithinTenMinutesOfCreation',
+  GAS_PATTERN: 'walletsWithTheSameGasPrice',
+};
+const asPercent = (value) => `${Math.round(value * 100)}%`;
+const yesNo = (probability) => `${probability >= 0.5 ? 'Yes' : 'No'} · ${asPercent(Math.max(probability, 1 - probability))}`;
+
+const PLANTED_NOTE = {
+  farmed: (label) => `Planted in cluster ${label.clusterId}: one operator, linked by ${readable(label.linkingSignal)}.`,
+  'same exchange, nothing else': () => 'Planted decoy: funded from an exchange hot wallet and nothing else in common.',
+  'read the same guide': () => 'Planted decoy: did the same five things in the same order because a guide said to.',
+};
+
+/** Right means a farmed wallet was excluded and a real user was not. */
+function judge(result, label) {
+  if (!label) return null;
+  const probability = result.answers.exclude_from_allocation.noul;
+  return {
+    agree: result.evaluation.excluded === isFarmed(label),
+    expected: isFarmed(label) ? 'exclude' : 'allocate',
+    got: result.evaluation.excluded ? 'exclude' : 'allocate',
+    note: PLANTED_NOTE[label.kind]?.(label),
+    confidence: Math.max(probability, 1 - probability),
+  };
+}
+
+function verdict(result, context = {}) {
+  const { item, answers, evaluation } = result;
+  const shared = item[COUNT_FIELD[evaluation.signal]] ?? 0;
+  const word = LIKELIHOOD_WORDS[Math.round(evaluation.likelihood)];
+  return {
+    eyebrow: 'What happens to this allocation',
+    headline: `${evaluation.excluded ? 'Exclude' : 'Allocate'} · ${money(item.allocation, context.currency)}`,
+    facts: [
+      { label: 'Exclude from the allocation', value: yesNo(answers.exclude_from_allocation.noul), tone: evaluation.excluded ? 'bad' : undefined },
+      { label: 'Sybil likelihood', value: `${word} · ${evaluation.likelihood.toFixed(1)} of 6`, tone: evaluation.likelihood >= 4 ? 'bad' : evaluation.likelihood >= 3 ? 'warn' : 'good' },
+      { label: 'Linking signal', value: evaluation.signal === 'NONE' ? 'None' : `${sentence(evaluation.signal)}${shared > 1 ? ` · shared with ${shared} wallets` : ''}`, tone: evaluation.signal === 'NONE' ? 'good' : 'warn' },
+      { label: 'An independent user', value: yesNo(answers.independent_user.noul), tone: evaluation.independent ? 'good' : 'warn' },
+    ],
+  };
+}
+
 export default {
   id: 'sybil-clusters',
   title: 'Sybil clusters',
@@ -231,6 +346,51 @@ export default {
   dataClass: 'synthetic',
   readMinutes: 4,
   view: 'queue',
+  caveat: 'In this recorded run the model excluded no wallet at all: the exclusion answer never rose above 46%, so every exclusion figure below is the score of doing nothing. The question wording and the state lean toward "no"; the demo needs a revised state and a new recording before its numbers mean anything.',
+  stage: {
+    hide: ['address'],
+    labels: {
+      createdAt: 'Wallet created',
+      fundedWith: 'First funding (USD)',
+      actionSequence: 'Actions, in order',
+      gasPriceGwei: 'Mean gas price (gwei)',
+      gasPriceStdev: 'Gas price spread (gwei)',
+      allocation: 'Allocation at stake',
+      walletsWithTheSameFundingSource: 'Wallets with the same funding source',
+      walletsWithTheSameWithdrawalEndpoint: 'Wallets with the same withdrawal endpoint',
+      walletsWithTheSameActionSequence: 'Wallets with the same action sequence',
+      walletsWithinTenMinutesOfCreation: 'Wallets created within ten minutes',
+      walletsWithTheSameGasPrice: 'Wallets with the same gas price',
+    },
+    highlight: ['walletsWithTheSameFundingSource', 'walletsWithTheSameActionSequence', 'walletsWithinTenMinutesOfCreation', 'walletsWithTheSameGasPrice'],
+  },
+  grade: { labelId: (label) => label.wallet, judge },
+  verdict,
+  present: {
+    number: 135,
+    problem: {
+      headline: 'An allocation is about to go out. Some of the wallets in the queue are one person many times over.',
+      stat: '150',
+      statLabel: 'wallets queueing for $186,373',
+    },
+    hero: {
+      item: 'SW-001',
+      caption: 'Funded from an exchange hot wallet that 36 wallets share, and nothing else in common with anyone. The model still names the funding source as a link, but allocates the $1,133, which is right: the same exchange is not the same person.',
+    },
+    answers: {
+      caption: 'A likelihood, the one trait that links the wallet to others, and whether to withhold the allocation.',
+      reveal: ['sybil_likelihood', 'linking_signal', 'exclude_from_allocation'],
+    },
+    miss: {
+      item: 'SW-004',
+      caption: 'One of nine wallets paid for by a single funder. The model names the funding source at 96% and scores it 4.1 of 6, then allocates $949 anyway. The exclusion answer was 41%.',
+    },
+    proof: {
+      kpis: ['Allocation decision right', 'Farmed wallets excluded', 'Signals claimed where there are none'],
+      chart: 'baselines',
+      closing: '0 of 62 farmed wallets excluded: $69,026 went to eight farmers, and a three-line rule would have kept all of it.',
+    },
+  },
   itemLabel: (item) => `${item.id} · ${money(item.allocation)} at stake · ${item.actionCount} actions`,
   data: () => import('./data.json'),
   fixtures: () => import('./fixtures.json'),

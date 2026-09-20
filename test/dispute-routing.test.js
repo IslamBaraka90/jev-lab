@@ -63,14 +63,14 @@ test('the answers build the call the backend would receive', () => {
   const entry = dataset.items.find((candidate) => candidate.shippingPaid > 0 && candidate.orderTotal < 300);
   const refund = demo.evaluate(answerFor({ action: 'REFUND_NOW', band: 'FULL_PLUS_SHIPPING', reason: 'DAMAGE' }), entry, context);
 
-  assert.equal(refund.call.endpoint, 'POST /v1/disputes/{id}/refund');
+  assert.equal(refund.call.endpoint, `POST /v1/disputes/${entry.id}/refund`, 'the path carries the dispute, not a placeholder');
   assert.equal(refund.call.body.amount, Number((entry.orderTotal + entry.shippingPaid).toFixed(2)));
   assert.equal(refund.call.body.currency, 'GBP');
   assert.equal(refund.call.body.reason_code, 'DAMAGE');
   assert.equal(refund.call.body.dispute_id, entry.id);
 
   const denial = demo.evaluate(answerFor({ action: 'DENY', band: 'NONE', reason: 'NO_FAULT_FOUND', allows: false }), entry, context);
-  assert.equal(denial.call.endpoint, 'POST /v1/disputes/{id}/decline');
+  assert.equal(denial.call.endpoint, `POST /v1/disputes/${entry.id}/decline`);
   assert.equal(denial.call.body.notify_customer, true);
   assert.equal(denial.amount, 0, 'a denial never carries money');
   assert.equal('amount' in denial.call.body, false);
@@ -92,7 +92,7 @@ test('a perfect run agrees with the policy on every call', async () => {
   assert.equal(kpi(report, 'Action agrees with policy').value, '100%');
   assert.equal(kpi(report, 'Whole call correct').value, '100%');
   assert.match(kpi(report, 'Refunded').context, /none against policy/);
-  assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0, 0], 'including the refund calls that carry no money');
+  assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0, 0, 0], 'including the refund calls that carry no money or contradict the policy answer');
   assert.deepEqual(report.findings, []);
 });
 

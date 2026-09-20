@@ -7,19 +7,23 @@ in the set.
 There are no labels. The comparison is the three shipped strategies' own results on these same bars,
 run twice.
 
-## The gate cost 78 points
+## The gate cost 79 points
 
 | | |
 |---|---|
-| Strategies always on | **+95.25%** over 118 trades |
-| Strategies gated by the weekly call | **+16.74%** |
-| What the gate was worth | **−78.51%** |
-| Trades the gate refused | 104 of 118, worth +69.19% between them |
+| Strategies always on | **+82.08%** over 75 judged trades |
+| Strategies gated by the previous week's call | **+2.93%** |
+| What the gate was worth | **−79.15%** |
+| Trades the gate refused | 66 of 75, worth +72.50% between them |
 | Weeks it said stay out | 52 of 312 |
 
 Both runs use the same signals, the same bars and the same tenth of a per cent per trade. The only
-difference is whether the week's answer named that strategy's family, and the size answer scaling
-what got through. A test asserts the curves are identical when the gate allows everything.
+difference is whether the answer for the week before the entry named that strategy's family, and the
+size answer scaling what got through. An earlier version gated each trade by the call for the week it
+was entered in, which is made from bars to that week's last session: 59 of 76 trades were decided by
+an answer that had seen one to four sessions past the entry, and the gated figure read +16.74%. The
+43 trades entered before any week had been judged are now in neither run; they used to count as
+refused. A test asserts the curves are identical when the gate allows everything.
 
 ## Why, and it is not simply "the calls were wrong"
 
@@ -27,17 +31,17 @@ Break it down by strategy and the mechanism is plain:
 
 | Strategy | Always on | Gated | Trades allowed |
 |---|---|---|---|
-| Twenty-day range break | +62.84% | **0.00%** | 0 of 89 |
-| Pullback to the fifty | +28.92% | +13.25% | 11 of 26 |
-| Fifty over two hundred | +3.49% | +3.49% | 3 of 3 |
+| Twenty-day range break | +49.69% | **0.00%** | 0 of 55 |
+| Pullback to the fifty | +28.90% | +1.97% | 8 of 17 |
+| Fifty over two hundred | +3.49% | +0.96% | 1 of 3 |
 
-**The range break is 75 per cent of the trades in this book, and `BREAKOUT` was the answer in two
+**The range break is 73 per cent of the trades in this book, and `BREAKOUT` was the answer in two
 weeks out of three hundred and twelve.** The strategy that does three quarters of the trading was
 switched off for the entire period by an answer the model almost never gives.
 
 That is as much a fact about the book as about the gate. A gate that assigns one strategy to each
 family only works if the families are roughly balanced in the book, and this one is not. The report
-puts that concentration on the page as its own figure, because without it the −78.51% looks like a
+puts that concentration on the page as its own figure, because without it the −79.15% looks like a
 verdict on the regime calls when it is mostly a verdict on the pairing.
 
 It is worth being clear about what was *not* done here: the obvious way to improve this number is to
@@ -50,16 +54,16 @@ stands as it was written.
 
 - **The regimes are distributed sensibly**: 90 trend up, 67 trend down, 69 range, 66 high volatility,
   20 event driven. Nothing is stuck.
-- **The demo's own arithmetic agrees 60 times in 312.** That is a low number and the page says it is
+- **The demo's own arithmetic agrees 122 times in 312.** That is a low number and the page says it is
   a disagreement rather than an error: naming a regime from thirteen weeks of drift, spread and a gap
   count is crude, and neither reading is authoritative. The cross-check is there so a viewer can see
   both and judge, not so one can mark the other.
-- **It never raised size into a volatile week.** Zero of the thirty-five weeks the arithmetic calls
+- **It never raised size into a volatile week.** Zero of the seventy weeks the arithmetic calls
   high volatility got an increased size. The risk answer was half in 168 weeks and normal in 139.
 - **Eighty weeks were called a turning point, and 72 of those were also called unclear.** The two
   answers move together, which is what you would hope for.
-- **It refused 27 of the 32 trades that made over three per cent, and let through 1 of the 23 that
-  lost over three.** With 104 of 118 trades refused, both of those follow from refusing nearly
+- **It refused 22 of the 24 trades that made over three per cent, and let through 1 of the 16 that
+  lost over three.** With 66 of 75 trades refused, both of those follow from refusing nearly
   everything rather than from picking well.
 
 ## The cost

@@ -43,7 +43,7 @@ and margin both improved, the chief executive said conditions had deteriorated, 
 was lower than a year ago were read as telling one consistent story. That is the hardest thing on the
 page and the most useful, because it is the pattern a reader is employed to notice.
 
-**Every insider sale was called significant.** Three of the five were meant to be — over half a
+**Four of the five insider sales were called significant.** Three of the five were meant to be — over half a
 holding, disposed of days before the announcement, outside any plan. The other two were pre-arranged
 sales of under a tenth of a holding. Four of the five got a yes.
 

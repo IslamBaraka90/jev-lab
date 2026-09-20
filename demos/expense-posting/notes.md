@@ -55,8 +55,8 @@ usually a question about where the boundary between two accounts sits, not a ser
   refunds, and 29 of the 30 ambiguous ones.
 - **The single mistake is the least confident posting in the file.** E-0334, "Packing tape and boxes"
   from a depot that also does couriers, went to shipping instead of office supplies, at 54% confidence
-  against an average of 99%. At the 70% threshold it is the one charge held back, so 397 post
-  automatically with nothing wrong among them.
+  against an average of 99%. At the 70% threshold it is one of three charges held back, all from the
+  same depot and the other two correct, so 397 post automatically with nothing wrong among them.
 - **Clarity tracked the data.** The clarity score averaged 5.55 of 6 across the file and 3.80 on the
   twenty charges with no description, which is the right direction without being dramatic.
 

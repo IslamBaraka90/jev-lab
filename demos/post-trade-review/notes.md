@@ -4,7 +4,8 @@ Two hundred and twenty closed trades on **real price history** — genuine gaps,
 cached once and committed. The trades, the plans and the discipline are invented, and invented badly on
 purpose in the five ways a trading journal usually goes wrong.
 
-The bars after the exit are not in the state. The review sees what the trader saw.
+The bars after the exit are meant to stay out of the state, so the review sees what the trader saw.
+On 54 of the 220 trades, the ones held for a bar or less, one bar after the exit is still in there.
 
 ## The data
 

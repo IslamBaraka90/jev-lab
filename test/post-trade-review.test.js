@@ -28,7 +28,7 @@ const perfect = ({ item: entry }) => {
   const label = planted.get(entry.id);
   return { answers: answerFor({
     lesson: label.lesson,
-    plan: label.planComplete,
+    plan: label.lesson !== 'NO_STOP',
     realistic: label.lesson !== 'TARGET_TOO_FAR',
     honoured: label.lesson !== 'MOVED_STOP' && label.lesson !== 'NO_STOP',
     discipline: label.lesson === 'PLAN_FOLLOWED' ? 5.5 : 1.5,

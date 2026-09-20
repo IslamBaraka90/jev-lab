@@ -12,7 +12,9 @@ moving-average distance, bar close location, range, volume and gap. No outcome o
 sent.
 
 After outcomes were revealed, Jev's “would take again” subset won 55.6% versus a 44.3% base rate, an
-11.2-point lift. Its largest winner/loser answer gap was entry quality, followed by its extended-entry
-call. The two planted data edges measured 50 and 40 percentage points; the weekday, round-number and
-symbol controls measured only 1, 6 and 4 points. The report shows the model-answer ranking before that
+11.2-point lift on 54 picks; the 95% interval for that win rate runs from 42% to 68%, which includes
+the base. Ranked by how well each answer separates winners from losers, its extended-entry call and its
+entry quality lead, each about 0.1 away from the 0.5 of an answer that says nothing. The two planted
+data edges measured 50 and 40 percentage points; the weekday, round-number and symbol controls measured
+only 1, 6 and 4 points. The report shows the model-answer ranking before that
 planted-edge reveal.

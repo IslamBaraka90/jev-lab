@@ -4,6 +4,7 @@
 // movement threshold on its own always gets wrong.
 
 import { choice, noul, score } from '../lib/questions.js';
+import { matrixStats } from '../lib/metrics.js';
 
 const BLOCK_PROBABILITY = 0.5;
 const BLOCKER_TYPES = ['UNRECONCILED', 'MISSING_ACCRUAL', 'INTERCOMPANY', 'FX_REVALUATION', 'UNSUPPORTED_JOURNAL', 'NONE'];
@@ -96,7 +97,7 @@ function evaluate(answers, item, context) {
     outsideExpected: item.movement > item.expectedMovementHigh || item.movement < item.expectedMovementLow,
     material: Math.abs(item.movement) >= (context.materiality ?? 0),
     label: blocks
-      ? `${item.account} ${item.name} · ${readable(blocker)} · ${owner}`
+      ? `${item.account} ${item.name} · ${blocker === 'NONE' ? 'held with no blocker named' : readable(blocker)} · ${owner}`
       : `${item.account} ${item.name} · cleared`,
   };
 }
@@ -113,15 +114,21 @@ function report(results, context = {}) {
   const caught = graded.filter((result) => byItem.get(result.item.id).kind === 'blocker' && named(result, byItem.get(result.item.id)) && result.evaluation.blocks);
   const cleared = results.filter((result) => !result.evaluation.blocks);
   const missed = cleared.filter((result) => byItem.get(result.item.id)?.kind === 'blocker');
+  const matrix = confusion(graded, byItem);
+  const comparison = alternatives(graded, byItem, caught.length);
 
   return {
     note: `Sixty accounts on working day four: ${planted.length} of them genuinely block the close and ${decoys.length} only look as if they do. ${severityGap(graded, byItem)} Labels never enter the model state.`,
-    findings: findings(graded, byItem, decoys),
+    findings: [...findings(graded, byItem, decoys), ...comparison.findings],
     kpis: kpis({ graded, caught, planted, decoys, cleared, missed, byItem, total: results.length }),
+    baselines: comparison.baselines,
+    metrics: metrics(graded, byItem, caught.length, planted.length, matrix),
     distribution: distribution(results),
-    matrix: confusion(graded, byItem),
+    distributionTitle: 'Where the held accounts land, by team',
+    matrix,
     curve: coverage(graded, byItem, planted),
     checks: checks(graded, byItem, planted, decoys),
+    topItemsTitle: 'The board, most severe first',
     topItems: topItems(results, byItem, context.currency),
   };
 }
@@ -130,6 +137,52 @@ function report(results, context = {}) {
 /** A blocker is only caught when it is held back and named for the right reason. */
 function named(result, label) {
   return Boolean(label) && result.evaluation.blocker === label.blocker;
+}
+
+/** The whole decision for one account: the blocker named, and held or left alone as it should be. */
+function decidedRight(result, label) {
+  return named(result, label) && result.evaluation.blocks === (label.kind === 'blocker');
+}
+
+/** The rules baseline: hold any account whose movement is outside the range the controller expects. */
+function ruleBlocks(item) {
+  return item.movement > item.expectedMovementHigh || item.movement < item.expectedMovementLow;
+}
+
+const ratio = (part, whole) => (whole ? part / whole : 0);
+
+/** The model beside the movement rule and beside holding nothing, scored on real blockers held. */
+function alternatives(graded, byItem, modelCaught) {
+  const ofKind = (kind) => graded.filter((result) => byItem.get(result.item.id).kind === kind);
+  const blockers = ofKind('blocker');
+  const decoys = ofKind('decoy');
+  const ruleCaught = blockers.filter((result) => ruleBlocks(result.item)).length;
+  const ruleDecoys = decoys.filter((result) => ruleBlocks(result.item)).length;
+  const modelDecoys = decoys.filter((result) => result.evaluation.blocks).length;
+  const baselines = [
+    { label: 'Jev', detail: `real blockers held and named; also holds ${modelDecoys} of the ${decoys.length} supported accounts`, value: ratio(modelCaught, blockers.length), display: `${modelCaught} of ${blockers.length}`, model: true },
+    { label: 'Rule: movement outside the expected range', detail: `real blockers held, with no reason given; also holds ${ruleDecoys} of the ${decoys.length} supported accounts`, value: ratio(ruleCaught, blockers.length), display: `${ruleCaught} of ${blockers.length}` },
+    { label: 'Hold nothing', detail: 'the commonest answer: every account is ready', value: 0, display: `0 of ${blockers.length}` },
+  ];
+  const findings = ruleCaught >= modelCaught && ruleDecoys <= modelDecoys && blockers.length > 0 && (ruleCaught > modelCaught || ruleDecoys < modelDecoys)
+    ? [`A movement rule holds ${ruleCaught} of the ${blockers.length} real blockers and ${ruleDecoys} of the ${decoys.length} supported accounts, which is better than the model's ${modelCaught} and ${modelDecoys}.`]
+    : [];
+  return { baselines, findings };
+}
+
+function metrics(graded, byItem, caught, plantedCount, matrix) {
+  const right = graded.filter((result) => decidedRight(result, byItem.get(result.item.id)));
+  const held = graded.filter((result) => result.evaluation.blocks);
+  const realHeld = held.filter((result) => byItem.get(result.item.id).kind === 'blocker');
+  const unnamed = held.filter((result) => result.evaluation.blocker === 'NONE');
+  return {
+    headline: { label: 'Blockers found', value: ratio(caught, plantedCount), n: plantedCount },
+    accuracy: ratio(right.length, graded.length),
+    macroF1: matrixStats(matrix)?.macroF1 ?? null,
+    precision: held.length ? realHeld.length / held.length : null,
+    recall: ratio(caught, plantedCount),
+    contradictionRate: ratio(unnamed.length, graded.length),
+  };
 }
 
 function ranked(results) {
@@ -151,14 +204,15 @@ function kpis({ graded, caught, planted, decoys, cleared, missed, byItem, total 
   const leftAlone = decoys.filter((label) => graded.some((result) => result.item.id === label.accountId && !result.evaluation.blocks));
   const blockers = graded.filter((result) => byItem.get(result.item.id).kind === 'blocker');
   const rightOwner = blockers.filter((result) => result.evaluation.owner === byItem.get(result.item.id).expectedOwner);
-  const topFive = ranked(graded).slice(0, 5).length;
+  const topFive = ranked(graded).slice(0, 5);
+  const topFiveReal = topFive.filter((result) => byItem.get(result.item.id).kind === 'blocker').length;
 
   return [
     { label: 'Blockers found', value: `${caught.length} of ${planted.length}`, context: 'held back and named for the right reason', tone: caught.length === planted.length ? 'good' : 'warn' },
     { label: 'Supported accounts left alone', value: `${leftAlone.length} of ${decoys.length}`, context: 'big movements that carry their paperwork', tone: leftAlone.length === decoys.length ? 'good' : 'warn' },
     { label: 'Owner agreement', value: share(rightOwner.length, blockers.length), context: `${rightOwner.length} of ${blockers.length} blockers sent to the right team` },
     { label: 'Close readiness', value: share(cleared.length, total), context: missed.length ? `${missed.length} cleared accounts still hold a real blocker` : 'no real blocker was cleared', tone: missed.length ? 'warn' : 'good' },
-    { label: 'Readiness after the top five', value: share(cleared.length + topFive, total), context: 'if the five it ranked most severe were fixed today' },
+    { label: 'Readiness after the top five', value: share(cleared.length + topFive.length, total), context: `if the five it ranked most severe were worked today; ${topFiveReal} of them are real blockers` },
   ];
 }
 
@@ -169,7 +223,7 @@ function checks(graded, byItem, planted, decoys) {
       const result = graded.find((entry) => entry.item.id === label.accountId);
       return !result || !result.evaluation.blocks || result.evaluation.blocker !== type;
     });
-    return { id: type.toLowerCase(), label: `${sentence(type)} not caught`, detail: questions.blocker_type.criteria[type], count: missed.length, of: group.length, items: missed.map((label) => label.accountId) };
+    return { id: type.toLowerCase(), label: `${sentence(type)} blockers missed`, detail: questions.blocker_type.criteria[type], count: missed.length, of: group.length, items: missed.map((label) => label.accountId) };
   });
 
   const flagged = decoys.filter((label) => graded.some((result) => result.item.id === label.accountId && result.evaluation.blocks));
@@ -193,6 +247,8 @@ function distribution(results) {
 function confusion(graded, byItem) {
   return {
     title: 'Blocker called against what was planted',
+    rowLabel: 'the blocker that was planted',
+    columnLabel: 'the blocker the model named',
     columns: BLOCKER_TYPES.map(sentence),
     rows: BLOCKER_TYPES.map((actual) => ({
       label: sentence(actual),
@@ -211,12 +267,14 @@ function coverage(graded, byItem, planted) {
     const real = queue.filter((result) => byItem.get(result.item.id).kind === 'blocker');
     return { threshold: Number((bar / 6).toFixed(3)), reviewed: queue.length, caught: real.length, rate: queue.length ? Number((real.length / queue.length).toFixed(3)) : null };
   });
-  return { title: 'Severity bar, workload and how much of the queue is real', xLabel: 'Accounts a person opens', yLabel: 'Real blockers in the queue', rateLabel: 'Share of the queue that is real', of: planted.length, points };
+  return { title: 'Severity bar, workload and how much of the queue is real', xLabel: 'Accounts a person opens', yLabel: 'Real blockers in the queue', rateLabel: 'Share of the queue that is real', of: planted.length, thresholdFormat: 'level', levels: 6, defaultIndex: 0, points };
 }
 
 function findings(graded, byItem, decoys) {
   const lines = [];
   const flagged = decoys.filter((label) => graded.some((result) => result.item.id === label.accountId && result.evaluation.blocks));
+  const unnamed = graded.filter((result) => result.evaluation.blocks && result.evaluation.blocker === 'NONE');
+  if (unnamed.length) lines.push(`${unnamed.length} accounts were held with no blocker named, which is two answers contradicting each other: ${unnamed.map((result) => result.item.account).join(', ')}.`);
   if (flagged.length >= 2) lines.push(`${flagged.length} of the ${decoys.length} supported accounts were sent to the board anyway: ${flagged.map((label) => label.account).join(', ')}. Every one of them says in the note where the paperwork is, so this is a reading failure, not a judgement call.`);
 
   const wrong = graded.filter((result) => byItem.get(result.item.id).kind === 'blocker' && !named(result, byItem.get(result.item.id)));
@@ -240,9 +298,59 @@ function findings(graded, byItem, decoys) {
 function topItems(results, byItem, currency) {
   return ranked(results).slice(0, 10).map((result) => ({
     id: result.item.id,
-    label: `${result.evaluation.label}${named(result, byItem.get(result.item.id)) ? ' · agrees' : ''}`,
+    label: `${result.evaluation.label} · ${boardTag(result, byItem.get(result.item.id))}`,
     value: money(result.item.movement, currency),
   }));
+}
+
+/** What the labels say about an account the model put on the board. */
+function boardTag(result, label) {
+  if (!label) return 'not graded';
+  if (label.kind === 'decoy') return 'supported, should not be here';
+  if (label.kind === 'clean') return 'ordinary, should not be here';
+  return named(result, label) ? 'agrees' : `planted as ${readable(label.blocker)}`;
+}
+
+const SEVERITY_LEVELS = ['None', 'Cosmetic', 'Minor', 'Notable', 'Material', 'Serious', 'Critical'];
+const percentOf = (value) => `${Math.round(value * 100)}%`;
+
+function gradeNote(label) {
+  if (label.kind === 'blocker') return `Planted as a blocker: ${readable(label.blocker)}, for ${label.expectedOwner}.`;
+  if (label.kind === 'decoy') return 'Planted as a supported account: the movement looks alarming and the note says where the paperwork is.';
+  return undefined;
+}
+
+/** Right means the blocker named and the account held or left alone as planted. The owner is graded apart. */
+function judge(result, label) {
+  if (!label) return null;
+  const side = (blocks) => (blocks ? 'hold' : 'leave alone');
+  return {
+    agree: decidedRight(result, label),
+    expected: `${side(label.kind === 'blocker')} · ${readable(label.blocker)}`,
+    got: `${side(result.evaluation.blocks)} · ${readable(result.evaluation.blocker)}`,
+    note: gradeNote(label),
+    confidence: result.evaluation.confidence,
+  };
+}
+
+/** The line this account gets on the close board, or the reason it stays off it. */
+function verdict(result, context) {
+  const { evaluation, item, answers } = result;
+  const movement = money(item.movement, context?.currency);
+  const held = evaluation.blocks;
+  const reason = evaluation.blocker === 'NONE' ? 'no blocker named' : readable(evaluation.blocker);
+  return {
+    eyebrow: `Working day ${context?.workingDay ?? '–'} of ${context?.deadlineWorkingDay ?? '–'}`,
+    headline: held ? `Blocks the close · ${reason} · ${evaluation.owner}` : 'Ready to close',
+    detail: `Movement of ${movement} against an expected range of ${money(item.expectedMovementLow, context?.currency)} to ${money(item.expectedMovementHigh, context?.currency)}.`,
+    facts: [
+      { label: 'Blocker', value: `${sentence(evaluation.blocker)} · ${percentOf(evaluation.confidence)}`, tone: evaluation.blocker === 'NONE' ? (held ? 'warn' : 'good') : 'bad' },
+      { label: 'Has to be worked before close', value: `${held ? 'Yes' : 'No'} · ${percentOf(evaluation.probability)}`, tone: held ? 'bad' : 'good' },
+      { label: 'Severity', value: `${SEVERITY_LEVELS[Math.round(evaluation.severity)]} · ${evaluation.severity.toFixed(1)} of 6`, tone: evaluation.severity >= 3.5 ? 'bad' : evaluation.severity >= 1.5 ? 'warn' : undefined },
+      { label: 'Owner', value: `${evaluation.owner} · ${percentOf(answers.owner.confidence)}` },
+      { label: 'Movement outside the expected range', value: evaluation.outsideExpected ? 'Yes' : 'No', tone: evaluation.outsideExpected ? 'warn' : undefined },
+    ],
+  };
 }
 
 export default {
@@ -262,6 +370,48 @@ export default {
   questions,
   evaluate,
   report,
+  caveat: 'Every ordinary account here moves inside its expected range with a stock note, and every blocker note says plainly what is wrong, so only the six supported accounts and the four quiet blockers test judgement; a harder dataset is planned.',
+  stage: {
+    hide: ['account', 'name'],
+    labels: {
+      priorBalance: 'Balance last month',
+      expectedMovementLow: 'Expected movement, low',
+      expectedMovementHigh: 'Expected movement, high',
+      openItems: 'Open reconciling items',
+      preparerNote: "Preparer's note",
+    },
+    highlight: ['movement', 'reconciliation', 'openItems'],
+  },
+  grade: {
+    labelId: (label) => label.accountId,
+    judge,
+  },
+  verdict,
+  present: {
+    number: 105,
+    problem: {
+      headline: 'Working day four of six. What is still stopping the close, and whose desk is it on?',
+      stat: '60',
+      statLabel: 'trial balance accounts',
+    },
+    hero: {
+      item: 'TB-2700',
+      caption: 'The legal accrual moved £8,542, inside its expected range, so a movement rule passes it. The note says the firm worked all month and has not billed, and the model holds it as a missing accrual.',
+    },
+    answers: {
+      caption: 'Four typed answers make one line on the close board: what kind of blocker, whether it holds the close, how serious, and which team.',
+      reveal: ['blocker_type', 'blocks_close', 'severity', 'owner'],
+    },
+    miss: {
+      item: 'TB-2720',
+      caption: 'A £100,307 provision release with the board minute on file. The model named no blocker and held it anyway, one of 3 supported accounts it sent to the board.',
+    },
+    proof: {
+      kpis: ['Blockers found', 'Supported accounts left alone', 'Close readiness'],
+      chart: 'baselines',
+      closing: '13 of 13 real blockers held, against 9 of 13 for a movement rule, which also holds 5 of the 6 supported accounts to the model\'s 3.',
+    },
+  },
   explain: {
     data: 'scripts/generate/close-blockers.js#demo:data',
     state: 'demos/close-blockers/demo.js#demo:state',

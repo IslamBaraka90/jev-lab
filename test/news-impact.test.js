@@ -11,7 +11,8 @@ const dataset = await loadDataset('news-impact');
 const labels = await loadLabels('news-impact');
 const context = { ...demoContext(dataset), labels };
 const label = (id) => labels.find((entry) => entry.headlineId === id);
-const kpi = (report, name) => report.kpis.find((entry) => entry.label === name);
+// The figures that set the reading beside the market sit under the KPI strip, in the same shape.
+const kpi = (report, name) => [...report.kpis, ...report.alsoMeasured].find((entry) => entry.label === name);
 const check = (report, id) => report.checks.find((entry) => entry.id === id);
 
 const answerFor = ({ materiality = 2, direction = 'NEUTRAL', horizon = 'DAYS', priced = false, tradeable = false }) => ({

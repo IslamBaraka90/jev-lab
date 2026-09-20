@@ -55,7 +55,7 @@ test('report excludes good-reason skips from cost and compares all three cohorts
   const { results } = await runDemo(demo, { dataset, ask: answer });
   const report = demo.report(results, { ...context, labels });
   const avoidable = labels.filter((label) => !label.taken && !label.goodReasonToSkip);
-  const expected = avoidable.reduce((sum, label) => sum + Math.max(0, label.outcomeUsd), 0);
+  const expected = avoidable.reduce((sum, label) => sum + label.outcomeUsd, 0);
   assert.equal(report.kpis.find((entry) => entry.label === 'Avoidable miss cost').value, expected.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }));
   assert.equal(report.kpis.find((entry) => entry.label === 'Good-reason skips honoured').value, '30 of 30');
   assert.equal(report.breakdowns.length, 2);

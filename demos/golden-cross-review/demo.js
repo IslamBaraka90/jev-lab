@@ -6,7 +6,8 @@
 // sessions, applies the same cost to every approach it compares, and lets the price say who was
 // right.
 
-import { choice, noul, score } from '../lib/questions.js';
+import { matrixStats } from '../lib/metrics.js';
+import { choice, noul, rubricOf, score } from '../lib/questions.js';
 
 const CONTEXTS = ['ESTABLISHED_TREND', 'CHOP', 'POST_GAP', 'RANGE_BREAK', 'REVERSAL_RISK'];
 const STOPS = ['BELOW_SLOW_MA', 'BELOW_SWING_LOW', 'ATR_BASED', 'NONE'];
@@ -15,6 +16,14 @@ const readable = (value) => value.toLowerCase().replaceAll('_', ' ');
 const sentence = (value) => readable(value).replace(/^./, (letter) => letter.toUpperCase());
 const average = (values) => (values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0);
 const percent = (value) => `${value > 0 ? '+' : ''}${value.toFixed(2)}%`;
+const share = (part, whole) => (whole ? `${((part / whole) * 100).toFixed(1)}%` : '–');
+
+/** Sample standard deviation, so a difference in averages can be put beside its standard error. */
+function spread(values) {
+  if (values.length < 2) return 0;
+  const mean = average(values);
+  return Math.sqrt(values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / (values.length - 1));
+}
 
 // #region demo:state
 /** The chart up to the cross bar and nothing after it, with the numbers a reader would work from. */
@@ -98,6 +107,63 @@ function outcome(item, cost) {
   return Number((((exit - entry) / entry) * 100 - cost).toFixed(3));
 }
 
+const STOP_FIELDS = { BELOW_SLOW_MA: 'belowSlowMa', BELOW_SWING_LOW: 'belowSwingLow', ATR_BASED: 'atrBased' };
+
+/** The price the named stop sits at, or nothing when no stop was named. */
+const stopLevel = (item, stop) => item.stopLevels?.[STOP_FIELDS[stop]] ?? Number.NEGATIVE_INFINITY;
+
+const QUALITY_LEVELS = rubricOf(questions.signal_quality);
+const levelOf = (value) => `${QUALITY_LEVELS[Math.round(value)] ?? 'Unscored'} · ${value.toFixed(1)} of 6`;
+
+/**
+ * No label exists, so an item is graded against the price: a take is right if the trade was up
+ * twenty sessions later net of cost, a skip is right if it was not. The same rule as the headline.
+ */
+function judge(result, label, context = {}) {
+  if (!result.evaluation) return null;
+  const made = outcome(result.item, context.costPercentPerTrade ?? 0.1);
+  const take = result.evaluation.take;
+  return {
+    agree: take === made > 0,
+    expected: made > 0 ? 'TAKE' : 'SKIP',
+    got: take ? 'TAKE' : 'SKIP',
+    note: `Graded against the price, not a label: the next twenty sessions returned ${percent(made)} net of cost. One trade is mostly noise, so read the run and not the item.`,
+    confidence: result.answers.decision.confidence,
+  };
+}
+
+/** The decision as a trader would read it, with what the price then did. */
+function verdict(result, context = {}) {
+  const { evaluation, item, answers } = result;
+  const made = outcome(item, context.costPercentPerTrade ?? 0.1);
+  const level = stopLevel(item, evaluation.stop);
+  const stopAboveEntry = evaluation.take && level >= item.close;
+  const agreed = evaluation.take === made > 0;
+  const facts = [
+    { label: 'Real change of trend', value: `${evaluation.valid ? 'Yes' : 'No'} · ${Math.round(answers.valid_signal.noul * 100)}%` },
+    { label: 'Chart read as', value: sentence(evaluation.context), tone: evaluation.context === 'CHOP' || evaluation.context === 'REVERSAL_RISK' ? 'warn' : undefined },
+    { label: 'Signal quality', value: levelOf(evaluation.quality) },
+    { label: 'Confidence in the decision', value: `${Math.round(evaluation.confidence * 100)}%` },
+  ];
+  if (evaluation.take) {
+    facts.push({
+      label: 'Stop',
+      value: Number.isFinite(level) ? `${sentence(evaluation.stop)} · ${level.toFixed(2)}${stopAboveEntry ? `, above the ${item.close.toFixed(2)} entry` : ''}` : 'None named',
+      tone: stopAboveEntry || !Number.isFinite(level) ? 'bad' : undefined,
+    });
+  }
+  facts.push({ label: 'Next twenty sessions', value: `${percent(made)} net of cost`, tone: agreed ? 'good' : 'bad' });
+
+  return {
+    eyebrow: 'The call on this cross',
+    headline: `${evaluation.take ? 'Take' : 'Skip'} · ${item.symbol} · ${item.date}`,
+    detail: evaluation.take
+      ? `Taken, and the trade ${made > 0 ? 'made' : 'lost'} money: the price ${agreed ? 'agreed' : 'disagreed'}.`
+      : `Skipped, and the trade would have ${made > 0 ? 'made' : 'lost'} money: the price ${agreed ? 'agreed' : 'disagreed'}.`,
+    facts,
+  };
+}
+
 // #region demo:report
 /** Taking every cross against taking only the kept ones, on the same bars and the same costs. */
 function report(results, context = {}) {
@@ -107,22 +173,71 @@ function report(results, context = {}) {
     .map((result) => ({ ...result, outcome: outcome(result.item, cost) }))
     .sort((left, right) => left.item.date.localeCompare(right.item.date));
   const kept = scored.filter((result) => result.evaluation.take);
+  const matrix = decisionMatrix(scored);
+  const instruments = new Set(scored.map((result) => result.item.symbol)).size;
 
   return {
-    note: `${scored.length} crossovers, every one the rule found in the cached bars. Each is entered at the cross close, held ${context.holdingPeriodBars ?? 20} sessions, and charged ${cost} per cent. ${context.note ?? ''}`,
+    note: `${scored.length} crossovers, every one the rule found in the cached bars. Each is entered at the cross close, held ${context.holdingPeriodBars ?? 20} sessions, and charged ${cost} per cent. Totals are sums of per-trade returns, not a portfolio return: the trades come from ${instruments} instruments and overlap in time. ${context.note ?? ''}`,
     findings: findings(scored, kept),
     kpis: kpis(scored, kept),
+    baselines: baselines(scored),
+    metrics: metrics(scored, kept, matrix),
+    distributionTitle: 'What the chart was called',
     distribution: CONTEXTS
       .map((value) => ({ label: sentence(value), count: scored.filter((result) => result.evaluation.context === value).length, tone: value === 'CHOP' || value === 'REVERSAL_RISK' ? 'warn' : undefined }))
       .filter((entry) => entry.count),
-    matrix: contextMatrix(scored),
+    matrix,
+    outcomeByContext: contextTable(scored),
+    outcomeByInstrument: instrumentTable(scored),
     curve: qualityCurve(scored),
     equityCurve: equity(scored, kept),
     checks: checks(scored, kept),
+    topItemsTitle: 'Best-graded crosses, with what each went on to do',
     topItems: topItems(scored),
   };
 }
 // #endregion
+
+/** Right means the decision matched the price: taken and up, or skipped and not up, net of cost. */
+const agreedWithPrice = (result) => result.evaluation.take === result.outcome > 0;
+
+/** Rule: take the cross only when the two-hundred-day average is already rising. */
+const ruleTakes = (item) => item.slowSlopePercent > 0;
+
+/** The instrument whose trades add up to the most, in either direction. One name can own a total. */
+function dominantInstrument(scored) {
+  const sums = new Map();
+  for (const result of scored) sums.set(result.item.symbol, (sums.get(result.item.symbol) ?? 0) + result.outcome);
+  const ranked = [...sums.entries()].sort((left, right) => Math.abs(right[1]) - Math.abs(left[1]));
+  const [symbol, sum] = ranked[0] ?? [null, 0];
+  return { symbol, sum, count: scored.filter((result) => result.item.symbol === symbol).length };
+}
+
+/** Flat numbers for the scoreboard. Precision is the share of taken trades that made money. */
+function metrics(scored, kept, matrix) {
+  const stats = matrixStats(matrix);
+  const agreed = scored.filter(agreedWithPrice);
+  return {
+    headline: { label: 'Decision agreed with price', value: scored.length ? agreed.length / scored.length : 0, n: scored.length },
+    accuracy: stats?.accuracy ?? null,
+    macroF1: stats?.macroF1 ?? null,
+    precision: kept.length ? kept.filter((result) => result.outcome > 0).length / kept.length : null,
+    recall: stats?.classes[0]?.recall ?? null,
+  };
+}
+
+function baselines(scored) {
+  if (!scored.length) return undefined;
+  const rate = (list) => list.length / scored.length;
+  const modelRight = scored.filter(agreedWithPrice);
+  const ruleRight = scored.filter((result) => ruleTakes(result.item) === result.outcome > 0);
+  const up = scored.filter((result) => result.outcome > 0);
+  return [
+    { label: 'Jev', detail: `take-or-skip agreed with the next twenty sessions, ${modelRight.length} of ${scored.length}`, value: rate(modelRight), model: true },
+    { label: 'Rule: take it if the 200-day average is rising', detail: `one line over a field in the state, ${ruleRight.length} of ${scored.length}`, value: rate(ruleRight) },
+    { label: 'Always take the cross', detail: `no judgement at all: ${up.length} of ${scored.length} were up`, value: rate(up) },
+  ];
+}
 
 function kpis(scored, kept) {
   const skipped = scored.filter((result) => !result.evaluation.take);
@@ -134,14 +249,24 @@ function kpis(scored, kept) {
   // Picking the threshold that happens to pay best is the error this whole demo exists to warn about.
   const byScore = scored.filter((result) => result.evaluation.quality >= MIDPOINT);
 
+  const agreed = scored.filter(agreedWithPrice);
+  const outcomes = scored.map((result) => result.outcome);
+  const standardError = scored.length ? spread(outcomes) / Math.sqrt(scored.length) : 0;
+  const dominant = dominantInstrument(scored);
+  const without = (list) => list.filter((result) => result.item.symbol !== dominant.symbol);
+  const mean = (list) => percent(average(list.map((result) => result.outcome)));
+  // The score only earns a good tone if it still beats taking everything with the biggest instrument removed.
+  const scoreHolds = total(byScore) > total(kept)
+    && average(without(byScore).map((result) => result.outcome)) > average(without(scored).map((result) => result.outcome));
+
   return [
-    { label: 'Taking every cross', value: percent(allReturn), context: `${scored.length} trades, ${winners(scored)} of them up after twenty sessions`, tone: allReturn > 0 ? 'good' : 'warn' },
-    { label: 'Taking only the kept ones', value: percent(keptReturn), context: `${kept.length} trades, ${winners(kept)} of them up`, tone: keptReturn > allReturn ? 'good' : 'warn' },
-    { label: 'What the filter was worth', value: percent(keptReturn - allReturn), context: 'the difference between the two, on the same bars with the same costs', tone: keptReturn > allReturn ? 'good' : 'warn' },
-    { label: 'Average trade, kept against all', value: `${percent(average(kept.map((result) => result.outcome)))} against ${percent(average(scored.map((result) => result.outcome)))}`, context: 'per trade, which is the fairer comparison when the counts differ' },
-    { label: 'Filtering on the score instead', value: percent(total(byScore)), context: `${byScore.length} trades graded ${MIDPOINT} or better, averaging ${percent(average(byScore.map((result) => result.outcome)))} against ${percent(average(kept.map((result) => result.outcome)))} for the ones it chose to take`, tone: total(byScore) > total(kept) ? 'good' : 'warn' },
-    { label: 'Crosses skipped', value: `${skipped.length} of ${scored.length}`, context: `${skipped.filter((result) => result.outcome < 0).length} of those would have lost money` },
-    { label: 'Called an artefact', value: `${invalid.length} of ${scored.length}`, context: `averaging ${percent(average(invalid.map((result) => result.outcome)))} against ${percent(average(scored.filter((result) => result.evaluation.valid).map((result) => result.outcome)))} for the ones called real` },
+    { label: 'Decision agreed with price', value: `${agreed.length} of ${scored.length}`, context: `${share(agreed.length, scored.length)}: taken and up, or skipped and not. Taking every cross is right ${share(winners(scored), scored.length)} of the time`, tone: agreed.length > winners(scored) ? 'good' : 'warn' },
+    { label: 'Average trade, kept against all', value: `${mean(kept)} against ${mean(scored)}`, context: `per trade. One trade varies by ${spread(outcomes).toFixed(1)} points, so the average of ${scored.length} is only known to within ${standardError.toFixed(2)}` },
+    { label: `Without ${dominant.symbol ?? 'the biggest instrument'}`, value: `${mean(without(kept))} against ${mean(without(scored))}`, context: `kept against all, per trade. ${dominant.count} ${dominant.symbol} trades add up to ${percent(dominant.sum)} in a book that totals ${percent(allReturn)}; graded ${MIDPOINT} or better averages ${mean(without(byScore))} without them`, tone: 'warn' },
+    { label: 'Taking only the kept ones', value: percent(keptReturn), context: `sum of ${kept.length} trade returns, ${winners(kept)} of them up. Every cross: ${percent(allReturn)} over ${scored.length}, ${winners(scored)} up`, tone: keptReturn > allReturn ? 'good' : 'warn' },
+    { label: 'What the filter was worth', value: percent(keptReturn - allReturn), context: 'the difference of two sums over different numbers of trades, on the same bars with the same costs. The per-trade figure is the fair one', tone: keptReturn > allReturn ? 'good' : 'warn' },
+    { label: 'Filtering on the score instead', value: percent(total(byScore)), context: `${byScore.length} trades graded ${MIDPOINT} or better, averaging ${mean(byScore)} against ${mean(kept)} for the ones it chose to take; ${winners(byScore)} of ${byScore.length} were up`, tone: scoreHolds ? 'good' : 'warn' },
+    { label: 'Crosses skipped', value: `${skipped.length} of ${scored.length}`, context: `${skipped.filter((result) => result.outcome < 0).length} of those would have lost money; ${invalid.length} crosses were called an artefact` },
   ];
 }
 
@@ -154,33 +279,71 @@ function checks(scored, kept) {
   const bad = kept.filter((result) => result.outcome < -4);
   const noStop = kept.filter((result) => result.evaluation.stop === 'NONE');
   const stopOnSkip = scored.filter((result) => !result.evaluation.take && result.evaluation.stop !== 'NONE');
+  const stopAboveEntry = kept.filter((result) => stopLevel(result.item, result.evaluation.stop) >= result.item.close);
 
   return [
     { id: 'missed', label: 'Skipped a cross that ran', detail: 'Left alone, and up more than four per cent twenty sessions later.', count: missed.length, of: scored.filter((result) => result.outcome > 4).length, items: missed.slice(0, 20).map((result) => result.item.id) },
     { id: 'bad', label: 'Took a cross that fell', detail: 'Taken, and down more than four per cent twenty sessions later.', count: bad.length, of: scored.filter((result) => result.outcome < -4).length, items: bad.slice(0, 20).map((result) => result.item.id) },
     { id: 'no-stop', label: 'Took the trade without a stop', detail: 'A decision to take with no stop rule named.', count: noStop.length, of: kept.length, items: noStop.slice(0, 20).map((result) => result.item.id) },
     { id: 'stop-on-skip', label: 'Named a stop for a trade it was not taking', detail: 'A skip with a stop placement other than none.', count: stopOnSkip.length, of: scored.length - kept.length, items: stopOnSkip.slice(0, 20).map((result) => result.item.id) },
+    { id: 'stop-above-entry', label: 'Chose a stop that sits above the entry', detail: 'The level offered was at or above the cross close, which no long trade can use as a stop.', count: stopAboveEntry.length, of: kept.length, items: stopAboveEntry.slice(0, 20).map((result) => result.item.id) },
   ];
 }
 
-function contextMatrix(scored) {
-  const buckets = [
-    ['Fell over 4%', (value) => value <= -4],
-    ['Flat', (value) => value > -4 && value < 4],
-    ['Rose over 4%', (value) => value >= 4],
+/** Take or skip against whether the trade made money. The diagonal is what the headline counts as right. */
+function decisionMatrix(scored) {
+  const rows = [
+    ['Up after twenty sessions', (result) => result.outcome > 0],
+    ['Flat or down', (result) => result.outcome <= 0],
+  ];
+  const columns = [
+    ['Take', (result) => result.evaluation.take],
+    ['Skip', (result) => !result.evaluation.take],
   ];
   return {
-    title: 'What the chart was called against what the next twenty sessions did',
-    columns: CONTEXTS.map(sentence),
-    rows: buckets.map(([label, test]) => ({
+    title: 'Take or skip, against what the next twenty sessions did',
+    rowLabel: 'what the price did, net of cost',
+    columnLabel: 'the decision made at the cross',
+    columns: columns.map(([label]) => label),
+    rows: rows.map(([label, happened], rowIndex) => ({
       label,
-      cells: CONTEXTS.map((value) => ({
-        predicted: value,
-        count: scored.filter((result) => test(result.outcome) && result.evaluation.context === value).length,
-        diagonal: false,
-      })),
+      cells: columns.map(([predicted, decided], columnIndex) => {
+        const items = scored.filter((result) => happened(result) && decided(result)).map((result) => result.item.id);
+        return { predicted, count: items.length, diagonal: rowIndex === columnIndex, items };
+      }),
     })),
   };
+}
+
+/** What each reading of the chart went on to do. Small groups are shown with their size, not hidden. */
+function contextTable(scored) {
+  return CONTEXTS
+    .map((value) => {
+      const group = scored.filter((result) => result.evaluation.context === value);
+      return {
+        calledAs: sentence(value),
+        averageOutcome: percent(average(group.map((result) => result.outcome))),
+        up: `${group.filter((result) => result.outcome > 0).length} of ${group.length}`,
+        crosses: group.length,
+      };
+    })
+    .filter((row) => row.crosses);
+}
+
+/** The same book by instrument, because one name can own the total. */
+function instrumentTable(scored) {
+  const symbols = [...new Set(scored.map((result) => result.item.symbol))];
+  return symbols
+    .map((symbol) => {
+      const group = scored.filter((result) => result.item.symbol === symbol);
+      return {
+        instrument: symbol,
+        crosses: group.length,
+        taken: group.filter((result) => result.evaluation.take).length,
+        sumOfTradeReturnsPercent: Number(total(group).toFixed(2)),
+      };
+    })
+    .sort((left, right) => Math.abs(right.sumOfTradeReturnsPercent) - Math.abs(left.sumOfTradeReturnsPercent));
 }
 
 /** Does a higher quality score really mean a better chance of the trade working? */
@@ -191,7 +354,7 @@ function qualityCurve(scored) {
     const up = at.filter((result) => result.outcome > 0);
     return { threshold: Number((bar / 6).toFixed(3)), reviewed: at.length, caught: up.length, rate: at.length ? Number((up.length / at.length).toFixed(3)) : null };
   });
-  return { title: 'Signal quality against what the trade did', xLabel: 'Crosses graded this good or better', yLabel: 'Of those, the ones that made money', rateLabel: 'Share that did', of: winners.length, points };
+  return { title: 'Signal quality against what the trade did', xLabel: 'Crosses graded this good or better', yLabel: 'Of those, the ones that made money', rateLabel: 'Share that did', of: winners.length, thresholdFormat: 'level', levels: 6, defaultIndex: MIDPOINT, points };
 }
 
 /** Both curves off the same trades in date order: one takes everything, one takes what was kept. */
@@ -213,7 +376,8 @@ function equity(scored, kept) {
     };
   });
 
-  return { title: 'Ten thousand through every cross, against ten thousand through the kept ones', seriesLabel: 'Every cross', compareLabel: 'Only the kept ones', points };
+  // The trades overlap in time across instruments, so this orders the results; it is not a portfolio.
+  return { title: 'Ten thousand through every cross one after another, against the same through the kept ones', seriesLabel: 'Every cross', compareLabel: 'Only the kept ones', points };
 }
 
 function findings(scored, kept) {
@@ -230,13 +394,39 @@ function findings(scored, kept) {
     lines.push(`The kept trades averaged ${perTrade > 0 ? 'better' : 'worse'} than the full set by ${Math.abs(perTrade).toFixed(2)} points a trade${keptReturn > allReturn ? '' : ', and taking fewer of them still came out behind in total'}.`);
   }
 
+  const outcomes = scored.map((result) => result.outcome);
+  const standardError = scored.length ? spread(outcomes) / Math.sqrt(scored.length) : 0;
+  if (kept.length && standardError > 0) {
+    lines.push(`One trade here varies by ${spread(outcomes).toFixed(1)} points, so the average of ${scored.length} trades is only known to within ${standardError.toFixed(2)} points either way. Every per-trade difference on this page is smaller than that. None of them separates the judgement from chance.`);
+  }
+
+  const agreed = scored.filter(agreedWithPrice);
+  const up = scored.filter((result) => result.outcome > 0);
+  const ruleRight = scored.filter((result) => ruleTakes(result.item) === result.outcome > 0);
+  if (kept.length && agreed.length <= up.length) {
+    lines.push(`The take-or-skip answer agreed with the price on ${agreed.length} of ${scored.length} crosses. Taking every cross is right on ${up.length}, and one line of code (take it if the 200-day average is rising) on ${ruleRight.length}. The model did not beat either.`);
+  }
+
   const byScore = scored.filter((result) => result.evaluation.quality >= MIDPOINT);
+  const mean = (list) => percent(average(list.map((result) => result.outcome)));
   if (kept.length && byScore.length && average(byScore.map((result) => result.outcome)) > average(kept.map((result) => result.outcome)) + 0.15) {
-    lines.push(`Filtering on the quality score at the middle of its own scale beat the take-or-leave answer: ${percent(average(byScore.map((result) => result.outcome)))} a trade against ${percent(average(kept.map((result) => result.outcome)))}. The score knew something the decision threw away. The threshold is the midpoint of the scale and not one chosen by looking at these results, which would be the very mistake this page is about.`);
+    const dominant = dominantInstrument(scored);
+    const without = (list) => list.filter((result) => result.item.symbol !== dominant.symbol);
+    const holds = average(without(byScore).map((result) => result.outcome)) > average(without(scored).map((result) => result.outcome));
+    lines.push(`Filtering on the quality score at the middle of its own scale came out ahead of the take-or-leave answer: ${mean(byScore)} a trade against ${mean(kept)}. The threshold is the midpoint of the scale and not one chosen by looking at these results, which would be the very mistake this page is about. ${holds
+      ? `It still holds with ${dominant.symbol} removed: ${mean(without(byScore))} against ${mean(without(scored))} for every cross.`
+      : `It does not survive removing one instrument: ${dominant.count} ${dominant.symbol} trades add up to ${percent(dominant.sum)}, and without them the same filter averages ${mean(without(byScore))} against ${mean(without(scored))} for taking everything. That is ${dominant.symbol}, not the score.`}`);
   }
 
   const chop = scored.filter((result) => result.evaluation.context === 'CHOP');
-  if (chop.length) lines.push(`${chop.length} crosses were read as a flat market bringing two averages together. Those averaged ${percent(average(chop.map((result) => result.outcome)))}, against ${percent(average(scored.filter((result) => result.evaluation.context !== 'CHOP').map((result) => result.outcome)))} for the rest.`);
+  if (chop.length) {
+    const rest = scored.filter((result) => result.evaluation.context !== 'CHOP');
+    const against = average(chop.map((result) => result.outcome)) > average(rest.map((result) => result.outcome));
+    lines.push(`${chop.length} crosses were read as a flat market bringing two averages together. Those averaged ${mean(chop)}, against ${mean(rest)} for the rest${against ? `, which runs against the reading, on ${chop.length} trades` : ''}.`);
+  }
+
+  const badStops = kept.filter((result) => stopLevel(result.item, result.evaluation.stop) >= result.item.close);
+  if (badStops.length) lines.push(`${badStops.length} taken trades were given a stop that sits at or above the entry price, because the 200-day average was still above the close at the cross. A long stop above the entry is not a stop: ${badStops.slice(0, 4).map((result) => result.item.id).join(', ')}.`);
 
   const missed = scored.filter((result) => !result.evaluation.take && result.outcome > 8);
   if (missed.length) lines.push(`${missed.length} skipped crosses ran more than eight per cent in the twenty sessions that followed: ${missed.slice(0, 4).map((result) => `${result.item.symbol} ${result.item.date}`).join(', ')}.`);
@@ -249,6 +439,32 @@ function topItems(scored) {
     .slice(0, 10)
     .map((result) => ({ id: result.item.id, label: result.evaluation.label, value: percent(result.outcome) }));
 }
+
+const PRESENT = {
+  number: 181,
+  problem: {
+    headline: 'The rule finds the cross. Somebody still has to decide whether this one deserves the trade.',
+    stat: '71',
+    statLabel: 'golden crosses in six years across 16 instruments',
+  },
+  hero: {
+    item: 'GX-0042',
+    caption: 'AAPL, 13 June 2024. Called an established trend, graded 4.5 of 6, taken. Twenty sessions later it was up 9.31% net of cost.',
+  },
+  answers: {
+    caption: 'Five answers from the chart up to the cross bar and nothing after it: is it real, what is the chart doing, how good, take or skip, where the stop goes.',
+    reveal: ['valid_signal', 'context', 'signal_quality', 'decision', 'stop_placement'],
+  },
+  miss: {
+    item: 'GX-0009',
+    caption: 'WMT, 19 April 2022. Also called an established trend and taken at 3.4 of 6. Twenty sessions later it was down 16.79%.',
+  },
+  proof: {
+    kpis: ['Decision agreed with price', 'Average trade, kept against all', 'Without BTC-USD'],
+    chart: 'baselines',
+    closing: 'The take-or-skip call matched the price on 30 of 71 crosses. Taking every cross matched on 38, and the page says so.',
+  },
+};
 
 export default {
   id: 'golden-cross-review',
@@ -266,6 +482,10 @@ export default {
   questions,
   evaluate,
   report,
+  caveat: 'Seventy-one trades that each vary by seven points cannot separate a filter from chance, and the state carries real tickers and dates, so a model could be remembering what followed rather than reading the chart.',
+  grade: { judge },
+  verdict,
+  present: PRESENT,
   explain: {
     data: 'src/strategies/golden-cross.js#strategy:detector',
     state: 'demos/golden-cross-review/demo.js#demo:state',

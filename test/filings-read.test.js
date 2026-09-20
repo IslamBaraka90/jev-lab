@@ -12,7 +12,8 @@ const labels = await loadLabels('filings-read');
 const context = { ...demoContext(dataset), labels };
 const label = (id) => labels.find((entry) => entry.documentId === id);
 const item = (id) => dataset.items.find((entry) => entry.id === id);
-const kpi = (report, name) => report.kpis.find((entry) => entry.label === name);
+// The figures that do not fit the KPI strip sit under it, in the same shape.
+const kpi = (report, name) => [...report.kpis, ...report.alsoMeasured].find((entry) => entry.label === name);
 const check = (report, id) => report.checks.find((entry) => entry.id === id);
 
 const answerFor = ({ guidance = 'NOT_MENTIONED', tone = 3, newRisk = false, insider = false, agree = true }) => ({

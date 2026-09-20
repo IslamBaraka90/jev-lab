@@ -1,3 +1,4 @@
+import { matrixStats } from '../lib/metrics.js';
 import { choice, noul, score } from '../lib/questions.js';
 import { estimateHabitCost } from '../../scripts/generate/trader-behaviour.js';
 
@@ -71,17 +72,23 @@ function report(results, context = {}) {
     return { label: title(pattern), value: round(cohort.reduce((sum, result) => sum + estimateHabitCost(result.item, pattern), 0)), count: cohort.length };
   });
   const totalCost = costs.reduce((sum, entry) => sum + entry.value, 0);
+  const matrix = patternMatrix(graded, byId);
+  const scores = scoreboard(graded, byId, correct, matrix);
   return {
     note: `All ${graded.length} synthetic days are judged relative to their own prior-30-day norms. Costs are recomputed from the trades, never from Jev’s severity score. ${context.researchOnly ?? ''}`,
-    findings: findings(graded, byId, falseAlarms),
+    findings: findings(graded, byId, falseAlarms, scores),
     kpis: [
-      { label: 'Pattern accuracy', value: `${correct.length} of ${graded.length}`, context: pct(correct.length, graded.length), tone: correct.length === graded.length ? 'good' : 'warn' },
-      { label: 'Estimated habit cost', value: money(totalCost), context: 'derived from excess-size loss, extra trades, missed profit and added-down losses' },
-      { label: 'Good-but-lossy false alarms', value: `${falseAlarms.length} of ${controls.length}`, context: pct(falseAlarms.length, controls.length), tone: falseAlarms.length ? 'warn' : 'good' },
-      { label: 'Stop-day recommendations', value: graded.filter((result) => result.evaluation.stopAdvised).length, context: 'model recommendations, not ground truth' },
+      { label: 'Pattern accuracy', value: `${correct.length} of ${graded.length}`, context: `${pct(correct.length, graded.length)} · calling every day disciplined scores ${pct(scores.majority, graded.length)}`, tone: correct.length === graded.length ? 'good' : undefined },
+      { label: 'Habit days named exactly', value: `${scores.habitNamed} of ${scores.habitDays}`, context: `${scores.flaggedWithHabit} of the ${scores.flagged} days it flagged really carry a habit` },
+      { label: 'Estimated habit cost', value: money(totalCost), context: `from the trades, not from the answers: the half-year ended ${signedMoney(scores.halfYearResult)} and would have ended about ${signedMoney(scores.halfYearResult + totalCost)} without them` },
+      { label: 'Good-but-lossy false alarms', value: `${falseAlarms.length} of ${controls.length}`, context: controlContext(controls), tone: falseAlarms.length ? 'warn' : 'good' },
     ],
+    baselines: scores.baselines,
+    metrics: scores.metrics,
+    distributionTitle: 'Patterns named',
+    topItemsTitle: 'Most expensive habit days',
     distribution: PATTERNS.map((pattern) => ({ label: title(pattern), count: graded.filter((result) => result.evaluation.pattern === pattern).length })).filter((entry) => entry.count),
-    matrix: patternMatrix(graded, byId), costs,
+    matrix, costs,
     equityCurve: equityCurve(graded), sizeScatter: sizeScatter(graded),
     checks: [
       mistakeCheck('revenge', 'Revenge days missed', 'REVENGE', graded, byId),
@@ -101,8 +108,62 @@ function mistakeCheck(id, label, pattern, graded, byId) {
   return { id, label, detail: questions.pattern.criteria[pattern], count: missed.length, of: cohort.length, items: missed.map((result) => result.item.id) };
 }
 
+// The rule: largest trade 2.4× the median size is revenge, 1.5× is averaging down; twice the usual trade
+// count is overtrading; any profit left on the table at the normal hold is an early exit; else disciplined.
+function patternByRule(item) {
+  const largest = Math.max(...item.trades.map((trade) => trade.sizeUsd)) / item.norms.medianSizeUsd;
+  if (largest >= 2.4) return 'REVENGE';
+  if (largest >= 1.5) return 'AVERAGING_DOWN';
+  if (item.trades.length >= item.norms.averageTradesPerDay * 2) return 'OVERTRADING';
+  if (item.trades.some((trade) => trade.missedAtNormHoldUsd > 0)) return 'EARLY_EXIT';
+  return 'DISCIPLINED';
+}
+
+/** The counts the KPIs, baselines and metrics share, so they cannot disagree with each other. */
+function scoreboard(graded, byId, correct, matrix) {
+  const planted = (result) => byId.get(result.item.id).pattern;
+  const habits = graded.filter((result) => planted(result) !== 'DISCIPLINED');
+  const flagged = graded.filter((result) => result.evaluation.pattern !== 'DISCIPLINED');
+  const ruleRight = graded.filter((result) => patternByRule(result.item) === planted(result)).length;
+  const majority = graded.length - habits.length;
+  const stats = matrixStats(matrix);
+  const share = (count) => (graded.length ? count / graded.length : 0);
+  return {
+    correct: correct.length,
+    habitDays: habits.length,
+    habitNamed: habits.filter((result) => result.evaluation.pattern === planted(result)).length,
+    flagged: flagged.length,
+    flaggedWithHabit: flagged.filter((result) => planted(result) !== 'DISCIPLINED').length,
+    ruleRight,
+    majority,
+    halfYearResult: graded.reduce((sum, result) => sum + result.item.resultUsd, 0),
+    baselines: graded.length ? [
+      { label: 'Jev', detail: 'pattern agrees with the planted one', value: share(correct.length), model: true },
+      { label: 'Rule: four thresholds against the norms', detail: 'largest size, trade count and profit left at the normal hold', value: share(ruleRight) },
+      { label: 'Always the commonest pattern', detail: 'disciplined', value: share(majority) },
+    ] : undefined,
+    metrics: graded.length ? {
+      headline: { label: 'Pattern accuracy', value: share(correct.length), n: graded.length },
+      accuracy: share(correct.length),
+      macroF1: stats?.macroF1 ?? null,
+      // Flagging a day at all, whatever habit it was given.
+      precision: flagged.length ? flagged.filter((result) => planted(result) !== 'DISCIPLINED').length / flagged.length : null,
+      recall: habits.length ? habits.filter((result) => result.evaluation.pattern !== 'DISCIPLINED').length / habits.length : null,
+    } : undefined,
+  };
+}
+
+const signedMoney = (value) => `${value < 0 ? '−' : '+'}${money(Math.abs(value))}`;
+
+// The controls only prove something if they lose real money, so say how much they lost.
+function controlContext(controls) {
+  if (!controls.length) return 'no control days in this run';
+  const losses = controls.map((result) => Math.abs(result.item.resultUsd));
+  return `losing days with normal process; they lost ${money(Math.min(...losses))} to ${money(Math.max(...losses))} each, which is mild`;
+}
+
 function patternMatrix(graded, byId) {
-  return { title: 'Planted process pattern against the pattern Jev named', columns: PATTERNS.map(title), rows: PATTERNS.map((actual) => ({ label: title(actual), cells: PATTERNS.map((predicted) => ({ predicted, count: graded.filter((result) => byId.get(result.item.id).pattern === actual && result.evaluation.pattern === predicted).length, diagonal: actual === predicted })) })) };
+  return { title: 'Planted process pattern against the pattern Jev named', rowLabel: 'the habit the day was built to carry', columnLabel: 'the pattern the model named', columns: PATTERNS.map(title), rows: PATTERNS.map((actual) => ({ label: title(actual), cells: PATTERNS.map((predicted) => ({ predicted, count: graded.filter((result) => byId.get(result.item.id).pattern === actual && result.evaluation.pattern === predicted).length, diagonal: actual === predicted })) })) };
 }
 
 function equityCurve(graded) {
@@ -111,11 +172,29 @@ function equityCurve(graded) {
 }
 
 function sizeScatter(graded) {
-  return { title: 'Every position size against that day’s 30-day norm', points: graded.flatMap((result) => result.item.trades.map((trade) => ({ id: result.item.id, label: `${result.item.date} ${trade.tradeId}`, norm: result.item.norms.medianSizeUsd, value: trade.sizeUsd, flagged: result.evaluation.pattern !== 'DISCIPLINED' }))) };
+  return { title: 'Every position size against that day’s 30-day norm', xLabel: '30-day median size (USD)', yLabel: 'Size of the trade (USD)', points: graded.flatMap((result) => result.item.trades.map((trade) => ({ id: result.item.id, label: `${result.item.date} ${trade.tradeId}`, norm: result.item.norms.medianSizeUsd, value: trade.sizeUsd, flagged: result.evaluation.pattern !== 'DISCIPLINED' }))) };
 }
 
-function findings(graded, byId, falseAlarms) {
+function findings(graded, byId, falseAlarms, scores) {
   const lines = [];
+  if (scores.ruleRight > scores.correct) {
+    lines.push(`Four thresholds against the day’s own norms name ${scores.ruleRight} of ${graded.length} patterns; the model named ${scores.correct}. The planted habits do not overlap, so on this dataset the rule wins.`);
+  }
+
+  const leftOnTable = graded.filter((result) => result.item.trades.some((trade) => trade.missedAtNormHoldUsd > 0));
+  if (leftOnTable.length && leftOnTable.every((result) => byId.get(result.item.id).pattern === 'EARLY_EXIT')) {
+    lines.push(`The state’s “additional profit available at normal hold” is non-zero on ${leftOnTable.length} days, and every one of them is a planted early-exit day. That field gives the answer away.`);
+  }
+
+  const addedDown = graded.filter((result) => byId.get(result.item.id).pattern === 'AVERAGING_DOWN');
+  const readAsRevenge = addedDown.filter((result) => result.evaluation.pattern === 'REVENGE');
+  if (readAsRevenge.length) {
+    lines.push(`${readAsRevenge.length} of ${addedDown.length} averaging-down days were named revenge. Adding to the same losing position minutes after a loss fits both definitions; the two habits overlap as written.`);
+  }
+
+  if (graded.length && !graded.some((result) => result.evaluation.stopAdvised)) {
+    lines.push(`Stopping for the day was never advised, on any of ${graded.length} days. The state gives no stop rule to apply, so that question carries no information here.`);
+  }
   if (falseAlarms.length) lines.push(`${falseAlarms.length} disciplined control days were flagged because their loss was mistaken for a process problem.`);
   const lossTriggered = graded.filter((result) => result.evaluation.triggeredByLoss && !['REVENGE', 'AVERAGING_DOWN'].includes(byId.get(result.item.id).pattern));
   if (lossTriggered.length) lines.push(`${lossTriggered.length} days without a loss-triggered sequence were described as loss-triggered.`);
@@ -124,12 +203,95 @@ function findings(graded, byId, falseAlarms) {
 
 const round = (value) => Math.round(value * 100) / 100;
 
+const PLANTED_AS = {
+  REVENGE: 'a revenge day: size jumps within minutes of a loss',
+  OVERTRADING: 'an overtrading day: about three times the usual number of trades',
+  EARLY_EXIT: 'an early-exit day: winners closed well inside the normal hold',
+  AVERAGING_DOWN: 'an averaging-down day: the same losing position increased after losses',
+  DISCIPLINED: 'a disciplined day',
+};
+
+// #region demo:grade
+/** Right means the pattern named is the habit the day was built to carry. */
+const grade = {
+  labelId: (label) => label.dayId,
+  judge: (result, label) => {
+    if (!label) return null;
+    const planted = label.goodButLossy ? 'Planted as a control: a losing day with normal count, sizing and holds.' : `Planted as ${PLANTED_AS[label.pattern]}.`;
+    return {
+      agree: result.evaluation.pattern === label.pattern,
+      expected: label.pattern,
+      got: result.evaluation.pattern,
+      note: label.costEstimate ? `${planted} The habit cost ${money(label.costEstimate)} that day.` : planted,
+      confidence: result.answers.pattern.confidence,
+    };
+  },
+};
+// #endregion
+
+const levelOf = (answer) => `${answer.legend?.[Math.round(answer.score)] ?? 'Score'} · ${answer.score.toFixed(1)} of 6`;
+const yesOrNo = (answer) => (answer.noul >= 0.5 ? `Yes · ${Math.round(answer.noul * 100)}%` : `No · ${Math.round((1 - answer.noul) * 100)}%`);
+
+function severityTone(value) {
+  if (value >= 3.5) return 'bad';
+  return value >= 2 ? 'warn' : 'good';
+}
+
+/** The day as a card. The day's result carries no tone on purpose: a loss is not a habit. */
+function verdict(result) {
+  const { answers, evaluation, item } = result;
+  const habit = evaluation.pattern !== 'DISCIPLINED';
+  const largest = Math.max(...item.trades.map((trade) => trade.sizeUsd)) / item.norms.medianSizeUsd;
+  const facts = [
+    { label: 'Day result', value: signedMoney(item.resultUsd) },
+    { label: 'Severity', value: levelOf(answers.severity), tone: severityTone(evaluation.severity) },
+    { label: 'Largest trade against the 30-day median size', value: `${largest.toFixed(1)}×`, tone: largest >= 1.5 ? 'bad' : 'good' },
+    { label: 'Sizing stayed inside the norm', value: yesOrNo(answers.size_discipline), tone: evaluation.sizeDisciplined ? 'good' : 'bad' },
+    { label: 'Set off by a loss', value: yesOrNo(answers.triggered_by_loss), tone: evaluation.triggeredByLoss ? 'warn' : undefined },
+  ];
+  if (habit) facts.splice(1, 0, { label: 'What the habit cost today', value: money(estimateHabitCost(item, evaluation.pattern)), tone: 'bad' });
+
+  return {
+    eyebrow: 'The habit this day shows',
+    headline: `${title(evaluation.pattern)} · ${Math.round(evaluation.confidence * 100)}%`,
+    detail: questions.pattern.criteria[evaluation.pattern],
+    facts,
+  };
+}
+
+const present = {
+  number: 154,
+  problem: {
+    headline: 'A trader knows what they lost. They rarely know which habit lost it.',
+    stat: '120',
+    statLabel: 'trading days, each read against its own 30-day norms',
+  },
+  hero: {
+    item: 'TB-026',
+    caption: 'Two NVDA losses, −$182 and −$325. Six minutes later a $12,343 position, 2.7 times the median size, loses $571; nine minutes after that, $10,346 of AAPL loses $301. Named revenge, set off by a loss.',
+  },
+  answers: {
+    caption: 'One pattern for the day, how severe it is, whether a loss set it off, and whether sizing held.',
+    reveal: ['pattern', 'severity', 'triggered_by_loss', 'size_discipline'],
+  },
+  miss: {
+    item: 'TB-097',
+    caption: 'Three MSFT longs in a row, each larger than the last, each a loss. Built as averaging down; named revenge at 46% against 45%. Four of the six such days went the same way.',
+  },
+  proof: {
+    kpis: ['Pattern accuracy', 'Estimated habit cost', 'Good-but-lossy false alarms'],
+    chart: 'matrix',
+    closing: '$22,680: what four habits cost in six months, the difference between a half-year that ended −$16,814 and one that would have ended about +$5,866.',
+  },
+};
+
 export default {
   id: 'trader-behaviour', title: 'Trader behaviour', domain: 'trades',
   value: 'Read a complete trading day and name the repeatable habit that is costing money.',
   tags: ['trades', 'behaviour', 'coaching', 'sessions'], dataClass: 'synthetic', readMinutes: 4, view: 'sessionCurve',
   itemLabel: (item) => `${item.date} · ${item.trades.length} trades · ${money(item.resultUsd)}`,
   data: () => import('./data.json'), fixtures: () => import('./fixtures.json'), labels: () => import('../../data/synthetic/trader-behaviour.labels.json'),
-  buildState, questions, evaluate, report,
+  buildState, questions, evaluate, report, grade, verdict, present,
+  caveat: 'The planted habits do not overlap: four thresholds against the day’s own norms name all 120 patterns, and one field in the state is non-zero only on early-exit days. The eight losing control days lose about 0.4% of the account each. A harder dataset is planned.',
   explain: { data: 'scripts/generate/trader-behaviour.js#demo:data', state: 'demos/trader-behaviour/demo.js#demo:state', questions: 'demos/trader-behaviour/demo.js#demo:questions', evaluate: 'demos/trader-behaviour/demo.js#demo:evaluate' },
 };

@@ -76,7 +76,7 @@ test('a ratio with a missing line is not graded, and claiming it passed is count
 
   assert.equal(xom.ratios.debt.value, null, 'no debt line is on file for this one');
   assert.equal(xom.agrees.debt, null, 'a ratio that cannot be computed is not marked right or wrong');
-  assert.equal(kpi(report, 'Missing lines admitted').value.startsWith('0 of '), true);
+  assert.equal(check(report, 'missing').count, check(report, 'missing').of, 'every missing line was called inside the limit');
   assert.ok(check(report, 'overall').of < 48 * 3, 'the ungradeable calls are left out of the total');
 });
 
@@ -107,7 +107,7 @@ test('a verdict that contradicts its own screens is counted', async () => {
   const report = demo.report(results, context);
 
   assert.equal(check(report, 'verdict').count, 48, 'a pass cannot sit beside a failed screen');
-  assert.equal(kpi(report, 'Verdicts that follow their own answers').value, '0%');
+  assert.equal(report.metrics.contradictionRate, 1);
 });
 
 test('the interest income band is checked against revenue', async () => {
@@ -125,7 +125,7 @@ test('the activity screen grades only what it can state outright', async () => {
   const report = demo.report(results, context);
 
   assert.equal(kpi(report, 'Conventional banks refused').value, '0 of 6', 'JPM and BAC under three rule sets');
-  assert.match(kpi(report, 'Sent to a person').context, /12 of these are activity questions/);
+  assert.ok(report.findings.some((line) => /12 of 12 screenings of businesses that only touch a prohibited activity/.test(line)));
   assert.ok(report.findings.some((line) => /scholar/.test(line)));
 });
 

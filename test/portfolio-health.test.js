@@ -83,7 +83,7 @@ test('a perfect run names every problem and leaves the healthy ones alone', asyn
 
   assert.equal(kpi(report, 'Risk named exactly').value, '19 of 19');
   assert.equal(kpi(report, 'Healthy portfolios left alone').value, '5 of 5');
-  assert.equal(kpi(report, 'Diversified in name only, spotted').value, '4 of 4');
+  assert.equal(kpi(report, 'Main risk right').value, '24 of 24');
   assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0]);
   assert.deepEqual(report.findings, []);
 });

@@ -81,7 +81,7 @@ test('a perfect run stops every fraud and turns nobody away', async () => {
   assert.equal(kpi(report, 'Fraud stopped').value, '9 of 9');
   assert.equal(kpi(report, 'Pattern named right').value, '9 of 9');
   assert.equal(kpi(report, 'Good orders declined').value, 0);
-  assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0]);
+  assert.deepEqual(report.checks.map((check) => check.count), [0, 0, 0, 0, 0, 0, 0], 'including orders approved with a fraud pattern named');
   assert.deepEqual(report.findings, []);
 });
 

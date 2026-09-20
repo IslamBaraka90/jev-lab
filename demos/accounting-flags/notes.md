@@ -33,8 +33,8 @@ visible in the numbers rather than asserted anywhere.
 ## The finding that matters
 
 **The ranking works and the decision does not.** A planted year is scored 3.8 of 6 on severity and a
-clean one 2.6 — a consistent 1.2-point gap, which is enough to sort by. Read the coverage curve: take
-the years scored 3 and above and you review 58 of 120 and catch 35 of the 47 planted ones. That is a
+clean one 2.6 — a consistent 1.2-point gap, which is enough to sort by. Sort by severity: take
+the years scored 3 and above and you review 58 of 120 and catch 35 of the 37 unexplained ones. That is a
 usable triage.
 
 The yes-or-no is a different story. Fifty-one of the seventy-three clean years were held up for
@@ -74,7 +74,7 @@ The same pass found two other data defects, both of which had been counted again
   drawn only from those that leave revenue alone.
 
 The third recording followed a change to the `investigate` question. As first written it asked whether
-a year should "go to somebody" and set no bar, and the answer came back yes for all 110 graded items —
+a year should "go to somebody" and set no bar, and the answer came back yes for every graded item —
 a question with no discrimination in it measures nothing. It now states the standard in the state
 ("most years are unremarkable; hold one up only where somebody relying on these numbers would be
 misled") and asks whether to hold up the sign-off. That moved the clean-year holds from 73 of 73 to 51

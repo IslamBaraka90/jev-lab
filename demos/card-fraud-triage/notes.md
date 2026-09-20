@@ -64,7 +64,8 @@ twenty-two minutes.
   frauds. That is the single most useful field in the answer set, and it is doing most of the work in
   the re-ordering.
 - **The model wants to contact the cardholder on 207 alerts**, half the file. As an operating
-  instruction that is unusable; as a signal it is nearly uncorrelated with the fraud. If this demo is
+  instruction that is unusable. As a signal it is not noise: 15 of the 16 frauds are among the 207, and
+  the answer alone ranks fraud about as well as the likelihood score does (AUC 0.92). If this demo is
   re-recorded, that question should be narrowed to something like "would a message settle it faster
   than a block", which is what it was meant to ask.
 - Nothing here re-orders the queue on screen yet. The comparison is in the report, and the top of the
