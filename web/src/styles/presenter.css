@@ -1,0 +1,406 @@
+/* Presenter mode: five full-screen beats. Sized for a 1080p capture, legible from the back of a room,
+   and nothing scrolls unless a stage is genuinely taller than the screen. */
+
+html.is-presenting,
+html.is-presenting body {
+  overflow: hidden;
+}
+
+.presenter {
+  --present-accent: var(--accent);
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  background:
+    radial-gradient(1200px 600px at 85% -10%, color-mix(in srgb, var(--present-accent) 14%, transparent), transparent 70%),
+    radial-gradient(900px 500px at -10% 110%, color-mix(in srgb, var(--focus) 10%, transparent), transparent 70%),
+    var(--bg);
+  font-size: clamp(16px, 1.05vw, 20px);
+}
+
+.presenter.domain-books { --present-accent: var(--domain-books); }
+.presenter.domain-orders { --present-accent: var(--domain-orders); }
+.presenter.domain-fraud { --present-accent: var(--domain-fraud); }
+.presenter.domain-crypto { --present-accent: var(--domain-crypto); }
+.presenter.domain-portfolio { --present-accent: var(--domain-portfolio); }
+.presenter.domain-trades { --present-accent: var(--domain-trades); }
+.presenter.domain-screening { --present-accent: var(--domain-screening); }
+.presenter.domain-news { --present-accent: var(--domain-news); }
+.presenter.domain-strategy { --present-accent: var(--domain-strategy); }
+
+.presenter-loading {
+  place-self: center;
+}
+
+.presenter-beat {
+  min-height: 0;
+  display: grid;
+  padding: clamp(24px, 4vh, 56px) clamp(24px, 5vw, 96px) clamp(16px, 2vh, 28px);
+  animation: beat-in var(--page) ease-out;
+}
+
+@keyframes beat-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .presenter-beat,
+  .beat-verdict {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.presenter .eyebrow {
+  color: var(--present-accent);
+  font-size: 0.85em;
+}
+
+.presenter .panel {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+}
+
+/* Beat 1: the job */
+
+.beat-problem {
+  align-self: center;
+  display: grid;
+  gap: clamp(12px, 2vh, 24px);
+  max-width: 1200px;
+}
+
+.beat-problem h1 {
+  font-size: clamp(40px, 5.2vw, 96px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  max-width: 16ch;
+}
+
+.beat-lede {
+  font-size: clamp(20px, 1.9vw, 34px);
+  line-height: 1.3;
+  color: var(--muted);
+  max-width: 34ch;
+  margin: 0;
+}
+
+.beat-stat {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s16);
+  margin: clamp(12px, 3vh, 40px) 0 0;
+  padding-top: clamp(12px, 2vh, 24px);
+  border-top: 1px solid var(--border);
+}
+
+.beat-stat strong {
+  font-size: clamp(56px, 8vw, 150px);
+  font-weight: 760;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  color: var(--present-accent);
+}
+
+.beat-stat span {
+  font-size: clamp(18px, 1.5vw, 28px);
+  color: var(--muted);
+}
+
+/* Beats 2–4: an item, its answers, a miss */
+
+.beat-item,
+.beat-answers,
+.beat-proof {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: clamp(12px, 2vh, 24px);
+}
+
+.beat-head {
+  display: grid;
+  gap: 6px;
+}
+
+.beat-head h2 {
+  font-size: clamp(26px, 2.6vw, 48px);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.beat-stage {
+  min-height: 0;
+  overflow: auto;
+  scrollbar-width: none;
+  padding: clamp(16px, 2vh, 28px);
+}
+
+.beat-stage::-webkit-scrollbar {
+  display: none;
+}
+
+.beat-columns {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(16px, 2vw, 32px);
+  align-items: start;
+}
+
+.beat-columns > * {
+  min-height: 0;
+  max-height: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.beat-columns > *::-webkit-scrollbar {
+  display: none;
+}
+
+.beat-miss .beat-columns {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+}
+
+.beat-verdict {
+  opacity: 0.25;
+  transform: translateY(8px);
+  transition: opacity var(--page), transform var(--page);
+}
+
+.beat-verdict.landed {
+  opacity: 1;
+  transform: none;
+}
+
+.presenter .answers-panel > .row .button,
+.presenter .answers-panel > .row .meta {
+  display: none;
+}
+
+.presenter .verdict-headline {
+  font-size: clamp(24px, 2.2vw, 40px);
+}
+
+.beat-caption,
+.beat-closing {
+  margin: 0;
+  max-width: 60ch;
+  font-size: clamp(18px, 1.55vw, 28px);
+  line-height: 1.35;
+  color: var(--text);
+  padding-left: var(--s16);
+  border-left: 3px solid var(--present-accent);
+}
+
+/* Beat 5: the proof */
+
+.beat-proof {
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+}
+
+.beat-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(12px, 1.5vw, 24px);
+}
+
+.beat-kpi {
+  display: grid;
+  gap: 4px;
+  padding: clamp(14px, 2vh, 24px) clamp(16px, 1.6vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+}
+
+.beat-kpi span {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.beat-kpi strong {
+  font-size: clamp(36px, 4.4vw, 84px);
+  font-weight: 760;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.beat-kpi small {
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.beat-kpi.tone-good strong {
+  color: var(--positive);
+}
+
+.beat-kpi.tone-warn strong {
+  color: var(--warning);
+}
+
+.beat-kpi.tone-bad strong {
+  color: var(--danger);
+}
+
+.beat-chart {
+  min-height: 0;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.beat-chart details,
+.beat-chart .class-table details {
+  display: none;
+}
+
+.beat-chart .coverage-curve {
+  max-height: 38vh;
+}
+
+.beat-closing {
+  font-size: clamp(20px, 1.9vw, 34px);
+  font-weight: 650;
+}
+
+/* The bar along the bottom */
+
+.presenter-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--s16);
+  padding: var(--s8) clamp(24px, 5vw, 96px);
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  font-size: 14px;
+}
+
+.presenter-slug {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  min-width: 0;
+  color: var(--muted);
+}
+
+.presenter-slug .num {
+  padding: 1px 8px;
+  border-radius: 6px;
+  background: var(--present-accent);
+  color: var(--bg);
+  font-weight: 750;
+}
+
+.presenter-slug strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.presenter-dots {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.presenter-dots button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.presenter-dots button .num {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--control);
+  font-size: 11px;
+}
+
+.presenter-dots button.done .num {
+  background: var(--surface2);
+  border-color: var(--surface2);
+  color: var(--text);
+}
+
+.presenter-dots button.current {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.presenter-dots button.current .num {
+  background: var(--present-accent);
+  border-color: var(--present-accent);
+  color: var(--bg);
+}
+
+.presenter-dots .dot-label {
+  display: none;
+}
+
+.presenter-dots button.current .dot-label {
+  display: inline;
+}
+
+.presenter-tools {
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+@media (max-width: 900px) {
+  .beat-columns,
+  .beat-miss .beat-columns {
+    grid-template-columns: minmax(0, 1fr);
+    overflow: auto;
+  }
+
+  .presenter-bar {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .presenter-slug {
+    display: none;
+  }
+}
+
+/* A beat never grows past the screen: its tall parts scroll inside themselves instead. */
+.presenter-beat {
+  overflow: hidden;
+}
+
+.presenter-beat > div {
+  min-height: 0;
+  height: 100%;
+}
+
+.presenter .answer-summary {
+  padding: clamp(10px, 1.6vh, 18px) 0;
+  font-size: 1.05em;
+}
+
+.presenter .answer-value > strong {
+  font-size: 1.15em;
+}

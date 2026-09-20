@@ -12,7 +12,7 @@ const KNOWN = new Set([
 ]);
 
 /** The model beside the alternatives: a rule somebody could write in an afternoon, or no judgement at all. */
-function BaselineBars({ rows }) {
+export function BaselineBars({ rows }) {
   const best = Math.max(...rows.map((row) => row.value ?? 0), 0.0001);
   return (
     <div className="stack" style={{ gap: 8 }}>

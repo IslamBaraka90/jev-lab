@@ -343,11 +343,19 @@
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 }
 
-.record-facts > div.highlight {
+.record-facts {
+  gap: 4px;
+}
+
+.record-facts > div {
   padding: var(--s8) var(--s12);
-  margin: calc(var(--s8) * -1) calc(var(--s12) * -1);
   border-radius: 8px;
+}
+
+/* The two or three fields that decide the case, as the demo names them. */
+.record-facts > div.highlight {
   background: color-mix(in srgb, var(--accent) 12%, transparent);
+  box-shadow: inset 2px 0 0 var(--accent);
 }
 
 .record-text {

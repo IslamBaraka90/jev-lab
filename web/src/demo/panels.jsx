@@ -54,9 +54,9 @@ function AnswerRow({ name, question, answer, open, onToggle }) {
 }
 
 /** Every answer as one line, in question order; any of them opens to its full distribution. */
-export function AnswersPanel({ questions, answers, revealed = Infinity, expanded = false }) {
+export function AnswersPanel({ questions, answers, revealed = Infinity, collapsed = false }) {
   const names = Object.keys(questions);
-  const [open, setOpen] = useState(() => new Set(expanded ? names : names.slice(0, 1)));
+  const [open, setOpen] = useState(() => new Set(collapsed ? [] : names.slice(0, 1)));
   const toggle = (name) =>
     setOpen((current) => {
       const next = new Set(current);
