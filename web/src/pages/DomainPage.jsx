@@ -2,7 +2,7 @@ import { DemoCard } from '../components/DemoCard.jsx';
 import scoreboard from '../generated/scoreboard.json';
 import { Icon } from '../components/Icon.jsx';
 import { EmptyState } from '../components/ui.jsx';
-import { DOMAIN_BY_ID } from '../../../demos/index.js';
+import { DOMAIN_BY_ID } from '../../../demos/domains.js';
 import { cards } from '../lib/catalog.js';
 import { Link } from '../lib/router.jsx';
 

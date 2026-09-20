@@ -72,7 +72,7 @@ function positions(graph, distance) {
 
 const strokeFor = (weight, most) => 1 + Math.min(6, (weight / (most || 1)) * 6);
 
-export function GraphView({ item, demo }) {
+export function GraphView({ item, demo, compact = false }) {
   const graph = item.graph;
   if (!graph?.nodes?.length) {
     return <p className="meta">This item has no graph to draw.</p>;
@@ -137,8 +137,10 @@ export function GraphView({ item, demo }) {
         })}
       </svg>
 
-      {Object.keys(rest).length > 1 && <Record record={rest} hide={['id', ...(demo?.stage?.hide ?? [])]} labels={demo?.stage?.labels} highlight={demo?.stage?.highlight} />}
+      {/* On a presenter beat the picture is the point; the fields and the table stay on the demo page. */}
+      {!compact && Object.keys(rest).length > 1 && <Record record={rest} hide={['id', ...(demo?.stage?.hide ?? [])]} labels={demo?.stage?.labels} highlight={demo?.stage?.highlight} />}
 
+      {!compact && (
       <details className="graph-table">
         <summary>Transfers as a table</summary>
         <div className="table-scroll details-content">
@@ -158,6 +160,7 @@ export function GraphView({ item, demo }) {
           </table>
         </div>
       </details>
+      )}
     </div>
   );
 }

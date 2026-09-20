@@ -1,0 +1,856 @@
+{
+ "cards": [
+  {
+   "id": "ledger-integrity",
+   "title": "Ledger integrity review",
+   "domain": "books",
+   "domainTitle": "Books and reconciliation",
+   "value": "Find the journal lines that do not reconcile, and say why each one is wrong.",
+   "tags": [
+    "reconciliation",
+    "accounting",
+    "audit",
+    "month end"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "bank-reconciliation",
+   "title": "Bank reconciliation",
+   "domain": "books",
+   "domainTitle": "Books and reconciliation",
+   "value": "Match the bank statement to the books, and name the reason for everything left over.",
+   "tags": [
+    "reconciliation",
+    "accounting",
+    "cash",
+    "month end"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "expense-posting",
+   "title": "Expense posting",
+   "domain": "books",
+   "domainTitle": "Books and reconciliation",
+   "value": "Post every uncategorised expense to the right account, and automate only the share you can defend.",
+   "tags": [
+    "bookkeeping",
+    "classification",
+    "automation",
+    "accounts payable"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "three-way-match",
+   "title": "Three-way match",
+   "domain": "books",
+   "domainTitle": "Books and reconciliation",
+   "value": "Catch the invoices that do not agree with the purchase order or goods receipt before payment runs.",
+   "tags": [
+    "accounts payable",
+    "invoices",
+    "procurement",
+    "controls"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "close-blockers",
+   "title": "Close blockers",
+   "domain": "books",
+   "domainTitle": "Books and reconciliation",
+   "value": "Turn a trial balance into a ranked list of what is stopping the close, and who has to fix it.",
+   "tags": [
+    "month end",
+    "close",
+    "trial balance",
+    "controls"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "order-risk",
+   "title": "Order risk at checkout",
+   "domain": "orders",
+   "domainTitle": "Orders and customers",
+   "value": "Approve, review or decline a checkout in one call, with the reason attached to the order.",
+   "tags": [
+    "fraud",
+    "checkout",
+    "ecommerce",
+    "payments"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "cod-abuse",
+   "title": "Repeat non-fulfilment abuse",
+   "domain": "orders",
+   "domainTitle": "Orders and customers",
+   "value": "Spot customers who order on delivery and never take the parcel before the next one ships.",
+   "tags": [
+    "orders",
+    "cash on delivery",
+    "returns",
+    "customer risk"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "dispute-routing",
+   "title": "Dispute and refund routing",
+   "domain": "orders",
+   "domainTitle": "Orders and customers",
+   "value": "Turn a dispute queue into backend calls: the action, the money and the reason code, typed.",
+   "tags": [
+    "disputes",
+    "refunds",
+    "tool calls",
+    "ecommerce"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "chargeback-evidence",
+   "title": "Chargeback evidence",
+   "domain": "orders",
+   "domainTitle": "Orders and customers",
+   "value": "Judge whether an evidence packet can win the case, and name the document that would change the answer.",
+   "tags": [
+    "orders",
+    "payments",
+    "chargebacks",
+    "evidence"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "merchant-onboarding",
+   "title": "Merchant onboarding risk",
+   "domain": "orders",
+   "domainTitle": "Orders and customers",
+   "value": "Underwrite a new merchant from its own application, and set the reserve that makes it acceptable.",
+   "tags": [
+    "underwriting",
+    "onboarding",
+    "risk",
+    "payments"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "delivery-exceptions",
+   "title": "Delivery exceptions",
+   "domain": "orders",
+   "domainTitle": "Orders and customers",
+   "value": "Work out who caused a failed delivery, and what to do with the parcel next.",
+   "tags": [
+    "orders",
+    "delivery",
+    "couriers",
+    "addresses"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "card-fraud-triage",
+   "title": "Card fraud triage",
+   "domain": "fraud",
+   "domainTitle": "Fraud and financial crime",
+   "value": "Re-rank an alert queue so the hour an analyst has goes to the alerts that are actually fraud.",
+   "tags": [
+    "fraud",
+    "alerts",
+    "triage",
+    "cards"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "aml-alert-triage",
+   "title": "AML alert triage",
+   "domain": "fraud",
+   "domainTitle": "Fraud and financial crime",
+   "value": "Cut a monitoring queue to the alerts worth an analyst’s time, with the pattern named.",
+   "tags": [
+    "aml",
+    "compliance",
+    "alerts",
+    "triage"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "account-takeover",
+   "title": "Account takeover",
+   "domain": "fraud",
+   "domainTitle": "Fraud and financial crime",
+   "value": "Tell a stolen session from a customer on a new phone, and choose the check that gets in the way least.",
+   "tags": [
+    "fraud",
+    "accounts",
+    "sessions",
+    "authentication"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "sanctions-name-match",
+   "title": "Sanctions name matching",
+   "domain": "fraud",
+   "domainTitle": "Fraud and financial crime",
+   "value": "Decide whether a screening hit is the same person, and say which piece of evidence settled it.",
+   "tags": [
+    "fraud",
+    "sanctions",
+    "identity",
+    "screening",
+    "compliance"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "insider-surveillance",
+   "title": "Insider trading surveillance",
+   "domain": "fraud",
+   "domainTitle": "Fraud and financial crime",
+   "value": "Read a fictional employee trade against genuine price history and decide whether surveillance should open a case.",
+   "tags": [
+    "fraud",
+    "surveillance",
+    "trades",
+    "market-data",
+    "compliance"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 6,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "mule-network",
+   "title": "Mule networks",
+   "domain": "fraud",
+   "domainTitle": "Fraud and financial crime",
+   "value": "Find the accounts that exist to move other people’s money, and the part each one plays.",
+   "tags": [
+    "mules",
+    "networks",
+    "graph",
+    "financial crime"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "wallet-risk",
+   "title": "Wallet risk scoring",
+   "domain": "crypto",
+   "domainTitle": "Crypto and on-chain",
+   "value": "Score a wallet before you take its money, and name the exposure that drove the score.",
+   "tags": [
+    "crypto",
+    "wallets",
+    "screening",
+    "deposits"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "wallet-profiling",
+   "title": "Wallet behaviour profiling",
+   "domain": "crypto",
+   "domainTitle": "Crypto and on-chain",
+   "value": "Name what a wallet appears to be from its activity fingerprint alone, and expose where types blur.",
+   "tags": [
+    "crypto",
+    "wallets",
+    "behaviour",
+    "classification"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "mixer-tracing",
+   "title": "Tracing and mixer exposure",
+   "domain": "crypto",
+   "domainTitle": "Crypto and on-chain",
+   "value": "Follow funds back through the hops and say how close the money is to something you cannot take.",
+   "tags": [
+    "crypto",
+    "tracing",
+    "graph",
+    "exposure"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "token-screening",
+   "title": "Token screening",
+   "domain": "crypto",
+   "domainTitle": "Crypto and on-chain",
+   "value": "Read contract, liquidity, holder and trading facts and say whether a fictional token is a trap.",
+   "tags": [
+    "crypto",
+    "tokens",
+    "rug risk",
+    "honeypots"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "sybil-clusters",
+   "title": "Sybil clusters",
+   "domain": "crypto",
+   "domainTitle": "Crypto and on-chain",
+   "value": "Find the wallets that are really one person, before an allocation goes out.",
+   "tags": [
+    "crypto",
+    "sybil",
+    "allocation",
+    "clusters"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "portfolio-health",
+   "title": "Portfolio health",
+   "domain": "portfolio",
+   "domainTitle": "Portfolio",
+   "value": "Hand over a list of holdings and get back the problem, graded, with what to do about it.",
+   "tags": [
+    "portfolio",
+    "risk",
+    "advice",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "rebalance-review",
+   "title": "Rebalance review",
+   "domain": "portfolio",
+   "domainTitle": "Portfolio",
+   "value": "Read a rebalancing proposal trade by trade, and let the approved ones fall out as an order list.",
+   "tags": [
+    "portfolio",
+    "trading",
+    "rebalancing",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "mandate-compliance",
+   "title": "Mandate compliance",
+   "domain": "portfolio",
+   "domainTitle": "Portfolio",
+   "value": "Run a portfolio against its investment policy and list every breach, with how it happened.",
+   "tags": [
+    "compliance",
+    "policy",
+    "portfolio",
+    "rules"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "portfolio-compare",
+   "title": "Portfolio compare",
+   "domain": "portfolio",
+   "domainTitle": "Portfolio",
+   "value": "Put two portfolios side by side against one goal and get a reasoned pick, not a performance table.",
+   "tags": [
+    "portfolio",
+    "comparison",
+    "goals",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "factor-exposure",
+   "title": "Factor and sector exposure",
+   "domain": "portfolio",
+   "domainTitle": "Portfolio",
+   "value": "Say what a portfolio is actually betting on, including the bets nobody meant to make.",
+   "tags": [
+    "portfolio",
+    "factor",
+    "sector",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "income-planning",
+   "title": "Income and cash planning",
+   "domain": "portfolio",
+   "domainTitle": "Portfolio",
+   "value": "Check whether the income a portfolio produces actually lands when the money is needed.",
+   "tags": [
+    "portfolio",
+    "income",
+    "cash",
+    "calendar"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "post-trade-review",
+   "title": "Post-trade lesson review",
+   "domain": "trades",
+   "domainTitle": "Trades and execution",
+   "value": "Take a closed trade apart: was there a plan, was it possible, was it followed, and what is the lesson.",
+   "tags": [
+    "trades",
+    "discipline",
+    "charts",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 5,
+   "questionCount": 6,
+   "status": "ready"
+  },
+  {
+   "id": "trade-feature-analysis",
+   "title": "Trade feature analysis",
+   "domain": "trades",
+   "domainTitle": "Trades and execution",
+   "value": "Find which parts of a setup actually separate the winners from the losers, instead of guessing.",
+   "tags": [
+    "trades",
+    "features",
+    "outcomes",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "trader-behaviour",
+   "title": "Trader behaviour",
+   "domain": "trades",
+   "domainTitle": "Trades and execution",
+   "value": "Read a complete trading day and name the repeatable habit that is costing money.",
+   "tags": [
+    "trades",
+    "behaviour",
+    "coaching",
+    "sessions"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "missed-trades",
+   "title": "Missed trades",
+   "domain": "trades",
+   "domainTitle": "Trades and execution",
+   "value": "Audit every valid setup that was not taken, then count what hesitation cost without penalising justified skips.",
+   "tags": [
+    "trades",
+    "rules",
+    "misses",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "execution-quality",
+   "title": "Execution quality",
+   "domain": "trades",
+   "domainTitle": "Trades and execution",
+   "value": "Measure the distance between the signal and the fill, and say what caused it.",
+   "tags": [
+    "trades",
+    "execution",
+    "slippage",
+    "real prices"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "journal-vs-reality",
+   "title": "Journal versus reality",
+   "domain": "trades",
+   "domainTitle": "Trades and execution",
+   "value": "Compare what a trader wrote with what they actually did, and find where the story drifts.",
+   "tags": [
+    "trades",
+    "journal",
+    "discipline",
+    "text"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "goal-screening",
+   "title": "Screening for a goal",
+   "domain": "screening",
+   "domainTitle": "Screening and fundamentals",
+   "value": "Say the goal in plain words, and get candidates judged against it with the reason each one made or missed the list.",
+   "tags": [
+    "screening",
+    "fundamentals",
+    "real data",
+    "goals"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "sharia-screen",
+   "title": "Sharia screening, three rule sets",
+   "domain": "screening",
+   "domainTitle": "Screening and fundamentals",
+   "value": "Run the same company through three named rule sets and watch the verdict change with the standard, with every ratio shown beside the demo’s own sum.",
+   "tags": [
+    "screening",
+    "fundamentals",
+    "real data",
+    "rules"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 4,
+   "questionCount": 6,
+   "status": "ready"
+  },
+  {
+   "id": "accounting-flags",
+   "title": "Accounting red flags",
+   "domain": "screening",
+   "domainTitle": "Screening and fundamentals",
+   "value": "Find the statement patterns that deserve a second look, and tell them apart from the ones the notes already explain.",
+   "tags": [
+    "screening",
+    "statements",
+    "forensic",
+    "text"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "fundamental-read",
+   "title": "Fundamental read",
+   "domain": "screening",
+   "domainTitle": "Screening and fundamentals",
+   "value": "Read four years of statements directly, grade quality and leverage, and compare the judgement with transparent ratios.",
+   "tags": [
+    "screening",
+    "fundamentals",
+    "statements",
+    "ratios"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 5,
+   "questionCount": 6,
+   "status": "ready"
+  },
+  {
+   "id": "dividend-safety",
+   "title": "Dividend safety",
+   "domain": "screening",
+   "domainTitle": "Screening and fundamentals",
+   "value": "Judge whether a payout survives a bad year and show yield beside safety without leaking price to the model.",
+   "tags": [
+    "screening",
+    "dividends",
+    "cash flow",
+    "yield"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "peer-valuation",
+   "title": "Peer valuation",
+   "domain": "screening",
+   "domainTitle": "Screening and fundamentals",
+   "value": "Choose what is actually cheap inside a peer group and show when a premium or discount has fundamental support.",
+   "tags": [
+    "screening",
+    "valuation",
+    "peers",
+    "fundamentals"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "news-impact",
+   "title": "News impact",
+   "domain": "news",
+   "domainTitle": "News, filings and links",
+   "value": "Judge a headline against the chart it landed on: does it matter, which way, over what horizon, and did the market already know.",
+   "tags": [
+    "news",
+    "prices",
+    "real data",
+    "calibration"
+   ],
+   "dataClass": "mixed",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "filings-read",
+   "title": "Filings and calls",
+   "domain": "news",
+   "domainTitle": "News, filings and links",
+   "value": "Read a filing or a call and pull out what changed: the guidance, the tone against the numbers, the risk that was not there last time.",
+   "tags": [
+    "news",
+    "filings",
+    "text",
+    "reading"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "rumour-grading",
+   "title": "Rumour grading",
+   "domain": "news",
+   "domainTitle": "News, filings and links",
+   "value": "Grade a claim before acting on it: how good the source is, whether anybody independent is saying it, and whether the spread was organised.",
+   "tags": [
+    "news",
+    "evidence",
+    "coordination",
+    "text"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "event-clustering",
+   "title": "Event clustering",
+   "domain": "news",
+   "domainTitle": "News, filings and links",
+   "value": "Collapse a noisy headline feed into the events that happened and keep the source worth reading.",
+   "tags": [
+    "news",
+    "clustering",
+    "sources",
+    "deduplication"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 6,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "entity-links",
+   "title": "Entity links",
+   "domain": "news",
+   "domainTitle": "News, filings and links",
+   "value": "Turn scattered evidence into an active relationship map and show where trouble could travel two steps.",
+   "tags": [
+    "news",
+    "entities",
+    "relationships",
+    "contagion"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 6,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "golden-cross-review",
+   "title": "Golden cross review",
+   "domain": "strategy",
+   "domainTitle": "Strategy research",
+   "value": "Stop asking whether the strategy works. Ask whether this signal, on this chart, deserves the trade.",
+   "tags": [
+    "strategy",
+    "prices",
+    "real data",
+    "signals"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 4,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "setup-timing",
+   "title": "Setup timing",
+   "domain": "strategy",
+   "domainTitle": "Strategy research",
+   "value": "Test when two daily setups work by weekday, month phase and direction without leaking a forward bar.",
+   "tags": [
+    "strategy",
+    "timing",
+    "calendar",
+    "outcomes"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 6,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "regime-classification",
+   "title": "Regime classification",
+   "domain": "strategy",
+   "domainTitle": "Strategy research",
+   "value": "Decide what kind of market this is, then let that decide which strategy is allowed to trade.",
+   "tags": [
+    "strategy",
+    "prices",
+    "real data",
+    "regime"
+   ],
+   "dataClass": "cached-real",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  },
+  {
+   "id": "strategy-correlation",
+   "title": "Strategy correlation",
+   "domain": "strategy",
+   "domainTitle": "Strategy research",
+   "value": "Find out whether a book of five strategies is really five bets or one bet wearing five names.",
+   "tags": [
+    "strategy",
+    "correlation",
+    "portfolio",
+    "risk"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 4,
+   "questionCount": 4,
+   "status": "ready"
+  },
+  {
+   "id": "overfit-review",
+   "title": "Overfit review",
+   "domain": "strategy",
+   "domainTitle": "Strategy research",
+   "value": "Look at a backtest report the way a sceptic would, and say how much of it to believe.",
+   "tags": [
+    "strategy",
+    "backtest",
+    "overfitting",
+    "research"
+   ],
+   "dataClass": "synthetic",
+   "readMinutes": 5,
+   "questionCount": 5,
+   "status": "ready"
+  }
+ ]
+}

@@ -1,11 +1,12 @@
 // Reading the demo registry for the catalog: cards, filters, search and the "I need to" shortcuts.
-// Nothing here touches a dataset or a fixture, so the catalog stays cheap no matter how many demos
-// the project ends up with.
+// The cards come from a manifest `npm run score` writes, so the catalog and the home page load neither a
+// dataset nor a demo definition, and stay cheap no matter how many demos the project ends up with.
 
-import { DEMOS, DOMAINS, demoCard } from '../../../demos/index.js';
+import { DOMAINS } from '../../../demos/domains.js';
+import manifest from '../generated/catalog.json';
 
 /** Catalog cards in the order the series walks them. */
-export const cards = () => DEMOS.map(demoCard);
+export const cards = () => manifest.cards;
 
 export const domains = () => DOMAINS;
 

@@ -1354,3 +1354,8 @@ tr.thin-sample {
   overflow-wrap: anywhere;
   display: block;
 }
+
+.lift.down {
+  background: var(--dangerBg);
+  color: var(--danger);
+}

@@ -160,9 +160,9 @@ function ClassTable({ stats }) {
         </span>
         <span className="sep">·</span>
         always answering “{humaniseValue(stats.majorityClass)}” would score <strong className="num">{percent(stats.majorityBaseline)}</strong>
-        <span className={`lift ${lift > 0.02 ? 'up' : 'flat'}`}>
+        <span className={`lift ${lift > 0.02 ? 'up' : lift < -0.005 ? 'down' : 'flat'}`}>
           {lift >= 0 ? '+' : '−'}
-          {Math.abs(lift * 100).toFixed(1)} pts over that
+          {Math.abs(lift * 100).toFixed(1)} pts {lift >= 0 ? 'over' : 'under'} that
         </span>
         {stats.macroF1 !== null && (
           <>
@@ -241,7 +241,7 @@ export function CoverageCurve({ curve }) {
   return (
     <div className="stack coverage-block" style={{ gap: 10 }}>
       <h4>{curve.title}</h4>
-      <svg className="coverage-curve" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${curve.yLabel} against ${curve.xLabel}. ${points.map((point) => `at ${thresholdText(point)}, ${point.reviewed} and ${point.caught} of ${curve.of}`).join('; ')}`}>
+      <svg className="coverage-curve" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${curve.yLabel} against ${curve.xLabel}. ${points.map((point) => `at ${thresholdText(point)}, ${point.reviewed} and ${point.caught} of ${curve.of}${Number.isFinite(point.rate) ? `, ${curve.rateLabel ?? 'rate'} ${percent(point.rate)}` : ''}`).join('; ')}`}>
         {niceTicks(maxY).map((tick) => (
           <g key={`y${tick}`}>
             <line className="grid-line" x1={pad.left} x2={width - pad.right} y1={y(tick)} y2={y(tick)} />

@@ -1,142 +1,104 @@
 # Leftovers
 
-Open items parked deliberately, so the demo series keeps moving. Each one says what is wrong, what it
-would cost to fix, and what the fix actually is. Nothing here blocks building the next demo.
+Open items parked deliberately. Each one says what is wrong, what it would cost to fix, and what the
+fix actually is. Nothing here stops the site from being shown.
 
-Last reviewed after demo 121, with 101 to 105, 111, 113, 115 and 121 built and recorded.
-
----
-
-## 1. Decisions that cost a paid re-record
-
-### 1.1 Demo 101 treats input VAT as a payable
-
-`demos/ledger-integrity/` · 502 recorded answers
-
-The run raised 75 false alarms, and **68 of them are the same objection**: input VAT debited to "VAT
-payable". The model is right and the dataset is wrong — there is no VAT receivable account in the
-chart, so the generator had nowhere else to put it. The demo currently reports this in its findings
-line rather than hiding it.
-
-- **Fix:** add a VAT receivable account to the chart of accounts, regenerate seed 1101, re-record.
-- **Cost:** 502 requests, roughly 680K input and 128K output tokens.
-- **Why parked:** the demo is honest as it stands, and the note explains the convention. Worth doing
-  before the video is recorded, because 68 identical false alarms are hard to narrate.
-
-### 1.2 Demo 103's dataset is too easy
-
-`demos/expense-posting/` · 400 recorded answers
-
-399 of 400 correct, which says more about the file than the model: three charges in four come from a
-vendor that only ever posts to one account, and the state shows up to three earlier postings from that
-vendor, so those rows are a lookup rather than a judgement.
-
-- **Fix:** cap `priorPostings` at one, or drop it for the ambiguous vendors, then re-record.
-- **Cost:** 400 requests, roughly 555K input and 102K output tokens.
-- **Why parked:** the caveat is written into `notes.md`, and the calibration result — the single wrong
-  answer is also the least confident one — is worth showing as it is.
+Last reviewed after the UI/UX review of September 2026 ([docs/ui-ux-review](docs/ui-ux-review/README.md))
+and the changes that followed it: the result-first demo page, presenter mode, the per-demo grades,
+verdicts and baselines, the scoreboard and the run history.
 
 ---
 
-## 2. Waiting on a value or an action
+## 1. Datasets that need a paid re-record
 
-### 2.1 The repository URL is a placeholder
+The review's most important finding is about data, not design: **on most demos a rule of a few lines
+over fields already in the state matches or beats the model**, and on several the label can be read
+straight off one field. Every such demo now says so on its page — a caveat banner, a baseline bar
+beside the model, and a finding where the rule wins — so nothing is hidden. Fixing it means changing a
+generator and recording again, which is the only paid step, so each one is listed with its cost.
 
-`web/src/lib/links.js` falls back to `https://github.com/set-VITE_REPO_URL`, so every "run it yourself"
-and "open this file" link is dead until `VITE_REPO_URL` is set at build time. `VITE_REPO_REF` defaults
-to `main`, which means line links drift as the code moves — pin it to a commit for the video build.
+The per-demo detail, with the field that leaks and the rule that wins, is in the nine domain files under
+`docs/ui-ux-review/`. The ones worth doing first:
 
-### 2.2 Two finished demos are not merged
+| Demo | What is wrong | Fix | Requests |
+|---|---|---|---:|
+| 101 ledger-integrity | No VAT receivable account, so 68 of 75 false alarms are one correct objection | Add the account, regenerate seed 1101 | 502 |
+| 102 bank-reconciliation | Statement references end in `-FEE`, `-DUP`, `-FX`…, which name the label | Neutral references | 60 |
+| 103 expense-posting | Three charges in four are a vendor lookup | Cap `priorPostings` at one | 400 |
+| 116 delivery-exceptions | The scan reason code maps one-to-one to the fault, and `linkedToDemo` is in the state | Drop both from the state | 250 |
+| 123 aml-alert-triage | `relationshipNote` is one of twelve fixed strings that name the label | Free-text notes | 300 |
+| 124 sanctions-name-match | The identifier fragment spells the answer | Realistic identifiers | 200 |
+| 141, 145 | `adviser_note` and `measurementNote` give the class away | Remove or neutralise | 24 + 240 |
+| 172 event-clustering | True cluster members share the exact title string | Paraphrased titles, real near-misses | 380 |
+| 184 overfit-review | `untouched_validation_as_stated` is present in every honest item and no flawed one | Drop the field | 140 |
+| 183 regime-classification | Range break is three quarters of the book | Balance the families | 312 |
+| 181 golden-cross-review | 71 crossovers, because the cached history is six years | Fetch ten years | ~240 |
 
-Four finished demos sit on a chain of branches, each built on the one before: `demo/105-close-blockers`,
-`demo/111-order-risk`, `demo/113-dispute-routing` and the 115 and 121 work on top of it. Between them
-they also carry three fixes every demo page needs — the code panel was rewriting its own markup, the
-front page only showed the first three demos, and the evaluation strip could not render a call body.
-None of it could be merged because `main` was checked out in another worktree at the time. From
-whichever worktree holds `main`, one merge brings the lot:
+Also small enough to be anecdotes rather than tests: peer-valuation (4 items), fundamental-read and
+dividend-safety (16), portfolio-compare (18), portfolio-health (24). Their pages now show counts
+rather than percentages. Either grow them or present them as case studies.
 
-```
-git merge --no-ff demo/113-dispute-routing
-```
+When re-recording, hold out a second seed per demo so a question tuned on one dataset is scored on
+another, and add `gates` to the demo so `npm run check` defends the result afterwards.
 
-### 2.3 Nothing has been deployed yet
+## 2. Questions worth rewording at the next recording
 
-`vercel.json` is written (static build, SPA rewrites, immutable asset caching) but no deploy has run.
-Worth doing once with a throwaway project to confirm three things: the build command works from a clean
-checkout, no `/api/*` route exists in the output, and the demo pages replay their fixtures with the
-network tab empty.
+Rewording a question changes its hash, so it starts a new line in the run history — do these together
+with the dataset fixes above, not separately.
 
----
+- **Yes/no questions with no stated bar answer yes to everything.** Demo 165 showed it first; the review
+  found the same in 143 (`needs_pm_sign_off` yes on 200 of 200), 156 (`qualified` 240 of 240), 174
+  (contagion yes on 278 of 288 links), 184 (`worth_forward_testing` 140 of 140) and 161. Put the
+  threshold in the criteria.
+- **Questions that echo a field**: 152 `setup_type` (300 of 300), 182 `best_slot` (323 of 323).
+- **Options never chosen**: 133 `REPORT_INTERNALLY`, 141 `HOLD`, 152 `NEWS_DAY`, 153 two of the fixes,
+  114 accept-loss.
+- **Rubric scores sit in the middle of the scale** almost everywhere; several reports now rank by the
+  score instead of cutting it, which is where it is strong.
 
-## 3. Unbuilt pieces of the foundation PRPs
+## 3. Shared runtime, not yet built
 
-### 3.1 `scripts/shot-list.js` does not exist
+- **Trade overlays on the candle stage.** 151, 153 and 156 draw the bars but not the entry, stop,
+  target, fill or exit the demo is about. `CandleChart` already supports the overlay; the datasets do
+  not carry `chart.trade`. A generator change with no re-record, if the state is left alone.
+- **The queue cannot re-order itself on screen.** Demo 121's story is one queue in two orders; the
+  report and the presenter carry it, the stage does not. Still the most video-worthy runtime change.
+- **Documents side by side.** Nested records now render as groups and tables instead of JSON, which
+  fixed 102, 104 and 114 to a good standard. Aligned panes with the differing fields highlighted would
+  be better still, and would be added once in `web/src/demo/views/`.
+- **A real network and cluster view** for 174 and 172: their reports are still long tables.
+- **Comparing two runs item by item.** The history keeps every run's numbers and `benchmarks/runs/`
+  keeps the answers of replaced runs, but nothing yet shows the flip list — the items whose answer
+  changed between two model versions, with both answer bars side by side.
+- **Stability runs.** The about page says answers can vary between runs and nothing measures it.
+  Recording a demo *k* times and reporting per-item agreement is the missing evidence.
+- **The lab on the static site.** `/lab` needs the local server, so on the deployed site it explains
+  that and stops. Shipping one recorded suite run as static JSON would let it replay like the demos.
+- **The overfit gallery** is still 140 cards on one page, each sparkline scaled to its own range.
+- **A display typeface and a tabular monospace** would lift the whole site for the cost of two files.
 
-PRP 005 asks for `node scripts/shot-list.js <demo>` to print the video beats with working deep links.
-The deep links themselves work (`?item=…&phase=scored` is handled in `DemoRuntime.jsx`), so this is a
-small script over each demo's PRP beats, not new runtime work.
+## 4. Waiting on a value or an action
 
-### 3.2 The queue cannot re-order itself on screen
+- **Nothing has been deployed yet.** `vercel.json` is written; one throwaway deploy should confirm the
+  build runs from a clean checkout, no `/api/*` route exists in the output, and demo pages replay with
+  the network tab empty.
+- **`VITE_REPO_REF` defaults to `main`**, so "open this file" links drift as the code moves. Pin it to
+  a commit for the video build.
+- **Live mode has never been exercised by anyone else.** Decide before the site goes public whether it
+  ships at all.
+- **The side worktrees and demo branches** (`jev_test-demo102` and the rest) are merged into `main` and
+  can be removed. `codex/even-demos` differs from `main` by one deleted line in `demo.css`; its demos
+  are all here.
 
-Demo 121 compares two orderings of the same four hundred alerts — the rules engine's, and the model's —
-and the comparison only exists in the report, with the top of the new ordering listed alongside each
-alert's old rank. PRP 121 asks for both orderings to be playable. That needs the runtime to sort a
-queue by an evaluation field, which is a shared-runtime change and the single most video-worthy one
-outstanding.
+## Closed since the last version of this file
 
-### 3.3 A multi-document view has not been decided
-
-Demo 102 wanted two panes and shipped in the plain `table` view instead, which reads well. Demo 104 has
-three documents per item and has been told to do the same and ask afterwards. If a `documents` view is
-worth adding, it should be added once, by whoever owns `web/src/demo/views/`, not by a demo branch.
-
-### 3.4 The coverage curve's text alternative ignores its rate line
-
-`CoverageCurve` has an `aria-label` and a table behind a toggle, but both were written before the
-optional dashed `rate` series existed, so a screen reader hears volume and catches without the rate.
-One-line fix in `web/src/demo/widgets.jsx`, shared file, so it waits for a quiet moment.
-
----
-
-## 4. Watch items, not yet problems
-
-- **Progress against the plan.** 50 demos are specified and nine are done: 101 to 105 finish the books
-  domain, 111, 113 and 115 are three of the six orders demos, and 121 opens fraud. `DOMAINS[].planned`
-  in `demos/index.js` still claims the full 50, which is right as intent, but the books count can now be
-  checked against what shipped.
-- **The token estimate formula is settled; the handovers still carry the old one.** Estimating from the
-  state alone needs a factor that swings from 3.07× (101) to 5.16× (105), because the questions are
-  sent on every request and a small state makes them the bigger half. Counting both collapses it:
-
-  > input tokens per item ≈ **1.8 × (state chars + questions chars) / 4**
-
-  which lands within 8% on 101, 102 and 105, 8% under on 103, and has now planned four runs in advance:
-  11% over on 111, and 12% over across 113, 115 and 121 together (1.11M estimated, 994K spent). Output
-  has run 160–280 tokens per item. Treat it as an upper bound that is right to about ten per cent. `handovers/104-three-way-match.md`
-  still tells the next agent to multiply the state by 3.5, so fix that when the next handover is
-  written.
-- **Live mode has never been exercised by anyone but me.** It is opt-in per demo with a confirmation
-  dialog that states the request count, and the static server refuses `/api/*` so browser checks stay
-  free. Before the site goes public, decide whether live mode ships at all.
-
-## Closed since this list was written
-
-- **The cached `annual` statement arrays were not in year order.** `scripts/fetch-market.js` sorted
-  `Date` objects as strings, so a January filer's newest year was not first and every generator
-  reading `annual[0]` got an arbitrary year. Fixed in `scripts/generate/lib/market.js` (sorted on
-  load) and in the fetcher. Demo 161 was rebuilt and re-recorded on the corrected years.
-- **`register.mjs` emitted `import undefined`** when called without a variable name, which is legal
-  JavaScript exactly once per file. Two demos were registered that way before it was noticed.
-
-## Still open after the odd-numbered block
-
-- **Demo 181 has 71 crossovers, not the ~240 the brief assumed.** The cached history is six years;
-  the brief assumed ten. Fetching more history would close it. See `demos/golden-cross-review/notes.md`.
-- **Demo 183's strategy families are unbalanced.** The range break is three quarters of the book's
-  trades, so the gate's answer for one family decides nearly everything. A balanced book would be a
-  fairer test of the gate and is the single most useful thing to change there.
-- **`VITE_REPO_URL` is still unset** — every demo page links "Run it yourself" to
-  `github.com/set-VITE_REPO_URL`.
-- **The `investigate`-style questions need bars in their criteria.** Demo 165 showed a yes/no with no
-  stated threshold returns yes for everything; adding the standard to the state moved it from 73 of
-  73 to 51 of 73. The same wording appears in other demos and is worth a pass.
+- The report is on the page from the first paint; it no longer waits for Play all.
+- The confusion matrix, the homepage encoding, the undefined design tokens and the card padding.
+- Fourteen report sections that were computed and never drawn.
+- Per-item ground truth on the page, through each demo's `grade`.
+- Presenter mode, as five beats per demo, and `scripts/shot-list.js`.
+- The coverage curve's text alternative now includes its rate series.
+- The repository URL is real.
+- Report bugs found by the review and fixed in code: the cross-currency sum in 104, the look-ahead in
+  183's gate, the inflow-as-balance figure in 125, arithmetic-identity checks in 102 and 104, and a few
+  dozen counts, tones and notes that contradicted their own data. The domain files list them.

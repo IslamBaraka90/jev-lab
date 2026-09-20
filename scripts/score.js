@@ -11,7 +11,7 @@
 
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { DEMOS, findDemo } from '../demos/index.js';
+import { DEMOS, demoCard, findDemo } from '../demos/index.js';
 import { repoRoot } from '../src/services/dataset.js';
 import { runKey, scoreDemo } from '../src/services/scoreboard.js';
 
@@ -20,6 +20,7 @@ const check = args.includes('--check');
 const slug = args.find((arg) => !arg.startsWith('--'));
 
 const scoreboardFile = path.join(repoRoot, 'web', 'src', 'generated', 'scoreboard.json');
+const catalogFile = path.join(repoRoot, 'web', 'src', 'generated', 'catalog.json');
 const historyFile = path.join(repoRoot, 'benchmarks', 'history.json');
 // How far a headline may fall between two runs of the same test before it is called a regression.
 const REGRESSION = 0.03;
@@ -75,6 +76,8 @@ const summary = {
 await mkdir(path.dirname(scoreboardFile), { recursive: true });
 await mkdir(path.dirname(historyFile), { recursive: true });
 await writeFile(scoreboardFile, `${JSON.stringify({ summary, rows }, null, 1)}\n`);
+await writeFile(catalogFile, `${JSON.stringify({ cards: DEMOS.map(demoCard) }, null, 1)}
+`);
 await writeFile(historyFile, `${JSON.stringify(history, null, 1)}\n`);
 
 for (const row of rows) {

@@ -1,0 +1,4602 @@
+{
+ "summary": {
+  "demos": 50,
+  "items": 9347,
+  "answers": 44909,
+  "gradedDemos": 49,
+  "gradedItems": 8911,
+  "rightItems": 7436,
+  "models": [
+   "jev-1.13.0"
+  ],
+  "latest": "2026-09-19",
+  "gates": {
+   "total": 0,
+   "failed": 0
+  }
+ },
+ "rows": [
+  {
+   "id": "ledger-integrity",
+   "title": "Ledger integrity review",
+   "domain": "books",
+   "number": 101,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-18",
+    "dataset": "f2e415716fb1",
+    "questions": "e2da915a96f3"
+   },
+   "items": 502,
+   "answered": 502,
+   "graded": 502,
+   "right": 424,
+   "interval": {
+    "low": 0.8103,
+    "high": 0.8737
+   },
+   "headline": {
+    "label": "Problems caught",
+    "value": 0.8182,
+    "display": "9 of 11",
+    "context": "named with the right issue type"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.8182,
+     "model": true
+    },
+    {
+     "label": "Rule: period, balance, twin",
+     "value": 0.7273,
+     "model": false
+    },
+    {
+     "label": "Always call the line clean",
+     "value": 0,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.8446,
+    "accuracy": 0.8446,
+    "macroF1": 0.6333,
+    "majorityBaseline": 0.9741,
+    "calibrationError": 0.1049,
+    "precision": 0.1176,
+    "recall": 0.7692
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "68 of the 75 false alarms are the same objection: reversed sign on VAT payable, 91% of them. One repeated disagreement is worth reading before it is counted as a mistake.",
+   "caveat": "Each problem type is planted only two or three times, and most of the false alarms come from one quirk of the generated chart of accounts (purchase VAT debited to VAT payable), so read the per-type numbers as examples, not rates.",
+   "showcase": {
+    "item": "L-0106",
+    "label": "L-0106 · Accounts payable",
+    "caption": "A 4,740.36 payment to Pinefield Print, posted five days after the same payment in DOC-0080. The twin is in the state, and the model names the duplicate.",
+    "answers": [
+     {
+      "title": "Issue type",
+      "type": "choice",
+      "text": "Duplicate posting",
+      "share": 0.68
+     },
+     {
+      "title": "Severity",
+      "type": "score",
+      "text": "Minor · 2.4 of 6",
+      "share": 0.397
+     },
+     {
+      "title": "Needs human review",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.7
+     }
+    ],
+    "verdict": "Duplicate posting · send to a reviewer",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "bank-reconciliation",
+   "title": "Bank reconciliation",
+   "domain": "books",
+   "number": 102,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "926fcdda6cf8",
+    "questions": "b2c7c0d64702"
+   },
+   "items": 60,
+   "answered": 60,
+   "graded": 60,
+   "right": 60,
+   "interval": {
+    "low": 0.9398,
+    "high": 1
+   },
+   "headline": {
+    "label": "Resolved exactly",
+    "value": 1,
+    "display": "60 of 60",
+    "context": "right ledger entry and right break reason"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: payee, amount, day gap",
+     "value": 0.9833,
+     "model": false
+    },
+    {
+     "label": "Always the first candidate",
+     "value": 0.2,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": 1,
+    "majorityBaseline": 0.2167,
+    "calibrationError": 0.1823,
+    "automationRate": 0.2167,
+    "automationPrecision": 1
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A rule that compares payee, amount and days apart, and never reads a reference, resolves 59 of 60 against the model's 60. On this dataset the model adds almost nothing over that rule.",
+   "caveat": "Every statement reference and ledger document id in this dataset ends in a token that names the planted break reason (-FEE, -PART, -FX, -DUP, MESSY), so this run measures reading, not reconciling; a dataset without those tokens is planned.",
+   "showcase": {
+    "item": "S-0033",
+    "label": "S-0033 · −$3,266.53 · Online transfer 0239 · Pinefield",
+    "caption": "The bank and the books wrote the reference differently and posted three days apart. The payee and the $3,266.53 agree, so the line clears without a person.",
+    "answers": [
+     {
+      "title": "Best match",
+      "type": "choice",
+      "text": "Candidate 1",
+      "share": 1
+     },
+     {
+      "title": "Match quality",
+      "type": "score",
+      "text": "Near certain · 5.2 of 6",
+      "share": 0.868
+     },
+     {
+      "title": "Break reason",
+      "type": "choice",
+      "text": "Matched",
+      "share": 0.8
+     },
+     {
+      "title": "Auto clear",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.68
+     }
+    ],
+    "verdict": "Auto-clear to B-0015",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "expense-posting",
+   "title": "Expense posting",
+   "domain": "books",
+   "number": 103,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "1025f6b63b1e",
+    "questions": "0b5553c78379"
+   },
+   "items": 400,
+   "answered": 400,
+   "graded": 400,
+   "right": 399,
+   "interval": {
+    "low": 0.986,
+    "high": 0.9996
+   },
+   "headline": {
+    "label": "Accuracy",
+    "value": 0.9975,
+    "display": "99.8%",
+    "context": "399 of 400 in the intended account"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9975,
+     "model": true
+    },
+    {
+     "label": "Rule: copy the vendor's last account",
+     "value": 0.83,
+     "model": false
+    },
+    {
+     "label": "Always the commonest account",
+     "value": 0.125,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9975,
+    "accuracy": 0.9975,
+    "macroF1": 0.9981,
+    "majorityBaseline": 0.125,
+    "calibrationError": 0.0135,
+    "automationRate": 0.9925,
+    "automationPrecision": 1
+   },
+   "gates": [],
+   "passed": true,
+   "finding": null,
+   "caveat": "Most charges here come from a vendor that only ever posts to one account, and the state shows where that vendor went before, so this run mostly measures lookup; a harder dataset with misleading histories is planned.",
+   "showcase": {
+    "item": "E-0077",
+    "label": "E-0077 · Copperline Media",
+    "caption": "Copperline Media, 1,776.53 AED, no description at all. One earlier charge went to marketing, and the model posts it there while scoring the charge itself as unclear.",
+    "answers": [
+     {
+      "title": "Account",
+      "type": "choice",
+      "text": "ACCOUNT_5700",
+      "share": 1
+     },
+     {
+      "title": "Posting clarity",
+      "type": "score",
+      "text": "Workable · 3.0 of 6",
+      "share": 0.492
+     },
+     {
+      "title": "Receipt required",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.96
+     }
+    ],
+    "verdict": "Post · 1,776.53 AED → 5700 Marketing",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "three-way-match",
+   "title": "Three-way match",
+   "domain": "books",
+   "number": 104,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "5e1323c0b9e2",
+    "questions": "bfe92b084d2f"
+   },
+   "items": 150,
+   "answered": 150,
+   "graded": 150,
+   "right": 134,
+   "interval": {
+    "low": 0.8338,
+    "high": 0.9333
+   },
+   "headline": {
+    "label": "Packets decided correctly",
+    "value": 0.8933,
+    "display": "89.3%",
+    "context": "134 of 150: the right mismatch named and the right hold or release"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.8933,
+     "model": true
+    },
+    {
+     "label": "Rule: compare the fields",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always release",
+     "value": 0.7733,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.8933,
+    "accuracy": 0.8933,
+    "macroF1": 0.7187,
+    "majorityBaseline": 0.7733,
+    "calibrationError": 0.0505,
+    "precision": 0.7647,
+    "recall": 0.7647,
+    "contradictionRate": 0.0267
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "5 of 15 mismatch errors repeat one pattern: tax called none. Review that boundary as one matching-rule question.",
+   "caveat": "Every mismatch in this dataset can be computed from structured fields, and a short rule decides all 150 packets correctly; the packets need free-text lines, units of measure and split receipts before this measures judgement.",
+   "showcase": {
+    "item": "P-0001",
+    "label": "P-0001 · Beacon Print · $17,326.26",
+    "caption": "Forty units ordered and billed, 34 received. The model names the partial delivery and holds $2,598.94 for goods that never arrived.",
+    "answers": [
+     {
+      "title": "Mismatch",
+      "type": "choice",
+      "text": "Partial delivery",
+      "share": 1
+     },
+     {
+      "title": "Within tolerance",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.04
+     },
+     {
+      "title": "Hold payment",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.92
+     }
+    ],
+    "verdict": "Hold · partial delivery · $2,598.94",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "close-blockers",
+   "title": "Close blockers",
+   "domain": "books",
+   "number": 105,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "561702276ac5",
+    "questions": "2f399e5c0bc6"
+   },
+   "items": 60,
+   "answered": 60,
+   "graded": 60,
+   "right": 57,
+   "interval": {
+    "low": 0.863,
+    "high": 0.9829
+   },
+   "headline": {
+    "label": "Blockers found",
+    "value": 1,
+    "display": "13 of 13",
+    "context": "held back and named for the right reason"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: movement outside the expected range",
+     "value": 0.6923,
+     "model": false
+    },
+    {
+     "label": "Hold nothing",
+     "value": 0,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.95,
+    "accuracy": 0.95,
+    "macroF1": 1,
+    "majorityBaseline": 0.7833,
+    "calibrationError": 0.041,
+    "precision": 0.8125,
+    "recall": 1,
+    "contradictionRate": 0.05
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "3 accounts were held with no blocker named, which is two answers contradicting each other: 1310, 2320, 2720.",
+   "caveat": "Every ordinary account here moves inside its expected range with a stock note, and every blocker note says plainly what is wrong, so only the six supported accounts and the four quiet blockers test judgement; a harder dataset is planned.",
+   "showcase": {
+    "item": "TB-2700",
+    "label": "2700 · Provisions – legal",
+    "caption": "The legal accrual moved £8,542, inside its expected range, so a movement rule passes it. The note says the firm worked all month and has not billed, and the model holds it as a missing accrual.",
+    "answers": [
+     {
+      "title": "Blocker type",
+      "type": "choice",
+      "text": "Missing accrual",
+      "share": 0.76
+     },
+     {
+      "title": "Blocks close",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.64
+     },
+     {
+      "title": "Severity",
+      "type": "score",
+      "text": "Material · 3.8 of 6",
+      "share": 0.625
+     },
+     {
+      "title": "Owner",
+      "type": "choice",
+      "text": "Controller",
+      "share": 0.98
+     }
+    ],
+    "verdict": "Blocks the close · missing accrual · CONTROLLER",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "order-risk",
+   "title": "Order risk at checkout",
+   "domain": "orders",
+   "number": 111,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "83319021c781",
+    "questions": "6a82dd2c2f46"
+   },
+   "items": 300,
+   "answered": 300,
+   "graded": 300,
+   "right": 221,
+   "interval": {
+    "low": 0.6841,
+    "high": 0.7833
+   },
+   "headline": {
+    "label": "Fraud stopped",
+    "value": 1,
+    "display": "9 of 9",
+    "context": "declined or held for a person · £10,172 of £10,172 · with 9 frauds the 95% interval is 70% to 100%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.7367,
+     "model": true
+    },
+    {
+     "label": "Rule: four conjunctions of fields",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Approve everything",
+     "value": 0.97,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.7367,
+    "accuracy": 0.7367,
+    "macroF1": 0.7431,
+    "majorityBaseline": 0.97,
+    "calibrationError": 0.0719,
+    "precision": 0.1023,
+    "recall": 1,
+    "contradictionRate": 0.0233,
+    "automationRate": 0.7233
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "11 of the 12 good orders built to look bad were stopped, across 4 kinds: gift abroad, connecting from abroad, new device, company first order. That is the cost of the threshold, and it is paid by real customers.",
+   "caveat": "Four lines of rules over fields in the state separate all nine frauds from the 291 good orders, so this file does not yet test a judgement a filter cannot make, and nine frauds are too few for a rate. A harder dataset is planned.",
+   "showcase": {
+    "item": "ORD-0001",
+    "label": "ORD-0001 · £1,400 · 2 items",
+    "caption": "A first order of £1,400: billed in Britain, card issued in France, shipped to a logistics unit in Brazil. Declined as a reshipper, at 37% confidence in the decision.",
+    "answers": [
+     {
+      "title": "Decision",
+      "type": "choice",
+      "text": "Decline",
+      "share": 0.58
+     },
+     {
+      "title": "Fraud pattern",
+      "type": "choice",
+      "text": "Reshipper",
+      "share": 0.99
+     },
+     {
+      "title": "Risk",
+      "type": "score",
+      "text": "Very high · 4.7 of 6",
+      "share": 0.783
+     },
+     {
+      "title": "Address consistent",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.07
+     }
+    ],
+    "verdict": "Decline · reshipper",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "cod-abuse",
+   "title": "Repeat non-fulfilment abuse",
+   "domain": "orders",
+   "number": 112,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "973a1dff75db",
+    "questions": "88f72dd8954c"
+   },
+   "items": 180,
+   "answered": 180,
+   "graded": 180,
+   "right": 173,
+   "interval": {
+    "low": 0.9219,
+    "high": 0.981
+   },
+   "headline": {
+    "label": "Pattern accuracy",
+    "value": 0.9611,
+    "display": "96.1%",
+    "context": "173 of 180 histories · 144 are normal, so answering normal every time scores 80% · mean recall over the 5 patterns 80%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9611,
+     "model": true
+    },
+    {
+     "label": "Rule: count accounts, refusals and returns",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest pattern",
+     "value": 0.8,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9611,
+    "accuracy": 0.9611,
+    "macroF1": 0.76,
+    "majorityBaseline": 0.8,
+    "calibrationError": 0.0163,
+    "macroRecall": 0.8,
+    "precision": 0.9375,
+    "recall": 0.8333,
+    "contradictionRate": 0.0333
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "7 of 7 pattern errors repeat one swap: address hopper called serial refuser.",
+   "caveat": "A count of accounts, refusals and returns names all 180 planted patterns, and the courier-fault answer can be read from a COURIER_OUTAGE reason code in the state, so this run measures reading more than judgement. A harder dataset is planned.",
+   "showcase": {
+    "item": "C-0001",
+    "label": "C-0001 · Amina Moussa · 14 orders",
+    "caption": "Eleven of fourteen cash-on-delivery parcels refused, $137.50 of shipping spent for nothing. Named a serial refuser, deliberate, severity 5.5 of 6: block cash on delivery.",
+    "answers": [
+     {
+      "title": "Pattern",
+      "type": "choice",
+      "text": "Serial refuser",
+      "share": 1
+     },
+     {
+      "title": "Intent",
+      "type": "choice",
+      "text": "Deliberate",
+      "share": 0.98
+     },
+     {
+      "title": "Restriction",
+      "type": "choice",
+      "text": "Block COD",
+      "share": 0.9
+     },
+     {
+      "title": "Severity",
+      "type": "score",
+      "text": "Severe · 5.5 of 6",
+      "share": 0.912
+     }
+    ],
+    "verdict": "Block cash on delivery · serial refuser",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "dispute-routing",
+   "title": "Dispute and refund routing",
+   "domain": "orders",
+   "number": 113,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "3f680ee919d8",
+    "questions": "6a042a809227"
+   },
+   "items": 220,
+   "answered": 220,
+   "graded": 220,
+   "right": 198,
+   "interval": {
+    "low": 0.8532,
+    "high": 0.933
+   },
+   "headline": {
+    "label": "Action agrees with policy",
+    "value": 0.9,
+    "display": "90%",
+    "context": "198 of 220 disputes"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9,
+     "model": true
+    },
+    {
+     "label": "Rule: four policy numbers, else refund",
+     "value": 0.9636,
+     "model": false
+    },
+    {
+     "label": "Always the commonest action",
+     "value": 0.75,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9,
+    "accuracy": 0.9,
+    "macroF1": 0.7734,
+    "majorityBaseline": 0.75,
+    "calibrationError": 0.1319,
+    "wholeCallAccuracy": 0.5727,
+    "contradictionRate": 0.1227,
+    "automationRate": 0.4409,
+    "automationPrecision": 0.7629
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "10 of 22 wrong actions are the same swap: refund now answered as request evidence. One rule to settle, not 10 separate mistakes.",
+   "caveat": "The right action here is a fixed reading of numbers in the state, and a five-line rule over those numbers scores higher than the model on the action; the 171 everyday disputes are templated. The band, the reason code and the self-contradicting calls are where this run is informative.",
+   "showcase": {
+    "item": "DSP-0001",
+    "label": "DSP-0001 · not received · £129.55",
+    "caption": "The parcel last scanned 14 days ago and the policy treats it as lost after 10. The call refunds £134.50: the £129.55 order and the £4.95 shipping.",
+    "answers": [
+     {
+      "title": "Action",
+      "type": "choice",
+      "text": "Refund now",
+      "share": 0.99
+     },
+     {
+      "title": "Refund band",
+      "type": "choice",
+      "text": "Full plus shipping",
+      "share": 0.81
+     },
+     {
+      "title": "Reason code",
+      "type": "choice",
+      "text": "Not received",
+      "share": 1
+     },
+     {
+      "title": "Policy allows",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.88
+     }
+    ],
+    "verdict": "Refund now · £134.50",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "chargeback-evidence",
+   "title": "Chargeback evidence",
+   "domain": "orders",
+   "number": 114,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "3f77bcd697e0",
+    "questions": "c3dd64699f7a"
+   },
+   "items": 120,
+   "answered": 120,
+   "graded": 120,
+   "right": 99,
+   "interval": {
+    "low": 0.7472,
+    "high": 0.8826
+   },
+   "headline": {
+    "label": "Outcome accuracy",
+    "value": 0.825,
+    "display": "82.5%",
+    "context": "99 of 120 current packets, calling a win at 3.5 of 6 · 107 at a cut of 2.5"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.825,
+     "model": true
+    },
+    {
+     "label": "Rule: decisive document present",
+     "value": 0.9917,
+     "model": false
+    },
+    {
+     "label": "Always the commonest outcome",
+     "value": 0.6167,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.825,
+    "accuracy": 0.825,
+    "macroF1": 0.8392,
+    "majorityBaseline": 0.3833,
+    "calibrationError": 0.3262,
+    "precision": 1,
+    "recall": 0.5435,
+    "accuracyAtBestCut": 0.8917,
+    "bestCut": 2.5,
+    "nextStepAccuracy": 0.775
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "10 of 22 missing-document errors repeat one swap: none called comms log.",
+   "caveat": "Win or loss here is whether the decisive document for the reason code is marked present, and that requirement is in the state, so outcome accuracy measures reading a checklist. Documents marked absent also still carry their contents in this file. A harder dataset is planned.",
+   "showcase": {
+    "item": "CB-0003",
+    "label": "CB-0003 · product not received · $1,889.26",
+    "caption": "Product not received, $1,889.26, and the delivery proof is the one document not on file. Scored 1.6 of 6 as it stands; the model names delivery proof and says gather it.",
+    "answers": [
+     {
+      "title": "Win likelihood",
+      "type": "score",
+      "text": "Weak · 1.6 of 6",
+      "share": 0.265
+     },
+     {
+      "title": "Missing document",
+      "type": "choice",
+      "text": "Delivery proof",
+      "share": 1
+     },
+     {
+      "title": "Next step",
+      "type": "choice",
+      "text": "Gather more",
+      "share": 0.97
+     },
+     {
+      "title": "Deadline risk",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.3
+     }
+    ],
+    "verdict": "Gather more · delivery proof",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "merchant-onboarding",
+   "title": "Merchant onboarding risk",
+   "domain": "orders",
+   "number": 115,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "a3d61712cf97",
+    "questions": "ba5ec6f7334f"
+   },
+   "items": 140,
+   "answered": 140,
+   "graded": 140,
+   "right": 132,
+   "interval": {
+    "low": 0.8913,
+    "high": 0.9708
+   },
+   "headline": {
+    "label": "Never-acceptable merchants approved",
+    "value": 0,
+    "display": "0 of 11",
+    "context": "the prohibited activities and the forged files, which no reserve makes acceptable"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9429,
+     "model": true
+    },
+    {
+     "label": "Rule: mismatched names, slow delivery",
+     "value": 0.9143,
+     "model": false
+    },
+    {
+     "label": "Board everyone, hold nothing",
+     "value": 0.8429,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9429,
+    "accuracy": 0.9429,
+    "macroF1": 0.3733,
+    "majorityBaseline": 0.8429,
+    "calibrationError": 0.2457,
+    "precision": 0.4889,
+    "recall": 1,
+    "lossCoveredShare": 0.8845,
+    "contradictionRate": 0.0357,
+    "automationRate": 0.7357
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "3 merchants no reserve makes acceptable were not refused: fraud. APP-029, APP-073, APP-113.",
+   "caveat": "The five forged files are the only ones whose document notes state the problem outright, and all eleven merchants that went bad are companies under eight months old promising delivery in 25 days or more, so parts of this run measure reading. The reserve also collapsed to two values, none or a rolling hold. A harder dataset is planned.",
+   "showcase": {
+    "item": "APP-037",
+    "label": "APP-037 · Tinbridge Group · dropshipping",
+    "caption": "A five-month-old dropshipper promising delivery in 44 days, expecting £102,054 a month. Not refused: sent to review as high risk with £30,616 held. It went on to £27,555 of chargebacks.",
+    "answers": [
+     {
+      "title": "Risk tier",
+      "type": "choice",
+      "text": "HIGH",
+      "share": 0.55
+     },
+     {
+      "title": "Prohibited match",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.07
+     },
+     {
+      "title": "Document doubt",
+      "type": "score",
+      "text": "None · 0.4 of 6",
+      "share": 0.073
+     },
+     {
+      "title": "Reserve",
+      "type": "choice",
+      "text": "Rolling hold",
+      "share": 0.91
+     }
+    ],
+    "verdict": "Review · high risk · £30,616 held",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "delivery-exceptions",
+   "title": "Delivery exceptions",
+   "domain": "orders",
+   "number": 116,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "563c4e745e19",
+    "questions": "9a3556cb3d97"
+   },
+   "items": 250,
+   "answered": 250,
+   "graded": 250,
+   "right": 250,
+   "interval": {
+    "low": 0.9849,
+    "high": 1
+   },
+   "headline": {
+    "label": "Fault accuracy",
+    "value": 1,
+    "display": "100%",
+    "context": "250 of 250 shipments · the driver's reason code on the scan gives the same answer"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: read the reason code",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest fault",
+     "value": 0.312,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": 1,
+    "majorityBaseline": 0.312,
+    "calibrationError": 0.031,
+    "nextActionAccuracy": 0.468,
+    "addressScoreMeanError": 0.63,
+    "contradictionRate": 0.188
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Reading the driver's reason code off the scan assigns 250 of 250 faults, against the model's 250. The code is in the state and maps one-to-one onto the planted fault, so this number shows the scans were read, not that a self-serving code was seen through.",
+   "caveat": "The driver reason code on each attempt scan maps one-to-one onto the planted fault, so 100% fault accuracy here measures reading, not judgement; a bookkeeping field linking eleven customers to another demo is also in the state, and the next-action label follows a playbook the state never gives. A dataset with noisy reason codes is planned.",
+   "showcase": {
+    "item": "SHP-0007",
+    "label": "SHP-0007 · Northstar Delivery · Abu Dhabi",
+    "caption": "The third scan says delivery attempted at 03:10, from the central depot, 24.6 km from 31 Corniche Road, outside the 09:00 to 21:00 window. Fault: the courier, at 95%.",
+    "answers": [
+     {
+      "title": "Fault",
+      "type": "choice",
+      "text": "Courier",
+      "share": 0.96
+     },
+     {
+      "title": "Address quality",
+      "type": "score",
+      "text": "Good · 4.0 of 6",
+      "share": 0.663
+     },
+     {
+      "title": "Next action",
+      "type": "choice",
+      "text": "Contact customer",
+      "share": 0.46
+     },
+     {
+      "title": "Preventable",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.78
+     }
+    ],
+    "verdict": "Courier at fault · contact customer",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "card-fraud-triage",
+   "title": "Card fraud triage",
+   "domain": "fraud",
+   "number": 121,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "68c81e9cda04",
+    "questions": "3dbe9f351b6f"
+   },
+   "items": 400,
+   "answered": 400,
+   "graded": 400,
+   "right": 295,
+   "interval": {
+    "low": 0.6923,
+    "high": 0.7782
+   },
+   "headline": {
+    "label": "Fraud in the first 50, model order",
+    "value": 0.8125,
+    "display": "13 of 16",
+    "context": "the same hour, re-ordered"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.8125,
+     "model": true
+    },
+    {
+     "label": "Rule: three-flag scorecard",
+     "value": 0.75,
+     "model": false
+    },
+    {
+     "label": "The rules engine’s own queue",
+     "value": 0.375,
+     "model": false
+    },
+    {
+     "label": "Any fifty at random",
+     "value": 0.125,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.7375,
+    "accuracy": 0.7375,
+    "macroF1": 0.2255,
+    "majorityBaseline": 0.96,
+    "calibrationError": 0.3363,
+    "precision": 0.1261,
+    "recall": 0.9375
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "8 fraudulent alerts moved into the first 50 from further down the rule queue: ALT-0366 from 366, ALT-0329 from 329, ALT-0335 from 335, ALT-0051 from 51. Nobody was going to reach them today.",
+   "caveat": "Sixteen frauds is a small sample, and the generator buried nine of them low in the rule queue on purpose. Read the rule-queue comparison beside the scorecard baseline, which is the fairer one.",
+   "showcase": {
+    "item": "ALT-0366",
+    "label": "ALT-0366 · £220.95 · gift cards · rule #366",
+    "caption": "£220.95 of gift cards in Poland at 01:15, on a card that spends about £22 at a time in the UK. The rules engine ranked it 366 of 400; the model puts it first.",
+    "answers": [
+     {
+      "title": "Fraud likelihood",
+      "type": "score",
+      "text": "Very high · 4.9 of 6",
+      "share": 0.813
+     },
+     {
+      "title": "Explains itself",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.04
+     },
+     {
+      "title": "Action",
+      "type": "choice",
+      "text": "BLOCK",
+      "share": 0.92
+     },
+     {
+      "title": "Fraud type",
+      "type": "choice",
+      "text": "Stolen card",
+      "share": 1
+     }
+    ],
+    "verdict": "Block · stolen card",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "aml-alert-triage",
+   "title": "AML alert triage",
+   "domain": "fraud",
+   "number": 123,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "cbf970e2b62b",
+    "questions": "3aac66aaf965"
+   },
+   "items": 300,
+   "answered": 300,
+   "graded": 300,
+   "right": 293,
+   "interval": {
+    "low": 0.9526,
+    "high": 0.9887
+   },
+   "headline": {
+    "label": "Worth working, in the score queue",
+    "value": 0.6316,
+    "display": "63.2%",
+    "context": "12 of the 19 alerts scored 4 of 6 or above · 12 of the 12 worth working are in it"
+   },
+   "baselines": [
+    {
+     "label": "Jev, suspicion score",
+     "value": 0.6316,
+     "model": true
+    },
+    {
+     "label": "Jev, escalate choice",
+     "value": 0.15,
+     "model": false
+    },
+    {
+     "label": "Rule: three months of turnover",
+     "value": 0.375,
+     "model": false
+    },
+    {
+     "label": "No triage",
+     "value": 0.04,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9767,
+    "accuracy": 0.9767,
+    "macroF1": 0.5857,
+    "majorityBaseline": 0.96,
+    "calibrationError": 0.4535,
+    "precision": 0.6316,
+    "recall": 1,
+    "automationRate": 0.1267
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "The score is the sharper instrument. Cutting at a suspicion of 4 of 6 leaves 19 alerts with all 12 worth working among them; the escalate choice keeps 80 to hold the same 12. In suspicion order the first 14 alerts contain every one.",
+   "caveat": "The relationship note is one of a few fixed sentences and each belongs to one label class, so a string lookup would score 100% here; this run measures reading, not judgement, and a harder dataset is planned.",
+   "showcase": {
+    "item": "AML-0089",
+    "label": "AML-0089 · personal · £20,025",
+    "caption": "A care worker who expects £1,400 a month paid in eight cash credits between £2,340 and £2,770, each under the £3,000 reporting line. Structuring, 5.4 of 6, escalate.",
+    "answers": [
+     {
+      "title": "Typology",
+      "type": "choice",
+      "text": "Structuring",
+      "share": 1
+     },
+     {
+      "title": "Suspicion",
+      "type": "score",
+      "text": "Very high · 5.4 of 6",
+      "share": 0.907
+     },
+     {
+      "title": "Disposition",
+      "type": "choice",
+      "text": "Escalate",
+      "share": 1
+     },
+     {
+      "title": "Information missing",
+      "type": "choice",
+      "text": "Source of funds",
+      "share": 0.75
+     }
+    ],
+    "verdict": "Escalate · structuring",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "account-takeover",
+   "title": "Account takeover",
+   "domain": "fraud",
+   "number": 122,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "05ed36fdfe1a",
+    "questions": "7fe472b7616b"
+   },
+   "items": 260,
+   "answered": 260,
+   "graded": 260,
+   "right": 238,
+   "interval": {
+    "low": 0.8752,
+    "high": 0.9435
+   },
+   "headline": {
+    "label": "Action accuracy",
+    "value": 0.9154,
+    "display": "91.5%",
+    "context": "238 of 260 least-disruptive actions · 226 of the sessions are plain ones nobody would challenge"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9154,
+     "model": true
+    },
+    {
+     "label": "Rule: block on a sensitive event, verify a new device",
+     "value": 0.9154,
+     "model": false
+    },
+    {
+     "label": "Always allow",
+     "value": 0.8885,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9154,
+    "accuracy": 0.9154,
+    "macroF1": 0.5019,
+    "majorityBaseline": 0.8692,
+    "calibrationError": 0.1095,
+    "recall": 1,
+    "precision": 0.4828,
+    "contradictionRate": 0.8846
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "On the 34 sessions that are not plain, the least-disruptive action was chosen 12 times (35.3%). The overall accuracy is carried by the 226 plain sessions.",
+   "caveat": "The 226 plain sessions are three-event logins on a known device and each attack follows one fixed template, so the likelihood score separates the classes perfectly and a three-line rule matches the model’s action accuracy; a harder dataset is planned.",
+   "showcase": {
+    "item": "SES-0083",
+    "label": "SES-0083 · Layla Shadid · GB",
+    "caption": "An unknown device logs in, changes the phone number by SMS recovery, raises the limit from 5,000 to 30,000, adds a payee and sends $25,369.98, all in nine minutes. 5.7 of 6: freeze the account.",
+    "answers": [
+     {
+      "title": "Takeover likelihood",
+      "type": "score",
+      "text": "Certain · 5.7 of 6",
+      "share": 0.943
+     },
+     {
+      "title": "Strongest signal",
+      "type": "choice",
+      "text": "Credential reset chain",
+      "share": 0.66
+     },
+     {
+      "title": "Action",
+      "type": "choice",
+      "text": "Freeze account",
+      "share": 0.86
+     }
+    ],
+    "verdict": "Freeze account",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "sanctions-name-match",
+   "title": "Sanctions name matching",
+   "domain": "fraud",
+   "number": 124,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "1e548930f8ac",
+    "questions": "79072c60abba"
+   },
+   "items": 200,
+   "answered": 200,
+   "graded": 200,
+   "right": 59,
+   "interval": {
+    "low": 0.2361,
+    "high": 0.3616
+   },
+   "headline": {
+    "label": "Hits settled as planted",
+    "value": 0.295,
+    "display": "29.5%",
+    "context": "59 of 200: confirm, clear or defer, whichever the record supports"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.295,
+     "model": true
+    },
+    {
+     "label": "Rule: compare the identifier fragment",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always clear",
+     "value": 0.85,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.295,
+    "accuracy": 0.295,
+    "macroF1": 0.4821,
+    "majorityBaseline": 0.85,
+    "calibrationError": 0.2318,
+    "precision": 0.9474,
+    "recall": 1,
+    "automationRate": 0.24,
+    "automationPrecision": 0.9792,
+    "falsePositivesCleared": 0.1706
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "152 of 200 hits were held for review and 182 were said to need more data. The model keeps every true match and declines to decide most of the rest, so the analyst's desk barely shrinks.",
+   "caveat": "Fictional watchlist and fictional people. Illustrative identity matching only—never a screening decision. Every true match shares its identifier fragment with the list entry and no false one does, so one field gives the identity away; a harder dataset is planned.",
+   "showcase": {
+    "item": "SNC-0004",
+    "label": "SNC-0004 · Nabeel Farouk ↔ Nabil Farouk",
+    "caption": "Nabeel Farouk against Nabil Farouk: the alias, the date of birth, the address and the identifier all agree. Same person 0.95, confirm.",
+    "answers": [
+     {
+      "title": "Same entity",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.95
+     },
+     {
+      "title": "Deciding evidence",
+      "type": "choice",
+      "text": "Identifier",
+      "share": 0.97
+     },
+     {
+      "title": "Disposition",
+      "type": "choice",
+      "text": "Confirm",
+      "share": 0.98
+     }
+    ],
+    "verdict": "Confirm · same person 0.95",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "insider-surveillance",
+   "title": "Insider trading surveillance",
+   "domain": "fraud",
+   "number": 126,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "8510bcaa4fe4",
+    "questions": "9e5859697d37"
+   },
+   "items": 180,
+   "answered": 180,
+   "graded": 180,
+   "right": 180,
+   "interval": {
+    "low": 0.9791,
+    "high": 1
+   },
+   "headline": {
+    "label": "Suspicious trades opened",
+    "value": 1,
+    "display": "9 of 9",
+    "context": "100%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: access to the symbol and no pre-cleared plan",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Never open a case",
+     "value": 0.95,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": 1,
+    "majorityBaseline": 0.95,
+    "calibrationError": 0.454,
+    "precision": 1,
+    "recall": 1
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A two-condition rule, access to the traded symbol and no pre-cleared plan, gets 180 of 180 dispositions right; the model gets 180. In this dataset the access list decides every case, so the score says the record was read, not that the chart was.",
+   "caveat": "Cached-real Yahoo Finance prices; fictional employees, access records, trades and event calendar. Post-trade bars are never sent to Jev. Every planted trade is by an employee with access to the traded symbol and no pre-cleared plan, and no innocent trade is, so one rule decides every case; a harder dataset is planned.",
+   "showcase": {
+    "item": "TRD-0161",
+    "label": "TRD-0161 · EMP-003 · BUY NVDA",
+    "caption": "A first trade in NVDA, three days before a material announcement, by someone with access to that issuer. 4.3 of 6, open a case. The price rose 23.96% in the ten sessions after, which the model never saw.",
+    "answers": [
+     {
+      "title": "Suspicion",
+      "type": "score",
+      "text": "High · 4.3 of 6",
+      "share": 0.718
+     },
+     {
+      "title": "Pattern",
+      "type": "choice",
+      "text": "Pre announcement",
+      "share": 0.96
+     },
+     {
+      "title": "Blackout breach",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.76
+     },
+     {
+      "title": "Disposition",
+      "type": "choice",
+      "text": "Open case",
+      "share": 0.87
+     }
+    ],
+    "verdict": "Open case · pre announcement",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "mule-network",
+   "title": "Mule networks",
+   "domain": "fraud",
+   "number": 125,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "ac62038bb45c",
+    "questions": "05fccf06efab"
+   },
+   "items": 120,
+   "answered": 120,
+   "graded": 120,
+   "right": 75,
+   "interval": {
+    "low": 0.5358,
+    "high": 0.7065
+   },
+   "headline": {
+    "label": "Networks recovered whole",
+    "value": 0.3333,
+    "display": "1 of 3",
+    "context": "N1: 8 of 9 · N2: 6 of 6 · N3: 4 of 6"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.625,
+     "model": true
+    },
+    {
+     "label": "Rule: keeps a tenth or less of what came in",
+     "value": 0.8667,
+     "model": false
+    },
+    {
+     "label": "Always unrelated",
+     "value": 0.825,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.625,
+    "accuracy": 0.625,
+    "macroF1": 0.6327,
+    "majorityBaseline": 0.825,
+    "calibrationError": 0.1788,
+    "precision": 0.3333,
+    "recall": 1,
+    "precisionAtConfidenceBar": 0.6957,
+    "recallAtConfidenceBar": 0.7619
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "42 ordinary accounts were given a role in something, 5 of them after a single payment to someone in an arrangement. One transfer is not a network.",
+   "caveat": "Ordinary accounts here have no salary or opening balance, so many appear to pay out far more than they receive and the kept share runs as low as −14,225%. That feeds the false positives, and three networks is a small sample; a regenerated dataset is planned.",
+   "showcase": {
+    "item": "ACC-0022",
+    "label": "ACC-0022 · personal · 1 in, 2 out",
+    "caption": "£7,714 arrives from ACC-0029 at 15:02 and leaves in two halves at 15:09 and 15:12. The account keeps 2%. Mule, 4.8 of 6, freeze.",
+    "answers": [
+     {
+      "title": "Role",
+      "type": "choice",
+      "text": "MULE",
+      "share": 1
+     },
+     {
+      "title": "Pass through",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.98
+     },
+     {
+      "title": "Network confidence",
+      "type": "score",
+      "text": "Very high · 4.8 of 6",
+      "share": 0.798
+     },
+     {
+      "title": "Action",
+      "type": "choice",
+      "text": "Freeze",
+      "share": 0.49
+     }
+    ],
+    "verdict": "Mule · freeze",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "wallet-risk",
+   "title": "Wallet risk scoring",
+   "domain": "crypto",
+   "number": 131,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "927e3cf1574e",
+    "questions": "cf0d8d391f9e"
+   },
+   "items": 240,
+   "answered": 240,
+   "graded": 240,
+   "right": 169,
+   "interval": {
+    "low": 0.6436,
+    "high": 0.7583
+   },
+   "headline": {
+    "label": "Decision fits the wallet",
+    "value": 0.7042,
+    "display": "169 of 240",
+    "context": "70.4%: exposure held or refused, ordinary wallets accepted"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.7042,
+     "model": true
+    },
+    {
+     "label": "Rule: hops, mixer or listed flow, betting share",
+     "value": 0.9875,
+     "model": false
+    },
+    {
+     "label": "Always accept",
+     "value": 0.8333,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.7042,
+    "accuracy": 0.7042,
+    "macroF1": 0.6545,
+    "majorityBaseline": 0.8333,
+    "calibrationError": 0.2735,
+    "precision": 0.3578,
+    "recall": 0.975
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A five-line rule over the hop count and the counterparty mix handles 237 of 240 deposits correctly; the model handles 169. The labels follow the hop count and the mix closely, so this file cannot show the model beating a rules engine.",
+   "caveat": "The labels in this file follow the hop count and the counterparty mix so closely that a five-line rule handles 237 of 240 deposits. This run measures reading the state, not judgement; a harder file is planned.",
+   "showcase": {
+    "item": "W-0151",
+    "label": "W-0151 · Base · $218,926 offered",
+    "caption": "$218,926 offered by a wallet with 56% of its flow from a mixer, zero hops away. Refused, risk 5.3 of 6, driver named as the mixer.",
+    "answers": [
+     {
+      "title": "Risk",
+      "type": "score",
+      "text": "Very high · 5.3 of 6",
+      "share": 0.875
+     },
+     {
+      "title": "Main exposure",
+      "type": "choice",
+      "text": "MIXER",
+      "share": 1
+     },
+     {
+      "title": "Decision",
+      "type": "choice",
+      "text": "Reject",
+      "share": 0.71
+     }
+    ],
+    "verdict": "Refuse · $218,926",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "wallet-profiling",
+   "title": "Wallet behaviour profiling",
+   "domain": "crypto",
+   "number": 132,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "76872454260a",
+    "questions": "68d0d580d8bb"
+   },
+   "items": 200,
+   "answered": 200,
+   "graded": 190,
+   "right": 173,
+   "interval": {
+    "low": 0.8614,
+    "high": 0.9434
+   },
+   "headline": {
+    "label": "Clear wallet types correct",
+    "value": 0.9105,
+    "display": "91.1%",
+    "context": "173 of 190; ambiguous wallets are not in this denominator"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9105,
+     "model": true
+    },
+    {
+     "label": "Rule: one threshold per type",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest type",
+     "value": 0.1789,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9105,
+    "accuracy": 0.9105,
+    "macroF1": 0.9108,
+    "majorityBaseline": 0.1789,
+    "calibrationError": 0.1618,
+    "falseAmbiguityRate": 0.8579
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A six-line rule with one threshold per type names 190 of 190 clear wallets correctly; the model names 173. The types are separated by construction, so this file shows the model reading a fingerprint from prose, not beating a rules engine.",
+   "caveat": "The six types in this file are separated by construction: a six-line rule with one threshold per type names all 190 clear wallets correctly. This run shows the model reading a fingerprint from prose descriptions, not beating a rules engine; a file with overlapping types is planned.",
+   "showcase": {
+    "item": "WPF-0001",
+    "label": "WPF-0001 · 875 tx · 473 counterparties",
+    "caption": "874 transfers in and 1 out. 87% of the funders are less than a week old and 644 payments are under $100. Named a scam collector at 100%.",
+    "answers": [
+     {
+      "title": "Wallet type",
+      "type": "choice",
+      "text": "Scam collector",
+      "share": 1
+     },
+     {
+      "title": "Automation",
+      "type": "score",
+      "text": "Mixed · 3.3 of 6",
+      "share": 0.543
+     },
+     {
+      "title": "Monitoring level",
+      "type": "choice",
+      "text": "Continuous",
+      "share": 0.65
+     }
+    ],
+    "verdict": "Scam collector · 100%",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "mixer-tracing",
+   "title": "Tracing and mixer exposure",
+   "domain": "crypto",
+   "number": 133,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "8fdf02843b53",
+    "questions": "e7e1e2896603"
+   },
+   "items": 90,
+   "answered": 90,
+   "graded": 90,
+   "right": 66,
+   "interval": {
+    "low": 0.6338,
+    "high": 0.8138
+   },
+   "headline": {
+    "label": "Taint call right",
+    "value": 0.7333,
+    "display": "66 of 90",
+    "context": "73.3% of traces called tainted or clean as the desk's rules make them"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.7333,
+     "model": true
+    },
+    {
+     "label": "Same answers, read at 70%",
+     "value": 0.9556,
+     "model": false
+    },
+    {
+     "label": "Rule: walk the path, stop at an exchange",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always clean",
+     "value": 0.6222,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.7333,
+    "accuracy": 0.7333,
+    "macroF1": 0.6619,
+    "majorityBaseline": 0.5222,
+    "calibrationError": 0.0501,
+    "precision": 0.5862,
+    "recall": 1,
+    "hopsExact": 0.8222,
+    "actionCoherence": 0.8,
+    "cleanFrozenRate": 0.5278
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A path walk of a dozen lines gets 90 of 90 taint calls right; the model gets 66. The rules are mechanical, so what this run tests is whether they can be applied from prose, not whether a mixer can be found.",
+   "caveat": "A path walk of a dozen lines applies the desk’s rules to all 90 traces without error, so this run tests reading rules from prose, not finding what code cannot. Every trace that breaks the arithmetic rule also reaches a mixer or a listed address, so that rule is not tested on its own; a file that isolates each rule is planned.",
+   "showcase": {
+    "item": "TRC-083",
+    "label": "TRC-083 · Ethereum · $828,837 funded · 3 hops",
+    "caption": "$828,837 of funding, and 76% of it leads back to a listed address three hops away, just inside the distance the desk acts on. Called tainted, exposure 4.6 of 6, frozen.",
+    "answers": [
+     {
+      "title": "Tainted funds",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.88
+     },
+     {
+      "title": "Hops to source",
+      "type": "choice",
+      "text": "THREE",
+      "share": 0.93
+     },
+     {
+      "title": "Chain broken by exchange",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.05
+     },
+     {
+      "title": "Exposure",
+      "type": "score",
+      "text": "Very high · 4.6 of 6",
+      "share": 0.765
+     }
+    ],
+    "verdict": "Freeze pending review · $828,837",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "token-screening",
+   "title": "Token screening",
+   "domain": "crypto",
+   "number": 134,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "5df133a1135c",
+    "questions": "fbd22caf9605"
+   },
+   "items": 160,
+   "answered": 160,
+   "graded": 160,
+   "right": 151,
+   "interval": {
+    "low": 0.8966,
+    "high": 0.9701
+   },
+   "headline": {
+    "label": "Outcome correct",
+    "value": 0.9437,
+    "display": "94.4%",
+    "context": "151 of 160; the outcome is derived from the red flag and the honeypot answer"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9437,
+     "model": true
+    },
+    {
+     "label": "Rule: failed sells, sell tax, mint, creator share, removal",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always fine",
+     "value": 0.7875,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9437,
+    "accuracy": 0.9437,
+    "macroF1": 0.9299,
+    "majorityBaseline": 0.7875,
+    "calibrationError": 0.2454,
+    "precision": 0.7907,
+    "recall": 1,
+    "harmfulAvoidedRate": 0.5588
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A five-line rule over the same facts gets 160 of 160 outcomes right; the model gets 151. The harmful and fine tokens do not overlap on sell tax, failed sells, mint authority or creator share, so the held-out future is a function of the present fields.",
+   "caveat": "The harmful and the fine tokens in this file do not overlap on sell tax, failed sells, mint authority or creator share, and the option texts restate the chain norms, so a five-line rule gets all 160 outcomes. This run measures reading, not foresight; a file with overlapping features is planned.",
+   "showcase": {
+    "item": "TOK-0128",
+    "label": "TOK-0128 · DVEXE · 29 days · 69,113 holders",
+    "caption": "A $3.6m pool with 455 buys, 0 successful sells and 10 failed ones. Called a honeypot at 94%, risk 5.5 of 6, not tradeable, no position.",
+    "answers": [
+     {
+      "title": "Rug likelihood",
+      "type": "score",
+      "text": "Certain · 5.5 of 6",
+      "share": 0.917
+     },
+     {
+      "title": "Red flag",
+      "type": "choice",
+      "text": "Failed sells",
+      "share": 1
+     },
+     {
+      "title": "Honeypot suspected",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.94
+     },
+     {
+      "title": "Tradeable",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.13
+     }
+    ],
+    "verdict": "Avoid · DVEXE",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "sybil-clusters",
+   "title": "Sybil clusters",
+   "domain": "crypto",
+   "number": 135,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "b3bccd4aa6d9",
+    "questions": "5a2e7db133be"
+   },
+   "items": 150,
+   "answered": 150,
+   "graded": 150,
+   "right": 88,
+   "interval": {
+    "low": 0.5067,
+    "high": 0.6623
+   },
+   "headline": {
+    "label": "Allocation decision right",
+    "value": 0.5867,
+    "display": "88 of 150",
+    "context": "no wallet was excluded at all, so this is exactly what excluding nobody scores"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.5867,
+     "model": true
+    },
+    {
+     "label": "Rule: any trait shared with five or more wallets",
+     "value": 0.96,
+     "model": false
+    },
+    {
+     "label": "Exclude nobody",
+     "value": 0.5867,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.5867,
+    "accuracy": 0.5867,
+    "macroF1": 0.6604,
+    "majorityBaseline": 0.5867,
+    "calibrationError": 0.0545,
+    "precision": null,
+    "recall": 0,
+    "signalNamedRate": 1,
+    "falseSignalRate": 0.9205
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Nothing was excluded: all 150 wallets were allocated and $69,026 went to the 8 farmers. The exclusion answer ran from 26% to 46% and never crossed 50%. With one answer for every wallet, precision and recall say nothing here.",
+   "caveat": "In this recorded run the model excluded no wallet at all: the exclusion answer never rose above 46%, so every exclusion figure below is the score of doing nothing. The question wording and the state lean toward \"no\"; the demo needs a revised state and a new recording before its numbers mean anything.",
+   "showcase": {
+    "item": "SW-001",
+    "label": "SW-001 · $1,133 at stake · 5 actions",
+    "caption": "Funded from an exchange hot wallet that 36 wallets share, and nothing else in common with anyone. The model still names the funding source as a link, but allocates the $1,133, which is right: the same exchange is not the same person.",
+    "answers": [
+     {
+      "title": "Sybil likelihood",
+      "type": "score",
+      "text": "Moderate · 3.0 of 6",
+      "share": 0.492
+     },
+     {
+      "title": "Linking signal",
+      "type": "choice",
+      "text": "Funding source",
+      "share": 0.98
+     },
+     {
+      "title": "Exclude from allocation",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.34
+     }
+    ],
+    "verdict": "Allocate · $1,133",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "portfolio-health",
+   "title": "Portfolio health",
+   "domain": "portfolio",
+   "number": 141,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "396d8db34cf0",
+    "questions": "efa6cd325223"
+   },
+   "items": 24,
+   "answered": 24,
+   "graded": 24,
+   "right": 16,
+   "interval": {
+    "low": 0.4671,
+    "high": 0.8203
+   },
+   "headline": {
+    "label": "Main risk right",
+    "value": 0.6667,
+    "display": "16 of 24",
+    "context": "every portfolio, the healthy ones included, named from six"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.6667,
+     "model": true
+    },
+    {
+     "label": "Rule: the house thresholds, in order",
+     "value": 0.875,
+     "model": false
+    },
+    {
+     "label": "Always the commonest answer",
+     "value": 0.2083,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.6667,
+    "accuracy": 0.6667,
+    "macroF1": 0.5619,
+    "majorityBaseline": 0.2083,
+    "calibrationError": 0.1033,
+    "automationRate": 0.6667,
+    "automationPrecision": 1
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Confidence separates the run cleanly: all 16 answers at 50% or above are right, and the 8 below it are exactly the 8 wrong ones. Acting only above that line would have sent every mistake to the adviser.",
+   "caveat": "The adviser note in each portfolio is worded differently for each planted problem, so this run cannot show the risk was read from the holdings alone; the planted liquidity positions also sit under the one-day line the state calls acceptable.",
+   "showcase": {
+    "item": "PF-01",
+    "label": "PF-01 · $416M · 7 holdings · balanced",
+    "caption": "Nothing here is oversized or drifting. The client spends in dirhams and 91% of the book, about $378M, is in dollars with no hedge.",
+    "answers": [
+     {
+      "title": "Main risk",
+      "type": "choice",
+      "text": "Currency",
+      "share": 1
+     },
+     {
+      "title": "Severity",
+      "type": "score",
+      "text": "Serious · 4.2 of 6",
+      "share": 0.7
+     },
+     {
+      "title": "Action",
+      "type": "choice",
+      "text": "HEDGE",
+      "share": 0.97
+     }
+    ],
+    "verdict": "Currency · hedge",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "rebalance-review",
+   "title": "Rebalance review",
+   "domain": "portfolio",
+   "number": 143,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "a59f54decfd4",
+    "questions": "88d0d06c8639"
+   },
+   "items": 200,
+   "answered": 200,
+   "graded": 200,
+   "right": 138,
+   "interval": {
+    "low": 0.6228,
+    "high": 0.75
+   },
+   "headline": {
+    "label": "Verdict agrees",
+    "value": 0.69,
+    "display": "69%",
+    "context": "138 of 200 trades, all four verdicts · 16 of 47 on the problem trades"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.69,
+     "model": true
+    },
+    {
+     "label": "Rule: the five desk rules as five ifs",
+     "value": 0.995,
+     "model": false
+    },
+    {
+     "label": "Always the commonest verdict",
+     "value": 0.765,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.69,
+    "accuracy": 0.69,
+    "macroF1": 0.3822,
+    "majorityBaseline": 0.765,
+    "calibrationError": 0.2316,
+    "recall": 1,
+    "precision": 0.6026
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "47 of the 47 problem trades were stopped, but only 16 got the verdict the desk would give. The commonest swap: 14 trades the desk would defer were given reject. It saw that something was wrong more reliably than it knew what to do about it.",
+   "caveat": "Every planted problem breaks a rule written out in the state, so five ifs match the desk on 199 of 200 trades; several planted trades also move away from their target, which a real rebalancer would never propose.",
+   "showcase": {
+    "item": "TR-0154",
+    "label": "TR-0154 · buy PEP · $592M",
+    "caption": "Buy $592M of PEP: 54.6% of a day’s volume against a rule of one fifth. The trade is right and the size is not.",
+    "answers": [
+     {
+      "title": "Verdict",
+      "type": "choice",
+      "text": "Resize",
+      "share": 0.52
+     },
+     {
+      "title": "Size band",
+      "type": "choice",
+      "text": "Split over days",
+      "share": 0.83
+     },
+     {
+      "title": "Issue",
+      "type": "choice",
+      "text": "Liquidity",
+      "share": 1
+     }
+    ],
+    "verdict": "Resize · split over days",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "mandate-compliance",
+   "title": "Mandate compliance",
+   "domain": "portfolio",
+   "number": 145,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "1a7f998ffd84",
+    "questions": "82ca74888205"
+   },
+   "items": 240,
+   "answered": 240,
+   "graded": 232,
+   "right": 230,
+   "interval": {
+    "low": 0.9691,
+    "high": 0.9976
+   },
+   "headline": {
+    "label": "Settled checks right",
+    "value": 0.9914,
+    "display": "230 of 232",
+    "context": "breach or met, on every check the policy settles · the 8 arguable ones are not scored"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9914,
+     "model": true
+    },
+    {
+     "label": "Rule: past the limit by more than the tolerance",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest answer",
+     "value": 0.8879,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9914,
+    "accuracy": 0.9914,
+    "macroF1": 0.979,
+    "majorityBaseline": 0.8879,
+    "calibrationError": 0.046,
+    "precision": 0.9286,
+    "recall": 1,
+    "automationRate": 0.9655
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "6 of the 8 checks that turn on a reading were marked as such. Those are the lines a compliance officer needs to see first, whichever way they were answered.",
+   "caveat": "All thirty near misses sit on the compliant side of the limit and carry a note saying they are inside tolerance, and a note appears only on near misses and arguable checks, so this run does not show that tolerance was understood; a cohort over the limit but inside tolerance is planned.",
+   "showcase": {
+    "item": "P-ZETA-R07",
+    "label": "P-ZETA · R07 · average rating",
+    "caption": "The bond sleeve must average A- or better, seven notches below AAA. It measures 9.3 notches, far past a quarter-notch tolerance.",
+    "answers": [
+     {
+      "title": "Breach",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.96
+     },
+     {
+      "title": "Severity",
+      "type": "score",
+      "text": "Material · 4.3 of 6",
+      "share": 0.708
+     },
+     {
+      "title": "Interpretation dependent",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.37
+     }
+    ],
+    "verdict": "Breach · average rating",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "portfolio-compare",
+   "title": "Portfolio compare",
+   "domain": "portfolio",
+   "number": 142,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "01f6d61f5439",
+    "questions": "97f5235bd69a"
+   },
+   "items": 18,
+   "answered": 18,
+   "graded": 18,
+   "right": 18,
+   "interval": {
+    "low": 0.8241,
+    "high": 1
+   },
+   "headline": {
+    "label": "Picks against labels",
+    "value": 1,
+    "display": "18 of 18",
+    "context": "100.0%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: count the broken constraints",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Rule: take the higher 12-month return",
+     "value": 0.3333,
+     "model": false
+    },
+    {
+     "label": "Always the commonest answer",
+     "value": 0.3889,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": 1,
+    "majorityBaseline": 0.3333,
+    "calibrationError": 0.1844
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A rule that counts broken constraints scores 18 of 18, against 18 for the model. Every figure a constraint needs is precomputed in the state, so this file is easy; picking the higher 12-month return scores 6 of 18.",
+   "caveat": "The eighteen pairs are built from about six portfolios, ten of them are five comparisons shown in both orders, and every figure a constraint needs is precomputed in the state, so a short rule also scores 18 of 18.",
+   "showcase": {
+    "item": "PC-17",
+    "label": "PC-17 · Low drawdown",
+    "caption": "The goal is a drawdown no worse than 18%. Portfolio A returned 28.95% against 17.65%, but fell 19.37% on the way. B is the pick.",
+    "answers": [
+     {
+      "title": "Better fit",
+      "type": "choice",
+      "text": "Portfolio b",
+      "share": 0.97
+     },
+     {
+      "title": "Biggest difference",
+      "type": "choice",
+      "text": "Drawdown risk",
+      "share": 0.92
+     },
+     {
+      "title": "Decisiveness",
+      "type": "score",
+      "text": "Strong · 4.1 of 6",
+      "share": 0.685
+     }
+    ],
+    "verdict": "Portfolio B fits the goal better",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "factor-exposure",
+   "title": "Factor and sector exposure",
+   "domain": "portfolio",
+   "number": 144,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "398bcc3de581",
+    "questions": "14d05e743d1d"
+   },
+   "items": 30,
+   "answered": 30,
+   "graded": 30,
+   "right": 24,
+   "interval": {
+    "low": 0.6269,
+    "high": 0.905
+   },
+   "headline": {
+    "label": "Belief matches holdings accuracy",
+    "value": 0.8,
+    "display": "24 of 30",
+    "context": "owner story compared with the actual book"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.8,
+     "model": true
+    },
+    {
+     "label": "Rule: it matches if the owner says \"deliberate\"",
+     "value": 0.9667,
+     "model": false
+    },
+    {
+     "label": "Always the commonest answer",
+     "value": 0.6667,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.8,
+    "accuracy": 0.8,
+    "macroF1": 0.775,
+    "majorityBaseline": 0.3,
+    "calibrationError": 0.0653
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "1 portfolio with a planted second exposure was called clean. The unintended answer is graded independently of the dominant one.",
+   "caveat": "The dominant factor is the largest co-movement figure already in the state, the thirty books come from about seven sets of holdings, and whether a second bet counts as unintended is decided by the owner’s wording, so only the belief question measures judgement here.",
+   "showcase": {
+    "item": "FE-18",
+    "label": "FE-18 · 5 holdings · An income book whose returns should not depend on rates.",
+    "caption": "The owner calls it an income book whose returns should not depend on rates. Its co-movement with the rates basket is 0.48, the largest figure it has.",
+    "answers": [
+     {
+      "title": "Dominant factor",
+      "type": "choice",
+      "text": "RATES",
+      "share": 1
+     },
+     {
+      "title": "Unintended exposure",
+      "type": "choice",
+      "text": "VALUE",
+      "share": 0.78
+     },
+     {
+      "title": "Belief matches holdings",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.11
+     }
+    ],
+    "verdict": "Rates · the story does not match",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "income-planning",
+   "title": "Income and cash planning",
+   "domain": "portfolio",
+   "number": 146,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "eb6574a74d4b",
+    "questions": "edbc3d09528d"
+   },
+   "items": 40,
+   "answered": 40,
+   "graded": 40,
+   "right": 40,
+   "interval": {
+    "low": 0.9124,
+    "high": 1
+   },
+   "headline": {
+    "label": "Problem named exactly",
+    "value": 1,
+    "display": "40 of 40",
+    "context": "100.0%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: three comparisons over the account totals",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest answer",
+     "value": 0.5,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": 1,
+    "majorityBaseline": 0.5,
+    "calibrationError": 0.039
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Three comparisons over totals the state already carries name 40 of 40 problems, against 40 for the model. The labels are arithmetic, so this run shows the figures were read correctly, not that anything was judged.",
+   "caveat": "Every label here is arithmetic over totals the state already carries, and the worst-month question spells out how to find its answer, so three comparisons also score 40 of 40; a slice without the precomputed figures is planned.",
+   "showcase": {
+    "item": "IP-13",
+    "label": "IP-13 · $64,346 income · $63,346 commitments",
+    "caption": "Income of $64,346 covers commitments of $63,346. But a $24,406 school fee falls in August, before the large coupon, and cash drops to −$11,206.",
+    "answers": [
+     {
+      "title": "Problem",
+      "type": "choice",
+      "text": "Timing",
+      "share": 0.98
+     },
+     {
+      "title": "Worst month",
+      "type": "choice",
+      "text": "AUG",
+      "share": 0.99
+     },
+     {
+      "title": "Sell needed",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.86
+     }
+    ],
+    "verdict": "Timing · worst month AUG",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "post-trade-review",
+   "title": "Post-trade lesson review",
+   "domain": "trades",
+   "number": 151,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "a9d285426801",
+    "questions": "22a93cc8854f"
+   },
+   "items": 220,
+   "answered": 220,
+   "graded": 220,
+   "right": 198,
+   "interval": {
+    "low": 0.8532,
+    "high": 0.933
+   },
+   "headline": {
+    "label": "Lesson agrees with the record",
+    "value": 0.9,
+    "display": "198 of 220",
+    "context": "90% of all trades, faulted and well-run together"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9,
+     "model": true
+    },
+    {
+     "label": "Rule: five checks on the record",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest lesson",
+     "value": 0.4091,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9,
+    "accuracy": 0.9,
+    "macroF1": 0.8536,
+    "majorityBaseline": 0.4091,
+    "calibrationError": 0.0721,
+    "precision": 0.8036,
+    "recall": 1
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Five checks on fields already in the record name 220 of 220 lessons; the review named 198. On this dataset the rule wins, so the run shows the record being read, not judgement.",
+   "caveat": "Five checks on fields already in the record name all 220 planted lessons, so this run measures how well the record is read, not judgement; a harder dataset is planned.",
+   "showcase": {
+    "item": "TD-0024",
+    "label": "TD-0024 · CVX short · -5.27%",
+    "caption": "A CVX short. The stop was moved from 158.42 to 161.33 one bar after entry and was hit there: −5.27% instead of about −3.4%. Lesson named: moved stop, exit discipline 1.1 of 6.",
+    "answers": [
+     {
+      "title": "Plan complete",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.96
+     },
+     {
+      "title": "Stop honoured",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.03
+     },
+     {
+      "title": "Exit discipline",
+      "type": "score",
+      "text": "Very poor · 1.1 of 6",
+      "share": 0.178
+     },
+     {
+      "title": "Lesson",
+      "type": "choice",
+      "text": "Moved stop",
+      "share": 1
+     }
+    ],
+    "verdict": "Moved stop",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "trade-feature-analysis",
+   "title": "Trade feature analysis",
+   "domain": "trades",
+   "number": 152,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "2b8d4733d595",
+    "questions": "dcc7b77334b8"
+   },
+   "items": 300,
+   "answered": 300,
+   "graded": 300,
+   "right": 173,
+   "interval": {
+    "low": 0.5201,
+    "high": 0.6313
+   },
+   "headline": {
+    "label": "Would-take-again win rate",
+    "value": 0.5556,
+    "display": "55.6%",
+    "context": "54 trades selected · 11.2 percentage points versus base · 95% interval 42.4% to 68.0%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.5556,
+     "model": true
+    },
+    {
+     "label": "Rule: near the average, close in the top third",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Take every trade",
+     "value": 0.4433,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.5767,
+    "accuracy": 0.5767,
+    "macroF1": 0.5067,
+    "majorityBaseline": 0.5567,
+    "calibrationError": 0.0277,
+    "precision": 0.5556,
+    "recall": 0.2256
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "The 11.2-point lift rests on 54 picks. Its 95% interval, 42.4% to 68.0%, includes the 44.3% base rate, so this run cannot tell the lift from luck.",
+   "caveat": "The outcomes are planted from two numbers the state hands over, and a two-line rule on them picks 38 winners out of 38. The model’s 11-point lift over the base rate sits inside its own 95% interval, and the setup question only echoes the trader’s label.",
+   "showcase": {
+    "item": "TF-237",
+    "label": "TF-237 · PG · Breakout · 2023-07-21",
+    "caption": "A PG breakout, read only up to its entry bar. The bar closed three quarters of the way up on 1.46× volume: entry quality 4.3 of 6, would take again at 65%. The hidden outcome was a win.",
+    "answers": [
+     {
+      "title": "Entry quality",
+      "type": "score",
+      "text": "Good · 4.3 of 6",
+      "share": 0.713
+     },
+     {
+      "title": "Extended entry",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.45
+     },
+     {
+      "title": "Would take again",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.65
+     }
+    ],
+    "verdict": "Would take again · 65%",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "trader-behaviour",
+   "title": "Trader behaviour",
+   "domain": "trades",
+   "number": 154,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "8c77ed270978",
+    "questions": "0da19b8b256a"
+   },
+   "items": 120,
+   "answered": 120,
+   "graded": 120,
+   "right": 116,
+   "interval": {
+    "low": 0.9174,
+    "high": 0.987
+   },
+   "headline": {
+    "label": "Pattern accuracy",
+    "value": 0.9667,
+    "display": "116 of 120",
+    "context": "96.7% · calling every day disciplined scores 72.5%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9667,
+     "model": true
+    },
+    {
+     "label": "Rule: four thresholds against the norms",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest pattern",
+     "value": 0.725,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9667,
+    "accuracy": 0.9667,
+    "macroF1": 0.8692,
+    "majorityBaseline": 0.725,
+    "calibrationError": 0.0824,
+    "precision": 1,
+    "recall": 1
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Four thresholds against the day’s own norms name 120 of 120 patterns; the model named 116. The planted habits do not overlap, so on this dataset the rule wins.",
+   "caveat": "The planted habits do not overlap: four thresholds against the day’s own norms name all 120 patterns, and one field in the state is non-zero only on early-exit days. The eight losing control days lose about 0.4% of the account each. A harder dataset is planned.",
+   "showcase": {
+    "item": "TB-026",
+    "label": "2026-02-09 · 5 trades · -$1,553",
+    "caption": "Two NVDA losses, −$182 and −$325. Six minutes later a $12,343 position, 2.7 times the median size, loses $571; nine minutes after that, $10,346 of AAPL loses $301. Named revenge, set off by a loss.",
+    "answers": [
+     {
+      "title": "Pattern",
+      "type": "choice",
+      "text": "Revenge",
+      "share": 0.78
+     },
+     {
+      "title": "Severity",
+      "type": "score",
+      "text": "Serious · 3.6 of 6",
+      "share": 0.6
+     },
+     {
+      "title": "Triggered by loss",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.6
+     },
+     {
+      "title": "Size discipline",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.2
+     }
+    ],
+    "verdict": "Revenge · 71%",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "missed-trades",
+   "title": "Missed trades",
+   "domain": "trades",
+   "number": 156,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "f4ef22504382",
+    "questions": "aad758164072"
+   },
+   "items": 240,
+   "answered": 240,
+   "graded": 130,
+   "right": 130,
+   "interval": {
+    "low": 0.9713,
+    "high": 1
+   },
+   "headline": {
+    "label": "Skips judged as the written policy does",
+    "value": 1,
+    "display": "130 of 130",
+    "context": "against the labels it is 121: 9 gap labels sit under the policy’s own 2.5% line"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: the three policy checks",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always “should have been taken”",
+     "value": 0.8385,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": null,
+    "majorityBaseline": null,
+    "calibrationError": 0.1927,
+    "accuracyAgainstLabels": 0.9308
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "9 skips are labelled as justified by a gap, but their gaps are below the 2.5% the written policy names. The model said take on those, which is what the policy says; against the labels that reads as 121 right instead of 130.",
+   "caveat": "The take-or-skip policy is three mechanical checks, every item already passed the rule, and the account’s loss state arrives in the state as a ready-made label, so most answers here are lookups. Nine of the ten gap labels contradict the policy’s own 2.5% line, and the miss pattern is planted at exactly 100% on Mondays and after losses.",
+   "showcase": {
+    "item": "MT-225",
+    "label": "MT-225 · JNJ · 2026-06-22 · not taken",
+    "caption": "JNJ, a Monday, the last three trades −$301, −$156 and +$65. No earnings, open risk 1.26% of 2%. Should have been taken, 78%; reason, recent losses. The next ten sessions: +15.54%, $1,554 on $10,000.",
+    "answers": [
+     {
+      "title": "Qualified",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.86
+     },
+     {
+      "title": "Skip reason",
+      "type": "choice",
+      "text": "Recent losses",
+      "share": 0.65
+     },
+     {
+      "title": "Should have been taken",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.78
+     }
+    ],
+    "verdict": "Skipped, and should have been taken",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "execution-quality",
+   "title": "Execution quality",
+   "domain": "trades",
+   "number": 153,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "299f0a8ea09a",
+    "questions": "7ab87a6e3d9c"
+   },
+   "items": 260,
+   "answered": 260,
+   "graded": 260,
+   "right": 217,
+   "interval": {
+    "low": 0.7846,
+    "high": 0.8748
+   },
+   "headline": {
+    "label": "Cause named exactly",
+    "value": 0.8346,
+    "display": "217 of 260",
+    "context": "83.5% · gap, chase, size, spread or clean"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.8346,
+     "model": true
+    },
+    {
+     "label": "Rule: order type, bars late, session",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest cause",
+     "value": 0.5,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.8346,
+    "accuracy": 0.8346,
+    "macroF1": 0.7002,
+    "majorityBaseline": 0.5,
+    "calibrationError": 0.1582,
+    "dollarWeightedAccuracy": 0.2295
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Five lines over order type, bars late, session and the two prices name 260 of 260 causes; the model named 217. On this dataset the rule wins.",
+   "caveat": "A five-line rule on order type, bars late, session and the two prices names all 260 planted causes. The size fills hold 92% of the dollars yet are at most 1.1% of a day’s volume, so little in the record says too big; a harder dataset is planned.",
+   "showcase": {
+    "item": "FL-0258",
+    "label": "FL-0258 · buy NVDA · $178K",
+    "caption": "An NVDA buy signalled at 209.66 and sent market-on-open the next day. It filled at 222.86: 630 bps, $11,207. Graded 0.7 of 6, cause named as a gap.",
+    "answers": [
+     {
+      "title": "Fill quality",
+      "type": "score",
+      "text": "Very poor · 0.7 of 6",
+      "share": 0.113
+     },
+     {
+      "title": "Cause",
+      "type": "choice",
+      "text": "GAP",
+      "share": 0.81
+     },
+     {
+      "title": "Fix",
+      "type": "choice",
+      "text": "Earlier order",
+      "share": 0.59
+     }
+    ],
+    "verdict": "Gap · 630 bps",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "journal-vs-reality",
+   "title": "Journal versus reality",
+   "domain": "trades",
+   "number": 155,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "595a31038327",
+    "questions": "2e7aa4e7e88c"
+   },
+   "items": 200,
+   "answered": 200,
+   "graded": 200,
+   "right": 187,
+   "interval": {
+    "low": 0.892,
+    "high": 0.9616
+   },
+   "headline": {
+    "label": "Notes read right",
+    "value": 0.935,
+    "display": "187 of 200",
+    "context": "93.5% · whether the note drifts from the record or not"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.935,
+     "model": true
+    },
+    {
+     "label": "Rule: five keyword checks",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest answer",
+     "value": 0.63,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.935,
+    "accuracy": 0.935,
+    "macroF1": 0.7044,
+    "majorityBaseline": 0.63,
+    "calibrationError": 0.1632,
+    "precision": 0.8506,
+    "recall": 1,
+    "contradictionRate": 0.15
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Five keyword checks on the note and the record sort 200 of 200 notes correctly; the model sorted 187. The record states most contradictions in words, so on this dataset the rule wins.",
+   "caveat": "The record states most contradictions in words (“without waiting”, “closed by hand”, “two days later”) and each drift type comes from a few note templates, so five keyword checks sort all 200 notes; a harder dataset is planned.",
+   "showcase": {
+    "item": "JR-0008",
+    "label": "JR-0008 · MSFT · starter · -3%",
+    "caption": "The note says “Waited for the pullback on MSFT… no chasing today.” The record says it was filled at the breakout, without waiting, and stopped out at −3%. Drift named: entry, accuracy 1.3 of 6.",
+    "answers": [
+     {
+      "title": "Note matches trade",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.11
+     },
+     {
+      "title": "Drift type",
+      "type": "choice",
+      "text": "ENTRY",
+      "share": 1
+     },
+     {
+      "title": "Note honesty",
+      "type": "score",
+      "text": "Very loose · 1.3 of 6",
+      "share": 0.218
+     },
+     {
+      "title": "Rule followed",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.12
+     }
+    ],
+    "verdict": "The note drifts on entry",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "goal-screening",
+   "title": "Screening for a goal",
+   "domain": "screening",
+   "number": 161,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "42f98b5c084e",
+    "questions": "279a998af3bf"
+   },
+   "items": 96,
+   "answered": 96,
+   "graded": 56,
+   "right": 26,
+   "interval": {
+    "low": 0.3402,
+    "high": 0.593
+   },
+   "headline": {
+    "label": "Named disqualifiers the numbers support",
+    "value": 0.4643,
+    "display": "26 of 56",
+    "context": "46.4% of the readings that name a reason, against a deliberately strict bar; \"none\" is not counted as supported"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.4643,
+     "model": true
+    },
+    {
+     "label": "Always say volatility",
+     "value": 0.4643,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.4643,
+    "accuracy": 0.4643,
+    "macroF1": 0.2176,
+    "majorityBaseline": 0.1351,
+    "calibrationError": 0.2621,
+    "contradictionRate": 0.2396
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "30 of 56 readings that name a disqualifier name one the file does not support: volatility, earnings quality. The reason has to be in the numbers, not in the reputation.",
+   "caveat": null,
+   "showcase": {
+    "item": "NVDA-income-now",
+    "label": "NVDA · income-now",
+    "caption": "NVDA read for \"I need income now\": fit 1.4 of 6, ruled out by volatility. The file agrees: 38.0% a year against a 25% bar.",
+    "answers": [
+     {
+      "title": "Fit to goal",
+      "type": "score",
+      "text": "Poor · 1.4 of 6",
+      "share": 0.235
+     },
+     {
+      "title": "Disqualifier",
+      "type": "choice",
+      "text": "Volatility",
+      "share": 0.77
+     },
+     {
+      "title": "Shortlist",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.35
+     },
+     {
+      "title": "Data sufficient",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.5
+     }
+    ],
+    "verdict": "Not shortlisted · fit 1.4 of 6",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "sharia-screen",
+   "title": "Sharia screening, three rule sets",
+   "domain": "screening",
+   "number": 163,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "951808d1a495",
+    "questions": "365f79b6a60b"
+   },
+   "items": 48,
+   "answered": 48,
+   "graded": 36,
+   "right": 29,
+   "interval": {
+    "low": 0.6497,
+    "high": 0.9025
+   },
+   "headline": {
+    "label": "Screenings with every ratio call right",
+    "value": 0.8056,
+    "display": "29 of 36",
+    "context": "debt, liquid assets and receivables all read the way the sum on the page reads them"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.8056,
+     "model": true
+    },
+    {
+     "label": "Rule: divide the line by the denominator",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always say inside the limit",
+     "value": 0.75,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.8056,
+    "accuracy": 0.8056,
+    "macroF1": 0.8048,
+    "majorityBaseline": 0.3889,
+    "calibrationError": 0.1769,
+    "ratioCallAccuracy": 0.9333,
+    "verdictAccuracy": 0.8056,
+    "contradictionRate": 0.0208
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "7 ratio calls disagree with the same sum done here: NVDA liquid (30.3% against 25%), JPM liquid (36.9% against 33%), JPM debt (11.3% against 25%), BAC liquid (59.3% against 33%).",
+   "caveat": null,
+   "showcase": {
+    "item": "KO-total-assets",
+    "label": "KO · total-assets",
+    "caption": "Coca-Cola owes 12.0% of its market value and passes that standard. Against total assets the same debt is 43.4%, over the 33% limit, and it fails.",
+    "answers": [
+     {
+      "title": "Debt ratio pass",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.26
+     },
+     {
+      "title": "Interest securities pass",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.84
+     },
+     {
+      "title": "Receivables pass",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.95
+     },
+     {
+      "title": "Verdict",
+      "type": "choice",
+      "text": "FAIL",
+      "share": 0.71
+     }
+    ],
+    "verdict": "Fail · 57%",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "accounting-flags",
+   "title": "Accounting red flags",
+   "domain": "screening",
+   "number": 165,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "3608f559e5eb",
+    "questions": "fbd23c3cbc45"
+   },
+   "items": 120,
+   "answered": 120,
+   "graded": 120,
+   "right": 48,
+   "interval": {
+    "low": 0.3168,
+    "high": 0.4894
+   },
+   "headline": {
+    "label": "Years read as planted",
+    "value": 0.4,
+    "display": "48 of 120",
+    "context": "the planted pattern named, or \"none\" for a clean year; answering \"none\" every time scores 73"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.4,
+     "model": true
+    },
+    {
+     "label": "Rule: the line that outgrew revenue",
+     "value": 0.925,
+     "model": false
+    },
+    {
+     "label": "Always say nothing to see",
+     "value": 0.6083,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.4,
+    "accuracy": 0.4,
+    "macroF1": 0.5905,
+    "majorityBaseline": 0.6083,
+    "calibrationError": 0.3185,
+    "rankingAuc": 0.9859,
+    "precision": 0.375,
+    "recall": 0.973
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "14 patterns were spotted but named as something else: inventory read as receivables; related party read as receivables; revenue timing read as receivables.",
+   "caveat": "Every planted pattern here moves one line far outside anything a clean year does, so a five-comparison rule names 111 of 120; the run says more about where to set the bar than about reading, and a subtler dataset is planned.",
+   "showcase": {
+    "item": "AF-0027",
+    "label": "AF-0027 · Beacon Holdings · Retail",
+    "caption": "Beacon Holdings: inventory up 55% in a year when revenue fell 7%. Named as an inventory build, scored 4.5 of 6 and held for review at 91%.",
+    "answers": [
+     {
+      "title": "Flag",
+      "type": "choice",
+      "text": "Inventory",
+      "share": 0.52
+     },
+     {
+      "title": "Severity",
+      "type": "score",
+      "text": "Serious · 4.5 of 6",
+      "share": 0.747
+     },
+     {
+      "title": "Business explanation exists",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.07
+     },
+     {
+      "title": "Investigate",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.91
+     }
+    ],
+    "verdict": "Held for review · inventory",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "fundamental-read",
+   "title": "Fundamental read",
+   "domain": "screening",
+   "number": 162,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "e00e1b269a6c",
+    "questions": "4619cb15672b"
+   },
+   "items": 16,
+   "answered": 16,
+   "graded": 9,
+   "right": 6,
+   "interval": {
+    "low": 0.3542,
+    "high": 0.8794
+   },
+   "headline": {
+    "label": "Companies read the way the ratios read them",
+    "value": 0.6667,
+    "display": "6 of 9",
+    "context": "earnings quality and direction both match the computed category; only 9 of 16 instruments have complete statements, so one company moves this a long way"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.6667,
+     "model": true
+    },
+    {
+     "label": "Always cash-backed and improving",
+     "value": 0.6667,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.6667,
+    "accuracy": 0.6667,
+    "macroF1": null,
+    "majorityBaseline": null,
+    "calibrationError": null,
+    "crossCheckAgreement": 0.8611
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "3 companies have a category disagreement between Jev’s direct statement reading and the small ratio cross-check. The report preserves both rather than treating the ratio as hidden ground truth.",
+   "caveat": "Only nine of the sixteen instruments have statements complete enough to check, and all nine are very large, healthy companies; this is a smoke test, not a benchmark.",
+   "showcase": {
+    "item": "FR-CVX",
+    "label": "CVX · Energy · 4 annual years",
+    "caption": "Chevron: revenue down 21.8% across the four years and operating margin down 7.9 points. Read as deteriorating with cash-backed earnings, and the ratios say the same.",
+    "answers": [
+     {
+      "title": "Quality",
+      "type": "score",
+      "text": "Good · 3.6 of 6",
+      "share": 0.605
+     },
+     {
+      "title": "Leverage risk",
+      "type": "score",
+      "text": "Low · 2.5 of 6",
+      "share": 0.413
+     },
+     {
+      "title": "Earnings quality",
+      "type": "choice",
+      "text": "Cash backed",
+      "share": 0.95
+     },
+     {
+      "title": "Direction",
+      "type": "choice",
+      "text": "Deteriorating",
+      "share": 1
+     }
+    ],
+    "verdict": "Quality 3.6 of 6 · deteriorating",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "dividend-safety",
+   "title": "Dividend safety",
+   "domain": "screening",
+   "number": 164,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "bddb63eff758",
+    "questions": "daead53dad48"
+   },
+   "items": 16,
+   "answered": 16,
+   "graded": 10,
+   "right": 10,
+   "interval": {
+    "low": 0.7225,
+    "high": 1
+   },
+   "headline": {
+    "label": "Weak payers told from covered ones",
+    "value": 1,
+    "display": "10 of 10",
+    "context": "safety under 3 of 6 exactly where the cover arithmetic finds the payout stretched; 10 companies, none of which has cut"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: a yield of 3% or more is stretched",
+     "value": 0.7,
+     "model": false
+    },
+    {
+     "label": "Always say covered",
+     "value": 0.6,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": null,
+    "majorityBaseline": null,
+    "calibrationError": 0.435,
+    "contradictionRate": 0.2
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "The four-year cached histories contain no aggregate dividend cut; the report says so rather than manufacturing a test case.",
+   "caveat": "None of the ten companies here has cut its dividend, so the run can show that weak cover is recognised but not that a cut is foreseen; a point-in-time set with real cuts is planned.",
+   "showcase": {
+    "item": "DS-KO",
+    "label": "KO · Consumer Defensive · 4 annual years",
+    "caption": "Coca-Cola paid $8.8B in dividends out of $5.3B of free cash flow: cover of 0.60 times. Safety 2.3 of 6, cash cover named as the first thing to break, and the arithmetic agrees.",
+    "answers": [
+     {
+      "title": "Safety",
+      "type": "score",
+      "text": "Weak · 2.3 of 6",
+      "share": 0.39
+     },
+     {
+      "title": "First to break",
+      "type": "choice",
+      "text": "Cash cover",
+      "share": 0.93
+     },
+     {
+      "title": "Cut risk 12m",
+      "type": "choice",
+      "text": "LOW",
+      "share": 0.4
+     },
+     {
+      "title": "Payout funded by debt",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.46
+     }
+    ],
+    "verdict": "Safety 2.3 of 6 · low cut risk",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "peer-valuation",
+   "title": "Peer valuation",
+   "domain": "screening",
+   "number": 166,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "21dcd20e7f6b",
+    "questions": "69799276eb19"
+   },
+   "items": 4,
+   "answered": 4,
+   "graded": 0,
+   "right": 0,
+   "interval": null,
+   "headline": {
+    "label": "Cheapest-peer agreement",
+    "value": 0.5,
+    "display": "1 of 2",
+    "context": "only 2 of 4 sets have one peer cheapest on most multiples, the rest are ties; cheapest is a reference point, not the right answer"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.5,
+     "model": true
+    },
+    {
+     "label": "Rule: lowest price to earnings",
+     "value": 1,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": null,
+    "accuracy": null,
+    "macroF1": null,
+    "majorityBaseline": null,
+    "calibrationError": null,
+    "comparabilityAccuracy": 0.5
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Large US banks: no clear cheapest peer (P/E WFC, P/B C), so Jev’s pick of BAC is not compared with anything.",
+   "caveat": "Four peer sets is an illustration, not a test: every figure is a count out of four or fewer, and nothing here can say whether a pick was good value.",
+   "showcase": {
+    "item": "PV-TECH",
+    "label": "Large-cap technology · NVDA · AAPL · MSFT · GOOGL",
+    "caption": "GOOGL is cheapest on all three multiples: 15.5 times earnings against 44.7 for NVDA. The model picked it, at 39%, with NVDA at 26% behind it.",
+    "answers": [
+     {
+      "title": "Best value",
+      "type": "choice",
+      "text": "GOOGL",
+      "share": 0.39
+     },
+     {
+      "title": "Premium justified",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.71
+     },
+     {
+      "title": "Comparable set",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.42
+     },
+     {
+      "title": "Confidence in ranking",
+      "type": "score",
+      "text": "Moderate · 2.7 of 6",
+      "share": 0.45
+     }
+    ],
+    "verdict": "Best value: GOOGL · 39%",
+    "agree": null
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "news-impact",
+   "title": "News impact",
+   "domain": "news",
+   "number": 171,
+   "dataClass": "mixed",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "b70c2bb82e70",
+    "questions": "4d8170f1a90e"
+   },
+   "items": 300,
+   "answered": 300,
+   "graded": 300,
+   "right": 294,
+   "interval": {
+    "low": 0.9571,
+    "high": 0.9908
+   },
+   "headline": {
+    "label": "Direction read as written",
+    "value": 0.98,
+    "display": "294 of 300",
+    "context": "positive, negative or no read, against what the template was written to say"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.98,
+     "model": true
+    },
+    {
+     "label": "Rule: good-news and bad-news verbs",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always no directional read",
+     "value": 0.6067,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.98,
+    "accuracy": 0.98,
+    "macroF1": 0.9775,
+    "majorityBaseline": 0.6067,
+    "calibrationError": 0.1314,
+    "materialitySeparation": 1.94,
+    "materialityGapMovedAgainstNothing": -0.09,
+    "movedGradedAboveNothingShare": 0.468,
+    "maxMaterialityUsed": 3.89,
+    "actedOnRate": 0.0233
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "The forty headlines followed by a real move and the forty followed by nothing were graded within 0.1 of a point of each other. They are written from the same templates, so this is the demo working: the text does not know what happens next, and neither does anybody reading it.",
+   "caveat": "The headlines come from nineteen templates and each template carries its direction in its verb, so the direction score measures reading, not judgement; the comparison that matters here is the materiality gap between identical wording.",
+   "showcase": {
+    "item": "NW-0021",
+    "label": "LNTN · 2022-02-15 · Lantern Devices cuts full-year guidance, citing weaker demand",
+    "caption": "Lantern Devices cuts full-year guidance. Graded 3.9 of 6 and negative, with only the bars up to that day; the price then fell 7.36% in five days.",
+    "answers": [
+     {
+      "title": "Materiality",
+      "type": "score",
+      "text": "Material · 3.9 of 6",
+      "share": 0.648
+     },
+     {
+      "title": "Direction",
+      "type": "choice",
+      "text": "Negative",
+      "share": 1
+     },
+     {
+      "title": "Already priced",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.25
+     },
+     {
+      "title": "Tradeable now",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.48
+     }
+    ],
+    "verdict": "Material · 3.9 of 6 · negative",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "filings-read",
+   "title": "Filings and calls",
+   "domain": "news",
+   "number": 173,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "6bbcde563fe3",
+    "questions": "e4e348d7b17e"
+   },
+   "items": 90,
+   "answered": 90,
+   "graded": 90,
+   "right": 90,
+   "interval": {
+    "low": 0.9591,
+    "high": 1
+   },
+   "headline": {
+    "label": "Guidance read correctly",
+    "value": 1,
+    "display": "90 of 90",
+    "context": "raised, maintained, cut, withdrawn or never mentioned"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: look for the stock verb",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest answer",
+     "value": 0.3333,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": 1,
+    "majorityBaseline": 0.3333,
+    "calibrationError": 0.0008,
+    "newRiskPrecision": 0.3617,
+    "newRiskRecall": 1,
+    "toneGapPrecision": 0.5333,
+    "toneGapRecall": 0.6667,
+    "toneMeanAbsoluteError": 0.5993
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "A buried new risk was found about as often as an obvious one — 9 of 9 against 8 of 8. Where it sits in the list does not appear to matter.",
+   "caveat": "Guidance is always stated in one of eight stock sentences, so a keyword rule also reads it on 90 of 90; the harder questions rest on twelve planted tone gaps and five share sales, which is too few to set a bar on.",
+   "showcase": {
+    "item": "FD-0001",
+    "label": "FD-0001 · KSTL · Q1 2025 results",
+    "caption": "Revenue of 431.3 million against 388.2, margin up, guidance reaffirmed. The tone was read as worse, 1.4 of 6, and the numbers and the language as disagreeing, at 35% agreement.",
+    "answers": [
+     {
+      "title": "Guidance change",
+      "type": "choice",
+      "text": "Maintained",
+      "share": 1
+     },
+     {
+      "title": "Tone shift",
+      "type": "score",
+      "text": "Worse · 1.4 of 6",
+      "share": 0.238
+     },
+     {
+      "title": "Numbers and tone agree",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.35
+     },
+     {
+      "title": "New risk factor",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.73
+     }
+    ],
+    "verdict": "Guidance maintained · tone worse",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "rumour-grading",
+   "title": "Rumour grading",
+   "domain": "news",
+   "number": 175,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "425fac03f8d1",
+    "questions": "8cfaa3161512"
+   },
+   "items": 240,
+   "answered": 240,
+   "graded": 240,
+   "right": 239,
+   "interval": {
+    "low": 0.9768,
+    "high": 0.9993
+   },
+   "headline": {
+    "label": "Spread read correctly",
+    "value": 0.9958,
+    "display": "239 of 240",
+    "context": "organised or not, against how each claim was planted"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9958,
+     "model": true
+    },
+    {
+     "label": "Rule: 20 or more accounts sharing 60% of the wording",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Never call it organised",
+     "value": 0.9417,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9958,
+    "accuracy": 0.9958,
+    "macroF1": 0,
+    "majorityBaseline": 0.75,
+    "calibrationError": 0.2434,
+    "precision": 0.9333,
+    "recall": 1,
+    "sentForCheckingRate": 0.4667,
+    "sentForCheckingTrueShare": 0.4074,
+    "resolvedTrueShare": 0.3667,
+    "maxReliabilityUsed": 3.04
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "14 of 14 coordinated pushes were caught while only 1 of 12 organic ones were mistaken for them. Reach and speed are the same in both groups, so the shared wording is what did it.",
+   "caveat": "The share of wording that separates a push from a crowd is handed to the model as a number, so a two-line rule on it scores 240 of 240; this run measures reading that figure, and only sixty of the claims ever resolved.",
+   "showcase": {
+    "item": "RM-0016",
+    "label": "RM-0016 · BEAC · Beacon Group is preparing a rights issue at a discount to the current price.",
+    "caption": "A rights issue rumour from a newsletter with 14 of 46 earlier claims confirmed. 33 accounts repeated it in 18 minutes with 95% of the wording shared, and nobody independent. Called organised at 87%; later denied.",
+    "answers": [
+     {
+      "title": "Coordinated push",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.87
+     },
+     {
+      "title": "Source reliability",
+      "type": "score",
+      "text": "Very low · 0.7 of 6",
+      "share": 0.122
+     },
+     {
+      "title": "Corroborated",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.07
+     },
+     {
+      "title": "Checkable",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.05
+     }
+    ],
+    "verdict": "Verify · spread looks organised",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "event-clustering",
+   "title": "Event clustering",
+   "domain": "news",
+   "number": 172,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "173d9d923aa5",
+    "questions": "0d0d2923d76b"
+   },
+   "items": 380,
+   "answered": 380,
+   "graded": 380,
+   "right": 375,
+   "interval": {
+    "low": 0.9696,
+    "high": 0.9944
+   },
+   "headline": {
+    "label": "Whole reading right",
+    "value": 0.9868,
+    "display": "375 of 380",
+    "context": "the join, whether it adds a fact, and whether the source is primary, all three"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9868,
+     "model": true
+    },
+    {
+     "label": "Rule: match the title, read its label",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest reading",
+     "value": 0.8263,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9868,
+    "accuracy": 0.9868,
+    "macroF1": null,
+    "majorityBaseline": null,
+    "calibrationError": 0.1104,
+    "precision": 1,
+    "recall": 1,
+    "wrongMerges": 0,
+    "primarySourceRecall": 0.9348,
+    "newFactRecall": 0.9697,
+    "newFactPrecision": 1
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "380 headlines became 46 model clusters, saving an estimated 94.5 reading minutes once the joined headlines that add a fact are counted as still read.",
+   "caveat": "Every true member of an event repeats its title word for word and the six decoys name a different company, so matching titles scores 380 of 380 without a model; this run cannot tell clustering from string matching, and a harder feed is planned.",
+   "showcase": {
+    "item": "EC-0059",
+    "label": "Update: North Harbor M raises guidance · update 1",
+    "caption": "An update on North Harbor M raising guidance, offered the cluster that began as market talk eight hours earlier. Joined at 94%, marked as a repeat, source ranked as an aggregator.",
+    "answers": [
+     {
+      "title": "Same event",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.94
+     },
+     {
+      "title": "Adds information",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.06
+     },
+     {
+      "title": "Source rank",
+      "type": "choice",
+      "text": "Aggregator",
+      "share": 0.98
+     }
+    ],
+    "verdict": "Joins the offered cluster (1 in it so far) · a repeat",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "entity-links",
+   "title": "Entity links",
+   "domain": "news",
+   "number": 174,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "57e8ec2f189c",
+    "questions": "1fb2ee7e2f31"
+   },
+   "items": 400,
+   "answered": 400,
+   "graded": 400,
+   "right": 400,
+   "interval": {
+    "low": 0.9905,
+    "high": 1
+   },
+   "headline": {
+    "label": "Relationship accuracy",
+    "value": 1,
+    "display": "100.0%",
+    "context": "400 of 400; each type is written in its own stock sentence"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 1,
+     "model": true
+    },
+    {
+     "label": "Rule: look for the stock phrase",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always the commonest type",
+     "value": 0.23,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 1,
+    "accuracy": 1,
+    "macroF1": 1,
+    "majorityBaseline": 0.23,
+    "calibrationError": 0.0386,
+    "activeStatusAccuracy": 1,
+    "endedLinkRecall": 1,
+    "coincidenceRejectionRate": 1,
+    "contagionYesRate": 0.9653
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "279 active answered edges produce 2038 directed two-step paths once shared auditors and litigation are left out as channels. The strongest come first; 6 chains were planted.",
+   "caveat": "Each relationship type is always written in the same stock sentence and every ended link carries a termination filing, so six phrases score 400 of 400 without a model; the contagion question has no planted answer at all.",
+   "showcase": {
+    "item": "EL-0002",
+    "label": "Fictional River 02 ↔ Fictional Summit 03",
+    "caption": "An annual filing says Summit 03 supplied 38% of River 02’s critical components, and the latest disclosure says it still does. Read as an active supplier link, strong at 4.1 of 6, one edge of a planted chain.",
+    "answers": [
+     {
+      "title": "Relationship",
+      "type": "choice",
+      "text": "Supplier",
+      "share": 0.99
+     },
+     {
+      "title": "Still active",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.97
+     },
+     {
+      "title": "Strength",
+      "type": "score",
+      "text": "Strong · 4.1 of 6",
+      "share": 0.677
+     },
+     {
+      "title": "Contagion risk",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.87
+     }
+    ],
+    "verdict": "Supplier · active · strong",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "golden-cross-review",
+   "title": "Golden cross review",
+   "domain": "strategy",
+   "number": 181,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "fe7935e8b8c2",
+    "questions": "a1bac3113b5b"
+   },
+   "items": 71,
+   "answered": 71,
+   "graded": 71,
+   "right": 30,
+   "interval": {
+    "low": 0.3145,
+    "high": 0.5385
+   },
+   "headline": {
+    "label": "Decision agreed with price",
+    "value": 0.4225,
+    "display": "30 of 71",
+    "context": "42.3%: taken and up, or skipped and not. Taking every cross is right 53.5% of the time"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.4225,
+     "model": true
+    },
+    {
+     "label": "Rule: take it if the 200-day average is rising",
+     "value": 0.4648,
+     "model": false
+    },
+    {
+     "label": "Always take the cross",
+     "value": 0.5352,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.4225,
+    "accuracy": 0.4225,
+    "macroF1": 0.3916,
+    "majorityBaseline": 0.5352,
+    "calibrationError": 0.1506,
+    "precision": 0.4694,
+    "recall": 0.6053
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "The kept trades averaged +0.10% against +0.21% for all of them. On this evidence the judgement added nothing to the rule, which is worth knowing and is not what anybody wants to hear.",
+   "caveat": "Seventy-one trades that each vary by seven points cannot separate a filter from chance, and the state carries real tickers and dates, so a model could be remembering what followed rather than reading the chart.",
+   "showcase": {
+    "item": "GX-0042",
+    "label": "AAPL · 2024-06-13",
+    "caption": "AAPL, 13 June 2024. Called an established trend, graded 4.5 of 6, taken. Twenty sessions later it was up 9.31% net of cost.",
+    "answers": [
+     {
+      "title": "Valid signal",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.67
+     },
+     {
+      "title": "Context",
+      "type": "choice",
+      "text": "Established trend",
+      "share": 0.58
+     },
+     {
+      "title": "Signal quality",
+      "type": "score",
+      "text": "Very good · 4.5 of 6",
+      "share": 0.752
+     },
+     {
+      "title": "Decision",
+      "type": "choice",
+      "text": "TAKE",
+      "share": 0.83
+     }
+    ],
+    "verdict": "Take · AAPL · 2024-06-13",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "setup-timing",
+   "title": "Setup timing",
+   "domain": "strategy",
+   "number": 182,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "cd64a91f4a09",
+    "questions": "9d601330b7a5"
+   },
+   "items": 480,
+   "answered": 480,
+   "graded": 480,
+   "right": 250,
+   "interval": {
+    "low": 0.4762,
+    "high": 0.5652
+   },
+   "headline": {
+    "label": "Favourable-call accuracy",
+    "value": 0.5208,
+    "display": "52.1%",
+    "context": "250 of 480 against the signed five-bar return. “Favourable if long” scores 56.0%; a coin 50%"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.5208,
+     "model": true
+    },
+    {
+     "label": "Rule: favourable if long, unfavourable if short",
+     "value": 0.5604,
+     "model": false
+    },
+    {
+     "label": "Always the commoner outcome",
+     "value": 0.5021,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.5208,
+    "accuracy": 0.5208,
+    "macroF1": 0.5156,
+    "majorityBaseline": 0.5021,
+    "calibrationError": 0.1107,
+    "precision": 0.5236,
+    "recall": 0.4184
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "The favourable call matched the five-bar sign on 250 of 480 setups (52.1%). The rule “favourable if long, unfavourable if short” scores 56.0% with no model at all. 66% of longs and 13% of shorts were called favourable: mostly that rule, applied slightly worse.",
+   "caveat": "Four hundred and eighty setups over 127 weekday-by-month cells cannot reach the 20-instance minimum in any cell, the best-slot and hold-window questions have no gradeable truth, and each state supplies a past slot return that the favourable answer follows four times in five.",
+   "showcase": {
+    "item": "ST-0059",
+    "label": "BTC-USD · Range break · long · 2021-02-06",
+    "caption": "Bitcoin closes above its twenty-session high on 6 February 2021. Called favourable for the long at 64%, quality 4.5 of 6. The next five bars returned +22.01%.",
+    "answers": [
+     {
+      "title": "Timing favourable",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.64
+     },
+     {
+      "title": "Setup quality",
+      "type": "score",
+      "text": "Good · 4.5 of 6",
+      "share": 0.747
+     },
+     {
+      "title": "Best slot",
+      "type": "choice",
+      "text": "Month start",
+      "share": 0.91
+     },
+     {
+      "title": "Expected hold",
+      "type": "choice",
+      "text": "Four to five",
+      "share": 0.39
+     }
+    ],
+    "verdict": "Favourable for the long · 64%",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "regime-classification",
+   "title": "Regime classification",
+   "domain": "strategy",
+   "number": 183,
+   "dataClass": "cached-real",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "7312820112ea",
+    "questions": "360ec44c23d0"
+   },
+   "items": 312,
+   "answered": 312,
+   "graded": 73,
+   "right": 33,
+   "interval": {
+    "low": 0.3431,
+    "high": 0.5658
+   },
+   "headline": {
+    "label": "Gate calls the price agreed with",
+    "value": 0.4521,
+    "display": "33 of 73",
+    "context": "weeks whose call decided on a trade the week after: right if allowing what it allowed and refusing what it refused came out ahead"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.4521,
+     "model": true
+    },
+    {
+     "label": "Rule: trade if the last thirteen weeks drifted up",
+     "value": 0.5753,
+     "model": false
+    },
+    {
+     "label": "Always let everything trade",
+     "value": 0.5616,
+     "model": false
+    },
+    {
+     "label": "Never let anything trade",
+     "value": 0.4384,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.4521,
+    "accuracy": 0.4521,
+    "macroF1": 0.307,
+    "majorityBaseline": 0.359,
+    "calibrationError": 0.1012
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "The gate cost 79.15 points over the same 75 trades: +2.93% gated against +82.08% always on. Turning strategies off in the weeks it did not like them left money on the table, which is the honest result and the one worth showing.",
+   "caveat": "Seventy-five judged trades, nine of them allowed, is too few to tell a good gate from a lucky one, and the book is lopsided: the range break makes 73 per cent of the trades and its family was named in 2 of 312 weeks.",
+   "showcase": {
+    "item": "RG-0005",
+    "label": "GLD · week to 2025-04-04",
+    "caption": "GLD, week to 4 April 2025. Called event driven, mean reversion allowed at half size. The pullback entered the next Monday made +13.56%.",
+    "answers": [
+     {
+      "title": "Regime",
+      "type": "choice",
+      "text": "Event driven",
+      "share": 0.37
+     },
+     {
+      "title": "Regime clarity",
+      "type": "score",
+      "text": "Clear · 3.7 of 6",
+      "share": 0.615
+     },
+     {
+      "title": "Strategy fit",
+      "type": "choice",
+      "text": "Mean reversion",
+      "share": 0.42
+     },
+     {
+      "title": "Risk scaling",
+      "type": "choice",
+      "text": "HALF",
+      "share": 0.55
+     }
+    ],
+    "verdict": "Mean reversion only · 0.5× size",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "strategy-correlation",
+   "title": "Strategy correlation",
+   "domain": "strategy",
+   "number": 185,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "d21ab0aabf6c",
+    "questions": "bf835b58e11e"
+   },
+   "items": 60,
+   "answered": 60,
+   "graded": 60,
+   "right": 47,
+   "interval": {
+    "low": 0.6638,
+    "high": 0.8688
+   },
+   "headline": {
+    "label": "One bet or two, read correctly",
+    "value": 0.7833,
+    "display": "47 of 60",
+    "context": "against the planted relation; answering two bets every time scores 48"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.7833,
+     "model": true
+    },
+    {
+     "label": "Rule: correlate the two series, one bet at 0.5 or more",
+     "value": 0.9333,
+     "model": false
+    },
+    {
+     "label": "Always two bets",
+     "value": 0.8,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.7833,
+    "accuracy": 0.7833,
+    "macroF1": 0.313,
+    "majorityBaseline": 0.7833,
+    "calibrationError": 0.202,
+    "precision": 0.4667,
+    "recall": 0.5833,
+    "rankAgreement": 0.9952
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "Correlating the two series and calling anything at 0.5 or above one bet reads 56 of 60 pairs correctly; the model read 47, and answering two bets every time reads 48. The arithmetic is exact and cheap. Even it misses every stress-only pair, because whole-period correlation hides them.",
+   "caveat": "Three stress-only pairs cannot carry a finding, and the book holds 60 of its 66 possible pairs. The correlation itself is a few lines of arithmetic that reads more pairs correctly than the model does; the judgement being tested is what to do about it.",
+   "showcase": {
+    "item": "SC-0001",
+    "label": "S01/S02 · Momentum, twenty day and Momentum, forty day",
+    "caption": "Twenty-day momentum against forty-day momentum, both on index futures, correlating 0.815. Graded 4.3 of 6 overlap: one bet held twice, drop one.",
+    "answers": [
+     {
+      "title": "Overlap",
+      "type": "score",
+      "text": "High · 4.3 of 6",
+      "share": 0.722
+     },
+     {
+      "title": "Diversifying",
+      "type": "yes / no",
+      "text": "No",
+      "share": 0.29
+     },
+     {
+      "title": "Same underlying bet",
+      "type": "choice",
+      "text": "Same factor",
+      "share": 0.57
+     },
+     {
+      "title": "Allocation change",
+      "type": "choice",
+      "text": "Drop one",
+      "share": 0.67
+     }
+    ],
+    "verdict": "One bet, held twice · Drop one",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  },
+  {
+   "id": "overfit-review",
+   "title": "Overfit review",
+   "domain": "strategy",
+   "number": 184,
+   "dataClass": "synthetic",
+   "run": {
+    "model": "jev-1.13.0",
+    "recordedAt": "2026-09-19",
+    "dataset": "0851769439c9",
+    "questions": "d7608e1435a5"
+   },
+   "items": 140,
+   "answered": 140,
+   "graded": 140,
+   "right": 138,
+   "interval": {
+    "low": 0.9494,
+    "high": 0.9961
+   },
+   "headline": {
+    "label": "Symptom accuracy",
+    "value": 0.9857,
+    "display": "98.6%",
+    "context": "138 exact calls of 140; a six-line rule over the stated fields is scored beside it below"
+   },
+   "baselines": [
+    {
+     "label": "Jev",
+     "value": 0.9857,
+     "model": true
+    },
+    {
+     "label": "Rule: read five stated fields in order",
+     "value": 1,
+     "model": false
+    },
+    {
+     "label": "Always none",
+     "value": 0.4714,
+     "model": false
+    }
+   ],
+   "metrics": {
+    "agreement": 0.9857,
+    "accuracy": 0.9857,
+    "macroF1": 0.9902,
+    "majorityBaseline": 0.4714,
+    "calibrationError": 0.4464,
+    "contradictionRate": 0.0303
+   },
+   "gates": [],
+   "passed": true,
+   "finding": "138 of 140 reports had their planted main symptom named exactly.",
+   "caveat": "The labels can be read from the shape of the state: only honest reports carry a validation block and every flaw is written into one stated field, so a six-line rule scores 140 of 140. This run measures reading a report, not judging one; a harder set is planned.",
+   "showcase": {
+    "item": "OR-0005",
+    "label": "OR-0005 · Earnings drift · 212 trades",
+    "caption": "An earnings-drift backtest that turned $100,000 into $313,921 over 212 trades. The report states a fill lag of zero bars; the model named look-ahead and gave it trust 1.7 of 6.",
+    "answers": [
+     {
+      "title": "Symptom",
+      "type": "choice",
+      "text": "Look ahead",
+      "share": 0.71
+     },
+     {
+      "title": "Trust",
+      "type": "score",
+      "text": "Little · 1.7 of 6",
+      "share": 0.283
+     },
+     {
+      "title": "Overfit risk",
+      "type": "score",
+      "text": "High · 4.4 of 6",
+      "share": 0.728
+     },
+     {
+      "title": "Worth forward testing",
+      "type": "yes / no",
+      "text": "Yes",
+      "share": 0.65
+     }
+    ],
+    "verdict": "Look ahead · trust 1.7 of 6",
+    "agree": true
+   },
+   "previous": null,
+   "delta": null,
+   "runs": 1
+  }
+ ]
+}

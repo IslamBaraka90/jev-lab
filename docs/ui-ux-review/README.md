@@ -487,3 +487,23 @@ Ranked by visible impact per unit of work. S ≈ hours, M ≈ a day or two, L �
 
 The homepage is deliberately last: it should be assembled from real outputs of phases 1–4 — the
 verdict card, the scoreboard numbers, the mini charts — rather than designed ahead of them.
+
+---
+
+## 10. What has been done since
+
+This review was written against `c422d1f`. The work that followed it, on `main`:
+
+| Roadmap item | State |
+|---|---|
+| Phase 0 — defects D1–D6, D9–D15 | Done. D7 (the lab on the static site) is parked in `LEFTOVERS.md`; D8 turned out to be a generator issue and is listed there too. A hygiene test now fails on double-encoded text or an undefined design token. |
+| Phase 1 — result first | Done. The run is loaded, evaluated and reported once on load; the page is run chip, headline strip, rail with filters, item beside answers, verdict card, sectioned report, code as tabs. |
+| Phase 2 — the evaluation layer | Done in the shared layer: precision, recall and F1 from every matrix, the majority baseline with lift and a 95% interval, a reliability diagram with calibration error, an automation slider, a threshold slider on every coverage curve, and automatic drawing of report keys no widget claims. Per demo: a rules baseline, a per-item grade and flat metrics for all fifty. Cost-weighted error is done where a demo carries money; slice tables are per demo, not yet a shared widget. |
+| Phase 3 — stages and Present | The generic stage renders nested records as groups and tables, with per-demo hide, label and highlight hints; the graph view lays deep traces out in lanes. Presenter mode is five beats per demo with a story written for each of the fifty, deep links, a shot link and `scripts/shot-list.js`. Bespoke document, case-card and holdings stages are not built. |
+| Phase 4 — the benchmark | `npm run score`, `benchmarks/history.json`, gates and a regression check in `npm run check`, `/benchmark`, and archiving of replaced runs. Flip lists, stability runs and held-out seeds are not built. |
+| Phase 5 — the front door | Done: the live typed-answer hero, the suite strip with its weakest demo named, nine domain tiles, three featured demos, and result-bearing cards everywhere. |
+
+What the review found about the **datasets** — that a short rule matches or beats the model on most of
+them, and that several leak their label through one field — could not be fixed without recording again,
+which costs money. Every affected demo now shows the rule beside the model and carries a caveat, and the
+list, with costs, is the first section of `LEFTOVERS.md`.

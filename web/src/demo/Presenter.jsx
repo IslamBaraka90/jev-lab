@@ -3,10 +3,11 @@ import { createPortal } from 'react-dom';
 import { Icon } from '../components/Icon.jsx';
 import { ErrorCallout } from '../components/ui.jsx';
 import { CalibrationPanel, ConfusionMatrix, CoverageCurve, DistributionBar } from './charts.jsx';
+import { FitBox } from './FitBox.jsx';
 import { AnswersPanel, VerdictCard } from './panels.jsx';
 import { BaselineBars } from './ReportPanel.jsx';
 import { ItemView } from './views/index.jsx';
-import { DOMAIN_BY_ID } from '../../../demos/index.js';
+import { DOMAIN_BY_ID } from '../../../demos/domains.js';
 import { useDemoRun } from '../hooks/useDemoRun.js';
 import { navigate, useLocation } from '../lib/router.jsx';
 
@@ -159,9 +160,9 @@ export function Presenter({ demo }) {
               <span className="eyebrow">One item · {hero.id}</span>
               <h2>{demo.itemLabel?.(hero) ?? hero.id}</h2>
             </header>
-            <div className="beat-stage panel">
-              <ItemView view={demo.view} item={hero} context={run.context} demo={demo} result={null} />
-            </div>
+            <FitBox className="beat-stage panel">
+              <ItemView view={demo.view} item={hero} context={run.context} demo={demo} result={null} compact />
+            </FitBox>
             <p className="beat-caption">{story.hero.caption}</p>
           </div>
         )}
@@ -189,9 +190,9 @@ export function Presenter({ demo }) {
               <h2>{demo.itemLabel?.(miss) ?? miss.id}</h2>
             </header>
             <div className="beat-columns">
-              <div className="beat-stage panel">
-                <ItemView view={demo.view} item={miss} context={run.context} demo={demo} result={run.resultsById[miss.id]} />
-              </div>
+              <FitBox className="beat-stage panel">
+                <ItemView view={demo.view} item={miss} context={run.context} demo={demo} result={run.resultsById[miss.id]} compact />
+              </FitBox>
               <VerdictCard demo={demo} result={run.resultsById[miss.id]} grade={grade} context={run.context} />
             </div>
             <p className="beat-caption">{story.miss.caption}</p>
@@ -214,13 +215,13 @@ export function Presenter({ demo }) {
                 </article>
               ))}
             </div>
-            <div className="beat-chart panel">
+            <FitBox className="beat-chart panel" floor={0.7}>
               {story.proof.chart === 'curve' && run.report.curve && <CoverageCurve curve={run.report.curve} />}
               {story.proof.chart === 'matrix' && run.report.matrix && <ConfusionMatrix matrix={run.report.matrix} />}
               {story.proof.chart === 'baselines' && run.report.baselines && <BaselineBars rows={run.report.baselines} />}
               {story.proof.chart === 'distribution' && run.report.distribution && <DistributionBar title={run.report.distributionTitle} items={run.report.distribution} />}
               {story.proof.chart === 'calibration' && <CalibrationPanel grades={grades} />}
-            </div>
+            </FitBox>
             <p className="beat-closing">{story.proof.closing}</p>
           </div>
         )}

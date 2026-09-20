@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Icon } from '../components/Icon.jsx';
 import { Segmented } from '../components/ui.jsx';
 import scoreboard from '../generated/scoreboard.json';
-import { DOMAINS } from '../../../demos/index.js';
+import { DOMAINS } from '../../../demos/domains.js';
 import { formatDate } from '../lib/format.js';
 import { Link } from '../lib/router.jsx';
 

@@ -404,3 +404,31 @@ html.is-presenting body {
 .presenter .answer-value > strong {
   font-size: 1.15em;
 }
+
+/* Content scaled to the height it is given. */
+.fit-box {
+  min-height: 0;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.fit-box::-webkit-scrollbar {
+  display: none;
+}
+
+.fit-box-inner {
+  transform-origin: top left;
+}
+
+.beat-miss .beat-columns > .verdict-card {
+  overflow: visible;
+}
+
+.beat-columns > .fit-box {
+  align-self: stretch;
+  height: 100%;
+}
+
+.fit-box-sizer {
+  overflow: hidden;
+}

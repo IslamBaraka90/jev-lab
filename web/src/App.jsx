@@ -1,9 +1,13 @@
 import { lazy, Suspense, useEffect } from 'react';
+import { ErrorBoundary } from './components/ErrorBoundary.jsx';
 import { SiteShell } from './components/SiteShell.jsx';
 import { EmptyState } from './components/ui.jsx';
 import { Link, navigate, useLocation } from './lib/router.jsx';
 import { HomePage } from './pages/HomePage.jsx';
-import { DOMAIN_BY_ID, findDemo } from '../../demos/index.js';
+import { DOMAIN_BY_ID } from '../../demos/domains.js';
+import manifest from './generated/catalog.json';
+
+const TITLES = new Map(manifest.cards.map((card) => [card.id, card.title]));
 
 // Everything but the home page loads on demand, so opening the catalog does not download the demo
 // runtime, and neither of them downloads the lab.
@@ -40,6 +44,7 @@ export function App() {
 
   return (
     <SiteShell section={route.section} title={route.title}>
+      <ErrorBoundary resetKey={pathname}>
       <Suspense fallback={<Loading />}>
         {route.page === 'home' && <HomePage />}
         {route.page === 'catalog' && <CatalogPage />}
@@ -53,6 +58,7 @@ export function App() {
           </EmptyState>
         )}
       </Suspense>
+      </ErrorBoundary>
     </SiteShell>
   );
 }
@@ -68,7 +74,7 @@ export function matchRoute(pathname) {
   if (clean === '/about') return { page: 'about', section: 'about', title: 'About' };
 
   const demo = clean.match(/^\/demos\/([^/]+)$/);
-  if (demo) return { page: 'demo', section: 'demos', title: findDemo(decodeURIComponent(demo[1]))?.title ?? 'Demo', id: decodeURIComponent(demo[1]) };
+  if (demo) return { page: 'demo', section: 'demos', title: TITLES.get(decodeURIComponent(demo[1])) ?? 'Demo', id: decodeURIComponent(demo[1]) };
 
   const domain = clean.match(/^\/domains\/([^/]+)$/);
   if (domain) return { page: 'domain', section: 'demos', title: DOMAIN_BY_ID[decodeURIComponent(domain[1])]?.title ?? 'Domain', id: decodeURIComponent(domain[1]) };

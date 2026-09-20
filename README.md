@@ -8,6 +8,9 @@ A demo site and a backtest lab for TypeSafe's Jev model, built on the official J
   came back, and a report that grades them against data where the right answer is known. Every demo folder carries a
   `notes.md` saying what the recorded run actually found, including where it did badly. Specifications live in
   [`prps/`](prps/README.md).
+- **The benchmark** at `/benchmark` puts all fifty recorded runs on one page: the headline, how many items matched
+  ground truth with its interval, the lift over a simple rule, the calibration error, and what moved since the last
+  run. `npm run score` produces it, offline and free. See [Running the suite again](#running-the-suite-again).
 - **The lab** backtests Jev's trade decisions on historical daily candles, replays every decision on a chart, and reports
   what the trades earned. It also keeps the support ticket example from the
   [quickstart](https://docs.typesafe.ai/introduction/quickstart).
@@ -25,6 +28,31 @@ calls the API before that.
 Data comes in two kinds, and every page says which it is: **cached real** market data in `data/market`, fetched once from
 Yahoo Finance with a manifest recording what and when, and **synthetic** data generated here from a fixed seed, with the
 planted problems kept in `data/synthetic/*.labels.json`, outside the demo folders, so they can never reach a state.
+
+## A demo page
+
+Every demo opens on its graded run: the headline numbers, one item beside its typed answers, the decision those answers
+make and whether ground truth agreed, then the whole report — a rule and the majority class beside the model, a
+confusion matrix with precision, recall and F1, calibration, a threshold you can drag, and the demo's own checks. The
+list on the left filters to the items it got wrong or was unsure about. "Watch the story" (or `p`) plays the demo as five
+full-screen beats for recording; `npm run shot-list <demo>` prints the address of each beat.
+
+What a demo may add beyond the base contract — stage hints, a per-item grade, a verdict, baselines, metrics, gates and
+its presenter story — is in [docs/demo-contract-additions.md](docs/demo-contract-additions.md). The review these changes
+follow is in [docs/ui-ux-review](docs/ui-ux-review/README.md).
+
+## Running the suite again
+
+The point of the suite is to run the same test on the next model version and see what moved.
+
+1. `npm run record <demo>` asks the model every item and replaces the pinned run in `demos/<demo>/fixtures.json`. The
+   run it replaces is kept under `benchmarks/runs/` (not committed). This is the only paid step.
+2. `npm run score` re-scores all fifty runs with the same evaluate, grade and report code the pages use, writes
+   `web/src/generated/scoreboard.json` for the site, and appends each run to `benchmarks/history.json`. A run is keyed
+   by model, date, dataset hash and questions hash, and two runs are compared only when both hashes match: a changed
+   dataset or a reworded question is a different test.
+3. `npm run check` fails if a demo misses a gate it declares (`gates: { macroF1: { min: 0.8 } }` in its `demo.js`), or
+   if a headline falls more than three points between two runs of the same test.
 
 ## Keys
 
@@ -80,10 +108,12 @@ For development, run `npm run dev` and `npm run dev:web`, then open http://local
 | `npm run suite:indicators` | The full suite with technical indicators. |
 | `npm run quickstart` | Sends the quickstart request once and prints the answers. Evaluate your own text with `npm run quickstart -- "text"`. |
 | `npm test` | Runs the tests offline, with TypeSafe stubbed and no market data calls. |
-| `npm run check` | Checks the built site against its size budgets, then runs the tests. |
+| `npm run check` | Checks the built site against its size budgets, scores the suite against its gates, then runs the tests. |
 | `npm run generate` | Rebuilds every synthetic dataset from its seed. Running it twice changes nothing. |
 | `npm run fetch:market` | Refetches the cached market data in `data/market`. Run by hand, rarely. |
 | `npm run record <slug>` | Records a demo's answers from the live API into `demos/<slug>/fixtures.json`. The only paid step. |
+| `npm run score` | Scores every recorded run offline, rewrites the scoreboard and appends to the run history. Add `-- --check` to fail on a missed gate or a regression, or a slug to print one row. |
+| `npm run shot-list <slug>` | Prints a demo's five presenter beats with the address of each. Takes a domain or `--all`, and `--base <url>`. |
 
 ## Backtests
 
