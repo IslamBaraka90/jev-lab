@@ -1212,3 +1212,108 @@ tr.thin-sample {
     flex-wrap: wrap;
   }
 }
+
+/* ---------- Timing heatmap ---------- */
+
+.heatmap-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--s16);
+}
+
+.heatmap-block {
+  margin: 0;
+  padding: var(--s12);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--surface2) 45%, transparent);
+}
+
+.heatmap-block figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--s8);
+}
+
+.heatmap-side {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.heatmap-side.long { color: var(--long); }
+.heatmap-side.short { color: var(--short); }
+
+.heatmap-block table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+  table-layout: fixed;
+}
+
+.heatmap-block th {
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--muted);
+  text-align: center;
+}
+
+.heatmap-block tbody th {
+  width: 52px;
+  text-align: left;
+}
+
+.heatmap-block td {
+  height: 44px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.heatmap-block td small {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.heatmap-block td.none {
+  background: none;
+  border: 1px dashed var(--border);
+}
+
+.heatmap-block td.thin,
+.heatmap-legend .swatch.thin {
+  background-image: repeating-linear-gradient(135deg, transparent 0 5px, color-mix(in srgb, var(--bg) 70%, transparent) 5px 8px);
+  color: var(--muted);
+}
+
+.heatmap-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s8) var(--s16);
+  margin: 0;
+}
+
+.heatmap-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.heatmap-legend .swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background-color: var(--surface2);
+}
+
+/* The report's own tables are wide on purpose; the heatmap's small tables are not. */
+.timing-grid-report .heatmap-block table {
+  min-width: 0;
+}

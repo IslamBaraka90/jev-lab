@@ -5,7 +5,7 @@ import { Link } from '../lib/router.jsx';
 /** What the site is, how it runs, and what its data is made of. Short on purpose. */
 export function AboutPage() {
   return (
-    <div className="stack about">
+    <div className="stack about-page about">
       <div className="page-heading">
         <span className="eyebrow">About</span>
         <h1>How this works</h1>

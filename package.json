@@ -30,7 +30,8 @@
     "build:code-index": "node scripts/build-code-index.js",
     "check": "node scripts/check-budgets.js && node scripts/score.js --check && node --test",
     "serve:static": "node scripts/serve-static.js",
-    "score": "node scripts/score.js"
+    "score": "node scripts/score.js",
+    "shot-list": "node scripts/shot-list.js"
   },
   "engines": {
     "node": ">=22.12"

@@ -471,3 +471,18 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* The about page sets prose in the facts grid; prose is not a figure, so it is not set like one. */
+.about-page .facts dd {
+  display: block;
+  font-size: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.about-page .facts dt {
+  font-size: var(--body);
+  font-weight: 700;
+  color: var(--text);
+}
