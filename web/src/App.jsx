@@ -3,11 +3,8 @@ import { ErrorBoundary } from './components/ErrorBoundary.jsx';
 import { SiteShell } from './components/SiteShell.jsx';
 import { EmptyState } from './components/ui.jsx';
 import { Link, navigate, useLocation } from './lib/router.jsx';
+import { matchRoute } from './lib/routes.js';
 import { HomePage } from './pages/HomePage.jsx';
-import { DOMAIN_BY_ID } from '../../demos/domains.js';
-import manifest from './generated/catalog.json';
-
-const TITLES = new Map(manifest.cards.map((card) => [card.id, card.title]));
 
 // Everything but the home page loads on demand, so opening the catalog does not download the demo
 // runtime, and neither of them downloads the lab.
@@ -16,7 +13,6 @@ const DemoPage = lazy(() => import('./pages/DemoPage.jsx').then((module) => ({ d
 const DomainPage = lazy(() => import('./pages/DomainPage.jsx').then((module) => ({ default: module.DomainPage })));
 const BenchmarkPage = lazy(() => import('./pages/BenchmarkPage.jsx').then((module) => ({ default: module.BenchmarkPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage.jsx').then((module) => ({ default: module.AboutPage })));
-const LabArea = lazy(() => import('./areas/LabArea.jsx'));
 
 const Loading = () => (
   <p className="meta" aria-live="polite">
@@ -33,14 +29,6 @@ export function App() {
   }, [route.redirect]);
 
   if (route.redirect) return null;
-
-  if (route.area === 'lab') {
-    return (
-      <Suspense fallback={<Loading />}>
-        <LabArea route={route} />
-      </Suspense>
-    );
-  }
 
   return (
     <SiteShell section={route.section} title={route.title}>
@@ -62,32 +50,3 @@ export function App() {
     </SiteShell>
   );
 }
-
-// #region site:routes
-/** Every address the site answers, plus the two the lab used to live at. */
-export function matchRoute(pathname) {
-  const clean = pathname.length > 1 ? pathname.replace(/\/$/, '') : pathname;
-
-  if (clean === '/') return { page: 'home', section: 'home', title: null };
-  if (clean === '/demos') return { page: 'catalog', section: 'demos', title: 'Demos' };
-  if (clean === '/benchmark') return { page: 'benchmark', section: 'benchmark', title: 'Benchmark' };
-  if (clean === '/about') return { page: 'about', section: 'about', title: 'About' };
-
-  const demo = clean.match(/^\/demos\/([^/]+)$/);
-  if (demo) return { page: 'demo', section: 'demos', title: TITLES.get(decodeURIComponent(demo[1])) ?? 'Demo', id: decodeURIComponent(demo[1]) };
-
-  const domain = clean.match(/^\/domains\/([^/]+)$/);
-  if (domain) return { page: 'domain', section: 'demos', title: DOMAIN_BY_ID[decodeURIComponent(domain[1])]?.title ?? 'Domain', id: decodeURIComponent(domain[1]) };
-
-  if (clean === '/lab') return { area: 'lab', page: 'runs', section: 'runs', title: 'Backtests' };
-  if (clean === '/lab/compare') return { area: 'lab', page: 'compare', section: 'compare', title: 'Compare runs' };
-
-  const run = clean.match(/^\/lab\/runs\/([^/]+)(?:\/(theater|report|decisions))?$/);
-  if (run) return { area: 'lab', page: 'run', section: 'runs', title: 'Backtest', id: decodeURIComponent(run[1]), view: run[2] ?? null };
-
-  if (clean === '/compare') return { redirect: '/lab/compare' };
-  if (clean.startsWith('/runs/')) return { redirect: `/lab${clean}` };
-
-  return { page: 'missing', section: null, title: 'Not found' };
-}
-// #endregion

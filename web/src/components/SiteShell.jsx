@@ -2,26 +2,48 @@ import { useEffect } from 'react';
 import { Icon } from './Icon.jsx';
 import { Logo } from './Logo.jsx';
 import { REPO_URL } from '../lib/links.js';
+import { metaFor } from '../lib/meta.js';
 import { liveAvailable, modeExplainer, modeLabel } from '../lib/mode.js';
 import { Link, navigate, useLocation } from '../lib/router.jsx';
 
 const NAV = [
   { to: '/demos', label: 'Demos', section: 'demos' },
   { to: '/benchmark', label: 'Benchmark', section: 'benchmark' },
-  { to: '/lab', label: 'Lab', section: 'lab' },
   { to: '/about', label: 'About', section: 'about' },
 ];
 
 /**
- * The frame for the demo site: one top bar, the page, and a footer that says what the site is made of.
- * The lab keeps its own sidebar layout; this is everything around it.
+ * The frame for the site: one top bar, the page, and a footer that says what the site is made of.
  */
 export function SiteShell({ section, title, children }) {
   const { pathname } = useLocation();
 
+  // The build writes a real head into every page, which is what a crawler reads. Moving around inside
+  // the app never reloads the document, so the same values are applied again here — otherwise the
+  // second page you visit is shared and bookmarked under the first page's title and description.
   useEffect(() => {
-    document.title = title ? `${title} · Jev Lab` : 'Jev Lab';
-  }, [title]);
+    const meta = metaFor(pathname);
+    document.title = meta.title;
+
+    const set = (selector, attribute, value) => {
+      const node = document.head.querySelector(selector);
+      if (node) node.setAttribute(attribute, value);
+    };
+    set('meta[name="description"]', 'content', meta.description);
+    set('meta[property="og:title"]', 'content', meta.title);
+    set('meta[property="og:description"]', 'content', meta.description);
+    set('meta[property="og:url"]', 'content', meta.canonical);
+    set('meta[name="twitter:title"]', 'content', meta.title);
+    set('meta[name="twitter:description"]', 'content', meta.description);
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.append(canonical);
+    }
+    canonical.href = meta.canonical;
+  }, [pathname, title]);
 
   // "/" focuses search, "g" then d/b/l/h jumps between sections.
   useEffect(() => {
