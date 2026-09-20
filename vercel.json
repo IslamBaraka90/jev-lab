@@ -3,15 +3,52 @@
   "buildCommand": "npm run build",
   "outputDirectory": "web/dist",
   "framework": null,
-  "rewrites": [{ "source": "/((?!assets/|favicon).*)", "destination": "/index.html" }],
+  "redirects": [
+    {
+      "source": "/lab",
+      "destination": "/demos",
+      "permanent": true
+    },
+    {
+      "source": "/lab/:path*",
+      "destination": "/demos",
+      "permanent": true
+    },
+    {
+      "source": "/compare",
+      "destination": "/demos",
+      "permanent": true
+    },
+    {
+      "source": "/runs/:path*",
+      "destination": "/demos",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!assets/|favicon).*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/index.html",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ]
 }
