@@ -99,6 +99,18 @@ export function SiteShell({ section, title, children }) {
           <Icon name={liveAvailable ? 'bolt' : 'check'} size={14} />
           {modeLabel}
         </span>
+        <a
+          className="site-source"
+          href={REPO_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+          title="The source for every demo on this site, on GitHub"
+          aria-label="Source on GitHub"
+        >
+          {/* Decorative: the link carries the name, which stays right when the label is hidden. */}
+          <Icon name="github" size={18} />
+          <span className="site-source-label">Source</span>
+        </a>
       </header>
 
       <main id="content" className="site-main" key={pathname}>

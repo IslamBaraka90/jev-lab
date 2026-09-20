@@ -58,6 +58,32 @@
   box-shadow: inset 0 -2px 0 var(--primary);
 }
 
+/* The source link sits at the end of the bar, past the mode chip. */
+.site-source {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: var(--s8) var(--s12);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.site-source:hover {
+  color: var(--text);
+  background: var(--surface2);
+  border-color: var(--muted);
+}
+
+.site-source:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .mode-chip {
   display: inline-flex;
   align-items: center;
@@ -307,6 +333,15 @@
     order: 3;
     width: 100%;
     margin-left: 0;
+  }
+
+  /* Narrow bars keep the mark and drop the word, so the row still fits. */
+  .site-source-label {
+    display: none;
+  }
+
+  .site-source {
+    padding: var(--s8);
   }
 
   .site-main {
