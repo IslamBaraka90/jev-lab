@@ -1317,3 +1317,40 @@ tr.thin-sample {
 .timing-grid-report .heatmap-block table {
   min-width: 0;
 }
+
+/* ---------- Transfer graph: edges you can actually see ---------- */
+
+.transfer-graph .edge line {
+  stroke: var(--border);
+}
+
+.transfer-graph .edge.near line {
+  stroke: var(--control);
+}
+
+.transfer-graph .edge.far {
+  opacity: 0.55;
+}
+
+.transfer-graph .edge.far line {
+  stroke-dasharray: 4 4;
+}
+
+.transfer-graph .edge-label {
+  fill: var(--muted);
+  font-size: 10px;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+}
+
+/* Addresses, hashes and references are one long word; they wrap rather than run over their neighbour. */
+.record-facts > div {
+  min-width: 0;
+}
+
+.record-facts dd {
+  overflow-wrap: anywhere;
+  display: block;
+}

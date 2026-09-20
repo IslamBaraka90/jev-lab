@@ -3,13 +3,18 @@
 // them: a demo hands it `item.graph = { focus, nodes: [{ id, label, note }], edges: [{ from, to, weight, label }] }`
 // and the view works out the rest. Hop distance from the focus decides what is bright and what is dim.
 //
-// No physics: neighbours sit on a ring at fixed angles, so the same item draws the same picture every
-// time it is played, which is what a recorded run needs.
+// No physics: places are fixed, so the same item draws the same picture every time it is played, which
+// is what a recorded run needs. A neighbourhood sits on rings around the focus; a trace, where the money
+// moves on hop after hop, is laid out left to right in lanes so that every hop is visible.
+
+import { Record } from './fields.jsx';
 
 const SIZE = { width: 640, height: 380 };
 const RINGS = [0, 118, 176];
 
-/** Hop distance from the focus, following edges in either direction, capped at 2. */
+const FAR = 99;
+
+/** Hop distance from the focus, following edges in either direction, as far as the graph goes. */
 function hops(graph) {
   const neighbours = new Map(graph.nodes.map((node) => [node.id, new Set()]));
   for (const edge of graph.edges) {
@@ -18,7 +23,7 @@ function hops(graph) {
   }
   const distance = new Map([[graph.focus, 0]]);
   let frontier = [graph.focus];
-  for (let hop = 1; hop <= 2; hop++) {
+  for (let hop = 1; frontier.length && hop < FAR; hop++) {
     const next = [];
     for (const id of frontier) {
       for (const other of neighbours.get(id) ?? []) {
@@ -32,11 +37,27 @@ function hops(graph) {
   return distance;
 }
 
+/** One lane per hop, left to right, for a graph that runs deeper than two hops from its focus. */
+function lanes(graph, distance, depth) {
+  const columns = Array.from({ length: depth + 1 }, () => []);
+  for (const node of graph.nodes) columns[Math.min(distance.get(node.id) ?? depth, depth)].push(node.id);
+  const places = new Map();
+  columns.forEach((ids, hop) => {
+    ids.forEach((id, index) => {
+      places.set(id, {
+        x: 60 + (hop / Math.max(depth, 1)) * (SIZE.width - 120),
+        y: ((index + 1) / (ids.length + 1)) * (SIZE.height - 60) + 20,
+      });
+    });
+  });
+  return places;
+}
+
 /** Fixed places on two rings, ordered so the picture is stable between runs. */
 function positions(graph, distance) {
   const centre = { x: SIZE.width / 2, y: SIZE.height / 2 };
   const rings = [[], [], []];
-  for (const node of graph.nodes) rings[distance.get(node.id) ?? 2].push(node.id);
+  for (const node of graph.nodes) rings[Math.min(distance.get(node.id) ?? 2, 2)].push(node.id);
   const places = new Map([[graph.focus, centre]]);
 
   rings.forEach((ids, hop) => {
@@ -58,7 +79,9 @@ export function GraphView({ item, demo }) {
   }
 
   const distance = hops(graph);
-  const places = positions(graph, distance);
+  const depth = Math.max(...graph.nodes.map((node) => distance.get(node.id) ?? 0));
+  const places = depth > 2 ? lanes(graph, distance, depth) : positions(graph, distance);
+  const { graph: _drawn, ...rest } = item;
   const most = Math.max(...graph.edges.map((edge) => edge.weight ?? 1), 1);
   const nodeById = new Map(graph.nodes.map((node) => [node.id, node]));
   const label = (id) => nodeById.get(id)?.label ?? id;
@@ -84,17 +107,19 @@ export function GraphView({ item, demo }) {
           const to = places.get(edge.to);
           if (!from || !to) return null;
           const touchesFocus = edge.from === graph.focus || edge.to === graph.focus;
+          // Stop the line at the rim of the target circle, so the arrowhead is not hidden under it.
+          const length = Math.hypot(to.x - from.x, to.y - from.y) || 1;
+          const rim = (edge.to === graph.focus ? 26 : 16) + 4;
+          const end = { x: to.x - ((to.x - from.x) / length) * rim, y: to.y - ((to.y - from.y) / length) * rim };
           return (
-            <line
-              key={`${edge.from}-${edge.to}-${index}`}
-              className={touchesFocus ? 'edge near' : 'edge far'}
-              x1={from.x}
-              y1={from.y}
-              x2={to.x}
-              y2={to.y}
-              strokeWidth={strokeFor(edge.weight ?? 1, most)}
-              markerEnd="url(#graph-arrow)"
-            />
+            <g key={`${edge.from}-${edge.to}-${index}`} className={touchesFocus || depth > 2 ? 'edge near' : 'edge far'}>
+              <line x1={from.x} y1={from.y} x2={end.x} y2={end.y} strokeWidth={strokeFor(edge.weight ?? 1, most)} markerEnd="url(#graph-arrow)" />
+              {edge.label && (touchesFocus || depth > 2) && graph.edges.length <= 14 && (
+                <text className="edge-label" x={(from.x + to.x) / 2} y={(from.y + to.y) / 2 - 5}>
+                  {edge.label}
+                </text>
+              )}
+            </g>
           );
         })}
 
@@ -103,7 +128,7 @@ export function GraphView({ item, demo }) {
           if (!place) return null;
           const hop = distance.get(node.id) ?? 2;
           return (
-            <g key={node.id} className={`node hop-${hop}`} transform={`translate(${place.x} ${place.y})`}>
+            <g key={node.id} className={`node hop-${depth > 2 ? Math.min(hop, 1) : Math.min(hop, 2)}`} transform={`translate(${place.x} ${place.y})`}>
               <circle r={hop === 0 ? 26 : 16} />
               <text y={hop === 0 ? 44 : 32}>{node.label ?? node.id}</text>
               {node.note && hop <= 1 && <text className="node-note" y={hop === 0 ? 58 : 45}>{node.note}</text>}
@@ -111,6 +136,8 @@ export function GraphView({ item, demo }) {
           );
         })}
       </svg>
+
+      {Object.keys(rest).length > 1 && <Record record={rest} hide={['id', ...(demo?.stage?.hide ?? [])]} labels={demo?.stage?.labels} highlight={demo?.stage?.highlight} />}
 
       <details className="graph-table">
         <summary>Transfers as a table</summary>
