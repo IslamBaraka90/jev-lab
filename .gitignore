@@ -1,8 +1,5 @@
 node_modules/
 web/dist/
-.env
-.env.*
-!.env.example
 
 # Local run output and capture artifacts, not part of the site
 results/
@@ -13,3 +10,11 @@ screenshots/
 
 # Answers of replaced runs, kept locally for item-by-item comparison. The numbers live in benchmarks/history.json.
 benchmarks/runs/
+
+# Secrets and local machine state. The negation stays last: git applies the last
+# matching pattern, so a later `.env*` would otherwise re-ignore the example file.
+.env
+.env.*
+.env*
+.vercel
+!.env.example

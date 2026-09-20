@@ -1,0 +1,18 @@
+# What the build does not need. Everything the deployed site reads — demos/**, data/** and the
+# sources the code panels quote — is uploaded, because the build imports them.
+
+.git
+node_modules
+
+# Built output. Vercel runs the build itself.
+web/dist
+
+# Local run artefacts: backtest results, captured screenshots, replaced benchmark runs.
+results
+screenshots
+benchmarks/runs
+
+# Not read by the build.
+test
+prps
+handovers
